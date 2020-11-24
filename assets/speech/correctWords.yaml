@@ -1,0 +1,2738 @@
+data:
+  - key: Christmas tree
+    answer: christmas
+    req: christmas
+    conf: 0.9712597727775574
+    isCorrect: true
+  - key: Santa Claus
+    answer: santa claus
+    req: santa claus
+    conf: 0.9676604270935059
+    isCorrect: true
+  - key: abacus
+    answer: avicus
+    req: abacus
+    conf: 0.9459006786346436
+    isCorrect: true
+  - key: airplane
+    answer: airplane
+    req: airplane
+    conf: 0.8416013717651367
+    isCorrect: true
+    danger: true
+  - key: small airplane
+    answer: all babe
+    req: airplane
+    conf: 0.6705568432807922
+    isCorrect: false
+    danger: true
+  - key: alarm clock
+    answer: alarm clock
+    req: alarm clock
+    conf: 0.9876291155815125
+    isCorrect: true
+  - key: ambulance
+    answer: ambulance
+    req: ambulance
+    conf: 0.9797835946083069
+    isCorrect: true
+  - key: anchor
+    answer: anchor
+    req: anchor
+    conf: 0.8766363859176636
+    isCorrect: true
+    danger: true
+  - key: anguished face
+    answer: scad
+    req: scared
+    conf: 0.96529620885849
+    isCorrect: false
+  - key: face screaming in fear
+    answer: west
+    req: anguished
+    conf: 0.8170892000198364
+    isCorrect: false
+  - key: fearful face
+    answer: anguished
+    req: anguished
+    conf: 0.9330912828445435
+    isCorrect: true
+  - key: airplane arrival
+    answer: arrival
+    req: arrival
+    conf: 0.943853497505188
+    isCorrect: true
+  - key: man artist
+    answer: artist
+    req: artist
+    conf: 0.9014606475830078
+    isCorrect: true
+    danger: true
+  - key: woman artist
+    answer: august
+    req: artist
+    conf: 0.7831745147705078
+    isCorrect: false
+    danger: true
+  - key: astonished face
+    answer: universal stuff
+    req: hushed
+    conf: 0.7969775795936584
+    isCorrect: false
+  - key: man astronaut
+    answer: astronauts
+    req: astronaut
+    conf: 0.8937375545501709
+    isCorrect: true
+  - key: fallen leaf
+    answer: awesome
+    req: autumn
+    conf: 0.7774785161018372
+    isCorrect: false
+  - key: avocado
+    answer: avocado
+    req: avocado
+    conf: 0.9751174449920654
+    isCorrect: true
+    danger: true
+  - key: raised back of hand
+    answer: black hand
+    req: backhand
+    conf: 0.5174238681793213
+    isCorrect: false
+  - key: backpack
+    answer: backpack
+    req: backpack
+    conf: 0.9938145279884338
+    isCorrect: true
+  - key: badger
+    answer: badger
+    req: badger
+    conf: 0.6561262011528015
+    isCorrect: true
+  - key: badminton
+    answer: badminton
+    req: badminton
+    conf: 0.9651961326599121
+    isCorrect: true
+    danger: true
+  - key: baguette bread
+    answer: !<tag:yaml.org,2002:js/undefined> ''
+    req: !<tag:yaml.org,2002:js/undefined> ''
+    conf: !<tag:yaml.org,2002:js/undefined> ''
+    isCorrect: false
+  - key: ballet shoes
+    answer: ballet shoes
+    req: ballet shoes
+    conf: 0.9783369898796082
+    isCorrect: true
+  - key: balloon
+    answer: balloon
+    req: balloon
+    conf: 0.8645638227462769
+    isCorrect: true
+  - key: ballot box with ballot
+    answer: salad
+    req: ballot
+    conf: 0.7656381726264954
+    isCorrect: false
+  - key: banana
+    answer: banana
+    req: banana
+    conf: 0.9699839353561401
+    isCorrect: true
+  - key: adhesive bandage
+    answer: bandage
+    req: bandage
+    conf: 0.9099572896957397
+    isCorrect: true
+  - key: face with head-bandage
+    answer: injury
+    req: injury
+    conf: 0.9757363796234131
+    isCorrect: true
+  - key: baseball
+    answer: baseball
+    req: baseball
+    conf: 0.9257857799530029
+    isCorrect: true
+  - key: basket
+    answer: basket
+    req: basket
+    conf: 0.9618226885795593
+    isCorrect: true
+  - key: basketball
+    answer: basketball
+    req: basketball
+    conf: 0.9670624732971191
+    isCorrect: true
+  - key: bathtub
+    answer: bathtub
+    req: bathtub
+    conf: 0.8477079272270203
+    isCorrect: true
+  - key: taking bath
+    answer: ball pop
+    req: bathtub
+    conf: 0.7599096894264221
+    isCorrect: false
+  - key: battery
+    answer: factory
+    req: battery
+    conf: 0.9170388579368591
+    isCorrect: true
+  - key: bento box
+    answer: bento box
+    req: bento box
+    conf: 0.9756056666374207
+    isCorrect: true
+    danger: true
+  - key: flexed biceps
+    answer: biceps
+    req: biceps
+    conf: 0.9732604026794434
+    isCorrect: true
+  - key: biking
+    answer: biking
+    req: biking
+    conf: 0.7576914429664612
+    isCorrect: true
+  - key: mountain biking
+    answer: biking
+    req: biking
+    conf: 0.9361680150032043
+    isCorrect: true
+  - key: bikini
+    answer: bikini
+    req: bikini
+    conf: 0.957266092300415
+    isCorrect: true
+  - key: pool 8 ball
+    answer: billiard
+    req: billiard
+    conf: 0.8972675204277039
+    isCorrect: true
+  - key: 'woman: blond hair'
+    answer: old woman
+    req: old woman
+    conf: 0.9669082164764404
+    isCorrect: true
+  - key: cherry blossom
+    answer: flower
+    req: flower
+    conf: 0.5162000060081482
+    isCorrect: true
+  - key: woman’s clothes
+    answer: blouse
+    req: blouse
+    conf: 0.9152567982673645
+    isCorrect: true
+  - key: blowfish
+    answer: oarfish
+    req: blowfish
+    conf: 0.6645776033401489
+    isCorrect: true
+  - key: bow and arrow
+    answer: bow and arrow
+    req: bow and arrow
+    conf: 0.9782211780548096
+    isCorrect: true
+  - key: bowling
+    answer: bowling
+    req: bowling
+    conf: 0.9164596796035767
+    isCorrect: true
+  - key: boxing glove
+    answer: boxing
+    req: boxing
+    conf: 0.9629858136177063
+    isCorrect: true
+  - key: breast-feeding
+    answer: breastfeeding
+    req: breast-feeding
+    conf: 0.9777617454528809
+    isCorrect: true
+  - key: bridge at night
+    answer: bridge
+    req: bridge
+    conf: 0.8882789611816406
+    isCorrect: true
+  - key: briefcase
+    answer: briefcase
+    req: briefcase
+    conf: 0.9560322761535645
+    isCorrect: true
+  - key: briefs
+    answer: free
+    req: briefs
+    conf: 0.6988520622253418
+    isCorrect: false
+  - key: broccoli
+    answer: broccoli
+    req: broccoli
+    conf: 0.8834794759750366
+    isCorrect: true
+  - key: broken heart
+    answer: broken heart
+    req: broken heart
+    conf: 0.9862715601921082
+    isCorrect: true
+    danger: true
+  - key: buffalo
+    answer: buffalo
+    req: buffalo
+    conf: 0.8883621096611023
+    isCorrect: true
+  - key: office building
+    answer: building
+    req: building
+    conf: 0.934601902961731
+    isCorrect: true
+  - key: bunny ears
+    answer: funny dares
+    req: bunny ears
+    conf: 0.9850481152534485
+    isCorrect: false
+  - key: burrito
+    answer: burrito
+    req: burrito
+    conf: 0.9478114247322083
+    isCorrect: true
+    danger: true
+  - key: butter
+    answer: baja
+    req: butter
+    conf: 0.009999999776482582
+    isCorrect: false
+  - key: butterfly
+    answer: butterfly
+    req: butterfly
+    conf: 0.9653174877166748
+    isCorrect: true
+    danger: true
+  - key: file cabinet
+    answer: cabinet
+    req: cabinet
+    conf: 0.935387134552002
+    isCorrect: true
+  - key: aerial tramway
+    answer: cable car
+    req: cable car
+    conf: 0.9593456387519836
+    isCorrect: true
+  - key: cactus
+    answer: call chris
+    req: cactus
+    conf: 0.6208781599998474
+    isCorrect: false
+  - key: video camera
+    answer: camera
+    req: camera
+    conf: 0.8723481297492981
+    isCorrect: true
+  - key: camera
+    answer: camera
+    req: camera
+    conf: 0.9428703784942627
+    isCorrect: true
+  - key: camera with flash
+    answer: camera
+    req: camera
+    conf: 0.9427024126052856
+    isCorrect: true
+  - key: movie camera
+    answer: camera
+    req: camera
+    conf: 0.9607646465301514
+    isCorrect: true
+  - key: camping
+    answer: camping
+    req: camping
+    conf: 0.9213629961013794
+    isCorrect: true
+  - key: candle
+    answer: call
+    req: candle
+    conf: 0.009999999776482582
+    isCorrect: false
+  - key: card index
+    answer: card index
+    req: card index
+    conf: 0.9087300300598145
+    isCorrect: true
+    danger: true
+  - key: carousel horse
+    answer: parasol
+    req: carousel
+    conf: 0.8085553646087646
+    isCorrect: true
+  - key: carrot
+    answer: carrot
+    req: carrot
+    conf: 0.8126471042633057
+    isCorrect: true
+  - key: cartwheeling
+    answer: cartwheel
+    req: cartwheel
+    conf: 0.9787087440490723
+    isCorrect: true
+    danger: true
+  - key: castle
+    answer: castle
+    req: castle
+    conf: 0.9399912357330322
+    isCorrect: true
+  - key: bug
+    answer: caterpillar
+    req: caterpillar
+    conf: 0.9876290559768677
+    isCorrect: true
+  - key: chains
+    answer: chains
+    req: chains
+    conf: 0.8883880376815796
+    isCorrect: true
+    danger: true
+  - key: bottle with popping cork
+    answer: bottle
+    req: bottle
+    conf: 0.7055529356002808
+    isCorrect: true
+  - key: cheese wedge
+    answer: !<tag:yaml.org,2002:js/undefined> ''
+    req: !<tag:yaml.org,2002:js/undefined> ''
+    conf: !<tag:yaml.org,2002:js/undefined> ''
+    isCorrect: false
+  - key: alembic
+    answer: chemistry
+    req: chemistry
+    conf: 0.982563316822052
+    isCorrect: true
+  - key: cherries
+    answer: cherries
+    req: cherries
+    conf: 0.8174009323120117
+    isCorrect: true
+  - key: grinning cat
+    answer: evil cat
+    req: evil cat
+    conf: 0.9672508239746094
+    isCorrect: true
+    danger: true
+  - key: grinning cat with smiling eyes
+    answer: evil cat
+    req: evil cat
+    conf: 0.9529317021369934
+    isCorrect: true
+    danger: true
+  - key: chestnut
+    answer: chestnut
+    req: chestnut
+    conf: 0.9663956165313721
+    isCorrect: true
+  - key: chicken
+    answer: !<tag:yaml.org,2002:js/undefined> ''
+    req: !<tag:yaml.org,2002:js/undefined> ''
+    conf: !<tag:yaml.org,2002:js/undefined> ''
+    isCorrect: false
+  - key: chocolate bar
+    answer: chocolate
+    req: chocolate
+    conf: 0.9556478261947632
+    isCorrect: true
+  - key: chopsticks
+    answer: sex
+    req: sticks
+    conf: 0.7824035882949829
+    isCorrect: false
+  - key: church
+    answer: church
+    req: church
+    conf: 0.9832181334495544
+    isCorrect: true
+  - key: synagogue
+    answer: church
+    req: church
+    conf: 0.9876290559768677
+    isCorrect: true
+  - key: cigarette
+    answer: cigarette
+    req: cigarette
+    conf: 0.8592446446418762
+    isCorrect: true
+  - key: circus tent
+    answer: forecast
+    req: circus
+    conf: 0.8879744410514832
+    isCorrect: false
+  - key: climbing
+    answer: calming
+    req: climbing
+    conf: 0.8136757016181946
+    isCorrect: true
+  - key: clipboard
+    answer: clipboard
+    req: clipboard
+    conf: 0.732882022857666
+    isCorrect: true
+  - key: four leaf clover
+    answer: clover
+    req: clover
+    conf: 0.8759765625
+    isCorrect: true
+  - key: coconut
+    answer: coconut
+    req: coconut
+    conf: 0.9898531436920166
+    isCorrect: true
+  - key: coffin
+    answer: coughing
+    req: coffin
+    conf: 0.7010428309440613
+    isCorrect: false
+  - key: compass
+    answer: compass
+    req: compass
+    conf: 0.9634721279144287
+    isCorrect: true
+  - key: desktop computer
+    answer: scream
+    req: screen
+    conf: 0.8708468079566956
+    isCorrect: false
+  - key: confetti ball
+    answer: daughters of on easter
+    req: confetti
+    conf: 0.5263177156448364
+    isCorrect: false
+  - key: confounded face
+    answer: exact
+    req: zig-zag
+    conf: 0.949469804763794
+    isCorrect: false
+  - key: confused face
+    answer: !<tag:yaml.org,2002:js/undefined> ''
+    req: !<tag:yaml.org,2002:js/undefined> ''
+    conf: !<tag:yaml.org,2002:js/undefined> ''
+    isCorrect: false
+  - key: construction site
+    answer: construction
+    req: construction
+    conf: 0.9862325191497803
+    isCorrect: true
+  - key: video game
+    answer: controller
+    req: controller
+    conf: 0.96678626537323
+    isCorrect: true
+  - key: cookie
+    answer: cookie
+    req: cookie
+    conf: 0.9757522344589233
+    isCorrect: true
+  - key: rice cracker
+    answer: cracker
+    req: cracker
+    conf: 0.9826256036758423
+    isCorrect: true
+  - key: crayon
+    answer: crayon
+    req: crayon
+    conf: 0.9321699142456055
+    isCorrect: true
+  - key: credit card
+    answer: credit card
+    req: credit card
+    conf: 0.9799413681030273
+    isCorrect: true
+  - key: cricket
+    answer: insect
+    req: insect
+    conf: 0.944571852684021
+    isCorrect: true
+  - key: cricket game
+    answer: cricket
+    req: cricket
+    conf: 0.8909603357315063
+    isCorrect: true
+  - key: crocodile
+    answer: crocodiles
+    req: crocodile
+    conf: 0.8885311484336853
+    isCorrect: true
+  - key: croissant
+    answer: pastry
+    req: pastry
+    conf: 0.7899648547172546
+    isCorrect: true
+    danger: true
+  - key: crying cat
+    answer: crying cat
+    req: crying cat
+    conf: 0.9871506690979004
+    isCorrect: true
+    danger: true
+  - key: crystal ball
+    answer: crystal ball
+    req: crystal ball
+    conf: 0.9560864567756653
+    isCorrect: true
+  - key: cucumber
+    answer: cucumber
+    req: cucumber
+    conf: 0.9803318977355957
+    isCorrect: true
+  - key: curling stone
+    answer: peapod
+    req: teapot
+    conf: 0.7936780452728271
+    isCorrect: true
+  - key: cyclone
+    answer: cyclone
+    req: cyclone
+    conf: 0.7198723554611206
+    isCorrect: true
+    danger: true
+  - key: dagger
+    answer: gaga
+    req: dagger
+    conf: 0.967942476272583
+    isCorrect: false
+  - key: man dancing
+    answer: sing
+    req: dancing
+    conf: 0.721603274345398
+    isCorrect: false
+  - key: woman dancing
+    answer: dancing
+    req: dancing
+    conf: 0.9876290559768677
+    isCorrect: true
+  - key: airplane departure
+    answer: !<tag:yaml.org,2002:js/undefined> ''
+    req: !<tag:yaml.org,2002:js/undefined> ''
+    conf: !<tag:yaml.org,2002:js/undefined> ''
+    isCorrect: false
+  - key: desert
+    answer: desert
+    req: desert
+    conf: 0.9674481153488159
+    isCorrect: true
+  - key: detective
+    answer: detective
+    req: detective
+    conf: 0.8877476453781128
+    isCorrect: true
+  - key: man technologist
+    answer: engineer
+    req: engineer
+    conf: 0.9677056074142456
+    isCorrect: true
+  - key: woman technologist
+    answer: engineer
+    req: engineer
+    conf: 0.9760748147964478
+    isCorrect: true
+  - key: speech balloon
+    answer: dialogue
+    req: dialog
+    conf: 0.8690330982208252
+    isCorrect: false
+  - key: diamond suit
+    answer: diamond
+    req: diamond
+    conf: 0.9806890487670898
+    isCorrect: true
+  - key: gem stone
+    answer: diamond
+    req: diamond
+    conf: 0.9309900999069214
+    isCorrect: true
+  - key: T-Rex
+    answer: dinosaur
+    req: dinosaur
+    conf: 0.9128328561782837
+    isCorrect: true
+  - key: sauropod
+    answer: dinosaur
+    req: dinosaur
+    conf: 0.941684365272522
+    isCorrect: true
+  - key: disappointed face
+    answer: disappointed
+    req: disappointed
+    conf: 0.9876290559768677
+    isCorrect: true
+  - key: person frowning
+    answer: drowning
+    req: frowning
+    conf: 0.8187042474746704
+    isCorrect: true
+  - key: diving mask
+    answer: !<tag:yaml.org,2002:js/undefined> ''
+    req: !<tag:yaml.org,2002:js/undefined> ''
+    conf: !<tag:yaml.org,2002:js/undefined> ''
+    isCorrect: false
+  - key: man health worker
+    answer: doctor
+    req: doctor
+    conf: 0.9033513069152832
+    isCorrect: true
+  - key: woman health worker
+    answer: !<tag:yaml.org,2002:js/undefined> ''
+    req: !<tag:yaml.org,2002:js/undefined> ''
+    conf: !<tag:yaml.org,2002:js/undefined> ''
+    isCorrect: false
+  - key: page with curl
+    answer: scroll
+    req: scroll
+    conf: 0.9252157211303711
+    isCorrect: true
+  - key: scroll
+    answer: call
+    req: scroll
+    conf: 0.9801630973815918
+    isCorrect: false
+  - key: dollar banknote
+    answer: dollar
+    req: dollar
+    conf: 0.009999999776482582
+    isCorrect: true
+    danger: true
+  - key: dolphin
+    answer: call
+    req: dolphin
+    conf: 0.8894935846328735
+    isCorrect: false
+  - key: doughnut
+    answer: donut
+    req: doughnut
+    conf: 0.8772025108337402
+    isCorrect: true
+  - key: dragon
+    answer: dragon
+    req: dragon
+    conf: 0.9459915161132812
+    isCorrect: true
+  - key: dragon face
+    answer: dragon
+    req: dragon
+    conf: 0.9361781477928162
+    isCorrect: true
+  - key: drooling face
+    answer: !<tag:yaml.org,2002:js/undefined> ''
+    req: !<tag:yaml.org,2002:js/undefined> ''
+    conf: !<tag:yaml.org,2002:js/undefined> ''
+    isCorrect: false
+  - key: eggplant
+    answer: egg pop
+    req: eggplant
+    conf: 0.7396125197410583
+    isCorrect: false
+  - key: electric plug
+    answer: call
+    req: current
+    conf: 0.5622918009757996
+    isCorrect: false
+  - key: elephant
+    answer: elephant
+    req: elephant
+    conf: 0.9559125900268555
+    isCorrect: true
+    danger: true
+  - key: envelope
+    answer: envelope
+    req: envelope
+    conf: 0.9640096426010132
+    isCorrect: true
+    danger: true
+  - key: collision
+    answer: !<tag:yaml.org,2002:js/undefined> ''
+    req: !<tag:yaml.org,2002:js/undefined> ''
+    conf: !<tag:yaml.org,2002:js/undefined> ''
+    isCorrect: false
+  - key: face with rolling eyes
+    answer: all right all
+    req: eyeroll
+    conf: 0.8678270578384399
+    isCorrect: false
+  - key: person facepalming
+    answer: facebook
+    req: facepalm
+    conf: 0.9141193628311157
+    isCorrect: true
+  - key: factory
+    answer: factory
+    req: factory
+    conf: 0.9431465864181519
+    isCorrect: true
+  - key: man factory worker
+    answer: call tree wicca
+    req: factory worker
+    conf: 0.5731301307678223
+    isCorrect: false
+  - key: woman factory worker
+    answer: factory worker
+    req: factory worker
+    conf: 0.9863917231559753
+    isCorrect: true
+    danger: true
+  - key: falafel
+    answer: falafel
+    req: falafel
+    conf: 0.941632866859436
+    isCorrect: true
+    danger: true
+  - key: family
+    answer: family
+    req: family
+    conf: 0.9554591178894043
+    isCorrect: true
+  - key: family of 4
+    answer: family
+    req: family
+    conf: 0.8897628784179688
+    isCorrect: true
+  - key: man farmer
+    answer: farmer
+    req: farmer
+    conf: 0.7971820831298828
+    isCorrect: true
+    danger: true
+  - key: woman farmer
+    answer: palmer
+    req: farmer
+    conf: 0.6167160272598267
+    isCorrect: true
+  - key: fencing
+    answer: fencing
+    req: fencing
+    conf: 0.9634770154953003
+    isCorrect: true
+  - key: ferris wheel
+    answer: ferris wheel
+    req: ferris wheel
+    conf: 0.9958763122558594
+    isCorrect: true
+    danger: true
+  - key: fire engine
+    answer: car engine
+    req: fire engine
+    conf: 0.8149765133857727
+    isCorrect: false
+  - key: man firefighter
+    answer: firefighter
+    req: firefighter
+    conf: 0.9479608535766602
+    isCorrect: true
+  - key: firecracker
+    answer: dynamite
+    req: dynamite
+    conf: 0.9169081449508667
+    isCorrect: true
+    danger: true
+  - key: fireworks
+    answer: sparkle
+    req: sparkle
+    conf: 0.8952009677886963
+    isCorrect: true
+    danger: true
+  - key: sparkler
+    answer: sparkle
+    req: sparkle
+    conf: 0.8801640272140503
+    isCorrect: true
+    danger: true
+  - key: fishing pole
+    answer: fishing
+    req: fishing
+    conf: 0.7191843390464783
+    isCorrect: true
+  - key: flamingo
+    answer: flamingo
+    req: flamingo
+    conf: 0.8214530944824219
+    isCorrect: true
+  - key: flashlight
+    answer: flashlight
+    req: flashlight
+    conf: 0.9419024586677551
+    isCorrect: true
+  - key: floppy disk
+    answer: floppy disk
+    req: floppy disk
+    conf: 0.9163786768913269
+    isCorrect: true
+  - key: blossom
+    answer: followfollowfarah
+    req: flower
+    conf: 0.009999999776482582
+    isCorrect: false
+  - key: rosette
+    answer: flower
+    req: flower
+    conf: 0.924767017364502
+    isCorrect: true
+  - key: white flower
+    answer: flower
+    req: flower
+    conf: 0.9254797697067261
+    isCorrect: true
+  - key: wilted flower
+    answer: !<tag:yaml.org,2002:js/undefined> ''
+    req: !<tag:yaml.org,2002:js/undefined> ''
+    conf: !<tag:yaml.org,2002:js/undefined> ''
+    isCorrect: false
+  - key: bouquet
+    answer: flowers
+    req: flowers
+    conf: 0.9938145279884338
+    isCorrect: true
+  - key: flushed face
+    answer: flushed
+    req: flushed
+    conf: 0.9393438100814819
+    isCorrect: true
+  - key: file folder
+    answer: how old
+    req: folder
+    conf: 0.009999999776482582
+    isCorrect: false
+  - key: open file folder
+    answer: colder
+    req: folder
+    conf: 0.6155489087104797
+    isCorrect: true
+  - key: footprints
+    answer: footprint
+    req: footprint
+    conf: 0.9541865587234497
+    isCorrect: true
+  - key: fortune cookie
+    answer: fortune cookie
+    req: fortune cookie
+    conf: 0.9664310812950134
+    isCorrect: true
+    danger: true
+  - key: fountain
+    answer: alden
+    req: fountain
+    conf: 0.009999999776482582
+    isCorrect: false
+  - key: fountain pen
+    answer: fountain pen
+    req: fountain pen
+    conf: 0.9763795733451843
+    isCorrect: true
+  - key: frowning face
+    answer: frowning
+    req: frowning
+    conf: 0.544628381729126
+    isCorrect: true
+  - key: frowning face with open mouth
+    answer: drowning
+    req: frowning
+    conf: 0.7897342443466187
+    isCorrect: true
+  - key: slightly frowning face
+    answer: running
+    req: frowning
+    conf: 0.6165808439254761
+    isCorrect: true
+  - key: chart increasing with yen
+    answer: function
+    req: function
+    conf: 0.9063907861709595
+    isCorrect: true
+  - key: milky way
+    answer: '16'
+    req: galaxy
+    conf: 0.6527534127235413
+    isCorrect: false
+  - key: garlic
+    answer: garlic
+    req: garlic
+    conf: 0.9554563164710999
+    isCorrect: true
+  - key: giraffe
+    answer: giraffe
+    req: giraffe
+    conf: 0.9305791854858398
+    isCorrect: true
+  - key: glasses
+    answer: glasses
+    req: glasses
+    conf: 0.9800626039505005
+    isCorrect: true
+  - key: gloves
+    answer: cologne
+    req: gloves
+    conf: 0.8924120664596558
+    isCorrect: false
+  - key: goblin
+    answer: goblin
+    req: goblin
+    conf: 0.9757547378540039
+    isCorrect: true
+  - key: goggles
+    answer: goggles
+    req: goggles
+    conf: 0.9938145279884338
+    isCorrect: true
+  - key: gorilla
+    answer: gorilla
+    req: gorilla
+    conf: 0.891528844833374
+    isCorrect: true
+    danger: true
+  - key: graduation cap
+    answer: graduation cap
+    req: graduation cap
+    conf: 0.9635575413703918
+    isCorrect: true
+    danger: true
+  - key: grapes
+    answer: great
+    req: grapes
+    conf: 0.9688146114349365
+    isCorrect: false
+  - key: grimacing face
+    answer: are missing
+    req: grimacing
+    conf: 0.6549156904220581
+    isCorrect: false
+  - key: guitar
+    answer: guitar
+    req: guitar
+    conf: 0.926356315612793
+    isCorrect: true
+  - key: haircut
+    answer: haircut
+    req: haircut
+    conf: 0.9182600975036621
+    isCorrect: true
+  - key: hamburger
+    answer: burger
+    req: burger
+    conf: 0.009999999776482582
+    isCorrect: true
+  - key: hammer
+    answer: !<tag:yaml.org,2002:js/undefined> ''
+    req: !<tag:yaml.org,2002:js/undefined> ''
+    conf: !<tag:yaml.org,2002:js/undefined> ''
+    isCorrect: false
+  - key: hamster
+    answer: hamster
+    req: hamster
+    conf: 0.8856453895568848
+    isCorrect: true
+  - key: handbag
+    answer: !<tag:yaml.org,2002:js/undefined> ''
+    req: !<tag:yaml.org,2002:js/undefined> ''
+    conf: !<tag:yaml.org,2002:js/undefined> ''
+    isCorrect: false
+  - key: handball
+    answer: and paul
+    req: handball
+    conf: 0.8022039532661438
+    isCorrect: false
+  - key: handshake
+    answer: handshake
+    req: handshake
+    conf: 0.8877586722373962
+    isCorrect: true
+  - key: headphone
+    answer: !<tag:yaml.org,2002:js/undefined> ''
+    req: !<tag:yaml.org,2002:js/undefined> ''
+    conf: !<tag:yaml.org,2002:js/undefined> ''
+    isCorrect: false
+  - key: woman with headscarf
+    answer: head scarf
+    req: headscarf
+    conf: 0.6762288212776184
+    isCorrect: false
+  - key: hear-no-evil monkey
+    answer: cora marie howe
+    req: hear-no-evil
+    conf: 0.8770781755447388
+    isCorrect: false
+  - key: ear with hearing aid
+    answer: hearing aid
+    req: hearing aid
+    conf: 0.9596053957939148
+    isCorrect: true
+  - key: smiling cat with heart-eyes
+    answer: pod size
+    req: heart eyes
+    conf: 0.009999999776482582
+    isCorrect: false
+  - key: hedgehog
+    answer: call todd
+    req: hedgehog
+    conf: 0.8492972254753113
+    isCorrect: false
+  - key: helicopter
+    answer: helicopter
+    req: helicopter
+    conf: 0.9852707386016846
+    isCorrect: true
+  - key: rescue worker’s helmet
+    answer: omit
+    req: helmet
+    conf: 0.009999999776482582
+    isCorrect: false
+  - key: hibiscus
+    answer: paula
+    req: flower
+    conf: 0.009999999776482582
+    isCorrect: false
+  - key: field hockey
+    answer: call kate
+    req: hockey
+    conf: 0.7532095313072205
+    isCorrect: false
+  - key: men holding hands
+    answer: holding hands
+    req: holding hands
+    conf: 0.9812493324279785
+    isCorrect: true
+  - key: people holding hands
+    answer: holding hands
+    req: holding hands
+    conf: 0.7731050848960876
+    isCorrect: true
+  - key: woman and man holding hands
+    answer: holding hands
+    req: holding hands
+    conf: 0.9869003295898438
+    isCorrect: true
+  - key: women holding hands
+    answer: holding hands
+    req: holding hands
+    conf: 0.952660083770752
+    isCorrect: true
+  - key: hourglass done
+    answer: hourglass
+    req: hourglass
+    conf: 0.932120680809021
+    isCorrect: true
+    danger: true
+  - key: hourglass not done
+    answer: howard law
+    req: hourglass
+    conf: 0.6319482922554016
+    isCorrect: false
+  - key: houses
+    answer: !<tag:yaml.org,2002:js/undefined> ''
+    req: !<tag:yaml.org,2002:js/undefined> ''
+    conf: !<tag:yaml.org,2002:js/undefined> ''
+    isCorrect: false
+  - key: hugging face
+    answer: hugging
+    req: hugging
+    conf: 0.7380923628807068
+    isCorrect: true
+  - key: hundred points
+    answer: frankish biscuit
+    req: hundred
+    conf: 0.5502050518989563
+    isCorrect: false
+  - key: ice cream
+    answer: ice cream
+    req: ice cream
+    conf: 0.8598129749298096
+    isCorrect: true
+  - key: soft ice cream
+    answer: ice cream
+    req: ice cream
+    conf: 0.9592917561531067
+    isCorrect: true
+  - key: shaved ice
+    answer: sorbet
+    req: sorbet
+    conf: 0.704629123210907
+    isCorrect: true
+    danger: true
+  - key: ice hockey
+    answer: ice hockey
+    req: ice hockey
+    conf: 0.9664919972419739
+    isCorrect: true
+  - key: desert island
+    answer: island
+    req: island
+    conf: 0.9644584655761719
+    isCorrect: true
+  - key: coat
+    answer: check out school jacket
+    req: jacket
+    conf: 0.5577225685119629
+    isCorrect: false
+    danger: false
+  - key: Japanese castle
+    answer: castle
+    req: castle
+    conf: 0.7814056277275085
+    isCorrect: true
+  - key: horse racing
+    answer: jackie
+    req: jockey
+    conf: 0.632714569568634
+    isCorrect: false
+  - key: joystick
+    answer: joystick
+    req: joystick
+    conf: 0.9702306985855103
+    isCorrect: true
+  - key: juggling
+    answer: !<tag:yaml.org,2002:js/undefined> ''
+    req: !<tag:yaml.org,2002:js/undefined> ''
+    conf: !<tag:yaml.org,2002:js/undefined> ''
+    isCorrect: false
+  - key: kangaroo
+    answer: skip stones
+    req: kangaroo
+    conf: 0.9301190972328186
+    isCorrect: false
+  - key: martial arts uniform
+    answer: karate
+    req: karate
+    conf: 0.9812408685684204
+    isCorrect: true
+  - key: keyboard
+    answer: keyboard
+    req: keyboard
+    conf: 0.9553744196891785
+    isCorrect: true
+  - key: kimono
+    answer: kimono
+    req: kimono
+    conf: 0.8778196573257446
+    isCorrect: true
+  - key: kissing cat
+    answer: kissing
+    req: kissing
+    conf: 0.9461928606033325
+    isCorrect: true
+    danger: true
+  - key: kneeling
+    answer: flooring
+    req: kneeling
+    conf: 0.9177465438842773
+    isCorrect: true
+  - key: man kneeling
+    answer: niggling
+    req: kneeling
+    conf: 0.8184230327606201
+    isCorrect: true
+  - key: woman kneeling
+    answer: playing
+    req: kneeling
+    conf: 0.009999999776482582
+    isCorrect: false
+  - key: lacrosse
+    answer: lacrosse
+    req: lacrosse
+    conf: 0.741858959197998
+    isCorrect: true
+    danger: true
+  - key: ladybug
+    answer: ladybug
+    req: ladybug
+    conf: 0.9425348043441772
+    isCorrect: true
+  - key: red paper lantern
+    answer: lambton
+    req: lantern
+    conf: 0.894058883190155
+    isCorrect: false
+  - key: laptop
+    answer: laptop
+    req: laptop
+    conf: 0.9733982086181641
+    isCorrect: true
+  - key: leopard
+    answer: leopard
+    req: leopard
+    conf: 0.952613353729248
+    isCorrect: true
+    danger: true
+  - key: levitating
+    answer: devastating
+    req: levitating
+    conf: 0.771817684173584
+    isCorrect: true
+  - key: cloud with lightning
+    answer: lightning
+    req: lightning
+    conf: 0.9215935468673706
+    isCorrect: true
+  - key: cloud with lightning and rain
+    answer: lightning
+    req: lightning
+    conf: 0.9566999673843384
+    isCorrect: true
+  - key: high voltage
+    answer: danger
+    req: danger
+    conf: 0.7497642636299133
+    isCorrect: true
+  - key: lipstick
+    answer: lipstick
+    req: lipstick
+    conf: 0.9677771925926208
+    isCorrect: true
+  - key: lizard
+    answer: lizard
+    req: lizard
+    conf: 0.8739564418792725
+    isCorrect: true
+  - key: lobster
+    answer: lobster
+    req: lobster
+    conf: 0.9575850963592529
+    isCorrect: true
+  - key: locomotive
+    answer: locomotive
+    req: locomotive
+    conf: 0.9558721780776978
+    isCorrect: true
+    danger: true
+  - key: lollipop
+    answer: lollipop
+    req: lollipop
+    conf: 0.9736437201499939
+    isCorrect: true
+  - key: lotion bottle
+    answer: lotion
+    req: lotion
+    conf: 0.8214590549468994
+    isCorrect: true
+  - key: loudspeaker
+    answer: loudspeaker
+    req: loudspeaker
+    conf: 0.8529735803604126
+    isCorrect: true
+  - key: love letter
+    answer: love letter
+    req: love letter
+    conf: 0.9416873455047607
+    isCorrect: true
+  - key: magnet
+    answer: magnet
+    req: magnet
+    conf: 0.7481869459152222
+    isCorrect: true
+  - key: magnifying glass tilted left
+    answer: magnifier
+    req: magnifier
+    conf: 0.9848419427871704
+    isCorrect: true
+  - key: magnifying glass tilted right
+    answer: magnifier
+    req: magnifier
+    conf: 0.9848419427871704
+    isCorrect: true
+  - key: mahjong red dragon
+    answer: mahjong
+    req: mahjong
+    conf: 0.9441815614700317
+    isCorrect: true
+  - key: postbox
+    answer: mailbox
+    req: mailbox
+    conf: 0.9580819010734558
+    isCorrect: true
+  - key: nail polish
+    answer: manicure
+    req: manicure
+    conf: 0.9474369287490845
+    isCorrect: true
+  - key: maple leaf
+    answer: maple leaf
+    req: maple leaf
+    conf: 0.8481404781341553
+    isCorrect: true
+  - key: massage
+    answer: massage
+    req: massage
+    conf: 0.9558826684951782
+    isCorrect: true
+  - key: man mechanic
+    answer: mechanic
+    req: mechanic
+    conf: 0.9705471992492676
+    isCorrect: true
+  - key: woman mechanic
+    answer: mechanic
+    req: mechanic
+    conf: 0.7774166464805603
+    isCorrect: true
+  - key: megaphone
+    answer: megaphone
+    req: megaphone
+    conf: 0.8970814943313599
+    isCorrect: true
+  - key: mermaid
+    answer: mermaid
+    req: mermaid
+    conf: 0.6751439571380615
+    isCorrect: true
+  - key: e-mail
+    answer: email
+    req: e-mail
+    conf: 0.9541088342666626
+    isCorrect: true
+  - key: microbe
+    answer: amoeba
+    req: amoeba
+    conf: 0.8752630949020386
+    isCorrect: true
+    danger: true
+  - key: microphone
+    answer: microphone
+    req: microphone
+    conf: 0.973291277885437
+    isCorrect: true
+  - key: studio microphone
+    answer: microphone
+    req: microphone
+    conf: 0.9510777592658997
+    isCorrect: true
+  - key: microscope
+    answer: microscope
+    req: microscope
+    conf: 0.9456456303596497
+    isCorrect: true
+  - key: middle finger
+    answer: middle finger
+    req: middle finger
+    conf: 0.9000494480133057
+    isCorrect: true
+  - key: monkey
+    answer: monkey
+    req: monkey
+    conf: 0.9713839292526245
+    isCorrect: true
+  - key: face with monocle
+    answer: monaco
+    req: monocle
+    conf: 0.9148107767105103
+    isCorrect: true
+  - key: monorail
+    answer: railway
+    req: railway
+    conf: 0.9382454752922058
+    isCorrect: true
+  - key: mosque
+    answer: mosque
+    req: mosque
+    conf: 0.910498857498169
+    isCorrect: true
+  - key: mosquito
+    answer: mosquito
+    req: mosquito
+    conf: 0.9619520902633667
+    isCorrect: true
+  - key: motor scooter
+    answer: motor scooter
+    req: motor scooter
+    conf: 0.9734846949577332
+    isCorrect: true
+  - key: motor boat
+    answer: motorboat
+    req: motorboat
+    conf: 0.897107720375061
+    isCorrect: true
+  - key: motorcycle
+    answer: motorcycle
+    req: motorcycle
+    conf: 0.9631786346435547
+    isCorrect: true
+  - key: mountain
+    answer: !<tag:yaml.org,2002:js/undefined> ''
+    req: !<tag:yaml.org,2002:js/undefined> ''
+    conf: !<tag:yaml.org,2002:js/undefined> ''
+    isCorrect: false
+  - key: snow-capped mountain
+    answer: melvin
+    req: mountain
+    conf: 0.009999999776482582
+    isCorrect: false
+  - key: cupcake
+    answer: often
+    req: muffin
+    conf: 0.7963094711303711
+    isCorrect: false
+  - key: mushroom
+    answer: mushrooms
+    req: mushroom
+    conf: 0.8976290822029114
+    isCorrect: true
+  - key: face vomiting
+    answer: nausea
+    req: nausea
+    conf: 0.759327232837677
+    isCorrect: true
+    danger: true
+  - key: nauseated face
+    answer: no idea
+    req: nausea
+    conf: 0.7358077168464661
+    isCorrect: false
+  - key: expressionless face
+    answer: neutral
+    req: neutral
+    conf: 0.9049757122993469
+    isCorrect: true
+    danger: true
+  - key: neutral face
+    answer: cancel
+    req: neutral
+    conf: 0.8957436680793762
+    isCorrect: false
+  - key: newspaper
+    answer: newspaper
+    req: newspaper
+    conf: 0.9165182113647461
+    isCorrect: true
+  - key: rolled-up newspaper
+    answer: newspaper
+    req: newspaper
+    conf: 0.9125033617019653
+    isCorrect: true
+  - key: face without mouth
+    answer: know your mouth
+    req: no mouth
+    conf: 0.7483497262001038
+    isCorrect: false
+  - key: ledger
+    answer: notebook
+    req: notebook
+    conf: 0.9118635654449463
+    isCorrect: true
+  - key: notebook
+    answer: !<tag:yaml.org,2002:js/undefined> ''
+    req: !<tag:yaml.org,2002:js/undefined> ''
+    conf: !<tag:yaml.org,2002:js/undefined> ''
+    isCorrect: false
+  - key: notebook with decorative cover
+    answer: notebook
+    req: notebook
+    conf: 0.9020918607711792
+    isCorrect: true
+  - key: spiral notepad
+    answer: notepad
+    req: notepad
+    conf: 0.9488812685012817
+    isCorrect: true
+  - key: memo
+    answer: naruto
+    req: notice
+    conf: 0.7107850313186646
+    isCorrect: true
+  - key: octopus
+    answer: octopus
+    req: octopus
+    conf: 0.9938145279884338
+    isCorrect: true
+  - key: man office worker
+    answer: office
+    req: office
+    conf: 0.9398899078369141
+    isCorrect: true
+    danger: true
+  - key: woman office worker
+    answer: office worker
+    req: office worker
+    conf: 0.9662638306617737
+    isCorrect: true
+    danger: true
+  - key: face with hand over mouth
+    answer: 'okay, somebody island'
+    req: whoops
+    conf: 0.763695240020752
+    isCorrect: false
+  - key: diya lamp
+    answer: oil lamp
+    req: oil lamp
+    conf: 0.9121058583259583
+    isCorrect: true
+  - key: tangerine
+    answer: orange
+    req: orange
+    conf: 0.9501950740814209
+    isCorrect: true
+  - key: orangutan
+    answer: orangutan
+    req: orangutan
+    conf: 0.9477022886276245
+    isCorrect: true
+  - key: envelope with arrow
+    answer: !<tag:yaml.org,2002:js/undefined> ''
+    req: !<tag:yaml.org,2002:js/undefined> ''
+    conf: !<tag:yaml.org,2002:js/undefined> ''
+    isCorrect: false
+  - key: oyster
+    answer: oyster
+    req: oyster
+    conf: 0.9371402263641357
+    isCorrect: true
+  - key: package
+    answer: parcel
+    req: parcel
+    conf: 0.9134828448295593
+    isCorrect: true
+  - key: paintbrush
+    answer: baby brush
+    req: paintbrush
+    conf: 0.8150053024291992
+    isCorrect: false
+  - key: artist palette
+    answer: call lowe's
+    req: colors
+    conf: 0.6248206496238708
+    isCorrect: false
+  - key: palm tree
+    answer: palm tree
+    req: palm tree
+    conf: 0.9763126373291016
+    isCorrect: true
+  - key: pancakes
+    answer: pancakes
+    req: pancakes
+    conf: 0.9588991403579712
+    isCorrect: true
+  - key: paperclip
+    answer: paper clips
+    req: paperclip
+    conf: 0.6198115348815918
+    isCorrect: false
+  - key: linked paperclips
+    answer: eclipse
+    req: paperclips
+    conf: 0.8989794254302979
+    isCorrect: false
+  - key: parachute
+    answer: paris cute
+    req: parachute
+    conf: 0.7632851600646973
+    isCorrect: false
+  - key: parrot
+    answer: carid
+    req: parrot
+    conf: 0.7908937931060791
+    isCorrect: false
+  - key: peacock
+    answer: peacock
+    req: peacock
+    conf: 0.9938145279884338
+    isCorrect: true
+  - key: peanuts
+    answer: peanut
+    req: peanut
+    conf: 0.7961417436599731
+    isCorrect: true
+  - key: pencil
+    answer: cancel
+    req: pencil
+    conf: 0.8871094584465027
+    isCorrect: false
+  - key: penguin
+    answer: penguin
+    req: penguin
+    conf: 0.9535086154937744
+    isCorrect: true
+  - key: pensive face
+    answer: can send
+    req: pensive
+    conf: 0.6947378516197205
+    isCorrect: false
+  - key: hot pepper
+    answer: ever
+    req: pepper
+    conf: 0.9332857131958008
+    isCorrect: true
+  - key: man
+    answer: person
+    req: person
+    conf: 0.7242990732192993
+    isCorrect: true
+  - key: petri dish
+    answer: petri dish
+    req: petri dish
+    conf: 0.813079297542572
+    isCorrect: true
+  - key: framed picture
+    answer: picture
+    req: picture
+    conf: 0.9152576923370361
+    isCorrect: true
+  - key: pineapple
+    answer: pineapple
+    req: pineapple
+    conf: 0.9861968755722046
+    isCorrect: true
+  - key: ping pong
+    answer: 10 palms
+    req: ping pong
+    conf: 0.7448136806488037
+    isCorrect: false
+  - key: lying face
+    answer: 10 okeo
+    req: pinocchio
+    conf: 0.9864975810050964
+    isCorrect: false
+  - key: pleading face
+    answer: !<tag:yaml.org,2002:js/undefined> ''
+    req: !<tag:yaml.org,2002:js/undefined> ''
+    conf: !<tag:yaml.org,2002:js/undefined> ''
+    isCorrect: false
+  - key: namaste
+    answer: please
+    req: please
+    conf: 0.8792501091957092
+    isCorrect: true
+  - key: police car
+    answer: police
+    req: police
+    conf: 0.7310500144958496
+    isCorrect: true
+  - key: police officer
+    answer: police
+    req: police
+    conf: 0.9293125867843628
+    isCorrect: true
+  - key: popcorn
+    answer: popcorn
+    req: popcorn
+    conf: 0.9723837375640869
+    isCorrect: true
+  - key: postal horn
+    answer: postal horn
+    req: postal horn
+    conf: 0.99113529920578
+    isCorrect: true
+  - key: potato
+    answer: potato
+    req: potato
+    conf: 0.9871438145637512
+    isCorrect: true
+  - key: roasted sweet potato
+    answer: potato
+    req: potato
+    conf: 0.9739922881126404
+    isCorrect: true
+  - key: poultry leg
+    answer: kohl'stoll free
+    req: poultry
+    conf: 0.009999999776482582
+    isCorrect: false
+  - key: person pouting
+    answer: calling
+    req: pouting
+    conf: 0.9366037249565125
+    isCorrect: true
+  - key: pouting cat
+    answer: golden cat
+    req: pouting cat
+    conf: 0.7149927020072937
+    isCorrect: false
+  - key: pregnant woman
+    answer: pregnant
+    req: pregnant
+    conf: 0.9771707057952881
+    isCorrect: true
+  - key: pretzel
+    answer: bethel
+    req: pretzel
+    conf: 0.7189490795135498
+    isCorrect: true
+  - key: prince
+    answer: trans
+    req: prince
+    conf: 0.6769126653671265
+    isCorrect: false
+  - key: princess
+    answer: princess
+    req: princess
+    conf: 0.978731632232666
+    isCorrect: true
+  - key: printer
+    answer: princess
+    req: printer
+    conf: 0.009999999776482582
+    isCorrect: true
+  - key: film projector
+    answer: projector
+    req: projector
+    conf: 0.9567606449127197
+    isCorrect: true
+  - key: custard
+    answer: puttingputtingpudding
+    req: pudding
+    conf: 0.009999999776482582
+    isCorrect: false
+  - key: jack-o-lantern
+    answer: pumpkin
+    req: pumpkin
+    conf: 0.9597892761230469
+    isCorrect: true
+  - key: puzzle piece
+    answer: puzzle
+    req: puzzle
+    conf: 0.9105167388916016
+    isCorrect: true
+  - key: rabbit
+    answer: rabbit
+    req: rabbit
+    conf: 0.6002289652824402
+    isCorrect: true
+  - key: light rail
+    answer: subway
+    req: subway
+    conf: 0.9718866944313049
+    isCorrect: true
+    danger: true
+  - key: metro
+    answer: call brad
+    req: subway
+    conf: 0.8290084004402161
+    isCorrect: false
+    danger: true
+  - key: train
+    answer: subway
+    req: subway
+    conf: 0.9876290559768677
+    isCorrect: true
+    danger: true
+  - key: tram
+    answer: railway
+    req: railway
+    conf: 0.9558168053627014
+    isCorrect: true
+  - key: rainbow
+    answer: rainbow
+    req: rainbow
+    conf: 0.9858784675598145
+    isCorrect: true
+    danger: true
+  - key: raising hands
+    answer: celebrating
+    req: celebrating
+    conf: 0.8964165449142456
+    isCorrect: true
+  - key: receipt
+    answer: receipt
+    req: receipt
+    conf: 0.963310956954956
+    isCorrect: true
+  - key: 'man: red hair'
+    answer: redredred hotred hat
+    req: red hair
+    conf: 0.009999999776482582
+    isCorrect: false
+  - key: rhinoceros
+    answer: rhinoceros
+    req: rhinoceros
+    conf: 0.9742015600204468
+    isCorrect: true
+  - key: ribbon
+    answer: reuben
+    req: ribbon
+    conf: 0.6890113353729248
+    isCorrect: false
+  - key: rocket
+    answer: rocket
+    req: rocket
+    conf: 0.6880123019218445
+    isCorrect: true
+  - key: roller coaster
+    answer: roller coaster
+    req: roller coaster
+    conf: 0.9352019429206848
+    isCorrect: true
+  - key: rooster
+    answer: free stuff
+    req: rooster
+    conf: 0.9230650067329407
+    isCorrect: false
+  - key: rowing boat
+    answer: !<tag:yaml.org,2002:js/undefined> ''
+    req: !<tag:yaml.org,2002:js/undefined> ''
+    conf: !<tag:yaml.org,2002:js/undefined> ''
+    isCorrect: false
+  - key: man running
+    answer: running
+    req: running
+    conf: 0.9876290559768677
+    isCorrect: true
+  - key: running
+    answer: running
+    req: running
+    conf: 0.9787833094596863
+    isCorrect: true
+  - key: woman running
+    answer: running
+    req: running
+    conf: 0.9758641719818115
+    isCorrect: true
+  - key: safety pin
+    answer: safety pin
+    req: safety pin
+    conf: 0.8569334149360657
+    isCorrect: true
+  - key: safety vest
+    answer: safety
+    req: safety
+    conf: 0.9174070358276367
+    isCorrect: true
+  - key: sailboat
+    answer: result
+    req: resort
+    conf: 0.8186986446380615
+    isCorrect: true
+  - key: sandwich
+    answer: sandwich
+    req: sandwich
+    conf: 0.9663223028182983
+    isCorrect: true
+  - key: satellite
+    answer: herbalife
+    req: satellite
+    conf: 0.588249146938324
+    isCorrect: true
+  - key: satellite antenna
+    answer: acolyte
+    req: satellite
+    conf: 0.7755393981933594
+    isCorrect: true
+  - key: ringed planet
+    answer: satin
+    req: saturn
+    conf: 0.635456919670105
+    isCorrect: true
+  - key: hotdog
+    answer: hot dog
+    req: hotdog
+    conf: 0.8979966044425964
+    isCorrect: false
+  - key: saxophone
+    answer: saxophone
+    req: saxophone
+    conf: 0.9577847719192505
+    isCorrect: true
+  - key: school
+    answer: school
+    req: school
+    conf: 0.903842031955719
+    isCorrect: true
+  - key: man scientist
+    answer: scientist
+    req: scientist
+    conf: 0.7706683874130249
+    isCorrect: true
+    danger: true
+  - key: woman scientist
+    answer: dentist
+    req: scientist
+    conf: 0.7337571978569031
+    isCorrect: true
+  - key: scissors
+    answer: !<tag:yaml.org,2002:js/undefined> ''
+    req: !<tag:yaml.org,2002:js/undefined> ''
+    conf: !<tag:yaml.org,2002:js/undefined> ''
+    isCorrect: false
+  - key: kick scooter
+    answer: !<tag:yaml.org,2002:js/undefined> ''
+    req: !<tag:yaml.org,2002:js/undefined> ''
+    conf: !<tag:yaml.org,2002:js/undefined> ''
+    isCorrect: false
+  - key: scorpion
+    answer: call pan
+    req: scorpion
+    conf: 0.8646392226219177
+    isCorrect: false
+  - key: zipper-mouth face
+    answer: sealed
+    req: sealed
+    conf: 0.7416709661483765
+    isCorrect: true
+    danger: true
+  - key: seedling
+    answer: elaine
+    req: seedling
+    conf: 0.7083624601364136
+    isCorrect: false
+  - key: selfie
+    answer: selfie
+    req: selfie
+    conf: 0.9553686380386353
+    isCorrect: true
+  - key: shamrock
+    answer: grover
+    req: clover
+    conf: 0.9766329526901245
+    isCorrect: true
+  - key: shield
+    answer: shield
+    req: shield
+    conf: 0.9567404389381409
+    isCorrect: true
+  - key: exploding head
+    answer: shocked
+    req: shocked
+    conf: 0.8960425853729248
+    isCorrect: true
+    danger: true
+  - key: shooting star
+    answer: shooting star
+    req: shooting star
+    conf: 0.9469199180603027
+    isCorrect: true
+  - key: shopping cart
+    answer: shopping card
+    req: shopping cart
+    conf: 0.9074400067329407
+    isCorrect: false
+  - key: shorts
+    answer: !<tag:yaml.org,2002:js/undefined> ''
+    req: !<tag:yaml.org,2002:js/undefined> ''
+    conf: !<tag:yaml.org,2002:js/undefined> ''
+    isCorrect: false
+  - key: shower
+    answer: shower
+    req: shower
+    conf: 0.9616665244102478
+    isCorrect: true
+  - key: fried shrimp
+    answer: trump
+    req: shrimp
+    conf: 0.009999999776482582
+    isCorrect: false
+  - key: shrimp
+    answer: trev
+    req: shrimp
+    conf: 0.7711859941482544
+    isCorrect: false
+  - key: person shrugging
+    answer: our god
+    req: oh god
+    conf: 0.9008383750915527
+    isCorrect: false
+  - key: shushing face
+    answer: island
+    req: silent
+    conf: 0.889686107635498
+    isCorrect: false
+  - key: man singer
+    answer: !<tag:yaml.org,2002:js/undefined> ''
+    req: !<tag:yaml.org,2002:js/undefined> ''
+    conf: !<tag:yaml.org,2002:js/undefined> ''
+    isCorrect: false
+  - key: woman singer
+    answer: !<tag:yaml.org,2002:js/undefined> ''
+    req: !<tag:yaml.org,2002:js/undefined> ''
+    conf: !<tag:yaml.org,2002:js/undefined> ''
+    isCorrect: false
+  - key: skateboard
+    answer: skateboard
+    req: skateboard
+    conf: 0.957968533039093
+    isCorrect: true
+  - key: ice skate
+    answer: !<tag:yaml.org,2002:js/undefined> ''
+    req: !<tag:yaml.org,2002:js/undefined> ''
+    conf: !<tag:yaml.org,2002:js/undefined> ''
+    isCorrect: false
+  - key: face with raised eyebrow
+    answer: stoptech
+    req: skeptic
+    conf: 0.6407855749130249
+    isCorrect: false
+  - key: skier
+    answer: !<tag:yaml.org,2002:js/undefined> ''
+    req: !<tag:yaml.org,2002:js/undefined> ''
+    conf: !<tag:yaml.org,2002:js/undefined> ''
+    isCorrect: false
+  - key: skis
+    answer: !<tag:yaml.org,2002:js/undefined> ''
+    req: !<tag:yaml.org,2002:js/undefined> ''
+    conf: !<tag:yaml.org,2002:js/undefined> ''
+    isCorrect: false
+  - key: relieved face
+    answer: make a
+    req: sleepy
+    conf: 0.009999999776482582
+    isCorrect: false
+  - key: sleeping face
+    answer: sleeping
+    req: sleepy
+    conf: 0.9817802906036377
+    isCorrect: true
+  - key: sleepy face
+    answer: jpay
+    req: sleepy
+    conf: 0.5838271379470825
+    isCorrect: false
+  - key: sled
+    answer: call
+    req: sleigh
+    conf: 0.009999999776482582
+    isCorrect: false
+  - key: level slider
+    answer: playslidertry thatslider
+    req: slider
+    conf: 0.009999999776482582
+    isCorrect: false
+  - key: flat shoe
+    answer: !<tag:yaml.org,2002:js/undefined> ''
+    req: !<tag:yaml.org,2002:js/undefined> ''
+    conf: !<tag:yaml.org,2002:js/undefined> ''
+    isCorrect: false
+  - key: slot machine
+    answer: slot machine
+    req: slot machine
+    conf: 0.7712869644165039
+    isCorrect: true
+  - key: smirking face
+    answer: smoking
+    req: smirking
+    conf: 0.9555894732475281
+    isCorrect: true
+  - key: running shoe
+    answer: cooper
+    req: sneaker
+    conf: 0.8188735842704773
+    isCorrect: true
+  - key: sneezing face
+    answer: boom
+    req: sneeze
+    conf: 0.6521518230438232
+    isCorrect: false
+  - key: snowboarder
+    answer: flyboard
+    req: snowboard
+    conf: 0.8821998834609985
+    isCorrect: true
+  - key: snowflake
+    answer: snowflake
+    req: snowflake
+    conf: 0.9756792783737183
+    isCorrect: true
+  - key: snowman
+    answer: snowman
+    req: snowman
+    conf: 0.7646252512931824
+    isCorrect: true
+  - key: snowman without snow
+    answer: snowman
+    req: snowman
+    conf: 0.9609179496765137
+    isCorrect: true
+  - key: soccer ball
+    answer: soccer
+    req: soccer
+    conf: 0.9546798467636108
+    isCorrect: true
+  - key: softball
+    answer: softball
+    req: softball
+    conf: 0.895601749420166
+    isCorrect: true
+  - key: sparkles
+    answer: call kohl's
+    req: sparkles
+    conf: 0.8085086941719055
+    isCorrect: false
+  - key: speak-no-evil monkey
+    answer: maryville
+    req: speak-no-evil
+    conf: 0.7680057287216187
+    isCorrect: true
+  - key: speaker high volume
+    answer: speaker
+    req: speaker
+    conf: 0.8917690515518188
+    isCorrect: true
+  - key: speaker low volume
+    answer: speaker
+    req: speaker
+    conf: 0.009999999776482582
+    isCorrect: true
+  - key: speaker medium volume
+    answer: !<tag:yaml.org,2002:js/undefined> ''
+    req: !<tag:yaml.org,2002:js/undefined> ''
+    conf: !<tag:yaml.org,2002:js/undefined> ''
+    isCorrect: false
+  - key: eye in speech bubble
+    answer: speech balloon
+    req: speech balloon
+    conf: 0.9105567336082458
+    isCorrect: true
+    danger: true
+  - key: left speech bubble
+    answer: beach balloon
+    req: speech balloon
+    conf: 0.8942923545837402
+    isCorrect: false
+  - key: right anger bubble
+    answer: french balloon
+    req: speech balloon
+    conf: 0.7369461059570312
+    isCorrect: false
+  - key: spider
+    answer: by that
+    req: spider
+    conf: 0.7823613286018372
+    isCorrect: false
+  - key: spider web
+    answer: spider web
+    req: spider web
+    conf: 0.915882408618927
+    isCorrect: true
+  - key: chipmunk
+    answer: squirrel
+    req: squirrel
+    conf: 0.7771002650260925
+    isCorrect: true
+  - key: stadium
+    answer: stadium
+    req: stadium
+    conf: 0.9784291982650757
+    isCorrect: true
+  - key: standing
+    answer: standing
+    req: standing
+    conf: 0.8917727470397949
+    isCorrect: true
+  - key: bus stop
+    answer: station
+    req: station
+    conf: 0.9554668664932251
+    isCorrect: true
+  - key: station
+    answer: call brad
+    req: subway
+    conf: 0.8619477152824402
+    isCorrect: false
+  - key: Statue of Liberty
+    answer: statue
+    req: statue
+    conf: 0.8575941920280457
+    isCorrect: true
+    danger: true
+  - key: moai
+    answer: statue
+    req: statue
+    conf: 0.9169061183929443
+    isCorrect: true
+    danger: true
+  - key: face with steam from nose
+    answer: steaming
+    req: steaming
+    conf: 0.009999999776482582
+    isCorrect: true
+  - key: stethoscope
+    answer: stethoscope
+    req: stethoscope
+    conf: 0.9876290559768677
+    isCorrect: true
+  - key: stopwatch
+    answer: stopwatch
+    req: stopwatch
+    conf: 0.9169135093688965
+    isCorrect: true
+  - key: strawberry
+    answer: strawberry
+    req: strawberry
+    conf: 0.9938145279884338
+    isCorrect: true
+  - key: persevering face
+    answer: stopstop
+    req: stubborn
+    conf: 0.8999999761581421
+    isCorrect: false
+  - key: man student
+    answer: google
+    req: student
+    conf: 0.009999999776482582
+    isCorrect: false
+  - key: woman student
+    answer: pampered
+    req: student
+    conf: 0.009999999776482582
+    isCorrect: false
+  - key: luggage
+    answer: baggage
+    req: baggage
+    conf: 0.9560737013816833
+    isCorrect: true
+  - key: sunflower
+    answer: flower
+    req: flower
+    conf: 0.907801628112793
+    isCorrect: true
+  - key: smiling face with sunglasses
+    answer: bright
+    req: bright
+    conf: 0.7041022181510925
+    isCorrect: true
+  - key: sunglasses
+    answer: glasses
+    req: glasses
+    conf: 0.9382939338684082
+    isCorrect: true
+  - key: superhero
+    answer: superhero
+    req: superhero
+    conf: 0.9164408445358276
+    isCorrect: true
+  - key: supervillain
+    answer: super villain
+    req: supervillain
+    conf: 0.8390640616416931
+    isCorrect: false
+  - key: surfing
+    answer: staffing
+    req: surfing
+    conf: 0.8901470303535461
+    isCorrect: true
+  - key: woman surfing
+    answer: staffing
+    req: surfing
+    conf: 0.6683107614517212
+    isCorrect: true
+  - key: face with open mouth
+    answer: surprised
+    req: surprised
+    conf: 0.7952481508255005
+    isCorrect: true
+  - key: hushed face
+    answer: call
+    req: hushed
+    conf: 0.009999999776482582
+    isCorrect: false
+  - key: downcast face with sweat
+    answer: wedding
+    req: sweating
+    conf: 0.9174273610115051
+    isCorrect: true
+  - key: swimming
+    answer: swimming
+    req: swimming
+    conf: 0.9793562889099121
+    isCorrect: true
+  - key: one-piece swimsuit
+    answer: swimsuit
+    req: swimsuit
+    conf: 0.8591474890708923
+    isCorrect: true
+  - key: syringe
+    answer: syringe
+    req: syringe
+    conf: 0.978046178817749
+    isCorrect: true
+    danger: true
+  - key: t-shirt
+    answer: pawn shop
+    req: t-shirt
+    conf: 0.5927662253379822
+    isCorrect: false
+  - key: fork and knife with plate
+    answer: dinner
+    req: dinner
+    conf: 0.009999999776482582
+    isCorrect: true
+  - key: man teacher
+    answer: teacher
+    req: teacher
+    conf: 0.9938145279884338
+    isCorrect: true
+  - key: woman teacher
+    answer: teachpicturepizzachange the search
+    req: teacher
+    conf: 0.009999999776482582
+    isCorrect: false
+  - key: teddy bear
+    answer: teddy bear
+    req: teddy bear
+    conf: 0.9801573753356934
+    isCorrect: true
+    danger: true
+  - key: telescope
+    answer: telescope
+    req: telescope
+    conf: 0.9153450727462769
+    isCorrect: true
+  - key: classical building
+    answer: call call
+    req: temple
+    conf: 0.009999999776482582
+    isCorrect: false
+  - key: hindu temple
+    answer: temple
+    req: temple
+    conf: 0.796493649482727
+    isCorrect: true
+  - key: shinto shrine
+    answer: temple
+    req: temple
+    conf: 0.7582951784133911
+    isCorrect: true
+  - key: tennis
+    answer: call babe
+    req: tennis
+    conf: 0.709805965423584
+    isCorrect: false
+  - key: test tube
+    answer: clarks shoe
+    req: test tube
+    conf: 0.6000060439109802
+    isCorrect: false
+  - key: thermometer
+    answer: thermometer
+    req: thermometer
+    conf: 0.9876290559768677
+    isCorrect: true
+  - key: thinking face
+    answer: drinking
+    req: thinking
+    conf: 0.6583427786827087
+    isCorrect: true
+  - key: thought balloon
+    answer: sosold
+    req: thought
+    conf: 0.009999999776482582
+    isCorrect: false
+  - key: thread
+    answer: shred
+    req: thread
+    conf: 0.875251054763794
+    isCorrect: false
+  - key: thumbs up
+    answer: thumbs up
+    req: thumbs up
+    conf: 0.9285211563110352
+    isCorrect: true
+  - key: ticket
+    answer: princess
+    req: ticket
+    conf: 0.009999999776482582
+    isCorrect: false
+  - key: toilet
+    answer: toilet
+    req: toilet
+    conf: 0.7677965760231018
+    isCorrect: true
+  - key: roll of paper
+    answer: toilet paper
+    req: toilet paper
+    conf: 0.9816010594367981
+    isCorrect: true
+  - key: tomato
+    answer: come on
+    req: tomato
+    conf: 0.8106058239936829
+    isCorrect: false
+  - key: face with tongue
+    answer: callcall
+    req: tongue
+    conf: 0.009999999776482582
+    isCorrect: false
+    danger: true
+  - key: money-mouth face
+    answer: tongue
+    req: tongue
+    conf: 0.6067897081375122
+    isCorrect: true
+    danger: true
+  - key: tongue
+    answer: tongue
+    req: tongue
+    conf: 0.9514904022216797
+    isCorrect: true
+    danger: true
+  - key: winking face with tongue
+    answer: tongue
+    req: tongue
+    conf: 0.9235010147094727
+    isCorrect: true
+    danger: true
+  - key: toolbox
+    answer: tool box
+    req: toolbox
+    conf: 0.6995083689689636
+    isCorrect: false
+  - key: tornado
+    answer: tornado
+    req: tornado
+    conf: 0.9816451072692871
+    isCorrect: true
+  - key: trackball
+    answer: apple
+    req: trackball
+    conf: 0.7084596753120422
+    isCorrect: false
+  - key: tractor
+    answer: tractor
+    req: tractor
+    conf: 0.926734447479248
+    isCorrect: true
+  - key: barrier
+    answer: traffic
+    req: traffic
+    conf: 0.8545892238616943
+    isCorrect: true
+  - key: vertical traffic light
+    answer: signal
+    req: signal
+    conf: 0.9599835872650146
+    isCorrect: true
+  - key: musical score
+    answer: trouble
+    req: treble
+    conf: 0.8848087787628174
+    isCorrect: true
+  - key: railway car
+    answer: call a
+    req: trolley
+    conf: 0.7442026734352112
+    isCorrect: false
+  - key: tram car
+    answer: trolley
+    req: trolley
+    conf: 0.787966251373291
+    isCorrect: true
+    danger: true
+  - key: trolleybus
+    answer: trolley
+    req: trolley
+    conf: 0.8868138194084167
+    isCorrect: true
+    danger: true
+  - key: trophy
+    answer: trophy
+    req: trophy
+    conf: 0.9327389001846313
+    isCorrect: true
+  - key: trumpet
+    answer: trumpet
+    req: trumpet
+    conf: 0.9620898962020874
+    isCorrect: true
+  - key: rickshaw
+    answer: tuk tuk
+    req: tuk tuk
+    conf: 0.8154856562614441
+    isCorrect: true
+    danger: true
+  - key: person wearing turban
+    answer: tavern
+    req: turban
+    conf: 0.7702497839927673
+    isCorrect: false
+  - key: turkey
+    answer: call keith
+    req: turkey
+    conf: 0.9224278330802917
+    isCorrect: false
+  - key: turtle
+    answer: cancel
+    req: turtle
+    conf: 0.009999999776482582
+    isCorrect: false
+  - key: person in tuxedo
+    answer: tuxedo
+    req: tuxedo
+    conf: 0.9750622510910034
+    isCorrect: true
+  - key: revolving hearts
+    answer: two hearts
+    req: two hearts
+    conf: 0.8961626887321472
+    isCorrect: true
+    danger: true
+  - key: two hearts
+    answer: taylor hall
+    req: two hearts
+    conf: 0.5493753552436829
+    isCorrect: false
+  - key: beach with umbrella
+    answer: umbrella
+    req: umbrella
+    conf: 0.9558718204498291
+    isCorrect: true
+  - key: closed umbrella
+    answer: umbrella
+    req: umbrella
+    conf: 0.9938145279884338
+    isCorrect: true
+  - key: umbrella
+    answer: umbrella
+    req: umbrella
+    conf: 0.9610527753829956
+    isCorrect: true
+  - key: umbrella on ground
+    answer: umbrella
+    req: umbrella
+    conf: 0.9434168338775635
+    isCorrect: true
+  - key: umbrella with rain drops
+    answer: umbrella
+    req: umbrella
+    conf: 0.9757639169692993
+    isCorrect: true
+  - key: unamused face
+    answer: unhappy
+    req: unhappy
+    conf: 0.9634715914726257
+    isCorrect: true
+  - key: vampire
+    answer: vampire
+    req: vampire
+    conf: 0.9768767356872559
+    isCorrect: true
+  - key: victory hand
+    answer: victory
+    req: victory
+    conf: 0.009999999776482582
+    isCorrect: true
+  - key: violin
+    answer: violin
+    req: violin
+    conf: 0.985344648361206
+    isCorrect: true
+  - key: volcano
+    answer: volcano
+    req: volcano
+    conf: 0.963136613368988
+    isCorrect: true
+  - key: volleyball
+    answer: volleyball
+    req: volleyball
+    conf: 0.9585996866226196
+    isCorrect: true
+  - key: vulcan salute
+    answer: call kenneth salute
+    req: vulcan salute
+    conf: 0.8826234936714172
+    isCorrect: false
+  - key: waffle
+    answer: waffle
+    req: waffle
+    conf: 0.9068132638931274
+    isCorrect: true
+  - key: man walking
+    answer: walking
+    req: walking
+    conf: 0.955846905708313
+    isCorrect: true
+  - key: walking
+    answer: walking
+    req: walking
+    conf: 0.955846905708313
+    isCorrect: true
+  - key: woman walking
+    answer: walking
+    req: walking
+    conf: 0.8910982608795166
+    isCorrect: true
+  - key: wastebasket
+    answer: wastebasket
+    req: wastebasket
+    conf: 0.689987063407898
+    isCorrect: true
+  - key: watermelon
+    answer: watermelon
+    req: watermelon
+    conf: 0.9938145279884338
+    isCorrect: true
+  - key: lifting weights
+    answer: weightlifting
+    req: weight lifting
+    conf: 0.7670788764953613
+    isCorrect: false
+  - key: man in manual wheelchair
+    answer: wheelchair
+    req: wheelchair
+    conf: 0.9580212831497192
+    isCorrect: true
+    danger: true
+  - key: man in motorized wheelchair
+    answer: wheelchair
+    req: wheelchair
+    conf: 0.9558355808258057
+    isCorrect: true
+    danger: true
+  - key: manual wheelchair
+    answer: wheelchair
+    req: wheelchair
+    conf: 0.9704681634902954
+    isCorrect: true
+    danger: true
+  - key: motorized wheelchair
+    answer: wheelchair
+    req: wheelchair
+    conf: 0.9571224451065063
+    isCorrect: true
+    danger: true
+  - key: woman in manual wheelchair
+    answer: wheelchair
+    req: wheelchair
+    conf: 0.810782253742218
+    isCorrect: true
+    danger: true
+  - key: woman in motorized wheelchair
+    answer: wheelchair
+    req: wheelchair
+    conf: 0.6919492483139038
+    isCorrect: true
+    danger: true
+  - key: old man
+    answer: old man
+    req: old man
+    conf: 0.9503032565116882
+    isCorrect: true
+  - key: old woman
+    answer: old woman
+    req: old woman
+    conf: 0.979100227355957
+    isCorrect: true
+  - key: older person
+    answer: old woman
+    req: old woman
+    conf: 0.9423229694366455
+    isCorrect: true
+  - key: 'woman: white hair'
+    answer: old woman
+    req: old woman
+    conf: 0.9625201225280762
+    isCorrect: true
+  - key: wizard
+    answer: wizard
+    req: wizard
+    conf: 0.9716713428497314
+    isCorrect: true
+  - key: construction worker
+    answer: worker
+    req: worker
+    conf: 0.7244836091995239
+    isCorrect: true
+    danger: true
+  - key: worried face
+    answer: worried
+    req: worried
+    conf: 0.7950209379196167
+    isCorrect: true
+    danger: true
+  - key: wrench
+    answer: french
+    req: wrench
+    conf: 0.9557851552963257
+    isCorrect: true
+  - key: wrestling
+    answer: wrestling
+    req: wrestling
+    conf: 0.9938145279884338
+    isCorrect: true

@@ -1,0 +1,100 @@
+tableSize: [400, 400]
+
+#fe: 
+# cap letters => expand this area to max space
+# lowercase letter => collapse to min content
+layout: [
+  " M o ",
+  " p a ",
+]
+layout_alias:
+  M: board
+  o: others
+  p: player
+  a: playerStats
+
+playerStatsAreas:  #standard setting
+  type: columnGrid
+  loc: others
+
+#frage fe: should we remain case sensitive for strings, ich sag eher nicht, bin es aber for now
+#string mappings used to represent key,val lists, eg., resources
+strings: 
+  wood:
+    color: 'sienna' #color, symbol, label are used in standard RSG types
+    symbol: 'tree'
+    label: 'wood' #obsolete, this would be default anyway!
+  brick:
+    color: 'salmon'
+    symbol: 'wall'
+  Knight:
+    color: 'red'
+    symbol: 'spy'
+
+#type mappings used for standard RSG object types
+typeMappings:
+  card: #standard rsg object type
+    symbol: name #name property of card object (as per mapping) will be translated to symbol looked up in strings
+    color: name
+    rank: short_name #just for testing!
+
+#mappings generate standard RSG structure types (eg. grids,lists,diff layouts for groups of objects)
+# general syntax for RSG standard type: [key][value][layout] to represent a dictionary (see GamePlayer.resources)
+# example 1: GamePlayer.resources => colorLabelRow 
+#     means: {wood:5, brick:0} => [{key:wood, value:5},{key:brick, value:0}]
+#            wood=>color (lookup strings[key].color, [default:random] (default will be entered into SPEC to be reused!)
+#            5=>label, (lookup strings[value].label, [default:value]
+#            layout=>Row (the resulting colored label uis will be layed out as row in loc)
+# syntax for RSG standard type to map collections of game objects: [generic_type][layout] (eg. {_set:[{_obj:[ID]},{_obj:[ID]}]})
+# example 2: GamePlayer.devcards => cardHand
+#     means: [{name:Knight,...},{name:Victory,..}] 
+#            card => lookup typeMappings => take name property for symbol,color 
+#                 => Knight => lookup strings => use symbol='spy' and color='red' => this is done for each object
+#            Hand: layout objects like a hand (overlapping row)
+mappings: 
+  board: #key syntax: obj_type.property1.property2... >will be matched to player & table (from backend data)
+    type: hexGrid #RSG standard type, will be called as a function, passing in key,loc, and corresponding objects found in player,table
+    loc: board
+    immutable: true #not implemented! >will be used later to allow only once creation
+  GamePlayer.devcards: 
+    type: cardHand
+    loc: player
+  GamePlayer.resources: 
+    type: colorLabelRow #key=>color,value=>label,layout=>row
+    loc: player
+  opponent.devcards:
+    type: cardHand
+    loc: others
+
+
+#the following are used for automatic presentation if no behavior:
+table:
+  optin: [res, num, building, port] 
+pieceSizeRelativeToLoc:
+  field: ['w', 30]
+symbol:
+  city: 'castle'
+  settlement: 'house'
+color: #used for colorHintDetection 
+  theme: '#3d7c47'
+  wood: 'maroon' #fe: not used, war eine simplere vorige art colors fuer strings zu specifien
+  brick: 'salmon'
+  wheat: 'yellow'
+  sheep: 'green'
+  ore: 'dimgray'
+dev:
+  run_to_buttons:
+    devdeck: "buy devcard"
+    hex: "place robber"
+    Corner: "settlement"
+    settlement: 'city upgrade'
+    Edge: "road" 
+  cheat_buttons: 
+    robber: "cheat robber" 
+    devcard: "cheat devcard"
+    road: 'cheat road'
+    settlement: 'cheat settlement'
+    city: 'cheat city'
+  scenario_buttons:
+    devdeck: 'devcard devdeck' 
+

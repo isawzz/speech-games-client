@@ -1,0 +1,8088 @@
+1st place medal:
+  E:
+    ukMale:
+      key: 1st place medal
+      req: medal
+      answer: metal
+      correct: false
+      conf: 0.9361200332641602
+2nd place medal:
+  E:
+    ukMale:
+      key: 2nd place medal
+      req: medal
+      answer: metal
+      correct: false
+      conf: 0.816428005695343
+3rd place medal:
+  E:
+    ukMale:
+      key: 3rd place medal
+      req: medal
+      answer: metal
+      correct: false
+      conf: 0.9274636507034302
+Christmas tree:
+  E:
+    ukMale:
+      key: Christmas tree
+      req: christmas
+      answer: christmas
+      correct: true
+      conf: 0.8649222254753113
+Japanese castle:
+  E:
+    ukMale:
+      key: Japanese castle
+      req: japanese house
+      answer: japanese house
+      correct: true
+      conf: 0.9557527899742126
+OK hand:
+  E:
+    ukMale:
+      key: OK hand
+      req: ok
+      answer: okay
+      correct: false
+      conf: 0.977073073387146
+Santa Claus:
+  E:
+    ukMale:
+      key: Santa Claus
+      req: santa claus
+      answer: santa claus
+      correct: true
+      conf: 0.8689932823181152
+Statue of Liberty:
+  E:
+    ukMale:
+      key: Statue of Liberty
+      req: statue
+      answer: statue
+      correct: true
+      conf: 0.7745224237442017
+T-Rex:
+  E:
+    ukMale:
+      key: T-Rex
+      req: dinosaur
+      answer: dinosaur
+      correct: true
+      conf: 0.90562504529953
+abacus:
+  E:
+    ukMale:
+      key: abacus
+      req: abacus
+      answer: abacus
+      correct: true
+      conf: 0.8454736471176147
+adhesive bandage:
+  E:
+    ukMale:
+      key: adhesive bandage
+      req: bandage
+      answer: bondage
+      correct: false
+      conf: 0.8365580439567566
+aerial tramway:
+  E:
+    ukMale:
+      key: aerial tramway
+      req: cable car
+      answer: cable car
+      correct: true
+      conf: 0.6403031945228577
+airplane:
+  E:
+    ukMale:
+      key: airplane
+      req: airplane
+      answer: play
+      correct: true
+      conf: 0.831496000289917
+airplane arrival:
+  E:
+    ukMale:
+      key: airplane arrival
+      req: arrival
+      answer: arrival
+      correct: true
+      conf: 0.503863513469696
+airplane departure:
+  E:
+    ukMale:
+      key: airplane departure
+      req: departure
+      answer: shot
+      correct: false
+      conf: 0.6690879464149475
+alarm clock:
+  E:
+    ukMale:
+      key: alarm clock
+      req: alarm clock
+      answer: alarm clock
+      correct: true
+      conf: 0.9702882170677185
+alembic:
+  E:
+    ukMale:
+      key: alembic
+      req: chemistry
+      answer: chemistry
+      correct: true
+      conf: 0.8224464654922485
+alien:
+  E:
+    ukMale:
+      key: alien
+      req: alien
+      answer: halia
+      correct: false
+      conf: 0.879996657371521
+alien monster:
+  E:
+    ukMale:
+      key: alien monster
+      req: alien
+      answer: halia
+      correct: false
+      conf: 0.881257176399231
+ambulance:
+  E:
+    ukMale:
+      key: ambulance
+      req: ambulance
+      answer: ambulance
+      correct: true
+      conf: 0.8127189874649048
+american football:
+  E:
+    ukMale:
+      key: american football
+      req: american football
+      answer: american football
+      correct: true
+      conf: 0.9645376205444336
+amphora:
+  E:
+    ukMale:
+      key: amphora
+      req: jug
+      answer: jog
+      correct: false
+      conf: 0.7219493985176086
+anatomical heart:
+  E:
+    ukMale:
+      key: anatomical heart
+      req: heart
+      answer: heart
+      correct: true
+      conf: 0.8654236793518066
+anchor:
+  E:
+    ukMale:
+      key: anchor
+      req: anchor
+      answer: anka
+      correct: true
+      conf: 0.8394767642021179
+anger symbol:
+  E:
+    ukMale:
+      key: anger symbol
+      req: mad
+      answer: mad
+      correct: true
+      conf: 0.9108623266220093
+angry face:
+  E:
+    ukMale:
+      key: angry face
+      req: angry
+      answer: angry
+      correct: true
+      conf: 0.8858975172042847
+angry face with horns:
+  E:
+    ukMale:
+      key: angry face with horns
+      req: devil
+      answer: devil
+      correct: true
+      conf: 0.857374370098114
+anguished face:
+  E:
+    ukMale:
+      key: anguished face
+      req: anguished
+      answer: anguish
+      correct: false
+      conf: 0.9509857296943665
+ant:
+  E:
+    ukMale:
+      key: ant
+      req: ant
+      answer: hat
+      correct: false
+      conf: 0.7212457656860352
+anxious face with sweat:
+  E:
+    ukMale:
+      key: anxious face with sweat
+      req: sad
+      answer: sade
+      correct: false
+      conf: 0.7824587225914001
+articulated lorry:
+  E:
+    ukMale:
+      key: articulated lorry
+      req: truck
+      answer: frog
+      correct: true
+      conf: 0.9072950482368469
+artist palette:
+  E:
+    ukMale:
+      key: artist palette
+      req: palette
+      answer: palette
+      correct: true
+      conf: 0.7581547498703003
+astonished face:
+  E:
+    ukMale:
+      key: astonished face
+      req: astonished
+      answer: astonished
+      correct: true
+      conf: 0.9679850339889526
+automobile:
+  E:
+    ukMale:
+      key: automobile
+      req: car
+      answer: like
+      correct: false
+      conf: 0.7826839089393616
+avocado:
+  E:
+    ukMale:
+      key: avocado
+      req: avocado
+      answer: avocado
+      correct: true
+      conf: 0.7399246692657471
+award:
+  E:
+    ukMale:
+      key: award
+      req: medal
+      answer: metal
+      correct: false
+      conf: 0.934489369392395
+axe:
+  E:
+    ukMale:
+      key: axe
+      req: axe
+      answer: hacks
+      correct: false
+      conf: 0.7469664812088013
+baby:
+  E:
+    ukMale:
+      key: baby
+      req: baby
+      answer: baby
+      correct: true
+      conf: 0.7655395269393921
+baby angel:
+  E:
+    ukMale:
+      key: baby angel
+      req: angel
+      answer: angel
+      correct: true
+      conf: 0.8967329859733582
+baby bottle:
+  E:
+    ukMale:
+      key: baby bottle
+      req: milk
+      answer: milk
+      correct: true
+      conf: 0.9709427952766418
+baby chick:
+  E:
+    ukMale:
+      key: baby chick
+      req: chick
+      answer: thick
+      correct: false
+      conf: 0.7355518341064453
+backhand index pointing down:
+  E:
+    ukMale:
+      key: backhand index pointing down
+      req: down
+      answer: that
+      correct: true
+      conf: 0.7622209787368774
+backhand index pointing left:
+  E:
+    ukMale:
+      key: backhand index pointing left
+      req: left
+      answer: last
+      correct: true
+      conf: 0.9074369668960571
+backhand index pointing right:
+  E:
+    ukMale:
+      key: backhand index pointing right
+      req: right
+      answer: right
+      correct: true
+      conf: 0.7762775421142578
+backhand index pointing up:
+  E:
+    ukMale:
+      key: backhand index pointing up
+      req: up
+      answer: app
+      correct: false
+      conf: 0.9333838224411011
+backpack:
+  E:
+    ukMale:
+      key: backpack
+      req: backpack
+      answer: backpack
+      correct: true
+      conf: 0.8476378321647644
+bacon:
+  E:
+    ukMale:
+      key: bacon
+      req: bacon
+      answer: bacon
+      correct: true
+      conf: 0.6715160608291626
+badger:
+  E:
+    ukMale:
+      key: badger
+      req: badger
+      answer: badger
+      correct: true
+      conf: 0.965112030506134
+badminton:
+  E:
+    ukMale:
+      key: badminton
+      req: badminton
+      answer: badminton
+      correct: true
+      conf: 0.9850710034370422
+bagel:
+  E:
+    ukMale:
+      key: bagel
+      req: bagel
+      answer: bangles
+      correct: false
+      conf: 0.9239717125892639
+baguette bread:
+  E:
+    ukMale:
+      key: baguette bread
+      req: baguette
+      answer: cat
+      correct: false
+      conf: 0.7077768445014954
+balance scale:
+  E:
+    ukMale:
+      key: balance scale
+      req: scale
+      answer: style
+      correct: false
+      conf: 0.7423287034034729
+ballet shoes:
+  E:
+    ukMale:
+      key: ballet shoes
+      req: ballet shoes
+      answer: ballet shoes
+      correct: true
+      conf: 0.8751010894775391
+balloon:
+  E:
+    ukMale:
+      key: balloon
+      req: balloon
+      answer: balloon
+      correct: true
+      conf: 0.8177443146705627
+ballot box with ballot:
+  E:
+    ukMale:
+      key: ballot box with ballot
+      req: ballot
+      answer: david
+      correct: false
+      conf: 0.8575625419616699
+banana:
+  E:
+    ukMale:
+      key: banana
+      req: banana
+      answer: banana
+      correct: true
+      conf: 0.8975178599357605
+banjo:
+  E:
+    ukMale:
+      key: banjo
+      req: banjo
+      answer: banjo
+      correct: true
+      conf: 0.5886107087135315
+bar chart:
+  E:
+    ukMale:
+      key: bar chart
+      req: graph
+      answer: minecraft
+      correct: false
+      conf: 0.9123356342315674
+barrier:
+  E:
+    ukMale:
+      key: barrier
+      req: traffic
+      answer: traffic
+      correct: true
+      conf: 0.8445636034011841
+baseball:
+  E:
+    ukMale:
+      key: baseball
+      req: baseball
+      answer: baseball
+      correct: true
+      conf: 0.8885834813117981
+basket:
+  E:
+    ukMale:
+      key: basket
+      req: basket
+      answer: basket
+      correct: true
+      conf: 0.846968948841095
+basketball:
+  E:
+    ukMale:
+      key: basketball
+      req: basketball
+      answer: basketball
+      correct: true
+      conf: 0.9372826814651489
+bat:
+  E:
+    ukMale:
+      key: bat
+      req: bat
+      answer: that
+      correct: false
+      conf: 0.8088847398757935
+bathtub:
+  E:
+    ukMale:
+      key: bathtub
+      req: bathtub
+      answer: off.
+      correct: false
+      conf: 0.8937451243400574
+battery:
+  E:
+    ukMale:
+      key: battery
+      req: battery
+      answer: free
+      correct: false
+      conf: 0.6874068379402161
+beach with umbrella:
+  E:
+    ukMale:
+      key: beach with umbrella
+      req: umbrella
+      answer: umbrella
+      correct: true
+      conf: 0.9455223083496094
+beaming face with smiling eyes:
+  E:
+    ukMale:
+      key: beaming face with smiling eyes
+      req: grin
+      answer: crim
+      correct: false
+      conf: 0.8480337262153625
+bear:
+  E:
+    ukMale:
+      key: bear
+      req: bear
+      answer: that
+      correct: false
+      conf: 0.846950888633728
+beating heart:
+  E:
+    ukMale:
+      key: beating heart
+      req: pulse
+      answer: lighthouse
+      correct: false
+      conf: 0.7298170924186707
+bed:
+  E:
+    ukMale:
+      key: bed
+      req: bed
+      answer: that
+      correct: false
+      conf: 0.8591057658195496
+bee:
+  E:
+    ukMale:
+      key: bee
+      req: bee
+      answer: bee
+      correct: true
+      conf: 0.7156428098678589
+beer mug:
+  E:
+    ukMale:
+      key: beer mug
+      req: mug
+      answer: mark
+      correct: false
+      conf: 0.7297976016998291
+bell:
+  E:
+    ukMale:
+      key: bell
+      req: bell
+      answer: bell
+      correct: true
+      conf: 0.9191701412200928
+bell with slash:
+  E:
+    ukMale:
+      key: bell with slash
+      req: mute
+      answer: music
+      correct: false
+      conf: 0.786674976348877
+bellhop bell:
+  E:
+    ukMale:
+      key: bellhop bell
+      req: bell
+      answer: bell
+      correct: true
+      conf: 0.7451001405715942
+bento box:
+  E:
+    ukMale:
+      key: bento box
+      req: bento box
+      answer: bento box
+      correct: true
+      conf: 0.8551899790763855
+bicycle:
+  E:
+    ukMale:
+      key: bicycle
+      req: bicycle
+      answer: bicycle
+      correct: true
+      conf: 0.8977109789848328
+biking:
+  E:
+    ukMale:
+      key: biking
+      req: biking
+      answer: viking
+      correct: false
+      conf: 0.7105465531349182
+bikini:
+  E:
+    ukMale:
+      key: bikini
+      req: bikini
+      answer: bikini
+      correct: true
+      conf: 0.8006032109260559
+billed cap:
+  E:
+    ukMale:
+      key: billed cap
+      req: cap
+      answer: cock
+      correct: true
+      conf: 0.7348060011863708
+bird:
+  E:
+    ukMale:
+      key: bird
+      req: bird
+      answer: that
+      correct: false
+      conf: 0.9171296954154968
+birthday cake:
+  E:
+    ukMale:
+      key: birthday cake
+      req: cake
+      answer: cake
+      correct: true
+      conf: 0.9458049535751343
+black heart:
+  E:
+    ukMale:
+      key: black heart
+      req: heart
+      answer: heart
+      correct: true
+      conf: 0.7862827777862549
+black nib:
+  E:
+    ukMale:
+      key: black nib
+      req: pen
+      answer: come
+      correct: false
+      conf: 0.605057418346405
+blossom:
+  E:
+    ukMale:
+      key: blossom
+      req: flower
+      answer: flower
+      correct: true
+      conf: 0.886137068271637
+blowfish:
+  E:
+    ukMale:
+      key: blowfish
+      req: blowfish
+      answer: blowfish
+      correct: true
+      conf: 0.7524404525756836
+blue book:
+  E:
+    ukMale:
+      key: blue book
+      req: book
+      answer: book
+      correct: true
+      conf: 0.6474858522415161
+blue heart:
+  E:
+    ukMale:
+      key: blue heart
+      req: heart
+      answer: heart
+      correct: true
+      conf: 0.8030896186828613
+bomb:
+  E:
+    ukMale:
+      key: bomb
+      req: bomb
+      answer: bulb
+      correct: false
+      conf: 0.8776450157165527
+bone:
+  E:
+    ukMale:
+      key: bone
+      req: bone
+      answer: burn
+      correct: false
+      conf: 0.6148316264152527
+bookmark:
+  E:
+    ukMale:
+      key: bookmark
+      req: mark
+      answer: mark
+      correct: true
+      conf: 0.861984133720398
+bookmark tabs:
+  E:
+    ukMale:
+      key: bookmark tabs
+      req: tabs
+      answer: tabs
+      correct: true
+      conf: 0.7060347199440002
+books:
+  E:
+    ukMale:
+      key: books
+      req: books
+      answer: book
+      correct: false
+      conf: 0.7507224082946777
+bottle with popping cork:
+  E:
+    ukMale:
+      key: bottle with popping cork
+      req: champaign
+      answer: champagne
+      correct: false
+      conf: 0.9099395871162415
+bouncing ball:
+  E:
+    ukMale:
+      key: bouncing ball
+      req: ball
+      answer: pole
+      correct: false
+      conf: 0.6147709488868713
+bouquet:
+  E:
+    ukMale:
+      key: bouquet
+      req: flowers
+      answer: flowers
+      correct: true
+      conf: 0.9589945077896118
+bow and arrow:
+  E:
+    ukMale:
+      key: bow and arrow
+      req: bow and arrow
+      answer: i want the irs
+      correct: false
+      conf: 0.8943929672241211
+bowl with spoon:
+  E:
+    ukMale:
+      key: bowl with spoon
+      req: bowl
+      answer: like
+      correct: false
+      conf: 0.5432102680206299
+bowling:
+  E:
+    ukMale:
+      key: bowling
+      req: bowling
+      answer: buzzing
+      correct: false
+      conf: 0.7389270067214966
+boxing glove:
+  E:
+    ukMale:
+      key: boxing glove
+      req: boxing
+      answer: boxing
+      correct: true
+      conf: 0.9458365440368652
+boy:
+  E:
+    ukMale:
+      key: boy
+      req: boy
+      answer: boy
+      correct: true
+      conf: 0.8445719480514526
+brain:
+  E:
+    ukMale:
+      key: brain
+      req: brain
+      answer: price
+      correct: false
+      conf: 0.8208959698677063
+bread:
+  E:
+    ukMale:
+      key: bread
+      req: bread
+      answer: bread
+      correct: true
+      conf: 0.8533918261528015
+breast-feeding:
+  E:
+    ukMale:
+      key: breast-feeding
+      req: breast-feeding
+      answer: breastfeeding
+      correct: false
+      conf: 0.9408921003341675
+brick:
+  E:
+    ukMale:
+      key: brick
+      req: wall
+      answer: wall
+      correct: true
+      conf: 0.9160000681877136
+bridge at night:
+  E:
+    ukMale:
+      key: bridge at night
+      req: bridge
+      answer: library
+      correct: false
+      conf: 0.5165116190910339
+briefcase:
+  E:
+    ukMale:
+      key: briefcase
+      req: briefcase
+      answer: briefcase
+      correct: true
+      conf: 0.9051260352134705
+briefs:
+  E:
+    ukMale:
+      key: briefs
+      req: briefs
+      answer: three
+      correct: false
+      conf: 0.7967900037765503
+broccoli:
+  E:
+    ukMale:
+      key: broccoli
+      req: broccoli
+      answer: broccoli
+      correct: true
+      conf: 0.8837321996688843
+broken heart:
+  E:
+    ukMale:
+      key: broken heart
+      req: broken heart
+      answer: broken heart
+      correct: true
+      conf: 0.9766712784767151
+broom:
+  E:
+    ukMale:
+      key: broom
+      req: broom
+      answer: brew
+      correct: false
+      conf: 0.7634743452072144
+brown heart:
+  E:
+    ukMale:
+      key: brown heart
+      req: heart
+      answer: heart
+      correct: true
+      conf: 0.6098290681838989
+buffalo:
+  E:
+    ukMale:
+      key: buffalo
+      req: buffalo
+      answer: buffalo
+      correct: true
+      conf: 0.840824544429779
+bug:
+  E:
+    ukMale:
+      key: bug
+      req: caterpillar
+      answer: caterpillar
+      correct: true
+      conf: 0.7898058295249939
+bunny ears:
+  E:
+    ukMale:
+      key: bunny ears
+      req: bunny ears
+      answer: bonnie
+      correct: false
+      conf: 0.7126106023788452
+burrito:
+  E:
+    ukMale:
+      key: burrito
+      req: burrito
+      answer: rita
+      correct: false
+      conf: 0.7173751592636108
+bus:
+  E:
+    ukMale:
+      key: bus
+      req: bus
+      answer: like
+      correct: false
+      conf: 0.7632659077644348
+bus stop:
+  E:
+    ukMale:
+      key: bus stop
+      req: station
+      answer: station
+      correct: true
+      conf: 0.8187254667282104
+bust in silhouette:
+  E:
+    ukMale:
+      key: bust in silhouette
+      req: bust
+      answer: boss
+      correct: false
+      conf: 0.7689468264579773
+busts in silhouette:
+  E:
+    ukMale:
+      key: busts in silhouette
+      req: bust
+      answer: boss
+      correct: false
+      conf: 0.7620862722396851
+butter:
+  E:
+    ukMale:
+      key: butter
+      req: butter
+      answer: off.
+      correct: false
+      conf: 0.5357290506362915
+butterfly:
+  E:
+    ukMale:
+      key: butterfly
+      req: butterfly
+      answer: butterfly
+      correct: true
+      conf: 0.9277403354644775
+cactus:
+  E:
+    ukMale:
+      key: cactus
+      req: cactus
+      answer: cactus
+      correct: true
+      conf: 0.7902800440788269
+calendar:
+  E:
+    ukMale:
+      key: calendar
+      req: date
+      answer: that
+      correct: false
+      conf: 0.9044076204299927
+call me hand:
+  E:
+    ukMale:
+      key: call me hand
+      req: call
+      answer: coal
+      correct: true
+      conf: 0.7702232003211975
+camel:
+  E:
+    ukMale:
+      key: camel
+      req: camel
+      answer: campbell
+      correct: true
+      conf: 0.9209783673286438
+camera:
+  E:
+    ukMale:
+      key: camera
+      req: camera
+      answer: camera
+      correct: true
+      conf: 0.9135177731513977
+camera with flash:
+  E:
+    ukMale:
+      key: camera with flash
+      req: camera
+      answer: camera
+      correct: true
+      conf: 0.9028070569038391
+camping:
+  E:
+    ukMale:
+      key: camping
+      req: camping
+      answer: camping
+      correct: true
+      conf: 0.9466015696525574
+candle:
+  E:
+    ukMale:
+      key: candle
+      req: candle
+      answer: candle
+      correct: true
+      conf: 0.7247076034545898
+candy:
+  E:
+    ukMale:
+      key: candy
+      req: candy
+      answer: candy
+      correct: true
+      conf: 0.9440558552742004
+canned food:
+  E:
+    ukMale:
+      key: canned food
+      req: can
+      answer: cam
+      correct: false
+      conf: 0.8663344979286194
+canoe:
+  E:
+    ukMale:
+      key: canoe
+      req: canoe
+      answer: canoe
+      correct: true
+      conf: 0.9087574481964111
+card file box:
+  E:
+    ukMale:
+      key: card file box
+      req: file
+      answer: file
+      correct: true
+      conf: 0.5772393941879272
+card index:
+  E:
+    ukMale:
+      key: card index
+      req: card index
+      answer: call jen deck
+      correct: false
+      conf: 0.726722002029419
+card index dividers:
+  E:
+    ukMale:
+      key: card index dividers
+      req: index
+      answer: deck
+      correct: false
+      conf: 0.6731211543083191
+carousel horse:
+  E:
+    ukMale:
+      key: carousel horse
+      req: carousel
+      answer: carousel
+      correct: true
+      conf: 0.8409021496772766
+carrot:
+  E:
+    ukMale:
+      key: carrot
+      req: carrot
+      answer: carrot
+      correct: true
+      conf: 0.8659008741378784
+cartwheeling:
+  E:
+    ukMale:
+      key: cartwheeling
+      req: cartwheel
+      answer: wheel
+      correct: false
+      conf: 0.7890886664390564
+castle:
+  E:
+    ukMale:
+      key: castle
+      req: castle
+      answer: costco
+      correct: false
+      conf: 0.8679838180541992
+cat:
+  E:
+    ukMale:
+      key: cat
+      req: cat
+      answer: cat
+      correct: true
+      conf: 0.8849650025367737
+cat with tears of joy:
+  E:
+    ukMale:
+      key: cat with tears of joy
+      req: tear
+      answer: today
+      correct: false
+      conf: 0.6659084558486938
+cat with wry smile:
+  E:
+    ukMale:
+      key: cat with wry smile
+      req: smile
+      answer: spa
+      correct: true
+      conf: 0.69707190990448
+chains:
+  E:
+    ukMale:
+      key: chains
+      req: chains
+      answer: train
+      correct: false
+      conf: 0.546792209148407
+chair:
+  E:
+    ukMale:
+      key: chair
+      req: chair
+      answer: like
+      correct: false
+      conf: 0.9188435673713684
+chart decreasing:
+  E:
+    ukMale:
+      key: chart decreasing
+      req: graph
+      answer: minecraft
+      correct: false
+      conf: 0.8597702383995056
+chart increasing:
+  E:
+    ukMale:
+      key: chart increasing
+      req: graph
+      answer: minecraft
+      correct: false
+      conf: 0.8078697323799133
+chart increasing with yen:
+  E:
+    ukMale:
+      key: chart increasing with yen
+      req: function
+      answer: function
+      correct: true
+      conf: 0.8485761284828186
+cheese wedge:
+  E:
+    ukMale:
+      key: cheese wedge
+      req: cheese
+      answer: these
+      correct: false
+      conf: 0.7391986846923828
+cherries:
+  E:
+    ukMale:
+      key: cherries
+      req: cherries
+      answer: paris
+      correct: false
+      conf: 0.7839927673339844
+cherry blossom:
+  E:
+    ukMale:
+      key: cherry blossom
+      req: blossom
+      answer: lawton
+      correct: false
+      conf: 0.7450653910636902
+chess pawn:
+  E:
+    ukMale:
+      key: chess pawn
+      req: pawn
+      answer: p***
+      correct: false
+      conf: 0.8546175956726074
+chestnut:
+  E:
+    ukMale:
+      key: chestnut
+      req: chestnut
+      answer: not
+      correct: false
+      conf: 0.7588936686515808
+chicken:
+  E:
+    ukMale:
+      key: chicken
+      req: chicken
+      answer: chicken
+      correct: true
+      conf: 0.9140877723693848
+child:
+  E:
+    ukMale:
+      key: child
+      req: child
+      answer: child
+      correct: true
+      conf: 0.9088239073753357
+chipmunk:
+  E:
+    ukMale:
+      key: chipmunk
+      req: squirrel
+      answer: square
+      correct: false
+      conf: 0.8728033900260925
+chocolate bar:
+  E:
+    ukMale:
+      key: chocolate bar
+      req: chocolate
+      answer: chocolate
+      correct: true
+      conf: 0.837022602558136
+chopsticks:
+  E:
+    ukMale:
+      key: chopsticks
+      req: chopsticks
+      answer: chopsticks
+      correct: true
+      conf: 0.8841764330863953
+church:
+  E:
+    ukMale:
+      key: church
+      req: church
+      answer: church
+      correct: true
+      conf: 0.9107052087783813
+cigarette:
+  E:
+    ukMale:
+      key: cigarette
+      req: cigarette
+      answer: cigarette
+      correct: true
+      conf: 0.956966757774353
+circus tent:
+  E:
+    ukMale:
+      key: circus tent
+      req: circus
+      answer: stalker
+      correct: false
+      conf: 0.9389179944992065
+cityscape:
+  E:
+    ukMale:
+      key: cityscape
+      req: city
+      answer: city
+      correct: true
+      conf: 0.8530306816101074
+cityscape at dusk:
+  E:
+    ukMale:
+      key: cityscape at dusk
+      req: city
+      answer: city
+      correct: true
+      conf: 0.8311091661453247
+clamp:
+  E:
+    ukMale:
+      key: clamp
+      req: clamp
+      answer: climb
+      correct: false
+      conf: 0.7890490293502808
+clapper board:
+  E:
+    ukMale:
+      key: clapper board
+      req: cut
+      answer: todd
+      correct: false
+      conf: 0.9024147391319275
+clapping hands:
+  E:
+    ukMale:
+      key: clapping hands
+      req: clap
+      answer: top
+      correct: false
+      conf: 0.584697961807251
+classical building:
+  E:
+    ukMale:
+      key: classical building
+      req: temple
+      answer: temple
+      correct: true
+      conf: 0.8346872329711914
+climbing:
+  E:
+    ukMale:
+      key: climbing
+      req: climbing
+      answer: climbing
+      correct: true
+      conf: 0.959335446357727
+clinking beer mugs:
+  E:
+    ukMale:
+      key: clinking beer mugs
+      req: clink
+      answer: playing
+      correct: false
+      conf: 0.7605785131454468
+clinking glasses:
+  E:
+    ukMale:
+      key: clinking glasses
+      req: clink
+      answer: lang
+      correct: false
+      conf: 0.780000627040863
+clipboard:
+  E:
+    ukMale:
+      key: clipboard
+      req: clipboard
+      answer: clipboard
+      correct: true
+      conf: 0.7769373059272766
+closed book:
+  E:
+    ukMale:
+      key: closed book
+      req: book
+      answer: book
+      correct: true
+      conf: 0.8888028860092163
+closed umbrella:
+  E:
+    ukMale:
+      key: closed umbrella
+      req: umbrella
+      answer: umbrella
+      correct: true
+      conf: 0.9125450253486633
+cloud:
+  E:
+    ukMale:
+      key: cloud
+      req: cloud
+      answer: loud
+      correct: false
+      conf: 0.6761227250099182
+cloud with lightning:
+  E:
+    ukMale:
+      key: cloud with lightning
+      req: lightning
+      answer: lightning
+      correct: true
+      conf: 0.9409705400466919
+cloud with lightning and rain:
+  E:
+    ukMale:
+      key: cloud with lightning and rain
+      req: lightning
+      answer: lightning
+      correct: true
+      conf: 0.9238117337226868
+cloud with rain:
+  E:
+    ukMale:
+      key: cloud with rain
+      req: rain
+      answer: rain
+      correct: true
+      conf: 0.8924770355224609
+cloud with snow:
+  E:
+    ukMale:
+      key: cloud with snow
+      req: snow
+      answer: snow
+      correct: true
+      conf: 0.8558201789855957
+clown face:
+  E:
+    ukMale:
+      key: clown face
+      req: clown
+      answer: fun
+      correct: false
+      conf: 0.9270317554473877
+club suit:
+  E:
+    ukMale:
+      key: club suit
+      req: club
+      answer: prop
+      correct: false
+      conf: 0.8925826549530029
+clutch bag:
+  E:
+    ukMale:
+      key: clutch bag
+      req: purse
+      answer: pipe
+      correct: false
+      conf: 0.6664777994155884
+coat:
+  E:
+    ukMale:
+      key: coat
+      req: jacket
+      answer: jacket
+      correct: true
+      conf: 0.8760746717453003
+cocktail glass:
+  E:
+    ukMale:
+      key: cocktail glass
+      req: glass
+      answer: la
+      correct: false
+      conf: 0.8180325627326965
+coconut:
+  E:
+    ukMale:
+      key: coconut
+      req: coconut
+      answer: coconut
+      correct: true
+      conf: 0.9390612840652466
+coffin:
+  E:
+    ukMale:
+      key: coffin
+      req: coffin
+      answer: coughing
+      correct: false
+      conf: 0.7824835181236267
+cold face:
+  E:
+    ukMale:
+      key: cold face
+      req: cold
+      answer: cone
+      correct: false
+      conf: 0.9648628234863281
+collision:
+  E:
+    ukMale:
+      key: collision
+      req: explosion
+      answer: explosion
+      correct: true
+      conf: 0.9567809104919434
+comet:
+  E:
+    ukMale:
+      key: comet
+      req: comet
+      answer: hamlet
+      correct: false
+      conf: 0.6658876538276672
+compass:
+  E:
+    ukMale:
+      key: compass
+      req: compass
+      answer: compass
+      correct: true
+      conf: 0.9457194209098816
+computer mouse:
+  E:
+    ukMale:
+      key: computer mouse
+      req: mouse
+      answer: miles
+      correct: false
+      conf: 0.8942421674728394
+confetti ball:
+  E:
+    ukMale:
+      key: confetti ball
+      req: confetti
+      answer: confetti
+      correct: true
+      conf: 0.923272430896759
+confounded face:
+  E:
+    ukMale:
+      key: confounded face
+      req: confused
+      answer: confused
+      correct: true
+      conf: 0.9535125494003296
+confused face:
+  E:
+    ukMale:
+      key: confused face
+      req: confused
+      answer: confused
+      correct: true
+      conf: 0.8270366787910461
+construction site:
+  E:
+    ukMale:
+      key: construction site
+      req: construction
+      answer: construction
+      correct: true
+      conf: 0.9336833953857422
+construction worker:
+  E:
+    ukMale:
+      key: construction worker
+      req: worker
+      answer: work.
+      correct: false
+      conf: 0.8089157938957214
+cooked rice:
+  E:
+    ukMale:
+      key: cooked rice
+      req: rice
+      answer: rice
+      correct: true
+      conf: 0.7664591670036316
+cookie:
+  E:
+    ukMale:
+      key: cookie
+      req: cookie
+      answer: cookie
+      correct: true
+      conf: 0.9400655627250671
+cooking:
+  E:
+    ukMale:
+      key: cooking
+      req: pan
+      answer: like
+      correct: false
+      conf: 0.6744846701622009
+couch and lamp:
+  E:
+    ukMale:
+      key: couch and lamp
+      req: couch
+      answer: tabs
+      correct: false
+      conf: 0.7683348655700684
+couple with heart:
+  E:
+    ukMale:
+      key: couple with heart
+      req: love
+      answer: love
+      correct: true
+      conf: 0.9895330667495728
+cow:
+  E:
+    ukMale:
+      key: cow
+      req: cow
+      answer: cow
+      correct: true
+      conf: 0.781984806060791
+cowboy hat face:
+  E:
+    ukMale:
+      key: cowboy hat face
+      req: hat
+      answer: hat
+      correct: true
+      conf: 0.8658468127250671
+crab:
+  E:
+    ukMale:
+      key: crab
+      req: crab
+      answer: flycraft
+      correct: false
+      conf: 0.5838155746459961
+crayon:
+  E:
+    ukMale:
+      key: crayon
+      req: crayon
+      answer: crab
+      correct: false
+      conf: 0.7902873754501343
+credit card:
+  E:
+    ukMale:
+      key: credit card
+      req: credit card
+      answer: credit card
+      correct: true
+      conf: 0.9876291155815125
+crescent moon:
+  E:
+    ukMale:
+      key: crescent moon
+      req: moon
+      answer: moon
+      correct: true
+      conf: 0.9041590690612793
+cricket:
+  E:
+    ukMale:
+      key: cricket
+      req: cricket
+      answer: cricket
+      correct: true
+      conf: 0.8120844960212708
+cricket game:
+  E:
+    ukMale:
+      key: cricket game
+      req: cricket
+      answer: cricket
+      correct: true
+      conf: 0.736496090888977
+crocodile:
+  E:
+    ukMale:
+      key: crocodile
+      req: crocodile
+      answer: crocodile
+      correct: true
+      conf: 0.9149192571640015
+croissant:
+  E:
+    ukMale:
+      key: croissant
+      req: croissant
+      answer: song
+      correct: false
+      conf: 0.7566097974777222
+crossed fingers:
+  E:
+    ukMale:
+      key: crossed fingers
+      req: crossed fingers
+      answer: call angus
+      correct: false
+      conf: 0.906997561454773
+crossed swords:
+  E:
+    ukMale:
+      key: crossed swords
+      req: fight
+      answer: fight
+      correct: true
+      conf: 0.6516569256782532
+crown:
+  E:
+    ukMale:
+      key: crown
+      req: crown
+      answer: crime
+      correct: false
+      conf: 0.8584550023078918
+crying cat:
+  E:
+    ukMale:
+      key: crying cat
+      req: crying cat
+      answer: crying cat
+      correct: true
+      conf: 0.9876291155815125
+crying face:
+  E:
+    ukMale:
+      key: crying face
+      req: sad
+      answer: sade
+      correct: false
+      conf: 0.8476624488830566
+crystal ball:
+  E:
+    ukMale:
+      key: crystal ball
+      req: crystal ball
+      answer: ball
+      correct: false
+      conf: 0.009999999776482582
+cucumber:
+  E:
+    ukMale:
+      key: cucumber
+      req: cucumber
+      answer: cucumber
+      correct: true
+      conf: 0.8293341398239136
+cup with straw:
+  E:
+    ukMale:
+      key: cup with straw
+      req: soda
+      answer: soda
+      correct: true
+      conf: 0.7764661312103271
+cupcake:
+  E:
+    ukMale:
+      key: cupcake
+      req: muffin
+      answer: muffin
+      correct: true
+      conf: 0.8367931246757507
+curling stone:
+  E:
+    ukMale:
+      key: curling stone
+      req: curling
+      answer: running
+      correct: false
+      conf: 0.8024477958679199
+curry rice:
+  E:
+    ukMale:
+      key: curry rice
+      req: rice
+      answer: rice
+      correct: true
+      conf: 0.7663108110427856
+custard:
+  E:
+    ukMale:
+      key: custard
+      req: pudding
+      answer: pudding
+      correct: true
+      conf: 0.8639729022979736
+cut of meat:
+  E:
+    ukMale:
+      key: cut of meat
+      req: steak
+      answer: steak
+      correct: true
+      conf: 0.9113732576370239
+cyclone:
+  E:
+    ukMale:
+      key: cyclone
+      req: cyclone
+      answer: cyclone
+      correct: true
+      conf: 0.8706252574920654
+dagger:
+  E:
+    ukMale:
+      key: dagger
+      req: dagger
+      answer: jagger
+      correct: false
+      conf: 0.8975426554679871
+dashing away:
+  E:
+    ukMale:
+      key: dashing away
+      req: fast
+      answer: fun
+      correct: false
+      conf: 0.9498380422592163
+deaf person:
+  E:
+    ukMale:
+      key: deaf person
+      req: deaf
+      answer: that
+      correct: false
+      conf: 0.9147442579269409
+deciduous tree:
+  E:
+    ukMale:
+      key: deciduous tree
+      req: tree
+      answer: three
+      correct: false
+      conf: 0.7561479806900024
+deer:
+  E:
+    ukMale:
+      key: deer
+      req: deer
+      answer: these
+      correct: false
+      conf: 0.6984597444534302
+delivery truck:
+  E:
+    ukMale:
+      key: delivery truck
+      req: truck
+      answer: frog
+      correct: true
+      conf: 0.8209785223007202
+department store:
+  E:
+    ukMale:
+      key: department store
+      req: department store
+      answer: department store
+      correct: true
+      conf: 0.9520426392555237
+derelict house:
+  E:
+    ukMale:
+      key: derelict house
+      req: house
+      answer: like
+      correct: false
+      conf: 0.8234485983848572
+desert:
+  E:
+    ukMale:
+      key: desert
+      req: desert
+      answer: desert
+      correct: true
+      conf: 0.9018176794052124
+desert island:
+  E:
+    ukMale:
+      key: desert island
+      req: island
+      answer: island
+      correct: true
+      conf: 0.8651525378227234
+desktop computer:
+  E:
+    ukMale:
+      key: desktop computer
+      req: computer
+      answer: computer
+      correct: true
+      conf: 0.9235851168632507
+detective:
+  E:
+    ukMale:
+      key: detective
+      req: detective
+      answer: detective
+      correct: true
+      conf: 0.8078920245170593
+diamond suit:
+  E:
+    ukMale:
+      key: diamond suit
+      req: diamond
+      answer: diamond
+      correct: true
+      conf: 0.9391818046569824
+direct hit:
+  E:
+    ukMale:
+      key: direct hit
+      req: darts
+      answer: that
+      correct: false
+      conf: 0.6774729490280151
+disappointed face:
+  E:
+    ukMale:
+      key: disappointed face
+      req: disappointed
+      answer: appointed
+      correct: false
+      conf: 0.9762502312660217
+diving mask:
+  E:
+    ukMale:
+      key: diving mask
+      req: diving
+      answer: diving
+      correct: true
+      conf: 0.8812856674194336
+diya lamp:
+  E:
+    ukMale:
+      key: diya lamp
+      req: oil lamp
+      answer: oil lamp
+      correct: true
+      conf: 0.9104547500610352
+dizzy:
+  E:
+    ukMale:
+      key: dizzy
+      req: dizzy
+      answer: this
+      correct: false
+      conf: 0.7559000849723816
+dizzy face:
+  E:
+    ukMale:
+      key: dizzy face
+      req: dizzy
+      answer: this
+      correct: false
+      conf: 0.8623918890953064
+dna:
+  E:
+    ukMale:
+      key: dna
+      req: dna
+      answer: dna
+      correct: true
+      conf: 0.8922200202941895
+dog:
+  E:
+    ukMale:
+      key: dog
+      req: dog
+      answer: dog
+      correct: true
+      conf: 0.9501372575759888
+dollar banknote:
+  E:
+    ukMale:
+      key: dollar banknote
+      req: dollar
+      answer: taller
+      correct: false
+      conf: 0.8526791334152222
+dolphin:
+  E:
+    ukMale:
+      key: dolphin
+      req: dolphin
+      answer: dolls
+      correct: false
+      conf: 0.7497431039810181
+door:
+  E:
+    ukMale:
+      key: door
+      req: door
+      answer: tool
+      correct: true
+      conf: 0.8784529566764832
+doughnut:
+  E:
+    ukMale:
+      key: doughnut
+      req: doughnut
+      answer: '10.'
+      correct: false
+      conf: 0.7876551747322083
+dove:
+  E:
+    ukMale:
+      key: dove
+      req: dove
+      answer: dog
+      correct: false
+      conf: 0.8738648295402527
+downcast face with sweat:
+  E:
+    ukMale:
+      key: downcast face with sweat
+      req: sweating
+      answer: sweating
+      correct: true
+      conf: 0.731752872467041
+dragon:
+  E:
+    ukMale:
+      key: dragon
+      req: dragon
+      answer: dragon
+      correct: true
+      conf: 0.7549751400947571
+dragon face:
+  E:
+    ukMale:
+      key: dragon face
+      req: dragon
+      answer: dragon
+      correct: true
+      conf: 0.7032555341720581
+dress:
+  E:
+    ukMale:
+      key: dress
+      req: dress
+      answer: dress
+      correct: true
+      conf: 0.8574270009994507
+drooling face:
+  E:
+    ukMale:
+      key: drooling face
+      req: drooling
+      answer: cooling
+      correct: false
+      conf: 0.8027817010879517
+drop of blood:
+  E:
+    ukMale:
+      key: drop of blood
+      req: blood
+      answer: blood
+      correct: true
+      conf: 0.8167232275009155
+droplet:
+  E:
+    ukMale:
+      key: droplet
+      req: drop
+      answer: trump
+      correct: true
+      conf: 0.6752853393554688
+drum:
+  E:
+    ukMale:
+      key: drum
+      req: drum
+      answer: drum
+      correct: true
+      conf: 0.9085961580276489
+duck:
+  E:
+    ukMale:
+      key: duck
+      req: duck
+      answer: toxic
+      correct: false
+      conf: 0.7048938870429993
+dvd:
+  E:
+    ukMale:
+      key: dvd
+      req: dvd
+      answer: dvd
+      correct: true
+      conf: 0.9216858148574829
+e-mail:
+  E:
+    ukMale:
+      key: e-mail
+      req: message
+      answer: message
+      correct: true
+      conf: 0.91639643907547
+eagle:
+  E:
+    ukMale:
+      key: eagle
+      req: eagle
+      answer: eagle
+      correct: true
+      conf: 0.9242253303527832
+ear:
+  E:
+    ukMale:
+      key: ear
+      req: ear
+      answer: app
+      correct: false
+      conf: 0.7785989046096802
+ear of corn:
+  E:
+    ukMale:
+      key: ear of corn
+      req: corn
+      answer: corn
+      correct: true
+      conf: 0.8103035688400269
+ear with hearing aid:
+  E:
+    ukMale:
+      key: ear with hearing aid
+      req: hearing aid
+      answer: hearing aid
+      correct: true
+      conf: 0.9582500457763672
+egg:
+  E:
+    ukMale:
+      key: egg
+      req: egg
+      answer: heck
+      correct: false
+      conf: 0.705177366733551
+eggplant:
+  E:
+    ukMale:
+      key: eggplant
+      req: eggplant
+      answer: tart
+      correct: true
+      conf: 0.8207297325134277
+electric plug:
+  E:
+    ukMale:
+      key: electric plug
+      req: electricity
+      answer: electricity
+      correct: true
+      conf: 0.7501042485237122
+elephant:
+  E:
+    ukMale:
+      key: elephant
+      req: elephant
+      answer: elephant
+      correct: true
+      conf: 0.7845123410224915
+elf:
+  E:
+    ukMale:
+      key: elf
+      req: elf
+      answer: house
+      correct: false
+      conf: 0.7041429281234741
+envelope:
+  E:
+    ukMale:
+      key: envelope
+      req: envelope
+      answer: envelope
+      correct: true
+      conf: 0.7562406063079834
+envelope with arrow:
+  E:
+    ukMale:
+      key: envelope with arrow
+      req: outbox
+      answer: books
+      correct: false
+      conf: 0.8385659456253052
+euro banknote:
+  E:
+    ukMale:
+      key: euro banknote
+      req: euro
+      answer: right
+      correct: false
+      conf: 0.8416446447372437
+evergreen tree:
+  E:
+    ukMale:
+      key: evergreen tree
+      req: fir
+      answer: fun
+      correct: false
+      conf: 0.9573416709899902
+exploding head:
+  E:
+    ukMale:
+      key: exploding head
+      req: shocked
+      answer: shock
+      correct: false
+      conf: 0.827826201915741
+expressionless face:
+  E:
+    ukMale:
+      key: expressionless face
+      req: neutral
+      answer: neutral
+      correct: true
+      conf: 0.8706610798835754
+eye:
+  E:
+    ukMale:
+      key: eye
+      req: eye
+      answer: hi
+      correct: false
+      conf: 0.7388840913772583
+eye in speech bubble:
+  E:
+    ukMale:
+      key: eye in speech bubble
+      req: speech balloon
+      answer: page balloon
+      correct: false
+      conf: 0.7621358036994934
+eyes:
+  E:
+    ukMale:
+      key: eyes
+      req: eyes
+      answer: a
+      correct: false
+      conf: 0.7624433636665344
+face blowing a kiss:
+  E:
+    ukMale:
+      key: face blowing a kiss
+      req: kiss
+      answer: kiss
+      correct: true
+      conf: 0.7675895690917969
+face screaming in fear:
+  E:
+    ukMale:
+      key: face screaming in fear
+      req: anguished
+      answer: anguished
+      correct: true
+      conf: 0.9347410202026367
+face vomiting:
+  E:
+    ukMale:
+      key: face vomiting
+      req: nausea
+      answer: noisy
+      correct: false
+      conf: 0.7146775722503662
+face with hand over mouth:
+  E:
+    ukMale:
+      key: face with hand over mouth
+      req: oh my god
+      answer: oh my god
+      correct: true
+      conf: 0.9555474519729614
+face with head-bandage:
+  E:
+    ukMale:
+      key: face with head-bandage
+      req: bandage
+      answer: on.
+      correct: false
+      conf: 0.7384549379348755
+face with medical mask:
+  E:
+    ukMale:
+      key: face with medical mask
+      req: mask
+      answer: ma
+      correct: false
+      conf: 0.5247763991355896
+face with monocle:
+  E:
+    ukMale:
+      key: face with monocle
+      req: monocle
+      answer: monaco
+      correct: false
+      conf: 0.7686168551445007
+face with open mouth:
+  E:
+    ukMale:
+      key: face with open mouth
+      req: surprised
+      answer: surprise
+      correct: false
+      conf: 0.7659904360771179
+face with raised eyebrow:
+  E:
+    ukMale:
+      key: face with raised eyebrow
+      req: skeptic
+      answer: septic
+      correct: false
+      conf: 0.7102463841438293
+face with rolling eyes:
+  E:
+    ukMale:
+      key: face with rolling eyes
+      req: eyeroll
+      answer: carmel
+      correct: false
+      conf: 0.8476346731185913
+face with steam from nose:
+  E:
+    ukMale:
+      key: face with steam from nose
+      req: steaming
+      answer: steaming
+      correct: true
+      conf: 0.8405519723892212
+face with symbols on mouth:
+  E:
+    ukMale:
+      key: face with symbols on mouth
+      req: angry
+      answer: angry
+      correct: true
+      conf: 0.8899668455123901
+face with tears of joy:
+  E:
+    ukMale:
+      key: face with tears of joy
+      req: grin
+      answer: ren
+      correct: false
+      conf: 0.6654943823814392
+face with thermometer:
+  E:
+    ukMale:
+      key: face with thermometer
+      req: fever
+      answer: fifa
+      correct: false
+      conf: 0.8835975527763367
+face with tongue:
+  E:
+    ukMale:
+      key: face with tongue
+      req: tongue
+      answer: tunnel
+      correct: false
+      conf: 0.900740921497345
+face without mouth:
+  E:
+    ukMale:
+      key: face without mouth
+      req: no mouth
+      answer: ''
+      correct: false
+      conf: 0
+factory:
+  E:
+    ukMale:
+      key: factory
+      req: factory
+      answer: factory
+      correct: true
+      conf: 0.7044561505317688
+fairy:
+  E:
+    ukMale:
+      key: fairy
+      req: fairy
+      answer: siri
+      correct: false
+      conf: 0.6937146782875061
+falafel:
+  E:
+    ukMale:
+      key: falafel
+      req: falafel
+      answer: falafel
+      correct: true
+      conf: 0.7081011533737183
+fallen leaf:
+  E:
+    ukMale:
+      key: fallen leaf
+      req: autumn
+      answer: quarter
+      correct: false
+      conf: 0.8634130358695984
+family:
+  E:
+    ukMale:
+      key: family
+      req: family
+      answer: harmony
+      correct: false
+      conf: 0.9396941065788269
+family of 4:
+  E:
+    ukMale:
+      key: family of 4
+      req: family
+      answer: harmony
+      correct: false
+      conf: 0.9491669535636902
+fax machine:
+  E:
+    ukMale:
+      key: fax machine
+      req: fax
+      answer: sex
+      correct: false
+      conf: 0.7056636214256287
+fearful face:
+  E:
+    ukMale:
+      key: fearful face
+      req: anguished
+      answer: anguished
+      correct: true
+      conf: 0.7993903756141663
+fencing:
+  E:
+    ukMale:
+      key: fencing
+      req: fencing
+      answer: fencing
+      correct: true
+      conf: 0.8619477152824402
+ferris wheel:
+  E:
+    ukMale:
+      key: ferris wheel
+      req: ferris wheel
+      answer: ferris wheel
+      correct: true
+      conf: 0.9828605651855469
+ferry:
+  E:
+    ukMale:
+      key: ferry
+      req: ferry
+      answer: like
+      correct: false
+      conf: 0.8628088235855103
+field hockey:
+  E:
+    ukMale:
+      key: field hockey
+      req: hockey
+      answer: hockey
+      correct: true
+      conf: 0.6984182000160217
+file cabinet:
+  E:
+    ukMale:
+      key: file cabinet
+      req: cabinet
+      answer: cabinet
+      correct: true
+      conf: 0.8261289000511169
+file folder:
+  E:
+    ukMale:
+      key: file folder
+      req: folder
+      answer: full.
+      correct: false
+      conf: 0.8041645884513855
+film frames:
+  E:
+    ukMale:
+      key: film frames
+      req: film
+      answer: phil
+      correct: false
+      conf: 0.7523229122161865
+film projector:
+  E:
+    ukMale:
+      key: film projector
+      req: projector
+      answer: projector
+      correct: true
+      conf: 0.6416012048721313
+fire:
+  E:
+    ukMale:
+      key: fire
+      req: fire
+      answer: fun
+      correct: false
+      conf: 0.9730550646781921
+fire engine:
+  E:
+    ukMale:
+      key: fire engine
+      req: fire engine
+      answer: fire engine
+      correct: true
+      conf: 0.9106319546699524
+fire extinguisher:
+  E:
+    ukMale:
+      key: fire extinguisher
+      req: fire extinguisher
+      answer: hi are extinguisher
+      correct: false
+      conf: 0.7495023012161255
+firecracker:
+  E:
+    ukMale:
+      key: firecracker
+      req: fireworks
+      answer: fireworks
+      correct: true
+      conf: 0.9393235445022583
+fireworks:
+  E:
+    ukMale:
+      key: fireworks
+      req: fireworks
+      answer: fireworks
+      correct: true
+      conf: 0.9345788955688477
+first quarter moon:
+  E:
+    ukMale:
+      key: first quarter moon
+      req: moon
+      answer: moon
+      correct: true
+      conf: 0.9082554578781128
+first quarter moon face:
+  E:
+    ukMale:
+      key: first quarter moon face
+      req: moon
+      answer: moon
+      correct: true
+      conf: 0.8865317106246948
+fish:
+  E:
+    ukMale:
+      key: fish
+      req: fish
+      answer: fish
+      correct: true
+      conf: 0.9298969507217407
+fishing pole:
+  E:
+    ukMale:
+      key: fishing pole
+      req: fishing
+      answer: fishing
+      correct: true
+      conf: 0.9003899097442627
+flag in hole:
+  E:
+    ukMale:
+      key: flag in hole
+      req: golf
+      answer: light.
+      correct: false
+      conf: 0.6253377199172974
+flamingo:
+  E:
+    ukMale:
+      key: flamingo
+      req: flamingo
+      answer: flamingo
+      correct: true
+      conf: 0.7254946231842041
+flashlight:
+  E:
+    ukMale:
+      key: flashlight
+      req: flashlight
+      answer: flashlight
+      correct: true
+      conf: 0.9372016191482544
+flat shoe:
+  E:
+    ukMale:
+      key: flat shoe
+      req: slipper
+      answer: slipper
+      correct: true
+      conf: 0.7664991617202759
+flexed biceps:
+  E:
+    ukMale:
+      key: flexed biceps
+      req: biceps
+      answer: biceps
+      correct: true
+      conf: 0.7154505252838135
+floppy disk:
+  E:
+    ukMale:
+      key: floppy disk
+      req: floppy disk
+      answer: floppy disk
+      correct: true
+      conf: 0.618786096572876
+flower playing cards:
+  E:
+    ukMale:
+      key: flower playing cards
+      req: cards
+      answer: cards
+      correct: true
+      conf: 0.8058846592903137
+flushed face:
+  E:
+    ukMale:
+      key: flushed face
+      req: flushed
+      answer: flash
+      correct: false
+      conf: 0.8399021029472351
+flying disc:
+  E:
+    ukMale:
+      key: flying disc
+      req: disc
+      answer: this
+      correct: false
+      conf: 0.8880379796028137
+flying saucer:
+  E:
+    ukMale:
+      key: flying saucer
+      req: ufo
+      answer: phone
+      correct: false
+      conf: 0.7723441123962402
+fog:
+  E:
+    ukMale:
+      key: fog
+      req: fog
+      answer: fog
+      correct: true
+      conf: 0.7567565441131592
+folded hands:
+  E:
+    ukMale:
+      key: folded hands
+      req: pray
+      answer: prey
+      correct: false
+      conf: 0.8546102643013
+foot:
+  E:
+    ukMale:
+      key: foot
+      req: foot
+      answer: foot
+      correct: true
+      conf: 0.9523094892501831
+footprints:
+  E:
+    ukMale:
+      key: footprints
+      req: footprint
+      answer: footprint
+      correct: true
+      conf: 0.7740480303764343
+fork and knife:
+  E:
+    ukMale:
+      key: fork and knife
+      req: knife
+      answer: knife
+      correct: true
+      conf: 0.8774076700210571
+fork and knife with plate:
+  E:
+    ukMale:
+      key: fork and knife with plate
+      req: tableware
+      answer: table
+      correct: false
+      conf: 0.6687659025192261
+fortune cookie:
+  E:
+    ukMale:
+      key: fortune cookie
+      req: fortune cookie
+      answer: fortune cookie
+      correct: true
+      conf: 0.7530032992362976
+fountain:
+  E:
+    ukMale:
+      key: fountain
+      req: fountain
+      answer: fountain
+      correct: true
+      conf: 0.9439603686332703
+fountain pen:
+  E:
+    ukMale:
+      key: fountain pen
+      req: fountain pen
+      answer: johnson pan
+      correct: false
+      conf: 0.5056224465370178
+four leaf clover:
+  E:
+    ukMale:
+      key: four leaf clover
+      req: clover
+      answer: clothes
+      correct: false
+      conf: 0.7264102697372437
+framed picture:
+  E:
+    ukMale:
+      key: framed picture
+      req: picture
+      answer: picture
+      correct: true
+      conf: 0.7746570110321045
+french fries:
+  E:
+    ukMale:
+      key: french fries
+      req: fries
+      answer: fries
+      correct: true
+      conf: 0.8030225038528442
+fried shrimp:
+  E:
+    ukMale:
+      key: fried shrimp
+      req: shrimp
+      answer: shrimp
+      correct: true
+      conf: 0.6134899854660034
+frog:
+  E:
+    ukMale:
+      key: frog
+      req: frog
+      answer: frog
+      correct: true
+      conf: 0.8158255815505981
+front-facing baby chick:
+  E:
+    ukMale:
+      key: front-facing baby chick
+      req: chick
+      answer: pic
+      correct: false
+      conf: 0.713371753692627
+frowning face:
+  E:
+    ukMale:
+      key: frowning face
+      req: frowning
+      answer: froning
+      correct: false
+      conf: 0.7991361618041992
+frowning face with open mouth:
+  E:
+    ukMale:
+      key: frowning face with open mouth
+      req: frowning
+      answer: farming
+      correct: false
+      conf: 0.8652338981628418
+fuel pump:
+  E:
+    ukMale:
+      key: fuel pump
+      req: fuel
+      answer: you'll
+      correct: false
+      conf: 0.7747910618782043
+full moon:
+  E:
+    ukMale:
+      key: full moon
+      req: moon
+      answer: moon
+      correct: true
+      conf: 0.9252691864967346
+funeral urn:
+  E:
+    ukMale:
+      key: funeral urn
+      req: urn
+      answer: god
+      correct: false
+      conf: 0.8115302324295044
+game die:
+  E:
+    ukMale:
+      key: game die
+      req: die
+      answer: die
+      correct: true
+      conf: 0.48498111963272095
+garlic:
+  E:
+    ukMale:
+      key: garlic
+      req: garlic
+      answer: garlic
+      correct: true
+      conf: 0.8159497380256653
+gear:
+  E:
+    ukMale:
+      key: gear
+      req: gear
+      answer: yeah
+      correct: false
+      conf: 0.6885143518447876
+gem stone:
+  E:
+    ukMale:
+      key: gem stone
+      req: diamond
+      answer: diamond
+      correct: true
+      conf: 0.8926050662994385
+genie:
+  E:
+    ukMale:
+      key: genie
+      req: genie
+      answer: genie
+      correct: true
+      conf: 0.6336556077003479
+ghost:
+  E:
+    ukMale:
+      key: ghost
+      req: ghost
+      answer: cast
+      correct: false
+      conf: 0.7769169807434082
+giraffe:
+  E:
+    ukMale:
+      key: giraffe
+      req: giraffe
+      answer: giraffe
+      correct: true
+      conf: 0.7199999690055847
+girl:
+  E:
+    ukMale:
+      key: girl
+      req: girl
+      answer: like
+      correct: false
+      conf: 0.8031086325645447
+glass of milk:
+  E:
+    ukMale:
+      key: glass of milk
+      req: milk
+      answer: milk
+      correct: true
+      conf: 0.9617101550102234
+glasses:
+  E:
+    ukMale:
+      key: glasses
+      req: glasses
+      answer: losses
+      correct: false
+      conf: 0.8424969911575317
+globe showing Americas:
+  E:
+    ukMale:
+      key: globe showing Americas
+      req: world
+      answer: what
+      correct: false
+      conf: 0.8668478727340698
+globe showing Asia-Australia:
+  E:
+    ukMale:
+      key: globe showing Asia-Australia
+      req: world
+      answer: what
+      correct: false
+      conf: 0.8380115032196045
+globe showing Europe-Africa:
+  E:
+    ukMale:
+      key: globe showing Europe-Africa
+      req: world
+      answer: what
+      correct: false
+      conf: 0.8231471180915833
+gloves:
+  E:
+    ukMale:
+      key: gloves
+      req: gloves
+      answer: clubs
+      correct: true
+      conf: 0.5944308042526245
+glowing star:
+  E:
+    ukMale:
+      key: glowing star
+      req: star
+      answer: star
+      correct: true
+      conf: 0.512422502040863
+goal net:
+  E:
+    ukMale:
+      key: goal net
+      req: goal
+      answer: girl
+      correct: false
+      conf: 0.8540812730789185
+goat:
+  E:
+    ukMale:
+      key: goat
+      req: goat
+      answer: goat
+      correct: true
+      conf: 0.7777776122093201
+goblin:
+  E:
+    ukMale:
+      key: goblin
+      req: goblin
+      answer: 'on'
+      correct: false
+      conf: 0.7453580498695374
+goggles:
+  E:
+    ukMale:
+      key: goggles
+      req: goggles
+      answer: goggles
+      correct: true
+      conf: 0.7985902428627014
+gorilla:
+  E:
+    ukMale:
+      key: gorilla
+      req: gorilla
+      answer: gorillas
+      correct: true
+      conf: 0.8944503664970398
+graduation cap:
+  E:
+    ukMale:
+      key: graduation cap
+      req: graduation cap
+      answer: graduation cap
+      correct: true
+      conf: 0.9533824920654297
+grapes:
+  E:
+    ukMale:
+      key: grapes
+      req: grapes
+      answer: gray
+      correct: false
+      conf: 0.6803909540176392
+green apple:
+  E:
+    ukMale:
+      key: green apple
+      req: apple
+      answer: apple
+      correct: true
+      conf: 0.9439303278923035
+green book:
+  E:
+    ukMale:
+      key: green book
+      req: book
+      answer: book
+      correct: true
+      conf: 0.7690147161483765
+green heart:
+  E:
+    ukMale:
+      key: green heart
+      req: heart
+      answer: heart
+      correct: true
+      conf: 0.8134191632270813
+green salad:
+  E:
+    ukMale:
+      key: green salad
+      req: salad
+      answer: salad
+      correct: true
+      conf: 0.887858510017395
+grimacing face:
+  E:
+    ukMale:
+      key: grimacing face
+      req: grimacing
+      answer: grimacing
+      correct: true
+      conf: 0.8636932969093323
+grinning cat:
+  E:
+    ukMale:
+      key: grinning cat
+      req: chesshire
+      answer: like
+      correct: false
+      conf: 0.7227994799613953
+grinning cat with smiling eyes:
+  E:
+    ukMale:
+      key: grinning cat with smiling eyes
+      req: chesshire
+      answer: like
+      correct: false
+      conf: 0.8062846660614014
+grinning face:
+  E:
+    ukMale:
+      key: grinning face
+      req: grin
+      answer: ren
+      correct: false
+      conf: 0.6178575158119202
+grinning face with big eyes:
+  E:
+    ukMale:
+      key: grinning face with big eyes
+      req: grin
+      answer: ren
+      correct: false
+      conf: 0.6395189762115479
+grinning face with smiling eyes:
+  E:
+    ukMale:
+      key: grinning face with smiling eyes
+      req: grin
+      answer: ren
+      correct: false
+      conf: 0.7128321528434753
+grinning face with sweat:
+  E:
+    ukMale:
+      key: grinning face with sweat
+      req: grin
+      answer: ren
+      correct: false
+      conf: 0.6855630874633789
+grinning squinting face:
+  E:
+    ukMale:
+      key: grinning squinting face
+      req: grin
+      answer: ren
+      correct: false
+      conf: 0.7022205591201782
+growing heart:
+  E:
+    ukMale:
+      key: growing heart
+      req: pulse
+      answer: call
+      correct: false
+      conf: 0.9174095392227173
+guard:
+  E:
+    ukMale:
+      key: guard
+      req: guard
+      answer: card
+      correct: false
+      conf: 0.7546736001968384
+guitar:
+  E:
+    ukMale:
+      key: guitar
+      req: guitar
+      answer: guitar
+      correct: true
+      conf: 0.9075495004653931
+haircut:
+  E:
+    ukMale:
+      key: haircut
+      req: haircut
+      answer: haircut
+      correct: true
+      conf: 0.759539008140564
+hamburger:
+  E:
+    ukMale:
+      key: hamburger
+      req: hamburger
+      answer: hamburger
+      correct: true
+      conf: 0.9537916779518127
+hammer:
+  E:
+    ukMale:
+      key: hammer
+      req: hammer
+      answer: 'fly,'
+      correct: false
+      conf: 0.5376707315444946
+hammer and pick:
+  E:
+    ukMale:
+      key: hammer and pick
+      req: tools
+      answer: tool
+      correct: false
+      conf: 0.9427531957626343
+hammer and wrench:
+  E:
+    ukMale:
+      key: hammer and wrench
+      req: tools
+      answer: tool
+      correct: false
+      conf: 0.9264017939567566
+hamster:
+  E:
+    ukMale:
+      key: hamster
+      req: hamster
+      answer: hamster
+      correct: true
+      conf: 0.8296634554862976
+hand with fingers splayed:
+  E:
+    ukMale:
+      key: hand with fingers splayed
+      req: splay
+      answer: sly
+      correct: false
+      conf: 0.8551899194717407
+handbag:
+  E:
+    ukMale:
+      key: handbag
+      req: handbag
+      answer: handbag
+      correct: true
+      conf: 0.9658287763595581
+handball:
+  E:
+    ukMale:
+      key: handball
+      req: handball
+      answer: boil
+      correct: false
+      conf: 0.8187228441238403
+handshake:
+  E:
+    ukMale:
+      key: handshake
+      req: handshake
+      answer: shake
+      correct: false
+      conf: 0.7787938117980957
+hatching chick:
+  E:
+    ukMale:
+      key: hatching chick
+      req: chick
+      answer: thick
+      correct: false
+      conf: 0.7786864638328552
+headphone:
+  E:
+    ukMale:
+      key: headphone
+      req: headphone
+      answer: headphones
+      correct: false
+      conf: 0.8600939512252808
+hear-no-evil monkey:
+  E:
+    ukMale:
+      key: hear-no-evil monkey
+      req: hear-no-evil
+      answer: evil
+      correct: false
+      conf: 0.7255155444145203
+heart decoration:
+  E:
+    ukMale:
+      key: heart decoration
+      req: card
+      answer: cod
+      correct: false
+      conf: 0.7209662199020386
+heart exclamation:
+  E:
+    ukMale:
+      key: heart exclamation
+      req: heart
+      answer: heart
+      correct: true
+      conf: 0.6883785128593445
+heart suit:
+  E:
+    ukMale:
+      key: heart suit
+      req: heart
+      answer: heart
+      correct: true
+      conf: 0.9072436094284058
+heart with arrow:
+  E:
+    ukMale:
+      key: heart with arrow
+      req: cupid
+      answer: cupid
+      correct: true
+      conf: 0.7903062105178833
+heart with ribbon:
+  E:
+    ukMale:
+      key: heart with ribbon
+      req: valentine's day
+      answer: valentine's day
+      correct: true
+      conf: 0.9955608248710632
+hedgehog:
+  E:
+    ukMale:
+      key: hedgehog
+      req: hedgehog
+      answer: hedgehog
+      correct: true
+      conf: 0.9349416494369507
+helicopter:
+  E:
+    ukMale:
+      key: helicopter
+      req: helicopter
+      answer: helicopter
+      correct: true
+      conf: 0.9894274473190308
+herb:
+  E:
+    ukMale:
+      key: herb
+      req: leaf
+      answer: leaf
+      correct: true
+      conf: 0.8803521990776062
+hibiscus:
+  E:
+    ukMale:
+      key: hibiscus
+      req: hibiscus
+      answer: hibiscus
+      correct: true
+      conf: 0.7420940399169922
+high voltage:
+  E:
+    ukMale:
+      key: high voltage
+      req: lightning
+      answer: lightning
+      correct: true
+      conf: 0.9611786603927612
+high-heeled shoe:
+  E:
+    ukMale:
+      key: high-heeled shoe
+      req: shoe
+      answer: you
+      correct: false
+      conf: 0.9300305247306824
+high-speed train:
+  E:
+    ukMale:
+      key: high-speed train
+      req: train
+      answer: train
+      correct: true
+      conf: 0.934537410736084
+hiking boot:
+  E:
+    ukMale:
+      key: hiking boot
+      req: shoe
+      answer: you
+      correct: false
+      conf: 0.9117447733879089
+hindu temple:
+  E:
+    ukMale:
+      key: hindu temple
+      req: temple
+      answer: temple
+      correct: true
+      conf: 0.7938418388366699
+hippopotamus:
+  E:
+    ukMale:
+      key: hippopotamus
+      req: hippo
+      answer: hippo
+      correct: true
+      conf: 0.7820547819137573
+hole:
+  E:
+    ukMale:
+      key: hole
+      req: hole
+      answer: hell
+      correct: false
+      conf: 0.9150074124336243
+honey pot:
+  E:
+    ukMale:
+      key: honey pot
+      req: pot
+      answer: part
+      correct: false
+      conf: 0.610160231590271
+horse:
+  E:
+    ukMale:
+      key: horse
+      req: horse
+      answer: horse
+      correct: true
+      conf: 0.9230348467826843
+horse racing:
+  E:
+    ukMale:
+      key: horse racing
+      req: jockey
+      answer: jockey
+      correct: true
+      conf: 0.9107275009155273
+hot beverage:
+  E:
+    ukMale:
+      key: hot beverage
+      req: tea
+      answer: t
+      correct: false
+      conf: 0.8478713631629944
+hot face:
+  E:
+    ukMale:
+      key: hot face
+      req: hot
+      answer: fun.
+      correct: false
+      conf: 0.6894571185112
+hot pepper:
+  E:
+    ukMale:
+      key: hot pepper
+      req: pepper
+      answer: peppa
+      correct: false
+      conf: 0.8867888450622559
+hotdog:
+  E:
+    ukMale:
+      key: hotdog
+      req: sausage
+      answer: sausage
+      correct: true
+      conf: 0.8216037750244141
+hourglass done:
+  E:
+    ukMale:
+      key: hourglass done
+      req: hourglass
+      answer: draw
+      correct: false
+      conf: 0.7623780965805054
+hourglass not done:
+  E:
+    ukMale:
+      key: hourglass not done
+      req: hourglass
+      answer: la
+      correct: true
+      conf: 0.7458279728889465
+house:
+  E:
+    ukMale:
+      key: house
+      req: house
+      answer: house
+      correct: true
+      conf: 0.7160314917564392
+house with garden:
+  E:
+    ukMale:
+      key: house with garden
+      req: house
+      answer: house
+      correct: true
+      conf: 0.8108238577842712
+houses:
+  E:
+    ukMale:
+      key: houses
+      req: houses
+      answer: like
+      correct: false
+      conf: 0.9200965762138367
+hugging face:
+  E:
+    ukMale:
+      key: hugging face
+      req: hugging
+      answer: hunting
+      correct: false
+      conf: 0.8001270294189453
+hundred points:
+  E:
+    ukMale:
+      key: hundred points
+      req: hundred
+      answer: hundred
+      correct: true
+      conf: 0.8749109506607056
+hushed face:
+  E:
+    ukMale:
+      key: hushed face
+      req: surprised
+      answer: surprise
+      correct: false
+      conf: 0.8086815476417542
+ice:
+  E:
+    ukMale:
+      key: ice
+      req: ice
+      answer: high
+      correct: false
+      conf: 0.6078981757164001
+ice cream:
+  E:
+    ukMale:
+      key: ice cream
+      req: ice cream
+      answer: ice cream
+      correct: true
+      conf: 0.9495677947998047
+ice hockey:
+  E:
+    ukMale:
+      key: ice hockey
+      req: ice hockey
+      answer: i parking
+      correct: false
+      conf: 0.5983154773712158
+ice skate:
+  E:
+    ukMale:
+      key: ice skate
+      req: skating
+      answer: likes
+      correct: false
+      conf: 0.6250348687171936
+inbox tray:
+  E:
+    ukMale:
+      key: inbox tray
+      req: mail
+      answer: male
+      correct: false
+      conf: 0.9177207946777344
+incoming envelope:
+  E:
+    ukMale:
+      key: incoming envelope
+      req: inbox
+      answer: box
+      correct: false
+      conf: 0.7253324389457703
+index pointing up:
+  E:
+    ukMale:
+      key: index pointing up
+      req: up
+      answer: app
+      correct: false
+      conf: 0.7428493499755859
+jack-o-lantern:
+  E:
+    ukMale:
+      key: jack-o-lantern
+      req: pumpkin
+      answer: pumpkin
+      correct: true
+      conf: 0.935774564743042
+jeans:
+  E:
+    ukMale:
+      key: jeans
+      req: pants
+      answer: pop
+      correct: false
+      conf: 0.6689474582672119
+joker:
+  E:
+    ukMale:
+      key: joker
+      req: joker
+      answer: cocker
+      correct: false
+      conf: 0.8134570121765137
+joystick:
+  E:
+    ukMale:
+      key: joystick
+      req: joystick
+      answer: joystick
+      correct: true
+      conf: 0.9199029207229614
+juggling:
+  E:
+    ukMale:
+      key: juggling
+      req: juggling
+      answer: juggling
+      correct: true
+      conf: 0.906060516834259
+kangaroo:
+  E:
+    ukMale:
+      key: kangaroo
+      req: kangaroo
+      answer: kangaroo
+      correct: true
+      conf: 0.8102080225944519
+key:
+  E:
+    ukMale:
+      key: key
+      req: key
+      answer: key
+      correct: true
+      conf: 0.7585155963897705
+keyboard:
+  E:
+    ukMale:
+      key: keyboard
+      req: keyboard
+      answer: keyboard
+      correct: true
+      conf: 0.7830556035041809
+kick scooter:
+  E:
+    ukMale:
+      key: kick scooter
+      req: scooter
+      answer: like
+      correct: false
+      conf: 0.8128836750984192
+kimono:
+  E:
+    ukMale:
+      key: kimono
+      req: kimono
+      answer: kimono
+      correct: true
+      conf: 0.9365025758743286
+kiss:
+  E:
+    ukMale:
+      key: kiss
+      req: kiss
+      answer: kiss
+      correct: true
+      conf: 0.8403433561325073
+kiss mark:
+  E:
+    ukMale:
+      key: kiss mark
+      req: lips
+      answer: that
+      correct: false
+      conf: 0.8351567387580872
+kissing cat:
+  E:
+    ukMale:
+      key: kissing cat
+      req: kissing cat
+      answer: ''
+      correct: false
+      conf: 0
+kissing face:
+  E:
+    ukMale:
+      key: kissing face
+      req: kiss
+      answer: kiss
+      correct: true
+      conf: 0.8118917346000671
+kissing face with closed eyes:
+  E:
+    ukMale:
+      key: kissing face with closed eyes
+      req: kiss
+      answer: like
+      correct: false
+      conf: 0.8459722995758057
+kissing face with smiling eyes:
+  E:
+    ukMale:
+      key: kissing face with smiling eyes
+      req: kiss
+      answer: like
+      correct: false
+      conf: 0.9360980987548828
+kitchen knife:
+  E:
+    ukMale:
+      key: kitchen knife
+      req: knife
+      answer: knife
+      correct: true
+      conf: 0.6188687682151794
+kite:
+  E:
+    ukMale:
+      key: kite
+      req: kite
+      answer: like.
+      correct: false
+      conf: 0.9229718446731567
+kiwi fruit:
+  E:
+    ukMale:
+      key: kiwi fruit
+      req: kiwi
+      answer: kiwi
+      correct: true
+      conf: 0.8790706396102905
+kneeling:
+  E:
+    ukMale:
+      key: kneeling
+      req: kneeling
+      answer: kneeling
+      correct: true
+      conf: 0.6714162826538086
+lab coat:
+  E:
+    ukMale:
+      key: lab coat
+      req: coat
+      answer: like
+      correct: false
+      conf: 0.8433047533035278
+label:
+  E:
+    ukMale:
+      key: label
+      req: label
+      answer: label
+      correct: true
+      conf: 0.7652499079704285
+lacrosse:
+  E:
+    ukMale:
+      key: lacrosse
+      req: lacrosse
+      answer: cross
+      correct: true
+      conf: 0.7480311989784241
+ladybug:
+  E:
+    ukMale:
+      key: ladybug
+      req: ladybug
+      answer: ladybug
+      correct: true
+      conf: 0.8786172866821289
+laptop:
+  E:
+    ukMale:
+      key: laptop
+      req: laptop
+      answer: laptop
+      correct: true
+      conf: 0.7744534015655518
+last quarter moon:
+  E:
+    ukMale:
+      key: last quarter moon
+      req: moon
+      answer: moon
+      correct: true
+      conf: 0.9348891973495483
+last quarter moon face:
+  E:
+    ukMale:
+      key: last quarter moon face
+      req: moon
+      answer: like
+      correct: false
+      conf: 0.8515364527702332
+leaf fluttering in wind:
+  E:
+    ukMale:
+      key: leaf fluttering in wind
+      req: wind
+      answer: quinn
+      correct: true
+      conf: 0.8152338862419128
+ledger:
+  E:
+    ukMale:
+      key: ledger
+      req: notebook
+      answer: notebook
+      correct: true
+      conf: 0.9117946624755859
+left speech bubble:
+  E:
+    ukMale:
+      key: left speech bubble
+      req: speech balloon
+      answer: ''
+      correct: false
+      conf: 0
+left-facing fist:
+  E:
+    ukMale:
+      key: left-facing fist
+      req: fist
+      answer: fist
+      correct: true
+      conf: 0.7421993017196655
+leg:
+  E:
+    ukMale:
+      key: leg
+      req: leg
+      answer: leg
+      correct: true
+      conf: 0.9420310854911804
+lemon:
+  E:
+    ukMale:
+      key: lemon
+      req: lemon
+      answer: lava
+      correct: true
+      conf: 0.7692641615867615
+leopard:
+  E:
+    ukMale:
+      key: leopard
+      req: leopard
+      answer: leopard
+      correct: true
+      conf: 0.7696085572242737
+level slider:
+  E:
+    ukMale:
+      key: level slider
+      req: slider
+      answer: slider
+      correct: true
+      conf: 0.9220330119132996
+levitating:
+  E:
+    ukMale:
+      key: levitating
+      req: levitating
+      answer: levitating
+      correct: true
+      conf: 0.6771600842475891
+lifting weights:
+  E:
+    ukMale:
+      key: lifting weights
+      req: weight lifting
+      answer: white
+      correct: false
+      conf: 0.9208937883377075
+light bulb:
+  E:
+    ukMale:
+      key: light bulb
+      req: bulb
+      answer: bulb
+      correct: true
+      conf: 0.7677448391914368
+light rail:
+  E:
+    ukMale:
+      key: light rail
+      req: railway
+      answer: railway
+      correct: true
+      conf: 0.8933817744255066
+link:
+  E:
+    ukMale:
+      key: link
+      req: link
+      answer: lane
+      correct: false
+      conf: 0.7961484789848328
+linked paperclips:
+  E:
+    ukMale:
+      key: linked paperclips
+      req: paperclips
+      answer: clips
+      correct: false
+      conf: 0.7299464344978333
+lipstick:
+  E:
+    ukMale:
+      key: lipstick
+      req: lipstick
+      answer: lipstick
+      correct: true
+      conf: 0.8649408221244812
+lizard:
+  E:
+    ukMale:
+      key: lizard
+      req: lizard
+      answer: lizard
+      correct: true
+      conf: 0.8602584004402161
+llama:
+  E:
+    ukMale:
+      key: llama
+      req: llama
+      answer: llamas
+      correct: false
+      conf: 0.8737884163856506
+lobster:
+  E:
+    ukMale:
+      key: lobster
+      req: lobster
+      answer: at
+      correct: false
+      conf: 0.6213230490684509
+locked:
+  E:
+    ukMale:
+      key: locked
+      req: lock
+      answer: clock
+      correct: true
+      conf: 0.8023513555526733
+locked with key:
+  E:
+    ukMale:
+      key: locked with key
+      req: lock
+      answer: clock
+      correct: true
+      conf: 0.8830605745315552
+locked with pen:
+  E:
+    ukMale:
+      key: locked with pen
+      req: lock
+      answer: clock
+      correct: true
+      conf: 0.8825219869613647
+locomotive:
+  E:
+    ukMale:
+      key: locomotive
+      req: locomotive
+      answer: locomotive
+      correct: true
+      conf: 0.7514050602912903
+lollipop:
+  E:
+    ukMale:
+      key: lollipop
+      req: lollipop
+      answer: lollipop
+      correct: true
+      conf: 0.8823211789131165
+lotion bottle:
+  E:
+    ukMale:
+      key: lotion bottle
+      req: lotion
+      answer: ocean
+      correct: false
+      conf: 0.6542733311653137
+lotus position:
+  E:
+    ukMale:
+      key: lotus position
+      req: yoga
+      answer: yoga
+      correct: true
+      conf: 0.9036054611206055
+loudly crying face:
+  E:
+    ukMale:
+      key: loudly crying face
+      req: sad
+      answer: sade
+      correct: false
+      conf: 0.6598013043403625
+loudspeaker:
+  E:
+    ukMale:
+      key: loudspeaker
+      req: loudspeaker
+      answer: speaker
+      correct: false
+      conf: 0.7917067408561707
+love letter:
+  E:
+    ukMale:
+      key: love letter
+      req: love letter
+      answer: love letter
+      correct: true
+      conf: 0.952305257320404
+love-you gesture:
+  E:
+    ukMale:
+      key: love-you gesture
+      req: love
+      answer: love
+      correct: true
+      conf: 0.9245873689651489
+luggage:
+  E:
+    ukMale:
+      key: luggage
+      req: suitcase
+      answer: cat
+      correct: false
+      conf: 0.6879116296768188
+lungs:
+  E:
+    ukMale:
+      key: lungs
+      req: lungs
+      answer: long
+      correct: true
+      conf: 0.7553344368934631
+lying face:
+  E:
+    ukMale:
+      key: lying face
+      req: pinocchio
+      answer: enochian
+      correct: false
+      conf: 0.6213757991790771
+magnet:
+  E:
+    ukMale:
+      key: magnet
+      req: magnet
+      answer: magnet
+      correct: true
+      conf: 0.7990195155143738
+magnifying glass tilted left:
+  E:
+    ukMale:
+      key: magnifying glass tilted left
+      req: magnifier
+      answer: magnets
+      correct: false
+      conf: 0.6132435202598572
+magnifying glass tilted right:
+  E:
+    ukMale:
+      key: magnifying glass tilted right
+      req: magnifier
+      answer: magnet
+      correct: false
+      conf: 0.7483637928962708
+mahjong red dragon:
+  E:
+    ukMale:
+      key: mahjong red dragon
+      req: mahjong
+      answer: mahjong
+      correct: true
+      conf: 0.7636577486991882
+man:
+  E:
+    ukMale:
+      key: man
+      req: person
+      answer: person
+      correct: true
+      conf: 0.7032738327980042
+man artist:
+  E:
+    ukMale:
+      key: man artist
+      req: artist
+      answer: causes
+      correct: false
+      conf: 0.8552425503730774
+man astronaut:
+  E:
+    ukMale:
+      key: man astronaut
+      req: astronaut
+      answer: astronaut
+      correct: true
+      conf: 0.7473698854446411
+man blind:
+  E:
+    ukMale:
+      key: man blind
+      req: blind
+      answer: blind
+      correct: true
+      conf: 0.9369248151779175
+man cook:
+  E:
+    ukMale:
+      key: man cook
+      req: cook
+      answer: cook
+      correct: true
+      conf: 0.7554231286048889
+man dancing:
+  E:
+    ukMale:
+      key: man dancing
+      req: dancing
+      answer: kissing
+      correct: false
+      conf: 0.7211436629295349
+man factory worker:
+  E:
+    ukMale:
+      key: man factory worker
+      req: factory worker
+      answer: tri workout
+      correct: false
+      conf: 0.8442206382751465
+man fairy:
+  E:
+    ukMale:
+      key: man fairy
+      req: fairy
+      answer: siri
+      correct: false
+      conf: 0.7057769298553467
+man farmer:
+  E:
+    ukMale:
+      key: man farmer
+      req: farmer
+      answer: harmony
+      correct: false
+      conf: 0.769530713558197
+man firefighter:
+  E:
+    ukMale:
+      key: man firefighter
+      req: firefighter
+      answer: sia
+      correct: false
+      conf: 0.7239529490470886
+man golfing:
+  E:
+    ukMale:
+      key: man golfing
+      req: golf
+      answer: job
+      correct: false
+      conf: 0.665298581123352
+man health worker:
+  E:
+    ukMale:
+      key: man health worker
+      req: doctor
+      answer: dogs
+      correct: false
+      conf: 0.703633189201355
+man in manual wheelchair:
+  E:
+    ukMale:
+      key: man in manual wheelchair
+      req: wheelchair
+      answer: wheelchair
+      correct: true
+      conf: 0.8664873242378235
+man in motorized wheelchair:
+  E:
+    ukMale:
+      key: man in motorized wheelchair
+      req: wheelchair
+      answer: wheelchair
+      correct: true
+      conf: 0.9118162989616394
+man judge:
+  E:
+    ukMale:
+      key: man judge
+      req: judge
+      answer: george
+      correct: true
+      conf: 0.8334156274795532
+man kneeling:
+  E:
+    ukMale:
+      key: man kneeling
+      req: kneeling
+      answer: meeting
+      correct: false
+      conf: 0.7740998268127441
+man mechanic:
+  E:
+    ukMale:
+      key: man mechanic
+      req: mechanic
+      answer: mechanic
+      correct: true
+      conf: 0.9261948466300964
+man office worker:
+  E:
+    ukMale:
+      key: man office worker
+      req: office worker
+      answer: office work
+      correct: false
+      conf: 0.7393072247505188
+man pilot:
+  E:
+    ukMale:
+      key: man pilot
+      req: pilot
+      answer: pilot
+      correct: true
+      conf: 0.8519799113273621
+man running:
+  E:
+    ukMale:
+      key: man running
+      req: running
+      answer: running
+      correct: true
+      conf: 0.7682331800460815
+man scientist:
+  E:
+    ukMale:
+      key: man scientist
+      req: scientist
+      answer: at
+      correct: false
+      conf: 0.7803605198860168
+man singer:
+  E:
+    ukMale:
+      key: man singer
+      req: singer
+      answer: singer
+      correct: true
+      conf: 0.8061265349388123
+man standing:
+  E:
+    ukMale:
+      key: man standing
+      req: man
+      answer: mom
+      correct: false
+      conf: 0.8802229762077332
+man student:
+  E:
+    ukMale:
+      key: man student
+      req: student
+      answer: lights.
+      correct: false
+      conf: 0.009999999776482582
+man surfing:
+  E:
+    ukMale:
+      key: man surfing
+      req: surfing
+      answer: stuffing
+      correct: true
+      conf: 0.6346569657325745
+man teacher:
+  E:
+    ukMale:
+      key: man teacher
+      req: teacher
+      answer: pizza
+      correct: false
+      conf: 0.8246059417724609
+man technologist:
+  E:
+    ukMale:
+      key: man technologist
+      req: developer
+      answer: developer
+      correct: true
+      conf: 0.8973584175109863
+man walking:
+  E:
+    ukMale:
+      key: man walking
+      req: walking
+      answer: walking
+      correct: true
+      conf: 0.9294946789741516
+'man: bald':
+  E:
+    ukMale:
+      key: 'man: bald'
+      req: bald
+      answer: bol
+      correct: false
+      conf: 0.5978034734725952
+'man: beard':
+  E:
+    ukMale:
+      key: 'man: beard'
+      req: beard
+      answer: that
+      correct: false
+      conf: 0.8702619671821594
+'man: blond hair':
+  E:
+    ukMale:
+      key: 'man: blond hair'
+      req: blond
+      answer: love
+      correct: false
+      conf: 0.6895505785942078
+'man: curly hair':
+  E:
+    ukMale:
+      key: 'man: curly hair'
+      req: man
+      answer: man
+      correct: true
+      conf: 0.9296460151672363
+'man: red hair':
+  E:
+    ukMale:
+      key: 'man: red hair'
+      req: red hair
+      answer: bread
+      correct: false
+      conf: 0.7634439468383789
+'man: white hair':
+  E:
+    ukMale:
+      key: 'man: white hair'
+      req: white-haired man
+      answer: why i've had mine
+      correct: false
+      conf: 0.9304121136665344
+mango:
+  E:
+    ukMale:
+      key: mango
+      req: mango
+      answer: mango
+      correct: true
+      conf: 0.8883092999458313
+mantelpiece clock:
+  E:
+    ukMale:
+      key: mantelpiece clock
+      req: clock
+      answer: car
+      correct: false
+      conf: 0.8118354678153992
+manual wheelchair:
+  E:
+    ukMale:
+      key: manual wheelchair
+      req: wheelchair
+      answer: wheelchair
+      correct: true
+      conf: 0.7299626469612122
+man’s shoe:
+  E:
+    ukMale:
+      key: man’s shoe
+      req: shoe
+      answer: you
+      correct: false
+      conf: 0.8270219564437866
+map of Japan:
+  E:
+    ukMale:
+      key: map of Japan
+      req: japan
+      answer: japan
+      correct: true
+      conf: 0.8793643712997437
+maple leaf:
+  E:
+    ukMale:
+      key: maple leaf
+      req: maple leaf
+      answer: maple leaf
+      correct: true
+      conf: 0.9414299130439758
+martial arts uniform:
+  E:
+    ukMale:
+      key: martial arts uniform
+      req: karate
+      answer: karate
+      correct: true
+      conf: 0.7170118689537048
+massage:
+  E:
+    ukMale:
+      key: massage
+      req: massage
+      answer: something
+      correct: true
+      conf: 0.8985661268234253
+meat on bone:
+  E:
+    ukMale:
+      key: meat on bone
+      req: meat
+      answer: meat
+      correct: true
+      conf: 0.8814215660095215
+mechanical arm:
+  E:
+    ukMale:
+      key: mechanical arm
+      req: arm
+      answer: cam
+      correct: false
+      conf: 0.933181643486023
+mechanical leg:
+  E:
+    ukMale:
+      key: mechanical leg
+      req: leg
+      answer: leg
+      correct: true
+      conf: 0.6876562833786011
+medal:
+  E:
+    ukMale:
+      key: medal
+      req: medal
+      answer: metal
+      correct: false
+      conf: 0.8317869901657104
+megaphone:
+  E:
+    ukMale:
+      key: megaphone
+      req: megaphone
+      answer: magazine
+      correct: true
+      conf: 0.7162946462631226
+melon:
+  E:
+    ukMale:
+      key: melon
+      req: melon
+      answer: melon
+      correct: true
+      conf: 0.7182313203811646
+memo:
+  E:
+    ukMale:
+      key: memo
+      req: notice
+      answer: notice
+      correct: true
+      conf: 0.7407441139221191
+men holding hands:
+  E:
+    ukMale:
+      key: men holding hands
+      req: holding hands
+      answer: posing on
+      correct: false
+      conf: 0.7422314286231995
+mermaid:
+  E:
+    ukMale:
+      key: mermaid
+      req: mermaid
+      answer: mermaid
+      correct: true
+      conf: 0.7901421785354614
+metro:
+  E:
+    ukMale:
+      key: metro
+      req: railway
+      answer: railway
+      correct: true
+      conf: 0.9421302676200867
+microbe:
+  E:
+    ukMale:
+      key: microbe
+      req: microbe
+      answer: rowe
+      correct: true
+      conf: 0.7122448086738586
+microphone:
+  E:
+    ukMale:
+      key: microphone
+      req: microphone
+      answer: microphone
+      correct: true
+      conf: 0.9174119234085083
+microscope:
+  E:
+    ukMale:
+      key: microscope
+      req: microscope
+      answer: microscope
+      correct: true
+      conf: 0.9625838994979858
+middle finger:
+  E:
+    ukMale:
+      key: middle finger
+      req: middle finger
+      answer: middle finger
+      correct: true
+      conf: 0.9091456532478333
+milky way:
+  E:
+    ukMale:
+      key: milky way
+      req: galaxy
+      answer: galaxy
+      correct: true
+      conf: 0.9539631605148315
+minibus:
+  E:
+    ukMale:
+      key: minibus
+      req: bus
+      answer: boss
+      correct: false
+      conf: 0.8558076024055481
+moai:
+  E:
+    ukMale:
+      key: moai
+      req: statue
+      answer: statue
+      correct: true
+      conf: 0.7070244550704956
+mobile phone:
+  E:
+    ukMale:
+      key: mobile phone
+      req: phone
+      answer: fun
+      correct: false
+      conf: 0.9371246099472046
+money bag:
+  E:
+    ukMale:
+      key: money bag
+      req: money
+      answer: money
+      correct: true
+      conf: 0.9232794046401978
+money-mouth face:
+  E:
+    ukMale:
+      key: money-mouth face
+      req: tongue
+      answer: tunnel
+      correct: false
+      conf: 0.8950921297073364
+monkey:
+  E:
+    ukMale:
+      key: monkey
+      req: monkey
+      answer: monkey
+      correct: true
+      conf: 0.9657462239265442
+monorail:
+  E:
+    ukMale:
+      key: monorail
+      req: monorail
+      answer: monorail
+      correct: true
+      conf: 0.8490171432495117
+mosque:
+  E:
+    ukMale:
+      key: mosque
+      req: mosque
+      answer: more
+      correct: false
+      conf: 0.7320159077644348
+mosquito:
+  E:
+    ukMale:
+      key: mosquito
+      req: mosquito
+      answer: mosquito
+      correct: true
+      conf: 0.9164475798606873
+motor boat:
+  E:
+    ukMale:
+      key: motor boat
+      req: motorboat
+      answer: motorboat
+      correct: true
+      conf: 0.7625102996826172
+motor scooter:
+  E:
+    ukMale:
+      key: motor scooter
+      req: motor scooter
+      answer: marietta square
+      correct: false
+      conf: 0.5180849432945251
+motorcycle:
+  E:
+    ukMale:
+      key: motorcycle
+      req: motorcycle
+      answer: motorcycle
+      correct: true
+      conf: 0.9504780173301697
+motorized wheelchair:
+  E:
+    ukMale:
+      key: motorized wheelchair
+      req: wheelchair
+      answer: wheelchair
+      correct: true
+      conf: 0.8391260504722595
+motorway:
+  E:
+    ukMale:
+      key: motorway
+      req: road
+      answer: red
+      correct: false
+      conf: 0.872096061706543
+mountain:
+  E:
+    ukMale:
+      key: mountain
+      req: mountain
+      answer: mountain
+      correct: true
+      conf: 0.7894673347473145
+mountain biking:
+  E:
+    ukMale:
+      key: mountain biking
+      req: biking
+      answer: biking
+      correct: true
+      conf: 0.7878976464271545
+mountain cableway:
+  E:
+    ukMale:
+      key: mountain cableway
+      req: suspension railway
+      answer: suspension railway
+      correct: true
+      conf: 0.9797088503837585
+mouse:
+  E:
+    ukMale:
+      key: mouse
+      req: mouse
+      answer: love
+      correct: false
+      conf: 0.759128749370575
+mouth:
+  E:
+    ukMale:
+      key: mouth
+      req: mouth
+      answer: mom
+      correct: false
+      conf: 0.766018807888031
+movie camera:
+  E:
+    ukMale:
+      key: movie camera
+      req: camera
+      answer: camera
+      correct: true
+      conf: 0.7189035415649414
+mushroom:
+  E:
+    ukMale:
+      key: mushroom
+      req: mushroom
+      answer: mushroom
+      correct: true
+      conf: 0.6826755404472351
+musical keyboard:
+  E:
+    ukMale:
+      key: musical keyboard
+      req: piano
+      answer: o
+      correct: false
+      conf: 0.8131135106086731
+musical note:
+  E:
+    ukMale:
+      key: musical note
+      req: music
+      answer: music
+      correct: true
+      conf: 0.9270524978637695
+musical notes:
+  E:
+    ukMale:
+      key: musical notes
+      req: music
+      answer: music
+      correct: true
+      conf: 0.8905986547470093
+musical score:
+  E:
+    ukMale:
+      key: musical score
+      req: treble
+      answer: trampoline
+      correct: false
+      conf: 0.7952443957328796
+muted speaker:
+  E:
+    ukMale:
+      key: muted speaker
+      req: mute
+      answer: music
+      correct: false
+      conf: 0.8301794528961182
+nail polish:
+  E:
+    ukMale:
+      key: nail polish
+      req: manicure
+      answer: manicure
+      correct: true
+      conf: 0.9514783620834351
+namaste:
+  E:
+    ukMale:
+      key: namaste
+      req: please
+      answer: please
+      correct: true
+      conf: 0.7854745388031006
+nauseated face:
+  E:
+    ukMale:
+      key: nauseated face
+      req: nausea
+      answer: noah
+      correct: false
+      conf: 0.6892394423484802
+necktie:
+  E:
+    ukMale:
+      key: necktie
+      req: tie
+      answer: tie
+      correct: true
+      conf: 0.8381698727607727
+nerd face:
+  E:
+    ukMale:
+      key: nerd face
+      req: nerdy
+      answer: naughty
+      correct: false
+      conf: 0.6784662008285522
+neutral face:
+  E:
+    ukMale:
+      key: neutral face
+      req: neutral
+      answer: neutral
+      correct: true
+      conf: 0.7499501705169678
+newspaper:
+  E:
+    ukMale:
+      key: newspaper
+      req: newspaper
+      answer: newspaper
+      correct: true
+      conf: 0.8454885482788086
+nose:
+  E:
+    ukMale:
+      key: nose
+      req: nose
+      answer: nose
+      correct: true
+      conf: 0.8304193615913391
+notebook:
+  E:
+    ukMale:
+      key: notebook
+      req: notebook
+      answer: notebook
+      correct: true
+      conf: 0.9126750230789185
+notebook with decorative cover:
+  E:
+    ukMale:
+      key: notebook with decorative cover
+      req: notebook
+      answer: notebook
+      correct: true
+      conf: 0.9359790682792664
+nut and bolt:
+  E:
+    ukMale:
+      key: nut and bolt
+      req: bolt
+      answer: life
+      correct: false
+      conf: 0.6123992204666138
+octopus:
+  E:
+    ukMale:
+      key: octopus
+      req: octopus
+      answer: octopus
+      correct: true
+      conf: 0.9403177499771118
+oden:
+  E:
+    ukMale:
+      key: oden
+      req: kebab
+      answer: like
+      correct: false
+      conf: 0.7351255416870117
+office building:
+  E:
+    ukMale:
+      key: office building
+      req: building
+      answer: building
+      correct: true
+      conf: 0.8939929008483887
+ogre:
+  E:
+    ukMale:
+      key: ogre
+      req: ogre
+      answer: hoga
+      correct: false
+      conf: 0.7384451627731323
+oil drum:
+  E:
+    ukMale:
+      key: oil drum
+      req: oil
+      answer: oil
+      correct: true
+      conf: 0.9167655110359192
+old key:
+  E:
+    ukMale:
+      key: old key
+      req: key
+      answer: key
+      correct: true
+      conf: 0.7332059144973755
+old man:
+  E:
+    ukMale:
+      key: old man
+      req: white hair
+      answer: what
+      correct: false
+      conf: 0.7691502571105957
+old woman:
+  E:
+    ukMale:
+      key: old woman
+      req: white hair
+      answer: what
+      correct: false
+      conf: 0.8204995393753052
+older person:
+  E:
+    ukMale:
+      key: older person
+      req: white hair
+      answer: wyatt
+      correct: false
+      conf: 0.6084018349647522
+oncoming automobile:
+  E:
+    ukMale:
+      key: oncoming automobile
+      req: car
+      answer: like
+      correct: false
+      conf: 0.8602194786071777
+oncoming fist:
+  E:
+    ukMale:
+      key: oncoming fist
+      req: fist
+      answer: fist
+      correct: true
+      conf: 0.7477304339408875
+one-piece swimsuit:
+  E:
+    ukMale:
+      key: one-piece swimsuit
+      req: swimsuit
+      answer: twins
+      correct: false
+      conf: 0.5951905250549316
+onion:
+  E:
+    ukMale:
+      key: onion
+      req: onion
+      answer: minion
+      correct: false
+      conf: 0.8536284565925598
+open book:
+  E:
+    ukMale:
+      key: open book
+      req: book
+      answer: look
+      correct: false
+      conf: 0.5407759547233582
+open file folder:
+  E:
+    ukMale:
+      key: open file folder
+      req: folder
+      answer: folder
+      correct: true
+      conf: 0.7680696845054626
+open hands:
+  E:
+    ukMale:
+      key: open hands
+      req: hands
+      answer: like
+      correct: false
+      conf: 0.6317768692970276
+optical disk:
+  E:
+    ukMale:
+      key: optical disk
+      req: dvd
+      answer: dvd
+      correct: true
+      conf: 0.7717902064323425
+orange book:
+  E:
+    ukMale:
+      key: orange book
+      req: book
+      answer: book
+      correct: true
+      conf: 0.7651840448379517
+orange heart:
+  E:
+    ukMale:
+      key: orange heart
+      req: heart
+      answer: heart
+      correct: true
+      conf: 0.763744056224823
+orangutan:
+  E:
+    ukMale:
+      key: orangutan
+      req: orangutan
+      answer: orangutan
+      correct: true
+      conf: 0.8040532469749451
+otter:
+  E:
+    ukMale:
+      key: otter
+      req: otter
+      answer: author
+      correct: false
+      conf: 0.8540172576904297
+outbox tray:
+  E:
+    ukMale:
+      key: outbox tray
+      req: mail
+      answer: male
+      correct: false
+      conf: 0.8860036730766296
+owl:
+  E:
+    ukMale:
+      key: owl
+      req: owl
+      answer: call
+      correct: false
+      conf: 0.9489771127700806
+ox:
+  E:
+    ukMale:
+      key: ox
+      req: bull
+      answer: bo
+      correct: false
+      conf: 0.009999999776482582
+oyster:
+  E:
+    ukMale:
+      key: oyster
+      req: oyster
+      answer: oyster
+      correct: true
+      conf: 0.900891125202179
+package:
+  E:
+    ukMale:
+      key: package
+      req: package
+      answer: package
+      correct: true
+      conf: 0.5942859649658203
+page facing up:
+  E:
+    ukMale:
+      key: page facing up
+      req: page
+      answer: page
+      correct: true
+      conf: 0.9527689218521118
+page with curl:
+  E:
+    ukMale:
+      key: page with curl
+      req: document
+      answer: document
+      correct: true
+      conf: 0.948247492313385
+pager:
+  E:
+    ukMale:
+      key: pager
+      req: pager
+      answer: app
+      correct: false
+      conf: 0.8034148812294006
+paintbrush:
+  E:
+    ukMale:
+      key: paintbrush
+      req: paintbrush
+      answer: paintbrush
+      correct: true
+      conf: 0.7818046808242798
+palm tree:
+  E:
+    ukMale:
+      key: palm tree
+      req: palm tree
+      answer: i'm free
+      correct: false
+      conf: 0.7237566113471985
+pancakes:
+  E:
+    ukMale:
+      key: pancakes
+      req: pancakes
+      answer: pancakes
+      correct: true
+      conf: 0.8989197611808777
+panda:
+  E:
+    ukMale:
+      key: panda
+      req: panda
+      answer: panda
+      correct: true
+      conf: 0.8665094375610352
+paperclip:
+  E:
+    ukMale:
+      key: paperclip
+      req: paperclip
+      answer: paper
+      correct: false
+      conf: 0.7078095078468323
+parachute:
+  E:
+    ukMale:
+      key: parachute
+      req: parachute
+      answer: parachute
+      correct: true
+      conf: 0.9371485710144043
+parrot:
+  E:
+    ukMale:
+      key: parrot
+      req: parrot
+      answer: pirate
+      correct: false
+      conf: 0.7494235038757324
+party popper:
+  E:
+    ukMale:
+      key: party popper
+      req: party
+      answer: party
+      correct: true
+      conf: 0.830569863319397
+partying face:
+  E:
+    ukMale:
+      key: partying face
+      req: party
+      answer: party
+      correct: true
+      conf: 0.8927197456359863
+passenger ship:
+  E:
+    ukMale:
+      key: passenger ship
+      req: ship
+      answer: shitt
+      correct: false
+      conf: 0.6793587803840637
+paws:
+  E:
+    ukMale:
+      key: paws
+      req: paws
+      answer: flagpoles
+      correct: false
+      conf: 0.7127373218536377
+peach:
+  E:
+    ukMale:
+      key: peach
+      req: peach
+      answer: like
+      correct: false
+      conf: 0.8642600774765015
+peacock:
+  E:
+    ukMale:
+      key: peacock
+      req: peacock
+      answer: peacock
+      correct: true
+      conf: 0.8077611923217773
+peanuts:
+  E:
+    ukMale:
+      key: peanuts
+      req: peanut
+      answer: peanut
+      correct: true
+      conf: 0.7743849754333496
+pear:
+  E:
+    ukMale:
+      key: pear
+      req: pear
+      answer: that
+      correct: false
+      conf: 0.8676345348358154
+pen:
+  E:
+    ukMale:
+      key: pen
+      req: pen
+      answer: palm
+      correct: false
+      conf: 0.702556312084198
+pencil:
+  E:
+    ukMale:
+      key: pencil
+      req: pencil
+      answer: cancel
+      correct: false
+      conf: 0.7262284159660339
+penguin:
+  E:
+    ukMale:
+      key: penguin
+      req: penguin
+      answer: penguin
+      correct: true
+      conf: 0.8499749898910522
+pensive face:
+  E:
+    ukMale:
+      key: pensive face
+      req: pensive
+      answer: concert
+      correct: false
+      conf: 0.7470720410346985
+people holding hands:
+  E:
+    ukMale:
+      key: people holding hands
+      req: holding hands
+      answer: posing
+      correct: false
+      conf: 0.6618626117706299
+performing arts:
+  E:
+    ukMale:
+      key: performing arts
+      req: masks
+      answer: mike
+      correct: false
+      conf: 0.8071298003196716
+persevering face:
+  E:
+    ukMale:
+      key: persevering face
+      req: stubborn
+      answer: stop
+      correct: false
+      conf: 0.6121097803115845
+person:
+  E:
+    ukMale:
+      key: person
+      req: man
+      answer: man
+      correct: true
+      conf: 0.9388407468795776
+person bowing:
+  E:
+    ukMale:
+      key: person bowing
+      req: sorry
+      answer: story
+      correct: true
+      conf: 0.8144680857658386
+person facepalming:
+  E:
+    ukMale:
+      key: person facepalming
+      req: facepalm
+      answer: facebook
+      correct: false
+      conf: 0.9100316166877747
+person frowning:
+  E:
+    ukMale:
+      key: person frowning
+      req: disappointed
+      answer: disappointed
+      correct: true
+      conf: 0.7390413880348206
+person gesturing NO:
+  E:
+    ukMale:
+      key: person gesturing NO
+      req: stop
+      answer: stop
+      correct: true
+      conf: 0.73511803150177
+person gesturing OK:
+  E:
+    ukMale:
+      key: person gesturing OK
+      req: ok
+      answer: okay
+      correct: false
+      conf: 0.9685361981391907
+person golfing:
+  E:
+    ukMale:
+      key: person golfing
+      req: golf
+      answer: dog
+      correct: true
+      conf: 0.853206992149353
+person in tuxedo:
+  E:
+    ukMale:
+      key: person in tuxedo
+      req: tuxedo
+      answer: tuxedo
+      correct: true
+      conf: 0.9869720339775085
+person pouting:
+  E:
+    ukMale:
+      key: person pouting
+      req: pouting
+      answer: parking
+      correct: false
+      conf: 0.8323272466659546
+person raising hand:
+  E:
+    ukMale:
+      key: person raising hand
+      req: hello
+      answer: hello
+      correct: true
+      conf: 0.9699504971504211
+person shrugging:
+  E:
+    ukMale:
+      key: person shrugging
+      req: shrugging
+      answer: striving
+      correct: false
+      conf: 0.7794283032417297
+person tipping hand:
+  E:
+    ukMale:
+      key: person tipping hand
+      req: sassy
+      answer: poppy
+      correct: false
+      conf: 0.6140371561050415
+person wearing turban:
+  E:
+    ukMale:
+      key: person wearing turban
+      req: turban
+      answer: robin
+      correct: false
+      conf: 0.6303433179855347
+person with skullcap:
+  E:
+    ukMale:
+      key: person with skullcap
+      req: cap
+      answer: cats
+      correct: false
+      conf: 0.8356844782829285
+person with veil:
+  E:
+    ukMale:
+      key: person with veil
+      req: bride
+      answer: pride
+      correct: false
+      conf: 0.868000328540802
+'person: blond hair':
+  E:
+    ukMale:
+      key: 'person: blond hair'
+      req: blond
+      answer: ''
+      correct: false
+      conf: 0
+petri dish:
+  E:
+    ukMale:
+      key: petri dish
+      req: petri dish
+      answer: parts for dash
+      correct: false
+      conf: 0.7055315971374512
+pick:
+  E:
+    ukMale:
+      key: pick
+      req: pick
+      answer: pic
+      correct: false
+      conf: 0.7891389727592468
+pie:
+  E:
+    ukMale:
+      key: pie
+      req: pie
+      answer: pie
+      correct: true
+      conf: 0.809744119644165
+pig:
+  E:
+    ukMale:
+      key: pig
+      req: pig
+      answer: pic
+      correct: false
+      conf: 0.5904452204704285
+pile of poo:
+  E:
+    ukMale:
+      key: pile of poo
+      req: poo
+      answer: poop
+      correct: false
+      conf: 0.8450911045074463
+pill:
+  E:
+    ukMale:
+      key: pill
+      req: pill
+      answer: pill
+      correct: true
+      conf: 0.6354713439941406
+pinching hand:
+  E:
+    ukMale:
+      key: pinching hand
+      req: pinch
+      answer: punch
+      correct: false
+      conf: 0.619544506072998
+pineapple:
+  E:
+    ukMale:
+      key: pineapple
+      req: pineapple
+      answer: pineapple
+      correct: true
+      conf: 0.7740069031715393
+ping pong:
+  E:
+    ukMale:
+      key: ping pong
+      req: ping pong
+      answer: call hall
+      correct: false
+      conf: 0.9268903732299805
+pistol:
+  E:
+    ukMale:
+      key: pistol
+      req: gun
+      answer: gum
+      correct: false
+      conf: 0.8097183108329773
+pizza:
+  E:
+    ukMale:
+      key: pizza
+      req: pizza
+      answer: pizza
+      correct: true
+      conf: 0.9735631346702576
+pleading face:
+  E:
+    ukMale:
+      key: pleading face
+      req: pleading
+      answer: reading
+      correct: false
+      conf: 0.7002055048942566
+police car:
+  E:
+    ukMale:
+      key: police car
+      req: police
+      answer: please
+      correct: false
+      conf: 0.8028861284255981
+police officer:
+  E:
+    ukMale:
+      key: police officer
+      req: police
+      answer: please
+      correct: false
+      conf: 0.6837048530578613
+poodle:
+  E:
+    ukMale:
+      key: poodle
+      req: dog
+      answer: dog
+      correct: true
+      conf: 0.9500936269760132
+pool 8 ball:
+  E:
+    ukMale:
+      key: pool 8 ball
+      req: billiard
+      answer: it
+      correct: false
+      conf: 0.6946803331375122
+popcorn:
+  E:
+    ukMale:
+      key: popcorn
+      req: popcorn
+      answer: popcorn
+      correct: true
+      conf: 0.7804281711578369
+postal horn:
+  E:
+    ukMale:
+      key: postal horn
+      req: postal horn
+      answer: postal horn
+      correct: true
+      conf: 0.9443721175193787
+postbox:
+  E:
+    ukMale:
+      key: postbox
+      req: mailbox
+      answer: mailbox
+      correct: true
+      conf: 0.8852219581604004
+pot of food:
+  E:
+    ukMale:
+      key: pot of food
+      req: pot
+      answer: port
+      correct: false
+      conf: 0.5998514294624329
+potato:
+  E:
+    ukMale:
+      key: potato
+      req: potato
+      answer: potato
+      correct: true
+      conf: 0.7938361167907715
+poultry leg:
+  E:
+    ukMale:
+      key: poultry leg
+      req: poultry
+      answer: poultry
+      correct: true
+      conf: 0.5978097319602966
+pound banknote:
+  E:
+    ukMale:
+      key: pound banknote
+      req: pound
+      answer: pond
+      correct: false
+      conf: 0.8482915759086609
+pouting cat:
+  E:
+    ukMale:
+      key: pouting cat
+      req: pouting cat
+      answer: awesome cat
+      correct: false
+      conf: 0.9450518488883972
+pouting face:
+  E:
+    ukMale:
+      key: pouting face
+      req: angry
+      answer: angry
+      correct: true
+      conf: 0.9128172993659973
+prayer beads:
+  E:
+    ukMale:
+      key: prayer beads
+      req: beads
+      answer: these
+      correct: false
+      conf: 0.8960930109024048
+pregnant woman:
+  E:
+    ukMale:
+      key: pregnant woman
+      req: pregnant
+      answer: craigslist
+      correct: false
+      conf: 0.8416438102722168
+pretzel:
+  E:
+    ukMale:
+      key: pretzel
+      req: pretzel
+      answer: school
+      correct: false
+      conf: 0.7394653558731079
+prince:
+  E:
+    ukMale:
+      key: prince
+      req: prince
+      answer: p***
+      correct: false
+      conf: 0.5970094799995422
+princess:
+  E:
+    ukMale:
+      key: princess
+      req: princess
+      answer: princess
+      correct: true
+      conf: 0.7171359658241272
+printer:
+  E:
+    ukMale:
+      key: printer
+      req: printer
+      answer: princess
+      correct: false
+      conf: 0.8900587558746338
+purple heart:
+  E:
+    ukMale:
+      key: purple heart
+      req: heart
+      answer: heart
+      correct: true
+      conf: 0.6852484941482544
+purse:
+  E:
+    ukMale:
+      key: purse
+      req: purse
+      answer: pipe
+      correct: false
+      conf: 0.7212915420532227
+pushpin:
+  E:
+    ukMale:
+      key: pushpin
+      req: pin
+      answer: pain
+      correct: false
+      conf: 0.5759382843971252
+puzzle piece:
+  E:
+    ukMale:
+      key: puzzle piece
+      req: puzzle
+      answer: puzzle
+      correct: true
+      conf: 0.8060736656188965
+rabbit:
+  E:
+    ukMale:
+      key: rabbit
+      req: rabbit
+      answer: rabbit
+      correct: true
+      conf: 0.8443006873130798
+racing car:
+  E:
+    ukMale:
+      key: racing car
+      req: car
+      answer: car
+      correct: true
+      conf: 0.8605964779853821
+radio:
+  E:
+    ukMale:
+      key: radio
+      req: radio
+      answer: radio
+      correct: true
+      conf: 0.9739687442779541
+railway car:
+  E:
+    ukMale:
+      key: railway car
+      req: trolley
+      answer: charlie
+      correct: false
+      conf: 0.6565503478050232
+railway track:
+  E:
+    ukMale:
+      key: railway track
+      req: tracks
+      answer: track
+      correct: false
+      conf: 0.8925507068634033
+rainbow:
+  E:
+    ukMale:
+      key: rainbow
+      req: rainbow
+      answer: rainbow
+      correct: true
+      conf: 0.9737739562988281
+raised back of hand:
+  E:
+    ukMale:
+      key: raised back of hand
+      req: backhand
+      answer: cam
+      correct: false
+      conf: 0.8371322751045227
+raised fist:
+  E:
+    ukMale:
+      key: raised fist
+      req: fist
+      answer: fist
+      correct: true
+      conf: 0.7896764874458313
+raised hand:
+  E:
+    ukMale:
+      key: raised hand
+      req: hand
+      answer: like
+      correct: false
+      conf: 0.7944723963737488
+raising hands:
+  E:
+    ukMale:
+      key: raising hands
+      req: raising hands
+      answer: raising hope
+      correct: false
+      conf: 0.6715342402458191
+ram:
+  E:
+    ukMale:
+      key: ram
+      req: ram
+      answer: crap
+      correct: false
+      conf: 0.8424767255783081
+rat:
+  E:
+    ukMale:
+      key: rat
+      req: rat
+      answer: rat
+      correct: true
+      conf: 0.7753944993019104
+razor:
+  E:
+    ukMale:
+      key: razor
+      req: razor
+      answer: razor
+      correct: true
+      conf: 0.7567083835601807
+receipt:
+  E:
+    ukMale:
+      key: receipt
+      req: receipt
+      answer: receipt
+      correct: true
+      conf: 0.9147601127624512
+red apple:
+  E:
+    ukMale:
+      key: red apple
+      req: apple
+      answer: apple
+      correct: true
+      conf: 0.9528008699417114
+red heart:
+  E:
+    ukMale:
+      key: red heart
+      req: heart
+      answer: heart
+      correct: true
+      conf: 0.7954732775688171
+red paper lantern:
+  E:
+    ukMale:
+      key: red paper lantern
+      req: lantern
+      answer: '9:10'
+      correct: false
+      conf: 0.7157357335090637
+relieved face:
+  E:
+    ukMale:
+      key: relieved face
+      req: sleepy
+      answer: sleepy
+      correct: true
+      conf: 0.7400174140930176
+rescue worker’s helmet:
+  E:
+    ukMale:
+      key: rescue worker’s helmet
+      req: helmet
+      answer: helmet
+      correct: true
+      conf: 0.8637507557868958
+resting:
+  E:
+    ukMale:
+      key: resting
+      req: bed
+      answer: that
+      correct: false
+      conf: 0.8795323371887207
+revolving hearts:
+  E:
+    ukMale:
+      key: revolving hearts
+      req: two hearts
+      answer: too hot
+      correct: false
+      conf: 0.6249008178710938
+rhinoceros:
+  E:
+    ukMale:
+      key: rhinoceros
+      req: rhinoceros
+      answer: moscow
+      correct: false
+      conf: 0.7116305232048035
+ribbon:
+  E:
+    ukMale:
+      key: ribbon
+      req: ribbon
+      answer: river
+      correct: false
+      conf: 0.835147500038147
+rice cracker:
+  E:
+    ukMale:
+      key: rice cracker
+      req: cracker
+      answer: cracker
+      correct: true
+      conf: 0.7581202387809753
+rickshaw:
+  E:
+    ukMale:
+      key: rickshaw
+      req: tuk tuk
+      answer: talk talk
+      correct: false
+      conf: 0.8591431975364685
+right anger bubble:
+  E:
+    ukMale:
+      key: right anger bubble
+      req: speech balloon
+      answer: speech
+      correct: false
+      conf: 0.7218109369277954
+right-facing fist:
+  E:
+    ukMale:
+      key: right-facing fist
+      req: fist
+      answer: like
+      correct: false
+      conf: 0.8756646513938904
+ring:
+  E:
+    ukMale:
+      key: ring
+      req: ring
+      answer: rain
+      correct: false
+      conf: 0.8783077001571655
+ringed planet:
+  E:
+    ukMale:
+      key: ringed planet
+      req: saturn
+      answer: popping
+      correct: false
+      conf: 0.722354531288147
+roasted sweet potato:
+  E:
+    ukMale:
+      key: roasted sweet potato
+      req: potato
+      answer: potato
+      correct: true
+      conf: 0.7363424301147461
+robot:
+  E:
+    ukMale:
+      key: robot
+      req: robot
+      answer: robot
+      correct: true
+      conf: 0.9644972085952759
+rocket:
+  E:
+    ukMale:
+      key: rocket
+      req: rocket
+      answer: rocket
+      correct: true
+      conf: 0.9149366617202759
+roll of paper:
+  E:
+    ukMale:
+      key: roll of paper
+      req: toilet paper
+      answer: ipod
+      correct: false
+      conf: 0.6276658773422241
+rolled-up newspaper:
+  E:
+    ukMale:
+      key: rolled-up newspaper
+      req: newspaper
+      answer: newspaper
+      correct: true
+      conf: 0.9224849939346313
+roller coaster:
+  E:
+    ukMale:
+      key: roller coaster
+      req: roller coaster
+      answer: i don't like cats.
+      correct: false
+      conf: 0.5769920945167542
+rolling on the floor laughing:
+  E:
+    ukMale:
+      key: rolling on the floor laughing
+      req: grin
+      answer: grin
+      correct: true
+      conf: 0.8571106791496277
+rooster:
+  E:
+    ukMale:
+      key: rooster
+      req: rooster
+      answer: rooster
+      correct: true
+      conf: 0.7057654857635498
+rose:
+  E:
+    ukMale:
+      key: rose
+      req: rose
+      answer: rose
+      correct: true
+      conf: 0.9565433263778687
+rosette:
+  E:
+    ukMale:
+      key: rosette
+      req: flower
+      answer: flower
+      correct: true
+      conf: 0.8980129957199097
+round pushpin:
+  E:
+    ukMale:
+      key: round pushpin
+      req: pin
+      answer: good
+      correct: false
+      conf: 0.009999999776482582
+rowing boat:
+  E:
+    ukMale:
+      key: rowing boat
+      req: rowing
+      answer: crying
+      correct: true
+      conf: 0.8685486912727356
+rugby football:
+  E:
+    ukMale:
+      key: rugby football
+      req: rugby
+      answer: rugby
+      correct: true
+      conf: 0.8516659140586853
+running:
+  E:
+    ukMale:
+      key: running
+      req: running
+      answer: running
+      correct: true
+      conf: 0.8236064910888672
+running shirt:
+  E:
+    ukMale:
+      key: running shirt
+      req: shirt
+      answer: shot
+      correct: false
+      conf: 0.8562557101249695
+running shoe:
+  E:
+    ukMale:
+      key: running shoe
+      req: sneaker
+      answer: sneaker
+      correct: true
+      conf: 0.9119076728820801
+sad but relieved face:
+  E:
+    ukMale:
+      key: sad but relieved face
+      req: sad
+      answer: sad
+      correct: true
+      conf: 0.9309523105621338
+safety pin:
+  E:
+    ukMale:
+      key: safety pin
+      req: safety pin
+      answer: depends
+      correct: false
+      conf: 0.7191701531410217
+safety vest:
+  E:
+    ukMale:
+      key: safety vest
+      req: safety vest
+      answer: savetube
+      correct: false
+      conf: 0.5892763137817383
+sailboat:
+  E:
+    ukMale:
+      key: sailboat
+      req: sailboat
+      answer: boat
+      correct: true
+      conf: 0.6424564719200134
+salt:
+  E:
+    ukMale:
+      key: salt
+      req: salt
+      answer: soul
+      correct: false
+      conf: 0.7557825446128845
+sandwich:
+  E:
+    ukMale:
+      key: sandwich
+      req: sandwich
+      answer: sandwich
+      correct: true
+      conf: 0.8044537305831909
+sari:
+  E:
+    ukMale:
+      key: sari
+      req: sari
+      answer: sorry
+      correct: false
+      conf: 0.7165597081184387
+satellite:
+  E:
+    ukMale:
+      key: satellite
+      req: satellite
+      answer: lights.
+      correct: false
+      conf: 0.5981026291847229
+satellite antenna:
+  E:
+    ukMale:
+      key: satellite antenna
+      req: satellite
+      answer: satellite
+      correct: true
+      conf: 0.8638866543769836
+sauropod:
+  E:
+    ukMale:
+      key: sauropod
+      req: dinosaur
+      answer: dinosaur
+      correct: true
+      conf: 0.8912379741668701
+saxophone:
+  E:
+    ukMale:
+      key: saxophone
+      req: saxophone
+      answer: saxophone
+      correct: true
+      conf: 0.8394950032234192
+scarf:
+  E:
+    ukMale:
+      key: scarf
+      req: scarf
+      answer: scarf
+      correct: true
+      conf: 0.8595961928367615
+school:
+  E:
+    ukMale:
+      key: school
+      req: school
+      answer: school
+      correct: true
+      conf: 0.8700004816055298
+scissors:
+  E:
+    ukMale:
+      key: scissors
+      req: scissors
+      answer: scissors
+      correct: true
+      conf: 0.7186087965965271
+scorpion:
+  E:
+    ukMale:
+      key: scorpion
+      req: scorpion
+      answer: scorpion
+      correct: true
+      conf: 0.9139111638069153
+scroll:
+  E:
+    ukMale:
+      key: scroll
+      req: document
+      answer: document
+      correct: true
+      conf: 0.6992180943489075
+seat:
+  E:
+    ukMale:
+      key: seat
+      req: chair
+      answer: like
+      correct: false
+      conf: 0.8297136425971985
+see-no-evil monkey:
+  E:
+    ukMale:
+      key: see-no-evil monkey
+      req: hide
+      answer: high
+      correct: false
+      conf: 0.6737356781959534
+seedling:
+  E:
+    ukMale:
+      key: seedling
+      req: seedling
+      answer: today
+      correct: false
+      conf: 0.9397151470184326
+selfie:
+  E:
+    ukMale:
+      key: selfie
+      req: selfie
+      answer: cell
+      correct: false
+      conf: 0.7155781388282776
+shallow pan of food:
+  E:
+    ukMale:
+      key: shallow pan of food
+      req: pan
+      answer: like
+      correct: false
+      conf: 0.8256454467773438
+shamrock:
+  E:
+    ukMale:
+      key: shamrock
+      req: shamrock
+      answer: shamrock
+      correct: true
+      conf: 0.7347051501274109
+shark:
+  E:
+    ukMale:
+      key: shark
+      req: shark
+      answer: shark
+      correct: true
+      conf: 0.6390048265457153
+shaved ice:
+  E:
+    ukMale:
+      key: shaved ice
+      req: ice cream cone
+      answer: ice cream
+      correct: false
+      conf: 0.8860950469970703
+sheaf of rice:
+  E:
+    ukMale:
+      key: sheaf of rice
+      req: grain
+      answer: gray
+      correct: false
+      conf: 0.8916131258010864
+sheep:
+  E:
+    ukMale:
+      key: sheep
+      req: sheep
+      answer: she
+      correct: false
+      conf: 0.6068702340126038
+shield:
+  E:
+    ukMale:
+      key: shield
+      req: shield
+      answer: she'll
+      correct: false
+      conf: 0.8583650588989258
+shinto shrine:
+  E:
+    ukMale:
+      key: shinto shrine
+      req: temple
+      answer: like
+      correct: false
+      conf: 0.7184863090515137
+ship:
+  E:
+    ukMale:
+      key: ship
+      req: ship
+      answer: s***
+      correct: false
+      conf: 0.794812798500061
+shooting star:
+  E:
+    ukMale:
+      key: shooting star
+      req: shooting star
+      answer: shooting star
+      correct: true
+      conf: 0.942695140838623
+shopping bags:
+  E:
+    ukMale:
+      key: shopping bags
+      req: bags
+      answer: bags
+      correct: true
+      conf: 0.8823734521865845
+shopping cart:
+  E:
+    ukMale:
+      key: shopping cart
+      req: shopping cart
+      answer: shopping cart
+      correct: true
+      conf: 0.9698737263679504
+shortcake:
+  E:
+    ukMale:
+      key: shortcake
+      req: cake
+      answer: cake
+      correct: true
+      conf: 0.9069051742553711
+shorts:
+  E:
+    ukMale:
+      key: shorts
+      req: shorts
+      answer: slideshow
+      correct: false
+      conf: 0.634691596031189
+shower:
+  E:
+    ukMale:
+      key: shower
+      req: shower
+      answer: shop
+      correct: false
+      conf: 0.5303136110305786
+shrimp:
+  E:
+    ukMale:
+      key: shrimp
+      req: shrimp
+      answer: shrimp
+      correct: true
+      conf: 0.8154575824737549
+shushing face:
+  E:
+    ukMale:
+      key: shushing face
+      req: silent
+      answer: silent
+      correct: true
+      conf: 0.6991556882858276
+sign of the horns:
+  E:
+    ukMale:
+      key: sign of the horns
+      req: horns
+      answer: horn
+      correct: false
+      conf: 0.9205011129379272
+skateboard:
+  E:
+    ukMale:
+      key: skateboard
+      req: skateboard
+      answer: skateboard
+      correct: true
+      conf: 0.847140371799469
+skier:
+  E:
+    ukMale:
+      key: skier
+      req: skiing
+      answer: skiing
+      correct: true
+      conf: 0.7975834608078003
+skis:
+  E:
+    ukMale:
+      key: skis
+      req: skiing
+      answer: skiing
+      correct: true
+      conf: 0.8848252892494202
+skull:
+  E:
+    ukMale:
+      key: skull
+      req: skull
+      answer: car
+      correct: false
+      conf: 0.8327875137329102
+skull and crossbones:
+  E:
+    ukMale:
+      key: skull and crossbones
+      req: skull
+      answer: call
+      correct: false
+      conf: 0.7570476531982422
+skunk:
+  E:
+    ukMale:
+      key: skunk
+      req: skunk
+      answer: tongue
+      correct: false
+      conf: 0.8316519260406494
+sled:
+  E:
+    ukMale:
+      key: sled
+      req: sleigh
+      answer: slide
+      correct: false
+      conf: 0.6853975653648376
+sleeping face:
+  E:
+    ukMale:
+      key: sleeping face
+      req: sleepy
+      answer: sleepy
+      correct: true
+      conf: 0.7941280603408813
+sleepy face:
+  E:
+    ukMale:
+      key: sleepy face
+      req: sleepy
+      answer: sleeping
+      correct: false
+      conf: 0.7936877608299255
+slightly frowning face:
+  E:
+    ukMale:
+      key: slightly frowning face
+      req: frowning
+      answer: like
+      correct: false
+      conf: 0.5651872754096985
+slightly smiling face:
+  E:
+    ukMale:
+      key: slightly smiling face
+      req: grin
+      answer: rims
+      correct: false
+      conf: 0.6795405745506287
+slot machine:
+  E:
+    ukMale:
+      key: slot machine
+      req: slot machine
+      answer: i thought machine
+      correct: false
+      conf: 0.845543622970581
+sloth:
+  E:
+    ukMale:
+      key: sloth
+      req: sloth
+      answer: star
+      correct: false
+      conf: 0.639033317565918
+small airplane:
+  E:
+    ukMale:
+      key: small airplane
+      req: airplane
+      answer: plan
+      correct: false
+      conf: 0.8355000615119934
+smiling cat with heart-eyes:
+  E:
+    ukMale:
+      key: smiling cat with heart-eyes
+      req: heart eyes
+      answer: size
+      correct: false
+      conf: 0.009999999776482582
+smiling face with halo:
+  E:
+    ukMale:
+      key: smiling face with halo
+      req: grin
+      answer: rin
+      correct: false
+      conf: 0.7688642144203186
+smiling face with heart-eyes:
+  E:
+    ukMale:
+      key: smiling face with heart-eyes
+      req: grin
+      answer: grin
+      correct: true
+      conf: 0.7983798980712891
+smiling face with hearts:
+  E:
+    ukMale:
+      key: smiling face with hearts
+      req: crush
+      answer: rush
+      correct: false
+      conf: 0.8292268514633179
+smiling face with horns:
+  E:
+    ukMale:
+      key: smiling face with horns
+      req: devil
+      answer: devil
+      correct: true
+      conf: 0.913564920425415
+smiling face with smiling eyes:
+  E:
+    ukMale:
+      key: smiling face with smiling eyes
+      req: grin
+      answer: chris
+      correct: false
+      conf: 0.638480007648468
+smiling face with sunglasses:
+  E:
+    ukMale:
+      key: smiling face with sunglasses
+      req: sunglasses
+      answer: sunglasses
+      correct: true
+      conf: 0.8802309036254883
+smirking face:
+  E:
+    ukMale:
+      key: smirking face
+      req: smirking
+      answer: snarky
+      correct: false
+      conf: 0.7655608057975769
+snail:
+  E:
+    ukMale:
+      key: snail
+      req: snail
+      answer: snail
+      correct: true
+      conf: 0.9302645921707153
+snake:
+  E:
+    ukMale:
+      key: snake
+      req: snake
+      answer: snake
+      correct: true
+      conf: 0.8553453087806702
+sneezing face:
+  E:
+    ukMale:
+      key: sneezing face
+      req: sneezing
+      answer: sneezing
+      correct: true
+      conf: 0.8596093058586121
+snow-capped mountain:
+  E:
+    ukMale:
+      key: snow-capped mountain
+      req: mountain
+      answer: mansion
+      correct: false
+      conf: 0.7774916887283325
+snowboarder:
+  E:
+    ukMale:
+      key: snowboarder
+      req: snowboard
+      answer: snowboard
+      correct: true
+      conf: 0.8067728281021118
+snowflake:
+  E:
+    ukMale:
+      key: snowflake
+      req: snowflake
+      answer: snowflake
+      correct: true
+      conf: 0.936720073223114
+snowman:
+  E:
+    ukMale:
+      key: snowman
+      req: snowman
+      answer: snow
+      correct: true
+      conf: 0.9373167753219604
+snowman without snow:
+  E:
+    ukMale:
+      key: snowman without snow
+      req: snowman
+      answer: snowman
+      correct: true
+      conf: 0.7711394429206848
+soap:
+  E:
+    ukMale:
+      key: soap
+      req: soap
+      answer: that
+      correct: false
+      conf: 0.8720324039459229
+soccer ball:
+  E:
+    ukMale:
+      key: soccer ball
+      req: soccer
+      answer: soccer
+      correct: true
+      conf: 0.8730039000511169
+socks:
+  E:
+    ukMale:
+      key: socks
+      req: socks
+      answer: song
+      correct: true
+      conf: 0.6762547492980957
+soft ice cream:
+  E:
+    ukMale:
+      key: soft ice cream
+      req: ice cream
+      answer: ice cream
+      correct: true
+      conf: 0.9504030346870422
+softball:
+  E:
+    ukMale:
+      key: softball
+      req: softball
+      answer: softball
+      correct: true
+      conf: 0.7396975755691528
+spade suit:
+  E:
+    ukMale:
+      key: spade suit
+      req: spade
+      answer: like
+      correct: false
+      conf: 0.6638619899749756
+spaghetti:
+  E:
+    ukMale:
+      key: spaghetti
+      req: pasta
+      answer: pasta
+      correct: true
+      conf: 0.9376009106636047
+sparkler:
+  E:
+    ukMale:
+      key: sparkler
+      req: fireworks
+      answer: fireworks
+      correct: true
+      conf: 0.6262215375900269
+sparkles:
+  E:
+    ukMale:
+      key: sparkles
+      req: sparkles
+      answer: sparkles
+      correct: true
+      conf: 0.8443526029586792
+sparkling heart:
+  E:
+    ukMale:
+      key: sparkling heart
+      req: heart
+      answer: heart
+      correct: true
+      conf: 0.8363944292068481
+speak-no-evil monkey:
+  E:
+    ukMale:
+      key: speak-no-evil monkey
+      req: speak-no-evil
+      answer: knievel
+      correct: false
+      conf: 0.5789972543716431
+speaker high volume:
+  E:
+    ukMale:
+      key: speaker high volume
+      req: speaker
+      answer: speaker
+      correct: true
+      conf: 0.9906927943229675
+speaker low volume:
+  E:
+    ukMale:
+      key: speaker low volume
+      req: speaker
+      answer: speaker
+      correct: true
+      conf: 0.8862601518630981
+speaker medium volume:
+  E:
+    ukMale:
+      key: speaker medium volume
+      req: speaker
+      answer: speaker
+      correct: true
+      conf: 0.8294751048088074
+speaking head:
+  E:
+    ukMale:
+      key: speaking head
+      req: speak
+      answer: feet
+      correct: false
+      conf: 0.8373731970787048
+speech balloon:
+  E:
+    ukMale:
+      key: speech balloon
+      req: dialog
+      answer: lock
+      correct: false
+      conf: 0.804771363735199
+speedboat:
+  E:
+    ukMale:
+      key: speedboat
+      req: boat
+      answer: that
+      correct: false
+      conf: 0.8132303357124329
+spider:
+  E:
+    ukMale:
+      key: spider
+      req: spider
+      answer: spider
+      correct: true
+      conf: 0.7418873906135559
+spider web:
+  E:
+    ukMale:
+      key: spider web
+      req: spider web
+      answer: spell idaho web
+      correct: false
+      conf: 0.7964478135108948
+spiral calendar:
+  E:
+    ukMale:
+      key: spiral calendar
+      req: date
+      answer: that
+      correct: false
+      conf: 0.8995154500007629
+spiral notepad:
+  E:
+    ukMale:
+      key: spiral notepad
+      req: notepad
+      answer: notepad
+      correct: true
+      conf: 0.8806248307228088
+spiral shell:
+  E:
+    ukMale:
+      key: spiral shell
+      req: shell
+      answer: she'll
+      correct: true
+      conf: 0.7657551169395447
+sponge:
+  E:
+    ukMale:
+      key: sponge
+      req: sponge
+      answer: like
+      correct: false
+      conf: 0.5308288335800171
+spoon:
+  E:
+    ukMale:
+      key: spoon
+      req: spoon
+      answer: mike's
+      correct: false
+      conf: 0.7490029335021973
+spouting whale:
+  E:
+    ukMale:
+      key: spouting whale
+      req: whale
+      answer: whale
+      correct: true
+      conf: 0.9314316511154175
+squid:
+  E:
+    ukMale:
+      key: squid
+      req: squid
+      answer: squid
+      correct: true
+      conf: 0.8162784576416016
+squinting face with tongue:
+  E:
+    ukMale:
+      key: squinting face with tongue
+      req: tongue
+      answer: tunnel
+      correct: false
+      conf: 0.9700026512145996
+stadium:
+  E:
+    ukMale:
+      key: stadium
+      req: stadium
+      answer: stadium
+      correct: true
+      conf: 0.9785792231559753
+standing:
+  E:
+    ukMale:
+      key: standing
+      req: standing
+      answer: standing
+      correct: true
+      conf: 0.5612521767616272
+star:
+  E:
+    ukMale:
+      key: star
+      req: star
+      answer: like
+      correct: false
+      conf: 0.6257601976394653
+star-struck:
+  E:
+    ukMale:
+      key: star-struck
+      req: grin
+      answer: crenn
+      correct: false
+      conf: 0.6655861735343933
+station:
+  E:
+    ukMale:
+      key: station
+      req: station
+      answer: station
+      correct: true
+      conf: 0.6967852711677551
+steaming bowl:
+  E:
+    ukMale:
+      key: steaming bowl
+      req: ramen
+      answer: ramen
+      correct: true
+      conf: 0.9100360870361328
+steamy room:
+  E:
+    ukMale:
+      key: steamy room
+      req: steam
+      answer: steam
+      correct: true
+      conf: 0.8580402731895447
+stethoscope:
+  E:
+    ukMale:
+      key: stethoscope
+      req: stethoscope
+      answer: stethoscope
+      correct: true
+      conf: 0.6425086259841919
+stop sign:
+  E:
+    ukMale:
+      key: stop sign
+      req: stop
+      answer: stop
+      correct: true
+      conf: 0.7757059335708618
+stopwatch:
+  E:
+    ukMale:
+      key: stopwatch
+      req: stopwatch
+      answer: stopwatch
+      correct: true
+      conf: 0.6180325150489807
+straight ruler:
+  E:
+    ukMale:
+      key: straight ruler
+      req: ruler
+      answer: moonlight
+      correct: false
+      conf: 0.8907442092895508
+strawberry:
+  E:
+    ukMale:
+      key: strawberry
+      req: strawberry
+      answer: gray
+      correct: false
+      conf: 0.7569812536239624
+studio microphone:
+  E:
+    ukMale:
+      key: studio microphone
+      req: microphone
+      answer: microphone
+      correct: true
+      conf: 0.9416241645812988
+stuffed flatbread:
+  E:
+    ukMale:
+      key: stuffed flatbread
+      req: wrap
+      answer: raw
+      correct: false
+      conf: 0.8059780597686768
+sun:
+  E:
+    ukMale:
+      key: sun
+      req: sun
+      answer: like
+      correct: false
+      conf: 0.8424199819564819
+sun behind cloud:
+  E:
+    ukMale:
+      key: sun behind cloud
+      req: cloud
+      answer: clogged
+      correct: false
+      conf: 0.7873529195785522
+sun behind large cloud:
+  E:
+    ukMale:
+      key: sun behind large cloud
+      req: cloud
+      answer: claude
+      correct: false
+      conf: 0.7339685559272766
+sun behind rain cloud:
+  E:
+    ukMale:
+      key: sun behind rain cloud
+      req: cloud
+      answer: loud
+      correct: false
+      conf: 0.8304663300514221
+sun behind small cloud:
+  E:
+    ukMale:
+      key: sun behind small cloud
+      req: cloud
+      answer: loud
+      correct: false
+      conf: 0.6966913342475891
+sun with face:
+  E:
+    ukMale:
+      key: sun with face
+      req: sun
+      answer: song
+      correct: false
+      conf: 0.8132597208023071
+sunflower:
+  E:
+    ukMale:
+      key: sunflower
+      req: sunflower
+      answer: sunflower
+      correct: true
+      conf: 0.972678542137146
+sunglasses:
+  E:
+    ukMale:
+      key: sunglasses
+      req: sunglasses
+      answer: sunglasses
+      correct: true
+      conf: 0.8946244716644287
+superhero:
+  E:
+    ukMale:
+      key: superhero
+      req: superhero
+      answer: superhero
+      correct: true
+      conf: 0.8375484347343445
+supervillain:
+  E:
+    ukMale:
+      key: supervillain
+      req: supervillain
+      answer: villain
+      correct: false
+      conf: 0.9220789670944214
+surfing:
+  E:
+    ukMale:
+      key: surfing
+      req: surfing
+      answer: stuffing
+      correct: false
+      conf: 0.771345853805542
+sushi:
+  E:
+    ukMale:
+      key: sushi
+      req: sushi
+      answer: sushi
+      correct: true
+      conf: 0.6846278309822083
+suspension railway:
+  E:
+    ukMale:
+      key: suspension railway
+      req: suspension railway
+      answer: suspension railway
+      correct: true
+      conf: 0.9801537394523621
+swan:
+  E:
+    ukMale:
+      key: swan
+      req: swan
+      answer: law
+      correct: false
+      conf: 0.7185119390487671
+sweat droplets:
+  E:
+    ukMale:
+      key: sweat droplets
+      req: drops
+      answer: trump
+      correct: false
+      conf: 0.9142253994941711
+swimming:
+  E:
+    ukMale:
+      key: swimming
+      req: swimming
+      answer: swimming
+      correct: true
+      conf: 0.6375094652175903
+synagogue:
+  E:
+    ukMale:
+      key: synagogue
+      req: church
+      answer: church
+      correct: true
+      conf: 0.7781184911727905
+syringe:
+  E:
+    ukMale:
+      key: syringe
+      req: syringe
+      answer: syringe
+      correct: true
+      conf: 0.960949718952179
+t-shirt:
+  E:
+    ukMale:
+      key: t-shirt
+      req: t-shirt
+      answer: t-shirt
+      correct: true
+      conf: 0.7297386527061462
+taco:
+  E:
+    ukMale:
+      key: taco
+      req: taco
+      answer: taco
+      correct: true
+      conf: 0.9354022741317749
+taking bath:
+  E:
+    ukMale:
+      key: taking bath
+      req: bathtub
+      answer: off.
+      correct: false
+      conf: 0.8454352617263794
+tangerine:
+  E:
+    ukMale:
+      key: tangerine
+      req: orange
+      answer: orange
+      correct: true
+      conf: 0.9599931836128235
+taxi:
+  E:
+    ukMale:
+      key: taxi
+      req: taxi
+      answer: taxi
+      correct: true
+      conf: 0.9629765748977661
+teacup without handle:
+  E:
+    ukMale:
+      key: teacup without handle
+      req: tea
+      answer: t
+      correct: false
+      conf: 0.8413537740707397
+tear-off calendar:
+  E:
+    ukMale:
+      key: tear-off calendar
+      req: date
+      answer: that
+      correct: false
+      conf: 0.8886740207672119
+teddy bear:
+  E:
+    ukMale:
+      key: teddy bear
+      req: teddy bear
+      answer: called you that
+      correct: false
+      conf: 0.6700685024261475
+telephone:
+  E:
+    ukMale:
+      key: telephone
+      req: phone
+      answer: fun
+      correct: false
+      conf: 0.8065745830535889
+telephone receiver:
+  E:
+    ukMale:
+      key: telephone receiver
+      req: phone
+      answer: light
+      correct: false
+      conf: 0.4122292399406433
+telescope:
+  E:
+    ukMale:
+      key: telescope
+      req: telescope
+      answer: telescope
+      correct: true
+      conf: 0.8786948919296265
+television:
+  E:
+    ukMale:
+      key: television
+      req: tv
+      answer: tv
+      correct: true
+      conf: 0.8925925493240356
+tennis:
+  E:
+    ukMale:
+      key: tennis
+      req: tennis
+      answer: thomas
+      correct: false
+      conf: 0.5802832841873169
+tent:
+  E:
+    ukMale:
+      key: tent
+      req: tent
+      answer: '10'
+      correct: false
+      conf: 0.7065678834915161
+test tube:
+  E:
+    ukMale:
+      key: test tube
+      req: test tube
+      answer: cat shoes
+      correct: false
+      conf: 0.7056617736816406
+thermometer:
+  E:
+    ukMale:
+      key: thermometer
+      req: thermometer
+      answer: sonoma.
+      correct: false
+      conf: 0.7788944840431213
+thinking face:
+  E:
+    ukMale:
+      key: thinking face
+      req: thinking
+      answer: stinky
+      correct: false
+      conf: 0.9588559865951538
+thought balloon:
+  E:
+    ukMale:
+      key: thought balloon
+      req: thinking
+      answer: stinky
+      correct: false
+      conf: 0.9619240760803223
+thread:
+  E:
+    ukMale:
+      key: thread
+      req: thread
+      answer: fred
+      correct: false
+      conf: 0.8549342155456543
+thumbs down:
+  E:
+    ukMale:
+      key: thumbs down
+      req: down
+      answer: that
+      correct: false
+      conf: 0.7927404046058655
+thumbs up:
+  E:
+    ukMale:
+      key: thumbs up
+      req: thumbs up
+      answer: thumbs up
+      correct: true
+      conf: 0.5090305209159851
+ticket:
+  E:
+    ukMale:
+      key: ticket
+      req: ticket
+      answer: pickett
+      correct: false
+      conf: 0.5288932919502258
+tiger:
+  E:
+    ukMale:
+      key: tiger
+      req: tiger
+      answer: tiger
+      correct: true
+      conf: 0.7532525062561035
+timer clock:
+  E:
+    ukMale:
+      key: timer clock
+      req: timer
+      answer: timer
+      correct: true
+      conf: 0.7767581343650818
+tired face:
+  E:
+    ukMale:
+      key: tired face
+      req: weary
+      answer: query
+      correct: false
+      conf: 0.8179961442947388
+toilet:
+  E:
+    ukMale:
+      key: toilet
+      req: toilet
+      answer: toilet
+      correct: true
+      conf: 0.9174669981002808
+tomato:
+  E:
+    ukMale:
+      key: tomato
+      req: tomato
+      answer: tomorrow
+      correct: false
+      conf: 0.8258236646652222
+tongue:
+  E:
+    ukMale:
+      key: tongue
+      req: tongue
+      answer: tunnel
+      correct: false
+      conf: 0.9150050282478333
+toolbox:
+  E:
+    ukMale:
+      key: toolbox
+      req: toolbox
+      answer: toolbox
+      correct: true
+      conf: 0.9448043704032898
+tooth:
+  E:
+    ukMale:
+      key: tooth
+      req: tooth
+      answer: goose
+      correct: false
+      conf: 0.7943929433822632
+top hat:
+  E:
+    ukMale:
+      key: top hat
+      req: hat
+      answer: hat
+      correct: true
+      conf: 0.8426661491394043
+tornado:
+  E:
+    ukMale:
+      key: tornado
+      req: tornado
+      answer: tornado
+      correct: true
+      conf: 0.9851678013801575
+trackball:
+  E:
+    ukMale:
+      key: trackball
+      req: trackball
+      answer: ball
+      correct: false
+      conf: 0.8535672426223755
+tractor:
+  E:
+    ukMale:
+      key: tractor
+      req: tractor
+      answer: hike
+      correct: false
+      conf: 0.6628555059432983
+train:
+  E:
+    ukMale:
+      key: train
+      req: railway
+      answer: railway
+      correct: true
+      conf: 0.9646026492118835
+tram:
+  E:
+    ukMale:
+      key: tram
+      req: railway
+      answer: railway
+      correct: true
+      conf: 0.9562982320785522
+tram car:
+  E:
+    ukMale:
+      key: tram car
+      req: trolley
+      answer: harley
+      correct: false
+      conf: 0.7684879302978516
+triangular ruler:
+  E:
+    ukMale:
+      key: triangular ruler
+      req: ruler
+      answer: moonlight
+      correct: false
+      conf: 0.7657875418663025
+trolleybus:
+  E:
+    ukMale:
+      key: trolleybus
+      req: trolley
+      answer: harley
+      correct: false
+      conf: 0.7533489465713501
+trophy:
+  E:
+    ukMale:
+      key: trophy
+      req: trophy
+      answer: privacy
+      correct: false
+      conf: 0.7209307551383972
+tropical drink:
+  E:
+    ukMale:
+      key: tropical drink
+      req: glass
+      answer: club
+      correct: false
+      conf: 0.6797069907188416
+tropical fish:
+  E:
+    ukMale:
+      key: tropical fish
+      req: fish
+      answer: fish
+      correct: true
+      conf: 0.9683026075363159
+trumpet:
+  E:
+    ukMale:
+      key: trumpet
+      req: trumpet
+      answer: petty
+      correct: false
+      conf: 0.8069248199462891
+tulip:
+  E:
+    ukMale:
+      key: tulip
+      req: tulip
+      answer: left
+      correct: false
+      conf: 0.8739045262336731
+turkey:
+  E:
+    ukMale:
+      key: turkey
+      req: turkey
+      answer: turkey
+      correct: true
+      conf: 0.7462533116340637
+turtle:
+  E:
+    ukMale:
+      key: turtle
+      req: turtle
+      answer: telephone
+      correct: false
+      conf: 0.941773533821106
+two hearts:
+  E:
+    ukMale:
+      key: two hearts
+      req: two hearts
+      answer: '2'
+      correct: false
+      conf: 0.7996007204055786
+umbrella:
+  E:
+    ukMale:
+      key: umbrella
+      req: umbrella
+      answer: umbrella
+      correct: true
+      conf: 0.9331443905830383
+umbrella on ground:
+  E:
+    ukMale:
+      key: umbrella on ground
+      req: umbrella
+      answer: umbrella
+      correct: true
+      conf: 0.8381236791610718
+umbrella with rain drops:
+  E:
+    ukMale:
+      key: umbrella with rain drops
+      req: umbrella
+      answer: umbrella
+      correct: true
+      conf: 0.9061356782913208
+unamused face:
+  E:
+    ukMale:
+      key: unamused face
+      req: unhappy
+      answer: happy
+      correct: false
+      conf: 0.802818775177002
+unlocked:
+  E:
+    ukMale:
+      key: unlocked
+      req: lock
+      answer: clock
+      correct: false
+      conf: 0.6668382883071899
+upside-down face:
+  E:
+    ukMale:
+      key: upside-down face
+      req: grin
+      answer: ren
+      correct: false
+      conf: 0.8866265416145325
+vampire:
+  E:
+    ukMale:
+      key: vampire
+      req: vampire
+      answer: vampire
+      correct: true
+      conf: 0.8689554929733276
+vertical traffic light:
+  E:
+    ukMale:
+      key: vertical traffic light
+      req: traffic light
+      answer: call faith.
+      correct: false
+      conf: 0.6631655693054199
+victory hand:
+  E:
+    ukMale:
+      key: victory hand
+      req: victory
+      answer: victory
+      correct: true
+      conf: 0.9345849752426147
+video camera:
+  E:
+    ukMale:
+      key: video camera
+      req: camcorder
+      answer: quarter
+      correct: false
+      conf: 0.7085115313529968
+video game:
+  E:
+    ukMale:
+      key: video game
+      req: controller
+      answer: controlla
+      correct: true
+      conf: 0.9292076230049133
+videocassette:
+  E:
+    ukMale:
+      key: videocassette
+      req: tape
+      answer: tape
+      correct: true
+      conf: 0.9241963624954224
+violin:
+  E:
+    ukMale:
+      key: violin
+      req: violin
+      answer: father
+      correct: false
+      conf: 0.8475192189216614
+volcano:
+  E:
+    ukMale:
+      key: volcano
+      req: volcano
+      answer: volcano
+      correct: true
+      conf: 0.9178134799003601
+volleyball:
+  E:
+    ukMale:
+      key: volleyball
+      req: volleyball
+      answer: volleyball
+      correct: true
+      conf: 0.7751365900039673
+vulcan salute:
+  E:
+    ukMale:
+      key: vulcan salute
+      req: vulcan salute
+      answer: vulcan salute
+      correct: true
+      conf: 0.9242641925811768
+waffle:
+  E:
+    ukMale:
+      key: waffle
+      req: waffle
+      answer: waffle
+      correct: true
+      conf: 0.8699855804443359
+walking:
+  E:
+    ukMale:
+      key: walking
+      req: walking
+      answer: walking
+      correct: true
+      conf: 0.909422755241394
+waning crescent moon:
+  E:
+    ukMale:
+      key: waning crescent moon
+      req: moon
+      answer: moon
+      correct: true
+      conf: 0.9372831583023071
+waning gibbous moon:
+  E:
+    ukMale:
+      key: waning gibbous moon
+      req: moon
+      answer: moon
+      correct: true
+      conf: 0.8852957487106323
+wastebasket:
+  E:
+    ukMale:
+      key: wastebasket
+      req: wastebasket
+      answer: wastebasket
+      correct: true
+      conf: 0.6981111764907837
+watch:
+  E:
+    ukMale:
+      key: watch
+      req: clock
+      answer: clock
+      correct: true
+      conf: 0.8471152186393738
+water polo:
+  E:
+    ukMale:
+      key: water polo
+      req: polo
+      answer: pono
+      correct: false
+      conf: 0.825162410736084
+water wave:
+  E:
+    ukMale:
+      key: water wave
+      req: wave
+      answer: way
+      correct: false
+      conf: 0.7213369011878967
+watermelon:
+  E:
+    ukMale:
+      key: watermelon
+      req: watermelon
+      answer: watermelon
+      correct: true
+      conf: 0.9389082789421082
+waving hand:
+  E:
+    ukMale:
+      key: waving hand
+      req: wave
+      answer: waves
+      correct: false
+      conf: 0.7638804912567139
+waxing crescent moon:
+  E:
+    ukMale:
+      key: waxing crescent moon
+      req: moon
+      answer: moon
+      correct: true
+      conf: 0.9650763273239136
+waxing gibbous moon:
+  E:
+    ukMale:
+      key: waxing gibbous moon
+      req: moon
+      answer: moon
+      correct: true
+      conf: 0.9471211433410645
+weary cat:
+  E:
+    ukMale:
+      key: weary cat
+      req: tired
+      answer: lifetime
+      correct: false
+      conf: 0.9139286279678345
+weary face:
+  E:
+    ukMale:
+      key: weary face
+      req: weary
+      answer: weary
+      correct: true
+      conf: 0.795034646987915
+whale:
+  E:
+    ukMale:
+      key: whale
+      req: whale
+      answer: whale
+      correct: true
+      conf: 0.931928813457489
+white cane:
+  E:
+    ukMale:
+      key: white cane
+      req: cane
+      answer: k
+      correct: false
+      conf: 0.7536377906799316
+white flower:
+  E:
+    ukMale:
+      key: white flower
+      req: flower
+      answer: flower
+      correct: true
+      conf: 0.795076310634613
+white heart:
+  E:
+    ukMale:
+      key: white heart
+      req: heart
+      answer: like.
+      correct: false
+      conf: 0.6754922270774841
+wilted flower:
+  E:
+    ukMale:
+      key: wilted flower
+      req: flower
+      answer: flower
+      correct: true
+      conf: 0.9393372535705566
+wind face:
+  E:
+    ukMale:
+      key: wind face
+      req: blow
+      answer: light
+      correct: false
+      conf: 0.652651846408844
+wine glass:
+  E:
+    ukMale:
+      key: wine glass
+      req: wine
+      answer: wine
+      correct: true
+      conf: 0.880689799785614
+winking face:
+  E:
+    ukMale:
+      key: winking face
+      req: wink
+      answer: wink
+      correct: true
+      conf: 0.9225440621376038
+winking face with tongue:
+  E:
+    ukMale:
+      key: winking face with tongue
+      req: tongue
+      answer: tunnel
+      correct: false
+      conf: 0.8462225794792175
+with:
+  E:
+    ukMale:
+      key: with
+      req: witch
+      answer: which
+      correct: false
+      conf: 0.8527493476867676
+wizard:
+  E:
+    ukMale:
+      key: wizard
+      req: wizard
+      answer: wizard
+      correct: true
+      conf: 0.8570146560668945
+woman:
+  E:
+    ukMale:
+      key: woman
+      req: woman
+      answer: woman
+      correct: true
+      conf: 0.888769805431366
+woman and man holding hands:
+  E:
+    ukMale:
+      key: woman and man holding hands
+      req: holding hands
+      answer: holding on
+      correct: false
+      conf: 0.8894050121307373
+woman artist:
+  E:
+    ukMale:
+      key: woman artist
+      req: artist
+      answer: office
+      correct: false
+      conf: 0.8011940121650696
+woman blind:
+  E:
+    ukMale:
+      key: woman blind
+      req: blind
+      answer: blind
+      correct: true
+      conf: 0.6439968943595886
+woman cook:
+  E:
+    ukMale:
+      key: woman cook
+      req: cook
+      answer: cook
+      correct: true
+      conf: 0.8411542177200317
+woman dancing:
+  E:
+    ukMale:
+      key: woman dancing
+      req: dancing
+      answer: tongue
+      correct: false
+      conf: 0.7171370387077332
+woman factory worker:
+  E:
+    ukMale:
+      key: woman factory worker
+      req: factory worker
+      answer: call trey walker
+      correct: false
+      conf: 0.7653568387031555
+woman fairy:
+  E:
+    ukMale:
+      key: woman fairy
+      req: fairy
+      answer: sorry
+      correct: false
+      conf: 0.7354922294616699
+woman farmer:
+  E:
+    ukMale:
+      key: woman farmer
+      req: farmer
+      answer: like
+      correct: false
+      conf: 0.816345751285553
+woman golfing:
+  E:
+    ukMale:
+      key: woman golfing
+      req: golf
+      answer: job
+      correct: true
+      conf: 0.780544638633728
+woman health worker:
+  E:
+    ukMale:
+      key: woman health worker
+      req: doctor
+      answer: doctor
+      correct: true
+      conf: 0.7760146856307983
+woman in manual wheelchair:
+  E:
+    ukMale:
+      key: woman in manual wheelchair
+      req: wheelchair
+      answer: wheelchair
+      correct: true
+      conf: 0.8987069129943848
+woman in motorized wheelchair:
+  E:
+    ukMale:
+      key: woman in motorized wheelchair
+      req: wheelchair
+      answer: wheelchair
+      correct: true
+      conf: 0.9367700815200806
+woman judge:
+  E:
+    ukMale:
+      key: woman judge
+      req: judge
+      answer: charge
+      correct: true
+      conf: 0.6140727996826172
+woman kneeling:
+  E:
+    ukMale:
+      key: woman kneeling
+      req: kneeling
+      answer: ''
+      correct: false
+      conf: 0
+woman mechanic:
+  E:
+    ukMale:
+      key: woman mechanic
+      req: mechanic
+      answer: mechanic
+      correct: true
+      conf: 0.921672523021698
+woman office worker:
+  E:
+    ukMale:
+      key: woman office worker
+      req: office worker
+      answer: call his wife
+      correct: false
+      conf: 0.8881169557571411
+woman pilot:
+  E:
+    ukMale:
+      key: woman pilot
+      req: pilot
+      answer: pilot
+      correct: true
+      conf: 0.7663275599479675
+woman running:
+  E:
+    ukMale:
+      key: woman running
+      req: running
+      answer: running
+      correct: true
+      conf: 0.9238942861557007
+woman scientist:
+  E:
+    ukMale:
+      key: woman scientist
+      req: scientist
+      answer: at
+      correct: false
+      conf: 0.7747490406036377
+woman singer:
+  E:
+    ukMale:
+      key: woman singer
+      req: singer
+      answer: singer
+      correct: true
+      conf: 0.9265084266662598
+woman standing:
+  E:
+    ukMale:
+      key: woman standing
+      req: woman
+      answer: woman
+      correct: true
+      conf: 0.9175821542739868
+woman student:
+  E:
+    ukMale:
+      key: woman student
+      req: student
+      answer: to.
+      correct: false
+      conf: 0.7377191781997681
+woman surfing:
+  E:
+    ukMale:
+      key: woman surfing
+      req: surfing
+      answer: stuffing
+      correct: false
+      conf: 0.7299509048461914
+woman teacher:
+  E:
+    ukMale:
+      key: woman teacher
+      req: teacher
+      answer: pizza
+      correct: false
+      conf: 0.7908166646957397
+woman technologist:
+  E:
+    ukMale:
+      key: woman technologist
+      req: developer
+      answer: apart
+      correct: true
+      conf: 0.8326438069343567
+woman walking:
+  E:
+    ukMale:
+      key: woman walking
+      req: walking
+      answer: walking
+      correct: true
+      conf: 0.888190746307373
+woman with headscarf:
+  E:
+    ukMale:
+      key: woman with headscarf
+      req: headscarf
+      answer: hat
+      correct: false
+      conf: 0.7554205656051636
+'woman: blond hair':
+  E:
+    ukMale:
+      key: 'woman: blond hair'
+      req: blond hair
+      answer: ''
+      correct: false
+      conf: 0
+'woman: curly hair':
+  E:
+    ukMale:
+      key: 'woman: curly hair'
+      req: curls
+      answer: like
+      correct: false
+      conf: 0.8080945014953613
+'woman: red hair':
+  E:
+    ukMale:
+      key: 'woman: red hair'
+      req: woman
+      answer: woman
+      correct: true
+      conf: 0.923275351524353
+'woman: white hair':
+  E:
+    ukMale:
+      key: 'woman: white hair'
+      req: white hair
+      answer: live
+      correct: false
+      conf: 0.8328436017036438
+woman’s boot:
+  E:
+    ukMale:
+      key: woman’s boot
+      req: boot
+      answer: boot
+      correct: true
+      conf: 0.6933593153953552
+woman’s clothes:
+  E:
+    ukMale:
+      key: woman’s clothes
+      req: blouse
+      answer: love
+      correct: false
+      conf: 0.8306006193161011
+woman’s hat:
+  E:
+    ukMale:
+      key: woman’s hat
+      req: hat
+      answer: hat
+      correct: true
+      conf: 0.8235427737236023
+woman’s sandal:
+  E:
+    ukMale:
+      key: woman’s sandal
+      req: shoe
+      answer: you
+      correct: false
+      conf: 0.871789813041687
+women holding hands:
+  E:
+    ukMale:
+      key: women holding hands
+      req: holding hands
+      answer: folding table
+      correct: false
+      conf: 0.8538313508033752
+woozy face:
+  E:
+    ukMale:
+      key: woozy face
+      req: tipsy
+      answer: tipsy
+      correct: true
+      conf: 0.9556644558906555
+world map:
+  E:
+    ukMale:
+      key: world map
+      req: world
+      answer: wild
+      correct: false
+      conf: 0.8362542986869812
+worried face:
+  E:
+    ukMale:
+      key: worried face
+      req: worried
+      answer: wiring
+      correct: false
+      conf: 0.854553759098053
+wrapped gift:
+  E:
+    ukMale:
+      key: wrapped gift
+      req: gift
+      answer: gift
+      correct: true
+      conf: 0.8207694292068481
+wrench:
+  E:
+    ukMale:
+      key: wrench
+      req: wrench
+      answer: ranch
+      correct: false
+      conf: 0.5177266597747803
+wrestling:
+  E:
+    ukMale:
+      key: wrestling
+      req: wrestling
+      answer: wrestling
+      correct: true
+      conf: 0.9639584422111511
+writing hand:
+  E:
+    ukMale:
+      key: writing hand
+      req: write
+      answer: right
+      correct: false
+      conf: 0.6829809546470642
+yarn:
+  E:
+    ukMale:
+      key: yarn
+      req: yarn
+      answer: yeah
+      correct: false
+      conf: 0.836602509021759
+yawning face:
+  E:
+    ukMale:
+      key: yawning face
+      req: yawn
+      answer: yawn
+      correct: true
+      conf: 0.524223804473877
+yellow heart:
+  E:
+    ukMale:
+      key: yellow heart
+      req: heart
+      answer: heart
+      correct: true
+      conf: 0.8364419341087341
+yen banknote:
+  E:
+    ukMale:
+      key: yen banknote
+      req: yen
+      answer: yen
+      correct: true
+      conf: 0.7443383932113647
+yo-yo:
+  E:
+    ukMale:
+      key: yo-yo
+      req: yo-yo
+      answer: yo-yo
+      correct: true
+      conf: 0.683028519153595
+yummy:
+  E:
+    ukMale:
+      key: yummy
+      req: smile
+      answer: smile
+      correct: true
+      conf: 0.7985091209411621
+zany face:
+  E:
+    ukMale:
+      key: zany face
+      req: drunk
+      answer: tongue
+      correct: false
+      conf: 0.8433930277824402
+zipper-mouth face:
+  E:
+    ukMale:
+      key: zipper-mouth face
+      req: sealed
+      answer: seal
+      correct: false
+      conf: 0.646491527557373
+zombie:
+  E:
+    ukMale:
+      key: zombie
+      req: zombie
+      answer: zombie
+      correct: true
+      conf: 0.8432170152664185
+zzz:
+  E:
+    ukMale:
+      key: zzz
+      req: sleep
+      answer: slate
+      correct: false
+      conf: 0.8192657232284546

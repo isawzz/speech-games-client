@@ -1,0 +1,17 @@
+tableSize: [500, 400]
+
+layout: [
+  'd z z o',
+  'd z z o',
+  'd p p a',
+  'h h h h',
+  ]
+
+layout_alias: 
+  d: decks
+  z: zone
+  a: extra
+  h: hand
+  p: player
+  o: others
+

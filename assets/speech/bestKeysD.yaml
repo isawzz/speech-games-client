@@ -1,0 +1,981 @@
+- k: Japanese castle
+  r: japanischer tempel
+  c: 92
+- k: Santa Claus
+  r: weihnachtsmann
+  c: 92
+- k: articulated lorry
+  r: lastwagen
+  c: 92
+- k: badminton
+  r: federball
+  c: 92
+- k: cat with wry smile
+  r: lächelnde katze
+  c: 92
+- k: coat
+  r: jacke
+  c: 92
+- k: crocodile
+  r: krokodil
+  c: 92
+- k: crying cat
+  r: weinende katze
+  c: 92
+- k: delivery truck
+  r: lastwagen
+  c: 92
+- k: dress
+  r: kleid
+  c: 92
+- k: eggplant
+  r: melanzani
+  c: 92
+- k: elephant
+  r: elefant
+  c: 92
+- k: face with symbols on mouth
+  r: wütend
+  c: 92
+- k: film projector
+  r: projektor
+  c: 92
+- k: fried shrimp
+  r: garnele
+  c: 92
+- k: garlic
+  r: knoblauch
+  c: 92
+- k: helicopter
+  r: helikopter
+  c: 92
+- k: locomotive
+  r: lokomotive
+  c: 92
+- k: love letter
+  r: liebesbrief
+  c: 92
+- k: newspaper
+  r: zeitung
+  c: 92
+- k: nose
+  r: nase
+  c: 92
+- k: penguin
+  r: pinguin
+  c: 92
+- k: person frowning
+  r: enttäuscht
+  c: 92
+- k: popcorn
+  r: popcorn
+  c: 92
+- k: rabbit
+  r: hase
+  c: 92
+- k: razor
+  r: rasiermesser
+  c: 92
+- k: relieved face
+  r: erleichtert
+  c: 92
+- k: rosette
+  r: blume
+  c: 92
+- k: sad but relieved face
+  r: traurig
+  c: 92
+- k: saxophone
+  r: saxophon
+  c: 92
+- k: snowflake
+  r: schneeflocke
+  c: 92
+- k: snowman
+  r: schneemann
+  c: 92
+- k: sparkler
+  r: feuerwerk
+  c: 92
+- k: woman
+  r: frau
+  c: 92
+- k: woman standing
+  r: frau
+  c: 92
+- k: Christmas tree
+  r: weihnachten
+  c: 91
+- k: confused face
+  r: verwirrt
+  c: 91
+- k: goggles
+  r: taucherbrille
+  c: 91
+- k: kangaroo
+  r: känguru
+  c: 91
+- k: kimono
+  r: kimono
+  c: 91
+- k: maple leaf
+  r: ahornblatt
+  c: 91
+- k: pie
+  r: kuchen
+  c: 91
+- k: pineapple
+  r: ananas
+  c: 91
+- k: rolled-up newspaper
+  r: zeitung
+  c: 91
+- k: snowman without snow
+  r: schneemann
+  c: 91
+- k: wilted flower
+  r: blume
+  c: 91
+- k: cat
+  r: katze
+  c: 90
+- k: chocolate bar
+  r: schokolade
+  c: 90
+- k: coconut
+  r: kokosnuss
+  c: 90
+- k: drum
+  r: trommel
+  c: 90
+- k: factory
+  r: fabrik
+  c: 90
+- k: green apple
+  r: apfel
+  c: 90
+- k: guitar
+  r: gitarre
+  c: 90
+- k: hamburger
+  r: hamburger
+  c: 90
+- k: ladybug
+  r: marienkäfer
+  c: 90
+- k: massage
+  r: massage
+  c: 90
+- k: motorcycle
+  r: motorrad
+  c: 90
+- k: rocket
+  r: rakete
+  c: 90
+- k: standing
+  r: stehen
+  c: 90
+- k: woman technologist
+  r: programmierer
+  c: 90
+- k: baby angel
+  r: engel
+  c: 89
+- k: cactus
+  r: kaktus
+  c: 89
+- k: dog
+  r: hund
+  c: 89
+- k: fireworks
+  r: feuerwerk
+  c: 89
+- k: frog
+  r: frosch
+  c: 89
+- k: lemon
+  r: zitrone
+  c: 89
+- k: leopard
+  r: leopard
+  c: 89
+- k: lotus position
+  r: meditieren
+  c: 89
+- k: magnet
+  r: magnet
+  c: 89
+- k: mango
+  r: mango
+  c: 89
+- k: mountain cableway
+  r: seilbahn
+  c: 89
+- k: peanuts
+  r: erdnüsse
+  c: 89
+- k: sparkles
+  r: sterne
+  c: 89
+- k: woozy face
+  r: betrunken
+  c: 89
+- k: yummy
+  r: lecker
+  c: 89
+- k: candle
+  r: kerze
+  c: 88
+- k: key
+  r: schlüssel
+  c: 88
+- k: laptop
+  r: laptop
+  c: 88
+- k: poodle
+  r: hund
+  c: 88
+- k: snail
+  r: schnecke
+  c: 88
+- k: spider
+  r: spinne
+  c: 88
+- k: watermelon
+  r: wassermelone
+  c: 88
+- k: confetti ball
+  r: konfetti
+  c: 87
+- k: construction site
+  r: baustelle
+  c: 87
+- k: couple with heart
+  r: verliebt
+  c: 87
+- k: firecracker
+  r: dynamit
+  c: 87
+- k: flashlight
+  r: taschenlampe
+  c: 87
+- k: man astronaut
+  r: astronaut
+  c: 87
+- k: man singer
+  r: sänger
+  c: 87
+- k: red apple
+  r: apfel
+  c: 87
+- k: skateboard
+  r: skateboard
+  c: 87
+- k: snake
+  r: schlange
+  c: 87
+- k: sunglasses
+  r: sonnenbrille
+  c: 87
+- k: thumbs up
+  r: daumen hoch
+  c: 87
+- k: toolbox
+  r: werkzeugkoffer
+  c: 87
+- k: umbrella
+  r: regenschirm
+  c: 87
+- k: wizard
+  r: zauberer
+  c: 87
+- k: desktop computer
+  r: computer
+  c: 86
+- k: falafel
+  r: falafel
+  c: 86
+- k: fearful face
+  r: ängstlich
+  c: 86
+- k: full moon
+  r: mond
+  c: 86
+- k: heart suit
+  r: herz
+  c: 86
+- k: hourglass not done
+  r: sanduhr
+  c: 86
+- k: man technologist
+  r: programmierer
+  c: 86
+- k: mermaid
+  r: seejungfrau
+  c: 86
+- k: moai
+  r: statue
+  c: 86
+- k: monkey
+  r: affe
+  c: 86
+- k: nail polish
+  r: kosmetik
+  c: 86
+- k: person golfing
+  r: golf
+  c: 86
+- k: radio
+  r: radio
+  c: 86
+- k: suspension railway
+  r: seilbahn
+  c: 86
+- k: woman cook
+  r: koch
+  c: 86
+- k: woman golfing
+  r: golf
+  c: 86
+- k: airplane arrival
+  r: ankunft
+  c: 85
+- k: barrier
+  r: achtung
+  c: 85
+- k: cloud with lightning and rain
+  r: gewitter
+  c: 85
+- k: crescent moon
+  r: mond
+  c: 85
+- k: ferris wheel
+  r: riesenrad
+  c: 85
+- k: fire engine
+  r: feuerwehr
+  c: 85
+- k: gem stone
+  r: edelstein
+  c: 85
+- k: horse
+  r: pferd
+  c: 85
+- k: juggling
+  r: jonglieren
+  c: 85
+- k: keyboard
+  r: keyboard
+  c: 85
+- k: love-you gesture
+  r: liebe
+  c: 85
+- k: man pilot
+  r: pilot
+  c: 85
+- k: metro
+  r: u-bahn
+  c: 85
+- k: scroll
+  r: dokument
+  c: 85
+- k: speaker high volume
+  r: lautsprecher
+  c: 85
+- k: sunflower
+  r: sonnenblume
+  c: 85
+- k: syringe
+  r: spritze
+  c: 85
+- k: tangerine
+  r: orange
+  c: 85
+- k: tornado
+  r: tornado
+  c: 85
+- k: train
+  r: u-bahn
+  c: 85
+- k: vampire
+  r: vampir
+  c: 85
+- k: watch
+  r: uhr
+  c: 85
+- k: banjo
+  r: banjo
+  c: 84
+- k: diya lamp
+  r: öllampe
+  c: 84
+- k: dvd
+  r: dvd
+  c: 84
+- k: green book
+  r: buch
+  c: 84
+- k: handbag
+  r: handtasche
+  c: 84
+- k: ledger
+  r: heft
+  c: 84
+- k: party popper
+  r: party
+  c: 84
+- k: robot
+  r: roboter
+  c: 84
+- k: rose
+  r: rose
+  c: 84
+- k: squid
+  r: tintenfisch
+  c: 84
+- k: television
+  r: fernseher
+  c: 84
+- k: volcano
+  r: vulkan
+  c: 84
+- k: white flower
+  r: blume
+  c: 84
+- k: 'woman: red hair'
+  r: rothaarig
+  c: 84
+- k: baby
+  r: baby
+  c: 83
+- k: chart increasing with yen
+  r: diagramm
+  c: 83
+- k: dragon
+  r: drache
+  c: 83
+- k: dragon face
+  r: drache
+  c: 83
+- k: droplet
+  r: tropfen
+  c: 83
+- k: flamingo
+  r: flamingo
+  c: 83
+- k: giraffe
+  r: giraffe
+  c: 83
+- k: heart exclamation
+  r: herz
+  c: 83
+- k: money bag
+  r: geld
+  c: 83
+- k: monorail
+  r: zug
+  c: 83
+- k: optical disk
+  r: dvd
+  c: 83
+- k: puzzle piece
+  r: puzzle
+  c: 83
+- k: receipt
+  r: rechnung
+  c: 83
+- k: rolling on the floor laughing
+  r: fröhlich
+  c: 83
+- k: shrimp
+  r: garnele
+  c: 83
+- k: smiling face with horns
+  r: teufel
+  c: 83
+- k: turkey
+  r: truthahn
+  c: 83
+- k: camera
+  r: kamera
+  c: 82
+- k: camera with flash
+  r: kamera
+  c: 82
+- k: compass
+  r: kompass
+  c: 82
+- k: detective
+  r: detektiv
+  c: 82
+- k: eagle
+  r: adler
+  c: 82
+- k: fountain
+  r: brunnen
+  c: 82
+- k: green salad
+  r: salat
+  c: 82
+- k: hundred points
+  r: '100'
+  c: 82
+- k: lungs
+  r: lungen
+  c: 82
+- k: man
+  r: person
+  c: 82
+- k: man mechanic
+  r: mechaniker
+  c: 82
+- k: milky way
+  r: galaxie
+  c: 82
+- k: motor boat
+  r: motorboot
+  c: 82
+- k: movie camera
+  r: kamera
+  c: 82
+- k: page facing up
+  r: seite
+  c: 82
+- k: person raising hand
+  r: hallo
+  c: 82
+- k: red heart
+  r: herz
+  c: 82
+- k: sailboat
+  r: segelboot
+  c: 82
+- k: satellite antenna
+  r: satellit
+  c: 82
+- k: shopping bags
+  r: taschen
+  c: 82
+- k: station
+  r: station
+  c: 82
+- k: synagogue
+  r: kirche
+  c: 82
+- k: yellow heart
+  r: herz
+  c: 82
+- k: yo-yo
+  r: jojo
+  c: 82
+- k: Statue of Liberty
+  r: statue
+  c: 81
+- k: ambulance
+  r: rettung
+  c: 81
+- k: baseball
+  r: baseball
+  c: 81
+- k: carrot
+  r: karotte
+  c: 81
+- k: chopsticks
+  r: stäbchen
+  c: 81
+- k: cloud with snow
+  r: schnee
+  c: 81
+- k: dna
+  r: dna
+  c: 81
+- k: drop of blood
+  r: blut
+  c: 81
+- k: first quarter moon face
+  r: mond
+  c: 81
+- k: lizard
+  r: eidechse
+  c: 81
+- k: office building
+  r: gebäude
+  c: 81
+- k: shooting star
+  r: sternschnuppe
+  c: 81
+- k: smiling face with heart-eyes
+  r: fröhlich
+  c: 81
+- k: swimming
+  r: schwimmen
+  c: 81
+- k: tiger
+  r: tiger
+  c: 81
+- k: waning crescent moon
+  r: mond
+  c: 81
+- k: balloon
+  r: luftballon
+  c: 80
+- k: church
+  r: kirche
+  c: 80
+- k: closed book
+  r: buch
+  c: 80
+- k: e-mail
+  r: nachricht
+  c: 80
+- k: hedgehog
+  r: igel
+  c: 80
+- k: label
+  r: zettel
+  c: 80
+- k: last quarter moon
+  r: mond
+  c: 80
+- k: manual wheelchair
+  r: rollstuhl
+  c: 80
+- k: middle finger
+  r: mittelfinger
+  c: 80
+- k: woman running
+  r: laufen
+  c: 80
+- k: backpack
+  r: rucksack
+  c: 79
+- k: call me hand
+  r: anruf
+  c: 79
+- k: confounded face
+  r: verwirrt
+  c: 79
+- k: custard
+  r: pudding
+  c: 79
+- k: desert island
+  r: insel
+  c: 79
+- k: levitating
+  r: levitation
+  c: 79
+- k: neutral face
+  r: neutral
+  c: 79
+- k: partying face
+  r: feiern
+  c: 79
+- k: racing car
+  r: rennwagen
+  c: 79
+- k: running
+  r: laufen
+  c: 79
+- k: scissors
+  r: schere
+  c: 79
+- k: volleyball
+  r: volleyball
+  c: 79
+- k: alembic
+  r: chemie
+  c: 78
+- k: ballet shoes
+  r: ballettschuhe
+  c: 78
+- k: basket
+  r: korb
+  c: 78
+- k: fishing pole
+  r: fischen
+  c: 78
+- k: green heart
+  r: herz
+  c: 78
+- k: kitchen knife
+  r: messer
+  c: 78
+- k: man running
+  r: laufen
+  c: 78
+- k: man surfing
+  r: surfen
+  c: 78
+- k: martial arts uniform
+  r: karate
+  c: 78
+- k: oil drum
+  r: öl
+  c: 78
+- k: panda
+  r: panda
+  c: 78
+- k: purple heart
+  r: herz
+  c: 78
+- k: rainbow
+  r: regenbogen
+  c: 78
+- k: scorpion
+  r: skorpion
+  c: 78
+- k: shushing face
+  r: geheimnis
+  c: 78
+- k: speaker medium volume
+  r: lautsprecher
+  c: 78
+- k: ear with hearing aid
+  r: taub
+  c: 77
+- k: framed picture
+  r: bild
+  c: 77
+- k: hindu temple
+  r: tempel
+  c: 77
+- k: house
+  r: haus
+  c: 77
+- k: man cook
+  r: koch
+  c: 77
+- k: paintbrush
+  r: pinsel
+  c: 77
+- k: rowing boat
+  r: rudern
+  c: 77
+- k: superhero
+  r: superhero
+  c: 77
+- k: umbrella with rain drops
+  r: regenschirm
+  c: 77
+- k: zombie
+  r: zombie
+  c: 77
+- k: classical building
+  r: tempel
+  c: 76
+- k: diving mask
+  r: tauchen
+  c: 76
+- k: light bulb
+  r: glühbirne
+  c: 76
+- k: lipstick
+  r: lippenstift
+  c: 76
+- k: parachute
+  r: fallschirm
+  c: 76
+- k: spaghetti
+  r: pasta
+  c: 76
+- k: umbrella on ground
+  r: sonnenschirm
+  c: 76
+- k: wine glass
+  r: wein
+  c: 76
+- k: woman health worker
+  r: arzt
+  c: 76
+- k: woman pilot
+  r: pilot
+  c: 76
+- k: envelope
+  r: kuvert
+  c: 75
+- k: expressionless face
+  r: neutral
+  c: 75
+- k: graduation cap
+  r: kappe
+  c: 75
+- k: level slider
+  r: metronom
+  c: 75
+- k: man in motorized wheelchair
+  r: rollstuhl
+  c: 75
+- k: map of Japan
+  r: japan
+  c: 75
+- k: melon
+  r: melone
+  c: 75
+- k: page with curl
+  r: dokument
+  c: 75
+- k: softball
+  r: softball
+  c: 75
+- k: artist palette
+  r: palette
+  c: 74
+- k: badger
+  r: dachs
+  c: 74
+- k: camping
+  r: camping
+  c: 74
+- k: climbing
+  r: klettern
+  c: 74
+- k: cloud with lightning
+  r: blitz
+  c: 74
+- k: lollipop
+  r: schlecker
+  c: 74
+- k: man in manual wheelchair
+  r: rollstuhl
+  c: 74
+- k: mountain biking
+  r: radfahren
+  c: 74
+- k: taxi
+  r: taxi
+  c: 74
+- k: angry face with horns
+  r: teufel
+  c: 73
+- k: motorized wheelchair
+  r: rollstuhl
+  c: 73
+- k: namaste
+  r: bitte
+  c: 73
+- k: orange heart
+  r: herz
+  c: 73
+- k: closed umbrella
+  r: regenschirm
+  c: 72
+- k: cricket
+  r: heuschreck
+  c: 72
+- k: megaphone
+  r: megaphone
+  c: 72
+- k: orange book
+  r: buch
+  c: 72
+- k: roasted sweet potato
+  r: kartoffel
+  c: 72
+- k: smiling face with sunglasses
+  r: sonnenbrille
+  c: 72
+- k: top hat
+  r: hut
+  c: 72
+- k: woman judge
+  r: richter
+  c: 72
+- k: woman mechanic
+  r: mechaniker
+  c: 72
+- k: wrestling
+  r: wrestling
+  c: 72
+- k: electric plug
+  r: strom
+  c: 71
+- k: hamster
+  r: hamster
+  c: 71
+- k: person in tuxedo
+  r: tuxedo
+  c: 71
+- k: speaker low volume
+  r: lautsprecher
+  c: 71
+- k: telescope
+  r: teleskop
+  c: 71
+- k: video game
+  r: controller
+  c: 71
+- k: fencing
+  r: fechten
+  c: 70
+- k: heart with ribbon
+  r: liebe
+  c: 70
+- k: man blind
+  r: blind
+  c: 70
+- k: musical notes
+  r: noten
+  c: 70
+- k: potato
+  r: kartoffel
+  c: 70
+- k: spiral notepad
+  r: block
+  c: 70
+- k: cup with straw
+  r: saft
+  c: 69
+- k: woman in motorized wheelchair
+  r: rollstuhl
+  c: 69
+- k: anatomical heart
+  r: herz
+  c: 68
+- k: cowboy hat face
+  r: hut
+  c: 68
+- k: light rail
+  r: metro
+  c: 68
+- k: poultry leg
+  r: huhn
+  c: 68
+- k: rugby football
+  r: rugby
+  c: 68
+- k: cigarette
+  r: zigarette
+  c: 67
+- k: videocassette
+  r: band
+  c: 67
+- k: woman in manual wheelchair
+  r: rollstuhl
+  c: 66
+- k: cityscape
+  r: stadt
+  c: 65
+- k: person
+  r: mensch
+  c: 65
+- k: winking face
+  r: zwinkern
+  c: 65
+- k: wrapped gift
+  r: geschenk
+  c: 65
+- k: bacon
+  r: speck
+  c: 64
+- k: shopping cart
+  r: einkaufswagen
+  c: 64
+- k: shortcake
+  r: torte
+  c: 64
+- k: man judge
+  r: richter
+  c: 63
+- k: crossed swords
+  r: kampf
+  c: 60

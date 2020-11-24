@@ -1,0 +1,50 @@
+views:
+  areaTable: 
+    layout: [MainBoard opps, gamePlayer]
+
+areaTypes: 
+  opps:
+    foreach: 
+      pool: players
+      selectionProperty: obj_type
+      selectionValue: opponent
+      nameProperty: name
+    layout: [stats, buildings]
+  gamePlayer: 
+    owner: 
+      pool: players
+      selectionProperty: obj_type
+      selectionValue: GamePlayer
+    layout: [stats, buildings, Hand]
+  buildings: #implicit: one for each layout that has 'buildings'
+    layout: [farms, estates chateaus]
+
+areaContent: #aus areas werden auch 'types' gemacht
+#if find multiple area in areaTypes[key], each of thoses will get corresponding data inside
+  MainBoard: Board
+  Hand: hand
+  stats: [vps, coins, hand_size, max_hand_size] #list of properties, taken of owner of this area
+  farms: Farm
+  estates: Estate
+  chateaus: Chateau
+
+visualize:
+  Board:
+    type: quadGrid
+  Farm:
+  Estate:
+  Chateau:
+    type: cardHand
+  Card:
+    type: c52
+    map:
+      rank: gsm.short_name
+      suit: spades
+  Tick:
+    type: visual #default type, could omit!
+    map:
+      width: 80
+      text: gsm.symbol
+      fontSize: rsg.width
+      color: gsm._player  
+

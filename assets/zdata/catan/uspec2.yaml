@@ -1,0 +1,196 @@
+tableSize: [600, 600]
+    
+# cap letters => expand this area to max space, lowercase letter => collapse to min content
+layout: [
+  " M M M M M o ",
+  " M M M M M o ",
+  " M M M M M o ",
+  " M M M M M o ",
+  " p p p p p p ",
+]
+areas:
+  M: 
+    alias: board_info
+  o: 
+    alias: opponent_info
+    create: player_props
+  p: 
+    alias: player_info
+
+placement: # "Behavior" component - keys must be: 
+            # - GameObject type (GamePlayer) 
+            # - a "set" of game objects (usually property of game object)
+  Grid: 
+    loc: board_info
+    type: Grid # should be inferred
+  
+  opponent:
+    loc: self.name
+  
+  opponent.num_res:
+    loc: 
+
+  GamePlayer.devcards:
+    loc: player_info
+
+  GamePlayer.resources:
+    loc: player_info
+  
+  GamePlayer.vps:
+    loc: player_info
+
+  GamePlayer.buildings: # this would display the buildings in the player_props (as well as on the board because the game objects have loc)
+    loc: player_info
+
+visualize: # "Visualize" component, keys must be:
+            # - GameObject types
+            # - set of game objects
+            # TODO: visualization can depend on location (for objects placed in multiple places)
+  player_props:
+    type: dict
+    direction: vertical
+    spacing: fill
+    key: self.name
+    val:
+      type: area
+      color: self.color
+  
+  Field:
+    type: GridField # should be inferred
+    _append: 
+      - map: viz_fields
+        key: this.res
+    #shape: "circle"
+    #icon: "asset10.svg"
+    print: # print (value only) 
+      - val: this.num
+        type: text # should be inferred
+        _append:
+          - map: viz_field_num
+            key: this.num
+  
+  Card:
+    type: card
+    print:
+      - val: this.name
+        font_size: 14
+        font_style: "bold"
+  
+  GamePlayer.devcards:
+    type: list
+    spacing: card
+    
+  GamePlayer.resources:
+    type: dict
+    key: viz_fields # map passed in directly
+    val:
+      font_size: "medium"
+
+  settlement:
+    type: object # default type
+    shape: "square"
+    color: this.owner.color
+
+  city:
+    shape: "plus"
+    color: this.owner.color
+
+### map "fns"
+place_player:
+  opponent: 
+    loc: opponent_info
+  self: 
+    loc: player_info
+
+viz_fields:
+  wood: 
+    texture: 'grain'
+    color: 'maroon'
+  brick: 
+    texture: 'rect'
+    color: 'salmon'
+  wheat: 
+    color: 'yellow'
+  sheep: 
+    color: 'green'
+  ore: 
+    texture: 'grain'
+    color: 'dimgray'
+
+viz_field_num:
+  6:
+    color: red
+    font_size: "large"
+  8:
+    color: red
+    font_size: "large"
+  
+  _default:
+    color: black
+    font_size: "medium"
+
+
+#the following are used for automatic presentation if no behavior:
+table:
+  optin: [res, num, building, port] 
+pieceSizeRelativeToLoc:
+  field: ['w', 30]
+symbol:
+  city: 'castle'
+  settlement: 'house'
+color: #used for colorHintDetection 
+  theme: '#3d7c47'
+  wood: 'maroon' #fe: not used, war eine simplere vorige art colors fuer strings zu specifien
+  brick: 'salmon'
+  wheat: 'yellow'
+  sheep: 'green'
+  ore: 'dimgray'
+dev:
+  run_to_buttons:
+    devdeck: "buy devcard"
+    hex: "place robber"
+    Corner: "settlement"
+    settlement: 'city upgrade'
+    Edge: "road" 
+  cheat_buttons: 
+    robber: "cheat robber" 
+    devcard: "cheat devcard"
+    road: 'cheat road'
+    settlement: 'cheat settlement'
+    city: 'cheat city'
+  scenario_buttons:
+    devdeck: 'devcard devdeck'
+
+#frage fe: should we remain case sensitive for strings, ich sag eher nicht, bin es aber for now
+#string and type mappings used for standard RSG object/structure types
+strings: 
+  wood:
+    color: 'sienna' #color, symbol, label are used in standard RSG types
+    symbol: 'tree'
+    label: 'wood' #obsolete, this would be default anyway!
+  brick:
+    color: 'salmon'
+    symbol: 'wall'
+  Knight:
+    color: 'red'
+    symbol: 'spy'
+
+typeMappings:
+  card: #standard rsg object type
+    symbol: name #name property of card object (as per mapping) will be translated to symbol looked up in strings
+    color: name
+
+#mappings generate standard RSG structure types (eg. grids,lists,diff layouts for groups of objects)
+# general syntax for RSG standard type: [key][value][layout] to represent a dictionary (see GamePlayer.resources)
+# example 1: GamePlayer.resources => colorLabelRow 
+#     means: {wood:5, brick:0} => [{key:wood, value:5},{key:brick, value:0}]
+#            wood=>color (lookup strings[key].color, [default:random] (default will be entered into SPEC to be reused!)
+#            5=>label, (lookup strings[value].label, [default:value]
+#            layout=>Row (the resulting colored label uis will be layed out as row in loc)
+# syntax for RSG standard type to map collections of game objects: [generic_type][layout] (eg. {_set:[{_obj:[ID]},{_obj:[ID]}]})
+# example 2: GamePlayer.devcards => cardHand
+#     means: [{name:Knight,...},{name:Victory,..}] 
+#            card => lookup typeMappings => take name property for symbol,color 
+#                 => Knight => lookup strings => use symbol='spy' and color='red' => this is done for each object
+#            Hand: layout objects like a hand (overlapping row)
+

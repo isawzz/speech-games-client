@@ -1,0 +1,37 @@
+players:
+  Player1:
+    name: Player1
+    items:
+      _set:
+        - _obj: "3"
+        - _obj: "4"
+  Player2:
+    name: Player2
+    symbol: O
+table:
+  "3":
+    symbol: A
+    obj_type: Tick
+  "4":
+    symbol: B
+    obj_type: Tick
+  "0":
+    row: 1
+    col: 1
+    obj_type: Tick
+  "1":
+    row: 1
+    col: 2
+    obj_type: Tick
+  "9":
+    fields:
+      _set:
+        - _obj: "0"
+        - _obj: "1"
+    rows: 1
+    cols: 2
+    obj_type: Board
+    map:
+      _ndarray:
+        - - _obj: "0"
+          - _obj: "1"

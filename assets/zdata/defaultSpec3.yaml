@@ -1,0 +1,17 @@
+tableSize: [200,200]
+
+layout: [
+  " M o ",
+  " p o",
+]
+areas:
+  M: board
+  o: opps
+  p: players
+
+color:
+  theme: '#c9af98'
+
+collapseEmptySmallLetterAreas: true
+shadeAreaBackgrounds: true
+showAreaNames: true

@@ -1,0 +1,410 @@
+{
+	"options": {
+		"tic": {
+			"actions": {
+				"_set": [
+					{
+						"_tuple": [
+							{
+								"_set": [
+									{
+										"ID": "0",
+										"val": "(1,1)",
+										"type": "obj"
+									},
+									{
+										"ID": "1",
+										"val": "(1,2)",
+										"type": "obj"
+									},
+									{
+										"ID": "2",
+										"val": "(1,3)",
+										"type": "obj"
+									},
+									{
+										"ID": "3",
+										"val": "(2,1)",
+										"type": "obj"
+									},
+									{
+										"ID": "4",
+										"val": "(2,2)",
+										"type": "obj"
+									},
+									{
+										"ID": "5",
+										"val": "(2,3)",
+										"type": "obj"
+									},
+									{
+										"ID": "6",
+										"val": "(3,1)",
+										"type": "obj"
+									},
+									{
+										"ID": "7",
+										"val": "(3,2)",
+										"type": "obj"
+									},
+									{
+										"ID": "8",
+										"val": "(3,3)",
+										"type": "obj"
+									}
+								]
+							}
+						]
+					}
+				]
+			},
+			"desc": {
+				"line": [
+					"Available spots"
+				]
+			}
+		}
+	},
+	"status": {
+		"line": [
+			"Place a tick into one of free spots"
+		]
+	},
+	"key": "91b7584a2265b1f5",
+	"players": {
+		"Player1": {
+			"obj_type": "GamePlayer",
+			"name": "Player1",
+			"symbol": "X"
+		},
+		"Player2": {
+			"name": "Player2",
+			"symbol": "O"
+		}
+	},
+	"table": {
+		"0": {
+			"row": 1,
+			"col": 1,
+			"neighbors": [
+				null,
+				{
+					"_obj": "1"
+				},
+				{
+					"_obj": "3"
+				},
+				null
+			],
+			"obj_type": "Tick",
+			"visible": {
+				"_set": [
+					{
+						"_player": "Player1"
+					},
+					{
+						"_player": "Player2"
+					}
+				]
+			}
+		},
+		"1": {
+			"row": 1,
+			"col": 2,
+			"neighbors": [
+				null,
+				{
+					"_obj": "2"
+				},
+				{
+					"_obj": "4"
+				},
+				{
+					"_obj": "0"
+				}
+			],
+			"obj_type": "Tick",
+			"visible": {
+				"_set": [
+					{
+						"_player": "Player1"
+					},
+					{
+						"_player": "Player2"
+					}
+				]
+			}
+		},
+		"2": {
+			"row": 1,
+			"col": 3,
+			"neighbors": [
+				null,
+				null,
+				{
+					"_obj": "5"
+				},
+				{
+					"_obj": "1"
+				}
+			],
+			"obj_type": "Tick",
+			"visible": {
+				"_set": [
+					{
+						"_player": "Player1"
+					},
+					{
+						"_player": "Player2"
+					}
+				]
+			}
+		},
+		"3": {
+			"row": 2,
+			"col": 1,
+			"neighbors": [
+				{
+					"_obj": "0"
+				},
+				{
+					"_obj": "4"
+				},
+				{
+					"_obj": "6"
+				},
+				null
+			],
+			"obj_type": "Tick",
+			"visible": {
+				"_set": [
+					{
+						"_player": "Player1"
+					},
+					{
+						"_player": "Player2"
+					}
+				]
+			}
+		},
+		"4": {
+			"row": 2,
+			"col": 2,
+			"neighbors": [
+				{
+					"_obj": "1"
+				},
+				{
+					"_obj": "5"
+				},
+				{
+					"_obj": "7"
+				},
+				{
+					"_obj": "3"
+				}
+			],
+			"obj_type": "Tick",
+			"visible": {
+				"_set": [
+					{
+						"_player": "Player1"
+					},
+					{
+						"_player": "Player2"
+					}
+				]
+			}
+		},
+		"5": {
+			"row": 2,
+			"col": 3,
+			"neighbors": [
+				{
+					"_obj": "2"
+				},
+				null,
+				{
+					"_obj": "8"
+				},
+				{
+					"_obj": "4"
+				}
+			],
+			"obj_type": "Tick",
+			"visible": {
+				"_set": [
+					{
+						"_player": "Player1"
+					},
+					{
+						"_player": "Player2"
+					}
+				]
+			}
+		},
+		"6": {
+			"row": 3,
+			"col": 1,
+			"neighbors": [
+				{
+					"_obj": "3"
+				},
+				{
+					"_obj": "7"
+				},
+				null,
+				null
+			],
+			"obj_type": "Tick",
+			"visible": {
+				"_set": [
+					{
+						"_player": "Player1"
+					},
+					{
+						"_player": "Player2"
+					}
+				]
+			}
+		},
+		"7": {
+			"row": 3,
+			"col": 2,
+			"neighbors": [
+				{
+					"_obj": "4"
+				},
+				{
+					"_obj": "8"
+				},
+				null,
+				{
+					"_obj": "6"
+				}
+			],
+			"obj_type": "Tick",
+			"visible": {
+				"_set": [
+					{
+						"_player": "Player1"
+					},
+					{
+						"_player": "Player2"
+					}
+				]
+			}
+		},
+		"8": {
+			"row": 3,
+			"col": 3,
+			"neighbors": [
+				{
+					"_obj": "5"
+				},
+				null,
+				null,
+				{
+					"_obj": "7"
+				}
+			],
+			"obj_type": "Tick",
+			"visible": {
+				"_set": [
+					{
+						"_player": "Player1"
+					},
+					{
+						"_player": "Player2"
+					}
+				]
+			}
+		},
+		"9": {
+			"fields": {
+				"_set": [
+					{
+						"_obj": "0"
+					},
+					{
+						"_obj": "1"
+					},
+					{
+						"_obj": "2"
+					},
+					{
+						"_obj": "3"
+					},
+					{
+						"_obj": "4"
+					},
+					{
+						"_obj": "5"
+					},
+					{
+						"_obj": "6"
+					},
+					{
+						"_obj": "7"
+					},
+					{
+						"_obj": "8"
+					}
+				]
+			},
+			"rows": 3,
+			"cols": 3,
+			"obj_type": "Board",
+			"visible": {
+				"_set": [
+					{
+						"_player": "Player1"
+					},
+					{
+						"_player": "Player2"
+					}
+				]
+			},
+			"map": {
+				"_ndarray": [
+					[
+						{
+							"_obj": "0"
+						},
+						{
+							"_obj": "1"
+						},
+						{
+							"_obj": "2"
+						}
+					],
+					[
+						{
+							"_obj": "3"
+						},
+						{
+							"_obj": "4"
+						},
+						{
+							"_obj": "5"
+						}
+					],
+					[
+						{
+							"_obj": "6"
+						},
+						{
+							"_obj": "7"
+						},
+						{
+							"_obj": "8"
+						}
+					]
+				],
+				"_dtype": "object"
+			}
+		}
+	},
+	"phase": "tic",
+	"log": []
+}

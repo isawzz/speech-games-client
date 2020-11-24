@@ -1,0 +1,63 @@
+tableSize: [700, 700] 
+
+layout: [ 
+  " m m m m m o ", 
+  " m m m m m o ", 
+  " m m m m m o ", 
+  " m m m m m o ", 
+  " p p p p p a ", 
+  ] 
+
+layout_alias: 
+  m: board 
+  o: others 
+  p: player 
+  a: playerStats 
+  
+mappings: #form: obj_type.property1.property2... 
+  board: 
+    type: hexGrid 
+    field_type: hex 
+    corner_type: Corner 
+    edge_type: Edge 
+    loc: board 
+  gamePlayer.devcards: 
+    type: cardHand 
+    loc: player 
+  gamePlayer.resources: 
+    type: keyValueList #not implemented! 
+    loc: player 
+  gamePlayer.buildings.farm: 
+    type: cardHandList #not implemented! 
+    
+  #the following are used for automatic presentation if no behavior: 
+  #the following are used for automatic presentation if no behavior:
+table:
+  optin: [res, num, building, port] 
+pieceSizeRelativeToLoc:
+  field: ['w', 30]
+symbol:
+  city: 'castle'
+  settlement: 'house'
+color: #used for colorHintDetection
+  theme: '#3d7c47'
+  wood: 'maroon'
+  brick: 'salmon'
+  wheat: 'yellow'
+  sheep: 'green'
+  ore: 'dimgray'
+dev:
+  run_to_buttons:
+    devdeck: "buy devcard"
+    hex: "place robber"
+    Corner: "settlement"
+    settlement: 'city upgrade'
+    Edge: "road" 
+  cheat_buttons: 
+    robber: "cheat robber" 
+    devcard: "cheat devcard"
+    road: 'cheat road'
+    settlement: 'cheat settlement'
+    city: 'cheat city'
+  scenario_buttons:
+    devdeck: 'devcard devdeck' 

@@ -1,0 +1,35 @@
+tableSize: [700, 500]
+
+layout: [
+  'd Z Z o',
+  'd Z Z o',
+  'd P P o',
+  'h h h o'
+  ]
+
+layout_alias: 
+  d: decks
+  Z: zone
+  a: extra
+  h: hand
+  P: player
+  o: others
+
+playerStatsAreas:  #standard setting
+  type: columnGrid
+  loc: others
+  
+mappings:
+  GamePlayer.hand:
+    type: cardHand
+    loc: player
+  opponent.hand:
+    type: cardHand
+    loc: this.name
+
+typeMappings:
+  card: #standard rsg object type
+    rank: short_name #rank is standard rsg to identify c52 card rank (standard cards have rank,suit)
+
+
+

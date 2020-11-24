@@ -1,0 +1,2869 @@
+---
+options:
+  loc-settlement:
+    actions:
+      _set:
+      - _tuple:
+        - _set:
+          - ID: '91'
+            val: Corner[91]
+            type: obj
+          - ID: '92'
+            val: Corner[92]
+            type: obj
+          - ID: '93'
+            val: Corner[93]
+            type: obj
+          - ID: '94'
+            val: Corner[94]
+            type: obj
+          - ID: '95'
+            val: Corner[95]
+            type: obj
+          - ID: '96'
+            val: Corner[96]
+            type: obj
+          - ID: '97'
+            val: Corner[97]
+            type: obj
+          - ID: '98'
+            val: Corner[98]
+            type: obj
+          - ID: '99'
+            val: Corner[99]
+            type: obj
+          - ID: '100'
+            val: Corner[100]
+            type: obj
+          - ID: '101'
+            val: Corner[101]
+            type: obj
+          - ID: '102'
+            val: Corner[102]
+            type: obj
+          - ID: '103'
+            val: Corner[103]
+            type: obj
+          - ID: '104'
+            val: Corner[104]
+            type: obj
+          - ID: '105'
+            val: Corner[105]
+            type: obj
+          - ID: '106'
+            val: Corner[106]
+            type: obj
+          - ID: '107'
+            val: Corner[107]
+            type: obj
+          - ID: '108'
+            val: Corner[108]
+            type: obj
+          - ID: '109'
+            val: Corner[109]
+            type: obj
+          - ID: '110'
+            val: Corner[110]
+            type: obj
+          - ID: '111'
+            val: Corner[111]
+            type: obj
+          - ID: '112'
+            val: Corner[112]
+            type: obj
+          - ID: '113'
+            val: Corner[113]
+            type: obj
+          - ID: '114'
+            val: Corner[114]
+            type: obj
+          - ID: '115'
+            val: Corner[115]
+            type: obj
+          - ID: '116'
+            val: Corner[116]
+            type: obj
+          - ID: '117'
+            val: Corner[117]
+            type: obj
+          - ID: '118'
+            val: Corner[118]
+            type: obj
+          - ID: '119'
+            val: Corner[119]
+            type: obj
+          - ID: '120'
+            val: Corner[120]
+            type: obj
+          - ID: '121'
+            val: Corner[121]
+            type: obj
+          - ID: '122'
+            val: Corner[122]
+            type: obj
+          - ID: '123'
+            val: Corner[123]
+            type: obj
+          - ID: '124'
+            val: Corner[124]
+            type: obj
+          - ID: '125'
+            val: Corner[125]
+            type: obj
+          - ID: '126'
+            val: Corner[126]
+            type: obj
+          - ID: '127'
+            val: Corner[127]
+            type: obj
+          - ID: '128'
+            val: Corner[128]
+            type: obj
+          - ID: '129'
+            val: Corner[129]
+            type: obj
+          - ID: '130'
+            val: Corner[130]
+            type: obj
+          - ID: '131'
+            val: Corner[131]
+            type: obj
+          - ID: '132'
+            val: Corner[132]
+            type: obj
+          - ID: '133'
+            val: Corner[133]
+            type: obj
+          - ID: '134'
+            val: Corner[134]
+            type: obj
+          - ID: '135'
+            val: Corner[135]
+            type: obj
+          - ID: '136'
+            val: Corner[136]
+            type: obj
+          - ID: '137'
+            val: Corner[137]
+            type: obj
+          - ID: '138'
+            val: Corner[138]
+            type: obj
+          - ID: '139'
+            val: Corner[139]
+            type: obj
+          - ID: '140'
+            val: Corner[140]
+            type: obj
+          - ID: '141'
+            val: Corner[141]
+            type: obj
+          - ID: '142'
+            val: Corner[142]
+            type: obj
+          - ID: '143'
+            val: Corner[143]
+            type: obj
+          - ID: '144'
+            val: Corner[144]
+            type: obj
+    desc:
+      line:
+      - Available Locations
+status:
+  line:
+  - Choose a location to place a settlement
+key: 91b7584a2265b1f5
+players:
+  White:
+    num_res: 0
+    color: White
+    obj_type: GamePlayer
+    name: White
+    reserve:
+      road: 15
+      settlement: 5
+      city: 4
+    buildings:
+      road:
+        _set: []
+      settlement:
+        _set: []
+      city:
+        _set: []
+    resources:
+      wood: 0
+      brick: 0
+      sheep: 0
+      ore: 0
+      wheat: 0
+    devcards:
+      _set: []
+    past_devcards:
+      _set: []
+    vps: 0
+    ports:
+      _set: []
+  Red:
+    num_res: 0
+    color: Red
+    name: Red
+    reserve:
+      road: 15
+      settlement: 5
+      city: 4
+    buildings:
+      road:
+        _set: []
+      settlement:
+        _set: []
+      city:
+        _set: []
+    devcards:
+      _set: []
+    past_devcards:
+      _set: []
+    ports:
+      _set: []
+  Blue:
+    num_res: 0
+    color: Blue
+    name: Blue
+    reserve:
+      road: 15
+      settlement: 5
+      city: 4
+    buildings:
+      road:
+        _set: []
+      settlement:
+        _set: []
+      city:
+        _set: []
+    devcards:
+      _set: []
+    past_devcards:
+      _set: []
+    ports:
+      _set: []
+  Orange:
+    num_res: 0
+    color: Orange
+    name: Orange
+    reserve:
+      road: 15
+      settlement: 5
+      city: 4
+    buildings:
+      road:
+        _set: []
+      settlement:
+        _set: []
+      city:
+        _set: []
+    devcards:
+      _set: []
+    past_devcards:
+      _set: []
+    ports:
+      _set: []
+table:
+  '0':
+    row: 0
+    col: 2
+    neighbors:
+    - 
+    - _obj: '1'
+    - _obj: '4'
+    - _obj: '3'
+    - 
+    - 
+    obj_type: Field
+    visible:
+      _set:
+      - _player: White
+      - _player: Red
+      - _player: Blue
+    edges:
+    - _obj: '19'
+    - _obj: '20'
+    - _obj: '21'
+    - _obj: '22'
+    - _obj: '23'
+    - _obj: '24'
+    corners:
+    - _obj: '91'
+    - _obj: '92'
+    - _obj: '93'
+    - _obj: '94'
+    - _obj: '95'
+    - _obj: '96'
+    res: wood
+    num: 8
+  '1':
+    row: 0
+    col: 4
+    neighbors:
+    - 
+    - _obj: '2'
+    - _obj: '5'
+    - _obj: '4'
+    - _obj: '0'
+    - 
+    obj_type: Field
+    visible:
+      _set:
+      - _player: White
+      - _player: Red
+      - _player: Blue
+    edges:
+    - _obj: '25'
+    - _obj: '26'
+    - _obj: '27'
+    - _obj: '28'
+    - _obj: '20'
+    - _obj: '29'
+    corners:
+    - _obj: '97'
+    - _obj: '98'
+    - _obj: '99'
+    - _obj: '100'
+    - _obj: '93'
+    - _obj: '92'
+    res: sheep
+    num: 12
+  '2':
+    row: 0
+    col: 6
+    neighbors:
+    - 
+    - 
+    - _obj: '6'
+    - _obj: '5'
+    - _obj: '1'
+    - 
+    obj_type: Field
+    visible:
+      _set:
+      - _player: White
+      - _player: Red
+      - _player: Blue
+    edges:
+    - _obj: '30'
+    - _obj: '31'
+    - _obj: '32'
+    - _obj: '33'
+    - _obj: '26'
+    - _obj: '34'
+    corners:
+    - _obj: '101'
+    - _obj: '102'
+    - _obj: '103'
+    - _obj: '104'
+    - _obj: '99'
+    - _obj: '98'
+    res: ore
+    num: 11
+  '3':
+    row: 1
+    col: 1
+    neighbors:
+    - _obj: '0'
+    - _obj: '4'
+    - _obj: '8'
+    - _obj: '7'
+    - 
+    - 
+    obj_type: Field
+    visible:
+      _set:
+      - _player: White
+      - _player: Red
+      - _player: Blue
+    edges:
+    - _obj: '22'
+    - _obj: '35'
+    - _obj: '36'
+    - _obj: '37'
+    - _obj: '38'
+    - _obj: '39'
+    corners:
+    - _obj: '95'
+    - _obj: '94'
+    - _obj: '105'
+    - _obj: '106'
+    - _obj: '107'
+    - _obj: '108'
+    res: desert
+    robber:
+      _obj: '146'
+  '4':
+    row: 1
+    col: 3
+    neighbors:
+    - _obj: '1'
+    - _obj: '5'
+    - _obj: '9'
+    - _obj: '8'
+    - _obj: '3'
+    - _obj: '0'
+    obj_type: Field
+    visible:
+      _set:
+      - _player: White
+      - _player: Red
+      - _player: Blue
+    edges:
+    - _obj: '28'
+    - _obj: '40'
+    - _obj: '41'
+    - _obj: '42'
+    - _obj: '35'
+    - _obj: '21'
+    corners:
+    - _obj: '93'
+    - _obj: '100'
+    - _obj: '109'
+    - _obj: '110'
+    - _obj: '105'
+    - _obj: '94'
+    res: wood
+    num: 9
+  '5':
+    row: 1
+    col: 5
+    neighbors:
+    - _obj: '2'
+    - _obj: '6'
+    - _obj: '10'
+    - _obj: '9'
+    - _obj: '4'
+    - _obj: '1'
+    obj_type: Field
+    visible:
+      _set:
+      - _player: White
+      - _player: Red
+      - _player: Blue
+    edges:
+    - _obj: '33'
+    - _obj: '43'
+    - _obj: '44'
+    - _obj: '45'
+    - _obj: '40'
+    - _obj: '27'
+    corners:
+    - _obj: '99'
+    - _obj: '104'
+    - _obj: '111'
+    - _obj: '112'
+    - _obj: '109'
+    - _obj: '100'
+    res: wheat
+    num: 6
+  '6':
+    row: 1
+    col: 7
+    neighbors:
+    - 
+    - 
+    - _obj: '11'
+    - _obj: '10'
+    - _obj: '5'
+    - _obj: '2'
+    obj_type: Field
+    visible:
+      _set:
+      - _player: White
+      - _player: Red
+      - _player: Blue
+    edges:
+    - _obj: '46'
+    - _obj: '47'
+    - _obj: '48'
+    - _obj: '49'
+    - _obj: '43'
+    - _obj: '32'
+    corners:
+    - _obj: '103'
+    - _obj: '113'
+    - _obj: '114'
+    - _obj: '115'
+    - _obj: '111'
+    - _obj: '104'
+    res: ore
+    num: 11
+  '7':
+    row: 2
+    col: 0
+    neighbors:
+    - _obj: '3'
+    - _obj: '8'
+    - _obj: '12'
+    - 
+    - 
+    - 
+    obj_type: Field
+    visible:
+      _set:
+      - _player: White
+      - _player: Red
+      - _player: Blue
+    edges:
+    - _obj: '37'
+    - _obj: '50'
+    - _obj: '51'
+    - _obj: '52'
+    - _obj: '53'
+    - _obj: '54'
+    corners:
+    - _obj: '107'
+    - _obj: '106'
+    - _obj: '116'
+    - _obj: '117'
+    - _obj: '118'
+    - _obj: '119'
+    res: wheat
+    num: 3
+  '8':
+    row: 2
+    col: 2
+    neighbors:
+    - _obj: '4'
+    - _obj: '9'
+    - _obj: '13'
+    - _obj: '12'
+    - _obj: '7'
+    - _obj: '3'
+    obj_type: Field
+    visible:
+      _set:
+      - _player: White
+      - _player: Red
+      - _player: Blue
+    edges:
+    - _obj: '42'
+    - _obj: '55'
+    - _obj: '56'
+    - _obj: '57'
+    - _obj: '50'
+    - _obj: '36'
+    corners:
+    - _obj: '105'
+    - _obj: '110'
+    - _obj: '120'
+    - _obj: '121'
+    - _obj: '116'
+    - _obj: '106'
+    res: ore
+    num: 10
+  '9':
+    row: 2
+    col: 4
+    neighbors:
+    - _obj: '5'
+    - _obj: '10'
+    - _obj: '14'
+    - _obj: '13'
+    - _obj: '8'
+    - _obj: '4'
+    obj_type: Field
+    visible:
+      _set:
+      - _player: White
+      - _player: Red
+      - _player: Blue
+    edges:
+    - _obj: '45'
+    - _obj: '58'
+    - _obj: '59'
+    - _obj: '60'
+    - _obj: '55'
+    - _obj: '41'
+    corners:
+    - _obj: '109'
+    - _obj: '112'
+    - _obj: '122'
+    - _obj: '123'
+    - _obj: '120'
+    - _obj: '110'
+    res: sheep
+    num: 4
+  '10':
+    row: 2
+    col: 6
+    neighbors:
+    - _obj: '6'
+    - _obj: '11'
+    - _obj: '15'
+    - _obj: '14'
+    - _obj: '9'
+    - _obj: '5'
+    obj_type: Field
+    visible:
+      _set:
+      - _player: White
+      - _player: Red
+      - _player: Blue
+    edges:
+    - _obj: '49'
+    - _obj: '61'
+    - _obj: '62'
+    - _obj: '63'
+    - _obj: '58'
+    - _obj: '44'
+    corners:
+    - _obj: '111'
+    - _obj: '115'
+    - _obj: '124'
+    - _obj: '125'
+    - _obj: '122'
+    - _obj: '112'
+    res: wood
+    num: 5
+  '11':
+    row: 2
+    col: 8
+    neighbors:
+    - 
+    - 
+    - 
+    - _obj: '15'
+    - _obj: '10'
+    - _obj: '6'
+    obj_type: Field
+    visible:
+      _set:
+      - _player: White
+      - _player: Red
+      - _player: Blue
+    edges:
+    - _obj: '64'
+    - _obj: '65'
+    - _obj: '66'
+    - _obj: '67'
+    - _obj: '61'
+    - _obj: '48'
+    corners:
+    - _obj: '114'
+    - _obj: '126'
+    - _obj: '127'
+    - _obj: '128'
+    - _obj: '124'
+    - _obj: '115'
+    res: brick
+    num: 4
+  '12':
+    row: 3
+    col: 1
+    neighbors:
+    - _obj: '8'
+    - _obj: '13'
+    - _obj: '16'
+    - 
+    - 
+    - _obj: '7'
+    obj_type: Field
+    visible:
+      _set:
+      - _player: White
+      - _player: Red
+      - _player: Blue
+    edges:
+    - _obj: '57'
+    - _obj: '68'
+    - _obj: '69'
+    - _obj: '70'
+    - _obj: '71'
+    - _obj: '51'
+    corners:
+    - _obj: '116'
+    - _obj: '121'
+    - _obj: '129'
+    - _obj: '130'
+    - _obj: '131'
+    - _obj: '117'
+    res: brick
+    num: 5
+  '13':
+    row: 3
+    col: 3
+    neighbors:
+    - _obj: '9'
+    - _obj: '14'
+    - _obj: '17'
+    - _obj: '16'
+    - _obj: '12'
+    - _obj: '8'
+    obj_type: Field
+    visible:
+      _set:
+      - _player: White
+      - _player: Red
+      - _player: Blue
+    edges:
+    - _obj: '60'
+    - _obj: '72'
+    - _obj: '73'
+    - _obj: '74'
+    - _obj: '68'
+    - _obj: '56'
+    corners:
+    - _obj: '120'
+    - _obj: '123'
+    - _obj: '132'
+    - _obj: '133'
+    - _obj: '129'
+    - _obj: '121'
+    res: brick
+    num: 10
+  '14':
+    row: 3
+    col: 5
+    neighbors:
+    - _obj: '10'
+    - _obj: '15'
+    - _obj: '18'
+    - _obj: '17'
+    - _obj: '13'
+    - _obj: '9'
+    obj_type: Field
+    visible:
+      _set:
+      - _player: White
+      - _player: Red
+      - _player: Blue
+    edges:
+    - _obj: '63'
+    - _obj: '75'
+    - _obj: '76'
+    - _obj: '77'
+    - _obj: '72'
+    - _obj: '59'
+    corners:
+    - _obj: '122'
+    - _obj: '125'
+    - _obj: '134'
+    - _obj: '135'
+    - _obj: '132'
+    - _obj: '123'
+    res: sheep
+    num: 3
+  '15':
+    row: 3
+    col: 7
+    neighbors:
+    - _obj: '11'
+    - 
+    - 
+    - _obj: '18'
+    - _obj: '14'
+    - _obj: '10'
+    obj_type: Field
+    visible:
+      _set:
+      - _player: White
+      - _player: Red
+      - _player: Blue
+    edges:
+    - _obj: '67'
+    - _obj: '78'
+    - _obj: '79'
+    - _obj: '80'
+    - _obj: '75'
+    - _obj: '62'
+    corners:
+    - _obj: '124'
+    - _obj: '128'
+    - _obj: '136'
+    - _obj: '137'
+    - _obj: '134'
+    - _obj: '125'
+    res: wheat
+    num: 6
+  '16':
+    row: 4
+    col: 2
+    neighbors:
+    - _obj: '13'
+    - _obj: '17'
+    - 
+    - 
+    - 
+    - _obj: '12'
+    obj_type: Field
+    visible:
+      _set:
+      - _player: White
+      - _player: Red
+      - _player: Blue
+    edges:
+    - _obj: '74'
+    - _obj: '81'
+    - _obj: '82'
+    - _obj: '83'
+    - _obj: '84'
+    - _obj: '69'
+    corners:
+    - _obj: '129'
+    - _obj: '133'
+    - _obj: '138'
+    - _obj: '139'
+    - _obj: '140'
+    - _obj: '130'
+    res: wood
+    num: 8
+  '17':
+    row: 4
+    col: 4
+    neighbors:
+    - _obj: '14'
+    - _obj: '18'
+    - 
+    - 
+    - _obj: '16'
+    - _obj: '13'
+    obj_type: Field
+    visible:
+      _set:
+      - _player: White
+      - _player: Red
+      - _player: Blue
+    edges:
+    - _obj: '77'
+    - _obj: '85'
+    - _obj: '86'
+    - _obj: '87'
+    - _obj: '81'
+    - _obj: '73'
+    corners:
+    - _obj: '132'
+    - _obj: '135'
+    - _obj: '141'
+    - _obj: '142'
+    - _obj: '138'
+    - _obj: '133'
+    res: wheat
+    num: 2
+  '18':
+    row: 4
+    col: 6
+    neighbors:
+    - _obj: '15'
+    - 
+    - 
+    - 
+    - _obj: '17'
+    - _obj: '14'
+    obj_type: Field
+    visible:
+      _set:
+      - _player: White
+      - _player: Red
+      - _player: Blue
+    edges:
+    - _obj: '80'
+    - _obj: '88'
+    - _obj: '89'
+    - _obj: '90'
+    - _obj: '85'
+    - _obj: '76'
+    corners:
+    - _obj: '134'
+    - _obj: '137'
+    - _obj: '143'
+    - _obj: '144'
+    - _obj: '141'
+    - _obj: '135'
+    res: sheep
+    num: 9
+  '19':
+    fields:
+    - 
+    - _obj: '0'
+    obj_type: Edge
+    visible:
+      _set:
+      - _player: White
+      - _player: Red
+      - _player: Blue
+    corners:
+    - _obj: '92'
+    - _obj: '91'
+  '20':
+    fields:
+    - _obj: '1'
+    - _obj: '0'
+    obj_type: Edge
+    visible:
+      _set:
+      - _player: White
+      - _player: Red
+      - _player: Blue
+    corners:
+    - _obj: '92'
+    - _obj: '93'
+  '21':
+    fields:
+    - _obj: '4'
+    - _obj: '0'
+    obj_type: Edge
+    visible:
+      _set:
+      - _player: White
+      - _player: Red
+      - _player: Blue
+    corners:
+    - _obj: '93'
+    - _obj: '94'
+  '22':
+    fields:
+    - _obj: '0'
+    - _obj: '3'
+    obj_type: Edge
+    visible:
+      _set:
+      - _player: White
+      - _player: Red
+      - _player: Blue
+    corners:
+    - _obj: '94'
+    - _obj: '95'
+  '23':
+    fields:
+    - _obj: '0'
+    - 
+    obj_type: Edge
+    visible:
+      _set:
+      - _player: White
+      - _player: Red
+      - _player: Blue
+    corners:
+    - _obj: '96'
+    - _obj: '95'
+  '24':
+    fields:
+    - _obj: '0'
+    - 
+    obj_type: Edge
+    visible:
+      _set:
+      - _player: White
+      - _player: Red
+      - _player: Blue
+    corners:
+    - _obj: '91'
+    - _obj: '96'
+  '25':
+    fields:
+    - 
+    - _obj: '1'
+    obj_type: Edge
+    visible:
+      _set:
+      - _player: White
+      - _player: Red
+      - _player: Blue
+    corners:
+    - _obj: '98'
+    - _obj: '97'
+  '26':
+    fields:
+    - _obj: '2'
+    - _obj: '1'
+    obj_type: Edge
+    visible:
+      _set:
+      - _player: White
+      - _player: Red
+      - _player: Blue
+    corners:
+    - _obj: '98'
+    - _obj: '99'
+  '27':
+    fields:
+    - _obj: '5'
+    - _obj: '1'
+    obj_type: Edge
+    visible:
+      _set:
+      - _player: White
+      - _player: Red
+      - _player: Blue
+    corners:
+    - _obj: '99'
+    - _obj: '100'
+  '28':
+    fields:
+    - _obj: '1'
+    - _obj: '4'
+    obj_type: Edge
+    visible:
+      _set:
+      - _player: White
+      - _player: Red
+      - _player: Blue
+    corners:
+    - _obj: '100'
+    - _obj: '93'
+  '29':
+    fields:
+    - _obj: '1'
+    - 
+    obj_type: Edge
+    visible:
+      _set:
+      - _player: White
+      - _player: Red
+      - _player: Blue
+    corners:
+    - _obj: '97'
+    - _obj: '92'
+  '30':
+    fields:
+    - 
+    - _obj: '2'
+    obj_type: Edge
+    visible:
+      _set:
+      - _player: White
+      - _player: Red
+      - _player: Blue
+    corners:
+    - _obj: '102'
+    - _obj: '101'
+  '31':
+    fields:
+    - 
+    - _obj: '2'
+    obj_type: Edge
+    visible:
+      _set:
+      - _player: White
+      - _player: Red
+      - _player: Blue
+    corners:
+    - _obj: '102'
+    - _obj: '103'
+  '32':
+    fields:
+    - _obj: '6'
+    - _obj: '2'
+    obj_type: Edge
+    visible:
+      _set:
+      - _player: White
+      - _player: Red
+      - _player: Blue
+    corners:
+    - _obj: '103'
+    - _obj: '104'
+  '33':
+    fields:
+    - _obj: '2'
+    - _obj: '5'
+    obj_type: Edge
+    visible:
+      _set:
+      - _player: White
+      - _player: Red
+      - _player: Blue
+    corners:
+    - _obj: '104'
+    - _obj: '99'
+  '34':
+    fields:
+    - _obj: '2'
+    - 
+    obj_type: Edge
+    visible:
+      _set:
+      - _player: White
+      - _player: Red
+      - _player: Blue
+    corners:
+    - _obj: '101'
+    - _obj: '98'
+  '35':
+    fields:
+    - _obj: '4'
+    - _obj: '3'
+    obj_type: Edge
+    visible:
+      _set:
+      - _player: White
+      - _player: Red
+      - _player: Blue
+    corners:
+    - _obj: '94'
+    - _obj: '105'
+  '36':
+    fields:
+    - _obj: '8'
+    - _obj: '3'
+    obj_type: Edge
+    visible:
+      _set:
+      - _player: White
+      - _player: Red
+      - _player: Blue
+    corners:
+    - _obj: '105'
+    - _obj: '106'
+  '37':
+    fields:
+    - _obj: '3'
+    - _obj: '7'
+    obj_type: Edge
+    visible:
+      _set:
+      - _player: White
+      - _player: Red
+      - _player: Blue
+    corners:
+    - _obj: '106'
+    - _obj: '107'
+  '38':
+    fields:
+    - _obj: '3'
+    - 
+    obj_type: Edge
+    visible:
+      _set:
+      - _player: White
+      - _player: Red
+      - _player: Blue
+    corners:
+    - _obj: '108'
+    - _obj: '107'
+  '39':
+    fields:
+    - _obj: '3'
+    - 
+    obj_type: Edge
+    visible:
+      _set:
+      - _player: White
+      - _player: Red
+      - _player: Blue
+    corners:
+    - _obj: '95'
+    - _obj: '108'
+  '40':
+    fields:
+    - _obj: '5'
+    - _obj: '4'
+    obj_type: Edge
+    visible:
+      _set:
+      - _player: White
+      - _player: Red
+      - _player: Blue
+    corners:
+    - _obj: '100'
+    - _obj: '109'
+  '41':
+    fields:
+    - _obj: '9'
+    - _obj: '4'
+    obj_type: Edge
+    visible:
+      _set:
+      - _player: White
+      - _player: Red
+      - _player: Blue
+    corners:
+    - _obj: '109'
+    - _obj: '110'
+  '42':
+    fields:
+    - _obj: '4'
+    - _obj: '8'
+    obj_type: Edge
+    visible:
+      _set:
+      - _player: White
+      - _player: Red
+      - _player: Blue
+    corners:
+    - _obj: '110'
+    - _obj: '105'
+  '43':
+    fields:
+    - _obj: '6'
+    - _obj: '5'
+    obj_type: Edge
+    visible:
+      _set:
+      - _player: White
+      - _player: Red
+      - _player: Blue
+    corners:
+    - _obj: '104'
+    - _obj: '111'
+  '44':
+    fields:
+    - _obj: '10'
+    - _obj: '5'
+    obj_type: Edge
+    visible:
+      _set:
+      - _player: White
+      - _player: Red
+      - _player: Blue
+    corners:
+    - _obj: '111'
+    - _obj: '112'
+  '45':
+    fields:
+    - _obj: '5'
+    - _obj: '9'
+    obj_type: Edge
+    visible:
+      _set:
+      - _player: White
+      - _player: Red
+      - _player: Blue
+    corners:
+    - _obj: '112'
+    - _obj: '109'
+  '46':
+    fields:
+    - 
+    - _obj: '6'
+    obj_type: Edge
+    visible:
+      _set:
+      - _player: White
+      - _player: Red
+      - _player: Blue
+    corners:
+    - _obj: '113'
+    - _obj: '103'
+  '47':
+    fields:
+    - 
+    - _obj: '6'
+    obj_type: Edge
+    visible:
+      _set:
+      - _player: White
+      - _player: Red
+      - _player: Blue
+    corners:
+    - _obj: '113'
+    - _obj: '114'
+  '48':
+    fields:
+    - _obj: '11'
+    - _obj: '6'
+    obj_type: Edge
+    visible:
+      _set:
+      - _player: White
+      - _player: Red
+      - _player: Blue
+    corners:
+    - _obj: '114'
+    - _obj: '115'
+  '49':
+    fields:
+    - _obj: '6'
+    - _obj: '10'
+    obj_type: Edge
+    visible:
+      _set:
+      - _player: White
+      - _player: Red
+      - _player: Blue
+    corners:
+    - _obj: '115'
+    - _obj: '111'
+  '50':
+    fields:
+    - _obj: '8'
+    - _obj: '7'
+    obj_type: Edge
+    visible:
+      _set:
+      - _player: White
+      - _player: Red
+      - _player: Blue
+    corners:
+    - _obj: '106'
+    - _obj: '116'
+  '51':
+    fields:
+    - _obj: '12'
+    - _obj: '7'
+    obj_type: Edge
+    visible:
+      _set:
+      - _player: White
+      - _player: Red
+      - _player: Blue
+    corners:
+    - _obj: '116'
+    - _obj: '117'
+  '52':
+    fields:
+    - _obj: '7'
+    - 
+    obj_type: Edge
+    visible:
+      _set:
+      - _player: White
+      - _player: Red
+      - _player: Blue
+    corners:
+    - _obj: '117'
+    - _obj: '118'
+  '53':
+    fields:
+    - _obj: '7'
+    - 
+    obj_type: Edge
+    visible:
+      _set:
+      - _player: White
+      - _player: Red
+      - _player: Blue
+    corners:
+    - _obj: '119'
+    - _obj: '118'
+  '54':
+    fields:
+    - _obj: '7'
+    - 
+    obj_type: Edge
+    visible:
+      _set:
+      - _player: White
+      - _player: Red
+      - _player: Blue
+    corners:
+    - _obj: '107'
+    - _obj: '119'
+  '55':
+    fields:
+    - _obj: '9'
+    - _obj: '8'
+    obj_type: Edge
+    visible:
+      _set:
+      - _player: White
+      - _player: Red
+      - _player: Blue
+    corners:
+    - _obj: '110'
+    - _obj: '120'
+  '56':
+    fields:
+    - _obj: '13'
+    - _obj: '8'
+    obj_type: Edge
+    visible:
+      _set:
+      - _player: White
+      - _player: Red
+      - _player: Blue
+    corners:
+    - _obj: '120'
+    - _obj: '121'
+  '57':
+    fields:
+    - _obj: '8'
+    - _obj: '12'
+    obj_type: Edge
+    visible:
+      _set:
+      - _player: White
+      - _player: Red
+      - _player: Blue
+    corners:
+    - _obj: '121'
+    - _obj: '116'
+  '58':
+    fields:
+    - _obj: '10'
+    - _obj: '9'
+    obj_type: Edge
+    visible:
+      _set:
+      - _player: White
+      - _player: Red
+      - _player: Blue
+    corners:
+    - _obj: '112'
+    - _obj: '122'
+  '59':
+    fields:
+    - _obj: '14'
+    - _obj: '9'
+    obj_type: Edge
+    visible:
+      _set:
+      - _player: White
+      - _player: Red
+      - _player: Blue
+    corners:
+    - _obj: '122'
+    - _obj: '123'
+  '60':
+    fields:
+    - _obj: '9'
+    - _obj: '13'
+    obj_type: Edge
+    visible:
+      _set:
+      - _player: White
+      - _player: Red
+      - _player: Blue
+    corners:
+    - _obj: '123'
+    - _obj: '120'
+  '61':
+    fields:
+    - _obj: '11'
+    - _obj: '10'
+    obj_type: Edge
+    visible:
+      _set:
+      - _player: White
+      - _player: Red
+      - _player: Blue
+    corners:
+    - _obj: '115'
+    - _obj: '124'
+  '62':
+    fields:
+    - _obj: '15'
+    - _obj: '10'
+    obj_type: Edge
+    visible:
+      _set:
+      - _player: White
+      - _player: Red
+      - _player: Blue
+    corners:
+    - _obj: '124'
+    - _obj: '125'
+  '63':
+    fields:
+    - _obj: '10'
+    - _obj: '14'
+    obj_type: Edge
+    visible:
+      _set:
+      - _player: White
+      - _player: Red
+      - _player: Blue
+    corners:
+    - _obj: '125'
+    - _obj: '122'
+  '64':
+    fields:
+    - 
+    - _obj: '11'
+    obj_type: Edge
+    visible:
+      _set:
+      - _player: White
+      - _player: Red
+      - _player: Blue
+    corners:
+    - _obj: '126'
+    - _obj: '114'
+  '65':
+    fields:
+    - 
+    - _obj: '11'
+    obj_type: Edge
+    visible:
+      _set:
+      - _player: White
+      - _player: Red
+      - _player: Blue
+    corners:
+    - _obj: '126'
+    - _obj: '127'
+  '66':
+    fields:
+    - 
+    - _obj: '11'
+    obj_type: Edge
+    visible:
+      _set:
+      - _player: White
+      - _player: Red
+      - _player: Blue
+    corners:
+    - _obj: '127'
+    - _obj: '128'
+  '67':
+    fields:
+    - _obj: '11'
+    - _obj: '15'
+    obj_type: Edge
+    visible:
+      _set:
+      - _player: White
+      - _player: Red
+      - _player: Blue
+    corners:
+    - _obj: '128'
+    - _obj: '124'
+  '68':
+    fields:
+    - _obj: '13'
+    - _obj: '12'
+    obj_type: Edge
+    visible:
+      _set:
+      - _player: White
+      - _player: Red
+      - _player: Blue
+    corners:
+    - _obj: '121'
+    - _obj: '129'
+  '69':
+    fields:
+    - _obj: '16'
+    - _obj: '12'
+    obj_type: Edge
+    visible:
+      _set:
+      - _player: White
+      - _player: Red
+      - _player: Blue
+    corners:
+    - _obj: '129'
+    - _obj: '130'
+  '70':
+    fields:
+    - _obj: '12'
+    - 
+    obj_type: Edge
+    visible:
+      _set:
+      - _player: White
+      - _player: Red
+      - _player: Blue
+    corners:
+    - _obj: '130'
+    - _obj: '131'
+  '71':
+    fields:
+    - _obj: '12'
+    - 
+    obj_type: Edge
+    visible:
+      _set:
+      - _player: White
+      - _player: Red
+      - _player: Blue
+    corners:
+    - _obj: '117'
+    - _obj: '131'
+  '72':
+    fields:
+    - _obj: '14'
+    - _obj: '13'
+    obj_type: Edge
+    visible:
+      _set:
+      - _player: White
+      - _player: Red
+      - _player: Blue
+    corners:
+    - _obj: '123'
+    - _obj: '132'
+  '73':
+    fields:
+    - _obj: '17'
+    - _obj: '13'
+    obj_type: Edge
+    visible:
+      _set:
+      - _player: White
+      - _player: Red
+      - _player: Blue
+    corners:
+    - _obj: '132'
+    - _obj: '133'
+  '74':
+    fields:
+    - _obj: '13'
+    - _obj: '16'
+    obj_type: Edge
+    visible:
+      _set:
+      - _player: White
+      - _player: Red
+      - _player: Blue
+    corners:
+    - _obj: '133'
+    - _obj: '129'
+  '75':
+    fields:
+    - _obj: '15'
+    - _obj: '14'
+    obj_type: Edge
+    visible:
+      _set:
+      - _player: White
+      - _player: Red
+      - _player: Blue
+    corners:
+    - _obj: '125'
+    - _obj: '134'
+  '76':
+    fields:
+    - _obj: '18'
+    - _obj: '14'
+    obj_type: Edge
+    visible:
+      _set:
+      - _player: White
+      - _player: Red
+      - _player: Blue
+    corners:
+    - _obj: '134'
+    - _obj: '135'
+  '77':
+    fields:
+    - _obj: '14'
+    - _obj: '17'
+    obj_type: Edge
+    visible:
+      _set:
+      - _player: White
+      - _player: Red
+      - _player: Blue
+    corners:
+    - _obj: '135'
+    - _obj: '132'
+  '78':
+    fields:
+    - 
+    - _obj: '15'
+    obj_type: Edge
+    visible:
+      _set:
+      - _player: White
+      - _player: Red
+      - _player: Blue
+    corners:
+    - _obj: '128'
+    - _obj: '136'
+  '79':
+    fields:
+    - 
+    - _obj: '15'
+    obj_type: Edge
+    visible:
+      _set:
+      - _player: White
+      - _player: Red
+      - _player: Blue
+    corners:
+    - _obj: '136'
+    - _obj: '137'
+  '80':
+    fields:
+    - _obj: '15'
+    - _obj: '18'
+    obj_type: Edge
+    visible:
+      _set:
+      - _player: White
+      - _player: Red
+      - _player: Blue
+    corners:
+    - _obj: '137'
+    - _obj: '134'
+  '81':
+    fields:
+    - _obj: '17'
+    - _obj: '16'
+    obj_type: Edge
+    visible:
+      _set:
+      - _player: White
+      - _player: Red
+      - _player: Blue
+    corners:
+    - _obj: '133'
+    - _obj: '138'
+  '82':
+    fields:
+    - 
+    - _obj: '16'
+    obj_type: Edge
+    visible:
+      _set:
+      - _player: White
+      - _player: Red
+      - _player: Blue
+    corners:
+    - _obj: '138'
+    - _obj: '139'
+  '83':
+    fields:
+    - _obj: '16'
+    - 
+    obj_type: Edge
+    visible:
+      _set:
+      - _player: White
+      - _player: Red
+      - _player: Blue
+    corners:
+    - _obj: '139'
+    - _obj: '140'
+  '84':
+    fields:
+    - _obj: '16'
+    - 
+    obj_type: Edge
+    visible:
+      _set:
+      - _player: White
+      - _player: Red
+      - _player: Blue
+    corners:
+    - _obj: '130'
+    - _obj: '140'
+  '85':
+    fields:
+    - _obj: '18'
+    - _obj: '17'
+    obj_type: Edge
+    visible:
+      _set:
+      - _player: White
+      - _player: Red
+      - _player: Blue
+    corners:
+    - _obj: '135'
+    - _obj: '141'
+  '86':
+    fields:
+    - 
+    - _obj: '17'
+    obj_type: Edge
+    visible:
+      _set:
+      - _player: White
+      - _player: Red
+      - _player: Blue
+    corners:
+    - _obj: '141'
+    - _obj: '142'
+  '87':
+    fields:
+    - _obj: '17'
+    - 
+    obj_type: Edge
+    visible:
+      _set:
+      - _player: White
+      - _player: Red
+      - _player: Blue
+    corners:
+    - _obj: '142'
+    - _obj: '138'
+  '88':
+    fields:
+    - 
+    - _obj: '18'
+    obj_type: Edge
+    visible:
+      _set:
+      - _player: White
+      - _player: Red
+      - _player: Blue
+    corners:
+    - _obj: '137'
+    - _obj: '143'
+  '89':
+    fields:
+    - 
+    - _obj: '18'
+    obj_type: Edge
+    visible:
+      _set:
+      - _player: White
+      - _player: Red
+      - _player: Blue
+    corners:
+    - _obj: '143'
+    - _obj: '144'
+  '90':
+    fields:
+    - _obj: '18'
+    - 
+    obj_type: Edge
+    visible:
+      _set:
+      - _player: White
+      - _player: Red
+      - _player: Blue
+    corners:
+    - _obj: '144'
+    - _obj: '141'
+  '91':
+    fields:
+    - 
+    - _obj: '0'
+    - 
+    obj_type: Corner
+    visible:
+      _set:
+      - _player: White
+      - _player: Red
+      - _player: Blue
+    edges:
+    - 
+    - _obj: '19'
+    - _obj: '24'
+    port: 3to1
+  '92':
+    fields:
+    - 
+    - _obj: '1'
+    - _obj: '0'
+    obj_type: Corner
+    visible:
+      _set:
+      - _player: White
+      - _player: Red
+      - _player: Blue
+    edges:
+    - _obj: '29'
+    - _obj: '20'
+    - _obj: '19'
+  '93':
+    fields:
+    - _obj: '1'
+    - _obj: '4'
+    - _obj: '0'
+    obj_type: Corner
+    visible:
+      _set:
+      - _player: White
+      - _player: Red
+      - _player: Blue
+    edges:
+    - _obj: '20'
+    - _obj: '28'
+    - _obj: '21'
+  '94':
+    fields:
+    - _obj: '0'
+    - _obj: '4'
+    - _obj: '3'
+    obj_type: Corner
+    visible:
+      _set:
+      - _player: White
+      - _player: Red
+      - _player: Blue
+    edges:
+    - _obj: '21'
+    - _obj: '35'
+    - _obj: '22'
+  '95':
+    fields:
+    - _obj: '0'
+    - _obj: '3'
+    - 
+    obj_type: Corner
+    visible:
+      _set:
+      - _player: White
+      - _player: Red
+      - _player: Blue
+    edges:
+    - _obj: '23'
+    - _obj: '22'
+    - _obj: '39'
+  '96':
+    fields:
+    - 
+    - _obj: '0'
+    - 
+    obj_type: Corner
+    visible:
+      _set:
+      - _player: White
+      - _player: Red
+      - _player: Blue
+    edges:
+    - _obj: '24'
+    - _obj: '23'
+    - 
+    port: 3to1
+  '97':
+    fields:
+    - 
+    - _obj: '1'
+    - 
+    obj_type: Corner
+    visible:
+      _set:
+      - _player: White
+      - _player: Red
+      - _player: Blue
+    edges:
+    - 
+    - _obj: '25'
+    - _obj: '29'
+    port: sheep
+  '98':
+    fields:
+    - 
+    - _obj: '2'
+    - _obj: '1'
+    obj_type: Corner
+    visible:
+      _set:
+      - _player: White
+      - _player: Red
+      - _player: Blue
+    edges:
+    - _obj: '34'
+    - _obj: '26'
+    - _obj: '25'
+    port: sheep
+  '99':
+    fields:
+    - _obj: '2'
+    - _obj: '5'
+    - _obj: '1'
+    obj_type: Corner
+    visible:
+      _set:
+      - _player: White
+      - _player: Red
+      - _player: Blue
+    edges:
+    - _obj: '26'
+    - _obj: '33'
+    - _obj: '27'
+  '100':
+    fields:
+    - _obj: '1'
+    - _obj: '5'
+    - _obj: '4'
+    obj_type: Corner
+    visible:
+      _set:
+      - _player: White
+      - _player: Red
+      - _player: Blue
+    edges:
+    - _obj: '27'
+    - _obj: '40'
+    - _obj: '28'
+  '101':
+    fields:
+    - 
+    - _obj: '2'
+    - 
+    obj_type: Corner
+    visible:
+      _set:
+      - _player: White
+      - _player: Red
+      - _player: Blue
+    edges:
+    - 
+    - _obj: '30'
+    - _obj: '34'
+  '102':
+    fields:
+    - 
+    - 
+    - _obj: '2'
+    obj_type: Corner
+    visible:
+      _set:
+      - _player: White
+      - _player: Red
+      - _player: Blue
+    edges:
+    - 
+    - _obj: '31'
+    - _obj: '30'
+  '103':
+    fields:
+    - 
+    - _obj: '6'
+    - _obj: '2'
+    obj_type: Corner
+    visible:
+      _set:
+      - _player: White
+      - _player: Red
+      - _player: Blue
+    edges:
+    - _obj: '31'
+    - _obj: '46'
+    - _obj: '32'
+    port: 3to1
+  '104':
+    fields:
+    - _obj: '2'
+    - _obj: '6'
+    - _obj: '5'
+    obj_type: Corner
+    visible:
+      _set:
+      - _player: White
+      - _player: Red
+      - _player: Blue
+    edges:
+    - _obj: '32'
+    - _obj: '43'
+    - _obj: '33'
+  '105':
+    fields:
+    - _obj: '4'
+    - _obj: '8'
+    - _obj: '3'
+    obj_type: Corner
+    visible:
+      _set:
+      - _player: White
+      - _player: Red
+      - _player: Blue
+    edges:
+    - _obj: '35'
+    - _obj: '42'
+    - _obj: '36'
+  '106':
+    fields:
+    - _obj: '3'
+    - _obj: '8'
+    - _obj: '7'
+    obj_type: Corner
+    visible:
+      _set:
+      - _player: White
+      - _player: Red
+      - _player: Blue
+    edges:
+    - _obj: '36'
+    - _obj: '50'
+    - _obj: '37'
+  '107':
+    fields:
+    - _obj: '3'
+    - _obj: '7'
+    - 
+    obj_type: Corner
+    visible:
+      _set:
+      - _player: White
+      - _player: Red
+      - _player: Blue
+    edges:
+    - _obj: '38'
+    - _obj: '37'
+    - _obj: '54'
+    port: ore
+  '108':
+    fields:
+    - 
+    - _obj: '3'
+    - 
+    obj_type: Corner
+    visible:
+      _set:
+      - _player: White
+      - _player: Red
+      - _player: Blue
+    edges:
+    - _obj: '39'
+    - _obj: '38'
+    - 
+    port: ore
+  '109':
+    fields:
+    - _obj: '5'
+    - _obj: '9'
+    - _obj: '4'
+    obj_type: Corner
+    visible:
+      _set:
+      - _player: White
+      - _player: Red
+      - _player: Blue
+    edges:
+    - _obj: '40'
+    - _obj: '45'
+    - _obj: '41'
+  '110':
+    fields:
+    - _obj: '4'
+    - _obj: '9'
+    - _obj: '8'
+    obj_type: Corner
+    visible:
+      _set:
+      - _player: White
+      - _player: Red
+      - _player: Blue
+    edges:
+    - _obj: '41'
+    - _obj: '55'
+    - _obj: '42'
+  '111':
+    fields:
+    - _obj: '6'
+    - _obj: '10'
+    - _obj: '5'
+    obj_type: Corner
+    visible:
+      _set:
+      - _player: White
+      - _player: Red
+      - _player: Blue
+    edges:
+    - _obj: '43'
+    - _obj: '49'
+    - _obj: '44'
+  '112':
+    fields:
+    - _obj: '5'
+    - _obj: '10'
+    - _obj: '9'
+    obj_type: Corner
+    visible:
+      _set:
+      - _player: White
+      - _player: Red
+      - _player: Blue
+    edges:
+    - _obj: '44'
+    - _obj: '58'
+    - _obj: '45'
+  '113':
+    fields:
+    - 
+    - 
+    - _obj: '6'
+    obj_type: Corner
+    visible:
+      _set:
+      - _player: White
+      - _player: Red
+      - _player: Blue
+    edges:
+    - 
+    - _obj: '47'
+    - _obj: '46'
+    port: 3to1
+  '114':
+    fields:
+    - 
+    - _obj: '11'
+    - _obj: '6'
+    obj_type: Corner
+    visible:
+      _set:
+      - _player: White
+      - _player: Red
+      - _player: Blue
+    edges:
+    - _obj: '47'
+    - _obj: '64'
+    - _obj: '48'
+  '115':
+    fields:
+    - _obj: '6'
+    - _obj: '11'
+    - _obj: '10'
+    obj_type: Corner
+    visible:
+      _set:
+      - _player: White
+      - _player: Red
+      - _player: Blue
+    edges:
+    - _obj: '48'
+    - _obj: '61'
+    - _obj: '49'
+  '116':
+    fields:
+    - _obj: '8'
+    - _obj: '12'
+    - _obj: '7'
+    obj_type: Corner
+    visible:
+      _set:
+      - _player: White
+      - _player: Red
+      - _player: Blue
+    edges:
+    - _obj: '50'
+    - _obj: '57'
+    - _obj: '51'
+  '117':
+    fields:
+    - _obj: '7'
+    - _obj: '12'
+    - 
+    obj_type: Corner
+    visible:
+      _set:
+      - _player: White
+      - _player: Red
+      - _player: Blue
+    edges:
+    - _obj: '51'
+    - _obj: '71'
+    - _obj: '52'
+    port: wheat
+  '118':
+    fields:
+    - _obj: '7'
+    - 
+    - 
+    obj_type: Corner
+    visible:
+      _set:
+      - _player: White
+      - _player: Red
+      - _player: Blue
+    edges:
+    - _obj: '53'
+    - _obj: '52'
+    - 
+  '119':
+    fields:
+    - 
+    - _obj: '7'
+    - 
+    obj_type: Corner
+    visible:
+      _set:
+      - _player: White
+      - _player: Red
+      - _player: Blue
+    edges:
+    - _obj: '54'
+    - _obj: '53'
+    - 
+  '120':
+    fields:
+    - _obj: '9'
+    - _obj: '13'
+    - _obj: '8'
+    obj_type: Corner
+    visible:
+      _set:
+      - _player: White
+      - _player: Red
+      - _player: Blue
+    edges:
+    - _obj: '55'
+    - _obj: '60'
+    - _obj: '56'
+  '121':
+    fields:
+    - _obj: '8'
+    - _obj: '13'
+    - _obj: '12'
+    obj_type: Corner
+    visible:
+      _set:
+      - _player: White
+      - _player: Red
+      - _player: Blue
+    edges:
+    - _obj: '56'
+    - _obj: '68'
+    - _obj: '57'
+  '122':
+    fields:
+    - _obj: '10'
+    - _obj: '14'
+    - _obj: '9'
+    obj_type: Corner
+    visible:
+      _set:
+      - _player: White
+      - _player: Red
+      - _player: Blue
+    edges:
+    - _obj: '58'
+    - _obj: '63'
+    - _obj: '59'
+  '123':
+    fields:
+    - _obj: '9'
+    - _obj: '14'
+    - _obj: '13'
+    obj_type: Corner
+    visible:
+      _set:
+      - _player: White
+      - _player: Red
+      - _player: Blue
+    edges:
+    - _obj: '59'
+    - _obj: '72'
+    - _obj: '60'
+  '124':
+    fields:
+    - _obj: '11'
+    - _obj: '15'
+    - _obj: '10'
+    obj_type: Corner
+    visible:
+      _set:
+      - _player: White
+      - _player: Red
+      - _player: Blue
+    edges:
+    - _obj: '61'
+    - _obj: '67'
+    - _obj: '62'
+  '125':
+    fields:
+    - _obj: '10'
+    - _obj: '15'
+    - _obj: '14'
+    obj_type: Corner
+    visible:
+      _set:
+      - _player: White
+      - _player: Red
+      - _player: Blue
+    edges:
+    - _obj: '62'
+    - _obj: '75'
+    - _obj: '63'
+  '126':
+    fields:
+    - 
+    - 
+    - _obj: '11'
+    obj_type: Corner
+    visible:
+      _set:
+      - _player: White
+      - _player: Red
+      - _player: Blue
+    edges:
+    - 
+    - _obj: '65'
+    - _obj: '64'
+    port: 3to1
+  '127':
+    fields:
+    - 
+    - 
+    - _obj: '11'
+    obj_type: Corner
+    visible:
+      _set:
+      - _player: White
+      - _player: Red
+      - _player: Blue
+    edges:
+    - _obj: '65'
+    - 
+    - _obj: '66'
+    port: 3to1
+  '128':
+    fields:
+    - _obj: '11'
+    - 
+    - _obj: '15'
+    obj_type: Corner
+    visible:
+      _set:
+      - _player: White
+      - _player: Red
+      - _player: Blue
+    edges:
+    - _obj: '66'
+    - _obj: '78'
+    - _obj: '67'
+  '129':
+    fields:
+    - _obj: '13'
+    - _obj: '16'
+    - _obj: '12'
+    obj_type: Corner
+    visible:
+      _set:
+      - _player: White
+      - _player: Red
+      - _player: Blue
+    edges:
+    - _obj: '68'
+    - _obj: '74'
+    - _obj: '69'
+  '130':
+    fields:
+    - _obj: '12'
+    - _obj: '16'
+    - 
+    obj_type: Corner
+    visible:
+      _set:
+      - _player: White
+      - _player: Red
+      - _player: Blue
+    edges:
+    - _obj: '69'
+    - _obj: '84'
+    - _obj: '70'
+  '131':
+    fields:
+    - _obj: '12'
+    - 
+    - 
+    obj_type: Corner
+    visible:
+      _set:
+      - _player: White
+      - _player: Red
+      - _player: Blue
+    edges:
+    - _obj: '71'
+    - _obj: '70'
+    - 
+    port: wheat
+  '132':
+    fields:
+    - _obj: '14'
+    - _obj: '17'
+    - _obj: '13'
+    obj_type: Corner
+    visible:
+      _set:
+      - _player: White
+      - _player: Red
+      - _player: Blue
+    edges:
+    - _obj: '72'
+    - _obj: '77'
+    - _obj: '73'
+  '133':
+    fields:
+    - _obj: '13'
+    - _obj: '17'
+    - _obj: '16'
+    obj_type: Corner
+    visible:
+      _set:
+      - _player: White
+      - _player: Red
+      - _player: Blue
+    edges:
+    - _obj: '73'
+    - _obj: '81'
+    - _obj: '74'
+  '134':
+    fields:
+    - _obj: '15'
+    - _obj: '18'
+    - _obj: '14'
+    obj_type: Corner
+    visible:
+      _set:
+      - _player: White
+      - _player: Red
+      - _player: Blue
+    edges:
+    - _obj: '75'
+    - _obj: '80'
+    - _obj: '76'
+  '135':
+    fields:
+    - _obj: '14'
+    - _obj: '18'
+    - _obj: '17'
+    obj_type: Corner
+    visible:
+      _set:
+      - _player: White
+      - _player: Red
+      - _player: Blue
+    edges:
+    - _obj: '76'
+    - _obj: '85'
+    - _obj: '77'
+  '136':
+    fields:
+    - 
+    - 
+    - _obj: '15'
+    obj_type: Corner
+    visible:
+      _set:
+      - _player: White
+      - _player: Red
+      - _player: Blue
+    edges:
+    - _obj: '78'
+    - 
+    - _obj: '79'
+    port: brick
+  '137':
+    fields:
+    - _obj: '15'
+    - 
+    - _obj: '18'
+    obj_type: Corner
+    visible:
+      _set:
+      - _player: White
+      - _player: Red
+      - _player: Blue
+    edges:
+    - _obj: '79'
+    - _obj: '88'
+    - _obj: '80'
+    port: brick
+  '138':
+    fields:
+    - _obj: '17'
+    - 
+    - _obj: '16'
+    obj_type: Corner
+    visible:
+      _set:
+      - _player: White
+      - _player: Red
+      - _player: Blue
+    edges:
+    - _obj: '81'
+    - _obj: '87'
+    - _obj: '82'
+  '139':
+    fields:
+    - _obj: '16'
+    - 
+    - 
+    obj_type: Corner
+    visible:
+      _set:
+      - _player: White
+      - _player: Red
+      - _player: Blue
+    edges:
+    - _obj: '82'
+    - 
+    - _obj: '83'
+    port: 3to1
+  '140':
+    fields:
+    - _obj: '16'
+    - 
+    - 
+    obj_type: Corner
+    visible:
+      _set:
+      - _player: White
+      - _player: Red
+      - _player: Blue
+    edges:
+    - _obj: '84'
+    - _obj: '83'
+    - 
+    port: 3to1
+  '141':
+    fields:
+    - _obj: '18'
+    - 
+    - _obj: '17'
+    obj_type: Corner
+    visible:
+      _set:
+      - _player: White
+      - _player: Red
+      - _player: Blue
+    edges:
+    - _obj: '85'
+    - _obj: '90'
+    - _obj: '86'
+    port: wood
+  '142':
+    fields:
+    - _obj: '17'
+    - 
+    - 
+    obj_type: Corner
+    visible:
+      _set:
+      - _player: White
+      - _player: Red
+      - _player: Blue
+    edges:
+    - _obj: '86'
+    - 
+    - _obj: '87'
+    port: wood
+  '143':
+    fields:
+    - 
+    - 
+    - _obj: '18'
+    obj_type: Corner
+    visible:
+      _set:
+      - _player: White
+      - _player: Red
+      - _player: Blue
+    edges:
+    - _obj: '88'
+    - 
+    - _obj: '89'
+  '144':
+    fields:
+    - _obj: '18'
+    - 
+    - 
+    obj_type: Corner
+    visible:
+      _set:
+      - _player: White
+      - _player: Red
+      - _player: Blue
+    edges:
+    - _obj: '89'
+    - 
+    - _obj: '90'
+  '145':
+    fields:
+      _set:
+      - _obj: '0'
+      - _obj: '1'
+      - _obj: '2'
+      - _obj: '3'
+      - _obj: '4'
+      - _obj: '5'
+      - _obj: '6'
+      - _obj: '7'
+      - _obj: '8'
+      - _obj: '9'
+      - _obj: '10'
+      - _obj: '11'
+      - _obj: '12'
+      - _obj: '13'
+      - _obj: '14'
+      - _obj: '15'
+      - _obj: '16'
+      - _obj: '17'
+      - _obj: '18'
+    rows: 5
+    cols: 9
+    obj_type: board
+    visible:
+      _set:
+      - _player: White
+      - _player: Red
+      - _player: Blue
+    map:
+      _ndarray:
+      - - _obj: '3'
+        - 
+        - _obj: '4'
+        - 
+        - _obj: '5'
+        - 
+        - _obj: '6'
+        - 
+        - 
+      - - 
+        - _obj: '8'
+        - 
+        - _obj: '9'
+        - 
+        - _obj: '10'
+        - 
+        - _obj: '11'
+        - _obj: '7'
+      - - _obj: '12'
+        - 
+        - _obj: '13'
+        - 
+        - _obj: '14'
+        - 
+        - _obj: '15'
+        - 
+        - 
+      - - 
+        - _obj: '16'
+        - 
+        - _obj: '17'
+        - 
+        - _obj: '18'
+        - 
+        - 
+        - 
+      - - 
+        - _obj: '0'
+        - 
+        - _obj: '1'
+        - 
+        - _obj: '2'
+        - 
+        - 
+        - 
+      _dtype: object
+    edges:
+      _set:
+      - _obj: '19'
+      - _obj: '20'
+      - _obj: '21'
+      - _obj: '22'
+      - _obj: '23'
+      - _obj: '24'
+      - _obj: '25'
+      - _obj: '26'
+      - _obj: '27'
+      - _obj: '28'
+      - _obj: '29'
+      - _obj: '30'
+      - _obj: '31'
+      - _obj: '32'
+      - _obj: '33'
+      - _obj: '34'
+      - _obj: '35'
+      - _obj: '36'
+      - _obj: '37'
+      - _obj: '38'
+      - _obj: '39'
+      - _obj: '40'
+      - _obj: '41'
+      - _obj: '42'
+      - _obj: '43'
+      - _obj: '44'
+      - _obj: '45'
+      - _obj: '46'
+      - _obj: '47'
+      - _obj: '48'
+      - _obj: '49'
+      - _obj: '50'
+      - _obj: '51'
+      - _obj: '52'
+      - _obj: '53'
+      - _obj: '54'
+      - _obj: '55'
+      - _obj: '56'
+      - _obj: '57'
+      - _obj: '58'
+      - _obj: '59'
+      - _obj: '60'
+      - _obj: '61'
+      - _obj: '62'
+      - _obj: '63'
+      - _obj: '64'
+      - _obj: '65'
+      - _obj: '66'
+      - _obj: '67'
+      - _obj: '68'
+      - _obj: '69'
+      - _obj: '70'
+      - _obj: '71'
+      - _obj: '72'
+      - _obj: '73'
+      - _obj: '74'
+      - _obj: '75'
+      - _obj: '76'
+      - _obj: '77'
+      - _obj: '78'
+      - _obj: '79'
+      - _obj: '80'
+      - _obj: '81'
+      - _obj: '82'
+      - _obj: '83'
+      - _obj: '84'
+      - _obj: '85'
+      - _obj: '86'
+      - _obj: '87'
+      - _obj: '88'
+      - _obj: '89'
+      - _obj: '90'
+    corners:
+      _set:
+      - _obj: '91'
+      - _obj: '92'
+      - _obj: '93'
+      - _obj: '94'
+      - _obj: '95'
+      - _obj: '96'
+      - _obj: '97'
+      - _obj: '98'
+      - _obj: '99'
+      - _obj: '100'
+      - _obj: '101'
+      - _obj: '102'
+      - _obj: '103'
+      - _obj: '104'
+      - _obj: '105'
+      - _obj: '106'
+      - _obj: '107'
+      - _obj: '108'
+      - _obj: '109'
+      - _obj: '110'
+      - _obj: '111'
+      - _obj: '112'
+      - _obj: '113'
+      - _obj: '114'
+      - _obj: '115'
+      - _obj: '116'
+      - _obj: '117'
+      - _obj: '118'
+      - _obj: '119'
+      - _obj: '120'
+      - _obj: '121'
+      - _obj: '122'
+      - _obj: '123'
+      - _obj: '124'
+      - _obj: '125'
+      - _obj: '126'
+      - _obj: '127'
+      - _obj: '128'
+      - _obj: '129'
+      - _obj: '130'
+      - _obj: '131'
+      - _obj: '132'
+      - _obj: '133'
+      - _obj: '134'
+      - _obj: '135'
+      - _obj: '136'
+      - _obj: '137'
+      - _obj: '138'
+      - _obj: '139'
+      - _obj: '140'
+      - _obj: '141'
+      - _obj: '142'
+      - _obj: '143'
+      - _obj: '144'
+  '146':
+    loc:
+      _obj: '3'
+    obj_type: robber
+    visible:
+      _set:
+      - _player: White
+      - _player: Red
+      - _player: Blue
+  '147':
+    obj_type: devdeck
+    visible:
+      _set:
+      - _player: White
+      - _player: Red
+      - _player: Blue
+phase: setup
+log: []

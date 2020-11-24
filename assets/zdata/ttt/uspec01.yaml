@@ -1,0 +1,34 @@
+layout: [opps,board cards,player] #opps und player sind keywords (mit def placements)
+placement: #list damit order
+  #- Board: MAIN #[def]
+  - Tick: board
+  - Card: cards
+visualize:
+  # Board: 
+  #   rsgType: quadGrid
+  Tick:
+    rsgType: dom
+    tag: div
+    optin: [row, col]
+  Card:
+    rsgType: c52
+    rank: .short_name
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

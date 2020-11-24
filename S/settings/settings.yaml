@@ -1,0 +1,96 @@
+program: #TODO: make this a list with ids
+  minutesPerUnit: 15
+  samplesPerLevel: 25
+  # toggle: first half of level: labels, second half of level: no labels
+  # TODO: individual adaptive: label toggle per word
+  showLabels: toggle #always never toggle
+  incrementLevelOnPositiveStreak: 4
+  decrementLevelOnNegativeStreak: 2
+  gameSequence:
+    - game: gTouchPic
+      startLevel: 0
+    - game: gMissingLetter
+      startLevel: 0
+    - game: gTouchColors
+      startLevel: 0
+    - game: gWritePic
+      startLevel: 0
+    - game: gSayPic
+      startLevel: 0
+  currentGameIndex: 0
+  currentLevel: 0
+common:
+  # loopGameSequence: true
+  currentUser: Gunter
+  currentLanguage: E
+  # activity animal body drink emotion food fruit game gesture kitchen 
+  # object person place plant role sport time transport vegetable 
+  # nosymemo nosymbols
+  currentCategories: [nosymemo]
+flags:
+  pressControlToUnfreeze: false
+  reducedAnimations: true
+  levelBadges: false
+games: 
+  gTouchPic:
+    color: deepskyblue
+    levels:
+      0: 
+        vocab: 25
+        numPics: 2
+        trials: 2
+      1: 
+        vocab: 25
+        numPics: 3
+        trials: 2
+      2: 
+        vocab: 25
+        numPics: 4
+        trials: 2
+      3: 
+        vocab: 25
+        numPics: 6
+        trials: 2
+      4: 
+        vocab: 25
+        numPics: 8
+        trials: 2
+      5: 
+        vocab: 50
+        numPics: 9
+        trials: 2
+      6: 
+        vocab: 50
+        numPics: 16
+        trials: 2
+      7: 
+        vocab: 75
+        numPics: 25
+        trials: 2
+      8: 
+        vocab: 100
+        numPics: 36
+        trials: 2
+      9: 
+        vocab: 100
+        numPics: 49
+        trials: 2
+  gTouchColors:
+    color: green
+    contrast: 0.32
+    colors:
+      - red
+      - blue
+      - yellow
+      - green
+  gMissingLetter:
+    color: gold
+  gSayPic:
+    color: deeppink
+  gWritePic:
+    color: '#bfef45'
+      
+#     levels: #changes to common for specific levels
+#     - 0:
+#         colors: [red, yellow]
+      

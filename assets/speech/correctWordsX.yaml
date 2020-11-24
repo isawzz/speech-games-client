@@ -1,0 +1,23 @@
+data:
+  - key: Christmas tree
+    E:
+      answer: christmas
+      req: christmas
+      conf: 0.9712597727775574
+      isCorrect: true
+    D:
+      answer: weihnachten
+      req: weihnachten
+      conf: 0.9712597727775574
+      isCorrect: true
+  - key: jack-o-lantern
+    E:
+      answer: pumpkin
+      req: pumpkin
+      conf: 0.9597892761230469
+      isCorrect: true
+    D:
+      answer: kuerbis
+      req: kuerbis
+      conf: 0.9597892761230469
+      isCorrect: true

@@ -1,0 +1,7720 @@
+1st place medal:
+  D:
+    deutsch:
+      key: 1st place medal
+      req: medaille
+      answer: medaille
+      correct: true
+      conf: 0.896511435508728
+2nd place medal:
+  D:
+    deutsch:
+      key: 2nd place medal
+      req: medaille
+      answer: medaille
+      correct: true
+      conf: 0.8739296793937683
+3rd place medal:
+  D:
+    deutsch:
+      key: 3rd place medal
+      req: medaille
+      answer: medaille
+      correct: true
+      conf: 0.8481332063674927
+Christmas tree:
+  D:
+    deutsch:
+      key: Christmas tree
+      req: weihnachten
+      answer: weihnachten
+      correct: true
+      conf: 0.9097420573234558
+Japanese castle:
+  D:
+    deutsch:
+      key: Japanese castle
+      req: japanischer tempel
+      answer: japanischer tempel
+      correct: true
+      conf: 0.9190642237663269
+OK hand:
+  D:
+    deutsch:
+      key: OK hand
+      req: okay
+      answer: ok
+      correct: true
+      conf: 0.8538759350776672
+Santa Claus:
+  D:
+    deutsch:
+      key: Santa Claus
+      req: weihnachtsmann
+      answer: weihnachtsmann
+      correct: true
+      conf: 0.9190642237663269
+Statue of Liberty:
+  D:
+    deutsch:
+      key: Statue of Liberty
+      req: statue
+      answer: statue
+      correct: true
+      conf: 0.8135358095169067
+T-Rex:
+  D:
+    deutsch:
+      key: T-Rex
+      req: dinosaurus
+      answer: dinosaurier
+      correct: false
+      conf: 0.8319528698921204
+abacus:
+  D:
+    deutsch:
+      key: abacus
+      req: abacus
+      answer: abakus
+      correct: false
+      conf: 0.8245737552642822
+adhesive bandage:
+  D:
+    deutsch:
+      key: adhesive bandage
+      req: pflaster
+      answer: pflaster
+      correct: true
+      conf: 0.8422818183898926
+aerial tramway:
+  D:
+    deutsch:
+      key: aerial tramway
+      req: strassenbahn
+      answer: straßenbahn
+      correct: false
+      conf: 0.9159529805183411
+airplane:
+  D:
+    deutsch:
+      key: airplane
+      req: flugzeug
+      answer: bike
+      correct: false
+      conf: 0.6205487251281738
+airplane arrival:
+  D:
+    deutsch:
+      key: airplane arrival
+      req: ankunft
+      answer: ankunft
+      correct: true
+      conf: 0.8463755249977112
+airplane departure:
+  D:
+    deutsch:
+      key: airplane departure
+      req: abflug
+      answer: abflug
+      correct: true
+      conf: 0.8194663524627686
+alarm clock:
+  D:
+    deutsch:
+      key: alarm clock
+      req: wecker
+      answer: viseca
+      correct: false
+      conf: 0.8388621211051941
+alembic:
+  D:
+    deutsch:
+      key: alembic
+      req: chemie
+      answer: chemie
+      correct: true
+      conf: 0.777224063873291
+alien:
+  D:
+    deutsch:
+      key: alien
+      req: alien
+      answer: wm
+      correct: false
+      conf: 0.5370122790336609
+alien monster:
+  D:
+    deutsch:
+      key: alien monster
+      req: alien
+      answer: essen
+      correct: false
+      conf: 0.6482622027397156
+ambulance:
+  D:
+    deutsch:
+      key: ambulance
+      req: rettung
+      answer: rettung
+      correct: true
+      conf: 0.8083420991897583
+american football:
+  D:
+    deutsch:
+      key: american football
+      req: american football
+      answer: morgen fußball
+      correct: false
+      conf: 0.6554798483848572
+amphora:
+  D:
+    deutsch:
+      key: amphora
+      req: amphore
+      answer: vogel
+      correct: true
+      conf: 0.8806790709495544
+anatomical heart:
+  D:
+    deutsch:
+      key: anatomical heart
+      req: herz
+      answer: herz
+      correct: true
+      conf: 0.6840915679931641
+anchor:
+  D:
+    deutsch:
+      key: anchor
+      req: anker
+      answer: bianca
+      correct: false
+      conf: 0.730330765247345
+anger symbol:
+  D:
+    deutsch:
+      key: anger symbol
+      req: wütend
+      answer: ''
+      correct: false
+      conf: 0
+angry face:
+  D:
+    deutsch:
+      key: angry face
+      req: wütend
+      answer: ''
+      correct: false
+      conf: 0
+angry face with horns:
+  D:
+    deutsch:
+      key: angry face with horns
+      req: teufel
+      answer: teufel
+      correct: true
+      conf: 0.7287009358406067
+anguished face:
+  D:
+    deutsch:
+      key: anguished face
+      req: ängstlich
+      answer: ängstlich
+      correct: true
+      conf: 0.8680518269538879
+ant:
+  D:
+    deutsch:
+      key: ant
+      req: ameise
+      answer: ameise
+      correct: true
+      conf: 0.9190641641616821
+anxious face with sweat:
+  D:
+    deutsch:
+      key: anxious face with sweat
+      req: traurig
+      answer: traurig
+      correct: true
+      conf: 0.8693963289260864
+articulated lorry:
+  D:
+    deutsch:
+      key: articulated lorry
+      req: lastwagen
+      answer: lastwagen
+      correct: true
+      conf: 0.9190641641616821
+artist palette:
+  D:
+    deutsch:
+      key: artist palette
+      req: palette
+      answer: palette
+      correct: true
+      conf: 0.7434396743774414
+astonished face:
+  D:
+    deutsch:
+      key: astonished face
+      req: ueberrascht
+      answer: überhaupt
+      correct: false
+      conf: 0.8480169773101807
+automobile:
+  D:
+    deutsch:
+      key: automobile
+      req: auto
+      answer: auto
+      correct: true
+      conf: 0.8455547094345093
+avocado:
+  D:
+    deutsch:
+      key: avocado
+      req: avocado
+      answer: hokkaido
+      correct: false
+      conf: 0.7297046184539795
+award:
+  D:
+    deutsch:
+      key: award
+      req: preis
+      answer: klebreis
+      correct: false
+      conf: 0.6070659756660461
+axe:
+  D:
+    deutsch:
+      key: axe
+      req: axt
+      answer: aus
+      correct: false
+      conf: 0.8404134511947632
+baby:
+  D:
+    deutsch:
+      key: baby
+      req: baby
+      answer: baby
+      correct: true
+      conf: 0.8252204656600952
+baby angel:
+  D:
+    deutsch:
+      key: baby angel
+      req: engel
+      answer: engel
+      correct: true
+      conf: 0.889051616191864
+baby bottle:
+  D:
+    deutsch:
+      key: baby bottle
+      req: milch
+      answer: mich
+      correct: false
+      conf: 0.7201921343803406
+baby chick:
+  D:
+    deutsch:
+      key: baby chick
+      req: küken
+      answer: küssen
+      correct: false
+      conf: 0.8125045299530029
+backhand index pointing down:
+  D:
+    deutsch:
+      key: backhand index pointing down
+      req: hinunter
+      answer: klingenthal
+      correct: false
+      conf: 0.5821611285209656
+backhand index pointing left:
+  D:
+    deutsch:
+      key: backhand index pointing left
+      req: links
+      answer: cremlingen
+      correct: false
+      conf: 0.6683980226516724
+backhand index pointing right:
+  D:
+    deutsch:
+      key: backhand index pointing right
+      req: rechts
+      answer: recht
+      correct: false
+      conf: 0.8556771278381348
+backhand index pointing up:
+  D:
+    deutsch:
+      key: backhand index pointing up
+      req: oben
+      answer: oben
+      correct: true
+      conf: 0.8580011129379272
+backpack:
+  D:
+    deutsch:
+      key: backpack
+      req: rucksack
+      answer: rucksack
+      correct: true
+      conf: 0.7855818271636963
+bacon:
+  D:
+    deutsch:
+      key: bacon
+      req: speck
+      answer: schinkenspeck
+      correct: true
+      conf: 0.6403117179870605
+badger:
+  D:
+    deutsch:
+      key: badger
+      req: dachs
+      answer: dachs
+      correct: true
+      conf: 0.7443586611747742
+badminton:
+  D:
+    deutsch:
+      key: badminton
+      req: federball
+      answer: federball
+      correct: true
+      conf: 0.9190641641616821
+bagel:
+  D:
+    deutsch:
+      key: bagel
+      req: bagel
+      answer: paypal
+      correct: false
+      conf: 0.6318538784980774
+baguette bread:
+  D:
+    deutsch:
+      key: baguette bread
+      req: baguette
+      answer: baguette
+      correct: true
+      conf: 0.8125460743904114
+balance scale:
+  D:
+    deutsch:
+      key: balance scale
+      req: waage
+      answer: wade
+      correct: false
+      conf: 0.6733915209770203
+ballet shoes:
+  D:
+    deutsch:
+      key: ballet shoes
+      req: ballettschuhe
+      answer: ballettschuhe
+      correct: true
+      conf: 0.7789341807365417
+balloon:
+  D:
+    deutsch:
+      key: balloon
+      req: luftballon
+      answer: luftballon
+      correct: true
+      conf: 0.8048523664474487
+ballot box with ballot:
+  D:
+    deutsch:
+      key: ballot box with ballot
+      req: wahl
+      answer: wahl
+      correct: true
+      conf: 0.73594731092453
+banana:
+  D:
+    deutsch:
+      key: banana
+      req: banane
+      answer: übernahme
+      correct: false
+      conf: 0.5919871926307678
+banjo:
+  D:
+    deutsch:
+      key: banjo
+      req: banjo
+      answer: banjo
+      correct: true
+      conf: 0.8424772024154663
+bar chart:
+  D:
+    deutsch:
+      key: bar chart
+      req: diagramm
+      answer: diagramm
+      correct: true
+      conf: 0.8664747476577759
+barrier:
+  D:
+    deutsch:
+      key: barrier
+      req: achtung
+      answer: aufbau
+      correct: true
+      conf: 0.8454756736755371
+baseball:
+  D:
+    deutsch:
+      key: baseball
+      req: baseball
+      answer: baseball
+      correct: true
+      conf: 0.809953510761261
+basket:
+  D:
+    deutsch:
+      key: basket
+      req: korb
+      answer: korb
+      correct: true
+      conf: 0.7762147188186646
+basketball:
+  D:
+    deutsch:
+      key: basketball
+      req: basketball
+      answer: ball
+      correct: false
+      conf: 0.6135439872741699
+bat:
+  D:
+    deutsch:
+      key: bat
+      req: fledermaus
+      answer: fledermaus
+      correct: true
+      conf: 0.8231019973754883
+bathtub:
+  D:
+    deutsch:
+      key: bathtub
+      req: badewanne
+      answer: one
+      correct: false
+      conf: 0.6916635036468506
+battery:
+  D:
+    deutsch:
+      key: battery
+      req: batterie
+      answer: batterie
+      correct: true
+      conf: 0.795309841632843
+beach with umbrella:
+  D:
+    deutsch:
+      key: beach with umbrella
+      req: strand
+      answer: dran
+      correct: false
+      conf: 0.7141214609146118
+beaming face with smiling eyes:
+  D:
+    deutsch:
+      key: beaming face with smiling eyes
+      req: fröhlich
+      answer: freunde
+      correct: false
+      conf: 0.6420679688453674
+bear:
+  D:
+    deutsch:
+      key: bear
+      req: bär
+      answer: weber
+      correct: false
+      conf: 0.7555949091911316
+beating heart:
+  D:
+    deutsch:
+      key: beating heart
+      req: herz
+      answer: herz
+      correct: true
+      conf: 0.6891332864761353
+burrito:
+  D:
+    deutsch:
+      key: burrito
+      req: burrito
+      answer: tag
+      correct: false
+      conf: 0.6632182002067566
+bus:
+  D:
+    deutsch:
+      key: bus
+      req: autobus
+      answer: autobus
+      correct: true
+      conf: 0.904254138469696
+bus stop:
+  D:
+    deutsch:
+      key: bus stop
+      req: busstation
+      answer: vodafone
+      correct: false
+      conf: 0.6608628034591675
+bust in silhouette:
+  D:
+    deutsch:
+      key: bust in silhouette
+      req: figur
+      answer: figur
+      correct: true
+      conf: 0.8336564302444458
+busts in silhouette:
+  D:
+    deutsch:
+      key: busts in silhouette
+      req: figur
+      answer: figur
+      correct: true
+      conf: 0.817825973033905
+butter:
+  D:
+    deutsch:
+      key: butter
+      req: butter
+      answer: butter
+      correct: true
+      conf: 0.82550048828125
+butterfly:
+  D:
+    deutsch:
+      key: butterfly
+      req: schmetterling
+      answer: schmetterlinge
+      correct: false
+      conf: 0.8069702386856079
+cactus:
+  D:
+    deutsch:
+      key: cactus
+      req: kaktus
+      answer: kaktus
+      correct: true
+      conf: 0.8937898874282837
+calendar:
+  D:
+    deutsch:
+      key: calendar
+      req: datum
+      answer: datum
+      correct: true
+      conf: 0.7508569955825806
+call me hand:
+  D:
+    deutsch:
+      key: call me hand
+      req: anruf
+      answer: anruf
+      correct: true
+      conf: 0.7850739359855652
+camel:
+  D:
+    deutsch:
+      key: camel
+      req: kamel
+      answer: vitamine
+      correct: false
+      conf: 0.7404098510742188
+camera:
+  D:
+    deutsch:
+      key: camera
+      req: kamera
+      answer: kamera
+      correct: true
+      conf: 0.822795033454895
+camera with flash:
+  D:
+    deutsch:
+      key: camera with flash
+      req: kamera
+      answer: kamera
+      correct: true
+      conf: 0.8228500485420227
+camping:
+  D:
+    deutsch:
+      key: camping
+      req: camping
+      answer: camping
+      correct: true
+      conf: 0.7358008623123169
+candle:
+  D:
+    deutsch:
+      key: candle
+      req: kerze
+      answer: kerze
+      correct: true
+      conf: 0.8788179159164429
+candy:
+  D:
+    deutsch:
+      key: candy
+      req: zuckerl
+      answer: vitocal
+      correct: false
+      conf: 0.6941697001457214
+canned food:
+  D:
+    deutsch:
+      key: canned food
+      req: dose
+      answer: hose
+      correct: true
+      conf: 0.7924540638923645
+canoe:
+  D:
+    deutsch:
+      key: canoe
+      req: kanu
+      answer: vicano
+      correct: false
+      conf: 0.7161704897880554
+card file box:
+  D:
+    deutsch:
+      key: card file box
+      req: datei
+      answer: biebertal
+      correct: false
+      conf: 0.6406698226928711
+card index:
+  D:
+    deutsch:
+      key: card index
+      req: indexkarten
+      answer: karten
+      correct: false
+      conf: 0.7151728868484497
+card index dividers:
+  D:
+    deutsch:
+      key: card index dividers
+      req: index
+      answer: deck
+      correct: true
+      conf: 0.7783792614936829
+carousel horse:
+  D:
+    deutsch:
+      key: carousel horse
+      req: karussel
+      answer: karussell
+      correct: false
+      conf: 0.873425304889679
+carrot:
+  D:
+    deutsch:
+      key: carrot
+      req: karotte
+      answer: karotte
+      correct: true
+      conf: 0.8059859275817871
+cartwheeling:
+  D:
+    deutsch:
+      key: cartwheeling
+      req: radschlag
+      answer: radschlag
+      correct: true
+      conf: 0.8012253642082214
+castle:
+  D:
+    deutsch:
+      key: castle
+      req: burg
+      answer: keyboard
+      correct: false
+      conf: 0.7758798003196716
+cat:
+  D:
+    deutsch:
+      key: cat
+      req: katze
+      answer: katze
+      correct: true
+      conf: 0.8963988423347473
+cat with tears of joy:
+  D:
+    deutsch:
+      key: cat with tears of joy
+      req: lachende katze
+      answer: lachende katze
+      correct: true
+      conf: 0.6948740482330322
+cat with wry smile:
+  D:
+    deutsch:
+      key: cat with wry smile
+      req: lächelnde katze
+      answer: lächelnde katze
+      correct: true
+      conf: 0.9190642237663269
+chains:
+  D:
+    deutsch:
+      key: chains
+      req: ketten
+      answer: poppen
+      correct: true
+      conf: 0.8304435610771179
+chair:
+  D:
+    deutsch:
+      key: chair
+      req: sessel
+      answer: sessel
+      correct: true
+      conf: 0.5555387735366821
+chart decreasing:
+  D:
+    deutsch:
+      key: chart decreasing
+      req: diagramm
+      answer: diagramm
+      correct: true
+      conf: 0.8753260374069214
+chart increasing:
+  D:
+    deutsch:
+      key: chart increasing
+      req: diagramm
+      answer: diagramm
+      correct: true
+      conf: 0.8410149812698364
+chart increasing with yen:
+  D:
+    deutsch:
+      key: chart increasing with yen
+      req: diagramm
+      answer: diagramm
+      correct: true
+      conf: 0.8283880352973938
+cheese wedge:
+  D:
+    deutsch:
+      key: cheese wedge
+      req: käse
+      answer: live
+      correct: false
+      conf: 0.573799729347229
+cherries:
+  D:
+    deutsch:
+      key: cherries
+      req: kirschen
+      answer: kirschen
+      correct: true
+      conf: 0.8049912452697754
+cherry blossom:
+  D:
+    deutsch:
+      key: cherry blossom
+      req: blüte
+      answer: blüte
+      correct: true
+      conf: 0.8180893659591675
+chess pawn:
+  D:
+    deutsch:
+      key: chess pawn
+      req: bauer
+      answer: bauer
+      correct: true
+      conf: 0.8226652145385742
+chestnut:
+  D:
+    deutsch:
+      key: chestnut
+      req: maroni
+      answer: maroni
+      correct: true
+      conf: 0.9064188599586487
+chicken:
+  D:
+    deutsch:
+      key: chicken
+      req: huhn
+      answer: figuren
+      correct: false
+      conf: 0.7023100852966309
+child:
+  D:
+    deutsch:
+      key: child
+      req: kind
+      answer: flitzen
+      correct: false
+      conf: 0.6429639458656311
+chipmunk:
+  D:
+    deutsch:
+      key: chipmunk
+      req: eichhörnchen
+      answer: eichhörnchen
+      correct: true
+      conf: 0.8923022150993347
+chocolate bar:
+  D:
+    deutsch:
+      key: chocolate bar
+      req: schokolade
+      answer: schokolade
+      correct: true
+      conf: 0.9046400189399719
+chopsticks:
+  D:
+    deutsch:
+      key: chopsticks
+      req: stäbchen
+      answer: stäbchen
+      correct: true
+      conf: 0.8098686337471008
+church:
+  D:
+    deutsch:
+      key: church
+      req: kirche
+      answer: kirche
+      correct: true
+      conf: 0.7956159710884094
+cigarette:
+  D:
+    deutsch:
+      key: cigarette
+      req: zigarette
+      answer: zigarette
+      correct: true
+      conf: 0.6655259132385254
+circus tent:
+  D:
+    deutsch:
+      key: circus tent
+      req: zirkus
+      answer: zirkus
+      correct: true
+      conf: 0.7954490780830383
+cityscape:
+  D:
+    deutsch:
+      key: cityscape
+      req: stadt
+      answer: stadt
+      correct: true
+      conf: 0.6544948816299438
+cityscape at dusk:
+  D:
+    deutsch:
+      key: cityscape at dusk
+      req: dusk
+      answer: wieder
+      correct: false
+      conf: 0.9190641641616821
+clamp:
+  D:
+    deutsch:
+      key: clamp
+      req: klemme
+      answer: klemme
+      correct: true
+      conf: 0.8308035731315613
+clapper board:
+  D:
+    deutsch:
+      key: clapper board
+      req: cut
+      answer: fiat
+      correct: false
+      conf: 0.6604321599006653
+clapping hands:
+  D:
+    deutsch:
+      key: clapping hands
+      req: klatschen
+      answer: klatschen
+      correct: true
+      conf: 0.876534104347229
+classical building:
+  D:
+    deutsch:
+      key: classical building
+      req: tempel
+      answer: tempel
+      correct: true
+      conf: 0.7618335485458374
+climbing:
+  D:
+    deutsch:
+      key: climbing
+      req: klettern
+      answer: klettern
+      correct: true
+      conf: 0.7364423871040344
+clinking beer mugs:
+  D:
+    deutsch:
+      key: clinking beer mugs
+      req: feiern
+      answer: feiern
+      correct: true
+      conf: 0.8777853846549988
+clinking glasses:
+  D:
+    deutsch:
+      key: clinking glasses
+      req: champagner
+      answer: champagner
+      correct: true
+      conf: 0.8898283243179321
+clipboard:
+  D:
+    deutsch:
+      key: clipboard
+      req: clipboard
+      answer: clipart
+      correct: false
+      conf: 0.7223041653633118
+closed book:
+  D:
+    deutsch:
+      key: closed book
+      req: buch
+      answer: buch
+      correct: true
+      conf: 0.8005194664001465
+closed umbrella:
+  D:
+    deutsch:
+      key: closed umbrella
+      req: regenschirm
+      answer: regenschirm
+      correct: true
+      conf: 0.7201778292655945
+cloud:
+  D:
+    deutsch:
+      key: cloud
+      req: wolke
+      answer: wolke
+      correct: true
+      conf: 0.8918049931526184
+cloud with lightning:
+  D:
+    deutsch:
+      key: cloud with lightning
+      req: blitz
+      answer: blitz
+      correct: true
+      conf: 0.7358455657958984
+cloud with lightning and rain:
+  D:
+    deutsch:
+      key: cloud with lightning and rain
+      req: gewitter
+      answer: gewitter
+      correct: true
+      conf: 0.8544185757637024
+cloud with rain:
+  D:
+    deutsch:
+      key: cloud with rain
+      req: regen
+      answer: regel
+      correct: false
+      conf: 0.6449078321456909
+cloud with snow:
+  D:
+    deutsch:
+      key: cloud with snow
+      req: schnee
+      answer: schnee
+      correct: true
+      conf: 0.8109723329544067
+clown face:
+  D:
+    deutsch:
+      key: clown face
+      req: clown
+      answer: klauen
+      correct: false
+      conf: 0.8221209645271301
+club suit:
+  D:
+    deutsch:
+      key: club suit
+      req: treff
+      answer: wiethoff
+      correct: false
+      conf: 0.6586506366729736
+clutch bag:
+  D:
+    deutsch:
+      key: clutch bag
+      req: tasche
+      answer: tasche
+      correct: true
+      conf: 0.776525616645813
+coat:
+  D:
+    deutsch:
+      key: coat
+      req: jacke
+      answer: cliffjacke
+      correct: true
+      conf: 0.9190642237663269
+cocktail glass:
+  D:
+    deutsch:
+      key: cocktail glass
+      req: glas
+      answer: glas
+      correct: true
+      conf: 0.8409344553947449
+coconut:
+  D:
+    deutsch:
+      key: coconut
+      req: kokosnuss
+      answer: kokosnuss
+      correct: true
+      conf: 0.8969519734382629
+coffin:
+  D:
+    deutsch:
+      key: coffin
+      req: sarg
+      answer: wisag
+      correct: false
+      conf: 0.8639798164367676
+cold face:
+  D:
+    deutsch:
+      key: cold face
+      req: kalt
+      answer: krefeld
+      correct: false
+      conf: 0.5484060049057007
+collision:
+  D:
+    deutsch:
+      key: collision
+      req: explosion
+      answer: ecstasy
+      correct: false
+      conf: 0.7652205228805542
+comet:
+  D:
+    deutsch:
+      key: comet
+      req: komet
+      answer: komet
+      correct: true
+      conf: 0.8070883750915527
+compass:
+  D:
+    deutsch:
+      key: compass
+      req: kompass
+      answer: kompass
+      correct: true
+      conf: 0.8203751444816589
+computer mouse:
+  D:
+    deutsch:
+      key: computer mouse
+      req: maus
+      answer: immer
+      correct: true
+      conf: 0.8260895609855652
+confetti ball:
+  D:
+    deutsch:
+      key: confetti ball
+      req: konfetti
+      answer: konfetti
+      correct: true
+      conf: 0.870884895324707
+confounded face:
+  D:
+    deutsch:
+      key: confounded face
+      req: verwirrt
+      answer: verwirrt
+      correct: true
+      conf: 0.7890722155570984
+confused face:
+  D:
+    deutsch:
+      key: confused face
+      req: verwirrt
+      answer: verwirrt
+      correct: true
+      conf: 0.9097704887390137
+construction site:
+  D:
+    deutsch:
+      key: construction site
+      req: baustelle
+      answer: baustelle
+      correct: true
+      conf: 0.8661729097366333
+construction worker:
+  D:
+    deutsch:
+      key: construction worker
+      req: bauarbeiter
+      answer: bauarbeiter
+      correct: true
+      conf: 0.9190641641616821
+cooked rice:
+  D:
+    deutsch:
+      key: cooked rice
+      req: reis
+      answer: '3'
+      correct: false
+      conf: 0.7821099162101746
+cookie:
+  D:
+    deutsch:
+      key: cookie
+      req: keks
+      answer: wiki
+      correct: false
+      conf: 0.8350384831428528
+cooking:
+  D:
+    deutsch:
+      key: cooking
+      req: pfanne
+      answer: pfanne
+      correct: true
+      conf: 0.8329781293869019
+couch and lamp:
+  D:
+    deutsch:
+      key: couch and lamp
+      req: couch
+      answer: report
+      correct: false
+      conf: 0.6946347951889038
+couple with heart:
+  D:
+    deutsch:
+      key: couple with heart
+      req: verliebt
+      answer: verliebt
+      correct: true
+      conf: 0.8715764880180359
+cow:
+  D:
+    deutsch:
+      key: cow
+      req: kuh
+      answer: wiku
+      correct: false
+      conf: 0.6137067675590515
+cowboy hat face:
+  D:
+    deutsch:
+      key: cowboy hat face
+      req: hut
+      answer: hut
+      correct: true
+      conf: 0.6813151836395264
+crab:
+  D:
+    deutsch:
+      key: crab
+      req: krabbe
+      answer: kabel
+      correct: false
+      conf: 0.9190641641616821
+crayon:
+  D:
+    deutsch:
+      key: crayon
+      req: ölkreide
+      answer: ölkreide
+      correct: true
+      conf: 0.9097429513931274
+credit card:
+  D:
+    deutsch:
+      key: credit card
+      req: kreditkarte
+      answer: karte
+      correct: false
+      conf: 0.8362155556678772
+crescent moon:
+  D:
+    deutsch:
+      key: crescent moon
+      req: mond
+      answer: mond
+      correct: true
+      conf: 0.8485145568847656
+cricket:
+  D:
+    deutsch:
+      key: cricket
+      req: heuschreck
+      answer: heuschreck
+      correct: true
+      conf: 0.7234916687011719
+cricket game:
+  D:
+    deutsch:
+      key: cricket game
+      req: cricket
+      answer: cheatet
+      correct: false
+      conf: 0.776114284992218
+crocodile:
+  D:
+    deutsch:
+      key: crocodile
+      req: krokodil
+      answer: krokodil
+      correct: true
+      conf: 0.9190641641616821
+croissant:
+  D:
+    deutsch:
+      key: croissant
+      req: croissant
+      answer: kosten
+      correct: true
+      conf: 0.8705312609672546
+crossed fingers:
+  D:
+    deutsch:
+      key: crossed fingers
+      req: kreuz
+      answer: nicole
+      correct: false
+      conf: 0.7972335815429688
+crossed swords:
+  D:
+    deutsch:
+      key: crossed swords
+      req: kampf
+      answer: kampf
+      correct: true
+      conf: 0.598414421081543
+crown:
+  D:
+    deutsch:
+      key: crown
+      req: krone
+      answer: krone
+      correct: true
+      conf: 0.7003740072250366
+crying cat:
+  D:
+    deutsch:
+      key: crying cat
+      req: weinende katze
+      answer: weinende katze
+      correct: true
+      conf: 0.9190642237663269
+crying face:
+  D:
+    deutsch:
+      key: crying face
+      req: traurig
+      answer: traurig
+      correct: true
+      conf: 0.9190641641616821
+crystal ball:
+  D:
+    deutsch:
+      key: crystal ball
+      req: kristallkugel
+      answer: kristallkugel
+      correct: true
+      conf: 0.877622127532959
+cucumber:
+  D:
+    deutsch:
+      key: cucumber
+      req: gurke
+      answer: figurka
+      correct: false
+      conf: 0.9075992703437805
+cup with straw:
+  D:
+    deutsch:
+      key: cup with straw
+      req: saft
+      answer: saft
+      correct: true
+      conf: 0.6944893002510071
+cupcake:
+  D:
+    deutsch:
+      key: cupcake
+      req: muffin
+      answer: maßnehmen
+      correct: false
+      conf: 0.7949339151382446
+curling stone:
+  D:
+    deutsch:
+      key: curling stone
+      req: curling
+      answer: curling
+      correct: true
+      conf: 0.7832407355308533
+curry rice:
+  D:
+    deutsch:
+      key: curry rice
+      req: reis
+      answer: '3'
+      correct: false
+      conf: 0.75383061170578
+custard:
+  D:
+    deutsch:
+      key: custard
+      req: pudding
+      answer: pudding
+      correct: true
+      conf: 0.7939721941947937
+cut of meat:
+  D:
+    deutsch:
+      key: cut of meat
+      req: steak
+      answer: sofistik
+      correct: false
+      conf: 0.8215701580047607
+cyclone:
+  D:
+    deutsch:
+      key: cyclone
+      req: zyklon
+      answer: clown
+      correct: false
+      conf: 0.7816665172576904
+dagger:
+  D:
+    deutsch:
+      key: dagger
+      req: schwert
+      answer: schwert
+      correct: true
+      conf: 0.8386616706848145
+dashing away:
+  D:
+    deutsch:
+      key: dashing away
+      req: schnell
+      answer: fischmaul
+      correct: false
+      conf: 0.6174857020378113
+deaf person:
+  D:
+    deutsch:
+      key: deaf person
+      req: taub
+      answer: vita
+      correct: false
+      conf: 0.7289963364601135
+deciduous tree:
+  D:
+    deutsch:
+      key: deciduous tree
+      req: baum
+      answer: warm
+      correct: true
+      conf: 0.9072939157485962
+deer:
+  D:
+    deutsch:
+      key: deer
+      req: hirsch
+      answer: post.ch
+      correct: false
+      conf: 0.7069393396377563
+delivery truck:
+  D:
+    deutsch:
+      key: delivery truck
+      req: lastwagen
+      answer: lastwagen
+      correct: true
+      conf: 0.9190641641616821
+department store:
+  D:
+    deutsch:
+      key: department store
+      req: store
+      answer: sau
+      correct: false
+      conf: 0.5103279948234558
+derelict house:
+  D:
+    deutsch:
+      key: derelict house
+      req: haus
+      answer: haus
+      correct: true
+      conf: 0.6899697184562683
+desert:
+  D:
+    deutsch:
+      key: desert
+      req: wüste
+      answer: ''
+      correct: false
+      conf: 0
+desert island:
+  D:
+    deutsch:
+      key: desert island
+      req: insel
+      answer: insel
+      correct: true
+      conf: 0.7864999771118164
+desktop computer:
+  D:
+    deutsch:
+      key: desktop computer
+      req: computer
+      answer: computer
+      correct: true
+      conf: 0.8594202995300293
+detective:
+  D:
+    deutsch:
+      key: detective
+      req: detektiv
+      answer: detektiv
+      correct: true
+      conf: 0.8221879005432129
+diamond suit:
+  D:
+    deutsch:
+      key: diamond suit
+      req: karo
+      answer: caro
+      correct: false
+      conf: 0.8070976138114929
+direct hit:
+  D:
+    deutsch:
+      key: direct hit
+      req: pfeilschiessen
+      answer: heißen
+      correct: false
+      conf: 0.7838863134384155
+disappointed face:
+  D:
+    deutsch:
+      key: disappointed face
+      req: enttäuscht
+      answer: enttäuscht
+      correct: true
+      conf: 0.8243141174316406
+diving mask:
+  D:
+    deutsch:
+      key: diving mask
+      req: tauchen
+      answer: tauchen
+      correct: true
+      conf: 0.7619845271110535
+diya lamp:
+  D:
+    deutsch:
+      key: diya lamp
+      req: öllampe
+      answer: öllampe
+      correct: true
+      conf: 0.8405121564865112
+dizzy:
+  D:
+    deutsch:
+      key: dizzy
+      req: schwindlig
+      answer: schändlich
+      correct: false
+      conf: 0.6773953437805176
+dizzy face:
+  D:
+    deutsch:
+      key: dizzy face
+      req: schwindlig
+      answer: verständlich
+      correct: false
+      conf: 0.8080227375030518
+dna:
+  D:
+    deutsch:
+      key: dna
+      req: dna
+      answer: cdna
+      correct: true
+      conf: 0.8111364841461182
+dog:
+  D:
+    deutsch:
+      key: dog
+      req: hund
+      answer: hund
+      correct: true
+      conf: 0.8938940763473511
+dollar banknote:
+  D:
+    deutsch:
+      key: dollar banknote
+      req: dollar
+      answer: dana
+      correct: false
+      conf: 0.8338354229927063
+dolphin:
+  D:
+    deutsch:
+      key: dolphin
+      req: delfin
+      answer: delfin
+      correct: true
+      conf: 0.8302398920059204
+door:
+  D:
+    deutsch:
+      key: door
+      req: türe
+      answer: tiere
+      correct: false
+      conf: 0.7727082371711731
+doughnut:
+  D:
+    deutsch:
+      key: doughnut
+      req: doughnut
+      answer: nat
+      correct: false
+      conf: 0.7543945908546448
+dove:
+  D:
+    deutsch:
+      key: dove
+      req: taube
+      answer: taube
+      correct: true
+      conf: 0.8674014806747437
+downcast face with sweat:
+  D:
+    deutsch:
+      key: downcast face with sweat
+      req: schwitzen
+      answer: spritzen
+      correct: false
+      conf: 0.6781680583953857
+dragon:
+  D:
+    deutsch:
+      key: dragon
+      req: drache
+      answer: drache
+      correct: true
+      conf: 0.8256271481513977
+dragon face:
+  D:
+    deutsch:
+      key: dragon face
+      req: drache
+      answer: drache
+      correct: true
+      conf: 0.8322876691818237
+dress:
+  D:
+    deutsch:
+      key: dress
+      req: kleid
+      answer: kleid
+      correct: true
+      conf: 0.9190642237663269
+drooling face:
+  D:
+    deutsch:
+      key: drooling face
+      req: sabbernd
+      answer: säubern
+      correct: false
+      conf: 0.7173682451248169
+drop of blood:
+  D:
+    deutsch:
+      key: drop of blood
+      req: blut
+      answer: blut
+      correct: true
+      conf: 0.8112907409667969
+droplet:
+  D:
+    deutsch:
+      key: droplet
+      req: tropfen
+      answer: tropfen
+      correct: true
+      conf: 0.833040714263916
+drum:
+  D:
+    deutsch:
+      key: drum
+      req: trommel
+      answer: trommel
+      correct: true
+      conf: 0.9040468335151672
+duck:
+  D:
+    deutsch:
+      key: duck
+      req: ente
+      answer: ente
+      correct: true
+      conf: 0.828646183013916
+dvd:
+  D:
+    deutsch:
+      key: dvd
+      req: dvd
+      answer: dvd
+      correct: true
+      conf: 0.8397222757339478
+e-mail:
+  D:
+    deutsch:
+      key: e-mail
+      req: nachricht
+      answer: nachricht
+      correct: true
+      conf: 0.7961552739143372
+eagle:
+  D:
+    deutsch:
+      key: eagle
+      req: adler
+      answer: etwa
+      correct: true
+      conf: 0.8190614581108093
+ear:
+  D:
+    deutsch:
+      key: ear
+      req: ohr
+      answer: figur
+      correct: false
+      conf: 0.7042130827903748
+ear of corn:
+  D:
+    deutsch:
+      key: ear of corn
+      req: mais
+      answer: 7.mai
+      correct: false
+      conf: 0.8018398880958557
+ear with hearing aid:
+  D:
+    deutsch:
+      key: ear with hearing aid
+      req: taub
+      answer: taub
+      correct: true
+      conf: 0.7730787992477417
+egg:
+  D:
+    deutsch:
+      key: egg
+      req: ei
+      answer: ein
+      correct: false
+      conf: 0.8088864088058472
+eggplant:
+  D:
+    deutsch:
+      key: eggplant
+      req: melanzani
+      answer: melanzani
+      correct: true
+      conf: 0.9190641641616821
+electric plug:
+  D:
+    deutsch:
+      key: electric plug
+      req: strom
+      answer: strom
+      correct: true
+      conf: 0.708522617816925
+elephant:
+  D:
+    deutsch:
+      key: elephant
+      req: elefant
+      answer: elefant
+      correct: true
+      conf: 0.9190641641616821
+elf:
+  D:
+    deutsch:
+      key: elf
+      req: elf
+      answer: l
+      correct: false
+      conf: 0.800707221031189
+envelope:
+  D:
+    deutsch:
+      key: envelope
+      req: kuvert
+      answer: kuvert
+      correct: true
+      conf: 0.7545318603515625
+envelope with arrow:
+  D:
+    deutsch:
+      key: envelope with arrow
+      req: senden
+      answer: senden
+      correct: true
+      conf: 0.8393756151199341
+euro banknote:
+  D:
+    deutsch:
+      key: euro banknote
+      req: euro
+      answer: €
+      correct: true
+      conf: 0.873687744140625
+evergreen tree:
+  D:
+    deutsch:
+      key: evergreen tree
+      req: tanne
+      answer: tanne
+      correct: true
+      conf: 0.6187784671783447
+exploding head:
+  D:
+    deutsch:
+      key: exploding head
+      req: verblüfft
+      answer: verblüfft
+      correct: true
+      conf: 0.8929978609085083
+expressionless face:
+  D:
+    deutsch:
+      key: expressionless face
+      req: neutral
+      answer: neutral
+      correct: true
+      conf: 0.7451231479644775
+eye:
+  D:
+    deutsch:
+      key: eye
+      req: auge
+      answer: vierauge
+      correct: false
+      conf: 0.7317878603935242
+eye in speech bubble:
+  D:
+    deutsch:
+      key: eye in speech bubble
+      req: dialog
+      answer: dialog
+      correct: true
+      conf: 0.7323826551437378
+eyes:
+  D:
+    deutsch:
+      key: eyes
+      req: augen
+      answer: auge
+      correct: false
+      conf: 0.7926881313323975
+face blowing a kiss:
+  D:
+    deutsch:
+      key: face blowing a kiss
+      req: kuss
+      answer: wiglo
+      correct: false
+      conf: 0.607811689376831
+face screaming in fear:
+  D:
+    deutsch:
+      key: face screaming in fear
+      req: panik
+      answer: armik
+      correct: false
+      conf: 0.6707886457443237
+face vomiting:
+  D:
+    deutsch:
+      key: face vomiting
+      req: ekel
+      answer: köln
+      correct: false
+      conf: 0.8262009024620056
+face with hand over mouth:
+  D:
+    deutsch:
+      key: face with hand over mouth
+      req: pardon
+      answer: pardo
+      correct: false
+      conf: 0.7694898843765259
+face with head-bandage:
+  D:
+    deutsch:
+      key: face with head-bandage
+      req: verband
+      answer: verband
+      correct: true
+      conf: 0.7390348315238953
+face with medical mask:
+  D:
+    deutsch:
+      key: face with medical mask
+      req: maske
+      answer: so
+      correct: false
+      conf: 0.7439227104187012
+face with monocle:
+  D:
+    deutsch:
+      key: face with monocle
+      req: monokel
+      answer: monokel
+      correct: true
+      conf: 0.7227377891540527
+face with open mouth:
+  D:
+    deutsch:
+      key: face with open mouth
+      req: ueberrascht
+      answer: überhaupt
+      correct: false
+      conf: 0.9168233871459961
+face with raised eyebrow:
+  D:
+    deutsch:
+      key: face with raised eyebrow
+      req: skeptisch
+      answer: rezepte
+      correct: false
+      conf: 0.9190641641616821
+face with rolling eyes:
+  D:
+    deutsch:
+      key: face with rolling eyes
+      req: augenrollen
+      answer: augenrollen
+      correct: true
+      conf: 0.9045227766036987
+face with steam from nose:
+  D:
+    deutsch:
+      key: face with steam from nose
+      req: stäubend
+      answer: schreiben
+      correct: false
+      conf: 0.7973520159721375
+face with symbols on mouth:
+  D:
+    deutsch:
+      key: face with symbols on mouth
+      req: wütend
+      answer: wütend
+      correct: true
+      conf: 0.9190641641616821
+face with tears of joy:
+  D:
+    deutsch:
+      key: face with tears of joy
+      req: fröhlich
+      answer: fröhlich
+      correct: true
+      conf: 0.8255855441093445
+face with thermometer:
+  D:
+    deutsch:
+      key: face with thermometer
+      req: fieber
+      answer: bar
+      correct: true
+      conf: 0.7932858467102051
+face with tongue:
+  D:
+    deutsch:
+      key: face with tongue
+      req: zunge
+      answer: zunge
+      correct: true
+      conf: 0.6881769895553589
+face without mouth:
+  D:
+    deutsch:
+      key: face without mouth
+      req: mundlos
+      answer: mundlos
+      correct: true
+      conf: 0.7833948135375977
+factory:
+  D:
+    deutsch:
+      key: factory
+      req: fabrik
+      answer: fabrik
+      correct: true
+      conf: 0.8981374502182007
+fairy:
+  D:
+    deutsch:
+      key: fairy
+      req: elf
+      answer: '11'
+      correct: false
+      conf: 0.8198808431625366
+falafel:
+  D:
+    deutsch:
+      key: falafel
+      req: falafel
+      answer: falafel
+      correct: true
+      conf: 0.8618229031562805
+fallen leaf:
+  D:
+    deutsch:
+      key: fallen leaf
+      req: blatt
+      answer: blatt
+      correct: true
+      conf: 0.5995623469352722
+family:
+  D:
+    deutsch:
+      key: family
+      req: familie
+      answer: familie
+      correct: true
+      conf: 0.9112497568130493
+family of 4:
+  D:
+    deutsch:
+      key: family of 4
+      req: familie
+      answer: familie
+      correct: true
+      conf: 0.9108518362045288
+fax machine:
+  D:
+    deutsch:
+      key: fax machine
+      req: fax
+      answer: frifag
+      correct: false
+      conf: 0.6679883003234863
+fearful face:
+  D:
+    deutsch:
+      key: fearful face
+      req: ängstlich
+      answer: ängstlich
+      correct: true
+      conf: 0.8625441789627075
+fencing:
+  D:
+    deutsch:
+      key: fencing
+      req: fechten
+      answer: fechten
+      correct: true
+      conf: 0.7005097270011902
+ferris wheel:
+  D:
+    deutsch:
+      key: ferris wheel
+      req: riesenrad
+      answer: riesenrad
+      correct: true
+      conf: 0.8486069440841675
+ferry:
+  D:
+    deutsch:
+      key: ferry
+      req: schiff
+      answer: das
+      correct: false
+      conf: 0.8395828008651733
+field hockey:
+  D:
+    deutsch:
+      key: field hockey
+      req: hokey
+      answer: hoki
+      correct: false
+      conf: 0.8321393132209778
+file cabinet:
+  D:
+    deutsch:
+      key: file cabinet
+      req: file
+      answer: viel
+      correct: false
+      conf: 0.8085654973983765
+file folder:
+  D:
+    deutsch:
+      key: file folder
+      req: mappe
+      answer: kuh
+      correct: false
+      conf: 0.6752041578292847
+film frames:
+  D:
+    deutsch:
+      key: film frames
+      req: film
+      answer: film
+      correct: true
+      conf: 0.6347670555114746
+film projector:
+  D:
+    deutsch:
+      key: film projector
+      req: projektor
+      answer: projektor
+      correct: true
+      conf: 0.9190641641616821
+fire:
+  D:
+    deutsch:
+      key: fire
+      req: feuer
+      answer: feuer
+      correct: true
+      conf: 0.6881294250488281
+fire engine:
+  D:
+    deutsch:
+      key: fire engine
+      req: feuerwehr
+      answer: feuerwehr
+      correct: true
+      conf: 0.8525555729866028
+fire extinguisher:
+  D:
+    deutsch:
+      key: fire extinguisher
+      req: feuerlöscher
+      answer: feuerlöscher
+      correct: true
+      conf: 0.914411723613739
+firecracker:
+  D:
+    deutsch:
+      key: firecracker
+      req: dynamit
+      answer: dynamit
+      correct: true
+      conf: 0.8734917640686035
+fireworks:
+  D:
+    deutsch:
+      key: fireworks
+      req: feuerwerk
+      answer: feuerwerk
+      correct: true
+      conf: 0.8906928300857544
+first quarter moon:
+  D:
+    deutsch:
+      key: first quarter moon
+      req: mond
+      answer: mond
+      correct: true
+      conf: 0.8873029947280884
+first quarter moon face:
+  D:
+    deutsch:
+      key: first quarter moon face
+      req: mond
+      answer: mond
+      correct: true
+      conf: 0.8097173571586609
+fish:
+  D:
+    deutsch:
+      key: fish
+      req: fisch
+      answer: post.ch
+      correct: false
+      conf: 0.8374965190887451
+fishing pole:
+  D:
+    deutsch:
+      key: fishing pole
+      req: fischen
+      answer: fischen
+      correct: true
+      conf: 0.7800323367118835
+flag in hole:
+  D:
+    deutsch:
+      key: flag in hole
+      req: golf
+      answer: golf
+      correct: true
+      conf: 0.864382266998291
+flamingo:
+  D:
+    deutsch:
+      key: flamingo
+      req: flamingo
+      answer: flamingo
+      correct: true
+      conf: 0.8290209770202637
+flashlight:
+  D:
+    deutsch:
+      key: flashlight
+      req: taschenlampe
+      answer: taschenlampe
+      correct: true
+      conf: 0.8651580810546875
+flat shoe:
+  D:
+    deutsch:
+      key: flat shoe
+      req: schuh
+      answer: du
+      correct: false
+      conf: 0.8731719851493835
+flexed biceps:
+  D:
+    deutsch:
+      key: flexed biceps
+      req: bizeps
+      answer: web
+      correct: false
+      conf: 0.7904448509216309
+floppy disk:
+  D:
+    deutsch:
+      key: floppy disk
+      req: floppy disk
+      answer: jappy.de
+      correct: false
+      conf: 0.8604809641838074
+flower playing cards:
+  D:
+    deutsch:
+      key: flower playing cards
+      req: karten
+      answer: singzikaden
+      correct: false
+      conf: 0.9081981182098389
+flushed face:
+  D:
+    deutsch:
+      key: flushed face
+      req: verlegen
+      answer: verlegen
+      correct: true
+      conf: 0.809516429901123
+flying disc:
+  D:
+    deutsch:
+      key: flying disc
+      req: discus
+      answer: lindwedel
+      correct: false
+      conf: 0.6720507740974426
+flying saucer:
+  D:
+    deutsch:
+      key: flying saucer
+      req: ufo
+      answer: ufo
+      correct: true
+      conf: 0.8557571172714233
+fog:
+  D:
+    deutsch:
+      key: fog
+      req: nebel
+      answer: nebel
+      correct: true
+      conf: 0.801561176776886
+folded hands:
+  D:
+    deutsch:
+      key: folded hands
+      req: beten
+      answer: beten
+      correct: true
+      conf: 0.8029004335403442
+foot:
+  D:
+    deutsch:
+      key: foot
+      req: fuss
+      answer: fifo
+      correct: false
+      conf: 0.6573569178581238
+footprints:
+  D:
+    deutsch:
+      key: footprints
+      req: fussabdruck
+      answer: fußabdruck
+      correct: false
+      conf: 0.7533293962478638
+fork and knife:
+  D:
+    deutsch:
+      key: fork and knife
+      req: besteck
+      answer: zwiebelstadt
+      correct: false
+      conf: 0.78687983751297
+fork and knife with plate:
+  D:
+    deutsch:
+      key: fork and knife with plate
+      req: gedeck
+      answer: segeberg
+      correct: false
+      conf: 0.7392663955688477
+fortune cookie:
+  D:
+    deutsch:
+      key: fortune cookie
+      req: glückskeks
+      answer: keep
+      correct: false
+      conf: 0.8254571557044983
+fountain:
+  D:
+    deutsch:
+      key: fountain
+      req: brunnen
+      answer: brunnen
+      correct: true
+      conf: 0.8197137713432312
+fountain pen:
+  D:
+    deutsch:
+      key: fountain pen
+      req: füllfeder
+      answer: meter
+      correct: true
+      conf: 0.774446964263916
+four leaf clover:
+  D:
+    deutsch:
+      key: four leaf clover
+      req: klee
+      answer: w
+      correct: false
+      conf: 0.48563092947006226
+framed picture:
+  D:
+    deutsch:
+      key: framed picture
+      req: bild
+      answer: bild
+      correct: true
+      conf: 0.7667487859725952
+french fries:
+  D:
+    deutsch:
+      key: french fries
+      req: pommes frites
+      answer: pommfritz
+      correct: false
+      conf: 0.7709904909133911
+fried shrimp:
+  D:
+    deutsch:
+      key: fried shrimp
+      req: garnele
+      answer: garnele
+      correct: true
+      conf: 0.9187588691711426
+frog:
+  D:
+    deutsch:
+      key: frog
+      req: frosch
+      answer: frosch
+      correct: true
+      conf: 0.8916674852371216
+front-facing baby chick:
+  D:
+    deutsch:
+      key: front-facing baby chick
+      req: küken
+      answer: küken
+      correct: true
+      conf: 0.6804255843162537
+frowning face:
+  D:
+    deutsch:
+      key: frowning face
+      req: verwundert
+      answer: '100'
+      correct: true
+      conf: 0.7592796087265015
+frowning face with open mouth:
+  D:
+    deutsch:
+      key: frowning face with open mouth
+      req: skeptisch
+      answer: captain
+      correct: false
+      conf: 0.6693278551101685
+fuel pump:
+  D:
+    deutsch:
+      key: fuel pump
+      req: tankstelle
+      answer: tankstelle
+      correct: true
+      conf: 0.6208511590957642
+full moon:
+  D:
+    deutsch:
+      key: full moon
+      req: mond
+      answer: mond
+      correct: true
+      conf: 0.8600481152534485
+funeral urn:
+  D:
+    deutsch:
+      key: funeral urn
+      req: urne
+      answer: urne
+      correct: true
+      conf: 0.7272412180900574
+game die:
+  D:
+    deutsch:
+      key: game die
+      req: würfel
+      answer: waffe
+      correct: false
+      conf: 0.7294343709945679
+garlic:
+  D:
+    deutsch:
+      key: garlic
+      req: knoblauch
+      answer: knoblauch
+      correct: true
+      conf: 0.9160752296447754
+gear:
+  D:
+    deutsch:
+      key: gear
+      req: zahnrad
+      answer: conrad
+      correct: false
+      conf: 0.7631236910820007
+gem stone:
+  D:
+    deutsch:
+      key: gem stone
+      req: edelstein
+      answer: edelstein
+      correct: true
+      conf: 0.8504151105880737
+genie:
+  D:
+    deutsch:
+      key: genie
+      req: geist
+      answer: regau
+      correct: false
+      conf: 0.8206738829612732
+ghost:
+  D:
+    deutsch:
+      key: ghost
+      req: geist
+      answer: geil
+      correct: false
+      conf: 0.5753495097160339
+giraffe:
+  D:
+    deutsch:
+      key: giraffe
+      req: giraffe
+      answer: giraffe
+      correct: true
+      conf: 0.82623291015625
+girl:
+  D:
+    deutsch:
+      key: girl
+      req: mädchen
+      answer: mädchen
+      correct: true
+      conf: 0.8786112070083618
+glass of milk:
+  D:
+    deutsch:
+      key: glass of milk
+      req: milch
+      answer: mich
+      correct: false
+      conf: 0.6608002185821533
+glasses:
+  D:
+    deutsch:
+      key: glasses
+      req: brille
+      answer: brille
+      correct: true
+      conf: 0.8416317105293274
+globe showing Americas:
+  D:
+    deutsch:
+      key: globe showing Americas
+      req: erde
+      answer: erde
+      correct: true
+      conf: 0.7780078053474426
+globe showing Asia-Australia:
+  D:
+    deutsch:
+      key: globe showing Asia-Australia
+      req: erde
+      answer: erde
+      correct: true
+      conf: 0.8419895172119141
+globe showing Europe-Africa:
+  D:
+    deutsch:
+      key: globe showing Europe-Africa
+      req: erde
+      answer: erde
+      correct: true
+      conf: 0.9190641641616821
+gloves:
+  D:
+    deutsch:
+      key: gloves
+      req: handschuhe
+      answer: schuhe
+      correct: false
+      conf: 0.6427188515663147
+glowing star:
+  D:
+    deutsch:
+      key: glowing star
+      req: stern
+      answer: federn
+      correct: false
+      conf: 0.7264034748077393
+goal net:
+  D:
+    deutsch:
+      key: goal net
+      req: tor
+      answer: friedhof
+      correct: false
+      conf: 0.843625545501709
+goat:
+  D:
+    deutsch:
+      key: goat
+      req: ziege
+      answer: twitter
+      correct: false
+      conf: 0.6134568452835083
+goblin:
+  D:
+    deutsch:
+      key: goblin
+      req: goblin
+      answer: denn
+      correct: false
+      conf: 0.7535936236381531
+goggles:
+  D:
+    deutsch:
+      key: goggles
+      req: taucherbrille
+      answer: taucherbrille
+      correct: true
+      conf: 0.9094145894050598
+gorilla:
+  D:
+    deutsch:
+      key: gorilla
+      req: gorilla
+      answer: figurella
+      correct: false
+      conf: 0.7697771787643433
+graduation cap:
+  D:
+    deutsch:
+      key: graduation cap
+      req: kappe
+      answer: kappe
+      correct: true
+      conf: 0.7458050847053528
+grapes:
+  D:
+    deutsch:
+      key: grapes
+      req: trauben
+      answer: trauben
+      correct: true
+      conf: 0.8488968014717102
+green apple:
+  D:
+    deutsch:
+      key: green apple
+      req: apfel
+      answer: apfel
+      correct: true
+      conf: 0.8965672254562378
+green book:
+  D:
+    deutsch:
+      key: green book
+      req: buch
+      answer: buch
+      correct: true
+      conf: 0.8423089981079102
+green heart:
+  D:
+    deutsch:
+      key: green heart
+      req: herz
+      answer: herz
+      correct: true
+      conf: 0.7846121788024902
+green salad:
+  D:
+    deutsch:
+      key: green salad
+      req: salat
+      answer: salat
+      correct: true
+      conf: 0.8159025311470032
+grimacing face:
+  D:
+    deutsch:
+      key: grimacing face
+      req: grimasse
+      answer: filmmaker
+      correct: false
+      conf: 0.6855701208114624
+grinning cat:
+  D:
+    deutsch:
+      key: grinning cat
+      req: katze
+      answer: winkekatze
+      correct: false
+      conf: 0.6123213768005371
+grinning cat with smiling eyes:
+  D:
+    deutsch:
+      key: grinning cat with smiling eyes
+      req: katze
+      answer: katze
+      correct: true
+      conf: 0.612720787525177
+grinning face:
+  D:
+    deutsch:
+      key: grinning face
+      req: fröhlich
+      answer: fröhlich
+      correct: true
+      conf: 0.8325104713439941
+grinning face with big eyes:
+  D:
+    deutsch:
+      key: grinning face with big eyes
+      req: fröhlich
+      answer: fröhlich
+      correct: true
+      conf: 0.8207170367240906
+grinning face with smiling eyes:
+  D:
+    deutsch:
+      key: grinning face with smiling eyes
+      req: fröhlich
+      answer: fröhlich
+      correct: true
+      conf: 0.7657048106193542
+grinning face with sweat:
+  D:
+    deutsch:
+      key: grinning face with sweat
+      req: fröhlich
+      answer: fröhlich
+      correct: true
+      conf: 0.882597804069519
+grinning squinting face:
+  D:
+    deutsch:
+      key: grinning squinting face
+      req: fröhlich
+      answer: fröhlich
+      correct: true
+      conf: 0.8689662218093872
+growing heart:
+  D:
+    deutsch:
+      key: growing heart
+      req: herz
+      answer: herz
+      correct: true
+      conf: 0.8141261339187622
+guard:
+  D:
+    deutsch:
+      key: guard
+      req: wache
+      answer: wache
+      correct: true
+      conf: 0.7562812566757202
+guitar:
+  D:
+    deutsch:
+      key: guitar
+      req: gitarre
+      answer: gitarre
+      correct: true
+      conf: 0.8962068557739258
+haircut:
+  D:
+    deutsch:
+      key: haircut
+      req: haareschneiden
+      answer: schneiden
+      correct: false
+      conf: 0.8074048161506653
+hamburger:
+  D:
+    deutsch:
+      key: hamburger
+      req: hamburger
+      answer: hamburger
+      correct: true
+      conf: 0.8994075059890747
+hammer:
+  D:
+    deutsch:
+      key: hammer
+      req: hammer
+      answer: hammer
+      correct: true
+      conf: 0.7946632504463196
+hammer and pick:
+  D:
+    deutsch:
+      key: hammer and pick
+      req: werkzeug
+      answer: ziehwerkzeug
+      correct: false
+      conf: 0.625156044960022
+hammer and wrench:
+  D:
+    deutsch:
+      key: hammer and wrench
+      req: werkzeug
+      answer: werkzeug
+      correct: true
+      conf: 0.7662866711616516
+hamster:
+  D:
+    deutsch:
+      key: hamster
+      req: hamster
+      answer: hamster
+      correct: true
+      conf: 0.7107887268066406
+hand with fingers splayed:
+  D:
+    deutsch:
+      key: hand with fingers splayed
+      req: finger
+      answer: finger
+      correct: true
+      conf: 0.731509804725647
+handbag:
+  D:
+    deutsch:
+      key: handbag
+      req: handtasche
+      answer: handtasche
+      correct: true
+      conf: 0.8382185101509094
+handball:
+  D:
+    deutsch:
+      key: handball
+      req: handball
+      answer: handball
+      correct: true
+      conf: 0.8517057299613953
+handshake:
+  D:
+    deutsch:
+      key: handshake
+      req: händeschütteln
+      answer: händeschütteln
+      correct: true
+      conf: 0.8849767446517944
+hatching chick:
+  D:
+    deutsch:
+      key: hatching chick
+      req: küken
+      answer: küken
+      correct: true
+      conf: 0.7233697175979614
+headphone:
+  D:
+    deutsch:
+      key: headphone
+      req: kopfhörer
+      answer: kopfhörer
+      correct: true
+      conf: 0.8699973821640015
+hear-no-evil monkey:
+  D:
+    deutsch:
+      key: hear-no-evil monkey
+      req: weghören
+      answer: weghören
+      correct: true
+      conf: 0.7878977060317993
+heart decoration:
+  D:
+    deutsch:
+      key: heart decoration
+      req: herz
+      answer: herz
+      correct: true
+      conf: 0.7909111976623535
+heart exclamation:
+  D:
+    deutsch:
+      key: heart exclamation
+      req: herz
+      answer: herz
+      correct: true
+      conf: 0.8287056088447571
+heart suit:
+  D:
+    deutsch:
+      key: heart suit
+      req: herz
+      answer: herz
+      correct: true
+      conf: 0.861344039440155
+heart with arrow:
+  D:
+    deutsch:
+      key: heart with arrow
+      req: cupid
+      answer: google
+      correct: false
+      conf: 0.8549495935440063
+heart with ribbon:
+  D:
+    deutsch:
+      key: heart with ribbon
+      req: liebe
+      answer: liebe
+      correct: true
+      conf: 0.6975252032279968
+hedgehog:
+  D:
+    deutsch:
+      key: hedgehog
+      req: igel
+      answer: igel
+      correct: true
+      conf: 0.7952375411987305
+helicopter:
+  D:
+    deutsch:
+      key: helicopter
+      req: helikopter
+      answer: helikopter
+      correct: true
+      conf: 0.9190641641616821
+herb:
+  D:
+    deutsch:
+      key: herb
+      req: kraut
+      answer: zitat
+      correct: false
+      conf: 0.7574450373649597
+hibiscus:
+  D:
+    deutsch:
+      key: hibiscus
+      req: hibiskus
+      answer: siebelko
+      correct: false
+      conf: 0.6421062350273132
+high voltage:
+  D:
+    deutsch:
+      key: high voltage
+      req: blitz
+      answer: wenig
+      correct: false
+      conf: 0.6824290752410889
+high-heeled shoe:
+  D:
+    deutsch:
+      key: high-heeled shoe
+      req: schuh
+      answer: du
+      correct: false
+      conf: 0.5632256269454956
+high-speed train:
+  D:
+    deutsch:
+      key: high-speed train
+      req: bahn
+      answer: warm
+      correct: false
+      conf: 0.7886412143707275
+hiking boot:
+  D:
+    deutsch:
+      key: hiking boot
+      req: schuh
+      answer: schuh
+      correct: true
+      conf: 0.7211259603500366
+hindu temple:
+  D:
+    deutsch:
+      key: hindu temple
+      req: tempel
+      answer: tempel
+      correct: true
+      conf: 0.7707153558731079
+hippopotamus:
+  D:
+    deutsch:
+      key: hippopotamus
+      req: nilpferd
+      answer: pferd
+      correct: false
+      conf: 0.8130711913108826
+hole:
+  D:
+    deutsch:
+      key: hole
+      req: loch
+      answer: loch
+      correct: true
+      conf: 0.8692456483840942
+honey pot:
+  D:
+    deutsch:
+      key: honey pot
+      req: honig
+      answer: honig
+      correct: true
+      conf: 0.8865615725517273
+horse:
+  D:
+    deutsch:
+      key: horse
+      req: pferd
+      answer: pferd
+      correct: true
+      conf: 0.8476384282112122
+horse racing:
+  D:
+    deutsch:
+      key: horse racing
+      req: jockey
+      answer: vitafy
+      correct: false
+      conf: 0.7360962629318237
+hot beverage:
+  D:
+    deutsch:
+      key: hot beverage
+      req: tasse
+      answer: tasse
+      correct: true
+      conf: 0.7903751134872437
+hot face:
+  D:
+    deutsch:
+      key: hot face
+      req: heiss
+      answer: heiß
+      correct: false
+      conf: 0.80263352394104
+hot pepper:
+  D:
+    deutsch:
+      key: hot pepper
+      req: paprika
+      answer: paprika
+      correct: true
+      conf: 0.7878555059432983
+hotdog:
+  D:
+    deutsch:
+      key: hotdog
+      req: hotdog
+      answer: piata
+      correct: false
+      conf: 0.6768838763237
+hourglass done:
+  D:
+    deutsch:
+      key: hourglass done
+      req: sanduhr
+      answer: sandrohr
+      correct: true
+      conf: 0.7891748547554016
+hourglass not done:
+  D:
+    deutsch:
+      key: hourglass not done
+      req: sanduhr
+      answer: sanduhr
+      correct: true
+      conf: 0.8618391156196594
+house:
+  D:
+    deutsch:
+      key: house
+      req: haus
+      answer: haus
+      correct: true
+      conf: 0.7729288935661316
+house with garden:
+  D:
+    deutsch:
+      key: house with garden
+      req: haus
+      answer: fährhaus
+      correct: false
+      conf: 0.6343948245048523
+houses:
+  D:
+    deutsch:
+      key: houses
+      req: neighborhood
+      answer: neighborhood
+      correct: true
+      conf: 0.7360977530479431
+hugging face:
+  D:
+    deutsch:
+      key: hugging face
+      req: aufstützen
+      answer: aufsitzen
+      correct: true
+      conf: 0.8579379916191101
+hundred points:
+  D:
+    deutsch:
+      key: hundred points
+      req: '100'
+      answer: '100'
+      correct: true
+      conf: 0.8206120729446411
+hushed face:
+  D:
+    deutsch:
+      key: hushed face
+      req: ueberrascht
+      answer: überhaupt
+      correct: false
+      conf: 0.8777441382408142
+ice:
+  D:
+    deutsch:
+      key: ice
+      req: eis
+      answer: ein
+      correct: false
+      conf: 0.8231027126312256
+ice cream:
+  D:
+    deutsch:
+      key: ice cream
+      req: eis
+      answer: ein
+      correct: false
+      conf: 0.8753762245178223
+ice hockey:
+  D:
+    deutsch:
+      key: ice hockey
+      req: eishockey
+      answer: party
+      correct: true
+      conf: 0.82989501953125
+ice skate:
+  D:
+    deutsch:
+      key: ice skate
+      req: eislaufen
+      answer: auslaufen
+      correct: false
+      conf: 0.7696854472160339
+inbox tray:
+  D:
+    deutsch:
+      key: inbox tray
+      req: empfangen
+      answer: empfangen
+      correct: true
+      conf: 0.8996718525886536
+incoming envelope:
+  D:
+    deutsch:
+      key: incoming envelope
+      req: empfangen
+      answer: empfangen
+      correct: true
+      conf: 0.8962916135787964
+index pointing up:
+  D:
+    deutsch:
+      key: index pointing up
+      req: hinauf
+      answer: genau
+      correct: false
+      conf: 0.8288760185241699
+jack-o-lantern:
+  D:
+    deutsch:
+      key: jack-o-lantern
+      req: kürbis
+      answer: körbe
+      correct: false
+      conf: 0.8581967353820801
+jeans:
+  D:
+    deutsch:
+      key: jeans
+      req: hose
+      answer: hose
+      correct: true
+      conf: 0.8424052000045776
+joker:
+  D:
+    deutsch:
+      key: joker
+      req: joker
+      answer: aok
+      correct: false
+      conf: 0.6650987863540649
+joystick:
+  D:
+    deutsch:
+      key: joystick
+      req: joystick
+      answer: dick
+      correct: false
+      conf: 0.7935128211975098
+juggling:
+  D:
+    deutsch:
+      key: juggling
+      req: jonglieren
+      answer: jonglieren
+      correct: true
+      conf: 0.8499215841293335
+kangaroo:
+  D:
+    deutsch:
+      key: kangaroo
+      req: känguru
+      answer: känguru
+      correct: true
+      conf: 0.9069889783859253
+key:
+  D:
+    deutsch:
+      key: key
+      req: schlüssel
+      answer: schlüssel
+      correct: true
+      conf: 0.8781207203865051
+keyboard:
+  D:
+    deutsch:
+      key: keyboard
+      req: keyboard
+      answer: keyboard
+      correct: true
+      conf: 0.8469475507736206
+kick scooter:
+  D:
+    deutsch:
+      key: kick scooter
+      req: skooter
+      answer: scooter
+      correct: false
+      conf: 0.7544231414794922
+kimono:
+  D:
+    deutsch:
+      key: kimono
+      req: kimono
+      answer: kimono
+      correct: true
+      conf: 0.9110008478164673
+kiss:
+  D:
+    deutsch:
+      key: kiss
+      req: kuss
+      answer: wiglo
+      correct: false
+      conf: 0.6814389228820801
+kiss mark:
+  D:
+    deutsch:
+      key: kiss mark
+      req: lippen
+      answer: philippen
+      correct: false
+      conf: 0.7009730935096741
+kissing cat:
+  D:
+    deutsch:
+      key: kissing cat
+      req: katzenkuss
+      answer: katzenkot
+      correct: false
+      conf: 0.8544567227363586
+kissing face:
+  D:
+    deutsch:
+      key: kissing face
+      req: kuss
+      answer: twitter
+      correct: false
+      conf: 0.5489948391914368
+kissing face with closed eyes:
+  D:
+    deutsch:
+      key: kissing face with closed eyes
+      req: kuss
+      answer: groß
+      correct: false
+      conf: 0.7298961877822876
+kissing face with smiling eyes:
+  D:
+    deutsch:
+      key: kissing face with smiling eyes
+      req: kuss
+      answer: wiko
+      correct: false
+      conf: 0.6764746308326721
+kitchen knife:
+  D:
+    deutsch:
+      key: kitchen knife
+      req: messer
+      answer: messer
+      correct: true
+      conf: 0.7759689092636108
+kite:
+  D:
+    deutsch:
+      key: kite
+      req: drachensteigen
+      answer: steigen
+      correct: false
+      conf: 0.8618751764297485
+kiwi fruit:
+  D:
+    deutsch:
+      key: kiwi fruit
+      req: kiwi
+      answer: wtw
+      correct: false
+      conf: 0.6981294751167297
+kneeling:
+  D:
+    deutsch:
+      key: kneeling
+      req: knien
+      answer: techno
+      correct: false
+      conf: 0.6103467345237732
+lab coat:
+  D:
+    deutsch:
+      key: lab coat
+      req: mantel
+      answer: mantel
+      correct: true
+      conf: 0.8586518168449402
+label:
+  D:
+    deutsch:
+      key: label
+      req: zettel
+      answer: zettel
+      correct: true
+      conf: 0.8017956614494324
+lacrosse:
+  D:
+    deutsch:
+      key: lacrosse
+      req: lacrosse
+      answer: filagra
+      correct: false
+      conf: 0.7599883079528809
+ladybug:
+  D:
+    deutsch:
+      key: ladybug
+      req: marienkäfer
+      answer: marienkäfer
+      correct: true
+      conf: 0.8998786807060242
+laptop:
+  D:
+    deutsch:
+      key: laptop
+      req: laptop
+      answer: laptop
+      correct: true
+      conf: 0.8776184916496277
+last quarter moon:
+  D:
+    deutsch:
+      key: last quarter moon
+      req: mond
+      answer: mond
+      correct: true
+      conf: 0.8018206357955933
+last quarter moon face:
+  D:
+    deutsch:
+      key: last quarter moon face
+      req: mond
+      answer: mond
+      correct: true
+      conf: 0.7563408613204956
+leaf fluttering in wind:
+  D:
+    deutsch:
+      key: leaf fluttering in wind
+      req: wind
+      answer: sind
+      correct: false
+      conf: 0.8080416917800903
+ledger:
+  D:
+    deutsch:
+      key: ledger
+      req: heft
+      answer: heft
+      correct: true
+      conf: 0.8363091349601746
+left speech bubble:
+  D:
+    deutsch:
+      key: left speech bubble
+      req: dialog
+      answer: dialog
+      correct: true
+      conf: 0.7539622783660889
+left-facing fist:
+  D:
+    deutsch:
+      key: left-facing fist
+      req: faust
+      answer: verrückt
+      correct: false
+      conf: 0.8338814973831177
+leg:
+  D:
+    deutsch:
+      key: leg
+      req: bein
+      answer: steinkleber
+      correct: false
+      conf: 0.6111816167831421
+lemon:
+  D:
+    deutsch:
+      key: lemon
+      req: zitrone
+      answer: zitrone
+      correct: true
+      conf: 0.8934319615364075
+leopard:
+  D:
+    deutsch:
+      key: leopard
+      req: leopard
+      answer: leopard
+      correct: true
+      conf: 0.8927592039108276
+level slider:
+  D:
+    deutsch:
+      key: level slider
+      req: metronom
+      answer: metronom
+      correct: true
+      conf: 0.7468243837356567
+levitating:
+  D:
+    deutsch:
+      key: levitating
+      req: levitation
+      answer: levitation
+      correct: true
+      conf: 0.7917354702949524
+lifting weights:
+  D:
+    deutsch:
+      key: lifting weights
+      req: gewichtheben
+      answer: gewichtheben
+      correct: true
+      conf: 0.9105321764945984
+light bulb:
+  D:
+    deutsch:
+      key: light bulb
+      req: glühbirne
+      answer: glühbirne
+      correct: true
+      conf: 0.7555879950523376
+light rail:
+  D:
+    deutsch:
+      key: light rail
+      req: metro
+      answer: metro
+      correct: true
+      conf: 0.6822419166564941
+link:
+  D:
+    deutsch:
+      key: link
+      req: kette
+      answer: kette
+      correct: true
+      conf: 0.8599940538406372
+linked paperclips:
+  D:
+    deutsch:
+      key: linked paperclips
+      req: büroklammern
+      answer: büroklammern
+      correct: true
+      conf: 0.906704306602478
+lipstick:
+  D:
+    deutsch:
+      key: lipstick
+      req: lippenstift
+      answer: lippenstift
+      correct: true
+      conf: 0.7641429901123047
+lizard:
+  D:
+    deutsch:
+      key: lizard
+      req: eidechse
+      answer: eidechse
+      correct: true
+      conf: 0.8073241114616394
+llama:
+  D:
+    deutsch:
+      key: llama
+      req: lama
+      answer: lama
+      correct: true
+      conf: 0.7574726939201355
+lobster:
+  D:
+    deutsch:
+      key: lobster
+      req: hummer
+      answer: hummer
+      correct: true
+      conf: 0.8359829187393188
+locked:
+  D:
+    deutsch:
+      key: locked
+      req: schloss
+      answer: schmal
+      correct: false
+      conf: 0.7047525644302368
+locked with key:
+  D:
+    deutsch:
+      key: locked with key
+      req: schloss
+      answer: schlaf
+      correct: false
+      conf: 0.6159881353378296
+locked with pen:
+  D:
+    deutsch:
+      key: locked with pen
+      req: schloss
+      answer: wiesler
+      correct: false
+      conf: 0.6030213236808777
+locomotive:
+  D:
+    deutsch:
+      key: locomotive
+      req: lokomotive
+      answer: lokomotive
+      correct: true
+      conf: 0.9190641641616821
+lollipop:
+  D:
+    deutsch:
+      key: lollipop
+      req: schlecker
+      answer: trecker
+      correct: true
+      conf: 0.736878514289856
+lotion bottle:
+  D:
+    deutsch:
+      key: lotion bottle
+      req: lotion
+      answer: london
+      correct: false
+      conf: 0.7259197235107422
+lotus position:
+  D:
+    deutsch:
+      key: lotus position
+      req: meditieren
+      answer: meditieren
+      correct: true
+      conf: 0.8931745290756226
+loudly crying face:
+  D:
+    deutsch:
+      key: loudly crying face
+      req: traurig
+      answer: traurig
+      correct: true
+      conf: 0.8573349714279175
+loudspeaker:
+  D:
+    deutsch:
+      key: loudspeaker
+      req: lautsprecher
+      answer: lautsprecher
+      correct: true
+      conf: 0.8609015345573425
+love letter:
+  D:
+    deutsch:
+      key: love letter
+      req: liebesbrief
+      answer: liebesbrief
+      correct: true
+      conf: 0.9190641641616821
+love-you gesture:
+  D:
+    deutsch:
+      key: love-you gesture
+      req: liebe
+      answer: liebe
+      correct: true
+      conf: 0.8452714681625366
+luggage:
+  D:
+    deutsch:
+      key: luggage
+      req: gepäck
+      answer: gepäck
+      correct: true
+      conf: 0.6088369488716125
+lungs:
+  D:
+    deutsch:
+      key: lungs
+      req: lungen
+      answer: lungen
+      correct: true
+      conf: 0.8233607411384583
+lying face:
+  D:
+    deutsch:
+      key: lying face
+      req: pinocchio
+      answer: pinocchio
+      correct: true
+      conf: 0.9054697751998901
+magnet:
+  D:
+    deutsch:
+      key: magnet
+      req: magnet
+      answer: magnet
+      correct: true
+      conf: 0.8863409161567688
+magnifying glass tilted left:
+  D:
+    deutsch:
+      key: magnifying glass tilted left
+      req: lupe
+      answer: note
+      correct: false
+      conf: 0.7136265635490417
+magnifying glass tilted right:
+  D:
+    deutsch:
+      key: magnifying glass tilted right
+      req: lupe
+      answer: lupe
+      correct: true
+      conf: 0.7634091377258301
+mahjong red dragon:
+  D:
+    deutsch:
+      key: mahjong red dragon
+      req: mahjong
+      answer: viehmeier
+      correct: false
+      conf: 0.8247205018997192
+man:
+  D:
+    deutsch:
+      key: man
+      req: person
+      answer: person
+      correct: true
+      conf: 0.8167506456375122
+man artist:
+  D:
+    deutsch:
+      key: man artist
+      req: künstler
+      answer: künstler
+      correct: true
+      conf: 0.7375200986862183
+man astronaut:
+  D:
+    deutsch:
+      key: man astronaut
+      req: astronaut
+      answer: astronaut
+      correct: true
+      conf: 0.871800422668457
+man blind:
+  D:
+    deutsch:
+      key: man blind
+      req: blind
+      answer: blind
+      correct: true
+      conf: 0.7036730647087097
+man cook:
+  D:
+    deutsch:
+      key: man cook
+      req: koch
+      answer: koch
+      correct: true
+      conf: 0.7667381167411804
+man dancing:
+  D:
+    deutsch:
+      key: man dancing
+      req: tanzen
+      answer: tanzen
+      correct: true
+      conf: 0.7464758157730103
+man factory worker:
+  D:
+    deutsch:
+      key: man factory worker
+      req: arbeiter
+      answer: arbeiter
+      correct: true
+      conf: 0.8941364288330078
+man fairy:
+  D:
+    deutsch:
+      key: man fairy
+      req: elf
+      answer: '11'
+      correct: false
+      conf: 0.7626474499702454
+man farmer:
+  D:
+    deutsch:
+      key: man farmer
+      req: bauer
+      answer: bauer
+      correct: true
+      conf: 0.8660846948623657
+man firefighter:
+  D:
+    deutsch:
+      key: man firefighter
+      req: feuerwehr
+      answer: feuerwehr
+      correct: true
+      conf: 0.8819850087165833
+man golfing:
+  D:
+    deutsch:
+      key: man golfing
+      req: golf
+      answer: golf
+      correct: true
+      conf: 0.8449916839599609
+man health worker:
+  D:
+    deutsch:
+      key: man health worker
+      req: arzt
+      answer: 4a
+      correct: false
+      conf: 0.7993699312210083
+man in manual wheelchair:
+  D:
+    deutsch:
+      key: man in manual wheelchair
+      req: rollstuhl
+      answer: rollstuhl
+      correct: true
+      conf: 0.740946888923645
+man in motorized wheelchair:
+  D:
+    deutsch:
+      key: man in motorized wheelchair
+      req: rollstuhl
+      answer: rollstuhl
+      correct: true
+      conf: 0.7493380308151245
+man judge:
+  D:
+    deutsch:
+      key: man judge
+      req: richter
+      answer: richter
+      correct: true
+      conf: 0.6274275779724121
+man kneeling:
+  D:
+    deutsch:
+      key: man kneeling
+      req: knien
+      answer: nehmen
+      correct: false
+      conf: 0.6294746398925781
+man mechanic:
+  D:
+    deutsch:
+      key: man mechanic
+      req: mechaniker
+      answer: mechaniker
+      correct: true
+      conf: 0.8160054087638855
+man office worker:
+  D:
+    deutsch:
+      key: man office worker
+      req: beamter
+      answer: tag
+      correct: true
+      conf: 0.7168247699737549
+man pilot:
+  D:
+    deutsch:
+      key: man pilot
+      req: pilot
+      answer: pilot
+      correct: true
+      conf: 0.8531566858291626
+man running:
+  D:
+    deutsch:
+      key: man running
+      req: laufen
+      answer: laufen
+      correct: true
+      conf: 0.7821216583251953
+man scientist:
+  D:
+    deutsch:
+      key: man scientist
+      req: wissenschaftler
+      answer: wissenschaftler
+      correct: true
+      conf: 0.7893115878105164
+man singer:
+  D:
+    deutsch:
+      key: man singer
+      req: sänger
+      answer: sänger
+      correct: true
+      conf: 0.8694524765014648
+man standing:
+  D:
+    deutsch:
+      key: man standing
+      req: mann
+      answer: man
+      correct: false
+      conf: 0.8504239320755005
+man student:
+  D:
+    deutsch:
+      key: man student
+      req: student
+      answer: student
+      correct: true
+      conf: 0.737993597984314
+man surfing:
+  D:
+    deutsch:
+      key: man surfing
+      req: surfen
+      answer: surfen
+      correct: true
+      conf: 0.7839354276657104
+man teacher:
+  D:
+    deutsch:
+      key: man teacher
+      req: lehrer
+      answer: meere
+      correct: true
+      conf: 0.8065410852432251
+man technologist:
+  D:
+    deutsch:
+      key: man technologist
+      req: programmierer
+      answer: programmierer
+      correct: true
+      conf: 0.8602487444877625
+man walking:
+  D:
+    deutsch:
+      key: man walking
+      req: gehen
+      answer: sehen
+      correct: false
+      conf: 0.8429200053215027
+'man: bald':
+  D:
+    deutsch:
+      key: 'man: bald'
+      req: glatze
+      answer: glatze
+      correct: true
+      conf: 0.820742130279541
+'man: beard':
+  D:
+    deutsch:
+      key: 'man: beard'
+      req: bart
+      answer: bar
+      correct: false
+      conf: 0.7434959411621094
+'man: blond hair':
+  D:
+    deutsch:
+      key: 'man: blond hair'
+      req: blond
+      answer: blond
+      correct: true
+      conf: 0.6861074566841125
+'man: curly hair':
+  D:
+    deutsch:
+      key: 'man: curly hair'
+      req: junge
+      answer: junge
+      correct: true
+      conf: 0.8136960864067078
+'man: red hair':
+  D:
+    deutsch:
+      key: 'man: red hair'
+      req: rothaarig
+      answer: rothaarig
+      correct: true
+      conf: 0.8774732351303101
+'man: white hair':
+  D:
+    deutsch:
+      key: 'man: white hair'
+      req: weisshärig
+      answer: weitere
+      correct: false
+      conf: 0.7625101804733276
+mango:
+  D:
+    deutsch:
+      key: mango
+      req: mango
+      answer: mango
+      correct: true
+      conf: 0.8916916847229004
+mantelpiece clock:
+  D:
+    deutsch:
+      key: mantelpiece clock
+      req: uhr
+      answer: uhr
+      correct: true
+      conf: 0.8468033075332642
+manual wheelchair:
+  D:
+    deutsch:
+      key: manual wheelchair
+      req: rollstuhl
+      answer: rollstuhl
+      correct: true
+      conf: 0.803989052772522
+man’s shoe:
+  D:
+    deutsch:
+      key: man’s shoe
+      req: schuh
+      answer: video
+      correct: false
+      conf: 0.6089672446250916
+map of Japan:
+  D:
+    deutsch:
+      key: map of Japan
+      req: japan
+      answer: ram
+      correct: true
+      conf: 0.746914267539978
+maple leaf:
+  D:
+    deutsch:
+      key: maple leaf
+      req: ahornblatt
+      answer: blatt
+      correct: true
+      conf: 0.9132494330406189
+martial arts uniform:
+  D:
+    deutsch:
+      key: martial arts uniform
+      req: karate
+      answer: karate
+      correct: true
+      conf: 0.7780653238296509
+massage:
+  D:
+    deutsch:
+      key: massage
+      req: massage
+      answer: massage
+      correct: true
+      conf: 0.9033713340759277
+meat on bone:
+  D:
+    deutsch:
+      key: meat on bone
+      req: keule
+      answer: grille
+      correct: false
+      conf: 0.6902433037757874
+mechanical arm:
+  D:
+    deutsch:
+      key: mechanical arm
+      req: arm
+      answer: arm
+      correct: true
+      conf: 0.83098965883255
+mechanical leg:
+  D:
+    deutsch:
+      key: mechanical leg
+      req: bein
+      answer: bein
+      correct: true
+      conf: 0.6953403353691101
+medal:
+  D:
+    deutsch:
+      key: medal
+      req: medaille
+      answer: medaille
+      correct: true
+      conf: 0.8506761789321899
+megaphone:
+  D:
+    deutsch:
+      key: megaphone
+      req: megaphone
+      answer: männer
+      correct: true
+      conf: 0.7227350473403931
+melon:
+  D:
+    deutsch:
+      key: melon
+      req: melone
+      answer: melone
+      correct: true
+      conf: 0.7485603094100952
+memo:
+  D:
+    deutsch:
+      key: memo
+      req: notiz
+      answer: finocchi
+      correct: false
+      conf: 0.7631129026412964
+men holding hands:
+  D:
+    deutsch:
+      key: men holding hands
+      req: handhalten
+      answer: halten
+      correct: false
+      conf: 0.8036800622940063
+mermaid:
+  D:
+    deutsch:
+      key: mermaid
+      req: seejungfrau
+      answer: jungfrau
+      correct: true
+      conf: 0.864968478679657
+metro:
+  D:
+    deutsch:
+      key: metro
+      req: u-bahn
+      answer: u-bahn
+      correct: true
+      conf: 0.8457489013671875
+microbe:
+  D:
+    deutsch:
+      key: microbe
+      req: mikrobe
+      answer: mikrowelle
+      correct: false
+      conf: 0.7812021970748901
+microphone:
+  D:
+    deutsch:
+      key: microphone
+      req: microphon
+      answer: microphone
+      correct: false
+      conf: 0.8980475664138794
+microscope:
+  D:
+    deutsch:
+      key: microscope
+      req: mikroscop
+      answer: mikroskop
+      correct: false
+      conf: 0.9116482734680176
+middle finger:
+  D:
+    deutsch:
+      key: middle finger
+      req: mittelfinger
+      answer: mittelfinger
+      correct: true
+      conf: 0.8027716875076294
+milky way:
+  D:
+    deutsch:
+      key: milky way
+      req: galaxie
+      answer: galaxie
+      correct: true
+      conf: 0.8234440684318542
+minibus:
+  D:
+    deutsch:
+      key: minibus
+      req: bus
+      answer: fieber
+      correct: false
+      conf: 0.7773492336273193
+moai:
+  D:
+    deutsch:
+      key: moai
+      req: statue
+      answer: statue
+      correct: true
+      conf: 0.8579148054122925
+mobile phone:
+  D:
+    deutsch:
+      key: mobile phone
+      req: handy
+      answer: handy
+      correct: true
+      conf: 0.7931145429611206
+money bag:
+  D:
+    deutsch:
+      key: money bag
+      req: geld
+      answer: geld
+      correct: true
+      conf: 0.8272525072097778
+money-mouth face:
+  D:
+    deutsch:
+      key: money-mouth face
+      req: zunge
+      answer: zunge
+      correct: true
+      conf: 0.8082993030548096
+monkey:
+  D:
+    deutsch:
+      key: monkey
+      req: affe
+      answer: affe
+      correct: true
+      conf: 0.8624795079231262
+monorail:
+  D:
+    deutsch:
+      key: monorail
+      req: zug
+      answer: zug
+      correct: true
+      conf: 0.8267372250556946
+mosque:
+  D:
+    deutsch:
+      key: mosque
+      req: moschee
+      answer: moschee
+      correct: true
+      conf: 0.8381719589233398
+mosquito:
+  D:
+    deutsch:
+      key: mosquito
+      req: gelse
+      answer: video
+      correct: false
+      conf: 0.7361770272254944
+motor boat:
+  D:
+    deutsch:
+      key: motor boat
+      req: motorboot
+      answer: motorboot
+      correct: true
+      conf: 0.8158508539199829
+motor scooter:
+  D:
+    deutsch:
+      key: motor scooter
+      req: moped
+      answer: moped
+      correct: true
+      conf: 0.8732833862304688
+motorcycle:
+  D:
+    deutsch:
+      key: motorcycle
+      req: motorrad
+      answer: motorrad
+      correct: true
+      conf: 0.9021426439285278
+motorized wheelchair:
+  D:
+    deutsch:
+      key: motorized wheelchair
+      req: rollstuhl
+      answer: rollstuhl
+      correct: true
+      conf: 0.7309190034866333
+motorway:
+  D:
+    deutsch:
+      key: motorway
+      req: strasse
+      answer: straße
+      correct: false
+      conf: 0.6588810086250305
+mountain:
+  D:
+    deutsch:
+      key: mountain
+      req: berg
+      answer: fieber
+      correct: false
+      conf: 0.5823153257369995
+mountain biking:
+  D:
+    deutsch:
+      key: mountain biking
+      req: radfahren
+      answer: radfahren
+      correct: true
+      conf: 0.7371554374694824
+mountain cableway:
+  D:
+    deutsch:
+      key: mountain cableway
+      req: seilbahn
+      answer: seilbahn
+      correct: true
+      conf: 0.8876285552978516
+mouse:
+  D:
+    deutsch:
+      key: mouse
+      req: maus
+      answer: immer
+      correct: true
+      conf: 0.8945719599723816
+mouth:
+  D:
+    deutsch:
+      key: mouth
+      req: mund
+      answer: man
+      correct: false
+      conf: 0.8372808694839478
+movie camera:
+  D:
+    deutsch:
+      key: movie camera
+      req: kamera
+      answer: kamera
+      correct: true
+      conf: 0.8228473663330078
+mushroom:
+  D:
+    deutsch:
+      key: mushroom
+      req: pilz
+      answer: quebec
+      correct: false
+      conf: 0.6494627594947815
+musical keyboard:
+  D:
+    deutsch:
+      key: musical keyboard
+      req: klavier
+      answer: klavier
+      correct: true
+      conf: 0.9135427474975586
+musical note:
+  D:
+    deutsch:
+      key: musical note
+      req: noten
+      answer: fino
+      correct: false
+      conf: 0.6064476370811462
+musical notes:
+  D:
+    deutsch:
+      key: musical notes
+      req: noten
+      answer: noten
+      correct: true
+      conf: 0.6989865303039551
+musical score:
+  D:
+    deutsch:
+      key: musical score
+      req: violinschluessel
+      answer: violinschlüssel
+      correct: false
+      conf: 0.9003763198852539
+muted speaker:
+  D:
+    deutsch:
+      key: muted speaker
+      req: lautlos
+      answer: lautlos
+      correct: true
+      conf: 0.8501703143119812
+nail polish:
+  D:
+    deutsch:
+      key: nail polish
+      req: kosmetik
+      answer: kosmetik
+      correct: true
+      conf: 0.8596591949462891
+namaste:
+  D:
+    deutsch:
+      key: namaste
+      req: bitte
+      answer: bitte
+      correct: true
+      conf: 0.7323311567306519
+nauseated face:
+  D:
+    deutsch:
+      key: nauseated face
+      req: ekel
+      answer: köln
+      correct: false
+      conf: 0.6767268180847168
+necktie:
+  D:
+    deutsch:
+      key: necktie
+      req: kravatte
+      answer: cover
+      correct: false
+      conf: 0.7952698469161987
+nerd face:
+  D:
+    deutsch:
+      key: nerd face
+      req: nerd
+      answer: peanut
+      correct: false
+      conf: 0.6023480892181396
+neutral face:
+  D:
+    deutsch:
+      key: neutral face
+      req: neutral
+      answer: neutral
+      correct: true
+      conf: 0.7926015853881836
+newspaper:
+  D:
+    deutsch:
+      key: newspaper
+      req: zeitung
+      answer: zeitung
+      correct: true
+      conf: 0.9190641641616821
+nose:
+  D:
+    deutsch:
+      key: nose
+      req: nase
+      answer: nase
+      correct: true
+      conf: 0.9190641641616821
+notebook:
+  D:
+    deutsch:
+      key: notebook
+      req: heft
+      answer: oft
+      correct: false
+      conf: 0.8476964235305786
+notebook with decorative cover:
+  D:
+    deutsch:
+      key: notebook with decorative cover
+      req: heft
+      answer: oft
+      correct: false
+      conf: 0.8553863763809204
+nut and bolt:
+  D:
+    deutsch:
+      key: nut and bolt
+      req: schraubenmutter
+      answer: mutter
+      correct: false
+      conf: 0.7698342204093933
+octopus:
+  D:
+    deutsch:
+      key: octopus
+      req: oktopus
+      answer: octopus
+      correct: false
+      conf: 0.7295308113098145
+oden:
+  D:
+    deutsch:
+      key: oden
+      req: spiess
+      answer: spiel
+      correct: false
+      conf: 0.6685892939567566
+office building:
+  D:
+    deutsch:
+      key: office building
+      req: gebäude
+      answer: beide
+      correct: true
+      conf: 0.8148224949836731
+ogre:
+  D:
+    deutsch:
+      key: ogre
+      req: oger
+      answer: yoga
+      correct: false
+      conf: 0.6013583540916443
+oil drum:
+  D:
+    deutsch:
+      key: oil drum
+      req: öl
+      answer: öl
+      correct: true
+      conf: 0.7756495475769043
+old key:
+  D:
+    deutsch:
+      key: old key
+      req: schlüssel
+      answer: schlüssel
+      correct: true
+      conf: 0.8113064765930176
+old man:
+  D:
+    deutsch:
+      key: old man
+      req: weisshaarig
+      answer: weißhaarig
+      correct: false
+      conf: 0.8540147542953491
+old woman:
+  D:
+    deutsch:
+      key: old woman
+      req: weisshaarig
+      answer: weißhaarig
+      correct: false
+      conf: 0.8137459754943848
+older person:
+  D:
+    deutsch:
+      key: older person
+      req: weisshaarig
+      answer: weißhaarig
+      correct: false
+      conf: 0.7599942088127136
+oncoming automobile:
+  D:
+    deutsch:
+      key: oncoming automobile
+      req: auto
+      answer: auto
+      correct: true
+      conf: 0.9125578999519348
+oncoming fist:
+  D:
+    deutsch:
+      key: oncoming fist
+      req: faust
+      answer: verrückt
+      correct: false
+      conf: 0.9190641641616821
+one-piece swimsuit:
+  D:
+    deutsch:
+      key: one-piece swimsuit
+      req: badeanzug
+      answer: ark
+      correct: false
+      conf: 0.6591974496841431
+onion:
+  D:
+    deutsch:
+      key: onion
+      req: zwiebel
+      answer: zwiebel
+      correct: true
+      conf: 0.8355129361152649
+open book:
+  D:
+    deutsch:
+      key: open book
+      req: buch
+      answer: buch
+      correct: true
+      conf: 0.7604694366455078
+open file folder:
+  D:
+    deutsch:
+      key: open file folder
+      req: mappe
+      answer: marco
+      correct: false
+      conf: 0.6271075010299683
+open hands:
+  D:
+    deutsch:
+      key: open hands
+      req: hände
+      answer: hände
+      correct: true
+      conf: 0.8061838150024414
+optical disk:
+  D:
+    deutsch:
+      key: optical disk
+      req: dvd
+      answer: dvd
+      correct: true
+      conf: 0.8274256587028503
+orange book:
+  D:
+    deutsch:
+      key: orange book
+      req: buch
+      answer: buch
+      correct: true
+      conf: 0.7169638276100159
+orange heart:
+  D:
+    deutsch:
+      key: orange heart
+      req: herz
+      answer: herz
+      correct: true
+      conf: 0.7349644899368286
+orangutan:
+  D:
+    deutsch:
+      key: orangutan
+      req: orang utan
+      answer: guthaben
+      correct: false
+      conf: 0.8030356168746948
+otter:
+  D:
+    deutsch:
+      key: otter
+      req: otter
+      answer: niorter
+      correct: false
+      conf: 0.6761600971221924
+outbox tray:
+  D:
+    deutsch:
+      key: outbox tray
+      req: senden
+      answer: senden
+      correct: true
+      conf: 0.7604535818099976
+owl:
+  D:
+    deutsch:
+      key: owl
+      req: eule
+      answer: eine
+      correct: false
+      conf: 0.8330479860305786
+ox:
+  D:
+    deutsch:
+      key: ox
+      req: stier
+      answer: tier
+      correct: false
+      conf: 0.812639057636261
+oyster:
+  D:
+    deutsch:
+      key: oyster
+      req: auster
+      answer: da
+      correct: false
+      conf: 0.7675671577453613
+package:
+  D:
+    deutsch:
+      key: package
+      req: packet
+      answer: parkett
+      correct: false
+      conf: 0.6881154775619507
+page facing up:
+  D:
+    deutsch:
+      key: page facing up
+      req: seite
+      answer: seite
+      correct: true
+      conf: 0.8233351707458496
+page with curl:
+  D:
+    deutsch:
+      key: page with curl
+      req: dokument
+      answer: dokument
+      correct: true
+      conf: 0.7482703328132629
+pager:
+  D:
+    deutsch:
+      key: pager
+      req: pager
+      answer: besser
+      correct: false
+      conf: 0.5961381196975708
+paintbrush:
+  D:
+    deutsch:
+      key: paintbrush
+      req: pinsel
+      answer: pinsel
+      correct: true
+      conf: 0.7693792581558228
+palm tree:
+  D:
+    deutsch:
+      key: palm tree
+      req: palme
+      answer: palme
+      correct: true
+      conf: 0.8273378610610962
+pancakes:
+  D:
+    deutsch:
+      key: pancakes
+      req: crepes
+      answer: pfau
+      correct: false
+      conf: 0.6492205858230591
+panda:
+  D:
+    deutsch:
+      key: panda
+      req: panda
+      answer: panda
+      correct: true
+      conf: 0.7821652293205261
+paperclip:
+  D:
+    deutsch:
+      key: paperclip
+      req: büroklammer
+      answer: büroklammer
+      correct: true
+      conf: 0.9190641641616821
+parachute:
+  D:
+    deutsch:
+      key: parachute
+      req: fallschirm
+      answer: fallschirm
+      correct: true
+      conf: 0.7631127834320068
+parrot:
+  D:
+    deutsch:
+      key: parrot
+      req: papagei
+      answer: papagei
+      correct: true
+      conf: 0.9190641641616821
+party popper:
+  D:
+    deutsch:
+      key: party popper
+      req: party
+      answer: party
+      correct: true
+      conf: 0.8417255282402039
+partying face:
+  D:
+    deutsch:
+      key: partying face
+      req: feiern
+      answer: feiern
+      correct: true
+      conf: 0.7934360504150391
+passenger ship:
+  D:
+    deutsch:
+      key: passenger ship
+      req: schiff
+      answer: wishes
+      correct: false
+      conf: 0.6958260536193848
+paws:
+  D:
+    deutsch:
+      key: paws
+      req: pfoten
+      answer: booten
+      correct: false
+      conf: 0.6166478395462036
+peach:
+  D:
+    deutsch:
+      key: peach
+      req: pfirsich
+      answer: '44'
+      correct: false
+      conf: 0.7581955194473267
+peacock:
+  D:
+    deutsch:
+      key: peacock
+      req: pfau
+      answer: fifa
+      correct: false
+      conf: 0.7362899780273438
+peanuts:
+  D:
+    deutsch:
+      key: peanuts
+      req: erdnüsse
+      answer: erdnüsse
+      correct: true
+      conf: 0.8850756883621216
+pear:
+  D:
+    deutsch:
+      key: pear
+      req: birne
+      answer: berner
+      correct: false
+      conf: 0.7387345433235168
+pen:
+  D:
+    deutsch:
+      key: pen
+      req: kugelschreiber
+      answer: kugelschreiber
+      correct: true
+      conf: 0.8966986536979675
+pencil:
+  D:
+    deutsch:
+      key: pencil
+      req: bleistift
+      answer: bleistift
+      correct: true
+      conf: 0.8630020022392273
+penguin:
+  D:
+    deutsch:
+      key: penguin
+      req: pinguin
+      answer: pinguin
+      correct: true
+      conf: 0.9190641641616821
+pensive face:
+  D:
+    deutsch:
+      key: pensive face
+      req: nachdenklich
+      answer: nachdenklich
+      correct: true
+      conf: 0.8422892093658447
+people holding hands:
+  D:
+    deutsch:
+      key: people holding hands
+      req: handhalten
+      answer: seiten
+      correct: false
+      conf: 0.7167942523956299
+performing arts:
+  D:
+    deutsch:
+      key: performing arts
+      req: masken
+      answer: osten
+      correct: true
+      conf: 0.8772169947624207
+persevering face:
+  D:
+    deutsch:
+      key: persevering face
+      req: stur
+      answer: restore
+      correct: false
+      conf: 0.7889042496681213
+person:
+  D:
+    deutsch:
+      key: person
+      req: mensch
+      answer: mensch
+      correct: true
+      conf: 0.6513711810112
+person bowing:
+  D:
+    deutsch:
+      key: person bowing
+      req: denken
+      answer: enden
+      correct: false
+      conf: 0.8013104200363159
+person facepalming:
+  D:
+    deutsch:
+      key: person facepalming
+      req: oh gott
+      answer: oh gott
+      correct: true
+      conf: 0.8161695599555969
+person frowning:
+  D:
+    deutsch:
+      key: person frowning
+      req: enttäuscht
+      answer: enttäuscht
+      correct: true
+      conf: 0.9190641641616821
+person gesturing NO:
+  D:
+    deutsch:
+      key: person gesturing NO
+      req: stop
+      answer: top
+      correct: false
+      conf: 0.6047134399414062
+person gesturing OK:
+  D:
+    deutsch:
+      key: person gesturing OK
+      req: ok
+      answer: ok
+      correct: true
+      conf: 0.8505562543869019
+person golfing:
+  D:
+    deutsch:
+      key: person golfing
+      req: golf
+      answer: golf
+      correct: true
+      conf: 0.8583027720451355
+person in tuxedo:
+  D:
+    deutsch:
+      key: person in tuxedo
+      req: tuxedo
+      answer: tuxedo
+      correct: true
+      conf: 0.7116761803627014
+person pouting:
+  D:
+    deutsch:
+      key: person pouting
+      req: beleidigt
+      answer: beleidigt
+      correct: true
+      conf: 0.8142894506454468
+person raising hand:
+  D:
+    deutsch:
+      key: person raising hand
+      req: hallo
+      answer: hallo
+      correct: true
+      conf: 0.8208400011062622
+person shrugging:
+  D:
+    deutsch:
+      key: person shrugging
+      req: ratlos
+      answer: ratlos
+      correct: true
+      conf: 0.7425817251205444
+person tipping hand:
+  D:
+    deutsch:
+      key: person tipping hand
+      req: handgelenk
+      answer: handgelenk
+      correct: true
+      conf: 0.7837988138198853
+person wearing turban:
+  D:
+    deutsch:
+      key: person wearing turban
+      req: turban
+      answer: turban
+      correct: true
+      conf: 0.8094266057014465
+person with skullcap:
+  D:
+    deutsch:
+      key: person with skullcap
+      req: kappe
+      answer: katze
+      correct: false
+      conf: 0.6211352348327637
+person with veil:
+  D:
+    deutsch:
+      key: person with veil
+      req: braut
+      answer: braut
+      correct: true
+      conf: 0.802221417427063
+'person: blond hair':
+  D:
+    deutsch:
+      key: 'person: blond hair'
+      req: bub
+      answer: ebook
+      correct: false
+      conf: 0.664341390132904
+petri dish:
+  D:
+    deutsch:
+      key: petri dish
+      req: petrischale
+      answer: petrischale
+      correct: true
+      conf: 0.900218665599823
+pick:
+  D:
+    deutsch:
+      key: pick
+      req: werkzeug
+      answer: werkzeug
+      correct: true
+      conf: 0.760230541229248
+pie:
+  D:
+    deutsch:
+      key: pie
+      req: kuchen
+      answer: kuchen
+      correct: true
+      conf: 0.9148883819580078
+pig:
+  D:
+    deutsch:
+      key: pig
+      req: schwein
+      answer: schwein
+      correct: true
+      conf: 0.9147473573684692
+pile of poo:
+  D:
+    deutsch:
+      key: pile of poo
+      req: exkrement
+      answer: exkrement
+      correct: true
+      conf: 0.836092472076416
+pill:
+  D:
+    deutsch:
+      key: pill
+      req: pille
+      answer: zehner
+      correct: false
+      conf: 0.7420507669448853
+pinching hand:
+  D:
+    deutsch:
+      key: pinching hand
+      req: wenig
+      answer: wenig
+      correct: true
+      conf: 0.5716659426689148
+pineapple:
+  D:
+    deutsch:
+      key: pineapple
+      req: ananas
+      answer: ananas
+      correct: true
+      conf: 0.9084552526473999
+ping pong:
+  D:
+    deutsch:
+      key: ping pong
+      req: ping pong
+      answer: coa
+      correct: false
+      conf: 0.7057084441184998
+pistol:
+  D:
+    deutsch:
+      key: pistol
+      req: pistole
+      answer: pistole
+      correct: true
+      conf: 0.8268927335739136
+pizza:
+  D:
+    deutsch:
+      key: pizza
+      req: pizza
+      answer: wiesental
+      correct: false
+      conf: 0.6094713807106018
+pleading face:
+  D:
+    deutsch:
+      key: pleading face
+      req: flehend
+      answer: flehend
+      correct: true
+      conf: 0.823441207408905
+police car:
+  D:
+    deutsch:
+      key: police car
+      req: polizei
+      answer: polizei
+      correct: true
+      conf: 0.9129063487052917
+police officer:
+  D:
+    deutsch:
+      key: police officer
+      req: polizei
+      answer: polizei
+      correct: true
+      conf: 0.9190641641616821
+poodle:
+  D:
+    deutsch:
+      key: poodle
+      req: hund
+      answer: hund
+      correct: true
+      conf: 0.8824063539505005
+pool 8 ball:
+  D:
+    deutsch:
+      key: pool 8 ball
+      req: billiard
+      answer: billard
+      correct: false
+      conf: 0.8356337547302246
+popcorn:
+  D:
+    deutsch:
+      key: popcorn
+      req: popcorn
+      answer: popcorn
+      correct: true
+      conf: 0.9190641641616821
+postal horn:
+  D:
+    deutsch:
+      key: postal horn
+      req: horn
+      answer: cihan
+      correct: false
+      conf: 0.6921448707580566
+postbox:
+  D:
+    deutsch:
+      key: postbox
+      req: postkasten
+      answer: gebrauchtwagen
+      correct: false
+      conf: 0.6756701469421387
+pot of food:
+  D:
+    deutsch:
+      key: pot of food
+      req: stew
+      answer: you
+      correct: false
+      conf: 0.5956689119338989
+potato:
+  D:
+    deutsch:
+      key: potato
+      req: kartoffel
+      answer: kartoffel
+      correct: true
+      conf: 0.699068009853363
+poultry leg:
+  D:
+    deutsch:
+      key: poultry leg
+      req: huhn
+      answer: huhn
+      correct: true
+      conf: 0.6768261194229126
+pound banknote:
+  D:
+    deutsch:
+      key: pound banknote
+      req: pfund
+      answer: vincent
+      correct: false
+      conf: 0.8156905174255371
+pouting cat:
+  D:
+    deutsch:
+      key: pouting cat
+      req: schmollende katze
+      answer: schwein der katze
+      correct: false
+      conf: 0.9156901836395264
+pouting face:
+  D:
+    deutsch:
+      key: pouting face
+      req: trotzig
+      answer: kopfweh
+      correct: false
+      conf: 0.6206921339035034
+prayer beads:
+  D:
+    deutsch:
+      key: prayer beads
+      req: kette
+      answer: kette
+      correct: true
+      conf: 0.8228269815444946
+pregnant woman:
+  D:
+    deutsch:
+      key: pregnant woman
+      req: schwanger
+      answer: schwanger
+      correct: true
+      conf: 0.9190641641616821
+pretzel:
+  D:
+    deutsch:
+      key: pretzel
+      req: brezel
+      answer: rätsel
+      correct: true
+      conf: 0.8209064602851868
+prince:
+  D:
+    deutsch:
+      key: prince
+      req: prinz
+      answer: prince
+      correct: false
+      conf: 0.8804320096969604
+princess:
+  D:
+    deutsch:
+      key: princess
+      req: prizessin
+      answer: prinzessin
+      correct: false
+      conf: 0.7474320530891418
+printer:
+  D:
+    deutsch:
+      key: printer
+      req: drucker
+      answer: rocker
+      correct: true
+      conf: 0.7543390989303589
+purple heart:
+  D:
+    deutsch:
+      key: purple heart
+      req: herz
+      answer: herz
+      correct: true
+      conf: 0.777940571308136
+purse:
+  D:
+    deutsch:
+      key: purse
+      req: tasche
+      answer: tasche
+      correct: true
+      conf: 0.7716482877731323
+pushpin:
+  D:
+    deutsch:
+      key: pushpin
+      req: reissnagel
+      answer: nageln
+      correct: false
+      conf: 0.8720579743385315
+puzzle piece:
+  D:
+    deutsch:
+      key: puzzle piece
+      req: puzzle
+      answer: puzzle
+      correct: true
+      conf: 0.8266986608505249
+rabbit:
+  D:
+    deutsch:
+      key: rabbit
+      req: hase
+      answer: hase
+      correct: true
+      conf: 0.9190641641616821
+racing car:
+  D:
+    deutsch:
+      key: racing car
+      req: rennwagen
+      answer: wohnwagen
+      correct: true
+      conf: 0.7867499589920044
+radio:
+  D:
+    deutsch:
+      key: radio
+      req: radio
+      answer: radio
+      correct: true
+      conf: 0.8556903600692749
+railway car:
+  D:
+    deutsch:
+      key: railway car
+      req: strassenbahn
+      answer: straßenbahn
+      correct: false
+      conf: 0.9160170555114746
+railway track:
+  D:
+    deutsch:
+      key: railway track
+      req: schienen
+      answer: schienen
+      correct: true
+      conf: 0.620652973651886
+rainbow:
+  D:
+    deutsch:
+      key: rainbow
+      req: regenbogen
+      answer: regenbogen
+      correct: true
+      conf: 0.7801616191864014
+raised back of hand:
+  D:
+    deutsch:
+      key: raised back of hand
+      req: handrücken
+      answer: drücken
+      correct: true
+      conf: 0.7897815704345703
+raised fist:
+  D:
+    deutsch:
+      key: raised fist
+      req: faust
+      answer: verrückt
+      correct: false
+      conf: 0.7523157000541687
+raised hand:
+  D:
+    deutsch:
+      key: raised hand
+      req: hand
+      answer: hand
+      correct: true
+      conf: 0.690853476524353
+raising hands:
+  D:
+    deutsch:
+      key: raising hands
+      req: feiern
+      answer: feiern
+      correct: true
+      conf: 0.8746659159660339
+ram:
+  D:
+    deutsch:
+      key: ram
+      req: bock
+      answer: viborg
+      correct: false
+      conf: 0.6434818506240845
+rat:
+  D:
+    deutsch:
+      key: rat
+      req: ratte
+      answer: 4ac
+      correct: false
+      conf: 0.6221472024917603
+razor:
+  D:
+    deutsch:
+      key: razor
+      req: rasiermesser
+      answer: rasiermesser
+      correct: true
+      conf: 0.9165217280387878
+receipt:
+  D:
+    deutsch:
+      key: receipt
+      req: rechnung
+      answer: rechnung
+      correct: true
+      conf: 0.829971432685852
+red apple:
+  D:
+    deutsch:
+      key: red apple
+      req: apfel
+      answer: apfel
+      correct: true
+      conf: 0.8731983304023743
+red heart:
+  D:
+    deutsch:
+      key: red heart
+      req: herz
+      answer: herz
+      correct: true
+      conf: 0.8151265978813171
+red paper lantern:
+  D:
+    deutsch:
+      key: red paper lantern
+      req: lanterne
+      answer: lanterne
+      correct: true
+      conf: 0.8299595713615417
+relieved face:
+  D:
+    deutsch:
+      key: relieved face
+      req: erleichtert
+      answer: erleichtert
+      correct: true
+      conf: 0.9190641641616821
+rescue worker’s helmet:
+  D:
+    deutsch:
+      key: rescue worker’s helmet
+      req: helm
+      answer: wilhelm
+      correct: false
+      conf: 0.7438246011734009
+resting:
+  D:
+    deutsch:
+      key: resting
+      req: bett
+      answer: privat
+      correct: false
+      conf: 0.8599410057067871
+revolving hearts:
+  D:
+    deutsch:
+      key: revolving hearts
+      req: zwei herzen
+      answer: zwei herzen
+      correct: true
+      conf: 0.8925870060920715
+rhinoceros:
+  D:
+    deutsch:
+      key: rhinoceros
+      req: nashorn
+      answer: nashorn
+      correct: true
+      conf: 0.8748761415481567
+ribbon:
+  D:
+    deutsch:
+      key: ribbon
+      req: masche
+      answer: masche
+      correct: true
+      conf: 0.7066439390182495
+rice cracker:
+  D:
+    deutsch:
+      key: rice cracker
+      req: cracker
+      answer: whitaker
+      correct: false
+      conf: 0.741590142250061
+rickshaw:
+  D:
+    deutsch:
+      key: rickshaw
+      req: tuk tuk
+      answer: kokadi uk
+      correct: false
+      conf: 0.8795934319496155
+right anger bubble:
+  D:
+    deutsch:
+      key: right anger bubble
+      req: dialog
+      answer: dialog
+      correct: true
+      conf: 0.6888132095336914
+right-facing fist:
+  D:
+    deutsch:
+      key: right-facing fist
+      req: faust
+      answer: verrückt
+      correct: false
+      conf: 0.8673804998397827
+ring:
+  D:
+    deutsch:
+      key: ring
+      req: ring
+      answer: einklinken
+      correct: false
+      conf: 0.6673961877822876
+ringed planet:
+  D:
+    deutsch:
+      key: ringed planet
+      req: saturn
+      answer: saturn
+      correct: true
+      conf: 0.8708435297012329
+roasted sweet potato:
+  D:
+    deutsch:
+      key: roasted sweet potato
+      req: kartoffel
+      answer: kartoffel
+      correct: true
+      conf: 0.7150135040283203
+robot:
+  D:
+    deutsch:
+      key: robot
+      req: roboter
+      answer: roboter
+      correct: true
+      conf: 0.839626669883728
+rocket:
+  D:
+    deutsch:
+      key: rocket
+      req: rakete
+      answer: rakete
+      correct: true
+      conf: 0.903383731842041
+roll of paper:
+  D:
+    deutsch:
+      key: roll of paper
+      req: klopapier
+      answer: klopapier
+      correct: true
+      conf: 0.9190641641616821
+rolled-up newspaper:
+  D:
+    deutsch:
+      key: rolled-up newspaper
+      req: zeitung
+      answer: zeitung
+      correct: true
+      conf: 0.9101947546005249
+roller coaster:
+  D:
+    deutsch:
+      key: roller coaster
+      req: hochschaubahn
+      answer: hochschaubahn
+      correct: true
+      conf: 0.9186097383499146
+rolling on the floor laughing:
+  D:
+    deutsch:
+      key: rolling on the floor laughing
+      req: fröhlich
+      answer: fröhlich
+      correct: true
+      conf: 0.8277816772460938
+rooster:
+  D:
+    deutsch:
+      key: rooster
+      req: hahn
+      answer: hamm
+      correct: false
+      conf: 0.7094628214836121
+rose:
+  D:
+    deutsch:
+      key: rose
+      req: rose
+      answer: rose
+      correct: true
+      conf: 0.8397030234336853
+rosette:
+  D:
+    deutsch:
+      key: rosette
+      req: blume
+      answer: blume
+      correct: true
+      conf: 0.918822169303894
+round pushpin:
+  D:
+    deutsch:
+      key: round pushpin
+      req: reissnagel
+      answer: morgen
+      correct: false
+      conf: 0.8166372776031494
+rowing boat:
+  D:
+    deutsch:
+      key: rowing boat
+      req: rudern
+      answer: rudern
+      correct: true
+      conf: 0.7676424980163574
+rugby football:
+  D:
+    deutsch:
+      key: rugby football
+      req: rugby
+      answer: rugby
+      correct: true
+      conf: 0.6791287064552307
+running:
+  D:
+    deutsch:
+      key: running
+      req: laufen
+      answer: laufen
+      correct: true
+      conf: 0.785341739654541
+running shirt:
+  D:
+    deutsch:
+      key: running shirt
+      req: leiberl
+      answer: leiser
+      correct: false
+      conf: 0.7467872500419617
+running shoe:
+  D:
+    deutsch:
+      key: running shoe
+      req: schuh
+      answer: du
+      correct: false
+      conf: 0.8924005627632141
+sad but relieved face:
+  D:
+    deutsch:
+      key: sad but relieved face
+      req: traurig
+      answer: traurig
+      correct: true
+      conf: 0.9190641641616821
+safety pin:
+  D:
+    deutsch:
+      key: safety pin
+      req: sicherheitsnadel
+      answer: sicherheitsnadel
+      correct: true
+      conf: 0.82896888256073
+safety vest:
+  D:
+    deutsch:
+      key: safety vest
+      req: schwimmweste
+      answer: schwimmweste
+      correct: true
+      conf: 0.8753816485404968
+sailboat:
+  D:
+    deutsch:
+      key: sailboat
+      req: segelboot
+      answer: segelboot
+      correct: true
+      conf: 0.8177342414855957
+salt:
+  D:
+    deutsch:
+      key: salt
+      req: salz
+      answer: seid
+      correct: false
+      conf: 0.7017170786857605
+sandwich:
+  D:
+    deutsch:
+      key: sandwich
+      req: sandwich
+      answer: sendvid
+      correct: false
+      conf: 0.8407967686653137
+sari:
+  D:
+    deutsch:
+      key: sari
+      req: sari
+      answer: visari
+      correct: false
+      conf: 0.6424365043640137
+satellite:
+  D:
+    deutsch:
+      key: satellite
+      req: satellit
+      answer: satellit
+      correct: true
+      conf: 0.8599254488945007
+satellite antenna:
+  D:
+    deutsch:
+      key: satellite antenna
+      req: satellit
+      answer: satellit
+      correct: true
+      conf: 0.8191782236099243
+sauropod:
+  D:
+    deutsch:
+      key: sauropod
+      req: dinosaurus
+      answer: dinosaurier
+      correct: false
+      conf: 0.8679347038269043
+saxophone:
+  D:
+    deutsch:
+      key: saxophone
+      req: saxophon
+      answer: saxophon
+      correct: true
+      conf: 0.9190641641616821
+scarf:
+  D:
+    deutsch:
+      key: scarf
+      req: schal
+      answer: nicole
+      correct: false
+      conf: 0.6219176650047302
+school:
+  D:
+    deutsch:
+      key: school
+      req: schule
+      answer: pistole
+      correct: false
+      conf: 0.6528782844543457
+scissors:
+  D:
+    deutsch:
+      key: scissors
+      req: schere
+      answer: schere
+      correct: true
+      conf: 0.7933133244514465
+scorpion:
+  D:
+    deutsch:
+      key: scorpion
+      req: skorpion
+      answer: skorpion
+      correct: true
+      conf: 0.7792483568191528
+scroll:
+  D:
+    deutsch:
+      key: scroll
+      req: dokument
+      answer: dokument
+      correct: true
+      conf: 0.8463566303253174
+seat:
+  D:
+    deutsch:
+      key: seat
+      req: sessel
+      answer: sessel
+      correct: true
+      conf: 0.7421234846115112
+see-no-evil monkey:
+  D:
+    deutsch:
+      key: see-no-evil monkey
+      req: wegschauen
+      answer: wegschauen
+      correct: true
+      conf: 0.8394686579704285
+seedling:
+  D:
+    deutsch:
+      key: seedling
+      req: spross
+      answer: spaß
+      correct: false
+      conf: 0.6376413106918335
+selfie:
+  D:
+    deutsch:
+      key: selfie
+      req: selfie
+      answer: selfie
+      correct: true
+      conf: 0.7370688915252686
+shallow pan of food:
+  D:
+    deutsch:
+      key: shallow pan of food
+      req: topf
+      answer: up
+      correct: false
+      conf: 0.561548113822937
+shamrock:
+  D:
+    deutsch:
+      key: shamrock
+      req: klee
+      answer: rätsel
+      correct: false
+      conf: 0.8393896222114563
+shark:
+  D:
+    deutsch:
+      key: shark
+      req: hai
+      answer: hauen
+      correct: false
+      conf: 0.6861292719841003
+shaved ice:
+  D:
+    deutsch:
+      key: shaved ice
+      req: eis
+      answer: ein
+      correct: false
+      conf: 0.807705283164978
+sheaf of rice:
+  D:
+    deutsch:
+      key: sheaf of rice
+      req: getreide
+      answer: heide
+      correct: true
+      conf: 0.9154140949249268
+sheep:
+  D:
+    deutsch:
+      key: sheep
+      req: schaf
+      answer: sau
+      correct: false
+      conf: 0.77679044008255
+shield:
+  D:
+    deutsch:
+      key: shield
+      req: schild
+      answer: fischelt
+      correct: false
+      conf: 0.5849231481552124
+shinto shrine:
+  D:
+    deutsch:
+      key: shinto shrine
+      req: tempel
+      answer: tempel
+      correct: true
+      conf: 0.7694819569587708
+ship:
+  D:
+    deutsch:
+      key: ship
+      req: schiff
+      answer: das
+      correct: false
+      conf: 0.6561885476112366
+shooting star:
+  D:
+    deutsch:
+      key: shooting star
+      req: sternschnuppe
+      answer: sternschnuppe
+      correct: true
+      conf: 0.8145538568496704
+shopping bags:
+  D:
+    deutsch:
+      key: shopping bags
+      req: taschen
+      answer: taschen
+      correct: true
+      conf: 0.8245998620986938
+shopping cart:
+  D:
+    deutsch:
+      key: shopping cart
+      req: einkaufswagen
+      answer: einkaufswagen
+      correct: true
+      conf: 0.6411266326904297
+shortcake:
+  D:
+    deutsch:
+      key: shortcake
+      req: torte
+      answer: torte
+      correct: true
+      conf: 0.6359821557998657
+shorts:
+  D:
+    deutsch:
+      key: shorts
+      req: shorts
+      answer: fischart
+      correct: false
+      conf: 0.768528938293457
+shower:
+  D:
+    deutsch:
+      key: shower
+      req: dusche
+      answer: 4k
+      correct: false
+      conf: 0.5987503528594971
+shrimp:
+  D:
+    deutsch:
+      key: shrimp
+      req: garnele
+      answer: garnele
+      correct: true
+      conf: 0.8340497016906738
+shushing face:
+  D:
+    deutsch:
+      key: shushing face
+      req: geheimnis
+      answer: geheimnis
+      correct: true
+      conf: 0.7796123027801514
+sign of the horns:
+  D:
+    deutsch:
+      key: sign of the horns
+      req: hörner
+      answer: klinkhammer
+      correct: false
+      conf: 0.7108084559440613
+skateboard:
+  D:
+    deutsch:
+      key: skateboard
+      req: skateboard
+      answer: skateboard
+      correct: true
+      conf: 0.8666318655014038
+skier:
+  D:
+    deutsch:
+      key: skier
+      req: schi
+      answer: zenkichi
+      correct: false
+      conf: 0.819016695022583
+skis:
+  D:
+    deutsch:
+      key: skis
+      req: schifahren
+      answer: skifahren
+      correct: false
+      conf: 0.7804216146469116
+skull:
+  D:
+    deutsch:
+      key: skull
+      req: tod
+      answer: tot
+      correct: false
+      conf: 0.8114627003669739
+skull and crossbones:
+  D:
+    deutsch:
+      key: skull and crossbones
+      req: tod
+      answer: tot
+      correct: false
+      conf: 0.7049273252487183
+skunk:
+  D:
+    deutsch:
+      key: skunk
+      req: stinktier
+      answer: stinktier
+      correct: true
+      conf: 0.8433963656425476
+sled:
+  D:
+    deutsch:
+      key: sled
+      req: rodeln
+      answer: rodeln
+      correct: true
+      conf: 0.7963193655014038
+sleeping face:
+  D:
+    deutsch:
+      key: sleeping face
+      req: schläfrig
+      answer: schneefrei
+      correct: false
+      conf: 0.7615067362785339
+sleepy face:
+  D:
+    deutsch:
+      key: sleepy face
+      req: müde
+      answer: finde
+      correct: false
+      conf: 0.6304804682731628
+slightly frowning face:
+  D:
+    deutsch:
+      key: slightly frowning face
+      req: verwundert
+      answer: verwundert
+      correct: true
+      conf: 0.9006084203720093
+slightly smiling face:
+  D:
+    deutsch:
+      key: slightly smiling face
+      req: fröhlich
+      answer: fröhlich
+      correct: true
+      conf: 0.8055455684661865
+slot machine:
+  D:
+    deutsch:
+      key: slot machine
+      req: kasino
+      answer: casino
+      correct: false
+      conf: 0.8726183772087097
+sloth:
+  D:
+    deutsch:
+      key: sloth
+      req: faultier
+      answer: faultier
+      correct: true
+      conf: 0.8907824754714966
+small airplane:
+  D:
+    deutsch:
+      key: small airplane
+      req: flugzeug
+      answer: flugzeug
+      correct: true
+      conf: 0.8540350198745728
+smiling cat with heart-eyes:
+  D:
+    deutsch:
+      key: smiling cat with heart-eyes
+      req: herzaugen
+      answer: herzaugen
+      correct: true
+      conf: 0.8556706309318542
+smiling face with halo:
+  D:
+    deutsch:
+      key: smiling face with halo
+      req: fröhlich
+      answer: fröhlich
+      correct: true
+      conf: 0.8339933156967163
+smiling face with heart-eyes:
+  D:
+    deutsch:
+      key: smiling face with heart-eyes
+      req: fröhlich
+      answer: fröhlich
+      correct: true
+      conf: 0.8086978197097778
+smiling face with hearts:
+  D:
+    deutsch:
+      key: smiling face with hearts
+      req: verliebt
+      answer: verliebt
+      correct: true
+      conf: 0.8404401540756226
+smiling face with horns:
+  D:
+    deutsch:
+      key: smiling face with horns
+      req: teufel
+      answer: teufel
+      correct: true
+      conf: 0.8302705883979797
+smiling face with smiling eyes:
+  D:
+    deutsch:
+      key: smiling face with smiling eyes
+      req: fröhlich
+      answer: fröhlich
+      correct: true
+      conf: 0.8474730253219604
+smiling face with sunglasses:
+  D:
+    deutsch:
+      key: smiling face with sunglasses
+      req: sonnenbrille
+      answer: sonnenbrille
+      correct: true
+      conf: 0.7163087725639343
+smirking face:
+  D:
+    deutsch:
+      key: smirking face
+      req: mund verziehen
+      answer: konfetti
+      correct: false
+      conf: 0.6504601240158081
+snail:
+  D:
+    deutsch:
+      key: snail
+      req: schnecke
+      answer: schnecke
+      correct: true
+      conf: 0.8758817911148071
+snake:
+  D:
+    deutsch:
+      key: snake
+      req: schlange
+      answer: schlange
+      correct: true
+      conf: 0.8686572313308716
+sneezing face:
+  D:
+    deutsch:
+      key: sneezing face
+      req: niessen
+      answer: niesen
+      correct: false
+      conf: 0.7639434933662415
+snow-capped mountain:
+  D:
+    deutsch:
+      key: snow-capped mountain
+      req: berg
+      answer: berg
+      correct: true
+      conf: 0.7089025974273682
+snowboarder:
+  D:
+    deutsch:
+      key: snowboarder
+      req: snowboard
+      answer: bad
+      correct: false
+      conf: 0.7069581747055054
+snowflake:
+  D:
+    deutsch:
+      key: snowflake
+      req: schneeflocke
+      answer: schneeflocke
+      correct: true
+      conf: 0.9190641641616821
+snowman:
+  D:
+    deutsch:
+      key: snowman
+      req: schneemann
+      answer: schneemann
+      correct: true
+      conf: 0.9190641641616821
+snowman without snow:
+  D:
+    deutsch:
+      key: snowman without snow
+      req: schneemann
+      answer: schneemann
+      correct: true
+      conf: 0.9145933985710144
+soap:
+  D:
+    deutsch:
+      key: soap
+      req: seife
+      answer: seife
+      correct: true
+      conf: 0.8026775121688843
+soccer ball:
+  D:
+    deutsch:
+      key: soccer ball
+      req: ball
+      answer: weber
+      correct: false
+      conf: 0.7768074870109558
+socks:
+  D:
+    deutsch:
+      key: socks
+      req: socken
+      answer: sorten
+      correct: false
+      conf: 0.6998645067214966
+soft ice cream:
+  D:
+    deutsch:
+      key: soft ice cream
+      req: eis
+      answer: ein
+      correct: false
+      conf: 0.8849396705627441
+softball:
+  D:
+    deutsch:
+      key: softball
+      req: softball
+      answer: softball
+      correct: true
+      conf: 0.7473199367523193
+spade suit:
+  D:
+    deutsch:
+      key: spade suit
+      req: pik
+      answer: bugs
+      correct: false
+      conf: 0.6345447301864624
+spaghetti:
+  D:
+    deutsch:
+      key: spaghetti
+      req: pasta
+      answer: pasta
+      correct: true
+      conf: 0.7644076943397522
+sparkler:
+  D:
+    deutsch:
+      key: sparkler
+      req: feuerwerk
+      answer: feuerwerk
+      correct: true
+      conf: 0.9190641641616821
+sparkles:
+  D:
+    deutsch:
+      key: sparkles
+      req: sterne
+      answer: sterne
+      correct: true
+      conf: 0.8897579312324524
+sparkling heart:
+  D:
+    deutsch:
+      key: sparkling heart
+      req: liebe
+      answer: queenhithe
+      correct: false
+      conf: 0.6820275783538818
+speak-no-evil monkey:
+  D:
+    deutsch:
+      key: speak-no-evil monkey
+      req: schweigen
+      answer: schweigen
+      correct: true
+      conf: 0.8154070973396301
+speaker high volume:
+  D:
+    deutsch:
+      key: speaker high volume
+      req: lautsprecher
+      answer: lautsprecher
+      correct: true
+      conf: 0.8480075001716614
+speaker low volume:
+  D:
+    deutsch:
+      key: speaker low volume
+      req: lautsprecher
+      answer: lautsprecher
+      correct: true
+      conf: 0.7102707624435425
+speaker medium volume:
+  D:
+    deutsch:
+      key: speaker medium volume
+      req: lautsprecher
+      answer: lautsprecher
+      correct: true
+      conf: 0.7814671397209167
+speaking head:
+  D:
+    deutsch:
+      key: speaking head
+      req: sprechen
+      answer: sprechen
+      correct: true
+      conf: 0.90833580493927
+speech balloon:
+  D:
+    deutsch:
+      key: speech balloon
+      req: sprechblase
+      answer: sprechblase
+      correct: true
+      conf: 0.8598390817642212
+speedboat:
+  D:
+    deutsch:
+      key: speedboat
+      req: boot
+      answer: keyboard
+      correct: false
+      conf: 0.7155287265777588
+spider:
+  D:
+    deutsch:
+      key: spider
+      req: spinne
+      answer: spinne
+      correct: true
+      conf: 0.8822412490844727
+spider web:
+  D:
+    deutsch:
+      key: spider web
+      req: spinnennetz
+      answer: spinnennetz
+      correct: true
+      conf: 0.7807937860488892
+spiral calendar:
+  D:
+    deutsch:
+      key: spiral calendar
+      req: datum
+      answer: datum
+      correct: true
+      conf: 0.7793524861335754
+spiral notepad:
+  D:
+    deutsch:
+      key: spiral notepad
+      req: block
+      answer: block
+      correct: true
+      conf: 0.6976655721664429
+spiral shell:
+  D:
+    deutsch:
+      key: spiral shell
+      req: muschel
+      answer: moslem
+      correct: false
+      conf: 0.8575641512870789
+sponge:
+  D:
+    deutsch:
+      key: sponge
+      req: schwamm
+      answer: knetbeton
+      correct: false
+      conf: 0.7593002319335938
+spoon:
+  D:
+    deutsch:
+      key: spoon
+      req: löffel
+      answer: wienerfeld
+      correct: false
+      conf: 0.7628186345100403
+spouting whale:
+  D:
+    deutsch:
+      key: spouting whale
+      req: wal
+      answer: priwall
+      correct: false
+      conf: 0.6497885584831238
+squid:
+  D:
+    deutsch:
+      key: squid
+      req: tintenfisch
+      answer: tintenfisch
+      correct: true
+      conf: 0.8379534482955933
+squinting face with tongue:
+  D:
+    deutsch:
+      key: squinting face with tongue
+      req: zunge
+      answer: zitrone
+      correct: false
+      conf: 0.7125868797302246
+stadium:
+  D:
+    deutsch:
+      key: stadium
+      req: stadium
+      answer: stadion
+      correct: false
+      conf: 0.8941137194633484
+standing:
+  D:
+    deutsch:
+      key: standing
+      req: stehen
+      answer: stehen
+      correct: true
+      conf: 0.8980766534805298
+star:
+  D:
+    deutsch:
+      key: star
+      req: stern
+      answer: stern
+      correct: true
+      conf: 0.7939863204956055
+star-struck:
+  D:
+    deutsch:
+      key: star-struck
+      req: fröhlich
+      answer: fröhlich
+      correct: true
+      conf: 0.8146068453788757
+station:
+  D:
+    deutsch:
+      key: station
+      req: station
+      answer: station
+      correct: true
+      conf: 0.8200894594192505
+steaming bowl:
+  D:
+    deutsch:
+      key: steaming bowl
+      req: ramen
+      answer: rahmen
+      correct: false
+      conf: 0.7645028829574585
+steamy room:
+  D:
+    deutsch:
+      key: steamy room
+      req: dampf
+      answer: an
+      correct: false
+      conf: 0.7938151359558105
+stethoscope:
+  D:
+    deutsch:
+      key: stethoscope
+      req: stethoscop
+      answer: stethoskop
+      correct: false
+      conf: 0.8991524577140808
+stop sign:
+  D:
+    deutsch:
+      key: stop sign
+      req: stop
+      answer: starb
+      correct: false
+      conf: 0.7439640164375305
+stopwatch:
+  D:
+    deutsch:
+      key: stopwatch
+      req: stopuhr
+      answer: stabhoch
+      correct: false
+      conf: 0.8457629084587097
+straight ruler:
+  D:
+    deutsch:
+      key: straight ruler
+      req: lineal
+      answer: lineal
+      correct: true
+      conf: 0.8344694972038269
+strawberry:
+  D:
+    deutsch:
+      key: strawberry
+      req: erdbeere
+      answer: erdbeere
+      correct: true
+      conf: 0.9190641641616821
+studio microphone:
+  D:
+    deutsch:
+      key: studio microphone
+      req: microphon
+      answer: microphone
+      correct: false
+      conf: 0.8657240867614746
+stuffed flatbread:
+  D:
+    deutsch:
+      key: stuffed flatbread
+      req: wrap
+      answer: holz
+      correct: false
+      conf: 0.8206524848937988
+sun:
+  D:
+    deutsch:
+      key: sun
+      req: sonne
+      answer: sonne
+      correct: true
+      conf: 0.7763731479644775
+sun behind cloud:
+  D:
+    deutsch:
+      key: sun behind cloud
+      req: wolke
+      answer: wolke
+      correct: true
+      conf: 0.8741775751113892
+sun behind large cloud:
+  D:
+    deutsch:
+      key: sun behind large cloud
+      req: wolke
+      answer: wolke
+      correct: true
+      conf: 0.8586899638175964
+sun behind rain cloud:
+  D:
+    deutsch:
+      key: sun behind rain cloud
+      req: wolke
+      answer: wolke
+      correct: true
+      conf: 0.9153973460197449
+sun behind small cloud:
+  D:
+    deutsch:
+      key: sun behind small cloud
+      req: wolke
+      answer: wolke
+      correct: true
+      conf: 0.8879864811897278
+sun with face:
+  D:
+    deutsch:
+      key: sun with face
+      req: sonne
+      answer: sahne
+      correct: false
+      conf: 0.7629603147506714
+sunflower:
+  D:
+    deutsch:
+      key: sunflower
+      req: sonnenblume
+      answer: sonnenblume
+      correct: true
+      conf: 0.8487561345100403
+sunglasses:
+  D:
+    deutsch:
+      key: sunglasses
+      req: sonnenbrille
+      answer: sonnenbrille
+      correct: true
+      conf: 0.8740881085395813
+superhero:
+  D:
+    deutsch:
+      key: superhero
+      req: superhero
+      answer: superhero
+      correct: true
+      conf: 0.7668716311454773
+supervillain:
+  D:
+    deutsch:
+      key: supervillain
+      req: bösewicht
+      answer: bösewicht
+      correct: true
+      conf: 0.8980801701545715
+surfing:
+  D:
+    deutsch:
+      key: surfing
+      req: surfen
+      answer: surfen
+      correct: true
+      conf: 0.7131295800209045
+sushi:
+  D:
+    deutsch:
+      key: sushi
+      req: sushi
+      answer: sushi
+      correct: true
+      conf: 0.909676730632782
+suspension railway:
+  D:
+    deutsch:
+      key: suspension railway
+      req: seilbahn
+      answer: seilbahn
+      correct: true
+      conf: 0.8598766326904297
+swan:
+  D:
+    deutsch:
+      key: swan
+      req: schwan
+      answer: schwan
+      correct: true
+      conf: 0.7340559363365173
+sweat droplets:
+  D:
+    deutsch:
+      key: sweat droplets
+      req: tropfen
+      answer: tropfen
+      correct: true
+      conf: 0.8909529447555542
+swimming:
+  D:
+    deutsch:
+      key: swimming
+      req: schwimmen
+      answer: schwimmen
+      correct: true
+      conf: 0.8065217733383179
+synagogue:
+  D:
+    deutsch:
+      key: synagogue
+      req: kirche
+      answer: kirche
+      correct: true
+      conf: 0.8169354200363159
+syringe:
+  D:
+    deutsch:
+      key: syringe
+      req: spritze
+      answer: spritze
+      correct: true
+      conf: 0.8517656326293945
+t-shirt:
+  D:
+    deutsch:
+      key: t-shirt
+      req: leiberl
+      answer: library
+      correct: false
+      conf: 0.7806679010391235
+taco:
+  D:
+    deutsch:
+      key: taco
+      req: taco
+      answer: citaku
+      correct: false
+      conf: 0.6792575716972351
+taking bath:
+  D:
+    deutsch:
+      key: taking bath
+      req: bad
+      answer: bergwinkelbad
+      correct: false
+      conf: 0.7020045518875122
+tangerine:
+  D:
+    deutsch:
+      key: tangerine
+      req: orange
+      answer: orange
+      correct: true
+      conf: 0.8457385301589966
+taxi:
+  D:
+    deutsch:
+      key: taxi
+      req: taxi
+      answer: taxi
+      correct: true
+      conf: 0.7404792904853821
+teacup without handle:
+  D:
+    deutsch:
+      key: teacup without handle
+      req: tasse
+      answer: tasse
+      correct: true
+      conf: 0.7494937181472778
+tear-off calendar:
+  D:
+    deutsch:
+      key: tear-off calendar
+      req: datum
+      answer: datum
+      correct: true
+      conf: 0.8159487843513489
+teddy bear:
+  D:
+    deutsch:
+      key: teddy bear
+      req: stofftiemahjong
+      answer: man
+      correct: false
+      conf: 0.645885169506073
+telephone:
+  D:
+    deutsch:
+      key: telephone
+      req: telefon
+      answer: telefon
+      correct: true
+      conf: 0.9009160995483398
+telephone receiver:
+  D:
+    deutsch:
+      key: telephone receiver
+      req: telefon
+      answer: telefon
+      correct: true
+      conf: 0.9035927057266235
+telescope:
+  D:
+    deutsch:
+      key: telescope
+      req: teleskop
+      answer: teleskop
+      correct: true
+      conf: 0.7061908841133118
+television:
+  D:
+    deutsch:
+      key: television
+      req: fernseher
+      answer: fernseher
+      correct: true
+      conf: 0.8390410542488098
+tennis:
+  D:
+    deutsch:
+      key: tennis
+      req: tennis
+      answer: tennis
+      correct: true
+      conf: 0.7689372301101685
+tent:
+  D:
+    deutsch:
+      key: tent
+      req: zelt
+      answer: krefeld
+      correct: false
+      conf: 0.7176706194877625
+test tube:
+  D:
+    deutsch:
+      key: test tube
+      req: reagenzglas
+      answer: reagenzglas
+      correct: true
+      conf: 0.8766751289367676
+thermometer:
+  D:
+    deutsch:
+      key: thermometer
+      req: thermometer
+      answer: thermometer
+      correct: true
+      conf: 0.8913106918334961
+thinking face:
+  D:
+    deutsch:
+      key: thinking face
+      req: nachdenklich
+      answer: nachdenklich
+      correct: true
+      conf: 0.8756462335586548
+thought balloon:
+  D:
+    deutsch:
+      key: thought balloon
+      req: denken
+      answer: denken
+      correct: true
+      conf: 0.770156979560852
+thread:
+  D:
+    deutsch:
+      key: thread
+      req: zwirn
+      answer: fifa
+      correct: false
+      conf: 0.8371059894561768
+thumbs down:
+  D:
+    deutsch:
+      key: thumbs down
+      req: daumen hinunter
+      answer: daumen hin und her
+      correct: false
+      conf: 0.6997691988945007
+thumbs up:
+  D:
+    deutsch:
+      key: thumbs up
+      req: daumen hoch
+      answer: daumen hoch
+      correct: true
+      conf: 0.8738653063774109
+ticket:
+  D:
+    deutsch:
+      key: ticket
+      req: ticket
+      answer: etikett
+      correct: false
+      conf: 0.7327277660369873
+tiger:
+  D:
+    deutsch:
+      key: tiger
+      req: tiger
+      answer: tiger
+      correct: true
+      conf: 0.8111385107040405
+timer clock:
+  D:
+    deutsch:
+      key: timer clock
+      req: timer
+      answer: einmal
+      correct: false
+      conf: 0.5699048042297363
+tired face:
+  D:
+    deutsch:
+      key: tired face
+      req: müde
+      answer: bilder
+      correct: false
+      conf: 0.7108591794967651
+toilet:
+  D:
+    deutsch:
+      key: toilet
+      req: klo
+      answer: wiglo
+      correct: false
+      conf: 0.8232531547546387
+tomato:
+  D:
+    deutsch:
+      key: tomato
+      req: tomate
+      answer: tomate
+      correct: true
+      conf: 0.8584287166595459
+tongue:
+  D:
+    deutsch:
+      key: tongue
+      req: zunge
+      answer: zunge
+      correct: true
+      conf: 0.787580668926239
+toolbox:
+  D:
+    deutsch:
+      key: toolbox
+      req: werkzeugkoffer
+      answer: werkzeugkoffer
+      correct: true
+      conf: 0.8714083433151245
+tooth:
+  D:
+    deutsch:
+      key: tooth
+      req: zahn
+      answer: zahn
+      correct: true
+      conf: 0.7691329717636108
+top hat:
+  D:
+    deutsch:
+      key: top hat
+      req: hut
+      answer: hut
+      correct: true
+      conf: 0.7245049476623535
+tornado:
+  D:
+    deutsch:
+      key: tornado
+      req: tornado
+      answer: tornado
+      correct: true
+      conf: 0.8492342829704285
+trackball:
+  D:
+    deutsch:
+      key: trackball
+      req: trackball
+      answer: '2'
+      correct: false
+      conf: 0.6826786994934082
+tractor:
+  D:
+    deutsch:
+      key: tractor
+      req: traktor
+      answer: traktor
+      correct: true
+      conf: 0.8767358660697937
+train:
+  D:
+    deutsch:
+      key: train
+      req: u-bahn
+      answer: u-bahn
+      correct: true
+      conf: 0.846743106842041
+tram:
+  D:
+    deutsch:
+      key: tram
+      req: trolley
+      answer: honey
+      correct: false
+      conf: 0.7316708564758301
+tram car:
+  D:
+    deutsch:
+      key: tram car
+      req: strassenbahn
+      answer: straßenbahn
+      correct: false
+      conf: 0.9160391092300415
+triangular ruler:
+  D:
+    deutsch:
+      key: triangular ruler
+      req: lineal
+      answer: lineal
+      correct: true
+      conf: 0.8406979441642761
+trolleybus:
+  D:
+    deutsch:
+      key: trolleybus
+      req: trolley
+      answer: holly
+      correct: false
+      conf: 0.6381834149360657
+trophy:
+  D:
+    deutsch:
+      key: trophy
+      req: pokal
+      answer: pokal
+      correct: true
+      conf: 0.8615521192550659
+tropical drink:
+  D:
+    deutsch:
+      key: tropical drink
+      req: glas
+      answer: glas
+      correct: true
+      conf: 0.8738958239555359
+tropical fish:
+  D:
+    deutsch:
+      key: tropical fish
+      req: fisch
+      answer: rechkredv
+      correct: false
+      conf: 0.6124905347824097
+trumpet:
+  D:
+    deutsch:
+      key: trumpet
+      req: trompete
+      answer: trompete
+      correct: true
+      conf: 0.878645122051239
+tulip:
+  D:
+    deutsch:
+      key: tulip
+      req: tulpe
+      answer: pumpe
+      correct: false
+      conf: 0.7403895258903503
+turkey:
+  D:
+    deutsch:
+      key: turkey
+      req: truthahn
+      answer: truthahn
+      correct: true
+      conf: 0.8343713879585266
+turtle:
+  D:
+    deutsch:
+      key: turtle
+      req: schildkröte
+      answer: schildkröte
+      correct: true
+      conf: 0.8735238909721375
+two hearts:
+  D:
+    deutsch:
+      key: two hearts
+      req: zwei herzen
+      answer: zwei herzen
+      correct: true
+      conf: 0.8947040438652039
+umbrella:
+  D:
+    deutsch:
+      key: umbrella
+      req: regenschirm
+      answer: regenschirm
+      correct: true
+      conf: 0.87431401014328
+umbrella on ground:
+  D:
+    deutsch:
+      key: umbrella on ground
+      req: sonnenschirm
+      answer: sonnenschirm
+      correct: true
+      conf: 0.7597843408584595
+umbrella with rain drops:
+  D:
+    deutsch:
+      key: umbrella with rain drops
+      req: regenschirm
+      answer: regenschirm
+      correct: true
+      conf: 0.7676618695259094
+unamused face:
+  D:
+    deutsch:
+      key: unamused face
+      req: traurig
+      answer: traurig
+      correct: true
+      conf: 0.9128472208976746
+unlocked:
+  D:
+    deutsch:
+      key: unlocked
+      req: schloss
+      answer: schlaf
+      correct: false
+      conf: 0.7543410062789917
+upside-down face:
+  D:
+    deutsch:
+      key: upside-down face
+      req: fröhlich
+      answer: fröhlich
+      correct: true
+      conf: 0.7931486368179321
+vampire:
+  D:
+    deutsch:
+      key: vampire
+      req: vampir
+      answer: vampir
+      correct: true
+      conf: 0.8511015176773071
+vertical traffic light:
+  D:
+    deutsch:
+      key: vertical traffic light
+      req: ampel
+      answer: ampel
+      correct: true
+      conf: 0.7629928588867188
+victory hand:
+  D:
+    deutsch:
+      key: victory hand
+      req: sieg
+      answer: weg
+      correct: false
+      conf: 0.8150701522827148
+video camera:
+  D:
+    deutsch:
+      key: video camera
+      req: kamera
+      answer: kamera
+      correct: true
+      conf: 0.8234416842460632
+video game:
+  D:
+    deutsch:
+      key: video game
+      req: controller
+      answer: controller
+      correct: true
+      conf: 0.7086519002914429
+videocassette:
+  D:
+    deutsch:
+      key: videocassette
+      req: band
+      answer: band
+      correct: true
+      conf: 0.6732374429702759
+violin:
+  D:
+    deutsch:
+      key: violin
+      req: geige
+      answer: deine
+      correct: true
+      conf: 0.7574880719184875
+volcano:
+  D:
+    deutsch:
+      key: volcano
+      req: vulkan
+      answer: vulkan
+      correct: true
+      conf: 0.8424608111381531
+volleyball:
+  D:
+    deutsch:
+      key: volleyball
+      req: volleyball
+      answer: volleyball
+      correct: true
+      conf: 0.7939434051513672
+vulcan salute:
+  D:
+    deutsch:
+      key: vulcan salute
+      req: vulkan gruss
+      answer: polka polka
+      correct: false
+      conf: 0.6488752961158752
+waffle:
+  D:
+    deutsch:
+      key: waffle
+      req: waffel
+      answer: wasser
+      correct: false
+      conf: 0.8185888528823853
+walking:
+  D:
+    deutsch:
+      key: walking
+      req: gehen
+      answer: sehen
+      correct: false
+      conf: 0.7916046977043152
+waning crescent moon:
+  D:
+    deutsch:
+      key: waning crescent moon
+      req: mond
+      answer: mond
+      correct: true
+      conf: 0.8128775358200073
+waning gibbous moon:
+  D:
+    deutsch:
+      key: waning gibbous moon
+      req: mond
+      answer: mond
+      correct: true
+      conf: 0.8234930038452148
+wastebasket:
+  D:
+    deutsch:
+      key: wastebasket
+      req: papierkork
+      answer: papierkorb
+      correct: false
+      conf: 0.9190641641616821
+watch:
+  D:
+    deutsch:
+      key: watch
+      req: uhr
+      answer: uhr
+      correct: true
+      conf: 0.8488019704818726
+water polo:
+  D:
+    deutsch:
+      key: water polo
+      req: polo
+      answer: porno
+      correct: false
+      conf: 0.750102698802948
+water wave:
+  D:
+    deutsch:
+      key: water wave
+      req: welle
+      answer: revolver
+      correct: false
+      conf: 0.6380322575569153
+watermelon:
+  D:
+    deutsch:
+      key: watermelon
+      req: wassermelone
+      answer: wassermelone
+      correct: true
+      conf: 0.8848834037780762
+waving hand:
+  D:
+    deutsch:
+      key: waving hand
+      req: winken
+      answer: winken
+      correct: true
+      conf: 0.7821568250656128
+waxing crescent moon:
+  D:
+    deutsch:
+      key: waxing crescent moon
+      req: mond
+      answer: mond
+      correct: true
+      conf: 0.8216831088066101
+waxing gibbous moon:
+  D:
+    deutsch:
+      key: waxing gibbous moon
+      req: mond
+      answer: mond
+      correct: true
+      conf: 0.7347704768180847
+weary cat:
+  D:
+    deutsch:
+      key: weary cat
+      req: müde katze
+      answer: katze
+      correct: false
+      conf: 0.7419306635856628
+weary face:
+  D:
+    deutsch:
+      key: weary face
+      req: weinen
+      answer: weinen
+      correct: true
+      conf: 0.8109563589096069
+whale:
+  D:
+    deutsch:
+      key: whale
+      req: wal
+      answer: priwall
+      correct: false
+      conf: 0.8205661773681641
+white cane:
+  D:
+    deutsch:
+      key: white cane
+      req: stab
+      answer: starb
+      correct: false
+      conf: 0.8240944147109985
+white flower:
+  D:
+    deutsch:
+      key: white flower
+      req: blume
+      answer: blume
+      correct: true
+      conf: 0.8360323905944824
+white heart:
+  D:
+    deutsch:
+      key: white heart
+      req: herz
+      answer: herz
+      correct: true
+      conf: 0.8697463870048523
+wilted flower:
+  D:
+    deutsch:
+      key: wilted flower
+      req: blume
+      answer: blume
+      correct: true
+      conf: 0.9146512746810913
+wind face:
+  D:
+    deutsch:
+      key: wind face
+      req: blasen
+      answer: blasen
+      correct: true
+      conf: 0.8519765138626099
+wine glass:
+  D:
+    deutsch:
+      key: wine glass
+      req: wein
+      answer: wein
+      correct: true
+      conf: 0.758108913898468
+winking face:
+  D:
+    deutsch:
+      key: winking face
+      req: zwinkern
+      answer: zwinkern
+      correct: true
+      conf: 0.6532944440841675
+winking face with tongue:
+  D:
+    deutsch:
+      key: winking face with tongue
+      req: zunge
+      answer: zunge
+      correct: true
+      conf: 0.6454530954360962
+with:
+  D:
+    deutsch:
+      key: with
+      req: fee
+      answer: wifi
+      correct: false
+      conf: 0.6459667086601257
+wizard:
+  D:
+    deutsch:
+      key: wizard
+      req: zauberer
+      answer: zauberer
+      correct: true
+      conf: 0.8664323687553406
+woman:
+  D:
+    deutsch:
+      key: woman
+      req: frau
+      answer: frau
+      correct: true
+      conf: 0.9190641641616821
+woman and man holding hands:
+  D:
+    deutsch:
+      key: woman and man holding hands
+      req: handhalten
+      answer: halten
+      correct: false
+      conf: 0.8818414211273193
+woman artist:
+  D:
+    deutsch:
+      key: woman artist
+      req: künstler
+      answer: künstler
+      correct: true
+      conf: 0.7081105709075928
+woman blind:
+  D:
+    deutsch:
+      key: woman blind
+      req: blind
+      answer: land
+      correct: false
+      conf: 0.7406332492828369
+woman cook:
+  D:
+    deutsch:
+      key: woman cook
+      req: koch
+      answer: koch
+      correct: true
+      conf: 0.8635314106941223
+woman dancing:
+  D:
+    deutsch:
+      key: woman dancing
+      req: tanzen
+      answer: schlingpflanzen
+      correct: false
+      conf: 0.9190641641616821
+woman factory worker:
+  D:
+    deutsch:
+      key: woman factory worker
+      req: arbeiter
+      answer: arbeiter
+      correct: true
+      conf: 0.891075611114502
+woman fairy:
+  D:
+    deutsch:
+      key: woman fairy
+      req: elfe
+      answer: elfe
+      correct: true
+      conf: 0.8284967541694641
+woman farmer:
+  D:
+    deutsch:
+      key: woman farmer
+      req: bauer
+      answer: bauer
+      correct: true
+      conf: 0.8354737162590027
+woman golfing:
+  D:
+    deutsch:
+      key: woman golfing
+      req: golf
+      answer: golf
+      correct: true
+      conf: 0.8646515607833862
+woman health worker:
+  D:
+    deutsch:
+      key: woman health worker
+      req: arzt
+      answer: '4'
+      correct: true
+      conf: 0.7599356770515442
+woman in manual wheelchair:
+  D:
+    deutsch:
+      key: woman in manual wheelchair
+      req: rollstuhl
+      answer: rollstuhl
+      correct: true
+      conf: 0.6623392105102539
+woman in motorized wheelchair:
+  D:
+    deutsch:
+      key: woman in motorized wheelchair
+      req: rollstuhl
+      answer: rollstuhl
+      correct: true
+      conf: 0.6916632652282715
+woman judge:
+  D:
+    deutsch:
+      key: woman judge
+      req: richter
+      answer: richter
+      correct: true
+      conf: 0.7195372581481934
+woman kneeling:
+  D:
+    deutsch:
+      key: woman kneeling
+      req: knien
+      answer: nehmen
+      correct: false
+      conf: 0.6347635984420776
+woman mechanic:
+  D:
+    deutsch:
+      key: woman mechanic
+      req: mechaniker
+      answer: mechaniker
+      correct: true
+      conf: 0.7249306440353394
+woman office worker:
+  D:
+    deutsch:
+      key: woman office worker
+      req: beamter
+      answer: da
+      correct: true
+      conf: 0.8321936130523682
+woman pilot:
+  D:
+    deutsch:
+      key: woman pilot
+      req: pilot
+      answer: pilot
+      correct: true
+      conf: 0.7568438649177551
+woman running:
+  D:
+    deutsch:
+      key: woman running
+      req: laufen
+      answer: laufen
+      correct: true
+      conf: 0.79608154296875
+woman scientist:
+  D:
+    deutsch:
+      key: woman scientist
+      req: wissenschaftler
+      answer: wissenschaftler
+      correct: true
+      conf: 0.7476906180381775
+woman singer:
+  D:
+    deutsch:
+      key: woman singer
+      req: sänger
+      answer: gesänge
+      correct: false
+      conf: 0.6858269572257996
+woman standing:
+  D:
+    deutsch:
+      key: woman standing
+      req: frau
+      answer: frau
+      correct: true
+      conf: 0.9190641641616821
+woman student:
+  D:
+    deutsch:
+      key: woman student
+      req: student
+      answer: student
+      correct: true
+      conf: 0.7094088792800903
+woman surfing:
+  D:
+    deutsch:
+      key: woman surfing
+      req: surfen
+      answer: saufen
+      correct: false
+      conf: 0.6793449521064758
+woman teacher:
+  D:
+    deutsch:
+      key: woman teacher
+      req: lehrer
+      answer: meere
+      correct: true
+      conf: 0.7928768992424011
+woman technologist:
+  D:
+    deutsch:
+      key: woman technologist
+      req: programmierer
+      answer: programmierer
+      correct: true
+      conf: 0.9000579714775085
+woman walking:
+  D:
+    deutsch:
+      key: woman walking
+      req: gehen
+      answer: sehen
+      correct: false
+      conf: 0.7762171626091003
+woman with headscarf:
+  D:
+    deutsch:
+      key: woman with headscarf
+      req: kopftuch
+      answer: kopftuch
+      correct: true
+      conf: 0.7560351490974426
+'woman: blond hair':
+  D:
+    deutsch:
+      key: 'woman: blond hair'
+      req: blondhaarig
+      answer: haare
+      correct: false
+      conf: 0.8332415223121643
+'woman: curly hair':
+  D:
+    deutsch:
+      key: 'woman: curly hair'
+      req: lockig
+      answer: lovely
+      correct: true
+      conf: 0.7891470193862915
+'woman: red hair':
+  D:
+    deutsch:
+      key: 'woman: red hair'
+      req: rothaarig
+      answer: rothaarig
+      correct: true
+      conf: 0.8437355160713196
+'woman: white hair':
+  D:
+    deutsch:
+      key: 'woman: white hair'
+      req: weisshaarig
+      answer: weißhaarig
+      correct: false
+      conf: 0.6797606348991394
+woman’s boot:
+  D:
+    deutsch:
+      key: woman’s boot
+      req: stiefel
+      answer: stiefel
+      correct: true
+      conf: 0.8610255122184753
+woman’s clothes:
+  D:
+    deutsch:
+      key: woman’s clothes
+      req: bluse
+      answer: bluse
+      correct: true
+      conf: 0.8602940440177917
+woman’s hat:
+  D:
+    deutsch:
+      key: woman’s hat
+      req: hut
+      answer: wiederholt
+      correct: false
+      conf: 0.6467269659042358
+woman’s sandal:
+  D:
+    deutsch:
+      key: woman’s sandal
+      req: schuh
+      answer: schuh
+      correct: true
+      conf: 0.8247765302658081
+women holding hands:
+  D:
+    deutsch:
+      key: women holding hands
+      req: handhalten
+      answer: halten
+      correct: false
+      conf: 0.8082104325294495
+woozy face:
+  D:
+    deutsch:
+      key: woozy face
+      req: betrunken
+      answer: betrunken
+      correct: true
+      conf: 0.8942171931266785
+world map:
+  D:
+    deutsch:
+      key: world map
+      req: weltkarte
+      answer: weltkarte
+      correct: true
+      conf: 0.8413815498352051
+worried face:
+  D:
+    deutsch:
+      key: worried face
+      req: besorgt
+      answer: besorgt
+      correct: true
+      conf: 0.9159283638000488
+wrapped gift:
+  D:
+    deutsch:
+      key: wrapped gift
+      req: geschenk
+      answer: geschenk
+      correct: true
+      conf: 0.65498948097229
+wrench:
+  D:
+    deutsch:
+      key: wrench
+      req: franzose
+      answer: franzose
+      correct: true
+      conf: 0.8227591514587402
+wrestling:
+  D:
+    deutsch:
+      key: wrestling
+      req: wrestling
+      answer: wrestling
+      correct: true
+      conf: 0.7192310094833374
+writing hand:
+  D:
+    deutsch:
+      key: writing hand
+      req: schreiben
+      answer: schreiben
+      correct: true
+      conf: 0.8074420094490051
+yarn:
+  D:
+    deutsch:
+      key: yarn
+      req: wolle
+      answer: bolle
+      correct: false
+      conf: 0.7934279441833496
+yawning face:
+  D:
+    deutsch:
+      key: yawning face
+      req: gelangweilt
+      answer: gelangweilt
+      correct: true
+      conf: 0.9190641641616821
+yellow heart:
+  D:
+    deutsch:
+      key: yellow heart
+      req: herz
+      answer: herz
+      correct: true
+      conf: 0.8170424699783325
+yen banknote:
+  D:
+    deutsch:
+      key: yen banknote
+      req: yen
+      answer: ferien
+      correct: false
+      conf: 0.7002490162849426
+yo-yo:
+  D:
+    deutsch:
+      key: yo-yo
+      req: jojo
+      answer: jojo
+      correct: true
+      conf: 0.8218506574630737
+yummy:
+  D:
+    deutsch:
+      key: yummy
+      req: lecker
+      answer: lecker
+      correct: true
+      conf: 0.8866328001022339
+zany face:
+  D:
+    deutsch:
+      key: zany face
+      req: betrunken
+      answer: betrunken
+      correct: true
+      conf: 0.8339571356773376
+zipper-mouth face:
+  D:
+    deutsch:
+      key: zipper-mouth face
+      req: still
+      answer: denn
+      correct: false
+      conf: 0.5876359343528748
+zombie:
+  D:
+    deutsch:
+      key: zombie
+      req: zombie
+      answer: zombie
+      correct: true
+      conf: 0.7726955413818359
+zzz:
+  D:
+    deutsch:
+      key: zzz
+      req: schlaf
+      answer: schlaf
+      correct: true
+      conf: 0.8224865198135376

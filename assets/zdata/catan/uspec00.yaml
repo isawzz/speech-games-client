@@ -1,0 +1,24 @@
+placement: #list damit order
+  - board: MAIN #[def]
+visualize:
+  board: 
+    rsgType: hexGrid
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

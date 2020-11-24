@@ -1,0 +1,2303 @@
+
+dvd:
+  correct: true
+  answer: dvd
+  conf: 0.9479084014892578
+message:
+  correct: true
+  answer: message
+  conf: 0.9855034947395325
+eagle:
+  correct: true
+  answer: eagle
+  conf: 0.9551725387573242
+ear:
+  correct: true
+  answer: here
+  conf: 0.9138221740722656
+corn:
+  correct: true
+  answer: corn
+  conf: 0.8030277490615845
+hearing aid:
+  correct: true
+  answer: hearing aid
+  conf: 0.977260172367096
+egg:
+  correct: true
+  answer: egg
+  conf: 0.7986594438552856
+eggplant:
+  correct: true
+  answer: eggplant
+  conf: 0.9502516984939575
+electricity:
+  correct: true
+  answer: electricity
+  conf: 0.9749624133110046
+elephant:
+  correct: true
+  answer: elephant
+  conf: 0.9577258229255676
+elf:
+  correct: false
+  answer: health
+  conf: 0.8486143350601196
+envelope:
+  correct: true
+  answer: envelope
+  conf: 0.9263507127761841
+outbox:
+  correct: false
+  answer: fox
+  conf: 0.9237704277038574
+euro:
+  correct: true
+  answer: euro
+  conf: 0.9090327024459839
+fir:
+  correct: false
+  answer: fur
+  conf: 0.8958094716072083
+shocked:
+  correct: true
+  answer: shocked
+  conf: 0.9371380805969238
+neutral:
+  correct: true
+  answer: neutral
+  conf: 0.9395891427993774
+eye:
+  correct: false
+  answer: i
+  conf: 0.8617449998855591
+speech balloon:
+  correct: true
+  answer: speech balloon
+  conf: 0.9751009345054626
+eyes:
+  correct: true
+  answer: eyes
+  conf: 0.8426026105880737
+kiss:
+  correct: true
+  answer: kiss
+  conf: 0.9729681015014648
+anguished:
+  correct: true
+  answer: anguished
+  conf: 0.9284900426864624
+nausea:
+  correct: true
+  answer: nausea
+  conf: 0.8496618270874023
+oh my god:
+  correct: true
+  answer: oh my god
+  conf: 0.9545468091964722
+bandage:
+  correct: true
+  answer: bandage
+  conf: 0.9430795907974243
+mask:
+  correct: true
+  answer: mask
+  conf: 0.804689884185791
+monocle:
+  correct: true
+  answer: monocle
+  conf: 0.9382702112197876
+surprised:
+  correct: true
+  answer: surprised
+  conf: 0.9389538764953613
+skeptic:
+  correct: true
+  answer: skeptic
+  conf: 0.8477017283439636
+eyeroll:
+  correct: false
+  answer: roll
+  conf: 0.9144519567489624
+steaming:
+  correct: true
+  answer: steaming
+  conf: 0.8776850700378418
+angry:
+  correct: true
+  answer: angry
+  conf: 0.883307933807373
+grin:
+  correct: true
+  answer: grin
+  conf: 0.8412429094314575
+fever:
+  correct: true
+  answer: fever
+  conf: 0.9774661064147949
+tongue:
+  correct: false
+  answer: toe
+  conf: 0.8121299743652344
+no mouth:
+  correct: false
+  answer: snail mouth
+  conf: 0.716172456741333
+factory:
+  correct: true
+  answer: factory
+  conf: 0.9786123037338257
+fairy:
+  correct: false
+  answer: siri
+  conf: 0.7167229652404785
+falafel:
+  correct: true
+  answer: falafel
+  conf: 0.9527422785758972
+autumn:
+  correct: true
+  answer: autumn
+  conf: 0.9661458134651184
+family:
+  correct: true
+  answer: family
+  conf: 0.9874109029769897
+fax:
+  correct: true
+  answer: fax
+  conf: 0.7471504807472229
+fencing:
+  correct: true
+  answer: fencing
+  conf: 0.9716199636459351
+ferris wheel:
+  correct: true
+  answer: ferris wheel
+  conf: 0.9826779961585999
+ferry:
+  correct: false
+  answer: fairy
+  conf: 0.7338116765022278
+hockey:
+  correct: true
+  answer: hockey
+  conf: 0.9375491142272949
+cabinet:
+  correct: true
+  answer: cabinet
+  conf: 0.8453471064567566
+folder:
+  correct: true
+  answer: folder
+  conf: 0.8768858909606934
+film:
+  correct: true
+  answer: film
+  conf: 0.9715189933776855
+projector:
+  correct: true
+  answer: projector
+  conf: 0.9804717302322388
+fire:
+  correct: true
+  answer: fire
+  conf: 0.983802318572998
+fire engine:
+  correct: true
+  answer: fire engine
+  conf: 0.9576282501220703
+fire extinguisher:
+  correct: true
+  answer: fire extinguisher
+  conf: 0.9876291155815125
+fireworks:
+  correct: true
+  answer: fireworks
+  conf: 0.9605005979537964
+moon:
+  correct: false
+  answer: villain
+  conf: 0.7360355854034424
+fish:
+  correct: true
+  answer: fish
+  conf: 0.955136775970459
+fishing:
+  correct: true
+  answer: fishing
+  conf: 0.9544838666915894
+golf:
+  correct: true
+  answer: golf
+  conf: 0.9511141777038574
+flamingo:
+  correct: true
+  answer: flamingo
+  conf: 0.8890796899795532
+flashlight:
+  correct: true
+  answer: flashlight
+  conf: 0.9487189054489136
+slipper:
+  correct: true
+  answer: slipper
+  conf: 0.8387866020202637
+biceps:
+  correct: true
+  answer: biceps
+  conf: 0.9196546673774719
+floppy disk:
+  correct: true
+  answer: floppy disk
+  conf: 0.9178822040557861
+cards:
+  correct: true
+  answer: cards
+  conf: 0.9490353465080261
+flushed:
+  correct: true
+  answer: flushed
+  conf: 0.875978946685791
+disc:
+  correct: true
+  answer: disc
+  conf: 0.8784514665603638
+ufo:
+  correct: true
+  answer: ufo
+  conf: 0.9642454981803894
+fog:
+  correct: false
+  answer: frog
+  conf: 0.8789080381393433
+pray:
+  correct: false
+  answer: prey
+  conf: 0.8530640602111816
+foot:
+  correct: true
+  answer: foot
+  conf: 0.9208456873893738
+footprint:
+  correct: true
+  answer: footprint
+  conf: 0.879937469959259
+knife:
+  correct: true
+  answer: knife
+  conf: 0.8826231956481934
+tableware:
+  correct: true
+  answer: tableware
+  conf: 0.9373534917831421
+fortune cookie:
+  correct: true
+  answer: fortune cookie
+  conf: 0.9876291155815125
+fountain:
+  correct: true
+  answer: fountain
+  conf: 0.9704819917678833
+fountain pen:
+  correct: true
+  answer: fountain pen
+  conf: 0.9612374901771545
+clover:
+  correct: true
+  answer: clover
+  conf: 0.9839119911193848
+picture:
+  correct: true
+  answer: picture
+  conf: 0.9711974859237671
+fries:
+  correct: true
+  answer: fries
+  conf: 0.8663681745529175
+shrimp:
+  correct: true
+  answer: shrimp
+  conf: 0.987368106842041
+frog:
+  correct: true
+  answer: frog
+  conf: 0.985032856464386
+chick:
+  correct: true
+  answer: chick
+  conf: 0.780773937702179
+frowning:
+  correct: true
+  answer: frowning
+  conf: 0.920620322227478
+fuel:
+  correct: true
+  answer: fuel
+  conf: 0.978326678276062
+urn:
+  correct: false
+  answer: horn
+  conf: 0.7568607926368713
+die:
+  correct: true
+  answer: die
+  conf: 0.9427899122238159
+garlic:
+  correct: true
+  answer: garlic
+  conf: 0.9776501655578613
+gear:
+  correct: true
+  answer: gear
+  conf: 0.8618659973144531
+diamond:
+  correct: true
+  answer: diamond
+  conf: 0.9690874218940735
+genie:
+  correct: true
+  answer: genie
+  conf: 0.9210031628608704
+ghost:
+  correct: true
+  answer: ghost
+  conf: 0.8964316248893738
+giraffe:
+  correct: true
+  answer: giraffe
+  conf: 0.9772976040840149
+girl:
+  correct: true
+  answer: girl
+  conf: 0.9651501774787903
+milk:
+  correct: true
+  answer: milk
+  conf: 0.9757703542709351
+glasses:
+  correct: true
+  answer: glasses
+  conf: 0.9860340356826782
+world:
+  correct: true
+  answer: world
+  conf: 0.9749676585197449
+gloves:
+  correct: true
+  answer: gloves
+  conf: 0.9378944635391235
+star:
+  correct: true
+  answer: star
+  conf: 0.9382250905036926
+goal:
+  correct: true
+  answer: goal
+  conf: 0.8829396367073059
+goat:
+  correct: true
+  answer: goat
+  conf: 0.982886791229248
+goblin:
+  correct: true
+  answer: goblin
+  conf: 0.9522196054458618
+goggles:
+  correct: true
+  answer: goggles
+  conf: 0.8110998272895813
+gorilla:
+  correct: true
+  answer: gorillas
+  conf: 0.8950780630111694
+graduation cap:
+  correct: true
+  answer: graduation cap
+  conf: 0.9635133743286133
+grapes:
+  correct: true
+  answer: grapes
+  conf: 0.8547320365905762
+apple:
+  correct: true
+  answer: apple
+  conf: 0.9693191647529602
+book:
+  correct: true
+  answer: book
+  conf: 0.8210831880569458
+heart:
+  correct: true
+  answer: heart
+  conf: 0.9445670247077942
+salad:
+  correct: true
+  answer: salad
+  conf: 0.975196361541748
+grimacing:
+  correct: true
+  answer: grimacing
+  conf: 0.973161518573761
+chesshire:
+  correct: false
+  answer: cheshire
+  conf: 0.8106561303138733
+pulse:
+  correct: true
+  answer: pulse
+  conf: 0.9443761110305786
+guard:
+  correct: true
+  answer: guard
+  conf: 0.9717461466789246
+guitar:
+  correct: true
+  answer: guitar
+  conf: 0.9861195683479309
+haircut:
+  correct: true
+  answer: haircut
+  conf: 0.945357620716095
+hamburger:
+  correct: true
+  answer: hamburger
+  conf: 0.9768325090408325
+hammer:
+  correct: true
+  answer: hammer
+  conf: 0.9576151967048645
+tools:
+  correct: true
+  answer: tools
+  conf: 0.8728874325752258
+hamster:
+  correct: true
+  answer: hamster
+  conf: 0.983288586139679
+splay:
+  correct: false
+  answer: play
+  conf: 0.8936185836791992
+handbag:
+  correct: true
+  answer: handbag
+  conf: 0.8902867436408997
+handball:
+  correct: true
+  answer: handball
+  conf: 0.9451440572738647
+handshake:
+  correct: true
+  answer: handshake
+  conf: 0.9246143102645874
+headphone:
+  correct: true
+  answer: headphone
+  conf: 0.8817399144172668
+hear-no-evil:
+  correct: false
+  answer: evil
+  conf: 0.9764254093170166
+card:
+  correct: true
+  answer: card
+  conf: 0.8784164190292358
+cupid:
+  correct: true
+  answer: cupid
+  conf: 0.9327689409255981
+valentine's day:
+  correct: true
+  answer: valentine's day
+  conf: 0.9839708209037781
+hedgehog:
+  correct: true
+  answer: hedgehog
+  conf: 0.9715341329574585
+helicopter:
+  correct: true
+  answer: helicopter
+  conf: 0.9836130142211914
+leaf:
+  correct: true
+  answer: leaf
+  conf: 0.9365612268447876
+hibiscus:
+  correct: true
+  answer: hibiscus
+  conf: 0.9813542366027832
+lightning:
+  correct: true
+  answer: lightning
+  conf: 0.9727290272712708
+shoe:
+  correct: true
+  answer: shoe
+  conf: 0.8873485326766968
+train:
+  correct: true
+  answer: train
+  conf: 0.9654086232185364
+temple:
+  correct: true
+  answer: temple
+  conf: 0.9194901585578918
+hippo:
+  correct: true
+  answer: hippo
+  conf: 0.9851659536361694
+hole:
+  correct: false
+  answer: hall
+  conf: 0.7345510125160217
+pot:
+  correct: true
+  answer: pot
+  conf: 0.8258474469184875
+horse:
+  correct: true
+  answer: horse
+  conf: 0.9590581655502319
+jockey:
+  correct: false
+  answer: chucky
+  conf: 0.7904064059257507
+tea:
+  correct: false
+  answer: t
+  conf: 0.7926820516586304
+hot:
+  correct: true
+  answer: hot
+  conf: 0.9128861427307129
+pepper:
+  correct: true
+  answer: pepper
+  conf: 0.8651632070541382
+sausage:
+  correct: true
+  answer: sausage
+  conf: 0.9876290559768677
+hourglass:
+  correct: true
+  answer: hourglass
+  conf: 0.9601855278015137
+house:
+  correct: true
+  answer: house
+  conf: 0.8827506899833679
+houses:
+  correct: true
+  answer: houses
+  conf: 0.9815027117729187
+hugging:
+  correct: true
+  answer: hugging
+  conf: 0.9826480150222778
+hundred:
+  correct: true
+  answer: hundred
+  conf: 0.9409940838813782
+ice:
+  correct: true
+  answer: ice
+  conf: 0.8820379972457886
+ice cream:
+  correct: true
+  answer: ice cream
+  conf: 0.9475319981575012
+ice hockey:
+  correct: true
+  answer: ice hockey
+  conf: 0.9876291155815125
+skating:
+  correct: true
+  answer: skating
+  conf: 0.9752739667892456
+mail:
+  correct: false
+  answer: male
+  conf: 0.9382122159004211
+inbox:
+  correct: true
+  answer: inbox
+  conf: 0.9237838983535767
+up:
+  correct: true
+  answer: up
+  conf: 0.9630872011184692
+pumpkin:
+  correct: true
+  answer: pumpkin
+  conf: 0.9746565818786621
+pants:
+  correct: true
+  answer: pants
+  conf: 0.8546007871627808
+joker:
+  correct: true
+  answer: joker
+  conf: 0.9631294012069702
+joystick:
+  correct: true
+  answer: joystick
+  conf: 0.9439030885696411
+juggling:
+  correct: true
+  answer: juggling
+  conf: 0.9901032447814941
+kangaroo:
+  correct: true
+  answer: kangaroo
+  conf: 0.9621759653091431
+key:
+  correct: true
+  answer: key
+  conf: 0.8662026524543762
+keyboard:
+  correct: true
+  answer: keyboard
+  conf: 0.9852916598320007
+scooter:
+  correct: true
+  answer: scooter
+  conf: 0.9731566309928894
+kimono:
+  correct: true
+  answer: kimono
+  conf: 0.9235550761222839
+lips:
+  correct: true
+  answer: lips
+  conf: 0.8286281824111938
+kissing cat:
+  correct: true
+  answer: kissing cat
+  conf: 0.9548859596252441
+kite:
+  correct: true
+  answer: kite
+  conf: 0.9451136589050293
+kiwi:
+  correct: true
+  answer: kiwi
+  conf: 0.949920654296875
+kneeling:
+  correct: true
+  answer: kneeling
+  conf: 0.8467820882797241
+coat:
+  correct: true
+  answer: coat
+  conf: 0.7825650572776794
+label:
+  correct: true
+  answer: label
+  conf: 0.9375635981559753
+lacrosse:
+  correct: true
+  answer: lacrosse
+  conf: 0.9211509823799133
+ladybug:
+  correct: true
+  answer: ladybug
+  conf: 0.9712432622909546
+laptop:
+  correct: true
+  answer: laptop
+  conf: 0.9783218502998352
+wind:
+  correct: true
+  answer: wind
+  conf: 0.9509271383285522
+notebook:
+  correct: true
+  answer: notebook
+  conf: 0.9405918121337891
+fist:
+  correct: true
+  answer: fist
+  conf: 0.7798126339912415
+leg:
+  correct: false
+  answer: lake
+  conf: 0.8538705706596375
+lemon:
+  correct: true
+  answer: lemon
+  conf: 0.935093879699707
+leopard:
+  correct: true
+  answer: leopard
+  conf: 0.9822389483451843
+slider:
+  correct: true
+  answer: slider
+  conf: 0.9510165452957153
+levitating:
+  correct: true
+  answer: levitating
+  conf: 0.9759246110916138
+weight lifting:
+  correct: false
+  answer: weightlifting
+  conf: 0.7732516527175903
+bulb:
+  correct: true
+  answer: bulb
+  conf: 0.8645850419998169
+railway:
+  correct: true
+  answer: railway
+  conf: 0.9780768156051636
+link:
+  correct: true
+  answer: link
+  conf: 0.9072620272636414
+paperclips:
+  correct: false
+  answer: clips
+  conf: 0.8596509099006653
+lipstick:
+  correct: true
+  answer: lipstick
+  conf: 0.9709270596504211
+lizard:
+  correct: true
+  answer: lizard
+  conf: 0.8632580637931824
+llama:
+  correct: true
+  answer: llama
+  conf: 0.9355403184890747
+lobster:
+  correct: true
+  answer: lobster
+  conf: 0.9709150195121765
+lock:
+  correct: true
+  answer: lock
+  conf: 0.797015368938446
+locomotive:
+  correct: true
+  answer: locomotive
+  conf: 0.9806620478630066
+lollipop:
+  correct: true
+  answer: lollipop
+  conf: 0.9696491956710815
+lotion:
+  correct: true
+  answer: lotion
+  conf: 0.965072512626648
+yoga:
+  correct: true
+  answer: yoga
+  conf: 0.982420802116394
+sad:
+  correct: true
+  answer: sad
+  conf: 0.9727185964584351
+loudspeaker:
+  correct: false
+  answer: speaker
+  conf: 0.8538746237754822
+love letter:
+  correct: true
+  answer: love letter
+  conf: 0.9753506779670715
+love:
+  correct: true
+  answer: love
+  conf: 0.9497116804122925
+suitcase:
+  correct: true
+  answer: suitcase
+  conf: 0.9886860847473145
+lungs:
+  correct: true
+  answer: lungs
+  conf: 0.8406075239181519
+pinocchio:
+  correct: true
+  answer: pinocchio
+  conf: 0.986447811126709
+magnet:
+  correct: true
+  answer: magnet
+  conf: 0.9421531558036804
+magnifier:
+  correct: true
+  answer: magnifier
+  conf: 0.978009045124054
+mahjong:
+  correct: true
+  answer: mahjong
+  conf: 0.9720679521560669
+person:
+  correct: true
+  answer: person
+  conf: 0.9784043431282043
+artist:
+  correct: true
+  answer: artist
+  conf: 0.9282876253128052
+astronaut:
+  correct: true
+  answer: astronaut
+  conf: 0.9179917573928833
+blind:
+  correct: true
+  answer: blind
+  conf: 0.9656777381896973
+cook:
+  correct: true
+  answer: coke
+  conf: 0.9539293050765991
+dancing:
+  correct: true
+  answer: dancing
+  conf: 0.9827895164489746
+factory worker:
+  correct: true
+  answer: factory worker
+  conf: 0.9876291155815125
+farmer:
+  correct: true
+  answer: farmer
+  conf: 0.8997600674629211
+firefighter:
+  correct: true
+  answer: firefighter
+  conf: 0.9249256253242493
+doctor:
+  correct: true
+  answer: doctor
+  conf: 0.8504112362861633
+wheelchair:
+  correct: true
+  answer: wheelchair
+  conf: 0.9748663902282715
+judge:
+  correct: true
+  answer: judge
+  conf: 0.9763213396072388
+mechanic:
+  correct: true
+  answer: mechanic
+  conf: 0.9338808059692383
+office worker:
+  correct: true
+  answer: office worker
+  conf: 0.9653763771057129
+pilot:
+  correct: true
+  answer: pilot
+  conf: 0.9275888204574585
+running:
+  correct: true
+  answer: running
+  conf: 0.9879725575447083
+scientist:
+  correct: true
+  answer: scientist
+  conf: 0.9129997491836548
+singer:
+  correct: true
+  answer: singer
+  conf: 0.9843212962150574
+man:
+  correct: false
+  answer: men
+  conf: 0.9330945014953613
+student:
+  correct: true
+  answer: student
+  conf: 0.9225940704345703
+surfing:
+  correct: true
+  answer: surfing
+  conf: 0.9426100850105286
+teacher:
+  correct: true
+  answer: teacher
+  conf: 0.9802578091621399
+developer:
+  correct: true
+  answer: developer
+  conf: 0.9420583844184875
+walking:
+  correct: true
+  answer: walking
+  conf: 0.97417151927948
+bald:
+  correct: true
+  answer: bald
+  conf: 0.856761634349823
+beard:
+  correct: true
+  answer: beard
+  conf: 0.9357789158821106
+blond:
+  correct: true
+  answer: blond
+  conf: 0.8276094198226929
+red hair:
+  correct: true
+  answer: red hair
+  conf: 0.9373664855957031
+white-haired man:
+  correct: false
+  answer: white haired men
+  conf: 0.917314887046814
+mango:
+  correct: true
+  answer: mango
+  conf: 0.9725953340530396
+clock:
+  correct: true
+  answer: clock
+  conf: 0.9561216235160828
+japan:
+  correct: true
+  answer: japan
+  conf: 0.973924458026886
+maple leaf:
+  correct: true
+  answer: maple leaf
+  conf: 0.9610468745231628
+karate:
+  correct: true
+  answer: karate
+  conf: 0.981957733631134
+massage:
+  correct: true
+  answer: massage
+  conf: 0.9872618913650513
+meat:
+  correct: true
+  answer: meat
+  conf: 0.9262253046035767
+arm:
+  correct: true
+  answer: arm
+  conf: 0.8141449689865112
+medal:
+  correct: false
+  answer: metal
+  conf: 0.976016640663147
+megaphone:
+  correct: true
+  answer: megaphone
+  conf: 0.7924990653991699
+melon:
+  correct: true
+  answer: melon
+  conf: 0.9246830940246582
+notice:
+  correct: true
+  answer: notice
+  conf: 0.9136984944343567
+holding hands:
+  correct: true
+  answer: holding hands
+  conf: 0.9876291155815125
+mermaid:
+  correct: true
+  answer: mermaid
+  conf: 0.9669917225837708
+microbe:
+  correct: true
+  answer: microbe
+  conf: 0.7892829775810242
+microphone:
+  correct: true
+  answer: microphone
+  conf: 0.9871681928634644
+microscope:
+  correct: true
+  answer: microscope
+  conf: 0.9542641639709473
+middle finger:
+  correct: true
+  answer: middle finger
+  conf: 0.956672191619873
+galaxy:
+  correct: true
+  answer: galaxy
+  conf: 0.9581469297409058
+bus:
+  correct: true
+  answer: bus
+  conf: 0.9655212163925171
+statue:
+  correct: true
+  answer: statue
+  conf: 0.8978769183158875
+phone:
+  correct: true
+  answer: phone
+  conf: 0.8194860219955444
+money:
+  correct: true
+  answer: money
+  conf: 0.9381657838821411
+monkey:
+  correct: true
+  answer: monkey
+  conf: 0.9745861291885376
+monorail:
+  correct: true
+  answer: monorail
+  conf: 0.9747532606124878
+mosque:
+  correct: true
+  answer: mosque
+  conf: 0.7958744168281555
+mosquito:
+  correct: true
+  answer: mosquito
+  conf: 0.9667266607284546
+motorboat:
+  correct: true
+  answer: boat
+  conf: 0.8620758652687073
+motor scooter:
+  correct: true
+  answer: motor scooter
+  conf: 0.9297170042991638
+motorcycle:
+  correct: true
+  answer: motorcycle
+  conf: 0.9704533815383911
+road:
+  correct: true
+  answer: road
+  conf: 0.8496251106262207
+mountain:
+  correct: true
+  answer: mountain
+  conf: 0.9622470140457153
+biking:
+  correct: true
+  answer: biking
+  conf: 0.9142078161239624
+suspension railway:
+  correct: true
+  answer: suspension railway
+  conf: 0.9817771315574646
+mouse:
+  correct: true
+  answer: mouse
+  conf: 0.8717843890190125
+mouth:
+  correct: true
+  answer: mouth
+  conf: 0.929235577583313
+camera:
+  correct: true
+  answer: camera
+  conf: 0.9753376841545105
+mushroom:
+  correct: true
+  answer: mushroom
+  conf: 0.8659937977790833
+piano:
+  correct: true
+  answer: piano
+  conf: 0.9536359906196594
+music:
+  correct: true
+  answer: music
+  conf: 0.9782614707946777
+treble:
+  correct: true
+  answer: treble
+  conf: 0.78220134973526
+mute:
+  correct: true
+  answer: mute
+  conf: 0.9780610799789429
+manicure:
+  correct: true
+  answer: manicure
+  conf: 0.9761432409286499
+please:
+  correct: true
+  answer: please
+  conf: 0.9511528015136719
+tie:
+  correct: false
+  answer: thai
+  conf: 0.7659357786178589
+nerdy:
+  correct: true
+  answer: nerdy
+  conf: 0.9829362034797668
+newspaper:
+  correct: true
+  answer: newspaper
+  conf: 0.9458850622177124
+nose:
+  correct: true
+  answer: nose
+  conf: 0.8566466569900513
+bolt:
+  correct: true
+  answer: bolt
+  conf: 0.8487857580184937
+octopus:
+  correct: true
+  answer: octopus
+  conf: 0.9731608629226685
+kebab:
+  correct: false
+  answer: kabob
+  conf: 0.8248202204704285
+building:
+  correct: true
+  answer: building
+  conf: 0.9733582735061646
+ogre:
+  correct: true
+  answer: ogre
+  conf: 0.9623659253120422
+oil:
+  correct: true
+  answer: oil
+  conf: 0.8814709782600403
+white hair:
+  correct: true
+  answer: white hair
+  conf: 0.9665024280548096
+car:
+  correct: true
+  answer: car
+  conf: 0.9863664507865906
+swimsuit:
+  correct: true
+  answer: swimsuit
+  conf: 0.9225064516067505
+onion:
+  correct: true
+  answer: onion
+  conf: 0.9649618864059448
+hands:
+  correct: true
+  answer: hands
+  conf: 0.8521150350570679
+orangutan:
+  correct: true
+  answer: orangutan
+  conf: 0.9254460334777832
+otter:
+  correct: true
+  answer: otter
+  conf: 0.8507107496261597
+owl:
+  correct: true
+  answer: hell
+  conf: 0.8292627334594727
+bull:
+  correct: false
+  answer: ball
+  conf: 0.8016706705093384
+oyster:
+  correct: true
+  answer: oyster
+  conf: 0.9487131834030151
+package:
+  correct: true
+  answer: package
+  conf: 0.9474854469299316
+page:
+  correct: true
+  answer: page
+  conf: 0.8398946523666382
+document:
+  correct: true
+  answer: document
+  conf: 0.9656205177307129
+pager:
+  correct: true
+  answer: pager
+  conf: 0.8874861598014832
+paintbrush:
+  correct: true
+  answer: paintbrush
+  conf: 0.8417145609855652
+palm tree:
+  correct: true
+  answer: palm tree
+  conf: 0.9889115691184998
+pancakes:
+  correct: true
+  answer: pancakes
+  conf: 0.8827255368232727
+panda:
+  correct: true
+  answer: panda
+  conf: 0.9651740193367004
+paperclip:
+  correct: false
+  answer: clip
+  conf: 0.7394359707832336
+parachute:
+  correct: true
+  answer: parachute
+  conf: 0.977932333946228
+parrot:
+  correct: true
+  answer: parrot
+  conf: 0.9656805992126465
+party:
+  correct: true
+  answer: party
+  conf: 0.9816349148750305
+ship:
+  correct: true
+  answer: ship
+  conf: 0.9544298052787781
+paws:
+  correct: false
+  answer: pause
+  conf: 0.9220948219299316
+peach:
+  correct: true
+  answer: peach
+  conf: 0.96576988697052
+peacock:
+  correct: true
+  answer: peacock
+  conf: 0.9692617654800415
+peanut:
+  correct: true
+  answer: peanut
+  conf: 0.9210240244865417
+pear:
+  correct: true
+  answer: pear
+  conf: 0.8302224278450012
+pen:
+  correct: false
+  answer: pain
+  conf: 0.8228659629821777
+pencil:
+  correct: true
+  answer: pencil
+  conf: 0.8208683729171753
+penguin:
+  correct: true
+  answer: penguin
+  conf: 0.9517372250556946
+pensive:
+  correct: true
+  answer: pensive
+  conf: 0.7420149445533752
+masks:
+  correct: true
+  answer: masks
+  conf: 0.8443213701248169
+stubborn:
+  correct: true
+  answer: stubborn
+  conf: 0.9556306600570679
+sorry:
+  correct: true
+  answer: sorry
+  conf: 0.9661611318588257
+facepalm:
+  correct: true
+  answer: facepalm
+  conf: 0.9639900326728821
+disappointed:
+  correct: true
+  answer: disappointed
+  conf: 0.8959959149360657
+stop:
+  correct: true
+  answer: stop
+  conf: 0.9830011129379272
+ok:
+  correct: false
+  answer: okay
+  conf: 0.9691205024719238
+tuxedo:
+  correct: true
+  answer: tuxedo
+  conf: 0.952418327331543
+pouting:
+  correct: true
+  answer: pouting
+  conf: 0.9569282531738281
+hello:
+  correct: true
+  answer: hello
+  conf: 0.9769307374954224
+shrugging:
+  correct: true
+  answer: shrugging
+  conf: 0.9480234384536743
+sassy:
+  correct: true
+  answer: sassy
+  conf: 0.9614108204841614
+turban:
+  correct: false
+  answer: turbine
+  conf: 0.9271231889724731
+cap:
+  correct: true
+  answer: cap
+  conf: 0.8617551922798157
+bride:
+  correct: true
+  answer: bride
+  conf: 0.8086797595024109
+petri dish:
+  correct: true
+  answer: petri dish
+  conf: 0.9535362124443054
+pick:
+  correct: false
+  answer: pic
+  conf: 0.9026492834091187
+pie:
+  correct: true
+  answer: pie
+  conf: 0.7636404037475586
+pig:
+  correct: true
+  answer: pig
+  conf: 0.9581476449966431
+poo:
+  correct: false
+  answer: pol
+  conf: 0.8294898271560669
+pill:
+  correct: true
+  answer: pill
+  conf: 0.9478490948677063
+pinch:
+  correct: true
+  answer: pinch
+  conf: 0.9509814381599426
+pineapple:
+  correct: true
+  answer: pineapple
+  conf: 0.9413922429084778
+ping pong:
+  correct: false
+  answer: call paul
+  conf: 0.681431770324707
+gun:
+  correct: true
+  answer: gun
+  conf: 0.9658247828483582
+pizza:
+  correct: true
+  answer: pizza
+  conf: 0.9876290559768677
+pleading:
+  correct: true
+  answer: pleading
+  conf: 0.7758488059043884
+police:
+  correct: true
+  answer: police
+  conf: 0.9844071269035339
+dog:
+  correct: true
+  answer: dog
+  conf: 0.9840072393417358
+billiard:
+  correct: true
+  answer: billiard
+  conf: 0.9300065040588379
+popcorn:
+  correct: true
+  answer: popcorn
+  conf: 0.9752874374389648
+postal horn:
+  correct: true
+  answer: postal horn
+  conf: 0.9192723631858826
+mailbox:
+  correct: true
+  answer: mailbox
+  conf: 0.953942596912384
+potato:
+  correct: true
+  answer: potato
+  conf: 0.9309940338134766
+poultry:
+  correct: true
+  answer: poultry
+  conf: 0.9688858985900879
+pound:
+  correct: true
+  answer: pound
+  conf: 0.8483117818832397
+pouting cat:
+  correct: true
+  answer: pouting cat
+  conf: 0.8558473587036133
+beads:
+  correct: true
+  answer: beads
+  conf: 0.8842383623123169
+pregnant:
+  correct: true
+  answer: pregnant
+  conf: 0.9693285822868347
+pretzel:
+  correct: true
+  answer: pretzel
+  conf: 0.8737272024154663
+prince:
+  correct: true
+  answer: prince
+  conf: 0.957348644733429
+princess:
+  correct: true
+  answer: princess
+  conf: 0.9785569310188293
+printer:
+  correct: true
+  answer: printer
+  conf: 0.9743049740791321
+purse:
+  correct: true
+  answer: purse
+  conf: 0.9076801538467407
+pin:
+  correct: false
+  answer: pain
+  conf: 0.7379279732704163
+puzzle:
+  correct: true
+  answer: puzzle
+  conf: 0.9799131155014038
+rabbit:
+  correct: true
+  answer: rabbit
+  conf: 0.9819795489311218
+radio:
+  correct: true
+  answer: radio
+  conf: 0.9685576558113098
+trolley:
+  correct: true
+  answer: trolley
+  conf: 0.9330991506576538
+tracks:
+  correct: true
+  answer: tracks
+  conf: 0.8864407539367676
+rainbow:
+  correct: true
+  answer: rainbow
+  conf: 0.9712094068527222
+backhand:
+  correct: true
+  answer: backhand
+  conf: 0.7990372776985168
+hand:
+  correct: true
+  answer: hand
+  conf: 0.9235879182815552
+raising hands:
+  correct: false
+  answer: raising hens
+  conf: 0.8504424095153809
+ram:
+  correct: true
+  answer: ram
+  conf: 0.8965209722518921
+rat:
+  correct: true
+  answer: rat
+  conf: 0.9644397497177124
+razor:
+  correct: true
+  answer: razor
+  conf: 0.9153855443000793
+receipt:
+  correct: true
+  answer: receipt
+  conf: 0.9483342170715332
+lantern:
+  correct: true
+  answer: lantern
+  conf: 0.9544776082038879
+sleepy:
+  correct: true
+  answer: sleepy
+  conf: 0.9686083793640137
+helmet:
+  correct: true
+  answer: helmet
+  conf: 0.9554401636123657
+bed:
+  correct: true
+  answer: bed
+  conf: 0.7933707237243652
+two hearts:
+  correct: true
+  answer: two hearts
+  conf: 0.9217028617858887
+rhinoceros:
+  correct: true
+  answer: rhinoceros
+  conf: 0.9856594800949097
+ribbon:
+  correct: false
+  answer: riven
+  conf: 0.9140740633010864
+cracker:
+  correct: true
+  answer: cracker
+  conf: 0.9550096392631531
+tuk tuk:
+  correct: false
+  answer: aztec
+  conf: 0.6211690902709961
+ring:
+  correct: true
+  answer: ring
+  conf: 0.9229286313056946
+saturn:
+  correct: true
+  answer: saturn
+  conf: 0.9594218134880066
+robot:
+  correct: true
+  answer: robot
+  conf: 0.9744278192520142
+rocket:
+  correct: true
+  answer: rocket
+  conf: 0.9315446019172668
+toilet paper:
+  correct: true
+  answer: toilet paper
+  conf: 0.9876291155815125
+roller coaster:
+  correct: true
+  answer: roller coaster
+  conf: 0.9328473210334778
+rooster:
+  correct: true
+  answer: rooster
+  conf: 0.9675253033638
+rose:
+  correct: true
+  answer: rose
+  conf: 0.9452832341194153
+flower:
+  correct: true
+  answer: flower
+  conf: 0.9457577466964722
+rowing:
+  correct: true
+  answer: rowing
+  conf: 0.7412955164909363
+rugby:
+  correct: true
+  answer: rugby
+  conf: 0.9735097885131836
+shirt:
+  correct: true
+  answer: shirt
+  conf: 0.9487927556037903
+sneaker:
+  correct: true
+  answer: sneaker
+  conf: 0.9369663000106812
+safety pin:
+  correct: true
+  answer: safety pin
+  conf: 0.9410033226013184
+safety vest:
+  correct: true
+  answer: safety vest
+  conf: 0.9876291155815125
+sailboat:
+  correct: true
+  answer: sailboat
+  conf: 0.9620741605758667
+salt:
+  correct: true
+  answer: salt
+  conf: 0.9407832026481628
+sandwich:
+  correct: true
+  answer: sandwich
+  conf: 0.9390966296195984
+sari:
+  correct: false
+  answer: sorry
+  conf: 0.966326117515564
+satellite:
+  correct: true
+  answer: satellite
+  conf: 0.9766939878463745
+dinosaur:
+  correct: true
+  answer: dinosaur
+  conf: 0.936301052570343
+saxophone:
+  correct: true
+  answer: saxophone
+  conf: 0.9819265604019165
+scarf:
+  correct: true
+  answer: scarf
+  conf: 0.9395250082015991
+school:
+  correct: true
+  answer: school
+  conf: 0.8941837549209595
+scissors:
+  correct: true
+  answer: scissors
+  conf: 0.8832142949104309
+scorpion:
+  correct: true
+  answer: scorpion
+  conf: 0.9356008768081665
+chair:
+  correct: false
+  answer: cher
+  conf: 0.8043438792228699
+hide:
+  correct: false
+  answer: hyde
+  conf: 0.7116268873214722
+seedling:
+  correct: true
+  answer: seedling
+  conf: 0.8824065923690796
+selfie:
+  correct: true
+  answer: selfie
+  conf: 0.9765993356704712
+pan:
+  correct: false
+  answer: pain
+  conf: 0.9275612831115723
+shamrock:
+  correct: true
+  answer: shamrock
+  conf: 0.9717731475830078
+shark:
+  correct: true
+  answer: shark
+  conf: 0.9842208027839661
+ice cream cone:
+  correct: true
+  answer: ice cream cone
+  conf: 0.9621099233627319
+grain:
+  correct: true
+  answer: grain
+  conf: 0.8381166458129883
+sheep:
+  correct: true
+  answer: sheep
+  conf: 0.9867507815361023
+shield:
+  correct: true
+  answer: shield
+  conf: 0.9722925424575806
+shooting star:
+  correct: true
+  answer: shooting star
+  conf: 0.9876291155815125
+bags:
+  correct: true
+  answer: bags
+  conf: 0.9648526310920715
+shopping cart:
+  correct: true
+  answer: shopping cart
+  conf: 0.9876291155815125
+cake:
+  correct: true
+  answer: cake
+  conf: 0.986302375793457
+shorts:
+  correct: true
+  answer: shorts
+  conf: 0.9610811471939087
+shower:
+  correct: true
+  answer: shower
+  conf: 0.98167884349823
+silent:
+  correct: true
+  answer: silent
+  conf: 0.89154452085495
+horns:
+  correct: true
+  answer: horns
+  conf: 0.8988696336746216
+skateboard:
+  correct: true
+  answer: skateboard
+  conf: 0.9810858964920044
+skiing:
+  correct: true
+  answer: skiing
+  conf: 0.9630346298217773
+skull:
+  correct: true
+  answer: skull
+  conf: 0.9681078791618347
+skunk:
+  correct: true
+  answer: skunk
+  conf: 0.9827514886856079
+sleigh:
+  correct: true
+  answer: sleigh
+  conf: 0.9335547685623169
+slot machine:
+  correct: true
+  answer: slot machine
+  conf: 0.8912904262542725
+sloth:
+  correct: false
+  answer: slowed
+  conf: 0.7894091010093689
+airplane:
+  correct: true
+  answer: airplane
+  conf: 0.952788233757019
+heart eyes:
+  correct: false
+  answer: paradise
+  conf: 0.8035180568695068
+crush:
+  correct: true
+  answer: crush
+  conf: 0.941704273223877
+devil:
+  correct: true
+  answer: devil
+  conf: 0.9767929911613464
+sunglasses:
+  correct: true
+  answer: sunglasses
+  conf: 0.970753014087677
+smirking:
+  correct: true
+  answer: smirking
+  conf: 0.9250094294548035
+snail:
+  correct: true
+  answer: snail
+  conf: 0.8933237195014954
+snake:
+  correct: true
+  answer: snake
+  conf: 0.8969910740852356
+sneezing:
+  correct: true
+  answer: sneezing
+  conf: 0.9193040728569031
+snowboard:
+  correct: true
+  answer: snowboard
+  conf: 0.943246066570282
+snowflake:
+  correct: true
+  answer: snowflake
+  conf: 0.9737286567687988
+snowman:
+  correct: true
+  answer: snowmen
+  conf: 0.8808293342590332
+soap:
+  correct: true
+  answer: soap
+  conf: 0.9572470784187317
+soccer:
+  correct: true
+  answer: soccer
+  conf: 0.9619584083557129
+socks:
+  correct: true
+  answer: socks
+  conf: 0.8462112545967102
+softball:
+  correct: true
+  answer: softball
+  conf: 0.9703994989395142
+spade:
+  correct: true
+  answer: spade
+  conf: 0.8833789825439453
+pasta:
+  correct: true
+  answer: pasta
+  conf: 0.9062113761901855
+sparkles:
+  correct: true
+  answer: sparkles
+  conf: 0.9414764642715454
+speak-no-evil:
+  correct: false
+  answer: evil
+  conf: 0.9872465133666992
+speaker:
+  correct: true
+  answer: speaker
+  conf: 0.9557503461837769
+speak:
+  correct: true
+  answer: speak
+  conf: 0.8879256248474121
+dialog:
+  correct: false
+  answer: dialogue
+  conf: 0.9091205596923828
+boat:
+  correct: true
+  answer: boat
+  conf: 0.9262496829032898
+spider:
+  correct: true
+  answer: spider
+  conf: 0.9301355481147766
+spider web:
+  correct: true
+  answer: spider web
+  conf: 0.9066287875175476
+date:
+  correct: true
+  answer: date
+  conf: 0.9876290559768677
+notepad:
+  correct: true
+  answer: notepad
+  conf: 0.7789365649223328
+shell:
+  correct: true
+  answer: she'll
+  conf: 0.9329433441162109
+sponge:
+  correct: true
+  answer: sponge
+  conf: 0.9867382049560547
+spoon:
+  correct: true
+  answer: spoon
+  conf: 0.9537577629089355
+whale:
+  correct: true
+  answer: whale
+  conf: 0.943200409412384
+squid:
+  correct: true
+  answer: squid
+  conf: 0.8335279226303101
+stadium:
+  correct: true
+  answer: stadium
+  conf: 0.9835770726203918
+standing:
+  correct: true
+  answer: standing
+  conf: 0.9592683911323547
+station:
+  correct: true
+  answer: station
+  conf: 0.9670068621635437
+ramen:
+  correct: true
+  answer: ramen
+  conf: 0.8411329984664917
+steam:
+  correct: true
+  answer: steam
+  conf: 0.8467559814453125
+stethoscope:
+  correct: true
+  answer: stethoscope
+  conf: 0.9925406575202942
+stopwatch:
+  correct: false
+  answer: stop
+  conf: 0.6215170621871948
+ruler:
+  correct: true
+  answer: ruler
+  conf: 0.8765344619750977
+strawberry:
+  correct: true
+  answer: strawberry
+  conf: 0.9328311681747437
+wrap:
+  correct: false
+  answer: rap
+  conf: 0.8909569978713989
+sun:
+  correct: true
+  answer: sun
+  conf: 0.8598214387893677
+cloud:
+  correct: true
+  answer: cloud
+  conf: 0.935834527015686
+sunflower:
+  correct: true
+  answer: sunflower
+  conf: 0.9544428586959839
+superhero:
+  correct: true
+  answer: superhero
+  conf: 0.9258575439453125
+supervillain:
+  correct: false
+  answer: villain
+  conf: 0.9058774709701538
+sushi:
+  correct: false
+  answer: line
+  conf: 0.6531221866607666
+swan:
+  correct: true
+  answer: swan
+  conf: 0.9270597696304321
+drops:
+  correct: true
+  answer: drops
+  conf: 0.965922474861145
+swimming:
+  correct: true
+  answer: swimming
+  conf: 0.9755744934082031
+church:
+  correct: true
+  answer: church
+  conf: 0.9743248820304871
+syringe:
+  correct: true
+  answer: syringe
+  conf: 0.8703809976577759
+t-shirt:
+  correct: true
+  answer: t-shirt
+  conf: 0.9324389696121216
+taco:
+  correct: true
+  answer: taco
+  conf: 0.9495754241943359
+bathtub:
+  correct: true
+  answer: bathtub
+  conf: 0.950586199760437
+orange:
+  correct: true
+  answer: orange
+  conf: 0.9804828763008118
+taxi:
+  correct: true
+  answer: taxi
+  conf: 0.9698406457901001
+teddy bear:
+  correct: true
+  answer: teddy bear
+  conf: 0.9410805702209473
+telescope:
+  correct: true
+  answer: telescope
+  conf: 0.9787523150444031
+tv:
+  correct: true
+  answer: tv
+  conf: 0.9736135601997375
+tennis:
+  correct: true
+  answer: tennis
+  conf: 0.9689123034477234
+tent:
+  correct: true
+  answer: tent
+  conf: 0.737589955329895
+test tube:
+  correct: true
+  answer: test tube
+  conf: 0.9502494931221008
+thermometer:
+  correct: true
+  answer: thermometer
+  conf: 0.9854270815849304
+thinking:
+  correct: true
+  answer: thinking
+  conf: 0.8953951001167297
+thread:
+  correct: true
+  answer: thread
+  conf: 0.9388437271118164
+down:
+  correct: true
+  answer: down
+  conf: 0.948532223701477
+thumbs up:
+  correct: true
+  answer: thumbs up
+  conf: 0.9580075740814209
+ticket:
+  correct: true
+  answer: ticket
+  conf: 0.9300178289413452
+tiger:
+  correct: true
+  answer: tiger
+  conf: 0.9844502210617065
+timer:
+  correct: true
+  answer: timer
+  conf: 0.9901032447814941
+weary:
+  correct: false
+  answer: a
+  conf: 0.6381893754005432
+toilet:
+  correct: true
+  answer: toilet
+  conf: 0.9764409065246582
+tomato:
+  correct: true
+  answer: tomato
+  conf: 0.9058912992477417
+toolbox:
+  correct: true
+  answer: box
+  conf: 0.8503876328468323
+tooth:
+  correct: true
+  answer: tooth
+  conf: 0.9519790410995483
+hat:
+  correct: true
+  answer: hat
+  conf: 0.893324077129364
+tornado:
+  correct: true
+  answer: tornado
+  conf: 0.9835894703865051
+trackball:
+  correct: true
+  answer: trackball
+  conf: 0.9515866041183472
+tractor:
+  correct: true
+  answer: tractor
+  conf: 0.9874218106269836
+trophy:
+  correct: true
+  answer: trophy
+  conf: 0.9611152410507202
+glass:
+  correct: true
+  answer: glass
+  conf: 0.9845495223999023
+trumpet:
+  correct: true
+  answer: trumpet
+  conf: 0.9822098016738892
+tulip:
+  correct: true
+  answer: tulip
+  conf: 0.9001539349555969
+turkey:
+  correct: true
+  answer: turkey
+  conf: 0.9784246683120728
+turtle:
+  correct: true
+  answer: turtle
+  conf: 0.8960636258125305
+umbrella:
+  correct: true
+  answer: umbrella
+  conf: 0.9518648386001587
+unhappy:
+  correct: true
+  answer: unhappy
+  conf: 0.9620362520217896
+vampire:
+  correct: true
+  answer: vampire
+  conf: 0.9673179388046265
+traffic light:
+  correct: false
+  answer: stop traffic light
+  conf: 0.9396687746047974
+victory:
+  correct: true
+  answer: victory
+  conf: 0.9758092761039734
+camcorder:
+  correct: true
+  answer: camcorder
+  conf: 0.9507721066474915
+controller:
+  correct: true
+  answer: controller
+  conf: 0.9733651876449585
+tape:
+  correct: true
+  answer: tape
+  conf: 0.8953417539596558
+violin:
+  correct: true
+  answer: violin
+  conf: 0.9810923337936401
+volcano:
+  correct: true
+  answer: volcano
+  conf: 0.9844225645065308
+volleyball:
+  correct: true
+  answer: volleyball
+  conf: 0.9787577390670776
+vulcan salute:
+  correct: true
+  answer: vulcan salute
+  conf: 0.9828267097473145
+waffle:
+  correct: true
+  answer: waffle
+  conf: 0.8687679171562195
+wastebasket:
+  correct: true
+  answer: wastebasket
+  conf: 0.805780291557312
+polo:
+  correct: true
+  answer: polo
+  conf: 0.8842868804931641
+wave:
+  correct: true
+  answer: wave
+  conf: 0.9473522305488586
+watermelon:
+  correct: true
+  answer: watermelon
+  conf: 0.976024329662323
+tired:
+  correct: true
+  answer: tired
+  conf: 0.8203046917915344
+cane:
+  correct: false
+  answer: kane
+  conf: 0.7712830305099487
+blow:
+  correct: true
+  answer: blow
+  conf: 0.8423396944999695
+wink:
+  correct: true
+  answer: wink
+  conf: 0.8109224438667297
+witch:
+  correct: false
+  answer: wedge
+  conf: 0.8554288148880005
+wizard:
+  correct: true
+  answer: wizard
+  conf: 0.9253442883491516
+woman:
+  correct: true
+  answer: woman
+  conf: 0.9376737475395203
+headscarf:
+  correct: false
+  answer: scarf
+  conf: 0.8367145657539368
+blond hair:
+  correct: false
+  answer: blonde hair
+  conf: 0.8824198842048645
+curls:
+  correct: true
+  answer: curls
+  conf: 0.8649719953536987
+boot:
+  correct: false
+  answer: food
+  conf: 0.9739205241203308
+blouse:
+  correct: true
+  answer: blouse
+  conf: 0.806317150592804
+tipsy:
+  correct: true
+  answer: tipsy
+  conf: 0.9128055572509766
+worried:
+  correct: true
+  answer: worried
+  conf: 0.7900000214576721
+gift:
+  correct: true
+  answer: gift
+  conf: 0.9515571594238281
+wrench:
+  correct: true
+  answer: wrench
+  conf: 0.968789279460907
+wrestling:
+  correct: true
+  answer: wrestling
+  conf: 0.980553925037384
+write:
+  correct: false
+  answer: right
+  conf: 0.8511554598808289
+yarn:
+  correct: true
+  answer: yarn
+  conf: 0.9843875169754028
+yawn:
+  correct: false
+  answer: young
+  conf: 0.7822457551956177
+yen:
+  correct: true
+  answer: yen
+  conf: 0.8597620129585266
+yo-yo:
+  correct: true
+  answer: yo-yo
+  conf: 0.8758491277694702
+smile:
+  correct: true
+  answer: smile
+  conf: 0.7207940220832825
+drunk:
+  correct: true
+  answer: drunk
+  conf: 0.959865927696228
+sealed:
+  correct: true
+  answer: sealed
+  conf: 0.9625532031059265
+zombie:
+  correct: true
+  answer: zombie
+  conf: 0.9815016984939575
+sleep:
+  correct: true
+  answer: sleep
+  conf: 0.9785103797912598
+
+

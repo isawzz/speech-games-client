@@ -1,0 +1,2072 @@
+1st place medal:
+  E:
+    zira:
+      key: 1st place medal
+      req: medal
+      answer: metal
+      correct: false
+      conf: 0.9675390124320984
+2nd place medal:
+  E:
+    zira:
+      key: 2nd place medal
+      req: medal
+      answer: metal
+      correct: false
+      conf: 0.9679244160652161
+3rd place medal:
+  E:
+    zira:
+      key: 3rd place medal
+      req: medal
+      answer: metal
+      correct: false
+      conf: 0.9743283987045288
+Christmas tree:
+  E:
+    zira:
+      key: Christmas tree
+      req: christmas
+      answer: christmas
+      correct: true
+      conf: 0.9318838119506836
+Japanese castle:
+  E:
+    zira:
+      key: Japanese castle
+      req: japanese house
+      answer: japanese house
+      correct: true
+      conf: 0.985386848449707
+OK hand:
+  E:
+    zira:
+      key: OK hand
+      req: ok
+      answer: okay
+      correct: false
+      conf: 0.9701007008552551
+Santa Claus:
+  E:
+    zira:
+      key: Santa Claus
+      req: santa claus
+      answer: santa claus
+      correct: true
+      conf: 0.967660129070282
+Statue of Liberty:
+  E:
+    zira:
+      key: Statue of Liberty
+      req: statue
+      answer: statue
+      correct: true
+      conf: 0.8692587614059448
+T-Rex:
+  E:
+    zira:
+      key: T-Rex
+      req: dinosaur
+      answer: dinosaur
+      correct: true
+      conf: 0.9530550837516785
+abacus:
+  E:
+    zira:
+      key: abacus
+      req: abacus
+      answer: abacus
+      correct: true
+      conf: 0.9490526914596558
+adhesive bandage:
+  E:
+    zira:
+      key: adhesive bandage
+      req: bandage
+      answer: bandage
+      correct: true
+      conf: 0.9567475318908691
+aerial tramway:
+  E:
+    zira:
+      key: aerial tramway
+      req: cable car
+      answer: cable car
+      correct: true
+      conf: 0.9545597434043884
+airplane:
+  E:
+    zira:
+      key: airplane
+      req: airplane
+      answer: airplane
+      correct: true
+      conf: 0.9442035555839539
+airplane arrival:
+  E:
+    zira:
+      key: airplane arrival
+      req: arrival
+      answer: arrival
+      correct: true
+      conf: 0.9467013478279114
+airplane departure:
+  E:
+    zira:
+      key: airplane departure
+      req: departure
+      answer: departure
+      correct: true
+      conf: 0.9731624722480774
+alarm clock:
+  E:
+    zira:
+      key: alarm clock
+      req: alarm clock
+      answer: alarm clock
+      correct: true
+      conf: 0.9875609278678894
+alembic:
+  E:
+    zira:
+      key: alembic
+      req: chemistry
+      answer: chemistry
+      correct: true
+      conf: 0.9608587026596069
+alien:
+  E:
+    zira:
+      key: alien
+      req: alien
+      answer: alien
+      correct: true
+      conf: 0.9320931434631348
+alien monster:
+  E:
+    zira:
+      key: alien monster
+      req: alien
+      answer: alien
+      correct: true
+      conf: 0.9381830096244812
+ambulance:
+  E:
+    zira:
+      key: ambulance
+      req: ambulance
+      answer: ambulance
+      correct: true
+      conf: 0.9786766767501831
+american football:
+  E:
+    zira:
+      key: american football
+      req: american football
+      answer: american football
+      correct: true
+      conf: 0.960981547832489
+amphora:
+  E:
+    zira:
+      key: amphora
+      req: jug
+      answer: jug
+      correct: true
+      conf: 0.9004430770874023
+anatomical heart:
+  E:
+    zira:
+      key: anatomical heart
+      req: heart
+      answer: heart
+      correct: true
+      conf: 0.8774344325065613
+anchor:
+  E:
+    zira:
+      key: anchor
+      req: anchor
+      answer: anchor
+      correct: true
+      conf: 0.9390772581100464
+anger symbol:
+  E:
+    zira:
+      key: anger symbol
+      req: mad
+      answer: mad
+      correct: true
+      conf: 0.9604177474975586
+angry face:
+  E:
+    zira:
+      key: angry face
+      req: angry
+      answer: angry
+      correct: true
+      conf: 0.9384062886238098
+angry face with horns:
+  E:
+    zira:
+      key: angry face with horns
+      req: devil
+      answer: devil
+      correct: true
+      conf: 0.9409083127975464
+anguished face:
+  E:
+    zira:
+      key: anguished face
+      req: anguished
+      answer: anguished
+      correct: true
+      conf: 0.89814692735672
+ant:
+  E:
+    zira:
+      key: ant
+      req: ant
+      answer: aunt
+      correct: false
+      conf: 0.8754620552062988
+anxious face with sweat:
+  E:
+    zira:
+      key: anxious face with sweat
+      req: sad
+      answer: sad
+      correct: true
+      conf: 0.9709296226501465
+articulated lorry:
+  E:
+    zira:
+      key: articulated lorry
+      req: truck
+      answer: truck
+      correct: true
+      conf: 0.9693795442581177
+artist palette:
+  E:
+    zira:
+      key: artist palette
+      req: palette
+      answer: palette
+      correct: true
+      conf: 0.7831708788871765
+astonished face:
+  E:
+    zira:
+      key: astonished face
+      req: astonished
+      answer: aged
+      correct: true
+      conf: 0.9326739311218262
+automobile:
+  E:
+    zira:
+      key: automobile
+      req: car
+      answer: car
+      correct: true
+      conf: 0.9755356907844543
+avocado:
+  E:
+    zira:
+      key: avocado
+      req: avocado
+      answer: avocado
+      correct: true
+      conf: 0.960468590259552
+award:
+  E:
+    zira:
+      key: award
+      req: medal
+      answer: metal
+      correct: false
+      conf: 0.9269760251045227
+axe:
+  E:
+    zira:
+      key: axe
+      req: axe
+      answer: x
+      correct: false
+      conf: 0.9353832006454468
+baby:
+  E:
+    zira:
+      key: baby
+      req: baby
+      answer: baby
+      correct: true
+      conf: 0.9721854329109192
+baby angel:
+  E:
+    zira:
+      key: baby angel
+      req: angel
+      answer: angel
+      correct: true
+      conf: 0.9385001063346863
+baby bottle:
+  E:
+    zira:
+      key: baby bottle
+      req: milk
+      answer: milk
+      correct: true
+      conf: 0.9746726751327515
+baby chick:
+  E:
+    zira:
+      key: baby chick
+      req: chick
+      answer: chick
+      correct: true
+      conf: 0.908825695514679
+backhand index pointing down:
+  E:
+    zira:
+      key: backhand index pointing down
+      req: down
+      answer: down
+      correct: true
+      conf: 0.9760094881057739
+backhand index pointing left:
+  E:
+    zira:
+      key: backhand index pointing left
+      req: left
+      answer: left
+      correct: true
+      conf: 0.9076363444328308
+backhand index pointing right:
+  E:
+    zira:
+      key: backhand index pointing right
+      req: right
+      answer: right
+      correct: true
+      conf: 0.7887009382247925
+backhand index pointing up:
+  E:
+    zira:
+      key: backhand index pointing up
+      req: up
+      answer: up
+      correct: true
+      conf: 0.867935299873352
+backpack:
+  E:
+    zira:
+      key: backpack
+      req: backpack
+      answer: backpack
+      correct: true
+      conf: 0.8884996175765991
+bacon:
+  E:
+    zira:
+      key: bacon
+      req: bacon
+      answer: bacon
+      correct: true
+      conf: 0.9851570129394531
+badger:
+  E:
+    zira:
+      key: badger
+      req: badger
+      answer: badger
+      correct: true
+      conf: 0.9781643152236938
+badminton:
+  E:
+    zira:
+      key: badminton
+      req: badminton
+      answer: badminton
+      correct: true
+      conf: 0.9872593879699707
+bagel:
+  E:
+    zira:
+      key: bagel
+      req: bagel
+      answer: bagel
+      correct: true
+      conf: 0.9213531613349915
+baguette bread:
+  E:
+    zira:
+      key: baguette bread
+      req: baguette
+      answer: beckett
+      correct: false
+      conf: 0.8964172601699829
+balance scale:
+  E:
+    zira:
+      key: balance scale
+      req: scale
+      answer: scale
+      correct: true
+      conf: 0.9571506381034851
+ballet shoes:
+  E:
+    zira:
+      key: ballet shoes
+      req: ballet shoes
+      answer: ballet shoes
+      correct: true
+      conf: 0.926159679889679
+balloon:
+  E:
+    zira:
+      key: balloon
+      req: balloon
+      answer: balloon
+      correct: true
+      conf: 0.8874523043632507
+ballot box with ballot:
+  E:
+    zira:
+      key: ballot box with ballot
+      req: ballot
+      answer: ballot
+      correct: true
+      conf: 0.7184158563613892
+banana:
+  E:
+    zira:
+      key: banana
+      req: banana
+      answer: banana
+      correct: true
+      conf: 0.950812041759491
+banjo:
+  E:
+    zira:
+      key: banjo
+      req: banjo
+      answer: banjo
+      correct: true
+      conf: 0.9795629382133484
+bar chart:
+  E:
+    zira:
+      key: bar chart
+      req: graph
+      answer: graph
+      correct: true
+      conf: 0.8409501314163208
+barrier:
+  E:
+    zira:
+      key: barrier
+      req: traffic
+      answer: traffic
+      correct: true
+      conf: 0.9806655645370483
+baseball:
+  E:
+    zira:
+      key: baseball
+      req: baseball
+      answer: baseball
+      correct: true
+      conf: 0.9727054834365845
+basket:
+  E:
+    zira:
+      key: basket
+      req: basket
+      answer: basket
+      correct: true
+      conf: 0.9017855525016785
+basketball:
+  E:
+    zira:
+      key: basketball
+      req: basketball
+      answer: basketball
+      correct: true
+      conf: 0.9764097332954407
+bat:
+  E:
+    zira:
+      key: bat
+      req: bat
+      answer: that
+      correct: false
+      conf: 0.9685653448104858
+bathtub:
+  E:
+    zira:
+      key: bathtub
+      req: bathtub
+      answer: bathtub
+      correct: true
+      conf: 0.9399892091751099
+battery:
+  E:
+    zira:
+      key: battery
+      req: battery
+      answer: battery
+      correct: true
+      conf: 0.9738091230392456
+beach with umbrella:
+  E:
+    zira:
+      key: beach with umbrella
+      req: umbrella
+      answer: umbrella
+      correct: true
+      conf: 0.9643498659133911
+beaming face with smiling eyes:
+  E:
+    zira:
+      key: beaming face with smiling eyes
+      req: grin
+      answer: grin
+      correct: true
+      conf: 0.848397433757782
+bear:
+  E:
+    zira:
+      key: bear
+      req: bear
+      answer: bear
+      correct: true
+      conf: 0.9277645945549011
+beating heart:
+  E:
+    zira:
+      key: beating heart
+      req: pulse
+      answer: pulse
+      correct: true
+      conf: 0.8180028200149536
+bed:
+  E:
+    zira:
+      key: bed
+      req: bed
+      answer: bed
+      correct: true
+      conf: 0.9140769839286804
+bee:
+  E:
+    zira:
+      key: bee
+      req: bee
+      answer: bee
+      correct: true
+      conf: 0.7788044214248657
+beer mug:
+  E:
+    zira:
+      key: beer mug
+      req: mug
+      answer: mug
+      correct: true
+      conf: 0.971307635307312
+bell:
+  E:
+    zira:
+      key: bell
+      req: bell
+      answer: bell
+      correct: true
+      conf: 0.9224985241889954
+bell with slash:
+  E:
+    zira:
+      key: bell with slash
+      req: mute
+      answer: mute
+      correct: true
+      conf: 0.9238175749778748
+bellhop bell:
+  E:
+    zira:
+      key: bellhop bell
+      req: bell
+      answer: bell
+      correct: true
+      conf: 0.9209779500961304
+bento box:
+  E:
+    zira:
+      key: bento box
+      req: bento box
+      answer: bento box
+      correct: true
+      conf: 0.9958763122558594
+bicycle:
+  E:
+    zira:
+      key: bicycle
+      req: bike
+      answer: bike
+      correct: true
+      conf: 0.9588114023208618
+biking:
+  E:
+    zira:
+      key: biking
+      req: biking
+      answer: biking
+      correct: true
+      conf: 0.9204916954040527
+bikini:
+  E:
+    zira:
+      key: bikini
+      req: bikini
+      answer: bikini
+      correct: true
+      conf: 0.9728682637214661
+billed cap:
+  E:
+    zira:
+      key: billed cap
+      req: cap
+      answer: cap
+      correct: true
+      conf: 0.8310617208480835
+bird:
+  E:
+    zira:
+      key: bird
+      req: bird
+      answer: bird
+      correct: true
+      conf: 0.9584587812423706
+birthday cake:
+  E:
+    zira:
+      key: birthday cake
+      req: cake
+      answer: cake
+      correct: true
+      conf: 0.9876290559768677
+black heart:
+  E:
+    zira:
+      key: black heart
+      req: heart
+      answer: heart
+      correct: true
+      conf: 0.9418282508850098
+black nib:
+  E:
+    zira:
+      key: black nib
+      req: pen
+      answer: pain
+      correct: false
+      conf: 0.758297324180603
+blossom:
+  E:
+    zira:
+      key: blossom
+      req: flower
+      answer: flower
+      correct: true
+      conf: 0.9417783617973328
+blowfish:
+  E:
+    zira:
+      key: blowfish
+      req: blowfish
+      answer: blowfish
+      correct: true
+      conf: 0.9202583432197571
+blue book:
+  E:
+    zira:
+      key: blue book
+      req: book
+      answer: book
+      correct: true
+      conf: 0.9005104303359985
+blue heart:
+  E:
+    zira:
+      key: blue heart
+      req: heart
+      answer: heart
+      correct: true
+      conf: 0.9315847158432007
+bomb:
+  E:
+    zira:
+      key: bomb
+      req: bomb
+      answer: bomb
+      correct: true
+      conf: 0.7762662768363953
+bone:
+  E:
+    zira:
+      key: bone
+      req: bone
+      answer: phone
+      correct: false
+      conf: 0.857415497303009
+bookmark:
+  E:
+    zira:
+      key: bookmark
+      req: mark
+      answer: mark
+      correct: true
+      conf: 0.8327919244766235
+bookmark tabs:
+  E:
+    zira:
+      key: bookmark tabs
+      req: tabs
+      answer: tabs
+      correct: true
+      conf: 0.8978211283683777
+books:
+  E:
+    zira:
+      key: books
+      req: books
+      answer: books
+      correct: true
+      conf: 0.817306399345398
+bottle with popping cork:
+  E:
+    zira:
+      key: bottle with popping cork
+      req: champaign
+      answer: champagne
+      correct: false
+      conf: 0.9686104655265808
+bouncing ball:
+  E:
+    zira:
+      key: bouncing ball
+      req: ball
+      answer: fall
+      correct: true
+      conf: 0.8402860760688782
+bouquet:
+  E:
+    zira:
+      key: bouquet
+      req: flowers
+      answer: flowers
+      correct: true
+      conf: 0.9022719264030457
+bow and arrow:
+  E:
+    zira:
+      key: bow and arrow
+      req: bow and arrow
+      answer: bow and arrow
+      correct: true
+      conf: 0.9736862182617188
+bowl with spoon:
+  E:
+    zira:
+      key: bowl with spoon
+      req: bowl
+      answer: bull
+      correct: false
+      conf: 0.8341231346130371
+bowling:
+  E:
+    zira:
+      key: bowling
+      req: bowling
+      answer: bowling
+      correct: true
+      conf: 0.9490858912467957
+boxing glove:
+  E:
+    zira:
+      key: boxing glove
+      req: boxing
+      answer: boxing
+      correct: true
+      conf: 0.9640463590621948
+boy:
+  E:
+    zira:
+      key: boy
+      req: boy
+      answer: boy
+      correct: true
+      conf: 0.9376952052116394
+brain:
+  E:
+    zira:
+      key: brain
+      req: brain
+      answer: brain
+      correct: true
+      conf: 0.9410173296928406
+bread:
+  E:
+    zira:
+      key: bread
+      req: bread
+      answer: bread
+      correct: true
+      conf: 0.9025748372077942
+breast-feeding:
+  E:
+    zira:
+      key: breast-feeding
+      req: breast-feeding
+      answer: breastfeeding
+      correct: false
+      conf: 0.9653943777084351
+brick:
+  E:
+    zira:
+      key: brick
+      req: wall
+      answer: wall
+      correct: true
+      conf: 0.9191004037857056
+bridge at night:
+  E:
+    zira:
+      key: bridge at night
+      req: bridge
+      answer: bridge
+      correct: true
+      conf: 0.8346832394599915
+briefcase:
+  E:
+    zira:
+      key: briefcase
+      req: briefcase
+      answer: briefcase
+      correct: true
+      conf: 0.9787014126777649
+briefs:
+  E:
+    zira:
+      key: briefs
+      req: briefs
+      answer: briefs
+      correct: true
+      conf: 0.8482868075370789
+broccoli:
+  E:
+    zira:
+      key: broccoli
+      req: broccoli
+      answer: broccoli
+      correct: true
+      conf: 0.9804566502571106
+broken heart:
+  E:
+    zira:
+      key: broken heart
+      req: broken heart
+      answer: broken heart
+      correct: true
+      conf: 0.9756431579589844
+broom:
+  E:
+    zira:
+      key: broom
+      req: broom
+      answer: broom
+      correct: true
+      conf: 0.9411477446556091
+brown heart:
+  E:
+    zira:
+      key: brown heart
+      req: heart
+      answer: heart
+      correct: true
+      conf: 0.9330676198005676
+buffalo:
+  E:
+    zira:
+      key: buffalo
+      req: buffalo
+      answer: buffalo
+      correct: true
+      conf: 0.9813005328178406
+bug:
+  E:
+    zira:
+      key: bug
+      req: caterpillar
+      answer: caterpillar
+      correct: true
+      conf: 0.9896526336669922
+bunny ears:
+  E:
+    zira:
+      key: bunny ears
+      req: bunny ears
+      answer: bunny ears
+      correct: true
+      conf: 0.8118398785591125
+burrito:
+  E:
+    zira:
+      key: burrito
+      req: burrito
+      answer: burrito
+      correct: true
+      conf: 0.9453255534172058
+bus:
+  E:
+    zira:
+      key: bus
+      req: bus
+      answer: bus
+      correct: true
+      conf: 0.9189112782478333
+bus stop:
+  E:
+    zira:
+      key: bus stop
+      req: station
+      answer: station
+      correct: true
+      conf: 0.9728792309761047
+bust in silhouette:
+  E:
+    zira:
+      key: bust in silhouette
+      req: bust
+      answer: bust
+      correct: true
+      conf: 0.9595495462417603
+busts in silhouette:
+  E:
+    zira:
+      key: busts in silhouette
+      req: bust
+      answer: bust
+      correct: true
+      conf: 0.9606019258499146
+butter:
+  E:
+    zira:
+      key: butter
+      req: butter
+      answer: butter
+      correct: true
+      conf: 0.9620523452758789
+butterfly:
+  E:
+    zira:
+      key: butterfly
+      req: butterfly
+      answer: butterfly
+      correct: true
+      conf: 0.9764812588691711
+cactus:
+  E:
+    zira:
+      key: cactus
+      req: cactus
+      answer: cactus
+      correct: true
+      conf: 0.9717859029769897
+calendar:
+  E:
+    zira:
+      key: calendar
+      req: date
+      answer: date
+      correct: true
+      conf: 0.9537423849105835
+call me hand:
+  E:
+    zira:
+      key: call me hand
+      req: call
+      answer: call
+      correct: true
+      conf: 0.9788384437561035
+camel:
+  E:
+    zira:
+      key: camel
+      req: camel
+      answer: camel
+      correct: true
+      conf: 0.9847100973129272
+camera:
+  E:
+    zira:
+      key: camera
+      req: camera
+      answer: camera
+      correct: true
+      conf: 0.9804800152778625
+camera with flash:
+  E:
+    zira:
+      key: camera with flash
+      req: camera
+      answer: camera
+      correct: true
+      conf: 0.9767491221427917
+camping:
+  E:
+    zira:
+      key: camping
+      req: camping
+      answer: camping
+      correct: true
+      conf: 0.9845281839370728
+candle:
+  E:
+    zira:
+      key: candle
+      req: candle
+      answer: kendall
+      correct: true
+      conf: 0.868573009967804
+candy:
+  E:
+    zira:
+      key: candy
+      req: candy
+      answer: candy
+      correct: true
+      conf: 0.9596120715141296
+canned food:
+  E:
+    zira:
+      key: canned food
+      req: can
+      answer: ken
+      correct: false
+      conf: 0.8780844807624817
+canoe:
+  E:
+    zira:
+      key: canoe
+      req: canoe
+      answer: canoe
+      correct: true
+      conf: 0.8689043521881104
+card file box:
+  E:
+    zira:
+      key: card file box
+      req: file
+      answer: file
+      correct: true
+      conf: 0.9278615713119507
+card index:
+  E:
+    zira:
+      key: card index
+      req: card index
+      answer: card index
+      correct: true
+      conf: 0.9841289520263672
+card index dividers:
+  E:
+    zira:
+      key: card index dividers
+      req: index
+      answer: index
+      correct: true
+      conf: 0.9608710408210754
+carousel horse:
+  E:
+    zira:
+      key: carousel horse
+      req: carousel
+      answer: carousel
+      correct: true
+      conf: 0.983840823173523
+carrot:
+  E:
+    zira:
+      key: carrot
+      req: carrot
+      answer: carrot
+      correct: true
+      conf: 0.8675023317337036
+cartwheeling:
+  E:
+    zira:
+      key: cartwheeling
+      req: cartwheel
+      answer: cartwheel
+      correct: true
+      conf: 0.9268695116043091
+castle:
+  E:
+    zira:
+      key: castle
+      req: castle
+      answer: castle
+      correct: true
+      conf: 0.956398606300354
+cat:
+  E:
+    zira:
+      key: cat
+      req: cat
+      answer: cat
+      correct: true
+      conf: 0.9691731333732605
+cat with tears of joy:
+  E:
+    zira:
+      key: cat with tears of joy
+      req: tear
+      answer: cheer
+      correct: false
+      conf: 0.8055405616760254
+cat with wry smile:
+  E:
+    zira:
+      key: cat with wry smile
+      req: smile
+      answer: smile
+      correct: true
+      conf: 0.9062768220901489
+chains:
+  E:
+    zira:
+      key: chains
+      req: chains
+      answer: shane's
+      correct: false
+      conf: 0.7127041816711426
+chair:
+  E:
+    zira:
+      key: chair
+      req: chair
+      answer: cher
+      correct: false
+      conf: 0.8505492210388184
+chart decreasing:
+  E:
+    zira:
+      key: chart decreasing
+      req: graph
+      answer: graph
+      correct: true
+      conf: 0.8378372192382812
+chart increasing:
+  E:
+    zira:
+      key: chart increasing
+      req: graph
+      answer: graph
+      correct: true
+      conf: 0.755646824836731
+chart increasing with yen:
+  E:
+    zira:
+      key: chart increasing with yen
+      req: function
+      answer: function
+      correct: true
+      conf: 0.9671328663825989
+cheese wedge:
+  E:
+    zira:
+      key: cheese wedge
+      req: cheese
+      answer: she's
+      correct: false
+      conf: 0.9667028188705444
+cherries:
+  E:
+    zira:
+      key: cherries
+      req: cherries
+      answer: cherries
+      correct: true
+      conf: 0.9451440572738647
+cherry blossom:
+  E:
+    zira:
+      key: cherry blossom
+      req: blossom
+      answer: blossom
+      correct: true
+      conf: 0.9642016291618347
+chess pawn:
+  E:
+    zira:
+      key: chess pawn
+      req: pawn
+      answer: palm
+      correct: false
+      conf: 0.691193699836731
+chestnut:
+  E:
+    zira:
+      key: chestnut
+      req: chestnut
+      answer: chestnut
+      correct: true
+      conf: 0.9566999673843384
+chicken:
+  E:
+    zira:
+      key: chicken
+      req: chicken
+      answer: chicken
+      correct: true
+      conf: 0.9797215461730957
+child:
+  E:
+    zira:
+      key: child
+      req: child
+      answer: child
+      correct: true
+      conf: 0.9612037539482117
+chipmunk:
+  E:
+    zira:
+      key: chipmunk
+      req: squirrel
+      answer: squirrel
+      correct: true
+      conf: 0.9841018915176392
+chocolate bar:
+  E:
+    zira:
+      key: chocolate bar
+      req: chocolate
+      answer: chocolate
+      correct: true
+      conf: 0.9700466990470886
+chopsticks:
+  E:
+    zira:
+      key: chopsticks
+      req: chopsticks
+      answer: chopsticks
+      correct: true
+      conf: 0.9486859440803528
+church:
+  E:
+    zira:
+      key: church
+      req: church
+      answer: church
+      correct: true
+      conf: 0.9656235575675964
+cigarette:
+  E:
+    zira:
+      key: cigarette
+      req: cigarette
+      answer: cigarette
+      correct: true
+      conf: 0.884006679058075
+circus tent:
+  E:
+    zira:
+      key: circus tent
+      req: circus
+      answer: circus
+      correct: true
+      conf: 0.9800883531570435
+cityscape:
+  E:
+    zira:
+      key: cityscape
+      req: city
+      answer: city
+      correct: true
+      conf: 0.9648362398147583
+cityscape at dusk:
+  E:
+    zira:
+      key: cityscape at dusk
+      req: city
+      answer: city
+      correct: true
+      conf: 0.9481784701347351
+clamp:
+  E:
+    zira:
+      key: clamp
+      req: clamp
+      answer: clamp
+      correct: true
+      conf: 0.9229162931442261
+clapper board:
+  E:
+    zira:
+      key: clapper board
+      req: cut
+      answer: cut
+      correct: true
+      conf: 0.7721695303916931
+clapping hands:
+  E:
+    zira:
+      key: clapping hands
+      req: clap
+      answer: crap
+      correct: true
+      conf: 0.8988080024719238
+classical building:
+  E:
+    zira:
+      key: classical building
+      req: temple
+      answer: temple
+      correct: true
+      conf: 0.8392376899719238
+climbing:
+  E:
+    zira:
+      key: climbing
+      req: climbing
+      answer: climbing
+      correct: true
+      conf: 0.9852258563041687
+clinking beer mugs:
+  E:
+    zira:
+      key: clinking beer mugs
+      req: clink
+      answer: link
+      correct: false
+      conf: 0.8113408088684082
+clinking glasses:
+  E:
+    zira:
+      key: clinking glasses
+      req: clink
+      answer: link
+      correct: false
+      conf: 0.9301385879516602
+clipboard:
+  E:
+    zira:
+      key: clipboard
+      req: clipboard
+      answer: clipboard
+      correct: true
+      conf: 0.9782459139823914
+closed book:
+  E:
+    zira:
+      key: closed book
+      req: book
+      answer: book
+      correct: true
+      conf: 0.8521930575370789
+closed umbrella:
+  E:
+    zira:
+      key: closed umbrella
+      req: umbrella
+      answer: umbrella
+      correct: true
+      conf: 0.9478195905685425
+cloud:
+  E:
+    zira:
+      key: cloud
+      req: cloud
+      answer: cloud
+      correct: true
+      conf: 0.9427880048751831
+cloud with lightning:
+  E:
+    zira:
+      key: cloud with lightning
+      req: lightning
+      answer: lightning
+      correct: true
+      conf: 0.9810672998428345
+cloud with lightning and rain:
+  E:
+    zira:
+      key: cloud with lightning and rain
+      req: lightning
+      answer: lightning
+      correct: true
+      conf: 0.9688104391098022
+cloud with rain:
+  E:
+    zira:
+      key: cloud with rain
+      req: rain
+      answer: rain
+      correct: true
+      conf: 0.9286843538284302
+cloud with snow:
+  E:
+    zira:
+      key: cloud with snow
+      req: snow
+      answer: snow
+      correct: true
+      conf: 0.8925536274909973
+clown face:
+  E:
+    zira:
+      key: clown face
+      req: clown
+      answer: clown
+      correct: true
+      conf: 0.977303683757782
+club suit:
+  E:
+    zira:
+      key: club suit
+      req: club
+      answer: club
+      correct: true
+      conf: 0.9706680178642273
+clutch bag:
+  E:
+    zira:
+      key: clutch bag
+      req: purse
+      answer: purse
+      correct: true
+      conf: 0.8079153299331665
+coat:
+  E:
+    zira:
+      key: coat
+      req: jacket
+      answer: jacket
+      correct: true
+      conf: 0.9591948390007019
+cocktail glass:
+  E:
+    zira:
+      key: cocktail glass
+      req: glass
+      answer: glass
+      correct: true
+      conf: 0.9748760461807251
+coconut:
+  E:
+    zira:
+      key: coconut
+      req: coconut
+      answer: coconut
+      correct: true
+      conf: 0.8632791638374329
+coffin:
+  E:
+    zira:
+      key: coffin
+      req: coffin
+      answer: coughing
+      correct: false
+      conf: 0.9192363619804382
+cold face:
+  E:
+    zira:
+      key: cold face
+      req: cold
+      answer: cold
+      correct: true
+      conf: 0.7550002932548523
+collision:
+  E:
+    zira:
+      key: collision
+      req: explosion
+      answer: explosion
+      correct: true
+      conf: 0.9775724411010742
+comet:
+  E:
+    zira:
+      key: comet
+      req: comet
+      answer: comment
+      correct: false
+      conf: 0.9077119827270508
+compass:
+  E:
+    zira:
+      key: compass
+      req: compass
+      answer: compass
+      correct: true
+      conf: 0.9723936319351196
+computer mouse:
+  E:
+    zira:
+      key: computer mouse
+      req: mouse
+      answer: mouse
+      correct: true
+      conf: 0.736187756061554
+confetti ball:
+  E:
+    zira:
+      key: confetti ball
+      req: confetti
+      answer: confetti
+      correct: true
+      conf: 0.9654169082641602
+confounded face:
+  E:
+    zira:
+      key: confounded face
+      req: confused
+      answer: confused
+      correct: true
+      conf: 0.9791289567947388
+confused face:
+  E:
+    zira:
+      key: confused face
+      req: confused
+      answer: confused
+      correct: true
+      conf: 0.9745006561279297
+construction site:
+  E:
+    zira:
+      key: construction site
+      req: construction
+      answer: construction
+      correct: true
+      conf: 0.9504433870315552
+construction worker:
+  E:
+    zira:
+      key: construction worker
+      req: worker
+      answer: worker
+      correct: true
+      conf: 0.9861251711845398
+cooked rice:
+  E:
+    zira:
+      key: cooked rice
+      req: rice
+      answer: rice
+      correct: true
+      conf: 0.8908414840698242
+cookie:
+  E:
+    zira:
+      key: cookie
+      req: cookie
+      answer: cookie
+      correct: true
+      conf: 0.9431804418563843
+cooking:
+  E:
+    zira:
+      key: cooking
+      req: pan
+      answer: pain
+      correct: false
+      conf: 0.9094432592391968
+couch and lamp:
+  E:
+    zira:
+      key: couch and lamp
+      req: couch
+      answer: couch
+      correct: true
+      conf: 0.9646041989326477
+couple with heart:
+  E:
+    zira:
+      key: couple with heart
+      req: love
+      answer: love
+      correct: true
+      conf: 0.9619721174240112
+cow:
+  E:
+    zira:
+      key: cow
+      req: cow
+      answer: cow
+      correct: true
+      conf: 0.7616751790046692
+cowboy hat face:
+  E:
+    zira:
+      key: cowboy hat face
+      req: hat
+      answer: hat
+      correct: true
+      conf: 0.8208675384521484
+crab:
+  E:
+    zira:
+      key: crab
+      req: crab
+      answer: crab
+      correct: true
+      conf: 0.9233298301696777
+crayon:
+  E:
+    zira:
+      key: crayon
+      req: crayon
+      answer: crayon
+      correct: true
+      conf: 0.7761811017990112
+credit card:
+  E:
+    zira:
+      key: credit card
+      req: credit card
+      answer: credit card
+      correct: true
+      conf: 0.9958763122558594
+crescent moon:
+  E:
+    zira:
+      key: crescent moon
+      req: moon
+      answer: moon
+      correct: true
+      conf: 0.9289401769638062
+cricket:
+  E:
+    zira:
+      key: cricket
+      req: cricket
+      answer: cricket
+      correct: true
+      conf: 0.947057843208313
+cricket game:
+  E:
+    zira:
+      key: cricket game
+      req: cricket
+      answer: cricket
+      correct: true
+      conf: 0.9644885063171387
+crocodile:
+  E:
+    zira:
+      key: crocodile
+      req: crocodile
+      answer: crocodile
+      correct: true
+      conf: 0.9847137331962585
+croissant:
+  E:
+    zira:
+      key: croissant
+      req: croissant
+      answer: croissant
+      correct: true
+      conf: 0.9376823306083679
+crossed fingers:
+  E:
+    zira:
+      key: crossed fingers
+      req: crossed fingers
+      answer: crossed fingers
+      correct: true
+      conf: 0.9729024767875671
+crossed swords:
+  E:
+    zira:
+      key: crossed swords
+      req: fight
+      answer: fight
+      correct: true
+      conf: 0.9503488540649414
+crown:
+  E:
+    zira:
+      key: crown
+      req: crown
+      answer: crown
+      correct: true
+      conf: 0.9448776245117188
+crying cat:
+  E:
+    zira:
+      key: crying cat
+      req: crying cat
+      answer: crying cat
+      correct: true
+      conf: 0.9876291155815125
+crying face:
+  E:
+    zira:
+      key: crying face
+      req: sad
+      answer: sad
+      correct: true
+      conf: 0.9754458665847778
+crystal ball:
+  E:
+    zira:
+      key: crystal ball
+      req: crystal ball
+      answer: crystal ball
+      correct: true
+      conf: 0.9571752548217773
+cucumber:
+  E:
+    zira:
+      key: cucumber
+      req: cucumber
+      answer: cucumber
+      correct: true
+      conf: 0.9648745656013489
+cup with straw:
+  E:
+    zira:
+      key: cup with straw
+      req: soda
+      answer: soda
+      correct: true
+      conf: 0.9315658807754517
+cupcake:
+  E:
+    zira:
+      key: cupcake
+      req: muffin
+      answer: muffin
+      correct: true
+      conf: 0.9054715037345886
+curling stone:
+  E:
+    zira:
+      key: curling stone
+      req: curling
+      answer: curling
+      correct: true
+      conf: 0.9773456454277039
+curry rice:
+  E:
+    zira:
+      key: curry rice
+      req: rice
+      answer: rice
+      correct: true
+      conf: 0.9034398198127747
+custard:
+  E:
+    zira:
+      key: custard
+      req: pudding
+      answer: pudding
+      correct: true
+      conf: 0.8509353399276733
+cut of meat:
+  E:
+    zira:
+      key: cut of meat
+      req: steak
+      answer: steak
+      correct: true
+      conf: 0.8500851392745972
+cyclone:
+  E:
+    zira:
+      key: cyclone
+      req: cyclone
+      answer: cyclone
+      correct: true
+      conf: 0.9750622510910034
+dagger:
+  E:
+    zira:
+      key: dagger
+      req: dagger
+      answer: dagger
+      correct: true
+      conf: 0.9004817008972168
+dashing away:
+  E:
+    zira:
+      key: dashing away
+      req: fast
+      answer: fast
+      correct: true
+      conf: 0.7674864530563354
+deaf person:
+  E:
+    zira:
+      key: deaf person
+      req: deaf
+      answer: death
+      correct: false
+      conf: 0.9317607879638672
+deciduous tree:
+  E:
+    zira:
+      key: deciduous tree
+      req: tree
+      answer: tree
+      correct: true
+      conf: 0.9253484010696411
+deer:
+  E:
+    zira:
+      key: deer
+      req: deer
+      answer: deer
+      correct: true
+      conf: 0.9292616844177246
+delivery truck:
+  E:
+    zira:
+      key: delivery truck
+      req: truck
+      answer: truck
+      correct: true
+      conf: 0.9610624313354492
+department store:
+  E:
+    zira:
+      key: department store
+      req: department store
+      answer: department store
+      correct: true
+      conf: 0.9752936363220215
+derelict house:
+  E:
+    zira:
+      key: derelict house
+      req: house
+      answer: house
+      correct: true
+      conf: 0.867326557636261
+desert:
+  E:
+    zira:
+      key: desert
+      req: desert
+      answer: desert
+      correct: true
+      conf: 0.983254611492157
+desert island:
+  E:
+    zira:
+      key: desert island
+      req: island
+      answer: island
+      correct: true
+      conf: 0.9541020393371582
+desktop computer:
+  E:
+    zira:
+      key: desktop computer
+      req: computer
+      answer: computer
+      correct: true
+      conf: 0.9821730852127075
+detective:
+  E:
+    zira:
+      key: detective
+      req: detective
+      answer: detective
+      correct: true
+      conf: 0.9796112775802612
+diamond suit:
+  E:
+    zira:
+      key: diamond suit
+      req: diamond
+      answer: diamond
+      correct: true
+      conf: 0.9802221059799194
+direct hit:
+  E:
+    zira:
+      key: direct hit
+      req: darts
+      answer: darts
+      correct: true
+      conf: 0.9441304206848145
+disappointed face:
+  E:
+    zira:
+      key: disappointed face
+      req: disappointed
+      answer: disappointed
+      correct: true
+      conf: 0.9794099926948547
+diving mask:
+  E:
+    zira:
+      key: diving mask
+      req: diving
+      answer: diving
+      correct: true
+      conf: 0.9863704442977905
+diya lamp:
+  E:
+    zira:
+      key: diya lamp
+      req: oil lamp
+      answer: oil lamp
+      correct: true
+      conf: 0.986168384552002
+dizzy:
+  E:
+    zira:
+      key: dizzy
+      req: dizzy
+      answer: dizzy
+      correct: true
+      conf: 0.9757881164550781
+dizzy face:
+  E:
+    zira:
+      key: dizzy face
+      req: dizzy
+      answer: dizzy
+      correct: true
+      conf: 0.887454628944397
+dna:
+  E:
+    zira:
+      key: dna
+      req: dna
+      answer: dna
+      correct: true
+      conf: 0.9732186198234558
+dog:
+  E:
+    zira:
+      key: dog
+      req: dog
+      answer: dog
+      correct: true
+      conf: 0.9854771494865417
+dollar banknote:
+  E:
+    zira:
+      key: dollar banknote
+      req: dollar
+      answer: dollar
+      correct: true
+      conf: 0.9606305956840515
+dolphin:
+  E:
+    zira:
+      key: dolphin
+      req: dolphin
+      answer: dolphin
+      correct: true
+      conf: 0.9198437929153442
+door:
+  E:
+    zira:
+      key: door
+      req: door
+      answer: door
+      correct: true
+      conf: 0.9631574749946594
+doughnut:
+  E:
+    zira:
+      key: doughnut
+      req: doughnut
+      answer: donut
+      correct: false
+      conf: 0.9548211097717285
+dove:
+  E:
+    zira:
+      key: dove
+      req: dove
+      answer: dove
+      correct: true
+      conf: 0.9037231206893921
+downcast face with sweat:
+  E:
+    zira:
+      key: downcast face with sweat
+      req: sweating
+      answer: sweating
+      correct: true
+      conf: 0.8943101763725281
+dragon:
+  E:
+    zira:
+      key: dragon
+      req: dragon
+      answer: dragon
+      correct: true
+      conf: 0.9771588444709778
+dragon face:
+  E:
+    zira:
+      key: dragon face
+      req: dragon
+      answer: dragon
+      correct: true
+      conf: 0.9707845449447632
+dress:
+  E:
+    zira:
+      key: dress
+      req: dress
+      answer: dress
+      correct: true
+      conf: 0.9750158190727234
+drooling face:
+  E:
+    zira:
+      key: drooling face
+      req: drooling
+      answer: drooling
+      correct: true
+      conf: 0.9808451533317566
+drop of blood:
+  E:
+    zira:
+      key: drop of blood
+      req: blood
+      answer: blood
+      correct: true
+      conf: 0.9764686822891235
+droplet:
+  E:
+    zira:
+      key: droplet
+      req: drop
+      answer: drop
+      correct: true
+      conf: 0.987582802772522
+drum:
+  E:
+    zira:
+      key: drum
+      req: drum
+      answer: drum
+      correct: true
+      conf: 0.9674766659736633
+duck:
+  E:
+    zira:
+      key: duck
+      req: duck
+      answer: duck
+      correct: true
+      conf: 0.971278965473175

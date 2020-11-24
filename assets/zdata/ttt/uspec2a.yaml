@@ -1,0 +1,57 @@
+#version 0:
+layout: [ m o, P o]
+
+layout_alias:
+  m: MainBoard
+  P: gamePlayer
+  o: opps
+
+playerStatsAreas:  #standard setting
+  type: columnGrid
+  loc: opps
+
+mappings: #form: obj_type.property1.property2...
+  gamePlayer:
+    type: quadGrid
+    loc: MainBoard
+  # gamePlayer:
+  #   type: quadGrid
+  #   loc: MainBoard
+
+table:
+  optin: [symbol]
+
+#version 1:
+# placement: #area:content
+#   obj_type:
+#     Board: MainBoard
+#     opponent: opps
+#     GamePlayer: gamePlayer
+#   MainBoard: Board
+#   opps: opponent
+#   gamePlayer: GamePlayer
+#   stats: [vps coins hand_size max_hand_size]
+#   farms: Farm
+#   estates: Estate
+#   chateaus: Chateau
+
+# visualize:
+#   Board:
+#     type: quadGrid
+#   Farm:
+#   Estate:
+#   Chateau:
+#     type: cardHand
+#   Card:
+#     type: c52
+#     map:
+#       rank: gsm.short_name
+#       suit: spades
+#   Tick:
+#     type: visual #default type, could omit!
+#     map:
+#       width: 80
+#       text: gsm.symbol
+#       fontSize: rsg.width
+#       color: gsm._player  
+
