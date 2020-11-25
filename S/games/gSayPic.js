@@ -28,14 +28,14 @@ function promptSP() {
 function trialPromptSP(nTrial) {
 	//showFleetingMessage('Say again!',0,{fz:80,fg:'red'});
 	let phrase = nTrial<2?(currentLanguage == 'E' ? 'speak UP!!!' : 'LAUTER!!!')
-	:(currentLanguage == 'E' ? 'Louder!!!' : 'NOCH LAUTER!!!');
+	:(currentLanguage == 'E' ? 'Louder!!!' : 'LAUTER!!!');
 	Speech.say(phrase, 1, 1, 1, true, 'zira');
-	animate(dInstruction, 'pulse800' + getSignalColor(), 900);
-	return 1500;
+	animate(dInstruction, 'pulse800' + getSignalColor(), 500);
+	return 10;
 }
 async function activateSP() {
 	if (Speech.speaker.isSpeakerRunning) {
-		setTimeout(activateSP, 1000);
+		setTimeout(activateSP, 200);
 	} else {
 		setTimeout(() => Speech.recognize(bestWord, currentLanguage, evaluate, evaluate), 100);
 	}

@@ -7,7 +7,7 @@ function startGame(data) {
 	if (isGameWithSpeechRecognition()) {
 		//ROUND_DELAY = 100;
 		Speech.ensureOff();
-		MicrophoneHide();
+		//MicrophoneHide();
 	} //else { ROUND_DELAY = 100; }
 
 

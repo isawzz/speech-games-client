@@ -6,7 +6,7 @@ class SpeechFeature {
 		//console.log(this.recorder)
 	}
 
-	ensureOff(){
+	ensureOff() {
 		this.recorder.isCancelled = true;
 		MicrophoneHide();
 		//this.recorder.interrupt();
@@ -94,7 +94,7 @@ class Recorder {
 		this.delayAfterFinalResult = 0;
 		this.emptyResultHandler = null;
 		this.delayAfterEmptyResult = 0;
-		
+
 		this.languageChangeHandler = null;
 
 		this.retryOnError = false;
@@ -105,14 +105,14 @@ class Recorder {
 		this.timeoutStart = this.timeoutFinal = this.timeoutEmpty = null;
 
 		recognition.onerror = ev => {
-			console.log('recorder onerror!!!, isCancelled',this.isCancelled);
+			console.log('recorder onerror!!!, isCancelled', this.isCancelled);
 			this.isRunning = false;
 			console.error(ev);
 			if (this.isCancelled) { return; }
 			if (this.retryOnError) setTimeout(() => this.rec.start(), 200);
 		};
 		recognition.onstart = ev => {
-			console.log('recorder onstart!!!, isCancelled',this.isCancelled);
+			console.log('recorder onstart!!!, isCancelled', this.isCancelled);
 			if (this.isCancelled) { this.rec.abort(); return; }
 			MicrophoneShow();
 
@@ -125,20 +125,20 @@ class Recorder {
 			console.log('recorder started!');
 		};
 		recognition.onresult = ev => {
-			console.log('recorder onresult!!!, isCancelled',this.isCancelled);
+			console.log('recorder onresult!!!, isCancelled', this.isCancelled);
 			if (this.isCancelled) { this.rec.abort(); return; }
 			this.isFinal = ev.results[0].isFinal;
 			this.result = ev.results[0][0].transcript;
 			this.confidence = ev.results[0][0].confidence;
 			//console.log('recorder got ' + (this.isFinal ? 'FINAL' : '') + ' result:', this.result, '(' + this.confidence + ')');
-			if (this.isFinal) {		MicrophoneHide();				this.rec.stop();}
+			if (this.isFinal) { MicrophoneHide(); setTimeout(() => this.rec.stop(), 0); }
 			if (this.isFinal && this.finalResultHandler) this.timeoutFinal = setTimeout(() => this.finalResultHandler(this.result, this.confidence), this.delayAfterFinalResult);
 		};
 		recognition.onend = ev => {
-			console.log('recorder ended!!!, isCancelled',this.isCancelled);
+			console.log('recorder ended!!!, isCancelled', this.isCancelled);
+			MicrophoneHide();
 			if (!this.isFinal && this.emptyResultHandler) this.timeoutEmpty = setTimeout(() => this.emptyResultHandler(this.result, this.confidence), this.delayAfterEmptyResult);
 			if (this.languageChangeHandler) { this.languageChangeHandler(); this.languageChangeHandler = null; }
-			MicrophoneHide();
 			this.isRunning = false;
 		};
 	}
@@ -150,7 +150,9 @@ class Recorder {
 		this.emptyResultHandler = isdef(onEmpty) ? onEmpty.bind(this) : null;
 		this.delayAfterEmptyResult = isdef(delayEmpty) ? delayEmpty : 0;
 
-		//console.log('start:', onStart, delayStart, onFinal, delayFinal, onEmpty, delayEmpty, retry)
+		console.log('start:', 'delay final', this.delayAfterFinalResult , 'delay Empty', this.delayAfterEmptyResult);
+
+		//console.log('start:', onStart, delayStart, onFinal,'delay final', delayFinal, onEmpty,'delay Empty', delayEmpty, retry)
 
 		this.retryOnError = retry;
 		if (this.interrupt()) return;
@@ -477,7 +479,7 @@ function soundsSimilar(w1, w2, lang) {
 		}
 	} else {
 		for (let i = 0; i < a1.length; i++) {
-			let yesItsAMatch=false;
+			let yesItsAMatch = false;
 			let s1 = a1[i];
 			let s2 = a2[i];
 			if (s1 == s2) yesItsAMatch = true;
@@ -623,7 +625,7 @@ function convertTimeStringToNumbers(ts) {
 }
 //#endregion
 
-var BEST150=[
+var BEST150 = [
 	'adhesive bandage',
 	'airplane arrival',
 	'airplane departure',
@@ -788,7 +790,7 @@ var BEST150=[
 	'wrench',
 ];
 
-var BEST100=[
+var BEST100 = [
 	'adhesive bandage',
 	'airplane arrival',
 	'airplane departure',
@@ -953,7 +955,7 @@ var BEST100=[
 	'wrench',
 ];
 
-var BEST50=[
+var BEST50 = [
 	'adhesive bandage',
 	'airplane arrival',
 	'airplane departure',
@@ -1118,7 +1120,7 @@ var BEST50=[
 	'wrench',
 ];
 
-var BEST80=[
+var BEST80 = [
 	'adhesive bandage',
 	'ambulance',
 	'articulated lorry',
