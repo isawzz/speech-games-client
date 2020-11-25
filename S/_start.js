@@ -44,21 +44,14 @@ function _startSpeechTraining() {
 
 async function _startPlaying() {
 
-	//ich wollte testen ob download geht:nein geht nicht!
-	// let o={hallo:1,das:2};
-	//downloadAsYaml(o,'testfile');
-
 	initTable();
 	initSidebar();
 
 	await initSettingsX();
 
 	if (nundef(CurrentSessionData)) CurrentSessionData = { user: currentUser, games: [] };
-	//CurrentSessionData = { user: currentUser, games: [] };
 
-	//old speech regoc init
-	// speech00(currentLanguage);
-	Speech = new SpeechFeature(1, 'E'); //MASTER_VOLUME);
+	Speech = new SpeechFeature(1, 'E'); 
 
 	if (SHOW_FREEZER) show('freezer'); else startUnit();
 }
