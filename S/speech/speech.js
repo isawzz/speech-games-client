@@ -1,200 +1,124 @@
-class SpeechFeature {
-	constructor(defaultVolume = 1, lang = 'E') {
-		this.recorder = new Recorder(lang);
-		this.speaker = new Speaker(defaultVolume);
-		this.lang = lang;
-		//console.log(this.recorder)
+class Speech2 {
+	constructor(lang) {
+		this.recorder = new Recorder2(lang);
+		this.speaker = new Speaker2(lang);
 	}
+	train() {
 
-	ensureOff() {
-		this.recorder.isCancelled = true;
-		MicrophoneHide();
-		//this.recorder.interrupt();
 	}
 	setLanguage(lang) {
-		if (this.lang != lang) {
-			this.lang = lang;
-			this.recorder.setLanguage(lang);
-			this.speaker.setLanguage(lang);
-		}
+		this.speaker.setLanguage(lang);
+		this.recorder.setLanguage(lang);
 	}
-	record({ onStart, delayStart, onFinal, delayFinal, onEmpty, delayEmpty, lang, retry = false, wait = true, interrupt = false } = {}) {
-		this.recorder.isCancelled = false;
-		if (this.recorder.isRunning) {
-			if (interrupt) {
-				this.recorder.interrupt();
-				setTimeout(() => {
-					if (isdef(lang)) this.setLanguage(lang);
-					this.recorder.start(onStart, delayStart, onFinal, delayFinal, onEmpty, delayEmpty)
-				}, 500);
-			} else if (wait) {
-				setTimeout(() => this.record(...arguments), 500);
-			}
-		} else {
-			if (isdef(lang)) this.setLanguage(lang);
-			this.recorder.start(onStart, delayStart, onFinal, delayFinal, onEmpty, delayEmpty, retry);
-		}
+	isSpeakerRunning() { return this.speaker.isRunning; }
+	startRecording(lang, callback) {
+		this.recorder.callback = callback;
+		this.recorder.setLanguage(lang);
+		this.recorder.start();
 	}
-	stopRecording() { this.recorder.stop(); }
-	say(text, r = .5, p = .8, v = .5, interrupt = true, voiceDescriptor, callback, lang) {
-		if (isdef(lang)) this.setLanguage(lang);
-		this.speaker.say(text, r, p, v, interrupt, voiceDescriptor, callback, this.lang);
-	}
-	recognizePromise(word, lang, onMatch, onNoMatch) {
-		this.setLanguage(lang);
-		this.record({
-			onFinal: (r, c) => {
-				r = r.toLowerCase();
-				word = word.toLowerCase();
-				if (r == word) onMatch(r, c); else onNoMatch(r, c);
-			},
-			onEmpty: (r, c) => onNoMatch(r, c)
-		});
-	}
-	recognize(word, lang, onMatch, onNoMatch) {
-		//timit.show('recognize')
-
-		this.setLanguage(lang);
-		this.record({
-			onFinal: (r, c) => {
-				r = r.toLowerCase();
-				word = word.toLowerCase();
-				if (isSimilar(r, word, lang)) onMatch(r, c); else onNoMatch(r, c);
-				//if (r == word) onMatch(r, c); else onNoMatch(r, c);
-			},
-			onEmpty: (r, c) => onNoMatch(r, c)
-		});
+	stopRecording() {
+		this.recorder.stop();
 	}
 
-	train1(word, lang, voicekey, callback) {
-		//console.log('voiceKey',voicekey)
-		this.setLanguage(lang);
-		let [r, p] = lang == 'E' ? [.5, .8] : [.6, .9];
-		this.recorder.start(
-			() => this.speaker.say(word, r, p, 1, false, voicekey), 1500,
-			(res, conf) => callback(res, conf), 1000,
-			(res, conf) => {
-				console.log('record timed out without final result');
-				callback(res, conf);
-			}, 1000
-		);
+	say(text, r = .5, p = .8, v = .5, voicekey, callback, lang) {
+		//what happens if change lang in the middle of speaking???
+		if (isdef(lang)) this.speaker.setLanguage(lang);
+		this.speaker.enq(arguments);
+		this.speaker.deq();
 	}
+
+	stopSpeaking() {
+		this.speaker.clearq();
+	}
+
 }
-class Recorder {
-	constructor(lang = 'E') {
-		let recognition = this.rec = new webkitSpeechRecognition();
-		recognition.continuous = true;
-		recognition.interimResults = true;
-		recognition.maxAlternatives = 5;
-		this.setLanguage(lang); //recognition.lang = 'en-US' ;
+
+class Recorder2 {
+	constructor(lang) {
+		let rec = this.rec = new webkitSpeechRecognition();
+		rec.continuous = true;
+		rec.interimResults = true;
+		rec.maxAlternatives = 5;
+		this.setLanguage(lang);
+		//flags
 		this.isRunning = false;
 		this.isCancelled = false;
-
-		this.startHandler = null;
-		this.delayAfterStarted = 0;
-		this.finalResultHandler = null;
-		this.delayAfterFinalResult = 0;
-		this.emptyResultHandler = null;
-		this.delayAfterEmptyResult = 0;
-
-		this.languageChangeHandler = null;
-
-		this.retryOnError = false;
+		//result
 		this.result = null;
 		this.isFinal = null;
 		this.confidence = null;
 
-		this.timeoutStart = this.timeoutFinal = this.timeoutEmpty = null;
+		this.callback = null;
 
-		recognition.onerror = ev => {
-			if (RecogOutput) console.log('recorder onerror!!!, isCancelled', this.isCancelled);
-			this.isRunning = false;
-			if (RecogOutput) console.error(ev);
-			if (this.isCancelled) { return; }
-			if (this.retryOnError) setTimeout(() => this.rec.start(), 200);
+		let genHandler = (ev, name) => {
+			if (RecogOutput) console.log('recorder', name, 'isCancelled', this.isCancelled, 'isRunning', this.isRunning);
+		}
+		rec.onerror = ev => {
+			genHandler(ev, 'error');
+			if (RecogOutputError) console.error(ev);
 		};
-		recognition.onstart = ev => {
-			//timit.show('onstart mic') 
-			if (RecogOutput) console.log('recorder onstart!!!, isCancelled', this.isCancelled);
-			if (this.isCancelled) { this.rec.abort(); return; }
-			MicrophoneShow();
+		rec.onstart = ev => {
+			genHandler(ev, 'started');
+			if (!this.isCancelled) this.isRunning = true;
+		};
+		rec.onresult = ev => {
+			genHandler(ev, 'result!');
+			if (!this.isCancelled) this.processResult(ev);
+		};
+		rec.onend = ev => {
+			genHandler(ev, 'ended');
+			if (!this.isCancelled && this.callback) {
+				console.log('-------------------------')
+				this.callback(this.isFinal, this.result, this.confidence);
+			}
+			this.isCancelled = this.isRunning = false;
+			this.callback = null;
+		};
 
-			this.isRunning = true;
-			this.result = null;
-			this.isFinal = null;
-			this.confidence = null;
-
-			if (this.startHandler) this.timeoutStart = setTimeout(() => this.startHandler(), this.delayAfterStarted);
-			if (RecogOutput) console.log('recorder started!');
-		};
-		recognition.onresult = ev => {
-			if (RecogOutput) console.log('recorder onresult!!!, isCancelled', this.isCancelled);
-			if (this.isCancelled) { this.rec.abort(); return; }
-			this.isFinal = ev.results[0].isFinal;
-			this.result = ev.results[0][0].transcript;
-			this.confidence = ev.results[0][0].confidence;
-			//console.log('recorder got ' + (this.isFinal ? 'FINAL' : '') + ' result:', this.result, '(' + this.confidence + ')');
-			if (this.isFinal) { MicrophoneHide(); setTimeout(() => this.rec.stop(), 0); }
-			if (this.isFinal && this.finalResultHandler) this.timeoutFinal = setTimeout(() => this.finalResultHandler(this.result, this.confidence), this.delayAfterFinalResult);
-		};
-		recognition.onend = ev => {
-			if (RecogOutput) console.log('recorder ended!!!, isCancelled', this.isCancelled);
-			MicrophoneHide();
-			if (!this.isFinal && this.emptyResultHandler) this.timeoutEmpty = setTimeout(() => this.emptyResultHandler(this.result, this.confidence), this.delayAfterEmptyResult);
-			if (this.languageChangeHandler) { this.languageChangeHandler(); this.languageChangeHandler = null; }
-			this.isRunning = false;
-		};
 	}
-	start(onStart, delayStart, onFinal, delayFinal, onEmpty, delayEmpty, retry = false) {
-		this.startHandler = isdef(onStart) ? onStart.bind(this) : null;
-		this.delayAfterStarted = isdef(delayStart) ? delayStart : 0;
-		this.finalResultHandler = isdef(onFinal) ? onFinal.bind(this) : null;
-		this.delayAfterFinalResult = isdef(delayFinal) ? delayFinal : 0;
-		this.emptyResultHandler = isdef(onEmpty) ? onEmpty.bind(this) : null;
-		this.delayAfterEmptyResult = isdef(delayEmpty) ? delayEmpty : 0;
+	processResult(ev) {
+		console.log('**********', ev)
+		let res = ev.results[0];
+		this.isFinal = res.isFinal;
+		this.result = res[0].transcript;
+		this.confidence = res[0].confidence;
 
-		if (RecogOutput) console.log('start:', 'delay final', this.delayAfterFinalResult , 'delay Empty', this.delayAfterEmptyResult);
+		console.log('....result', this.result, 'FINAL?', this.isFinal)
 
-		//console.log('start:', onStart, delayStart, onFinal,'delay final', delayFinal, onEmpty,'delay Empty', delayEmpty, retry)
-
-		this.retryOnError = retry;
-		if (this.interrupt()) return;
-		if (RecogOutput) console.log('starting...');
-		//???bin nicht sicher ob hier schon isRunning=true setzen muss! https://stackoverflow.com/questions/44226827/how-to-know-if-webkitspeechrecognition-is-started sagt nein!
-		this.isRunning = true;
-		this.rec.start();
+		if (this.isFinal) {
+			this.stop();
+		}
+	}
+	setLanguage(lang) { this.rec.lang = (lang == 'E' ? 'en-US' : 'de-DE'); }
+	start() {
+		MicrophoneShow();
+		setTimeout(() => this.rec.start(), 10);
 	}
 	stop() {
-		this.rec.stop();
+		MicrophoneHide();
+		setTimeout(() => this.rec.stop(), 10);
 	}
-	interrupt() {
-		if (this.isRunning) {
-			this.isRunning = false;
-			this.rec.abort();
-			if (this.timeoutStart) { clearTimeout(this.timeoutStart); this.timeoutStart = null; }
-			if (this.timeoutFinal) { clearTimeout(this.timeoutFinal); this.timeoutFinal = null; }
-			if (this.timeoutEmpty) { clearTimeout(this.timeoutEmpty); this.timeoutEmpty = null; }
-			return true;
-		} else return false;
-	}
-	setLanguage(lang) {
-		if (lang == 'E' && this.rec.lang == 'en-US' || lang == 'D' && this.rec.lang == 'de-DE') {
-			if (RecogOutput) console.log('language already set to', lang);
-			return;
-		} else if (this.isRunning) {
-			this.languageChangeHandler = () => this.rec.lang = (lang == 'E' ? 'en-US' : 'de-DE');
-		} else this.rec.lang = (lang == 'E' ? 'en-US' : 'de-DE');
-		// let wasRunning = this.interrupt();
-		// if (wasRunning) console.log('recorder has been interrupted to change language!');
-		// //else console.log('recorder was NOT running!')
-		// this.rec.lang = (lang == 'E' ? 'en-US' : 'de-DE');
+	getLastResult() {
+		//should be of form {isFinal:,result:,confidence:}
+		return { isFinal: this.isFinal, result: this.result, confidence: this.confidence };
 	}
 }
-class Speaker {
-	constructor(defaultVolume = .1, lang = 'E') {
-		this.timeout1, this.timeout2;
-		this.defaultVolume = defaultVolume;
+class Speaker2 {
+	static get VOICES() {
+		return {
+			david: 'Microsoft David Desktop - English',
+			zira: 'Microsoft Zira Desktop - English',
+			us: 'Google US English',
+			ukFemale: 'Google UK English Female',
+			ukMale: 'Google UK English Male',
+			deutsch: 'Google Deutsch',
+		};
+	}
+	constructor(lang) {
+		console.log('init speaker...')
 		this.lang = lang;
+		this.q = [];
+		this.isRunning = false;
 		let awaitVoices = new Promise(resolve =>
 			speechSynthesis.onvoiceschanged = resolve)
 			.then(this.initVoices.bind(this));
@@ -209,34 +133,22 @@ class Speaker {
 		//console.log('voices:', this.voices.map(x => x.name))
 	}
 	setLanguage(lang) { this.lang = lang; }
-	static get VOICES() {
-		return {
-			david: 'Microsoft David Desktop - English',
-			zira: 'Microsoft Zira Desktop - English',
-			us: 'Google US English',
-			ukFemale: 'Google UK English Female',
-			ukMale: 'Google UK English Male',
-			deutsch: 'Google Deutsch',
-		};
-	}
-	say(text, r = .5, p = .8, v = .5, interrupt = true, voicekey, callback, lang) {
-		if (isdef(lang)) this.lang = lang;
-		if (v < 1) v = this.defaultVolume;//.15;
-		if (speechSynthesis.speaking) {
-			if (!interrupt) return;
-			//console.error('speechSynthesis.speaking');
-			speechSynthesis.cancel();
-			if (isdef(this.timeout1)) clearTimeout(this.timeout1);
-			this.timeout1 = setTimeout(() => this.say(text, r, p, v, interrupt, voicekey, callback), 500);
-			return;
+	enq(args) { this.q.push(args); }
+	deq() {
+		if (!isEmpty(this.q)) {
+			let args = this.q.pop();
+			this.utter(...args);
 		} else {
-			//console.log('utter call',voicekey)
-			this.utter(text, r, p, v, voicekey, callback);
-		}
+			this.isRunning = false;
 
+		}
+	}
+	clearq() {
+		this.q = [];
 	}
 
 	utter(text, r = .5, p = .8, v = .5, voicekey, callback = null) {
+
 
 		speechSynthesis.cancel();
 		var u = new SpeechSynthesisUtterance();
@@ -250,18 +162,18 @@ class Speaker {
 		u.voice = voice;
 
 		u.onend = ev => {
-			this.isSpeakerRunning = false;
-			if (callback) callback();
+			if (isdef(callback)) callback();
+
+			this.deq();
 		};
 
-		if (GlobalSTOP) return;
-		this.isSpeakerRunning = true;
+		this.isRunning = true;
 		speechSynthesis.speak(u);
 	}
 	findSuitableVoice(text, voicekey) {
-		//desc ... random | key in voiceNames | starting phrase of voices.name
+		// voicekey ... random | key in voiceNames | starting phrase of voices.name
 		//console.log(typeof voices, voices)
-		let voicenames = Speaker.VOICES;
+		let voicenames = Speaker2.VOICES;
 		let vkey = 'david';
 		if (this.lang == 'D') {
 			vkey = 'deutsch';
@@ -277,17 +189,11 @@ class Speaker {
 		}
 		let voiceName = voicenames[vkey];
 		let voice = firstCond(this.voices, x => startsWith(x.name, voiceName));
-		// console.log('============================')
-		// console.log(Array.isArray(voices));
-		// for(const v of voices){		console.log(v.name,voiceName,v.name==voiceName);	}
-		// console.log('voices:',voices.map(x=>x.name))
-		// console.log('THE VOICE IS',voiceName,voice);
-		// voices.map(x => console.log(x.name));
-		// console.log('===>the voice is', voice);
 		return [vkey, voice];
 	}
 
 }
+
 
 //#region Microphone UI
 
@@ -627,577 +533,3 @@ function convertTimeStringToNumbers(ts) {
 	return allIntegers(ts);
 }
 //#endregion
-
-var BEST150 = [
-	'adhesive bandage',
-	'airplane arrival',
-	'airplane departure',
-	'ambulance',
-	'articulated lorry',
-	'automobile',
-	'baby',
-	'badminton',
-	'banjo',
-	'baseball',
-	'butter',
-	'cactus',
-	'camera',
-	'cat',
-	'cherries',
-	'cherry blossom',
-	'chocolate bar',
-	'chopsticks',
-	'cloud',
-	'coat',
-	'cocktail glass',
-	'compass',
-	'confetti ball',
-	'construction site',
-	'construction worker',
-	'crocodile',
-	'crystal ball',
-	//'delivery truck',
-	'desktop computer',
-	'detective',
-	'diya lamp',
-	'dna',
-	'dog',
-	'dragon',
-	'dress',
-	'droplet',
-	'drum',
-	'duck',
-	'dvd',
-	'eagle',
-	'eggplant',
-	'elephant',
-	'factory',
-	'family of 4',
-	'fire engine',
-	'fire extinguisher',
-	'fireworks',
-	'flag in hole',
-	'flashlight',
-	'fountain',
-	//'flying saucer',
-	'frog',
-	'garlic',
-	'gem stone',
-	'giraffe',
-	'girl',
-	'glasses',
-	'globe showing Asia-Australia',
-	'green apple',
-	'green salad',
-	'guitar',
-	'hamburger',
-	'handball',
-	'heart suit',
-	'helicopter',
-	'horse',
-	'ice hockey',
-	'juggling',
-	'kangaroo',
-	'keyboard',
-	'ladybug',
-	'laptop',
-	'ledger',
-	'leopard',
-	'lobster',
-	'locomotive',
-	'lotus position',
-	'love letterlove letter',
-	'love-you gesture',
-	'magnet',
-	'man',
-	'man factory worker',
-	'man golfing',
-	'man singer',
-	'man teacher',
-	'man technologist',
-	'mantelpiece clock',
-	'manual wheelchair',
-	'maple leaf',
-	'massage',
-	'mermaid',
-	'metro',
-	'milky way',
-	'monkey',
-	'motorcycle',
-	'mountain cableway',
-	'musical keyboard',
-	'office building',
-	'onion',
-	'optical disk',
-	'palm tree',
-	'parrot',
-	'penguin',
-	'person golfing',
-	'petri dish',
-	'pig',
-	'pineapple',
-	'pistol',
-	'police car',
-	'police officer',
-	'popcorn',
-	'pregnant woman',
-	'puzzle piece',
-	'rabbit',
-	'radio',
-	'red apple',
-	'red paper lantern',
-	'rhinoceros',
-	'ringed planet',
-	'robot, robot',
-	'roll of paper',
-	'rose',
-	'rosette',
-	'safety pin',
-	'safety vest',
-	'sailboat',
-	'satellite',
-	'saxophone',
-	'scroll',
-	'shooting star',
-	'shopping bags',
-	'skateboard',
-	'skunk',
-	'small airplane',
-	'snowflake',
-	'soap',
-	'sparkles',
-	'speaker high volume',
-	'standing',
-	'station',
-	'sunflower',
-	'sunglasses',
-	'swimming',
-	'television',
-	'test tube',
-	'thermometer',
-	'thumbs up',
-	'tiger',
-	'tornado',
-	'tractor',
-	'train',
-	'trophy',
-	'tropical drink',
-	'trumpet',
-	'turkey',
-	'umbrella',
-	'vampire',
-	'volcano',
-	'watermelon',
-	'white flower',
-	'world map',
-	'wrench',
-];
-
-var BEST100 = [
-	'adhesive bandage',
-	'airplane arrival',
-	'airplane departure',
-	'ambulance',
-	'articulated lorry',
-	'automobile',
-	'baby',
-	'badminton',
-	'banjo',
-	'baseball',
-	'butter',
-	'cactus',
-	'camera',
-	'cat',
-	//'cherries',
-	//'cherry blossom',
-	'chocolate bar',
-	'chopsticks',
-	'cloud',
-	'coat',
-	'cocktail glass',
-	'compass',
-	'confetti ball',
-	'construction site',
-	'construction worker',
-	'crocodile',
-	'crystal ball',
-	//'delivery truck',
-	'desktop computer',
-	'detective',
-	'diya lamp',
-	'dna',
-	'dog',
-	'dragon',
-	'dress',
-	'droplet',
-	'drum',
-	'duck',
-	'dvd',
-	'eagle',
-	'eggplant',
-	'elephant',
-	'factory',
-	'family of 4',
-	'fire engine',
-	'fire extinguisher',
-	'fireworks',
-	'flag in hole',
-	'flashlight',
-	'fountain',
-	//'flying saucer',
-	'frog',
-	'garlic',
-	'gem stone',
-	'giraffe',
-	'girl',
-	'glasses',
-	'globe showing Asia-Australia',
-	'green apple',
-	'green salad',
-	'guitar',
-	'hamburger',
-	'handball',
-	'heart suit',
-	'helicopter',
-	'horse',
-	'ice hockey',
-	'juggling',
-	'kangaroo',
-	'keyboard',
-	'ladybug',
-	'laptop',
-	'ledger',
-	'leopard',
-	'lobster',
-	'locomotive',
-	'lotus position',
-	'love letterlove letter',
-	'love-you gesture',
-	'magnet',
-	'man',
-	'man factory worker',
-	'man golfing',
-	'man singer',
-	'man teacher',
-	'man technologist',
-	'mantelpiece clock',
-	'manual wheelchair',
-	'maple leaf',
-	'massage',
-	'mermaid',
-	'metro',
-	'milky way',
-	'monkey',
-	'motorcycle',
-	'mountain cableway',
-	'musical keyboard',
-	'office building',
-	'onion',
-	'optical disk',
-	'palm tree',
-	'parrot',
-	'penguin',
-	'person golfing',
-	'petri dish',
-	'pig',
-	'pineapple',
-	'pistol',
-	'police car',
-	'police officer',
-	'popcorn',
-	'pregnant woman',
-	'puzzle piece',
-	'rabbit',
-	'radio',
-	'red apple',
-	'red paper lantern',
-	'rhinoceros',
-	'ringed planet',
-	'robot, robot',
-	'roll of paper',
-	'rose',
-	'rosette',
-	'safety pin',
-	'safety vest',
-	'sailboat',
-	'satellite',
-	'saxophone',
-	'scroll',
-	'shooting star',
-	'shopping bags',
-	'skateboard',
-	'skunk',
-	'small airplane',
-	'snowflake',
-	'soap',
-	'sparkles',
-	'speaker high volume',
-	'standing',
-	'station',
-	'sunflower',
-	'sunglasses',
-	'swimming',
-	'television',
-	'test tube',
-	'thermometer',
-	'thumbs up',
-	'tiger',
-	'tornado',
-	'tractor',
-	'train',
-	'trophy',
-	'tropical drink',
-	'trumpet',
-	'turkey',
-	'umbrella',
-	'vampire',
-	'volcano',
-	'watermelon',
-	'white flower',
-	'world map',
-	'wrench',
-];
-
-var BEST50 = [
-	'adhesive bandage',
-	'airplane arrival',
-	'airplane departure',
-	'ambulance',
-	'articulated lorry',
-	'automobile',
-	'baby',
-	'badminton',
-	'banjo',
-	'baseball',
-	'butter',
-	'cactus',
-	'camera',
-	'cat',
-	//'cherries',
-	//'cherry blossom',
-	'chocolate bar',
-	'chopsticks',
-	'cloud',
-	'coat',
-	'cocktail glass',
-	'compass',
-	'confetti ball',
-	'construction site',
-	'construction worker',
-	'crocodile',
-	'crystal ball',
-	//'delivery truck',
-	'desktop computer',
-	'detective',
-	'diya lamp',
-	'dna',
-	'dog',
-	'dragon',
-	'dress',
-	'droplet',
-	'drum',
-	'duck',
-	'dvd',
-	'eagle',
-	'eggplant',
-	'elephant',
-	'factory',
-	'family of 4',
-	'fire engine',
-	'fire extinguisher',
-	'fireworks',
-	'flag in hole',
-	'flashlight',
-	'fountain',
-	//'flying saucer',
-	'frog',
-	'garlic',
-	'gem stone',
-	'giraffe',
-	'girl',
-	'glasses',
-	'globe showing Asia-Australia',
-	'green apple',
-	'green salad',
-	'guitar',
-	'hamburger',
-	'handball',
-	'heart suit',
-	'helicopter',
-	'horse',
-	'ice hockey',
-	'juggling',
-	'kangaroo',
-	'keyboard',
-	'ladybug',
-	'laptop',
-	'ledger',
-	'leopard',
-	'lobster',
-	'locomotive',
-	'lotus position',
-	'love letterlove letter',
-	'love-you gesture',
-	'magnet',
-	'man',
-	'man factory worker',
-	'man golfing',
-	'man singer',
-	'man teacher',
-	'man technologist',
-	'mantelpiece clock',
-	'manual wheelchair',
-	'maple leaf',
-	'massage',
-	'mermaid',
-	'metro',
-	'milky way',
-	'monkey',
-	'motorcycle',
-	'mountain cableway',
-	'musical keyboard',
-	'office building',
-	'onion',
-	'optical disk',
-	'palm tree',
-	'parrot',
-	'penguin',
-	'person golfing',
-	'petri dish',
-	'pig',
-	'pineapple',
-	'pistol',
-	'police car',
-	'police officer',
-	'popcorn',
-	'pregnant woman',
-	'puzzle piece',
-	'rabbit',
-	'radio',
-	'red apple',
-	'red paper lantern',
-	'rhinoceros',
-	'ringed planet',
-	'robot, robot',
-	'roll of paper',
-	'rose',
-	'rosette',
-	'safety pin',
-	'safety vest',
-	'sailboat',
-	'satellite',
-	'saxophone',
-	'scroll',
-	'shooting star',
-	'shopping bags',
-	'skateboard',
-	'skunk',
-	'small airplane',
-	'snowflake',
-	'soap',
-	'sparkles',
-	'speaker high volume',
-	'standing',
-	'station',
-	'sunflower',
-	'sunglasses',
-	'swimming',
-	'television',
-	'test tube',
-	'thermometer',
-	'thumbs up',
-	'tiger',
-	'tornado',
-	'tractor',
-	'train',
-	'trophy',
-	'tropical drink',
-	'trumpet',
-	'turkey',
-	'umbrella',
-	'vampire',
-	'volcano',
-	'watermelon',
-	'white flower',
-	'world map',
-	'wrench',
-];
-
-var BEST80 = [
-	'adhesive bandage',
-	'ambulance',
-	'articulated lorry',
-	'automobile',
-	'baby',
-	'cactus',
-	'camera',
-	'cat',
-	'chocolate bar',
-	'chopsticks',
-	'cloud',
-	'compass',
-	'crocodile',
-	'desktop computer',
-	'dna',
-	'dog',
-	'dragon',
-	'dress',
-	'duck',
-	'eagle',
-	'eggplant',
-	'elephant',
-	'flashlight',
-	'frog',
-	'garlic',
-	'giraffe',
-	'glasses',
-	'guitar',
-	'heart suit',
-	'helicopter',
-	'kangaroo',
-	'keyboard',
-	'ladybug',
-	'lobster',
-	'locomotive',
-	'magnet',
-	'mantelpiece clock',
-	'manual wheelchair',
-	'monkey',
-	'motorcycle',
-	'palm tree',
-	'parrot',
-	'penguin',
-	'pig',
-	'pineapple',
-	'pistol',
-	'police officer',
-	'popcorn',
-	'pregnant woman',
-	'rabbit',
-	'radio',
-	'red apple',
-	'rhinoceros',
-	'robot, robot',
-	'roll of paper',
-	'rose',
-	'saxophone',
-	'skateboard',
-	'skunk',
-	'small airplane',
-	'snowflake',
-	'thermometer',
-	'tiger',
-	'tornado',
-	'tractor',
-	'trophy',
-	'trumpet',
-	'umbrella',
-	'volcano',
-	'watermelon',
-];
-
-var BEST100_E;
-var BEST100_D;
-
-
-

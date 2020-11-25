@@ -16,13 +16,11 @@ function levelTC(){
 	NumColors = getGameOrLevelInfo('numColors', NumColors); 
 	NumLabels = getGameOrLevelInfo('numLabels', NumPics*NumColors); 
 
-	// console.log(NumPics,NumLabels,NumColors)
 }
 function startRoundTC() {
 	uiActivated = false;
 }
 function promptTC() {
-	// let colors = choose(currentLevel<3?SIMPLE_COLORS:EXTENDED_COLORS,NumColors);
 
 	let [colorlist, shade] = ensureColors();
 	let colors = choose(colorlist, NumColors);
@@ -38,7 +36,6 @@ function promptTC() {
 }
 function trialPromptTC() {
 	Speech.say(currentLanguage == 'D' ? 'nochmal!' : 'try again!');
-	// Speech.say('try again');
 	shortHintPic();
 	return 10;
 
@@ -72,7 +69,5 @@ function ensureColors() {
 	let shadeColor = lookupSet(Settings, ['games', 'gTouchColors', 'shadeColor'], 'red');
 	let contrast = lookupSet(Settings, ['games', 'gTouchColors', 'contrast'], .35);
 	let shade = anyColorToStandardString(shadeColor, contrast);
-	//console.log('shade',shade)
-	//Settings.games.gTouchColors.colors = colorlist;
 	return [colorlist, shade];
 }

@@ -5,14 +5,11 @@ function startLevelML() { levelML(); }
 function levelML() {
 	MaxNumTrials = getGameOrLevelInfo('trials', 3);
 	let vinfo = getGameOrLevelInfo('vocab', 100);
-	//console.log(vinfo, typeof vinfo);
 	currentKeys = setKeys({ lang: currentLanguage, nbestOrCats: vinfo });
 	NumPics = 1;
 	NumMissingLetters = getGameOrLevelInfo('numMissing', 1);
 	let pos = getGameOrLevelInfo('posMissing', 'random');
-	//console.log(pos)
 	MaxPosMissing = pos == 'start' ? NumMissingLetters - 1 : 100;
-	//console.log(MaxPosMissing);
 }
 function startRoundML() { }
 
@@ -30,11 +27,9 @@ function promptML() {
 
 	// randomly choose 1-NumMissingLetters alphanumeric letters from bestWord
 	let indices = getIndicesCondi(bestWord, (x, i) => isAlphaNum(x) && i <= MaxPosMissing);
-	//console.log('indices (should be sorted!)',indices);
 	nMissing = Math.min(indices.length, NumMissingLetters);
 	let ilist = choose(indices, nMissing); sortNumbers(ilist);
 
-	//console.log(typeof ilist[0],ilist);
 
 	for (const idx of ilist) {
 		let inp = d.children[idx];
@@ -53,11 +48,9 @@ function trialPromptML() {
 	let selinp = Selected.inp;
 	Speech.say(currentLanguage == 'D' ? 'nochmal!' : 'try again!');
 	setTimeout(() => {
-		//console.log('selected last:', selinp);
 		let d = selinp.div;
 		d.innerHTML = '_';
 		mClass(d, 'blink');
-		//inputs.push(selinp);
 	}, skipAnimations ? 300 : 2000);
 
 	showFleetingMessage(composeFleetingMessage(), 3000);
@@ -86,14 +79,12 @@ function activateML() {
 			d.innerHTML = Selected.lastLetterEntered;
 			mRemoveClass(d, 'blink');
 			let result = buildWordFromLetters(mParent(d));
-			//console.log('selected last:', Selected)
 
 			evaluate(result);
 		} else {
 			let ch = charEntered.toUpperCase();
 			for (const inp of inputs) {
 				if (inp.letter == ch) {
-					//found a matching letter
 					Selected.lastIndexEntered = inp.index;
 					Selected.inp = inp;
 					let d = Selected.feedbackUI = inp.div;

@@ -1,5 +1,5 @@
 function setGlobalSettings(settings) {
-	//console.log(settings)
+
 	Settings = settings;
 
 	currentLanguage = Settings.common.currentLanguage;
@@ -23,15 +23,8 @@ async function initSettingsX() {
 	if (isdef(Settings.hallo)) {
 		await resetSettingsToDefaults();
 	}
-	//console.log('...',Settings);
-	//console.log('just loaded', Settings.program.currentGameIndex, Settings.program.currentLevel)
-
-	//console.log(Settings)
-	//await initSettings();
-
 }
 function createSettingsUi() {
-	//#region clear settings window and add a textArea ta
 	let dParent = mBy('dSettings');
 	clearElement(dParent);
 	let ta = mCreate('textarea');
@@ -40,12 +33,10 @@ function createSettingsUi() {
 	ta.rows = 25;
 	ta.cols = 100;
 	ta.value = 'hallo';
-	//create button
 	let b = mCreate('button');
 	mAppend(dParent, b);
 	b.innerHTML = 'save';
 	b.onclick = () => { saveSettingsX(); loadSettingsFromLocalStorage(); }
-	//endregion
 }
 function loadSettingsX() {
 	createSettingsUi();
@@ -94,10 +85,7 @@ async function resetSettingsToDefaults() {
 	setGlobalSettings(settings);
 	localStorage.clear(); //TODO: maybe only clear settings not entire localStorage???
 
-	//console.log(Settings);
-
 	saveObject(Settings, 'settings');
-	//saveSettingsX();
 
 	loadSettingsFromLocalStorage();
 
@@ -110,21 +98,11 @@ function onClickRestartProgram() {
 
 	Settings.program.currentGameIndex = 0;
 	Settings.program.currentLevel = currentLevel = 0; //Settings.program.gameSequence[0].startLevel_;
-	//updateGameSequence_(Settings.program.currentLevel);
-
-	//console.log('Settings', Settings.program)
 
 	localStorage.setItem('settings', JSON.stringify(Settings));
 	loadSettingsFromLocalStorage();
 
-	// console.log('restarting program');
-	// closeSettings(); 
-	// clearTable();
-	// startUnit(); 
-
 }
-
-
 
 //#region settings helpers
 function createSettingsUi() {

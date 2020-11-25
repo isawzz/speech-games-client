@@ -34,8 +34,6 @@ function show100() {
 	let picStyles = getHarmoniousStylesXX(100, 100, 10, 'arial', 'random', 'random', false);
 	ensureSymByType();
 	let keys = takeFromTo(IconSet, lastIndex, lastIndex + 100);//chooseRandom() ['keycap: 0', 'keycap: 1', 'keycap: #', 'keycap: *'];
-	//lastIndex += 100;
-	//console.log(keys)
 	gridLabeled(keys, picLabelStyles);
 }
 function gridLabeled(list, picLabelStyles) {
@@ -49,10 +47,7 @@ function gridLabeled(list, picLabelStyles) {
 
 	for (const k of list) {
 		let info = symbolDict[k];
-		//console.log(info);
-		//return;
 		let label = (isdef(info.bestE) ? info.bestE : lastOfLanguage(k, 'E')) + ' ' + lastIndex;
-		//let el = maPicLabel(info, dGrid, picLabelStyles[0], picLabelStyles[1], picLabelStyles[2], isText, isOmoji)
 		let el = maPicLabelButtonFitText(info, label,
 			{ w: pictureSize, h: pictureSize, bgPic: 'random', shade: null, overlayColor: null },
 			onClickIVPicture, dGrid, stylesForLabelButton, 'frameOnHover', isText, isOmoji);
@@ -63,7 +58,6 @@ function gridLabeled(list, picLabelStyles) {
 	}
 	let gridStyles = { 'place-content': 'center', gap: 4, margin: 4, padding: 4, bg: 'silver', rounding: 5 };
 	let size = layoutGrid(elems, dGrid, gridStyles, { rows: 10, isInline: true });
-	//console.log(size);
 }
 
 function onClickIVPicture(ev) {

@@ -288,10 +288,6 @@ async function speechTraining() {
 					setTimeout(() => Speech.say(req, .3, .9, 1, 'random'), t + 4000);
 					//setTimeout(() => Speech.say(req, .7, .5, 1, 'random'), t + 7000);
 					setTimeout(() => Speech.stopRecording(), t + 7000)
-					//eval recognized word
-					//if recognized word == wToBe Said
-					//animal,E,0
-					//
 				}
 			}
 		}

@@ -8,8 +8,6 @@ async function SessionStart() {
 
 	await loadAssets(); ensureSymBySet(); makeHigherOrderGroups(); await loadBestKeys();
 
-	//console.log(symbolDict); return;
-
 	// iconViewerTestKeysets();
 	//setTimeout(_startSpeechTraining, 2000);	return;
 	//_startSpeechTraining(); return;
@@ -21,11 +19,11 @@ function _startSpeechTraining() {
 	initTable();
 	Speech = new Speech2('E'); ///new SpeechFeature(1, 'E');
 
+	//#region prev tests
 	//testConf2(); return;
 	//testConfidence();return;
 	//trainBritishGuy('ring'); return;
 
-	//#region prev tests
 	//trainDeutsch('wind face'); //trainZira(); //testp7(); //testp6(); //testp5(); //testp4(); 
 	// testp2(); return;
 	//testp0(); return;
@@ -99,7 +97,7 @@ async function saveHistory() {
 			'Content-Type': 'application/json'
 		},
 		body: JSON.stringify(sessionData)
-	}); // .then(data => { console.log(data);});
+	}); 
 
 }
 
@@ -127,11 +125,6 @@ function zTesting() {
 		}
 	}
 
-	// //testAccessor(); return;
-	// //let infos = getInfolist({cats:['animal']}); return;
-
-	//console.log(alphaToHex(.5),alphaToHex(.25),alphaToHex(.75));
-	//let x=differInAtMost('dope', 'doe', 1); console.log(x); return;
 }
 
 

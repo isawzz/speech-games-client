@@ -1,7 +1,4 @@
 function showScore() {
-	//dScore.innerHTML = 'score: ' + numCorrectAnswers + '/' + numTotalAnswers + ' (' + percentageCorrect + '%)';
-	//let scoreString = 'score: ' + levelPoints + ' (' + percentageCorrect + '%)';
-	// let scoreString = 'question: ' + (numTotalAnswers + 1) + ' (' + percentageCorrect + '%)';
 	let scoreString = scoringMode == 'n' ? 'question: ' + (numTotalAnswers + 1) + '/' + SAMPLES_PER_LEVEL[currentLevel] :
 		scoringMode == 'percent' ? 'score: ' + numCorrectAnswers + '/' + numTotalAnswers + ' (' + percentageCorrect + '%)'
 			: scoringMode == 'inc' ? 'score: ' + levelPoints + ' (' + percentageCorrect + '%)'
@@ -19,11 +16,6 @@ function resetScore() {
 }
 function scoreSummary() {
 
-	//wie bekomm ich UnitScoreSummary???
-	//wo startet eine neue unit????
-	//ich habe jetzt den UnitScoreSummary
-
-	//calc SessionScoreSummary
 	let scoreByGame = {};
 	for (const gdata of CurrentSessionData.games) {
 		let gname = gdata.name;
@@ -47,11 +39,9 @@ function scoreSummary() {
 		let tot = scoreByGame[gname].nTotal;
 		if (nundef(tot) || tot == 0) continue;
 		let corr = scoreByGame[gname].nCorrect;
-		//console.log(gname,tot,corr)
 		scoreByGame[gname].percentage = Math.round((corr / tot) * 100);
 	}
 
-	// mText('Writing: 10/15 correct answers (70%)', d, style);
 	return scoreByGame;
 
 }
@@ -81,7 +71,6 @@ function scoring(isCorrect) {
 
 	CurrentGoalData = {
 		key: Goal.key, isCorrect: IsAnswerCorrect, reqAnswer: Selected.reqAnswer, answer: Selected.answer,
-		//selected: Selected, goal: Goal,
 	};
 	CurrentLevelData.items.push(CurrentGoalData);
 
@@ -116,27 +105,21 @@ function scoring(isCorrect) {
 			else if (percentageCorrect < 50) { levelChange = -1; if (nextLevel > 0) nextLevel -= 1; }
 
 		} else if (scoringMode == 'autograde') {
-			//console.log('... autograding');
-			//saveAnswerStatistic();
 			saveStats();
 			levelChange = 1;
 			nextLevel += 1;
 
 		} else if (scoringMode == 'n' || scoringMode == 'adapt') {
-			//console.log('correct:', numCorrectAnswers, 'total:', numTotalAnswers)
 			if (numCorrectAnswers > numTotalAnswers / 2) { levelChange = 1; nextLevel += 1; }
 			else if (numCorrectAnswers < numTotalAnswers / 2) {
 				console.log('DOWNGRADING!!!!!!!')
 				levelChange = -1; nextLevel = (nextLevel > 0 ? nextLevel - 1 : 0);
 			}
-
 		}
 	}
 
 
 	if (scoringMode == 'adapt' && levelChange == 0) {
-
-		//console.assert(levelChange == 0 && nextLevel == currentLevel, "adapt scoringMode but altered levelChange or nextLevel!!!")
 
 		// look at this level history:
 		let items = CurrentLevelData.items;
@@ -146,8 +129,6 @@ function scoring(isCorrect) {
 		let negSeq = neg > 0 && NegInARow >= neg;
 		let hasLabels = Settings.program.labels;
 
-		//console.log('streaks:', '+', posSeq, '-', negSeq)
-
 		if (posSeq && hasLabels && Settings.program.showLabels == 'toggle') { PosInARow = 0; Settings.program.labels = false; }
 		else if (posSeq) { levelChange = 1; nextLevel += 1; PosInARow = 0; }
 		if (negSeq && !hasLabels && Settings.program.showLabels == 'toggle') { NegInARow = 0; Settings.program.labels = true; }
@@ -155,9 +136,7 @@ function scoring(isCorrect) {
 
 	}
 
-
 	console.log('levelChange', levelChange, 'nextLevel', nextLevel)
-	//by here, levelChange and nextLevel MUST HAVE BEEN DETERMINED CORRECTLY!
 
 	let toggle = Settings.program.showLabels == 'toggle';
 	let hasLabels = Settings.program.labels;

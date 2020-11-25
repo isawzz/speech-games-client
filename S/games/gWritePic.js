@@ -49,7 +49,6 @@ function evalWP(ev) {
 	let reqAnswer = normalize(bestWord, currentLanguage);
 
 	Selected = { reqAnswer: reqAnswer, answer: answer };
-	//console.log('eval WritePic', answer, reqAnswer)
 	if (answer == reqAnswer) return true;
 	else { return false; }
 }

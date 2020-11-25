@@ -74,7 +74,6 @@ var PosInARow,NegInARow;
 var lastPosition = 0;
 var trialNumber;
 var boundary;
-var GlobalSTOP;
 var uiActivated;
 
 
