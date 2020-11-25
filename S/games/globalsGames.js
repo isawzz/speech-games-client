@@ -13,8 +13,8 @@ function getCurrentColor(game) {
 	//console.log('===>currentColor',currentColor)
 	return color;
 }
-function getCurrentLevel(game){
-	let level = Settings.program.currentLevel > MAXLEVEL ? startAtLevel[currentGame] : Settings.program.currentLevel;
+function getCurrentLevel(game) {
+	let level = Settings.program.currentLevel > MaxLevel ? startAtLevel[currentGame] : Settings.program.currentLevel;
 	return level;
 }
 
@@ -25,6 +25,10 @@ function startGame(data) {
 	// determineGame(data);
 	//console.log('Settings',Settings)
 	currentGame = Settings.program.gameSequence[Settings.program.currentGameIndex].game;
+	GameInfo = Settings.games[currentGame];
+	LevelInfo = GameInfo.levels;
+	MaxLevel = isdef(LevelInfo) ? Object.keys(LevelInfo).length-1 : isdef(GameInfo).maxLevel ? GameInfo.maxLevel : MAXLEVEL;
+	//console.log(typeof LevelInfo, LevelInfo, 'MaxLevel',MaxLevel);
 
 	currentColor = getCurrentColor(currentGame);
 
@@ -466,7 +470,7 @@ function levelStep13() {
 //#endregion
 
 //#region key selection: setKeys
-function getKeySets(){
+function getKeySets() {
 	let allKeys = symKeysBySet.nosymbols;
 	let keys = allKeys.filter(x => isdef(symbolDict[x].best100));
 	let keys1 = allKeys.filter(x => isdef(symbolDict[x].best100) && isdef(symbolDict[x].bestE));
@@ -510,6 +514,7 @@ function setKeys(cats, bestOnly, sortAccessor, correctOnly, reqOnly) {
 		currentKeys = BestKeysSets[best100];
 		return;
 	}
+	if (isdef(cats) && !isList(cats)) cats=[cats];
 	currentKeys = getKeySetX(isdef(cats) ? cats : currentCategories, currentLanguage, MinWordLength, MaxWordLength,
 		bestOnly, sortAccessor, correctOnly, reqOnly);
 	if (isdef(sortByFunc)) { sortBy(currentKeys, sortAccessor); }
@@ -606,6 +611,12 @@ function writeComments(pre) {
 	}
 
 }
+
+function getGameOrLevelInfo(k, defval) {
+	//console.log(LevelInfo)
+	return isdef(LevelInfo) && isdef(LevelInfo[currentLevel][k]) ? LevelInfo[currentLevel][k] : isdef(GameInfo[k]) ? GameInfo[k] : defval;
+}
+
 //#endregion
 
 

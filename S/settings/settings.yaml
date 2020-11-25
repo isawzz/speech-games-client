@@ -34,47 +34,64 @@ flags:
 games: 
   gTouchPic:
     color: deepskyblue
+    trials: 2
     levels:
       0: 
         vocab: 25
         numPics: 2
-        trials: 2
       1: 
         vocab: 25
         numPics: 3
-        trials: 2
       2: 
         vocab: 25
         numPics: 4
-        trials: 2
       3: 
         vocab: 25
         numPics: 6
-        trials: 2
       4: 
         vocab: 25
         numPics: 8
-        trials: 2
       5: 
         vocab: 50
         numPics: 9
-        trials: 2
       6: 
         vocab: 50
         numPics: 16
-        trials: 2
       7: 
         vocab: 75
         numPics: 25
-        trials: 2
       8: 
         vocab: 100
         numPics: 36
-        trials: 2
       9: 
         vocab: 100
         numPics: 49
-        trials: 2
+  gMissingLetter:
+    color: gold
+    vocab: 100
+    trials: 3
+    levels:
+      0:
+        numMissing: 1
+        posMissing: start
+      1:
+        numMissing: 2
+        posMissing: start
+      2:
+        numMissing: 1
+        posMissing: random
+      3:
+        numMissing: 2
+        posMissing: random
+      4:
+        numMissing: 3
+        posMissing: random
+      5:
+        numMissing: 4
+        posMissing: random
+      6:
+        numMissing: 5
+        posMissing: random
   gTouchColors:
     color: green
     contrast: 0.32
@@ -124,25 +141,6 @@ games:
         vocab: 100
         numPics: 49
         trials: 2
-  gMissingLetter:
-    color: gold
-    vocab: 100
-    levels:
-      0:
-        numMissing: 1
-        posMissing: start
-      1:
-        numMissing: 1
-        posMissing: start
-      2:
-        numMissing: 1
-        posMissing: start
-      3:
-        numMissing: 1
-        posMissing: start
-      4:
-        numMissing: 1
-        posMissing: start
   gSayPic:
     levels:
       0: 

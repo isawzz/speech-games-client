@@ -1,26 +1,18 @@
 var NumMissingLetters, nMissing, MaxPosMissing;
 var inputs = [];
-const LevelsML = {
-	0: { NumPics: 1, NumLabels: 1, MinWordLength: 3, MaxWordLength: 3, NumMissingLetters: 1, MaxPosMissing: 0, MaxNumTrials: 3 },
-	1: { NumPics: 1, NumLabels: 1, MinWordLength: 3, MaxWordLength: 4, NumMissingLetters: 1, MaxPosMissing: 0, MaxNumTrials: 3 },
-	2: { NumPics: 1, NumLabels: 1, MinWordLength: 4, MaxWordLength: 5, NumMissingLetters: 2, MaxPosMissing: 1, MaxNumTrials: 3 },
-	3: { NumPics: 1, NumLabels: 0, MinWordLength: 4, MaxWordLength: 6, NumMissingLetters: 1, MaxPosMissing: 0, MaxNumTrials: 3 },
-	4: { NumPics: 1, NumLabels: 0, MinWordLength: 4, MaxWordLength: 7, NumMissingLetters: 2, MaxPosMissing: 1, MaxNumTrials: 3 },
-	5: { NumPics: 1, NumLabels: 0, MinWordLength: 5, MaxWordLength: 8, NumMissingLetters: 1, MaxPosMissing: 1, MaxNumTrials: 3 },
-	6: { NumPics: 1, NumLabels: 0, MinWordLength: 5, MaxWordLength: 9, NumMissingLetters: 1, MaxPosMissing: 12, MaxNumTrials: 3 },
-	7: { NumPics: 1, NumLabels: 0, MinWordLength: 5, MaxWordLength: 10, NumMissingLetters: 2, MaxPosMissing: 12, MaxNumTrials: 3 },
-	8: { NumPics: 1, NumLabels: 0, MinWordLength: 6, MaxWordLength: 11, NumMissingLetters: 4, MaxPosMissing: 12, MaxNumTrials: 3 },
-	9: { NumPics: 1, NumLabels: 0, MinWordLength: 6, MaxWordLength: 12, NumMissingLetters: 5, MaxPosMissing: 12, MaxNumTrials: 3 },
-	10: { NumPics: 1, NumLabels: 0, MinWordLength: 6, MaxWordLength: 12, NumMissingLetters: 6, MaxPosMissing: 12, MaxNumTrials: 3 },
-}
 function startGameML() { }
 function startLevelML() { levelML(); }
 function levelML() {
-	MaxNumTrials = 3;
-	currentKeys = KeySets.best100;
+	MaxNumTrials = getGameOrLevelInfo('trials', 3);
+	let vinfo = getGameOrLevelInfo('vocab', 100);
+	console.log(vinfo, typeof vinfo);
+	currentKeys = isNumber(vinfo) ? KeySets['best' + getGameOrLevelInfo('vocab', 100)] : setKeys(vinfo);
 	NumPics = 1;
-	NumMissingLetters = currentLevel < 2 ? currentLevel : currentLevel - 2;
-	MaxPosMissing = currentLevel < 2 ? currentLevel : 100;
+	NumMissingLetters = getGameOrLevelInfo('numMissing', 1);
+	let pos = getGameOrLevelInfo('posMissing', 'random');
+	//console.log(pos)
+	MaxPosMissing = pos == 'start' ? NumMissingLetters - 1 : 100;
+	//console.log(MaxPosMissing);
 }
 function startRoundML() { }
 

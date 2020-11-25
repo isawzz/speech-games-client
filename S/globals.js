@@ -5,6 +5,7 @@ const EXPERIMENTAL = IS_TESTING;
 const CLEAR_LOCAL_STORAGE = false;
 const immediateStart = true;  // false | true
 const SHOW_FREEZER = false; // !IS_TESTING;
+const OFFLINE = true; // uses localhost instead of heroku
 
 var MASTER_VOLUME = 1;
 var loopGameSequence = true;
@@ -14,7 +15,7 @@ var skipAniGameOver = true; // IS_TESTING;
 var skipBadgeAnimation = true;
 var MAXLEVEL = 10;
 var MaxLevel; //game dependent!
-var KeySets;
+var KeySets, GameInfo, LevelInfo;
 
 // delays
 var DELAY = 1000;

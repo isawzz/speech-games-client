@@ -72,8 +72,7 @@ async function startUnit() {
 }
 
 async function loadHistory() {
-	let url = 'https://speech-games.herokuapp.com/users/Gunter';
-	//url = 'http://localhost:3000/users/Gunter';
+	let url = OFFLINE? 'http://localhost:3000/users/Gunter':'https://speech-games.herokuapp.com/users/Gunter';
 	fetch(url, {
 		method: 'GET',
 		headers: {
@@ -88,8 +87,7 @@ async function loadHistory() {
 }
 async function saveHistory() {
 	//console.log('posting...');
-	let url = 'https://speech-games.herokuapp.com/users/Gunter';
-	//url = 'http://localhost:3000/users/Gunter';
+	let url = OFFLINE? 'http://localhost:3000/users/Gunter':'https://speech-games.herokuapp.com/users/Gunter';
 	let sessionData = UserHistory;
 	fetch(url, {
 		method: 'PUT',
