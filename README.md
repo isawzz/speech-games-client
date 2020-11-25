@@ -20,3 +20,4 @@ S/settings contains a settings file settings.yaml that can be adapted to use the
 Or, feel free to hack around
 
 (...as it is, this code is pretty messy but will improve with time...)
+
