@@ -55,17 +55,17 @@ function saveProgram() {
 	// saveSettingsUi();
 	// localStorage.setItem('Settings.program.currentGameIndex', Settings.program.currentGameIndex.toString());
 	// localStorage.setItem('Settings.program.currentLevel', Settings.program.currentLevel.toString());
-	console.log('SAVED: gameIndex', Settings.program.currentGameIndex, 'level', Settings.program.currentLevel);
+	//console.log('SAVED: gameIndex', Settings.program.currentGameIndex, 'level', Settings.program.currentLevel);
 }
 
 function updateGameSequence(nextLevel) {
-	console.log('updateGameSequence_ nextLevel',nextLevel, 'MaxLevel',MaxLevel)
+	//console.log('updateGameSequence_ nextLevel',nextLevel, 'MaxLevel',MaxLevel)
 	if (nextLevel > MaxLevel) {
 		let gameSequence = Settings.program.gameSequence;
 		Settings.program.currentGameIndex = (Settings.program.currentGameIndex + 1) % gameSequence.length;
 		Settings.program.currentLevel = 0; // gameSequence[Settings.program.currentGameIndex].startLevel_;
 	} else Settings.program.currentLevel = nextLevel;
-	console.log('updated to index',Settings.program.currentGameIndex, 'level',Settings.program.currentLevel)
+	//console.log('updated to index',Settings.program.currentGameIndex, 'level',Settings.program.currentLevel)
 }
 
 

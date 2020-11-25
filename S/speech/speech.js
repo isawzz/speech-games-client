@@ -52,6 +52,8 @@ class SpeechFeature {
 		});
 	}
 	recognize(word, lang, onMatch, onNoMatch) {
+		//timit.show('recognize')
+
 		this.setLanguage(lang);
 		this.record({
 			onFinal: (r, c) => {
@@ -105,14 +107,15 @@ class Recorder {
 		this.timeoutStart = this.timeoutFinal = this.timeoutEmpty = null;
 
 		recognition.onerror = ev => {
-			console.log('recorder onerror!!!, isCancelled', this.isCancelled);
+			if (RecogOutput) console.log('recorder onerror!!!, isCancelled', this.isCancelled);
 			this.isRunning = false;
-			console.error(ev);
+			if (RecogOutput) console.error(ev);
 			if (this.isCancelled) { return; }
 			if (this.retryOnError) setTimeout(() => this.rec.start(), 200);
 		};
 		recognition.onstart = ev => {
-			console.log('recorder onstart!!!, isCancelled', this.isCancelled);
+			//timit.show('onstart mic') 
+			if (RecogOutput) console.log('recorder onstart!!!, isCancelled', this.isCancelled);
 			if (this.isCancelled) { this.rec.abort(); return; }
 			MicrophoneShow();
 
@@ -122,10 +125,10 @@ class Recorder {
 			this.confidence = null;
 
 			if (this.startHandler) this.timeoutStart = setTimeout(() => this.startHandler(), this.delayAfterStarted);
-			console.log('recorder started!');
+			if (RecogOutput) console.log('recorder started!');
 		};
 		recognition.onresult = ev => {
-			console.log('recorder onresult!!!, isCancelled', this.isCancelled);
+			if (RecogOutput) console.log('recorder onresult!!!, isCancelled', this.isCancelled);
 			if (this.isCancelled) { this.rec.abort(); return; }
 			this.isFinal = ev.results[0].isFinal;
 			this.result = ev.results[0][0].transcript;
@@ -135,7 +138,7 @@ class Recorder {
 			if (this.isFinal && this.finalResultHandler) this.timeoutFinal = setTimeout(() => this.finalResultHandler(this.result, this.confidence), this.delayAfterFinalResult);
 		};
 		recognition.onend = ev => {
-			console.log('recorder ended!!!, isCancelled', this.isCancelled);
+			if (RecogOutput) console.log('recorder ended!!!, isCancelled', this.isCancelled);
 			MicrophoneHide();
 			if (!this.isFinal && this.emptyResultHandler) this.timeoutEmpty = setTimeout(() => this.emptyResultHandler(this.result, this.confidence), this.delayAfterEmptyResult);
 			if (this.languageChangeHandler) { this.languageChangeHandler(); this.languageChangeHandler = null; }
@@ -150,13 +153,13 @@ class Recorder {
 		this.emptyResultHandler = isdef(onEmpty) ? onEmpty.bind(this) : null;
 		this.delayAfterEmptyResult = isdef(delayEmpty) ? delayEmpty : 0;
 
-		console.log('start:', 'delay final', this.delayAfterFinalResult , 'delay Empty', this.delayAfterEmptyResult);
+		if (RecogOutput) console.log('start:', 'delay final', this.delayAfterFinalResult , 'delay Empty', this.delayAfterEmptyResult);
 
 		//console.log('start:', onStart, delayStart, onFinal,'delay final', delayFinal, onEmpty,'delay Empty', delayEmpty, retry)
 
 		this.retryOnError = retry;
 		if (this.interrupt()) return;
-		console.log('starting...');
+		if (RecogOutput) console.log('starting...');
 		//???bin nicht sicher ob hier schon isRunning=true setzen muss! https://stackoverflow.com/questions/44226827/how-to-know-if-webkitspeechrecognition-is-started sagt nein!
 		this.isRunning = true;
 		this.rec.start();
@@ -176,7 +179,7 @@ class Recorder {
 	}
 	setLanguage(lang) {
 		if (lang == 'E' && this.rec.lang == 'en-US' || lang == 'D' && this.rec.lang == 'de-DE') {
-			console.log('language already set to', lang);
+			if (RecogOutput) console.log('language already set to', lang);
 			return;
 		} else if (this.isRunning) {
 			this.languageChangeHandler = () => this.rec.lang = (lang == 'E' ? 'en-US' : 'de-DE');

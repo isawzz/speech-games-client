@@ -28,6 +28,7 @@ var Speech;
 
 // output showing
 var RecogOutput = true;
+var RecogOutputError = false;
 var RecogHighPriorityOutput = true;
 var SpeakerOutput = false;
 var ROUND_OUTPUT = false;

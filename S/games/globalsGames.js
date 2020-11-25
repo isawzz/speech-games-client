@@ -3,12 +3,12 @@ var pictureSize;
 function startGame(data) {
 
 	//stopAus(); continueResume();
-	GlobalSTOP = true;
-	if (isGameWithSpeechRecognition()) {
-		//ROUND_DELAY = 100;
-		Speech.ensureOff();
-		//MicrophoneHide();
-	} //else { ROUND_DELAY = 100; }
+	// GlobalSTOP = true;
+	// if (isGameWithSpeechRecognition()) {
+	// 	//ROUND_DELAY = 100;
+	// 	Speech.ensureOff();
+	// 	//MicrophoneHide();
+	// } //else { ROUND_DELAY = 100; }
 
 
 	// determineGame(data);
@@ -228,7 +228,7 @@ function showInstruction(text, cmd, title, isSpoken, spoken) {
 	dInstruction.addEventListener('click', () => aniInstruction(cmd + " " + text));
 	if (!isSpoken) return;
 
-	Speech.say(isdef(spoken) ? spoken : (cmd + " " + text), .7, 1, .7, true, 'random'); //,()=>{console.log('JUST SAID IT')});
+	Speech.say(isdef(spoken) ? spoken : (cmd + " " + text), .7, 1, .7,'random'); //,()=>{console.log('JUST SAID IT')});
 
 }
 function activateUi() {
@@ -305,7 +305,7 @@ function failPictureGoal(withComment = true) {
 
 	if (withComment && !skipAnimations) {
 		const comments = (currentLanguage == 'E' ? ['too bad'] : ["aber geh'"]);
-		Speech.say(chooseRandom(comments), 1, 1, .8, true, 'zira', () => { console.log('FERTIG FAIL!!!!'); });
+		Speech.say(chooseRandom(comments), 1, 1, .8, 'zira', () => { console.log('FERTIG FAIL!!!!'); });
 	}
 	if (isdef(Selected) && isdef(Selected.feedbackUI)) {
 		//console.log('selected', Selected, 'x', mBy('dX'))
@@ -386,11 +386,11 @@ function stopAus() {
 	clearProgramTimer();
 	pauseUI();
 
-	if (isGameWithSpeechRecognition()) {
-		//ROUND_DELAY = 2000;
-		Speech.ensureOff();
-		//MicrophoneHide();
-	} //else { ROUND_DELAY = 100; }
+	// if (isGameWithSpeechRecognition()) {
+	// 	//ROUND_DELAY = 2000;
+	// 	Speech.ensureOff();
+	// 	//MicrophoneHide();
+	// } //else { ROUND_DELAY = 100; }
 }
 function continueResume() {
 	restartProgramTimer(); resumeUI();
@@ -557,7 +557,7 @@ function addNthInputElement(dParent, n) {
 	return dInp;
 }
 function aniInstruction(text) {
-	Speech.say(text, .7, 1, .7, false, 'random', () => { console.log('HA!') });
+	Speech.say(text, .7, 1, .7, 'random', () => { console.log('HA!') });
 	mClass(dInstruction, 'onPulse');
 	setTimeout(() => mRemoveClass(dInstruction, 'onPulse'), 500);
 
@@ -619,7 +619,7 @@ function showCorrectWord(sayit = true) {
 	if (!sayit || skipAnimations) return;
 
 	let correctionPhrase = isdef(Goal.correctionPhrase) ? Goal.correctionPhrase : bestWord;
-	Speech.say(correctionPhrase, .4, 1.2, 1, true, 'david');
+	Speech.say(correctionPhrase, .4, 1.2, 1, 'david');
 }
 function showLevel() { dLevel.innerHTML = 'level: ' + currentLevel; }
 function showGameTitle() { dGameTitle.innerHTML = GFUNC[currentGame].friendlyName; }

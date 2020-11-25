@@ -29,22 +29,23 @@ function trialPromptSP(nTrial) {
 	//showFleetingMessage('Say again!',0,{fz:80,fg:'red'});
 	let phrase = nTrial<2?(currentLanguage == 'E' ? 'speak UP!!!' : 'LAUTER!!!')
 	:(currentLanguage == 'E' ? 'Louder!!!' : 'LAUTER!!!');
-	Speech.say(phrase, 1, 1, 1, true, 'zira');
+	Speech.say(phrase, 1, 1, 1, 'zira');
 	animate(dInstruction, 'pulse800' + getSignalColor(), 500);
 	return 10;
 }
 async function activateSP() {
-	if (Speech.speaker.isSpeakerRunning) {
+	if (Speech.isSpeakerRunning()) {
 		setTimeout(activateSP, 200);
 	} else {
-		setTimeout(() => Speech.recognize(bestWord, currentLanguage, evaluate, evaluate), 100);
+		// setTimeout(() => Speech.recognize(bestWord, currentLanguage, evaluate, evaluate), 0);
+		setTimeout(() => Speech.startRecording(currentLanguage, evaluate), 0);
 	}
 	//orig code:
 	// setTimeout(() => {
 	// 	record(currentLanguage, bestWord);
 	// }, trialNumber == 0 ? 4000 : 1500);
 }
-function evalSP(speechResult, confidence) {
+function evalSP(isfinal, speechResult, confidence) {
 
 	console.log('!!!!!!!!!!!!!!!!EVAL SPEECH!!!!!!!!!!!!!!')
 	// if (isEmpty(speechResult)) {

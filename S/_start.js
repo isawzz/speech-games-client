@@ -4,6 +4,7 @@ window.onload = loadHistory;
 async function SessionStart() {
 	//zTesting();
 	if (CLEAR_LOCAL_STORAGE) localStorage.clear();
+	//timit = new TimeIt('hallo ' + USE_LOCAL_STORAGE);
 
 	await loadAssets(); ensureSymBySet(); makeHigherOrderGroups(); await loadBestKeys();
 
@@ -18,7 +19,7 @@ async function SessionStart() {
 function _startSpeechTraining() {
 
 	initTable();
-	Speech = new SpeechFeature(1, 'E');
+	Speech = new Speech2('E'); ///new SpeechFeature(1, 'E');
 
 	//testConf2(); return;
 	//testConfidence();return;
@@ -53,7 +54,7 @@ async function _startPlaying() {
 
 	if (nundef(CurrentSessionData)) CurrentSessionData = { user: currentUser, games: [] };
 
-	Speech = new SpeechFeature(1, 'E'); 
+	Speech = new Speech2('E'); //new SpeechFeature(1, 'E'); 
 	KeySets = getKeySets();
 
 	if (SHOW_FREEZER) show('freezer'); else startUnit();

@@ -27,7 +27,7 @@ function promptWP() {
 	return 10;
 }
 function trialPromptWP() {
-	Speech.say(currentLanguage == 'E' ? 'try again!' : 'nochmal', 1, 1, .8, true, 'zira');
+	Speech.say(currentLanguage == 'E' ? 'try again!' : 'nochmal', 1, 1, .8, 'zira');
 	mLinebreak(dTable);
 	inputBox = addNthInputElement(dTable, trialNumber);
 	defaultFocusElement = inputBox.id;

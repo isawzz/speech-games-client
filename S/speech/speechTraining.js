@@ -284,9 +284,9 @@ async function speechTraining() {
 					);
 
 					//say the word
-					setTimeout(() => Speech.say(req, .4, .9, 1, false, 'random'), t + 1000);
-					setTimeout(() => Speech.say(req, .3, .9, 1, false, 'random'), t + 4000);
-					//setTimeout(() => Speech.say(req, .7, .5, 1, false, 'random'), t + 7000);
+					setTimeout(() => Speech.say(req, .4, .9, 1, 'random'), t + 1000);
+					setTimeout(() => Speech.say(req, .3, .9, 1, 'random'), t + 4000);
+					//setTimeout(() => Speech.say(req, .7, .5, 1, 'random'), t + 7000);
 					setTimeout(() => Speech.stopRecording(), t + 7000)
 					//eval recognized word
 					//if recognized word == wToBe Said

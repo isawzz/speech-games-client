@@ -136,7 +136,7 @@ function scoring(isCorrect) {
 
 	if (scoringMode == 'adapt' && levelChange == 0) {
 
-		console.assert(levelChange == 0 && nextLevel == currentLevel, "adapt scoringMode but altered levelChange or nextLevel!!!")
+		//console.assert(levelChange == 0 && nextLevel == currentLevel, "adapt scoringMode but altered levelChange or nextLevel!!!")
 
 		// look at this level history:
 		let items = CurrentLevelData.items;
@@ -146,7 +146,7 @@ function scoring(isCorrect) {
 		let negSeq = neg > 0 && NegInARow >= neg;
 		let hasLabels = Settings.program.labels;
 
-		console.log('streaks:', '+', posSeq, '-', negSeq)
+		//console.log('streaks:', '+', posSeq, '-', negSeq)
 
 		if (posSeq && hasLabels && Settings.program.showLabels == 'toggle') { PosInARow = 0; Settings.program.labels = false; }
 		else if (posSeq) { levelChange = 1; nextLevel += 1; PosInARow = 0; }
