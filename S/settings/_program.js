@@ -28,9 +28,14 @@ async function loadProgram() {
 	if (isString(Settings.program.currentGameIndex)) { Settings.program.currentGameIndex = Number(Settings.program.currentGameIndex); }
 	if (nundef(Settings.program.currentGameIndex)) { Settings.program.currentGameIndex = 0; }
 
+
 	//Settings.program.currentLevel = localStorage.getItem('Settings.program.currentLevel');
 	if (isString(Settings.program.currentLevel)) { Settings.program.currentLevel = Number(Settings.program.currentLevel); }
-	if (nundef(Settings.program.currentLevel)) { Settings.program.currentLevel = gameSequence[Settings.program.currentGameIndex].startLevel; }
+	if (nundef(Settings.program.currentLevel)) { Settings.program.currentLevel = 0; } //gameSequence[Settings.program.currentGameIndex].startLevel_; }
+
+
+
+	if (RESTART_EACH_TIME) Settings.program.currentLevel = Settings.program.currentGameIndex = 0;
 
 	//friendly output
 	let i = 0;
@@ -45,7 +50,7 @@ async function loadProgram() {
 
 function saveProgram() {
 	//console.log('HAAAAAAAAAAAAAAAAAAAAAAALO')
-	updateGameSequence(currentLevel);
+	//updateGameSequence_(currentLevel);
 	localStorage.setItem('settings', JSON.stringify(Settings));
 	// saveSettingsUi();
 	// localStorage.setItem('Settings.program.currentGameIndex', Settings.program.currentGameIndex.toString());
@@ -54,12 +59,13 @@ function saveProgram() {
 }
 
 function updateGameSequence(nextLevel) {
-	//console.log('updateGameSequence nextLevel',nextLevel, 'MAXLEVEL',MAXLEVEL)
-	if (nextLevel > MAXLEVEL) {
+	console.log('updateGameSequence_ nextLevel',nextLevel, 'MaxLevel',MaxLevel)
+	if (nextLevel > MaxLevel) {
 		let gameSequence = Settings.program.gameSequence;
 		Settings.program.currentGameIndex = (Settings.program.currentGameIndex + 1) % gameSequence.length;
-		Settings.program.currentLevel = gameSequence[Settings.program.currentGameIndex].startLevel;
+		Settings.program.currentLevel = 0; // gameSequence[Settings.program.currentGameIndex].startLevel_;
 	} else Settings.program.currentLevel = nextLevel;
+	console.log('updated to index',Settings.program.currentGameIndex, 'level',Settings.program.currentLevel)
 }
 
 

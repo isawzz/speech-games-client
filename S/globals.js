@@ -1,6 +1,7 @@
 const IS_TESTING = false; // false | true
 
 //common for all games and users / control flow
+const RESTART_EACH_TIME = true; // restarts program at begin instead of continuing where left off
 const EXPERIMENTAL = IS_TESTING;
 const CLEAR_LOCAL_STORAGE = false;
 const immediateStart = true;  // false | true
@@ -13,13 +14,13 @@ var StepByStepMode = false; // wartet auf click next um wieder zu starten!
 var skipAnimations = IS_TESTING; // false | true
 var skipAniGameOver = true; // IS_TESTING;
 var skipBadgeAnimation = true;
-var MAXLEVEL = 10;
+//var MAXLEVEL = 10;
 var MaxLevel; //game dependent!
 var KeySets, GameInfo, LevelInfo;
 
 // delays
 var DELAY = 1000;
-var ROUND_DELAY = 500;
+var ROUND_DELAY = 300;
 var DELAY_BETWEEN_MIKE_AND_SPEECH = 2000;
 var fleetingMessageTimeout;
 

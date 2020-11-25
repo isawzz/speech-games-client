@@ -29,7 +29,7 @@ function startRoundST() {
 	uiActivated = false;
 }
 function promptST() {
-	showPictures(false, registerStepAndNext);
+	showPictures(registerStepAndNext);
 	setGoal();
 	showInstruction(bestWord, 'click', dTitle, true);
 	iStep = 0;

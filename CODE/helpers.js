@@ -3863,7 +3863,8 @@ function allLettersContained(sFull, sPart) {
 	return true;
 }
 function normalize(text, language) {
-	text = text.toLowerCase();
+	if (isEmpty(text)) return '';
+	text = text.toLowerCase().trim();
 	if (language == 'D') {
 		text = convertUmlaute(text);
 	}

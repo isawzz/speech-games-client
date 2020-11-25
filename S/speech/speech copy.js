@@ -7,9 +7,7 @@ class SpeechFeature {
 	}
 
 	ensureOff(){
-		this.recorder.isCancelled = true;
-		MicrophoneHide();
-		//this.recorder.interrupt();
+		this.recorder.interrupt();
 	}
 	setLanguage(lang) {
 		if (this.lang != lang) {
@@ -19,7 +17,6 @@ class SpeechFeature {
 		}
 	}
 	record({ onStart, delayStart, onFinal, delayFinal, onEmpty, delayEmpty, lang, retry = false, wait = true, interrupt = false } = {}) {
-		this.recorder.isCancelled = false;
 		if (this.recorder.isRunning) {
 			if (interrupt) {
 				this.recorder.interrupt();
@@ -86,15 +83,13 @@ class Recorder {
 		recognition.maxAlternatives = 5;
 		this.setLanguage(lang); //recognition.lang = 'en-US' ;
 		this.isRunning = false;
-		this.isCancelled = false;
-
+		this.isCanceled = false;
 		this.startHandler = null;
 		this.delayAfterStarted = 0;
 		this.finalResultHandler = null;
 		this.delayAfterFinalResult = 0;
 		this.emptyResultHandler = null;
 		this.delayAfterEmptyResult = 0;
-		
 		this.languageChangeHandler = null;
 
 		this.retryOnError = false;
@@ -105,17 +100,11 @@ class Recorder {
 		this.timeoutStart = this.timeoutFinal = this.timeoutEmpty = null;
 
 		recognition.onerror = ev => {
-			console.log('recorder onerror!!!, isCancelled',this.isCancelled);
 			this.isRunning = false;
 			console.error(ev);
-			if (this.isCancelled) { return; }
 			if (this.retryOnError) setTimeout(() => this.rec.start(), 200);
 		};
 		recognition.onstart = ev => {
-			console.log('recorder onstart!!!, isCancelled',this.isCancelled);
-			if (this.isCancelled) { this.rec.abort(); return; }
-			MicrophoneShow();
-
 			this.isRunning = true;
 			this.result = null;
 			this.isFinal = null;
@@ -125,20 +114,17 @@ class Recorder {
 			console.log('recorder started!');
 		};
 		recognition.onresult = ev => {
-			console.log('recorder onresult!!!, isCancelled',this.isCancelled);
-			if (this.isCancelled) { this.rec.abort(); return; }
 			this.isFinal = ev.results[0].isFinal;
 			this.result = ev.results[0][0].transcript;
 			this.confidence = ev.results[0][0].confidence;
 			//console.log('recorder got ' + (this.isFinal ? 'FINAL' : '') + ' result:', this.result, '(' + this.confidence + ')');
-			if (this.isFinal) {		MicrophoneHide();				this.rec.stop();}
+			if (this.isFinal) this.rec.stop();
 			if (this.isFinal && this.finalResultHandler) this.timeoutFinal = setTimeout(() => this.finalResultHandler(this.result, this.confidence), this.delayAfterFinalResult);
 		};
 		recognition.onend = ev => {
-			console.log('recorder ended!!!, isCancelled',this.isCancelled);
+			console.log('recorder ended!!');
 			if (!this.isFinal && this.emptyResultHandler) this.timeoutEmpty = setTimeout(() => this.emptyResultHandler(this.result, this.confidence), this.delayAfterEmptyResult);
 			if (this.languageChangeHandler) { this.languageChangeHandler(); this.languageChangeHandler = null; }
-			MicrophoneHide();
 			this.isRunning = false;
 		};
 	}

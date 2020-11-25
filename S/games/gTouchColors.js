@@ -3,34 +3,20 @@ const SIMPLE_COLORS = ['red', 'green', 'yellow', 'blue'];
 const EXTENDED_COLORS = ['red', 'green', 'yellow', 'blue', 'pink', 'indigo', 'gray', 'sienna', 'olive'];
 
 var NumColors;
-const LevelsTC = {
-	0: { NumColors: 2, NumPics: 2, NumLabels: 4, MinWordLength: 2, MaxWordLength: 5, MaxNumTrials: 1 },
-	1: { NumColors: 2, NumPics: 3, NumLabels: 6, MinWordLength: 3, MaxWordLength: 6, MaxNumTrials: 1 },
-	2: { NumColors: 3, NumPics: 2, NumLabels: 6, MinWordLength: 3, MaxWordLength: 7, MaxNumTrials: 1 },
-	3: { NumColors: 3, NumPics: 3, NumLabels: 9, MinWordLength: 4, MaxWordLength: 7, MaxNumTrials: 1 },
-	4: { NumColors: 3, NumPics: 3, NumLabels: 7, MinWordLength: 4, MaxWordLength: 14, MaxNumTrials: 2 },
-	5: { NumColors: 2, NumPics: 2, NumLabels: 2, MinWordLength: 4, MaxWordLength: 8, MaxNumTrials: 1 },
-	6: { NumColors: 2, NumPics: 2, NumLabels: 0, MinWordLength: 4, MaxWordLength: 9, MaxNumTrials: 1 },
-	7: { NumColors: 3, NumPics: 3, NumLabels: 5, MinWordLength: 5, MaxWordLength: 10, MaxNumTrials: 2 },
-	8: { NumColors: 3, NumPics: 3, NumLabels: 3, MinWordLength: 5, MaxWordLength: 11, MaxNumTrials: 2 },
-	9: { NumColors: 3, NumPics: 3, NumLabels: 0, MinWordLength: 6, MaxWordLength: 12, MaxNumTrials: 2 },
-	10: { NumColors: 4, NumPics: 4, NumLabels: 0, MinWordLength: 6, MaxWordLength: 13, MaxNumTrials: 3 },
-}
 function startGameTC() { }
 function startLevelTC() { levelTC(); }
-function levelTC() {
-	let levelInfo = LevelsTC[currentLevel];
-	MaxNumTrials = levelInfo.MaxNumTrials;
-	MaxWordLength = levelInfo.MaxWordLength;
-	MinWordLength = levelInfo.MinWordLength;
-	setKeys(currentCategories, true);
+function levelTC(){
+	MaxNumTrials = getGameOrLevelInfo('trials', 2);
+	let vinfo = getGameOrLevelInfo('vocab', 100);
 
-	//remove all words that have a color in key
+	currentKeys = isNumber(vinfo) ? KeySets['best' + getGameOrLevelInfo('vocab', 100)] : setKeys(vinfo);
 	currentKeys = currentKeys.filter(x => containsColorWord(x));
 
-	NumPics = levelInfo.NumPics;
-	NumLabels = levelInfo.NumLabels;
-	NumColors = levelInfo.NumColors;
+	NumPics = getGameOrLevelInfo('numPics', 3);
+	NumColors = getGameOrLevelInfo('numColors', NumColors); 
+	NumLabels = getGameOrLevelInfo('numLabels', NumPics*NumColors); 
+
+	// console.log(NumPics,NumLabels,NumColors)
 }
 function startRoundTC() {
 	uiActivated = false;
@@ -40,7 +26,7 @@ function promptTC() {
 
 	let [colorlist, shade] = ensureColors();
 	let colors = choose(colorlist, NumColors);
-	showPictures(false, evaluate, { colors: colors, overlayShade: shade });
+	showPictures(evaluate, { colors: colors, overlayShade: shade });
 
 	setGoal(randomNumber(0, NumPics * colors.length - 1));
 	Goal.correctionPhrase = Goal.shade + ' ' + Goal.label;

@@ -4,19 +4,14 @@ program: #TODO: make this a list with ids
   # toggle: first half of level: labels, second half of level: no labels
   # TODO: individual adaptive: label toggle per word
   showLabels: toggle #always never toggle
-  incrementLevelOnPositiveStreak: 4
+  incrementLevelOnPositiveStreak: 1
   decrementLevelOnNegativeStreak: 2
   gameSequence:
-    - game: gTouchPic
-      startLevel: 0
-    - game: gMissingLetter
-      startLevel: 0
-    - game: gTouchColors
-      startLevel: 0
-    - game: gWritePic
-      startLevel: 0
     - game: gSayPic
-      startLevel: 0
+    - game: gTouchPic
+    # - game: gTouchColors
+    # - game: gMissingLetter
+    # - game: gWritePic
   currentGameIndex: 0
   currentLevel: 0
 common:
@@ -93,142 +88,54 @@ games:
         numMissing: 5
         posMissing: random
   gTouchColors:
-    color: green
+    color: '#bfef45'
     contrast: 0.32
     colors:
       - red
       - blue
       - yellow
       - green
+    trials: 2
     levels:
       0: 
         vocab: 25
         numPics: 2
-        trials: 2
+        numColors: 2
       1: 
         vocab: 25
         numPics: 3
-        trials: 2
+        numColors: 3
       2: 
-        vocab: 25
+        vocab: 50
         numPics: 4
-        trials: 2
+        numColors: 3
       3: 
-        vocab: 25
-        numPics: 6
-        trials: 2
-      4: 
-        vocab: 25
-        numPics: 8
-        trials: 2
-      5: 
-        vocab: 50
-        numPics: 9
-        trials: 2
-      6: 
-        vocab: 50
-        numPics: 16
-        trials: 2
-      7: 
         vocab: 75
-        numPics: 25
-        trials: 2
-      8: 
+        numPics: 4
+        numColors: 4
+      4: 
         vocab: 100
-        numPics: 36
-        trials: 2
-      9: 
-        vocab: 100
-        numPics: 49
-        trials: 2
+        numPics: 5
+        numColors: 4
   gSayPic:
-    levels:
-      0: 
-        vocab: 25
-        numPics: 2
-        trials: 2
-      1: 
-        vocab: 25
-        numPics: 3
-        trials: 2
-      2: 
-        vocab: 25
-        numPics: 4
-        trials: 2
-      3: 
-        vocab: 25
-        numPics: 6
-        trials: 2
-      4: 
-        vocab: 25
-        numPics: 8
-        trials: 2
-      5: 
-        vocab: 50
-        numPics: 9
-        trials: 2
-      6: 
-        vocab: 50
-        numPics: 16
-        trials: 2
-      7: 
-        vocab: 75
-        numPics: 25
-        trials: 2
-      8: 
-        vocab: 100
-        numPics: 36
-        trials: 2
-      9: 
-        vocab: 100
-        numPics: 49
-        trials: 2
-    color: deeppink
+    color: '#4363d8'
+    vocab: 75
+    trials: 3
   gWritePic:
     color: '#bfef45'
+    trials: 3
     levels:
       0: 
-        vocab: 25
-        numPics: 2
-        trials: 2
+        vocab: 100
+        maxWordLength: 4
       1: 
-        vocab: 25
-        numPics: 3
-        trials: 2
+        vocab: 100
+        maxWordLength: 6
       2: 
-        vocab: 25
-        numPics: 4
-        trials: 2
+        vocab: 100
+        maxWordLength: 8
       3: 
-        vocab: 25
-        numPics: 6
-        trials: 2
-      4: 
-        vocab: 25
-        numPics: 8
-        trials: 2
-      5: 
-        vocab: 50
-        numPics: 9
-        trials: 2
-      6: 
-        vocab: 50
-        numPics: 16
-        trials: 2
-      7: 
-        vocab: 75
-        numPics: 25
-        trials: 2
-      8: 
         vocab: 100
-        numPics: 36
-        trials: 2
-      9: 
-        vocab: 100
-        numPics: 49
-        trials: 2
-      
-#     levels: #changes to common for specific levels
-#     - 0:
-#         colors: [red, yellow]
+        maxWordLength: 100
+
       

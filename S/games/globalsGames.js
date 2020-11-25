@@ -1,33 +1,22 @@
 var pictureSize;
 
-function getCurrentColor(game) {
-
-	let color = 'orange';
-	let colorName = Settings.games[game].color;
-	if (nundef(colorName)) {
-		console.log('color is undefined!!!!!!!!!!!!!!!!')
-
-	} else if (isdef(window[colorName])) { color = window[colorName]; }
-	else color = colorName;
-
-	//console.log('===>currentColor',currentColor)
-	return color;
-}
-function getCurrentLevel(game) {
-	let level = Settings.program.currentLevel > MaxLevel ? startAtLevel[currentGame] : Settings.program.currentLevel;
-	return level;
-}
-
 function startGame(data) {
 
-	stopAus(); continueResume();
+	//stopAus(); continueResume();
+	GlobalSTOP = true;
+	if (isGameWithSpeechRecognition()) {
+		//ROUND_DELAY = 100;
+		Speech.ensureOff();
+		MicrophoneHide();
+	} //else { ROUND_DELAY = 100; }
+
 
 	// determineGame(data);
 	//console.log('Settings',Settings)
 	currentGame = Settings.program.gameSequence[Settings.program.currentGameIndex].game;
 	GameInfo = Settings.games[currentGame];
 	LevelInfo = GameInfo.levels;
-	MaxLevel = isdef(LevelInfo) ? Object.keys(LevelInfo).length-1 : isdef(GameInfo).maxLevel ? GameInfo.maxLevel : MAXLEVEL;
+	MaxLevel = 0;//// isdef(LevelInfo) ? Object.keys(LevelInfo).length - 1 : isdef(GameInfo).maxLevel ? GameInfo.maxLevel : 0;
 	//console.log(typeof LevelInfo, LevelInfo, 'MaxLevel',MaxLevel);
 
 	currentColor = getCurrentColor(currentGame);
@@ -69,6 +58,7 @@ function startLevel(level) {
 }
 function startRound() {
 	setTimeout(() => startRoundReally(), ROUND_DELAY);
+	//ROUND_DELAY = 300;
 }
 function startRoundReally() {
 	// console.log('from', getFunctionsNameThatCalledThisFunction())
@@ -112,7 +102,7 @@ function promptNextTrial() {
 	beforeActivationUI();
 	//console.log('promptNextTrial',uiPaused)
 
-	let delay = GFUNC[currentGame].trialPrompt();
+	let delay = GFUNC[currentGame].trialPrompt(trialNumber);
 	setTimeout(activateUi, delay);
 }
 function selectWord(info, bestWordIsShortest, except = []) {
@@ -129,7 +119,7 @@ function selectWord(info, bestWordIsShortest, except = []) {
 
 	return w;
 }
-function showPictures(bestWordIsShortest, onClickPictureHandler, { colors, overlayShade } = {}, keys, labels) {
+function showPictures(onClickPictureHandler, { colors, overlayShade } = {}, keys, labels) {
 	Pictures = [];
 
 	if (nundef(keys)) keys = choose(currentKeys, NumPics);
@@ -140,7 +130,7 @@ function showPictures(bestWordIsShortest, onClickPictureHandler, { colors, overl
 	if (nundef(labels)) {
 		labels = [];
 		for (const info of infos) {
-			labels.push(selectWord(info, bestWordIsShortest, labels));
+			labels.push(info.best); //selectWord(info, bestWordIsShortest, labels));
 		}
 	}
 	//console.log('labels', labels)
@@ -274,7 +264,8 @@ function evaluate() {
 	// 	else trainNextGroup();
 	// } else 
 
-	//console.log('HAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA',LevelChange, DELAY)
+	//console.log('HAAAAAAAAAAAA1AAAAAAAAAAAAAAAAAA',LevelChange, DELAY)
+	updateGameSequence(currentLevel);
 	if (LevelChange != 0) saveProgram();
 
 
@@ -290,16 +281,16 @@ function proceedIfNotStepByStep(nextLevel) {
 	//else if (isdef(nextLevel) && nextLevel != currentLevel) { currentLevel = nextLevel; }
 }
 function proceed(nextLevel) {
-	//console.log('proceedAfterLevelChange', currentLevel, MAXLEVEL)
+	//console.log('proceedAfterLevelChange', currentLevel, MaxLevel)
 	if (nundef(nextLevel)) nextLevel = currentLevel;
 
-	updateGameSequence(nextLevel);
+	//updateGameSequence_(nextLevel);
 	//console.log('...timer:', ProgTimeIsUp)
 	if (ProgTimeIsUp && LevelChange) {
 		gameOver('Great job! Time for a break!');
 		return;
 	}
-	if (nextLevel > MAXLEVEL) {
+	if (nextLevel > MaxLevel) {
 		if (Settings.program.currentGameIndex >= Settings.program.gameSequence.length) {
 			gameOver('Congratulations! You are done!');
 		} else {
@@ -337,7 +328,7 @@ function successPictureGoal(withComment = true) {
 //#region game over
 function gameOver(msg) {
 
-	//?saveProgram();
+	//?saveProgram_();
 	//console.log('ENDING AT', currentGame, currentLevel)
 	setTimeout(aniGameOver(msg), DELAY);
 	SessionScoreSummary = scoreSummary();
@@ -396,10 +387,10 @@ function stopAus() {
 	pauseUI();
 
 	if (isGameWithSpeechRecognition()) {
-		ROUND_DELAY = 2000;
+		//ROUND_DELAY = 2000;
 		Speech.ensureOff();
-		MicrophoneHide();
-	} else { ROUND_DELAY = 100; }
+		//MicrophoneHide();
+	} //else { ROUND_DELAY = 100; }
 }
 function continueResume() {
 	restartProgramTimer(); resumeUI();
@@ -469,7 +460,38 @@ function levelStep13() {
 }
 //#endregion
 
-//#region key selection: setKeys
+//#region key selection: setKeys_
+function setKeys({ lang, nbestOrCats, filterFunc, confidence, sortByFunc } = {}) {
+	//needs to set: info.best
+
+	let nbest, cats;
+	if (isNumber(nbestOrCats)) { nbest = nbestOrCats; }
+	else cats = nbestOrCats;
+
+	let keys = [];
+	if (isdef(nbest)) {
+		let setname = 'best' + nbest;
+		keys = jsCopy(KeySets[setname]);
+	} else {
+		if (nundef(cats)) cats = 'nosymbols';
+		if (isString(cats)) cats = [cats];
+		keys = setCategories(cats);
+	}
+
+	let result = [];
+	for (const k of keys) {
+		let info = symbolDict[k];
+		let klang = 'best' + lang;
+		if (nundef(info[klang])) info.klang = lastOfLanguage(k, lang);
+		info.best = info[klang];
+		let isMatch = true;
+		if (isdef(filterFunc)) isMatch = isMatch && filterFunc(k, info.best);
+		if (isdef(confidence)) isMatch = info[klang + 'Conf'] >= confidence;
+		if (isMatch) { result.push(k); }
+	}
+	if (isdef(sortByFunc)) { sortBy(result, sortByFunc); }
+	return result;
+}
 function getKeySets() {
 	let allKeys = symKeysBySet.nosymbols;
 	let keys = allKeys.filter(x => isdef(symbolDict[x].best100));
@@ -508,13 +530,13 @@ function setKeysNew({ cats, lang, wShortest = false, wLast = false, wBest = fals
 	currentKeys = getKeySetSimple(cats, lang, opt);
 	//console.log('set keys:' + currentKeys.length);
 }
-function setKeys(cats, bestOnly, sortAccessor, correctOnly, reqOnly) {
+function setKeys_dep(cats, bestOnly, sortAccessor, correctOnly, reqOnly) {
 	//console.log(currentLanguage)
 	if (currentLanguage == 'E' && cats == 'SIMPLE') {
 		currentKeys = BestKeysSets[best100];
 		return;
 	}
-	if (isdef(cats) && !isList(cats)) cats=[cats];
+	if (isdef(cats) && !isList(cats)) cats = [cats];
 	currentKeys = getKeySetX(isdef(cats) ? cats : currentCategories, currentLanguage, MinWordLength, MaxWordLength,
 		bestOnly, sortAccessor, correctOnly, reqOnly);
 	if (isdef(sortByFunc)) { sortBy(currentKeys, sortAccessor); }
@@ -618,6 +640,24 @@ function getGameOrLevelInfo(k, defval) {
 }
 
 //#endregion
+
+function getCurrentColor(game) {
+
+	let color = 'orange';
+	let colorName = Settings.games[game].color;
+	if (nundef(colorName)) {
+		console.log('color is undefined!!!!!!!!!!!!!!!!')
+
+	} else if (isdef(window[colorName])) { color = window[colorName]; }
+	else color = colorName;
+
+	//console.log('===>currentColor',currentColor)
+	return color;
+}
+function getCurrentLevel(game) {
+	let level = Settings.program.currentLevel > MaxLevel ? MaxLevel : Settings.program.currentLevel;
+	return level;
+}
 
 
 

@@ -7,6 +7,8 @@ async function SessionStart() {
 
 	await loadAssets(); ensureSymBySet(); makeHigherOrderGroups(); await loadBestKeys();
 
+	//console.log(symbolDict); return;
+
 	// iconViewerTestKeysets();
 	//setTimeout(_startSpeechTraining, 2000);	return;
 	//_startSpeechTraining(); return;

@@ -109,8 +109,8 @@ function toggleSettings() { if (isVisible2('dSettings')) closeSettings(); else o
 function onClickRestartProgram() {
 
 	Settings.program.currentGameIndex = 0;
-	Settings.program.currentLevel = currentLevel = Settings.program.gameSequence[0].startLevel;
-	updateGameSequence(Settings.program.currentLevel);
+	Settings.program.currentLevel = currentLevel = 0; //Settings.program.gameSequence[0].startLevel_;
+	//updateGameSequence_(Settings.program.currentLevel);
 
 	//console.log('Settings', Settings.program)
 

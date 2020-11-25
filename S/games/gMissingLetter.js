@@ -5,8 +5,8 @@ function startLevelML() { levelML(); }
 function levelML() {
 	MaxNumTrials = getGameOrLevelInfo('trials', 3);
 	let vinfo = getGameOrLevelInfo('vocab', 100);
-	console.log(vinfo, typeof vinfo);
-	currentKeys = isNumber(vinfo) ? KeySets['best' + getGameOrLevelInfo('vocab', 100)] : setKeys(vinfo);
+	//console.log(vinfo, typeof vinfo);
+	currentKeys = setKeys({ lang: currentLanguage, nbestOrCats: vinfo });
 	NumPics = 1;
 	NumMissingLetters = getGameOrLevelInfo('numMissing', 1);
 	let pos = getGameOrLevelInfo('posMissing', 'random');
@@ -17,7 +17,7 @@ function levelML() {
 function startRoundML() { }
 
 function promptML() {
-	showPictures(false, () => fleetingMessage('just enter the missing letter!'));
+	showPictures(() => fleetingMessage('just enter the missing letter!'));
 	setGoal();
 
 	showInstruction(bestWord, currentLanguage == 'E' ? 'complete' : "ergänze", dTitle, true);

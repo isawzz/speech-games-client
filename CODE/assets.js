@@ -418,8 +418,10 @@ async function loadBestKeys() {
 	for (const setname in BestKeySets) {
 		for (const k of BestKeySets[setname]) {
 			let info = symbolDict[k];
+			if (nundef(info.bestE)) info.bestE = lastOfLanguage(k,'E');
+			if (nundef(info.bestD)) info.bestD = lastOfLanguage(k,'D');
 			//console.log(info)
-			info[setname] = lastOfLanguage(k, 'E');
+			info[setname] = {E:info.bestE, D:info.bestD};
 		}
 	}
 	// for(const k of BestKeySets.best50){
