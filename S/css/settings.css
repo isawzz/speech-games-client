@@ -20,14 +20,42 @@
 .gameImage{
 	border-radius:8px;
 }
-#dSettings{
+/* #dSettings{
 	position: fixed;
 	left: 1%;
 	top: 1%;
-	height: 98%;
-	width: 98%;
+	display: flex;
+	flex-direction: column;
+} */
+/* #dNewSettings{
+	min-height: 800px;	
+	min-width: 98%;
+	margin: 1%;
 	color: green;
 	background:rgb(193, 247, 193);
+}
+#dOldSettings{
+	min-height: 800px;	
+	min-width: 98%;
+	margin: 1%;
+	color: green;
+	background:rgb(193, 247, 193);
+}*/
+textarea{
+	min-height: 800px;
+} 
+#dSettings{
+	/* overflow: scroll; */
+	position: absolute;
+	left: 1%;
+	top: 1%;
+	min-height: 98%;
+	min-width: 98%;
+	color: green;
+	background:rgb(193, 247, 193);
+}
+#dNewSettings{
+	height: 800px;
 }
 .fsc{
 	height:290px;

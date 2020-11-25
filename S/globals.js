@@ -4,7 +4,7 @@ const IS_TESTING = false; // false | true
 const RESTART_EACH_TIME = true; // restarts program at begin instead of continuing where left off
 const EXPERIMENTAL = IS_TESTING;
 const CLEAR_LOCAL_STORAGE = false;
-const immediateStart = true;  // false | true
+const immediateStart = false;  // false | true
 const SHOW_FREEZER = false; // !IS_TESTING;
 const OFFLINE = true; // uses localhost instead of heroku
 
