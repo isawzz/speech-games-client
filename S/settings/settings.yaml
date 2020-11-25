@@ -126,7 +126,23 @@ games:
         trials: 2
   gMissingLetter:
     color: gold
-    numMissingInc: 1
+    vocab: 100
+    levels:
+      0:
+        numMissing: 1
+        posMissing: start
+      1:
+        numMissing: 1
+        posMissing: start
+      2:
+        numMissing: 1
+        posMissing: start
+      3:
+        numMissing: 1
+        posMissing: start
+      4:
+        numMissing: 1
+        posMissing: start
   gSayPic:
     levels:
       0: 
