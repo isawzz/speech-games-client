@@ -52,6 +52,7 @@ async function _startPlaying() {
 	if (nundef(CurrentSessionData)) CurrentSessionData = { user: currentUser, games: [] };
 
 	Speech = new SpeechFeature(1, 'E'); 
+	KeySets = getKeySets();
 
 	if (SHOW_FREEZER) show('freezer'); else startUnit();
 }

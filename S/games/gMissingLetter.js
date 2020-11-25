@@ -16,17 +16,11 @@ const LevelsML = {
 function startGameML() { }
 function startLevelML() { levelML(); }
 function levelML() {
-	let levelInfo = LevelsML[currentLevel];
-	MaxNumTrials = levelInfo.MaxNumTrials;
-	MaxWordLength = levelInfo.MaxWordLength;
-	MinWordLength = levelInfo.MinWordLength;
-	setKeys();
-	NumPics = levelInfo.NumPics;
-	NumLabels = levelInfo.NumLabels;
-
-	NumMissingLetters = levelInfo.NumMissingLetters;
-	MaxPosMissing = levelInfo.MaxPosMissing;
-	//console.log('NumMissing:' + NumMissingLetters, 'max pos:' + MaxPosMissing);
+	MaxNumTrials = 3;
+	currentKeys = KeySets.best100;
+	NumPics = 1;
+	NumMissingLetters = currentLevel < 2 ? currentLevel : currentLevel - 2;
+	MaxPosMissing = currentLevel < 2 ? currentLevel : 100;
 }
 function startRoundML() { }
 

@@ -466,6 +466,15 @@ function levelStep13() {
 //#endregion
 
 //#region key selection: setKeys
+function getKeySets(){
+	let allKeys = symKeysBySet.nosymbols;
+	let keys = allKeys.filter(x => isdef(symbolDict[x].best100));
+	let keys1 = allKeys.filter(x => isdef(symbolDict[x].best100) && isdef(symbolDict[x].bestE));
+	let keys2 = allKeys.filter(x => isdef(symbolDict[x].best50));
+	let keys3 = allKeys.filter(x => isdef(symbolDict[x].best25));
+	return { best25: keys3, best50: keys2, best75: keys1, best100: keys, all: allKeys };
+
+}
 function getKeySetSimple(cats, lang,
 	{ minlen, maxlen, wShort = false, wLast = false, wExact = false, sorter = null }) {
 	let keys = setCategories(cats);

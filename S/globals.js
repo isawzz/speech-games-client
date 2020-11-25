@@ -14,6 +14,7 @@ var skipAniGameOver = true; // IS_TESTING;
 var skipBadgeAnimation = true;
 var MAXLEVEL = 10;
 var MaxLevel; //game dependent!
+var KeySets;
 
 // delays
 var DELAY = 1000;

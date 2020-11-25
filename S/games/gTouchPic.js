@@ -1,4 +1,4 @@
-var uiActivated, keysetsTP;
+var uiActivated;
 const LevelsTP = {
 	0: { Set: 'best25', NumPics: 2, NumLabels: 2, MinWordLength: 2, MaxWordLength: 4, MaxNumTrials: 2 },
 	1: { Set: 'best25', NumPics: 3, NumLabels: 3, MinWordLength: 3, MaxWordLength: 5, MaxNumTrials: 2 },
@@ -12,32 +12,15 @@ const LevelsTP = {
 	9: { Set: 'best100', NumPics: 36, NumLabels: 36, MinWordLength: 6, MaxWordLength: 13, MaxNumTrials: 2 },
 	10: { Set: 'best100', NumPics: 49, NumLabels: 49, MinWordLength: 4, MaxWordLength: 14, MaxNumTrials: 2 },
 }
-function startGameTP() {
-	let allKeys = symKeysBySet.nosymbols;
-	let keys = allKeys.filter(x => isdef(symbolDict[x].best100));
-	let keys1 = allKeys.filter(x => isdef(symbolDict[x].best100) && isdef(symbolDict[x].bestE));
-	let keys2 = allKeys.filter(x => isdef(symbolDict[x].best50));
-	let keys3 = allKeys.filter(x => isdef(symbolDict[x].best25));
-	keysetsTP = { best25: keys3, best50: keys2, best75: keys1, best100: keys, all: allKeys };
-}
+function startGameTP() {}
 function startLevelTP() { levelTP(); }
 function levelTP() {
 	let levelInfo = Settings.games.gTouchPic.levels[currentLevel];
 	MaxNumTrials = levelInfo.trials;
-	currentKeys = keysetsTP['best' + levelInfo.vocab];
+	currentKeys = KeySets['best' + levelInfo.vocab];
 	NumPics = levelInfo.numPics;
 	NumLabels = isdef(levelInfo.numLabels) ? levelInfo.numLabels : NumPics;
 
-}
-function levelTP_dep() {
-	let levelInfo = LevelsTP[currentLevel];
-	MaxNumTrials = 1;// levelInfo.MaxNumTrials;
-	//MaxWordLength = levelInfo.MaxWordLength;
-	//MinWordLength = levelInfo.MinWordLength;
-	//setKeys();
-	currentKeys = keysetsTP[levelInfo.Set];
-	NumPics = levelInfo.NumPics;
-	NumLabels = levelInfo.NumLabels; // Settings.program.labels? levelInfo.NumPics:0;
 }
 function startRoundTP() {
 	uiActivated = false;
