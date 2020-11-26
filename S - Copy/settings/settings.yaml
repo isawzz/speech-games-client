@@ -5,15 +5,13 @@ program: #TODO: make this a list with ids
   # TODO: individual adaptive: label toggle per word
   showLabels: toggle #always never toggle
   incrementLevelOnPositiveStreak: 1
-  decrementLevelOnNegativeStreak: 1
+  decrementLevelOnNegativeStreak: 2
   gameSequence:
-    - game: gSayPic
     - game: gTouchPic
     - game: gSayPic
-    - game: gMissingLetter
-    - game: gSayPic
-    - game: gWritePic
     - game: gTouchColors
+    # - game: gMissingLetter
+    # - game: gWritePic
   currentGameIndex: 0
   currentLevel: 0
 common:

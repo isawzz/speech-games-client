@@ -106,7 +106,7 @@ function onClickRestartProgram() {
 
 //#region settings helpers
 function createSettingsUi() {
-	let dParent = mBy('dSettings');
+	let dParent = mBy('dOldSettings');
 
 	clearElement(dParent);
 	let d = mDiv(dParent); mClass(d, 'hMinus60');

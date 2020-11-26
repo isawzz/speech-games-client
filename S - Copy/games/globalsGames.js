@@ -1,9 +1,6 @@
 var pictureSize;
 
 function startGame(data) {
-
-	if (currentGame=='gSayPic') Speech.stopRecording();
-
 	currentGame = Settings.program.gameSequence[Settings.program.currentGameIndex].game;
 	GameInfo = Settings.games[currentGame];
 	LevelInfo = GameInfo.levels;
@@ -307,8 +304,6 @@ function aniGameOver(msg) {
 
 //#region interrupt
 function stopAus() {
-	if (currentGame=='gSayPic') Speech.stopRecording();
-
 	clearProgramTimer();
 	pauseUI();
 }

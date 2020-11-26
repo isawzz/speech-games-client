@@ -37,6 +37,62 @@
 	<div id='dLevelComplete' style='display:none' class='centered'>LEVEL COMPLETE!!!</div>
 	<div id='dGear' onclick='toggleSettings()' style='position:fixed'>⚙️</div>
 	<div id='dSettings' style='display:none;text-align:center'>
+		<div id='dSettingsButtons'>
+			<button class='buttonPlus buttonClass' onclick='resetSettingsToDefaults()'>reset to defaults</button>
+			<button class='buttonPlus buttonClass' onclick='onClickRestartProgram()'>restart program</button>
+			<button class='buttonPlus buttonClass' onclick='closeSettings(); startGame();'>continue playing</button>
+		</div>
+		<div id='dNewSettings'>
+			<h1>Level Editor</h1>
+			<fieldset id='fChooseLanguage'>
+				<legend>language</legend>
+				<input id='inputE' class='radio' type="radio" name="language" value="E"><span>English</span><br>
+				<input id='inputD' class='radio' type="radio" name="language" value="D"><span>German</span><br>
+			</fieldset>
+
+			<fieldset id='fChooseVocab'>
+				<legend>vocabulary</legend>
+				<input id='input25' class='radio' type="radio" name="vocab" value=25><span>best 25</span><br>
+				<input id='input50' class='radio' type="radio" name="vocab" value=50><span>best 50</span><br>
+				<input id='input75' class='radio' type="radio" name="vocab" value=75><span>best 75</span><br>
+				<input id='input100' class='radio' type="radio" name="vocab" value=100><span>best 100</span><br>
+			</fieldset>
+
+			<fieldset id='fChooseVocab1'>
+				<legend>vocabulary</legend>
+				<input id='input252' class='radio' type="radio" value=25><span>best 25</span><br>
+				<input id='input502' class='radio' type="radio" value=50><span>best 50</span><br>
+				<input id='input752' class='radio' type="radio" value=75><span>best 75</span><br>
+				<input id='input1002' class='radio' type="radio" value=100><span>best 100</span><br>
+			</fieldset>
+
+			<fieldset id='fChooseCateg1'>
+				<legend>categories</legend>
+				<label id='inputLife1' class="container">life <input class='radio' type="radio" name="vocab" > <span class="checkmark"></span> </label>
+				<label id='inputActivities1' class="container">activities <input class='radio' type="radio" name="vocab" > <span class="checkmark"></span> </label>
+				<label id='inputObjects1' class="container">objects <input type="radio"> <span class="checkmark"></span> </label>
+				<label id='inputEmotions1' class="container">emotions <input type="radio"> <span class="checkmark"></span> </label>
+				<!-- <input id='inputLife' type="checkbox" name="categ" value='life'><span>life</span><br>
+				<input id='inputActivities' type="checkbox" name="categ" value='activities'><span>activities</span><br>
+				<input id='inputObjects' type="checkbox" name="categ" value='objects'><span>objects</span><br>
+				<input id='inputEmotions' type="checkbox" name="categ" value='emotions'><span>emotions</span><br> -->
+			</fieldset>
+
+			<fieldset id='fChooseCateg'>
+				<legend>categories</legend>
+				<label id='inputLife' class="container">life <input type="checkbox" checked="checked"> <span class="checkmark"></span> </label>
+				<label id='inputActivities' class="container">activities <input type="checkbox" checked="checked"> <span class="checkmark"></span> </label>
+				<label id='inputObjects' class="container">objects <input type="checkbox" checked="checked"> <span class="checkmark"></span> </label>
+				<label id='inputEmotions' class="container">emotions <input type="checkbox" checked="checked"> <span class="checkmark"></span> </label>
+				<!-- <input id='inputLife' type="checkbox" name="categ" value='life'><span>life</span><br>
+				<input id='inputActivities' type="checkbox" name="categ" value='activities'><span>activities</span><br>
+				<input id='inputObjects' type="checkbox" name="categ" value='objects'><span>objects</span><br>
+				<input id='inputEmotions' type="checkbox" name="categ" value='emotions'><span>emotions</span><br> -->
+			</fieldset>
+
+		</div>
+		<div id='dOldSettings'>
+		</div>
 	</div>
 	<div id='freezer' onclick="onClickFreezer()" style='display:none'>
 		<div class='centerCentered'>Click to Start!</div>

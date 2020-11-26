@@ -12,13 +12,11 @@ class Speech2 {
 	}
 	isSpeakerRunning() { return this.speaker.isRunning; }
 	startRecording(lang, callback) {
-		this.recorder.isCancelled = false;
 		this.recorder.callback = callback;
 		this.recorder.setLanguage(lang);
 		this.recorder.start();
 	}
 	stopRecording() {
-		this.recorder.isCancelled = true;
 		this.recorder.stop();
 	}
 
