@@ -1,7 +1,7 @@
 const IS_TESTING = false; // false | true
 
 //common for all games and users / control flow
-const RESTART_EACH_TIME = true; // restarts program at begin instead of continuing where left off
+const RESTART_EACH_TIME = IS_TESTING; // restarts program at begin instead of continuing where left off
 const EXPERIMENTAL = IS_TESTING;
 const CLEAR_LOCAL_STORAGE = false;
 const immediateStart = true;  // false | true
