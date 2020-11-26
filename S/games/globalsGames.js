@@ -7,7 +7,9 @@ function startGame(data) {
 	currentGame = Settings.program.gameSequence[Settings.program.currentGameIndex].game;
 	GameInfo = Settings.games[currentGame];
 	LevelInfo = GameInfo.levels;
-	MaxLevel = 0;
+	//MaxLevel = 0;
+	//console.log(LevelInfo,typeof LevelInfo)
+	MaxLevel = isdef(LevelInfo)? Object.keys(LevelInfo).length-1 : 0;
 
 	currentColor = getCurrentColor(currentGame);
 

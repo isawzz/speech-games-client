@@ -24,7 +24,7 @@ common:
   currentCategories: [nosymemo]
 flags:
   pressControlToUnfreeze: false
-  reducedAnimations: true
+  reducedAnimations: false
   levelBadges: false
 games: 
   gTouchPic:
