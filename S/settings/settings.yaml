@@ -4,12 +4,10 @@ program: #TODO: make this a list with ids
   # toggle: first half of level: labels, second half of level: no labels
   # TODO: individual adaptive: label toggle per word
   showLabels: toggle #always never toggle
-  incrementLevelOnPositiveStreak: 1
-  decrementLevelOnNegativeStreak: 1
+  incrementLevelOnPositiveStreak: 10
+  decrementLevelOnNegativeStreak: 3
   gameSequence:
-    - game: gSayPic
     - game: gTouchPic
-    - game: gSayPic
     - game: gMissingLetter
     - game: gSayPic
     - game: gWritePic

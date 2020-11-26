@@ -15,9 +15,6 @@ easiest way to run this if you have vs code installed:
 
 5. start in S directory 
 
-S/settings contains a settings file settings.yaml that can be adapted to use the implemented games with different parameters.
+S/settings contains a settings file settings.yaml that can be adapted to use the implemented games with different parameters. right now, just file editing in settings ui.
 
-Or, feel free to hack around
-
-(...as it is, this code is pretty messy but will improve with time...)
-
+Note: HAS ONLY BEEN TESTED ON *** GOOGLE CHROME ***
