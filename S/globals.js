@@ -14,7 +14,6 @@ const immediateStart = true;  // false | true
 const SHOW_FREEZER = false; // !IS_TESTING;
 const OFFLINE = false; // uses localhost instead of heroku
 
-
 var MASTER_VOLUME = 1;
 var loopGameSequence = true;
 var StepByStepMode = false; // wartet auf click next um wieder zu starten!

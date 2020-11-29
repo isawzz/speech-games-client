@@ -9,8 +9,8 @@ program: #TODO: make this a list with ids
   gameSequence:
     - game: gPreMem
     - game: gTouchPic
-    - game: gSayPic
     - game: gMissingLetter
+    - game: gSayPic
     - game: gWritePic
     - game: gTouchColors
   currentGameIndex: 0

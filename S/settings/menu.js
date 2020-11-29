@@ -40,7 +40,10 @@ function createMenuUi() {
 
 
 	//jedes game bekommt ein logo =>GFUNC
-	let games = ['gTouchPic', 'gWritePic', 'gSayPic', 'gTouchColors', 'gMissingLetter', 'gPreMem']; //, 'gMem'];
+	let games = Settings.program.gameSequence.map(x=>x.game);
+	console.log(games)
+
+	// let games = ['gTouchPic', 'gWritePic', 'gSayPic', 'gTouchColors', 'gMissingLetter', 'gPreMem']; //, 'gMem'];
 	let labels = games.map(g => GFUNC[g].friendlyName);
 	let keys = games.map(g => GFUNC[g].logo);
 	let bgs = games.map(g => GFUNC[g].color);
@@ -50,11 +53,31 @@ function createMenuUi() {
 	//let b=getBounds(d);
 	//console.log('____________ bounds',b)
 
-	maShowPictures(keys, labels, d, null, { bgs: bgs }); //, shufflePositions: false });
+	let pics = maShowPictures(keys, labels, d, onClickGame, { bgs: bgs, shufflePositions: false });
+	pics.map(x=>x.div.id='menu_'+x.label.substring(0,3));
 
-	mLinebreak(d);
-	mText('NOT IMPLEMENTED!!!!!!!!!!!!!',d,{fz:50});
+	// mLinebreak(d);
+	// mText('NOT IMPLEMENTED!!!!!!!!!!!!!',d,{fz:50});
 	// gridLabeledX(keys, labels, d, { rows: 2, layout: 'flex' });
+}
+
+function onClickGame(ev){
+
+	let id = evToClosestId(ev);
+	let prefix=stringAfter(id,'_');
+
+	//which game is this?
+	let vals = dict2list(GFUNC); // Object.values(GFUNC);
+	console.log(vals);
+
+	let item = firstCond(vals,x=>x.friendlyName.startsWith(prefix));
+	let seq = Settings.program.gameSequence.map(x=>x.game);
+
+	console.log(item,item.id,seq,seq.indexOf(item.id))
+
+	Settings.program.currentGameIndex = seq.indexOf(item.id);
+	closeMenu();
+	startGame();
 }
 
 function resetMenuToDefaults() {
