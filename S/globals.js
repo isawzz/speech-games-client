@@ -1,12 +1,19 @@
-const IS_TESTING = false; // false | true
+const EXPERIMENTAL = false;
+const IS_TESTING = false;
+USERNAME = IS_TESTING ? 'Squid' : 'Gunter';
 
 //common for all games and users / control flow
-const RESTART_EACH_TIME = IS_TESTING; // restarts program at begin instead of continuing where left off
-const EXPERIMENTAL = IS_TESTING;
+const USE_USER_HISTORY_FOR_STARTLEVEL = true; // when switching to new game (or at beginning) use UseHistory to determine startLevel for each game
+
+const UPDATE_USER_HISTORY_STARTLEVEL = true;
 const CLEAR_LOCAL_STORAGE = false;
+const RESTART_EACH_TIME = false; //IS_TESTING; // restarts program at startLevel instead of continuing where left off
+
+const SETTINGS_KEY_FILE = IS_TESTING ? 'TEST_settings' : 'settings';
 const immediateStart = true;  // false | true
 const SHOW_FREEZER = false; // !IS_TESTING;
 const OFFLINE = true; // uses localhost instead of heroku
+
 
 var MASTER_VOLUME = 1;
 var loopGameSequence = true;
@@ -41,6 +48,7 @@ var MaxNumTrials = 1;
 var MinWordLength = 1;
 var MaxWordLength = 100;
 var NumPics;
+var NumRepeat;
 var NumLabels;
 var Pictures = [];
 var Goal, Selected;
@@ -69,12 +77,15 @@ var CurrentSessionData, CurrentGameData, CurrentLevelData;
 var UserHistory, SessionScoreSummary, UnitScoreSummary;
 var LevelChange = true;
 var IsAnswerCorrect;
-var PosInARow,NegInARow;
+var PosInARow, NegInARow;
 
 var lastPosition = 0;
 var trialNumber;
 var boundary;
 var uiActivated;
+const MarkerText = ['✔️', '❌'];
+const MarkerId = { SUCCESS: 0, FAIL: 1 };
+var Markers = [];
 
 
 //ui state flags
@@ -100,7 +111,7 @@ var dHint, dFeedback, dInstruction, dScore, dLevel, dGameTitle;
 var inputBox;
 var defaultFocusElement;
 var dTable, dTitle;
-var dSettings = mBy('dSettings');
+var dProgram,dMenu,dGameSettings;
 var dLeiste;
 
 //feedback
@@ -109,3 +120,5 @@ var score, hintWord, bestWord, answerCorrect, currentInfo;
 //testing
 var timit;
 
+//flags
+var BlockServerSend = false;

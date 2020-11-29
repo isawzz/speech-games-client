@@ -27,6 +27,10 @@ div{
 	width: 80%;
 
 }
+.feedbackMarker{
+	position:fixed;
+	font-size:40px;
+}
 #dCheckMark,#dX{
 	position:fixed;
 	font-size:40px;
@@ -46,7 +50,23 @@ div{
 	flex-grow: 10;
 	/* background-color: orange; */
 }
-#dGear{
+#dProgramButton{
+	position: fixed;
+	display: inline-block;
+	bottom: 20px;
+	right: 100px;
+	cursor:pointer;
+	/* background:blue; */
+}
+#dGameSettingsButton{
+	position: fixed;
+	display: inline-block;
+	bottom: 20px;
+	right: 60px;
+	cursor:pointer;
+	/* background:blue; */
+}
+#dMenuButton{
 	position: fixed;
 	display: inline-block;
 	bottom: 20px;
@@ -139,16 +159,22 @@ div{
 }
 .buttonPlus{
 	padding: 4px 12px;
-	margin: 14px;
+	margin: 0px 14px;
 	font-size: 20px;
 }
 .hMinus60{
-	height: calc( 100% - 54px );
+	height: calc( 100vh - 60px );
+}
+.hPercentMinus60{
+	height: calc( 100% - 60px );
+	margin-top: 16px;
 }
 .whMinus60{
-	height: calc( 100% - 25px );
-	width: calc( 100% - 50px );
-	margin: 24px 24px 0px 24px;
+	/* min-height: 100%;  */
+	min-height: calc( 100% - 25px );
+	min-width: calc( 100% - 50px );
+	/* margin: 16px 16px 0px 16px; */
+	/* margin: 16px; */
 }
 /* #endregion */
 
@@ -436,6 +462,7 @@ input[type="checkbox"]:focus+label::before {
 .transitionOpacity{	transition: opacity 5s ease-in-out;}
 /* .aniFadeInOut{ animation: fadeinout 5s ease-in-out 0s 1;} */
 .aniSlowlyDisappear{ animation: fadeinout 5s ease-out 0s 1 forwards;}
+.aniFastDisappear{ animation: fadeOut .5s ease-out 0s 1 forwards;}
 .aniSlowlyAppear{ animation: example 3s ease-in-out 0s 1 forwards;}
 
 .aniFadeOut{ animation: example .5s ease-in-out 0s 1 reverse;}
@@ -445,6 +472,7 @@ input[type="checkbox"]:focus+label::before {
 .aniFadeInOut{ animation: fadeinout 1.5s ease-in-out 0s 1 forwards;}
 .aniRubberBand{animation: rubberBand 1.2s ease-in-out;}
 @keyframes example { from { opacity: 0; }  to { opacity: 1; }}
+@keyframes fadeOut { from { opacity: 1; }  to { opacity: 0; }}
 @keyframes fadeoutin { 
 	from { opacity: 1; }  
 	50% { opacity: 0;  }

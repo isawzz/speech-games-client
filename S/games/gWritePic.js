@@ -48,7 +48,7 @@ function evalWP(ev) {
 	let answer = normalize(inputBox.value, currentLanguage);
 	let reqAnswer = normalize(bestWord, currentLanguage);
 
-	Selected = { reqAnswer: reqAnswer, answer: answer };
+	Selected = { reqAnswer: reqAnswer, answer: answer, feedbackUI: Goal.div };
 	if (answer == reqAnswer) return true;
 	else { return false; }
 }

@@ -74,6 +74,7 @@ function activateML() {
 
 		if (nMissing == 1) {
 			let d = Selected.feedbackUI = inputs[0].div;
+			Selected.positiveFeedbackUI = Goal.div;
 			Selected.lastIndexEntered = inputs[0].index;
 			Selected.inp = inputs[0];
 			d.innerHTML = Selected.lastLetterEntered;

@@ -1,3 +1,5 @@
+var USERNAME;
+
 const TIMIT_SHOW = false; // true | false
 
 var USE_LOCAL_STORAGE = false; // true | false //localStorage is cleared when false!!!!!

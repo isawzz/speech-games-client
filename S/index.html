@@ -12,9 +12,9 @@
 	<script src="/_extlibs/js-yaml.min.js"></script>
 	<link rel="stylesheet" href="/assets/font/fonts.css">
 	<link rel="stylesheet" href="/CODE/helpers.css">
+	<script src="/CODE/globalConfig.js"></script>
 	<script src="/CODE/helpers.js"></script>
 	<script src="/CODE/helpersX.js"></script>
-	<script src="/CODE/globalConfig.js"></script>
 	<script src="/CODE/assets.js"></script>
 	<script src="/CODE/assetHelpers.js"></script>
 	<link rel="stylesheet" href="/S/css/test.css">
@@ -28,15 +28,19 @@
 			<div id='table' class='flexWrap'></div>
 		</div>
 	</div>
-	<div id='dCheckMark' style='display:none'>✔️</div>
 	<div id='divControls' style='display:none'>
 		<div id='bNext' onclick='onClickNextButton()'>Next</div>
 		<div id='bRunStop' onclick='onClickRunStopButton(this)'>Run</div>
 	</div>
-	<div id='dX' style='display:none'>❌</div>
 	<div id='dLevelComplete' style='display:none' class='centered'>LEVEL COMPLETE!!!</div>
-	<div id='dGear' onclick='toggleSettings()' style='position:fixed'>⚙️</div>
-	<div id='dSettings' style='display:none;text-align:center'>
+	<div id='dGameSettingsButton' onclick='toggleGameSettings()' style='position:fixed'>⚙️</div>
+	<div id='dProgramButton' onclick='toggleProgramSettings()' style='position:fixed'>🖥️</div>
+	<div id='dMenuButton' onclick='toggleMenu()' style='position:fixed'>🏛️</div>
+	<div id='dProgram' style='display:none;text-align:center'>
+	</div>
+	<div id='dGameSettings' style='display:none;text-align:center'>
+	</div>
+	<div id='dMenu' style='display:none;text-align:center'>
 	</div>
 	<div id='freezer' onclick="onClickFreezer()" style='display:none'>
 		<div class='centerCentered'>Click to Start!</div>
@@ -79,8 +83,11 @@
 
 	<script src="/S/iconViewer/iconViewer.js"></script>
 
+	<script src="/S/settings/gameSettings.js"></script>
+	<script src="/S/settings/menu.js"></script>
+	<script src="/S/settings/program.js"></script>
+	<script src="/S/settings/programSettings.js"></script>
 	<script src="/S/settings/settings.js"></script>
-	<script src="/S/settings/_program.js"></script>
 
 	<script src="/S/speech/speech.js"></script>
 	<script src="/S/speech/speechTraining.js"></script>
@@ -88,6 +95,8 @@
 
 	<script src="/S/games/globalsGames.js"></script>
 	<script src="/S/games/scoring.js"></script>
+	<script src="/S/games/gPreMem.js"></script>
+	<script src="/S/games/gMem.js"></script>
 	<script src="/S/games/gSteps.js"></script>
 	<script src="/S/games/gTouchPic.js"></script>
 	<script src="/S/games/gTouchColors.js"></script>

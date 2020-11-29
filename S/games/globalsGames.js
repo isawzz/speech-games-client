@@ -2,20 +2,19 @@ var pictureSize;
 
 function startGame(data) {
 
-	if (currentGame=='gSayPic') Speech.stopRecording();
+	if (currentGame == 'gSayPic') Speech.stopRecording();
 
 	currentGame = Settings.program.gameSequence[Settings.program.currentGameIndex].game;
 	GameInfo = Settings.games[currentGame];
 	LevelInfo = GameInfo.levels;
 	//MaxLevel = 0;
 	//console.log(LevelInfo,typeof LevelInfo)
-	MaxLevel = isdef(LevelInfo)? Object.keys(LevelInfo).length-1 : 0;
+	MaxLevel = isdef(LevelInfo) ? Object.keys(LevelInfo).length - 1 : 0;
 
-	currentColor = getCurrentColor(currentGame);
+	currentColor = GFUNC[currentGame].color; //getCurrentColor(currentGame);
 
 	currentLevel = getCurrentLevel(currentGame);
-	console.log('______ * game', currentGame, 'level', currentLevel, '*')
-
+	//console.log('______ * game', currentGame, 'level', currentLevel, '*')
 
 	CurrentGameData = { name: currentGame, levels: [] };
 	CurrentSessionData.games.push(CurrentGameData);
@@ -41,7 +40,7 @@ function startLevel(level) {
 	resetScore();
 	GFUNC[currentGame].startLevel(); //settings level dependent params eg., MaxNumTrials...
 
-	startRound(); 
+	startRound();
 }
 function startRound() {
 	setTimeout(() => startRoundReally(), ROUND_DELAY);
@@ -88,64 +87,19 @@ function selectWord(info, bestWordIsShortest, except = []) {
 	}
 	return w;
 }
-function showPictures(onClickPictureHandler, { colors, overlayShade } = {}, keys, labels) {
+function showPictures(onClickPictureHandler, { colors, contrast, repeat=1, sameBackground=true, border } = {}, keys, labels) {
 	Pictures = [];
 
 	if (nundef(keys)) keys = choose(currentKeys, NumPics);
+	//keys=['sun with face'];
+	//console.log(keys,repeat)
+	Pictures = maShowPictures(keys,labels,dTable,onClickPictureHandler,
+		{repeat:repeat,sameBackground:sameBackground, border:border, lang:currentLanguage, colors:colors, contrast:contrast });
 
-	let infos = keys.map(x => getRandomSetItem(currentLanguage, x));
-	if (nundef(labels)) {
-		labels = [];
-		for (const info of infos) {
-			labels.push(info.best); 
-		}
-	}
-
-	let { isText, isOmoji } = getParamsForMaPicStyle('twitterText');
-	let bgPic = isdef(colors) ? 'white' : 'random';
-
-	let lines = isdef(colors) ? colors.length : 1;
-
-	let ww = window.innerWidth;
-	let wh = window.innerHeight;
-	let hpercent = 0.60; let wpercent = .6;
-	let sz, picsPerLine;
-	if (lines > 1) {
-		let hpic = wh * hpercent / lines;
-		let wpic = ww * wpercent / NumPics;
-		sz = Math.min(hpic, wpic);
-		picsPerLine = keys.length;
-	} else {
-		let dims = calcRowsColsX(NumPics);
-		let hpic = wh * hpercent / dims.rows;
-		let wpic = ww * wpercent / dims.cols;
-		sz = Math.min(hpic, wpic);
-		picsPerLine = dims.cols;
-	}
-
-	pictureSize = Math.max(50, Math.min(sz, 200));
-	let stylesForLabelButton = { rounding: 10, margin: pictureSize / 8 };
-
-	for (let line = 0; line < lines; line++) {
-		let shade = isdef(colors) ? colors[line] : undefined;
-		for (let i = 0; i < keys.length; i++) {
-			let info = infos[i];
-			let label = labels[i];
-			let ipic = (line * keys.length + i);
-			if (ipic % picsPerLine == 0 && ipic > 0) mLinebreak(dTable);
-			let id = 'pic' + ipic; // (line * keys.length + i);
-			let d1 = maPicLabelButtonFitText(info, label,
-				{
-					w: pictureSize, h: pictureSize, bgPic: bgPic, shade: shade,
-					overlayColor: overlayShade
-				}, onClickPictureHandler, dTable, stylesForLabelButton, 'frameOnHover', isText, isOmoji);
-			d1.id = id;
-			Pictures.push({ shade: shade, key: info.key, info: info, div: d1, id: id, index: i, label: label, isLabelVisible: true });
-		}
-	}
+	// if (nundef(keys)) keys = choose(currentKeys, NumPics);
+	// Pictures = maShowPictures(keys,labels,dTable,onClickPictureHandler,{ colors, contrast });
 
 	let totalPics = Pictures.length;
-
 	if (Settings.program.labels) {
 		if (NumLabels == totalPics) return;
 		let remlabelPic = choose(Pictures, totalPics - NumLabels);
@@ -168,6 +122,8 @@ function setGoal(index) {
 
 }
 function showInstruction(text, cmd, title, isSpoken, spoken) {
+	//console.assert(title.children.length == 0,'TITLE NON_EMPTY IN SHOWINSTRUCTION!!!!!!!!!!!!!!!!!')
+	clearElement(title);
 	let d = mDiv(title);
 	mStyleX(d, { margin: 15 })
 	mClass(d, 'flexWrap');
@@ -184,7 +140,7 @@ function showInstruction(text, cmd, title, isSpoken, spoken) {
 	dInstruction.addEventListener('click', () => aniInstruction(cmd + " " + text));
 	if (!isSpoken) return;
 
-	Speech.say(isdef(spoken) ? spoken : (cmd + " " + text), .7, 1, .7,'random'); 
+	Speech.say(isdef(spoken) ? spoken : (cmd + " " + text), .7, 1, .7, 'random');
 
 }
 function activateUi() {
@@ -210,6 +166,7 @@ function evaluate() {
 		showCorrectWord();
 		failPictureGoal(false);
 	}
+	setTimeout(removeMarkers, 1500);
 
 	[LevelChange, currentLevel] = scoring(IsAnswerCorrect); //get here only if this is correct or last trial!
 
@@ -250,8 +207,13 @@ function failPictureGoal(withComment = true) {
 		Speech.say(chooseRandom(comments), 1, 1, .8, 'zira', () => { console.log('FERTIG FAIL!!!!'); });
 	}
 	if (isdef(Selected) && isdef(Selected.feedbackUI)) {
-		let sz = getBounds(Selected.feedbackUI).height;
-		mpOver(mBy('dX'), Selected.feedbackUI, sz * (1 / 2), 'red', 'openMojiTextBlack');
+
+		// let sz = getBounds(Selected.feedbackUI).height;
+		// mpOver(mBy('dX'), Selected.feedbackUI, sz * (1 / 2), 'red', 'openMojiTextBlack');
+
+		let uilist = isList(Selected.feedbackUI) ? Selected.feedbackUI : [Selected.feedbackUI];
+		let sz = getBounds(uilist[0]).height;
+		for (const ui of uilist) mpOver(markerFail(), ui, sz * (1 / 2), 'red', 'openMojiTextBlack');
 	}
 
 }
@@ -260,7 +222,18 @@ function successPictureGoal(withComment = true) {
 		const comments = (currentLanguage == 'E' ? ['YEAH!', 'Excellent!!!', 'CORRECT!', 'Great!!!'] : ['gut', 'Sehr Gut!!!', 'richtig!!', 'Bravo!!!']);
 		Speech.say(chooseRandom(comments));//'Excellent!!!');
 	}
-	mpOver(mBy('dCheckMark'), mBy(Goal.id), pictureSize * (4 / 5), 'limegreen', 'segoeBlack');
+	if (isdef(Selected) && isdef(Selected.feedbackUI)) {
+		//mpOver(mBy('dX'), Selected.feedbackUI, sz * (1 / 2), 'red', 'openMojiTextBlack');
+
+		// let sz = getBounds(Selected.feedbackUI).height;
+		// mpOver(mBy('dCheckMark'), Selected.feedbackUI, sz * (4 / 5), 'limegreen', 'segoeBlack');
+		let uilist;
+		if (isdef(Selected.positiveFeedbackUI)) uilist = [Selected.positiveFeedbackUI];
+		else uilist = isList(Selected.feedbackUI) ? Selected.feedbackUI : [Selected.feedbackUI];
+		let sz = getBounds(uilist[0]).height;
+		for (const ui of uilist) mpOver(markerSuccess(), ui, sz * (4 / 5), 'limegreen', 'segoeBlack');
+	}
+	// mpOver(mBy('dCheckMark'), mBy(Goal.id), pictureSize * (4 / 5), 'limegreen', 'segoeBlack');
 
 }
 //#endregion
@@ -309,7 +282,7 @@ function aniGameOver(msg) {
 
 //#region interrupt
 function stopAus() {
-	if (currentGame=='gSayPic') Speech.stopRecording();
+	if (currentGame == 'gSayPic') Speech.stopRecording();
 
 	clearProgramTimer();
 	pauseUI();
@@ -339,11 +312,17 @@ function showLevelComplete() {
 	}
 
 }
+function downgradeCurrentLevelTo(newLevel, oldLevel) {
+	Settings.program.currentLevel = newLevel;
+	let startLevel = UserHistory[currentGame].startLevel;
+	upgradeStartLevelForUser(currentGame, Math.min(newLevel, startLevel));
+	return newLevel;
+}
 function revertToBadgeLevel(ev) {
 	let id = evToClosestId(ev);
 	let i = stringAfter(id, '_');
 	i = Number(i);
-	currentLevel = Settings.program.currentLevel = i;
+	currentLevel = downgradeCurrentLevelTo(i, currentLevel);
 	saveProgram();
 	removeBadges(dLeiste, currentLevel);
 	setBackgroundColor();
@@ -469,7 +448,7 @@ function addNthInputElement(dParent, n) {
 	return dInp;
 }
 function aniInstruction(text) {
-	Speech.say(text, .7, 1, .7, 'random', () => { console.log('HA!') });
+	Speech.say(text, .7, 1, .7, 'random'); //, () => { console.log('HA!') });
 	mClass(dInstruction, 'onPulse');
 	setTimeout(() => mRemoveClass(dInstruction, 'onPulse'), 500);
 
@@ -480,8 +459,9 @@ function animate(elem, aniclass, timeoutms) {
 }
 
 function clearTable() {
-	clearElement(dLineTableMiddle); clearElement(dLineTitleMiddle); hide(mBy('dCheckMark')); hide(mBy('dX'));
-}
+	clearElement(dLineTableMiddle); clearElement(dLineTitleMiddle); removeMarkers();
+} // hide(mBy('dCheckMark')); hide(mBy('dX'));
+
 function isGameWithSpeechRecognition() { return ['gSayPic', 'gSayPicAuto'].includes(currentGame); }
 function resetState() {
 	uiPaused = 0;
@@ -502,7 +482,7 @@ function resetState() {
 
 }
 function setBackgroundColor() {
-	let color = currentColor; 
+	let color = currentColor;
 	document.body.style.backgroundColor = color;
 
 }
@@ -555,7 +535,7 @@ function getCurrentColor(game) {
 	let color = 'orange';
 	let colorName = Settings.games[game].color;
 	if (nundef(colorName)) {
-		console.log('color is undefined!!!!!!!!!!!!!!!!')
+		//console.log('color is undefined!!!!!!!!!!!!!!!!')
 
 	} else if (isdef(window[colorName])) { color = window[colorName]; }
 	else color = colorName;
@@ -564,7 +544,12 @@ function getCurrentColor(game) {
 	return color;
 }
 function getCurrentLevel(game) {
+	//console.log('getCurrentLevel', Settings.program.currentLevel, 'MAX', MaxLevel);
+
 	let level = Settings.program.currentLevel > MaxLevel ? MaxLevel : Settings.program.currentLevel;
+
+	if (USE_USER_HISTORY_FOR_STARTLEVEL && isdef(UserHistory[game]) && UserHistory[game].startLevel > level) level = UserHistory[game].startLevel;
+
 	return level;
 }
 

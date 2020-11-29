@@ -7,7 +7,10 @@
 	/* border: solid 1px yellow; */
 }
 .framedPicture{
-	border: solid 8px yellow;
+	/* border: solid 8px yellow; */
+	outline: solid 8px yellow;
+	outline-offset: -6px;
+	/* border-radius: 0px; GEHT NICHT!!! */
 }
 
 .linebreak {

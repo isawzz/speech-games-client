@@ -22,7 +22,6 @@ function promptSP() {
 	MicrophoneUi = mMicrophone(dTable);
 	MicrophoneHide();
 
-
 	return 10; //1000;
 }
 function trialPromptSP(nTrial) {
@@ -36,17 +35,15 @@ async function activateSP() {
 	if (Speech.isSpeakerRunning()) {
 		setTimeout(activateSP, 200);
 	} else {
-		setTimeout(() => Speech.startRecording(currentLanguage, evaluate), 0);
+		setTimeout(() => Speech.startRecording(currentLanguage, evaluate), 100);
 	}
 }
 function evalSP(isfinal, speechResult, confidence) {
 
-	Selected = {}
-	let answer = Goal.answer = Selected.answer = normalize(speechResult, currentLanguage);
+	let answer = Goal.answer = normalize(speechResult, currentLanguage);
 	let reqAnswer = Goal.reqAnswer = normalize(bestWord, currentLanguage);
 
-	Selected.reqAnswer = reqAnswer;
-	Selected.answer = answer;
+	Selected = { reqAnswer: reqAnswer, answer: answer, feedbackUI: Goal.div };
 
 	if (isEmpty(answer)) return false;
 	else return isSimilar(answer, reqAnswer);

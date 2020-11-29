@@ -1,4 +1,3 @@
-var uiActivated;
 function startGameTP() {}
 function startLevelTP() { levelTP(); }
 function levelTP() {
@@ -35,7 +34,6 @@ function evalTP(ev) {
 
 	Selected.reqAnswer = bestWord;
 	Selected.answer = item.label;
-
 
 	if (item.label == bestWord) { return true; } else { return false; }
 }

@@ -136,16 +136,20 @@ function scoring(isCorrect) {
 
 	}
 
-	console.log('levelChange', levelChange, 'nextLevel', nextLevel)
+	//console.log('levelChange', levelChange, 'nextLevel', nextLevel)
 
 	let toggle = Settings.program.showLabels == 'toggle';
 	let hasLabels = Settings.program.labels;
-
 
 	if (levelChange) {
 		CurrentLevelData.numTotalAnswers = numTotalAnswers;
 		CurrentLevelData.numCorrectAnswers = numCorrectAnswers;
 		CurrentLevelData.percentageCorrect = percentageCorrect;
+
+		//upgrade startLevel for this user if reached 100%
+		console.log('==>scoring',percentageCorrect,nextLevel,MaxLevel,levelChange);
+		if (percentageCorrect >= 100 && nextLevel>0 && nextLevel <= MaxLevel) upgradeStartLevelForUser(currentGame, nextLevel);
+		else if (levelChange < 0) upgradeStartLevelForUser(currentGame, nextLevel);
 
 		let gdata = isdef(UnitScoreSummary[currentGame]) ? UnitScoreSummary[currentGame] : { name: currentGame, nTotal: 0, nCorrect: 0 };
 		gdata.nTotal += numTotalAnswers;

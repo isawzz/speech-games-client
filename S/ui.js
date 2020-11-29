@@ -98,5 +98,72 @@ function activationUI() { uiPaused &= ~beforeActivationMask; }
 function hasClickedUI() { uiPaused |= hasClickedMask; }
 function pauseUI() { uiPausedStack.push(uiPaused); uiPaused |= uiHaltedMask; }
 function resumeUI() { uiPaused = uiPausedStack.pop(); }
+//#endregion
+
+//#region Markers
+function markerSuccess(){return createMarker(MarkerId.SUCCESS);}
+function markerFail(){return createMarker(MarkerId.FAIL);}
+function createMarker(markerId){
+	//<div class='feedbackMarker'>✔️</div>
+	let d=mCreate('div');
+	d.innerHTML = MarkerText[markerId]; //>0? '✔️':'❌';
+	mClass(d,'feedbackMarker');
+	document.body.appendChild(d);
+	Markers.push(d);
+	return d;
+}
+function mRemoveGracefully(elem){
+	mClass(elem,'aniFastDisappear');
+	setTimeout(()=>mRemove(elem),500);
+}
+function removeMarkers(){
+	for(const m of Markers){
+		mRemoveGracefully(m);
+	}
+	Markers = [];
+}
+//#endregion
+
+//#region ui helpers
+function createCommonUi(dParent,resetHandler,continueHandler) {
+	
+	clearElement(dParent);
+	mClass(dParent, 'hMinus60');
+	let dUpper = mDiv(dParent); 
+	// let ta = mCreate(maintag);
+	//ta.id = 'dSettings_ta';
+	// mAppend(dUpper, ta);
+	mClass(dUpper, 'hPercentMinus60');
+	// if (maintag=='div') mStyleX(ta,{matop:32})
+	// if (maintag == 'textarea') ta.value = 'hallo'; else ta.innerHTML = 'hallo';
+
+	let bdiv = mDiv(dParent); mStyleX(bdiv, { height: 54,align:'right' });
+	let b;
+
+	b = mCreate('button');
+	mAppend(bdiv, b);
+	b.innerHTML = 'reset to defaults';
+	mClass(b, 'buttonClass', 'buttonPlus');
+	b.onclick = resetHandler; // () => { resetSettingsToDefaults(); }
+
+	b = mCreate('button');
+	mAppend(bdiv, b);
+	b.innerHTML = 'continue playing';
+	mClass(b, 'buttonClass', 'buttonPlus');
+	b.onclick = continueHandler; //() => { closeProgramSettings(); startGame(); }
+
+	// dParent.style.backgroundColor='yellow';
+	// dUpper.style.backgroundColor='orange';
+
+	return dUpper;
+}
+
+//#endregion
+
+
+
+
+
+
 
 

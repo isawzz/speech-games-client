@@ -36,6 +36,34 @@ function show100() {
 	let keys = takeFromTo(IconSet, lastIndex, lastIndex + 100);//chooseRandom() ['keycap: 0', 'keycap: 1', 'keycap: #', 'keycap: *'];
 	gridLabeled(keys, picLabelStyles);
 }
+function gridLabeledX(keyList,labelList, dParent,{rows,layout}={}, clickHandler) {
+	//cont,pic,text
+	let dGrid = mDiv(dParent);
+	let elems = [];
+	let isText = true;
+	let isOmoji = false;
+	let pictureSize = 200;
+	let stylesForLabelButton = { rounding: 10, margin: pictureSize / 8 };
+	let pics = [];
+
+	for (let i=0;i<keyList.length;i++) {
+		let k=keyList[i];
+		let info = symbolDict[k];
+		let label = labelList[i];
+		let el = maPicLabelButtonFitText(info, label,
+			{ w: pictureSize, h: pictureSize, bgPic: 'random', shade: null, contrast: null },
+			clickHandler, dGrid, stylesForLabelButton, 'frameOnHover', isText, isOmoji);
+		el.id = 'pic' + lastIndex;
+		elems.push(el);
+		pics.push({ div: el, info: info, label: label, isSelected: false });
+		lastIndex += 1;
+	}
+	let gridStyles = { 'place-content': 'center', gap: 4, margin: 4, padding: 4, bg: 'silver', rounding: 5 };
+	let func=(layout=='flex'?layoutFlex:layoutGrid);
+	let size = func(elems, dGrid, gridStyles, { rows: rows, isInline: true });
+	return pics;
+}
+
 function gridLabeled(list, picLabelStyles) {
 	//cont,pic,text
 	let dGrid = mDiv(mBy('table'));
@@ -49,7 +77,7 @@ function gridLabeled(list, picLabelStyles) {
 		let info = symbolDict[k];
 		let label = (isdef(info.bestE) ? info.bestE : lastOfLanguage(k, 'E')) + ' ' + lastIndex;
 		let el = maPicLabelButtonFitText(info, label,
-			{ w: pictureSize, h: pictureSize, bgPic: 'random', shade: null, overlayColor: null },
+			{ w: pictureSize, h: pictureSize, bgPic: 'random', shade: null, contrast: null },
 			onClickIVPicture, dGrid, stylesForLabelButton, 'frameOnHover', isText, isOmoji);
 		el.id = 'pic' + lastIndex;
 		elems.push(el);
@@ -70,11 +98,22 @@ function onClickIVPicture(ev) {
 
 }
 
-function toggleSelectionOfPicture(pic) {
+function toggleSelectionOfPicture(pic,piclist) {
 	let ui = pic.div;
 	//if (pic.isSelected){pic.isSelected=false;mRemoveClass(ui,)}
 	pic.isSelected = !pic.isSelected;
 	if (pic.isSelected) mClass(ui, 'framedPicture'); else mRemoveClass(ui, 'framedPicture');
+
+	//if piclist is given, add or remove pic according to selection state
+	if (isdef(piclist)){
+		if (pic.isSelected) {
+			console.assert(!piclist.includes(pic),'UNSELECTED PIC IN PICLIST!!!!!!!!!!!!')
+			piclist.push(pic);
+		}else{
+			console.assert(piclist.includes(pic),'PIC NOT IN PICLIST BUT HAS BEEN SELECTED!!!!!!!!!!!!')
+			removeInPlace(piclist,pic);
+		}
+	}
 }
 
 

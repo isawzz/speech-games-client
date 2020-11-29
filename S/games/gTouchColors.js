@@ -1,4 +1,3 @@
-var uiActivated;
 const SIMPLE_COLORS = ['red', 'green', 'yellow', 'blue'];
 const EXTENDED_COLORS = ['red', 'green', 'yellow', 'blue', 'pink', 'indigo', 'gray', 'sienna', 'olive'];
 
@@ -22,15 +21,18 @@ function startRoundTC() {
 }
 function promptTC() {
 
-	let [colorlist, shade] = ensureColors();
+	let colorlist = lookupSet(Settings, ['games', 'gTouchColors', 'colors'], SIMPLE_COLORS);
+	let contrast = lookupSet(Settings, ['games', 'gTouchColors', 'contrast'], .35);
+
+	//let [colorlist, contrast] = ensureColors();
 	let colors = choose(colorlist, NumColors);
-	showPictures(evaluate, { colors: colors, overlayShade: shade });
+	showPictures(evaluate, { colors: colors, contrast: contrast });
 
 	setGoal(randomNumber(0, NumPics * colors.length - 1));
-	Goal.correctionPhrase = Goal.shade + ' ' + Goal.label;
+	Goal.correctionPhrase = Goal.textShadowColor + ' ' + Goal.label;
 
-	let spoken = `click the ${Goal.shade} ${bestWord}`;
-	showInstruction(bestWord, `click the <span style='color:${Goal.shade}'>${Goal.shade.toUpperCase()}</span>`,
+	let spoken = `click the ${Goal.textShadowColor} ${bestWord}`;
+	showInstruction(bestWord, `click the <span style='color:${Goal.textShadowColor}'>${Goal.textShadowColor.toUpperCase()}</span>`,
 		dTitle, true, spoken);
 	return 10;
 }
@@ -63,11 +65,4 @@ function containsColorWord(s) {
 		if (s.toLowerCase().includes(c)) return false;
 	}
 	return true;
-}
-function ensureColors() {
-	let colorlist = lookupSet(Settings, ['games', 'gTouchColors', 'colors'], SIMPLE_COLORS);
-	let shadeColor = lookupSet(Settings, ['games', 'gTouchColors', 'shadeColor'], 'red');
-	let contrast = lookupSet(Settings, ['games', 'gTouchColors', 'contrast'], .35);
-	let shade = anyColorToStandardString(shadeColor, contrast);
-	return [colorlist, shade];
 }

@@ -1,18 +1,18 @@
 program: #TODO: make this a list with ids
-  minutesPerUnit: 15
-  samplesPerLevel: 25
+  minutesPerUnit: 11
+  samplesPerLevel: 2
   # toggle: first half of level: labels, second half of level: no labels
   # TODO: individual adaptive: label toggle per word
   showLabels: toggle #always never toggle
-  incrementLevelOnPositiveStreak: 5
-  decrementLevelOnNegativeStreak: 3
+  incrementLevelOnPositiveStreak: 1
+  decrementLevelOnNegativeStreak: 1
   gameSequence:
+    - game: gTouchColors
     - game: gPreMem
-    - game: gTouchPic
+    - game: gWritePic
     - game: gSayPic
     - game: gMissingLetter
-    - game: gWritePic
-    - game: gTouchColors
+    - game: gTouchPic
   currentGameIndex: 0
   currentLevel: 0
 common:
@@ -87,7 +87,7 @@ games:
         numMissing: 5
         posMissing: random
   gTouchColors:
-    contrast: 0.32
+    contrast: .3
     colors:
       - red
       - blue
@@ -138,6 +138,68 @@ games:
         vocab: 100
         numPics: 12
         numRepeat: 3
+  gMem:
+    trials: 1
+    levels:
+      0: 
+        vocab: 25
+        numPics: 4
+        numRepeat: 2
+      1: 
+        vocab: 25
+        numPics: 9
+        numRepeat: 3
+      2: 
+        vocab: 25
+        numPics: 12
+        numRepeat: 2
+      3: 
+        vocab: 50
+        numPics: 16
+        numOpen: 4
+      4: 
+        vocab: 75
+        numPics: 16
+        numOpen: 2
+      5: 
+        vocab: 75
+        numPics: 20
+        numOpen: 2
+      6: 
+        vocab: 100
+        numPics: 36
+        numOpen: 3
+  gSteps:
+    trials: 1
+    levels:
+      0: 
+        vocab: 25
+        numPics: 4
+        numRepeat: 2
+      1: 
+        vocab: 25
+        numPics: 9
+        numRepeat: 3
+      2: 
+        vocab: 25
+        numPics: 12
+        numRepeat: 2
+      3: 
+        vocab: 50
+        numPics: 16
+        numOpen: 4
+      4: 
+        vocab: 75
+        numPics: 16
+        numOpen: 2
+      5: 
+        vocab: 75
+        numPics: 20
+        numOpen: 2
+      6: 
+        vocab: 100
+        numPics: 36
+        numOpen: 3
   gSayPic:
     vocab: 75
     trials: 3
