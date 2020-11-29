@@ -15,7 +15,7 @@ easiest way to run this if you have vs code installed:
 
 5. start in S directory 
 
-S/settings contains a settings file settings.yaml that can be adapted to use the implemented games with different parameters. right now, just file editing in program (computer icon) works!
+S/settings contains a settings file settings.yaml that can be adapted to use the implemented games with different parameters. right now, just file editing in program (computer icon) works! (gear icon NOT IMPLEMENTED!)
 
 Note: HAS ONLY BEEN TESTED ON *** GOOGLE CHROME ***
 
