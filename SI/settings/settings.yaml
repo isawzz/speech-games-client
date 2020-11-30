@@ -1,0 +1,160 @@
+program: #TODO: make this a list with ids
+  minutesPerUnit: 15
+  samplesPerLevel: 25
+  # toggle: first half of level: labels, second half of level: no labels
+  # TODO: individual adaptive: label toggle per word
+  showLabels: toggle #always never toggle
+  incrementLevelOnPositiveStreak: 5
+  decrementLevelOnNegativeStreak: 3
+  gameSequence:
+    - game: gPreMem
+    - game: gTouchPic
+    - game: gMissingLetter
+    - game: gSayPic
+    - game: gWritePic
+    - game: gTouchColors
+  currentGameIndex: 0
+  currentLevel: 0
+common:
+  # loopGameSequence: true
+  currentUser: Squid
+  currentLanguage: E
+  # activity animal body drink emotion food fruit game gesture kitchen 
+  # object person place plant role sport time transport vegetable 
+  # nosymemo nosymbols
+  currentCategories: [nosymemo]
+flags:
+  pressControlToUnfreeze: false
+  reducedAnimations: false
+  levelBadges: false
+games: 
+  gTouchPic:
+    trials: 2
+    levels:
+      0: 
+        vocab: 25
+        numPics: 2
+      1: 
+        vocab: 25
+        numPics: 3
+      2: 
+        vocab: 25
+        numPics: 4
+      3: 
+        vocab: 25
+        numPics: 6
+      4: 
+        vocab: 25
+        numPics: 8
+      5: 
+        vocab: 50
+        numPics: 9
+      6: 
+        vocab: 50
+        numPics: 16
+      7: 
+        vocab: 75
+        numPics: 25
+      8: 
+        vocab: 100
+        numPics: 36
+      9: 
+        vocab: 100
+        numPics: 49
+  gMissingLetter:
+    vocab: 100
+    trials: 3
+    levels:
+      0:
+        numMissing: 1
+        posMissing: start
+      1:
+        numMissing: 2
+        posMissing: start
+      2:
+        numMissing: 1
+        posMissing: random
+      3:
+        numMissing: 2
+        posMissing: random
+      4:
+        numMissing: 3
+        posMissing: random
+      5:
+        numMissing: 4
+        posMissing: random
+      6:
+        numMissing: 5
+        posMissing: random
+  gTouchColors:
+    contrast: 0.32
+    colors:
+      - red
+      - blue
+      - yellow
+      - green
+    trials: 2
+    levels:
+      0: 
+        vocab: 25
+        numPics: 2
+        numColors: 2
+      1: 
+        vocab: 25
+        numPics: 3
+        numColors: 3
+      2: 
+        vocab: 50
+        numPics: 4
+        numColors: 3
+      3: 
+        vocab: 75
+        numPics: 4
+        numColors: 4
+      4: 
+        vocab: 100
+        numPics: 5
+        numColors: 4
+  gPreMem:
+    trials: 1
+    levels:
+      0: 
+        vocab: 25
+        numPics: 2
+        numRepeat: 2
+      1: 
+        vocab: 25
+        numPics: 3
+        numRepeat: 3
+      2: 
+        vocab: 25
+        numPics: 6
+        numRepeat: 2
+      3: 
+        vocab: 50
+        numPics: 8
+        numRepeat: 2
+      4: 
+        vocab: 100
+        numPics: 12
+        numRepeat: 3
+  gSayPic:
+    vocab: 75
+    trials: 3
+  gWritePic:
+    trials: 3
+    levels:
+      0: 
+        vocab: 100
+        maxWordLength: 4
+      1: 
+        vocab: 100
+        maxWordLength: 6
+      2: 
+        vocab: 100
+        maxWordLength: 8
+      3: 
+        vocab: 100
+        maxWordLength: 100
+
+      
