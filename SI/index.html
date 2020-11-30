@@ -17,12 +17,7 @@
 	<script src="../CODE/hey.js"></script>
 	<link rel="stylesheet" href="./css/test.css">
 	<link rel="stylesheet" href="./css/settings.css">
-	<!--
 
-	<script src="./js/helpersX.js"></script>
-	<script src="./js/assets.js"></script>
-	<script src="js/assetHelpers.js"></script>
--->
 	<script src="./globals.js"></script>
 	<script src="./ui.js"></script>
 	<script src="./utilities.js"></script>
@@ -56,13 +51,6 @@
 </head>
 
 <body>
-	<!-- <h1>Hello gae</h1>
-	<div id='table'></div>
-	<script>
-		var table = mBy('table');
-		let d = mText('HALLO ' + DEFAULTPICTYPE, mBy('table'), { bg: 'red' });
-		let d1 = mText('HALLO', mBy('table'), { bg: 'red', family: 'AlgerianRegular' });
-	</script> -->
 
 	<div id='md'>
 		<div id='sidebar'></div>
@@ -75,15 +63,16 @@
 		<div id='bRunStop' onclick='onClickRunStopButton(this)'>Run</div>
 	</div>
 	<div id='dLevelComplete' style='display:none' class='centered'>LEVEL COMPLETE!!!</div>
-	<div id='dGameSettingsButton' onclick='toggleGameSettings()' style='position:fixed'>⚙️</div>
-	<div id='dProgramButton' onclick='toggleProgramSettings()' style='position:fixed'>🖥️</div>
-	<div id='dMenuButton' onclick='toggleMenu()' style='position:fixed'>🏛️</div>
+	<div id='dGameSettingsButton' onclick='toggleGameSettings()'>⚙️</div>
+	<div id='dProgramButton' onclick='toggleProgramSettings()'>🖥️</div>
+	<div id='dMenuButton' onclick='toggleMenu()'>🏛️</div>
 	<div id='dProgram' style='display:none;text-align:center'>
 	</div>
 	<div id='dGameSettings' style='display:none;text-align:center'>
 	</div>
 	<div id='dMenu' style='display:none;text-align:center'>
 	</div>
+	<div id='dResumeCurrentButton' onclick='onClickResumeCurrent()' style='display:none;'>Resume</div>
 	<div id='freezer' onclick="onClickFreezer()" style='display:none'>
 		<div class='centerCentered'>Click to Start!</div>
 	</div>

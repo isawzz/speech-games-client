@@ -5,6 +5,7 @@ function startGame() {
 	if (currentGame == 'gSayPic') Speech.stopRecording();
 
 	currentGame = Settings.program.gameSequence[Settings.program.currentGameIndex].game;
+	
 	GameInfo = Settings.games[currentGame];
 	LevelInfo = GameInfo.levels;
 	//MaxLevel = 0;

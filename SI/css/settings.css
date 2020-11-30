@@ -41,11 +41,13 @@
 #dMenu{
 	/* overflow: scroll; */
 	position: absolute;
-	left: 1%;
-	top: 1%;
-	min-height: 98%;
-	min-width: 98%;
-	background:#0000ff80;
+	left: 0;
+	top: 0;
+	min-height: 100%;
+	min-width: 100%;
+	padding: 20px;
+	box-sizing: border-box;
+	background:skyblue;
 }
 .fsc{
 	height:290px;

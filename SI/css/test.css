@@ -66,6 +66,14 @@ div{
 	cursor:pointer;
 	/* background:blue; */
 }
+#dResumeCurrentButton{
+	position: fixed;
+	display: inline-block;
+	bottom: 20px;
+	right: 20px;
+	cursor:pointer;
+	/* background:blue; */
+}
 #dMenuButton{
 	position: fixed;
 	display: inline-block;
