@@ -15,8 +15,6 @@ async function loadHistory() {
 	});
 }
 
-
-
 async function loadAssetsTest(assetsPath) {
 
 
