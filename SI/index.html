@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>testing</title>
+	<link rel="icon" href="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/samsung/261/rabbit_1f407.png">
+	<script src="../alibs/jsyaml.js"></script>
+	<link rel="stylesheet" href="../CODE/helpers.css">
+	<link rel="stylesheet" href="../assets/fonts/fonts.css">
+	<script src="../CODE/globalConfig.js"></script>
+	<script src="../CODE/helpers.js"></script>
+	<script src="../CODE/helpersX.js"></script>
+	<script src="../CODE/assets.js"></script>
+	<script src="../CODE/assetHelpers.js"></script>
+	<script src="../CODE/hey.js"></script>
+	<link rel="stylesheet" href="./css/test.css">
+	<link rel="stylesheet" href="./css/settings.css">
+	<!--
+
+	<script src="./js/helpersX.js"></script>
+	<script src="./js/assets.js"></script>
+	<script src="js/assetHelpers.js"></script>
+-->
+	<script src="./globals.js"></script>
+	<script src="./ui.js"></script>
+	<script src="./utilities.js"></script>
+
+	<script src="./iconViewer/iconViewer.js"></script>
+
+	<script src="./settings/gameSettings.js"></script>
+	<script src="./settings/menu.js"></script>
+	<script src="./settings/program.js"></script>
+	<script src="./settings/programSettings.js"></script>
+	<script src="./settings/settings.js"></script>
+
+	<script src="./speech/speech.js"></script>
+	<script src="./speech/speechTraining.js"></script>
+	<script src="./speech/testSpeechAPI.js"></script>
+
+	<script src="./games/globalsGames.js"></script>
+	<script src="./games/scoring.js"></script>
+	<script src="./games/gPreMem.js"></script>
+	<script src="./games/gMem.js"></script>
+	<script src="./games/gSteps.js"></script>
+	<script src="./games/gTouchPic.js"></script>
+	<script src="./games/gTouchColors.js"></script>
+	<script src="./games/gWritePic.js"></script>
+	<script src="./games/gMissingLetter.js"></script>
+	<script src="./games/gSayPic.js"></script>
+	<script src="./games/GFUNC.js"></script>
+
+	<script src="./start.js"></script>
+
+</head>
+
+<body>
+	<!-- <h1>Hello gae</h1>
+	<div id='table'></div>
+	<script>
+		var table = mBy('table');
+		let d = mText('HALLO ' + DEFAULTPICTYPE, mBy('table'), { bg: 'red' });
+		let d1 = mText('HALLO', mBy('table'), { bg: 'red', family: 'AlgerianRegular' });
+	</script> -->
+
+	<div id='md'>
+		<div id='sidebar'></div>
+		<div id='rightSide'>
+			<div id='table' class='flexWrap'></div>
+		</div>
+	</div>
+	<div id='divControls' style='display:none'>
+		<div id='bNext' onclick='onClickNextButton()'>Next</div>
+		<div id='bRunStop' onclick='onClickRunStopButton(this)'>Run</div>
+	</div>
+	<div id='dLevelComplete' style='display:none' class='centered'>LEVEL COMPLETE!!!</div>
+	<div id='dGameSettingsButton' onclick='toggleGameSettings()' style='position:fixed'>⚙️</div>
+	<div id='dProgramButton' onclick='toggleProgramSettings()' style='position:fixed'>🖥️</div>
+	<div id='dMenuButton' onclick='toggleMenu()' style='position:fixed'>🏛️</div>
+	<div id='dProgram' style='display:none;text-align:center'>
+	</div>
+	<div id='dGameSettings' style='display:none;text-align:center'>
+	</div>
+	<div id='dMenu' style='display:none;text-align:center'>
+	</div>
+	<div id='freezer' onclick="onClickFreezer()" style='display:none'>
+		<div class='centerCentered'>Click to Start!</div>
+	</div>
+	<div id='freezer2' onclick="onClickFreezer2(event)" style='display:none'>
+		<div class='centerCentered' style='margin-top:-5%;'>
+			<p>Great Job!</p>
+			<p style='font-size:64px'>Time for a Break...</p>
+			<div id='dContentFreezer2'></div>
+		</div>
+	</div>
+	<audio id="myAudio">
+		<source src="../assets/sounds/sound1.wav" type="audio/wav">
+		Your browser does not support the audio element.
+	</audio>
+	<audio id="rubberBandSound">
+		<source src="../assets/sounds/sound2.wav" type="audio/wav">
+		Your browser does not support the audio element.
+	</audio>
+	<audio id="gameoverAudio">
+		<source src="../assets/sounds/level1.wav" type="audio/wav">
+		Your browser does not support the audio element.
+	</audio>
+
+	<script>
+		var x = document.getElementById("myAudio");
+		function soundLevelComplete() { x.play(); }
+		function pauseAudio() { x.pause(); }
+		function soundGoodBye() { document.getElementById("gameoverAudio").play(); }
+
+		var rubberBandSound = document.getElementById("rubberBandSound");
+		function playRubberBandSound() { return; rubberBandSound.play(); }
+		function pauseRubberBandSound() { rubberBandSound.pause(); }
+
+	</script>
+
+</body>
+
+</html>
