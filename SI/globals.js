@@ -12,7 +12,6 @@ const RESTART_EACH_TIME = false; //IS_TESTING; // restarts program at startLevel
 const SETTINGS_KEY_FILE = IS_TESTING ? 'settingsTEST' : 'settings';
 const immediateStart = true;  // false | true
 const SHOW_FREEZER = false; // !IS_TESTING;
-const OFFLINE = false; // uses localhost instead of heroku
 
 var MASTER_VOLUME = 1;
 var loopGameSequence = true;

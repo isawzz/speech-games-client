@@ -1,8 +1,8 @@
 window.onload = loadHistory;
 
-async function _start(){
+async function _start() {
 	if (CLEAR_LOCAL_STORAGE) localStorage.clear();
-	
+
 	await loadAssetsTest('../assets/');
 
 	initTable();
@@ -14,7 +14,7 @@ async function _start(){
 
 	if (nundef(CurrentSessionData)) CurrentSessionData = { user: currentUser, games: [] };
 
-	Speech = new SpeechAPI('E'); 
+	Speech = new SpeechAPI('E');
 	KeySets = getKeySets();
 
 	if (SHOW_FREEZER) show('freezer'); else startUnit();
@@ -30,11 +30,11 @@ async function startUnit() {
 	await loadProgram();
 	UnitScoreSummary = {};
 
-	if (EXPERIMENTAL) { hide('freezer'); hide('divControls'); openMenu(); } else 
-	if (immediateStart && IS_TESTING) { hide('freezer'); if (StepByStepMode) show('divControls'); startGame(); }
-	else if (immediateStart) { hide('divControls'); startGame(); }
-	else if (IS_TESTING) { hide('freezer'); hide('divControls'); openProgramSettings(); }
-	else { hide('freezer'); hide('divControls'); openMenu(); }
+	if (EXPERIMENTAL) { hide('freezer'); hide('divControls'); openMenu(); } else
+		if (immediateStart && IS_TESTING) { hide('freezer'); if (StepByStepMode) show('divControls'); startGame(); }
+		else if (immediateStart) { hide('divControls'); startGame(); }
+		else if (IS_TESTING) { hide('freezer'); hide('divControls'); openProgramSettings(); }
+		else { hide('freezer'); hide('divControls'); openMenu(); }
 }
 
 async function saveHistory() {
@@ -43,7 +43,7 @@ async function saveHistory() {
 		console.log('...wait for unblocked...');
 		setTimeout(saveHistory, 1000);
 	} else {
-		let url = OFFLINE ? 'http://localhost:3000/users/'+USERNAME : 'https://speech-games.herokuapp.com/users/'+USERNAME;
+		let url = SERVERURL + USERNAME;
 		let sessionData = UserHistory;
 		BlockServerSend = true;
 		console.log('blocked...');
@@ -73,11 +73,11 @@ function onClickRunButton(b) { b.innerHTML = 'Stop'; mStyleX(bRunStop, { bg: 're
 function onClickStopButton(b) { b.innerHTML = 'Run'; mStyleX(bRunStop, { bg: 'green' }); StepByStepMode = true; }
 
 //testing
-function tests(){
-	
+function tests() {
+
 	console.log(symbolDict['horse']);
-	console.log('UserHistory',UserHistory);
-	let d2 = maPic('horse', table, {bg:'green',w:200,h:200});
+	console.log('UserHistory', UserHistory);
+	let d2 = maPic('horse', table, { bg: 'green', w: 200, h: 200 });
 
 }
 
