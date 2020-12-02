@@ -1,3 +1,4 @@
+var SelectedGameInAux;
 function initAux() {
 	dMenu = mBy('dMenu');
 	dDev = mBy('dDev');
@@ -5,6 +6,8 @@ function initAux() {
 	setGlobalSettings();
 }
 function setGlobalSettings() {
+
+	currentGame = Settings.program.gameSequence[Settings.program.currentGameIndex].game;
 
 	currentLanguage = Settings.program.currentLanguage;
 
@@ -14,13 +17,15 @@ function setGlobalSettings() {
 
 	resetLabelSettings();
 
-	if (Settings.program.showTime) {show(mBy('time'));startTime();} 
+	if (Settings.program.showTime) { show(mBy('time')); startTime(); }
 	else hide(mBy('time'));
+
+	
 }
 
 function resetLabelSettings() {
 	if (Settings.program.showLabels == 'toggle') Settings.program.labels = true;
-	else Settings.program.labels = (Settings.program.showLabels=='always');
+	else Settings.program.labels = (Settings.program.showLabels == 'always');
 }
 
 function openAux(divName) {
@@ -31,7 +36,7 @@ function openAux(divName) {
 	hide('dGameSettingsButton');
 	if (DEV_MODE) hide('dDevButton');
 
-	if (isdef(dTable)) {
+	if (isdef(dTable) && divName != 'dMenu') {
 		clearElement(dTable);
 		show('dResumeCurrentButton');
 	} else {
@@ -45,7 +50,7 @@ function openAux(divName) {
 	else if (divName == 'dDev') { createDevSettingsUi(); }
 }
 
-function closeAux(done=false) {
+function closeAux(done = false) {
 
 	if (isVisible2('dMenu')) { }
 	else if (isVisible2('dGameSettings')) {
@@ -56,7 +61,7 @@ function closeAux(done=false) {
 
 		saveServerData();
 
-	 }
+	}
 	else if (isVisible2('dDev')) {
 		console.log('DEV NOT IMPLEMENTED')
 	}
@@ -72,9 +77,9 @@ function closeAux(done=false) {
 	continueResume();
 
 
-	
-	if (isVisible2(dPlayButton)) { hide('dPlayButton');  }
-	else { hide('dResumeCurrentButton');  }
+
+	if (isVisible2(dPlayButton)) { hide('dPlayButton'); }
+	else { hide('dResumeCurrentButton'); }
 
 
 }
@@ -144,29 +149,49 @@ function createGameSettingsUi() {
 
 	//let nGroupOther = mInputGroup(dParent);
 	setzeEineCheckbox(nGroupNumCommonAllGames, 'show time', false, ['program', 'showTime']);
+	setzeEineCheckbox(nGroupNumCommonAllGames, 'switch game after max level', false, ['program', 'switchGame']);
 
 }
 function createMenuUi() {
 	let dParent = mBy('dMenu');
 
-	if (!isEmpty(dParent.children)) return;
+	if (isEmpty(dParent.children)) {
 
-	mAppend(dParent, createElementFromHTML(`<h1>Choose Game:</h1>`));
+		mAppend(dParent, createElementFromHTML(`<h1>Choose Game:</h1>`));
 
-	let d = mDiv(dParent);
-	mClass(d, 'flexWrap');
-	d.style.height = '100%';
+		let d = mDiv(dParent);
+		mClass(d, 'flexWrap');
+		d.style.height = '100%';
 
-	let games = Settings.program.gameSequence.map(x => x.game);
-	let labels = games.map(g => GFUNC[g].friendlyName);
-	let keys = games.map(g => GFUNC[g].logo);
-	let bgs = games.map(g => GFUNC[g].color);
+		let games = Settings.program.gameSequence.map(x => x.game);
+		let labels = games.map(g => GFUNC[g].friendlyName);
+		let keys = games.map(g => GFUNC[g].logo);
+		let bgs = games.map(g => GFUNC[g].color);
 
-	// console.log(games)
-	//console.log('-----------------bgs', bgs);
+		// console.log(games)
+		//console.log('-----------------bgs', bgs);
 
-	let pics = maShowPictures(keys, labels, d, onClickGame, { bgs: bgs, shufflePositions: false });
-	pics.map(x => x.div.id = 'menu_' + x.label.substring(0, 3));
+		let pics = maShowPictures(keys, labels, d, onClickGame, { bgs: bgs, shufflePositions: false });
+		for (let i = 0; i < pics.length; i++) {
+			let p = pics[i];
+			//console.log(p)
+			p.div.id = 'menu_' + p.label.substring(0, 3);
+			p.game = games[i];
+			p.div.game = p.game;
+		}
+		//pics.map(x => x.div.id = 'menu_' + x.label.substring(0, 3));
+	}else{
+		for(const div of dParent.children[1].children){
+			mRemoveClass(div,'framedPicture')
+		}
+	}
+
+	console.assert(isdef(currentGame), 'MENU: currentGame NOT SET!!!!!!!!!!!!!!!');
+	let picDivs = dParent.children[1].children;
+	//console.log(dParent, picDivs)
+	let div = firstCond(picDivs, x => x.game == currentGame)
+	mClass(div, 'framedPicture');
+	SelectedGameInAux = currentGame;
 }
 
 //#region click handlers
@@ -179,17 +204,45 @@ function onClickGame(ev) {
 
 	//which game is this?
 	let vals = dict2list(GFUNC);
-	console.log(vals);
+	//.log(vals);
 
 	let item = firstCond(vals, x => x.friendlyName.startsWith(prefix));
 	let seq = Settings.program.gameSequence.map(x => x.game);
 
-	console.log(item, item.id, seq, seq.indexOf(item.id))
+	//console.log(item, item.id, seq, seq.indexOf(item.id))
 
-	Settings.program.currentGameIndex = seq.indexOf(item.id);
-	closeAux(true);
-	startGame();
+	let idx = Settings.program.currentGameIndex = seq.indexOf(item.id);
+	//let game = seq[Settings.program.currentGameIndex];
+
+	console.assert(isdef(currentGame), 'MENU: currentGame NOT SET!!!!!!!!!!!!!!!')
+	let dParent = mBy('dMenu');
+	let picDivs = dParent.children[1].children;
+	//console.log(dParent, picDivs)
+	let divSelected = firstCond(picDivs, x => x.game == SelectedGameInAux);
+	let divClicked = firstCond(picDivs, x => x.game == seq[idx]);
+	SelectedGameInAux = divClicked.game;
+	//console.log('click on', divClicked.game, divClicked);
+	//console.log('selected was', divSelected.game, divSelected);
+	if (divClicked == divSelected) {
+		closeAux(true);
+		startGame();
+
+	}else{
+		mClass(divClicked,'framedPicture');
+		mRemoveClass(divSelected,'framedPicture');
+
+	}//
+	// mClass(div, 'framedPicture');
+	// let picDivs = 
+	// if (ev.target.game == currentGame) {
+
+	// }else{
+
+	// 	mClass(ev.target,'framedPicture');
+	// }
 }
+
+
 
 
 

@@ -213,10 +213,12 @@ function mMicrophone(dParent) {
 }
 function MicrophoneShow() {
 	//could use class blink
+	if (nundef(MicrophoneUi)) return;
 	if (RecogOutput) console.log('* mic start')
 	MicrophoneUi.style.opacity = 1;
 }
 function MicrophoneHide() {
+	if (nundef(MicrophoneUi)) return;
 	if (RecogOutput) console.log('* mic end')
 	MicrophoneUi.style.opacity = .31;
 }

@@ -6,10 +6,10 @@ function ProgTimeIsUp() {
 	//console.log('elapsed:', msElapsed, 'unit', msUnit);
 	return msElapsed > msUnit;
 }
-function pauseProgramTimer() { ProgMsElapsed += msElapsedSince(ProgMsStart);}
-function resumeProgramTimer() {	ProgMsStart = Date.now();}
-function startProgramTimer() {	ProgMsElapsed = 0;	ProgMsStart = Date.now();}
-function getTimeElapsed(){return ProgMsElapsed + msElapsedSince(ProgMsStart);}
+function pauseProgramTimer() { ProgMsElapsed += msElapsedSince(ProgMsStart); }
+function resumeProgramTimer() { ProgMsStart = Date.now(); }
+function startProgramTimer() { ProgMsElapsed = 0; ProgMsStart = Date.now(); }
+function getTimeElapsed() { return ProgMsElapsed + msElapsedSince(ProgMsStart); }
 
 function loadProgram() {
 	let program = Settings.program;
@@ -75,9 +75,11 @@ function saveProgram() {
 }
 function updateGameSequence(nextLevel) {
 	if (nextLevel > MaxLevel) {
-		let gameSequence = Settings.program.gameSequence;
-		let iGame = Settings.program.currentGameIndex = (Settings.program.currentGameIndex + 1) % gameSequence.length;
-		Settings.program.currentLevel = getUserStartLevel(iGame);
+		if (Settings.program.switchGame) {
+			let gameSequence = Settings.program.gameSequence;
+			let iGame = Settings.program.currentGameIndex = (Settings.program.currentGameIndex + 1) % gameSequence.length;
+			Settings.program.currentLevel = getUserStartLevel(iGame);
+		} else return;
 	} else Settings.program.currentLevel = nextLevel;
 
 	//console.log('*****updated Game Sequence to index', Settings.program.currentGameIndex, 'level', Settings.program.currentLevel);
@@ -86,15 +88,15 @@ function updateGameSequence(nextLevel) {
 
 function startTime() {
 	if (nundef(Settings.program.showTime) || !Settings.program.showTime) return;
-	var timeLeft =Settings.program.minutesPerUnit*60000 - getTimeElapsed();
+	var timeLeft = Settings.program.minutesPerUnit * 60000 - getTimeElapsed();
 	let t = msToTime(timeLeft);
-	let s=format2Digits(t.h)+":"+format2Digits(t.m)+":"+format2Digits(t.s);
+	let s = format2Digits(t.h) + ":" + format2Digits(t.m) + ":" + format2Digits(t.s);
 	document.getElementById('time').innerHTML = s;//h + ":" + m + ":" + s;
-	setTimeout(startTime,500);
+	setTimeout(startTime, 500);
 	//function () {		startTime()	}, 500);
 }
 
-function format2Digits(i) {	return (i < 10) ? "0" + i : i;}
+function format2Digits(i) { return (i < 10) ? "0" + i : i; }
 function startTimeClock() {
 	if (nundef(Settings.program.showTime) || !Settings.program.showTime) return;
 	var today = new Date(),

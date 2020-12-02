@@ -521,7 +521,7 @@ function showCorrectWord(sayit = true) {
 	let correctionPhrase = isdef(Goal.correctionPhrase) ? Goal.correctionPhrase : bestWord;
 	Speech.say(correctionPhrase, .4, 1.2, 1, 'david');
 }
-function showLevel() { dLevel.innerHTML = 'level: ' + currentLevel; }
+function showLevel() { dLevel.innerHTML = 'level: ' + currentLevel + '/' + MaxLevel; }
 function showGameTitle() { dGameTitle.innerHTML = GFUNC[currentGame].friendlyName; }
 function showStats() { showLevel(); showScore(); showGameTitle(); }
 function writeComments(pre) {
