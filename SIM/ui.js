@@ -131,7 +131,7 @@ function removeMarkers() {
 //#endregion
 
 function mInputGroup(dParent, styles) {
-	let baseStyles = { display: 'inline-block', align: 'right', bg: 'random', padding: 20 };
+	let baseStyles = { display: 'inline-block', align: 'right', bg:'#00000080', rounding:10, padding: 20 };
 	if (isdef(styles)) styles = deepmergeOverride(baseStyles, styles); else styles = baseStyles;
 	return mDiv(dParent, styles);
 }
@@ -160,6 +160,7 @@ function setzeEineZahl(dParent, label, init, skeys) {
 	mAppend(labelui, inp);
 
 	mStyleX(inp, { maleft: 12, mabottom: 4 });
+	mClass(inp, 'input');
 
 	inp.keyList = skeys;
 }
@@ -169,8 +170,8 @@ function setSettingsLevelProgression(elem) {
 	let info = Settings.games[game];
 	let val = elem.type == 'number' ? Number(elem.value) : elem.value;
 	let progInfo = GameProps[prop].progression;
-	console.log(progInfo,val,Object.keys(info.levels));
-	for(const k in info.levels){
+	console.log(progInfo, val, Object.keys(info.levels));
+	for (const k in info.levels) {
 		console.log(Object.keys(info.levels[k]))
 		//need to set this prop for each level!
 	}
@@ -179,7 +180,7 @@ function setSettingsLevelProgression(elem) {
 function setzeEineLevelZahl(dParent, label, init, game, prop) {
 	// <input id='inputPicsPerLevel' class='input' type="number" value=1 />
 	let d = mDiv(dParent);
-	let val = lookup(Settings, ['games',game,'levels',0,prop]);
+	let val = lookup(Settings, ['games', game, 'levels', 0, prop]);
 	if (nundef(val)) val = init;
 	let inp = createElementFromHTML(
 		// `<input id="${id}" type="number" class="input" value="1" onfocusout="setSettingsKeys(this)" />`); 
@@ -189,6 +190,7 @@ function setzeEineLevelZahl(dParent, label, init, game, prop) {
 	mAppend(labelui, inp);
 
 	mStyleX(inp, { maleft: 12, mabottom: 4 });
+	//mClass(inp, 'input');
 
 	inp.game = game;
 	inp.prop = prop;

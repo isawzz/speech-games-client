@@ -69,8 +69,8 @@ function closeAux(done=false) {
 
 
 	
-	if (isVisible2(dPlayButton)) { hide('dPlayButton'); if (!done) startGame(); }
-	else { hide('dResumeCurrentButton'); if (!done) startLevel(); }
+	if (isVisible2(dPlayButton)) { hide('dPlayButton');  }
+	else { hide('dResumeCurrentButton');  }
 
 
 }
@@ -139,29 +139,6 @@ function createGameSettingsUi() {
 	setzeEinOptions(nGroupNumCommonAllGames, 'vocabulary', [25, 50, 75, 100], 25, ['program', 'vocab']);
 
 	return;
-	mLinebreak(dParent);
-	mAppend(dParent, createElementFromHTML(`<h1>Settings for ${GFUNC[currentGame].friendlyName}</h1>`));
-
-	//simpler!
-	//what are the special features for this game? look at Settings.games[g].levels[0]
-	let gameInfo = Settings.games[currentGame];
-	let needToSet = [];
-	for (const k in gameInfo) {
-		if (['samplesPerLevel', 'minutesPerUnit', 'incrementLevelOnPositiveStreak', 'decrementLevelOnNegativeStreak', 'showLabels', 'trials'].includes(k)) continue;
-		if (k == 'levels') {
-			for (const x in gameInfo.levels[0]) {
-				needToSet.push(x);
-			}
-		} else needToSet.push(k);
-	}
-	console.log(needToSet);
-
-	let gr = mTitleGroup(dParent, 'starting level:');
-	let nGroupGame = mInputGroup(gr, { bg: 'transparent' });
-	for (const h of needToSet) {
-		setzeEineLevelZahl(nGroupGame, GameProps[h].friendly, '', currentGame, h);
-	}
-	//addLevelTable(dParent);
 }
 function createMenuUi() {
 	let dParent = mBy('dMenu');
