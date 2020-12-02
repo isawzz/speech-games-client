@@ -131,21 +131,16 @@ function removeMarkers() {
 //#endregion
 
 function mInputGroup(dParent, styles) {
-	let baseStyles = { display: 'inline-block', align: 'right', bg:'#00000080', rounding:10, padding: 20 };
+	let baseStyles = { display: 'inline-block', align: 'right', bg: '#00000080', rounding: 10, padding: 20, margin: 12 };
 	if (isdef(styles)) styles = deepmergeOverride(baseStyles, styles); else styles = baseStyles;
 	return mDiv(dParent, styles);
 }
-function mTitleGroup(dParent, title) {
-	let d = mDiv(dParent, { display: 'inline-block', align: 'center', bg: 'random', padding: 20 });
-	let tag = 'h3';
-	mAppend(d, createElementFromHTML(`<${tag} style='margin:0;padding:0'>${title}</${tag}>`));
-	return d;
-}
 function setSettingsKeys(elem) {
 	// console.log('lllllllllllllllll', a, a.value, a.keyList);
-	let val = elem.type == 'number' ? Number(elem.value) : elem.value;
+	let val = elem.type == 'number' ? Number(elem.value) : elem.type == 'checkbox' ? elem.checked : elem.value;
 	lookupSetOverride(Settings, elem.keyList, val);
-	console.log(Settings.program);
+	console.log(elem.keyList, val)
+	//console.log(Settings.program);
 }
 function setzeEineZahl(dParent, label, init, skeys) {
 	// <input id='inputPicsPerLevel' class='input' type="number" value=1 />
@@ -164,36 +159,24 @@ function setzeEineZahl(dParent, label, init, skeys) {
 
 	inp.keyList = skeys;
 }
-function setSettingsLevelProgression(elem) {
-	let game = elem.game;
-	let prop = elem.prop;
-	let info = Settings.games[game];
-	let val = elem.type == 'number' ? Number(elem.value) : elem.value;
-	let progInfo = GameProps[prop].progression;
-	console.log(progInfo, val, Object.keys(info.levels));
-	for (const k in info.levels) {
-		console.log(Object.keys(info.levels[k]))
-		//need to set this prop for each level!
-	}
-
-}
-function setzeEineLevelZahl(dParent, label, init, game, prop) {
+function setzeEineCheckbox(dParent, label, init, skeys) {
 	// <input id='inputPicsPerLevel' class='input' type="number" value=1 />
 	let d = mDiv(dParent);
-	let val = lookup(Settings, ['games', game, 'levels', 0, prop]);
+	let val = lookup(Settings, skeys);
 	if (nundef(val)) val = init;
 	let inp = createElementFromHTML(
+		`<input type="checkbox" class="checkbox" ` + (val ? 'checked=true' : '') + ` onfocusout="setSettingsKeys(this)" >`
 		// `<input id="${id}" type="number" class="input" value="1" onfocusout="setSettingsKeys(this)" />`); 
-		`<input type="number" class="input" value="${val}" onfocusout="setSettingsLevelProgression(this)" />`);
+		// `<input type="number" class="input" value="${val}" onfocusout="setSettingsKeys(this)" />`
+	);
 	let labelui = createElementFromHTML(`<label>${label}</label>`);
 	mAppend(d, labelui);
 	mAppend(labelui, inp);
 
 	mStyleX(inp, { maleft: 12, mabottom: 4 });
-	//mClass(inp, 'input');
+	mClass(inp, 'input');
 
-	inp.game = game;
-	inp.prop = prop;
+	inp.keyList = skeys;
 }
 
 function setSettingsKeysSelect(elem) {
@@ -234,24 +217,4 @@ function setzeEinOptions(dParent, label, optionList, init, skeys) {
 
 
 
-function mProgressionGroup_dep(dParent, title, headers, addHandler = null) {
-	let d = mDiv(dParent, { display: 'inline-block', bg: choose(levelColors), padding: 20 });
-	mAppend(d, createElementFromHTML(`<h3 style='margin:0;padding:0'>${title}</h3>`));
-
-	let s = '';
-	for (const h of headers) {
-		s += '<td>' + h + '</td>';
-	}
-
-	let t = createElementFromHTML(`<table><tbody><tr>${s}</tr></tbody></table>`);
-	// let row = t.querySelector('tr');
-	// console.log(t,row)
-	// for(const h of headers){
-	// 	mAppend(row,createElementFromHTML(`<td>${h}</td>`))
-	// }
-	mAppend(d, t);
-	// mText('level progression:',d);
-	//mButton('add',addHandler,d); spaeter erst!!!
-	return t;
-}
 

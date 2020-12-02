@@ -104,41 +104,45 @@ fieldset div{
 	margin:10px 16px;
 }
 
-/* .input {
-	display: inline-block;
-	min-width: 70px;
-} */
-.inputPlayerType {
-	display: inline-block;
-  margin: 7px 5px 1px 5px;
-  margin-left:-20px;
-	padding: 0px;
-	text-align-last: center;
-	/* padding: 0px 12px; */
-	/* text-indent: 30%; */
-	/* text-align:center; */
-	/* padding: 3px 4px 3px 4px; */
-  font-size: 12pt;
-  font-family: Verdana;
-  text-align: center;
-  text-decoration: none;
-  outline: none;
-	cursor: pointer;
-	background-color: white;
-	color: var(--bgButton);
-  border: none;
-  border-radius: 12px;
-	width: 120px;
-	height:22px;
-	box-sizing:border-box
-}
-label{
-	color: var(--fgButton);
-}
 
 input{
 	width:70px;
 }
 select{
 	width:77px;
+}
+.checkbox {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  /* border-radius: 50%; */
+  width: 76px;
+  height: 18px;
+	border: 1px solid #999;
+	color:  #999;
+	text-align: center;
+  transition: 0.2s all linear;
+  margin: 0px;
+	padding: 0px;
+  position: relative;
+	top: -2px;
+	left: 0px;
+}
+.checkbox:focus {
+  outline-width: 0px;
+  outline-style: solid;
+	outline-color: transparent; 
+	/* outline-color: Highlight; */
+}
+.checkbox:checked {
+	color: black;
+	background-color: white;
+	border: 1px solid #00000080;
+
+}
+.checkbox::before{
+	content: "no";
+}
+.checkbox:checked::before {
+  content: "yes";
 }

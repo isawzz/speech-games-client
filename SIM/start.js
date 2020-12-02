@@ -11,10 +11,13 @@ async function _start() {
 
 	Speech = new SpeechAPI('E');
 	KeySets = getKeySets();
-	console.log(KeySets)
+	//console.log(KeySets)
 	startTime();
 
-	if (BROADCAST_SETTINGS) broadcastSettings();
+	if (BROADCAST_SETTINGS) {
+		console.log('...broadcasting ...')
+		broadcastSettings();
+	}
 
 	// tests(); return;
 

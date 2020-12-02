@@ -108,19 +108,3 @@ function msElapsedSince(msStart){	return Date.now() - msStart;}
 function timeToMs(h,m,s){return ((((h*60)+m)*60)+s)*1000;}
 
 
-function checkTime(i) {
-	return (i < 10) ? "0" + i : i;
-}
-
-function startTime() {
-	var today = new Date(),
-		h = checkTime(today.getHours()),
-		m = checkTime(today.getMinutes()),
-		s = checkTime(today.getSeconds());
-	document.getElementById('time').innerHTML = h + ":" + m + ":" + s;
-	t = setTimeout(function () {
-		startTime()
-	}, 500);
-}
-
-

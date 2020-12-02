@@ -356,58 +356,6 @@ div{
 
 
 
-/* #region example checkbox */
-.box {
-	background: #666666;
-	color: #ffffff;
-	width: 250px;
-	/* padding: 10px; */
-	/* margin: 1em auto; */
-}
-
-p {
-	margin: 0;
-	padding: 0;
-}
-
-input[type="checkbox"] {
-	visibility: hidden;
-	display: none;
-}
-
-label {
-	cursor: pointer;
-}
-
-input[type="checkbox"]+label:before {
-	border: 1px solid #333;
-	content: "\00a0";
-	display: inline-block;
-	font: 16px/1em sans-serif;
-	height: 16px;
-	margin: 2px .25em 0 0;
-	padding: 0;
-	vertical-align: top;
-	width: 16px;
-}
-
-input[type="checkbox"]:checked+label:before {
-	background: #fff;
-	color: #333;
-	content: "\2713";
-	text-align: center;
-}
-
-input[type="checkbox"]:checked+label:after {
-	font-weight: bold;
-}
-
-input[type="checkbox"]:focus+label::before {
-	outline: rgb(59, 153, 252) auto 5px;
-}
-
-/* #endregion */
-
 
 /* #region animations */
 .pulse800yellow {

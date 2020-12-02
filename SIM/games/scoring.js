@@ -69,7 +69,7 @@ function lastStreakCorrect(items) {
 }
 function scoring(isCorrect) {
 
-	console.log('===>SCORING ************')
+	//console.log('===>SCORING ************')
 
 	CurrentGoalData = {
 		key: Goal.key, isCorrect: IsAnswerCorrect, reqAnswer: Selected.reqAnswer, answer: Selected.answer,
@@ -149,7 +149,7 @@ function scoring(isCorrect) {
 		CurrentLevelData.percentageCorrect = percentageCorrect;
 
 		//upgrade startLevel for this user if reached 100%
-		console.log('==>scoring',percentageCorrect,nextLevel,MaxLevel,levelChange);
+		//console.log('==>scoring',percentageCorrect,nextLevel,MaxLevel,levelChange);
 		if (percentageCorrect >= 100 && nextLevel>0 && nextLevel <= MaxLevel) upgradeStartLevelForUser(currentGame, nextLevel);
 		else if (levelChange < 0) upgradeStartLevelForUser(currentGame, nextLevel);
 

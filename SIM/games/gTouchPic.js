@@ -10,8 +10,8 @@ function levelTP() {
 
 	currentKeys = setKeys({lang:currentLanguage,nbestOrCats:vinfo}); //isNumber(vinfo) ? KeySets['best' + vinfo] : setKeys(vinfo);
 
-	console.log('MaxNumTrials',MaxNumTrials,'NumPics',NumPics,'NumLabels',NumLabels,'vinfo',vinfo,'currentLanguage',currentLanguage)
-	console.log('incrementLevelOnPositiveStreak',Settings.program.incrementLevelOnPositiveStreak,'decrementLevelOnNegativeStreak',Settings.program.decrementLevelOnNegativeStreak);
+	//console.log('MaxNumTrials',MaxNumTrials,'NumPics',NumPics,'NumLabels',NumLabels,'vinfo',vinfo,'currentLanguage',currentLanguage)
+	//console.log('incrementLevelOnPositiveStreak',Settings.program.incrementLevelOnPositiveStreak,'decrementLevelOnNegativeStreak',Settings.program.decrementLevelOnNegativeStreak);
 }
 function startRoundTP() {
 	uiActivated = false;
