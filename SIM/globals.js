@@ -1,4 +1,4 @@
-const BROADCAST_SETTINGS = true; // ACHTUNG!!!!!!!!!!!!! true;
+const BROADCAST_SETTINGS = false; // ACHTUNG!!!!!!!!!!!!! true;
 const EXPERIMENTAL = false;
 const DEV_MODE = false; //OFFLINE is true auf ASUS ROG soll aber false sein auf github!
 const IS_TESTING = false;

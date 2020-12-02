@@ -17,7 +17,7 @@ easiest way to run this locally if you have vs code installed:
 
 4. press GoLive
 
-5. start in SI directory 
+5. start in SIM directory 
 
 S/settings contains a settings file settings.yaml that can be adapted to use the implemented games with different parameters. right now, just file editing in program (computer icon) works! (gear icon NOT IMPLEMENTED!)
 
@@ -25,6 +25,6 @@ Note: HAS ONLY BEEN TESTED ON *** GOOGLE CHROME ***
 
 trouble-shooting: 
 - use F12 in Chrome to see error messages
-- if you get ERR_CONNECTION_REFUSED, look at the file S/globals.js and set OFFLINE=false if you do not run the speech-games-server locally (it will start server on heroku)
+- if you get ERR_CONNECTION_REFUSED, look at the file SIM/globals.js and set OFFLINE=false if you do not run the speech-games-server locally (it will start server on heroku)
 
 => please send bugs or questions to a_leeb@yahoo.com
