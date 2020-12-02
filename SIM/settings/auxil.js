@@ -48,9 +48,11 @@ function closeAux(done=false) {
 	if (isVisible2('dMenu')) { }
 	else if (isVisible2('dGameSettings')) {
 		var x = document.activeElement;
-		console.log('focus is on:',x)
+		//console.log('focus is on:',x)
 		if (isdef(x.keyList)) setSettingsKeys(x);
 		else if (isdef(x.game)) setSettingsKeysSelect(x);
+
+		saveServerData();
 
 	 }
 	else if (isVisible2('dDev')) {
