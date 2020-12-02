@@ -105,10 +105,10 @@ fieldset div{
 }
 
 
-input{
+#dGameSettings input{
 	width:70px;
 }
-select{
+#dGameSettings select{
 	width:77px;
 }
 .checkbox {
