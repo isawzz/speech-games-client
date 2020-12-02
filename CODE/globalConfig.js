@@ -1,5 +1,7 @@
 var USERNAME;
 
+var Settings, DefaultSettings, UserHistory;
+
 const TIMIT_SHOW = false; // true | false
 
 var USE_LOCAL_STORAGE = false; // true | false //localStorage is cleared when false!!!!!
