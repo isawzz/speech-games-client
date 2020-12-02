@@ -41,10 +41,18 @@ function openAux(divName) {
 	else if (divName == 'dDev') { createDevSettingsUi(); }
 }
 
-function closeAux() {
+function closeAux(done=false) {
+
+
 
 	if (isVisible2('dMenu')) { }
-	else if (isVisible2('dGameSettings')) { }
+	else if (isVisible2('dGameSettings')) {
+		var x = document.activeElement;
+		console.log('focus is on:',x)
+		if (isdef(x.keyList)) setSettingsKeys(x);
+		else if (isdef(x.game)) setSettingsKeysSelect(x);
+
+	 }
 	else if (isVisible2('dDev')) {
 		console.log('DEV NOT IMPLEMENTED')
 	}
@@ -59,8 +67,10 @@ function closeAux() {
 
 	continueResume();
 
-	if (isVisible2(dPlayButton)) { hide('dPlayButton'); startGame(); }
-	else { hide('dResumeCurrentButton'); startLevel(); }
+
+	
+	if (isVisible2(dPlayButton)) { hide('dPlayButton'); if (!done) startGame(); }
+	else { hide('dResumeCurrentButton'); if (!done) startLevel(); }
 
 
 }
@@ -194,7 +204,7 @@ function onClickGame(ev) {
 	console.log(item, item.id, seq, seq.indexOf(item.id))
 
 	Settings.program.currentGameIndex = seq.indexOf(item.id);
-	closeAux('dMenu');
+	closeAux(true);
 	startGame();
 }
 
