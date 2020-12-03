@@ -8,7 +8,7 @@ const CLEAR_LOCAL_STORAGE = false;
 const RESTART_EACH_TIME = false; //IS_TESTING; // restarts program at startLevel instead of continuing where left off
 
 const SETTINGS_KEY = IS_TESTING ? 'settingsTEST' : 'settings';
-const immediateStart = true; // IS_TESTING;  // false | true
+const immediateStart = IS_TESTING; // IS_TESTING;  // false | true
 const SHOW_FREEZER = false; // !IS_TESTING;
 
 var MASTER_VOLUME = 1;
