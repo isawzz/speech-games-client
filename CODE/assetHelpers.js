@@ -20,11 +20,13 @@ function maShowPictures(keys, labels, dParent, onClickPictureHandler,
 		items.push({ key: k, info: info, label: label, bg: bg });
 	}
 
+
 	//console.log('________________',items,repeat)
 	let items1 = jsCopy(items);
 	for (let i = 0; i < repeat - 1; i++) { items = items.concat(items1); }
 	//console.log('________________',items,repeat)
 
+	//console.log(items)
 
 	let isText = true;
 	let isOmoji = false;

@@ -74,21 +74,19 @@ async function loadServerDataAndAssets() {
 }
 
 async function saveServerData() {
-	console.log('posting...');
+	//console.log('posting...');
 	let sData = SERVER_DATA[0]; //firstCond(SERVER_DATA,x=>x.id=='speechGames');
 	sData.users[USERNAME] = UserHistory; //SERVER_DATA.users[USERNAME];
 	sData[SETTINGS_KEY].defaults = DefaultSettings;
 	sData[SETTINGS_KEY].current = Settings;
 	//return;
 	if (BlockServerSend) {
-		console.log('...wait for unblocked...');
+		//console.log('...wait for unblocked...');
 		setTimeout(saveServerData, 1000);
 	} else {
 		let url = SERVERURL + 'speechGames';
-		//let url = SERVERURL + USERNAME;
-		//let sessionData = UserHistory;
 		BlockServerSend = true;
-		console.log('blocked...');
+		//console.log('blocked...');
 		fetch(url, {
 			method: 'PUT',
 			headers: {
@@ -96,7 +94,7 @@ async function saveServerData() {
 				'Content-Type': 'application/json'
 			},
 			body: JSON.stringify(SERVER_DATA[0])
-		}).then(() => { BlockServerSend = false; console.log('unblocked...'); });
+		}).then(() => { BlockServerSend = false; }); //console.log('unblocked...'); });
 	}
 
 }

@@ -165,12 +165,12 @@ function mLinebreak(dParent, gap) {
 	return d;
 }
 function mMarginAuto(d) { d.style.setProperty('margin', 'auto'); }
-function mPos(d, x, y, unit = 'px') { mStyle(d, { left: x, top: y, position: 'absolute' }, unit); }
+function mPos(d, x, y, unit = 'px') { mStyleX(d, { left: x, top: y, position: 'absolute' }, unit); }
 function mPosAbs(d) { d.style.position = 'absolute'; }
 function mPosRel(d, x, y, unit) { d.style.position = 'relative'; if (isdef(x)) mStyle(d, { left: x, top: y }, unit); }
 function mRot(d, angle) { d.style.transform = 'rotate(' + angle + 'deg)'; }
-function mSize(d, w, h, unit = 'px') { mStyle(d, { width: w, height: h }, unit); }
-function mMinSize(d, w, h, unit = 'px') { mStyle(d, { 'min-width': w, 'min-height': h }, unit); }
+function mSize(d, w, h, unit = 'px') { mStyleX(d, { width: w, height: h }, unit); }
+function mMinSize(d, w, h, unit = 'px') { mStyleX(d, { 'min-width': w, 'min-height': h }, unit); }
 function mMinBounds(d) {
 	let b = getBounds(d);
 	mStyle(d, { 'min-width': b.width, 'min-height': b.height }, 'px');
@@ -2054,12 +2054,12 @@ function isVisible2(elem) { // Where el is the DOM element you'd like to test fo
 
 	return (elem.style.display != 'none' || elem.offsetParent !== null);
 }
-function show(elem) {
+function show(elem,isInline=false) {
 	if (isString(elem)) elem = document.getElementById(elem);
 	if (isSvg(elem)) {
 		elem.setAttribute('style', 'visibility:visible');
 	} else {
-		elem.style.display = null;
+		elem.style.display = isInline?'inline-block':null;
 	}
 }
 

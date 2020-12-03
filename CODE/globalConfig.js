@@ -1,4 +1,4 @@
-var USERNAME='Gunter';
+var USERNAME;
 
 var Settings, DefaultSettings, UserHistory;
 

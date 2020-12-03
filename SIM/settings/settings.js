@@ -6,7 +6,7 @@ function setGlobalSettings(settings) {
 
 	currentCategories = Settings.program.currentCategories;
 
-	skipAnimations = Settings.flags.reducedAnimations;
+	skipLevelAnimations = Settings.flags.reducedAnimations;
 
 	resetLabelSettings();
 }

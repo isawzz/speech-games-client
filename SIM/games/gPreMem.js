@@ -2,14 +2,15 @@ var MemPM;
 function startGamePM() { }
 function startLevelPM() { levelPM(); }
 function levelPM() {
-	MaxNumTrials = 1;// getGameOrLevelInfo('trials', 2);
-	let vinfo = getGameOrLevelInfo('vocab', 100);
-	currentKeys = isNumber(vinfo) ? KeySets['best' + getGameOrLevelInfo('vocab', 100)] : setKeys(vinfo);
+	MaxNumTrials = getGameOrLevelInfo('trials', 2);
 	NumPics = getGameOrLevelInfo('numPics', 4);
 	NumRepeat = getGameOrLevelInfo('numRepeat', 2);
 	NumLabels = getGameOrLevelInfo('numLabels', NumPics*NumRepeat);
 
-	console.log(NumPics,NumRepeat,NumLabels)
+	let vinfo = getGameOrLevelInfo('vocab', 100);
+	vinfo = ensureMinVocab(vinfo,NumPics);
+
+	currentKeys = setKeys({lang:currentLanguage,nbestOrCats:vinfo}); //isNumber(vinfo) ? KeySets['best' + vinfo] : setKeys(vinfo);
 }
 function startRoundPM() {
 	uiActivated = false;

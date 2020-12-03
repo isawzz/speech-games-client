@@ -100,6 +100,7 @@ function activationUI() { uiPaused &= ~beforeActivationMask; }
 function hasClickedUI() { uiPaused |= hasClickedMask; }
 function pauseUI() { uiPausedStack.push(uiPaused); uiPaused |= uiHaltedMask; }
 function resumeUI() { uiPaused = uiPausedStack.pop(); }
+function isUiInterrupted(){return uiPaused & uiHaltedMask;}
 //#endregion
 
 //#region Markers
@@ -139,7 +140,7 @@ function setSettingsKeys(elem) {
 	// console.log('lllllllllllllllll', a, a.value, a.keyList);
 	let val = elem.type == 'number' ? Number(elem.value) : elem.type == 'checkbox' ? elem.checked : elem.value;
 	lookupSetOverride(Settings, elem.keyList, val);
-	console.log(elem.keyList, val)
+	//console.log(elem.keyList, val)
 	//console.log(Settings.program);
 }
 function setzeEineZahl(dParent, label, init, skeys) {

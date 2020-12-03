@@ -13,7 +13,7 @@ function setGlobalSettings() {
 
 	currentCategories = Settings.program.currentCategories;
 
-	skipAnimations = Settings.flags.reducedAnimations;
+	skipLevelAnimations = Settings.flags.reducedAnimations;
 
 	resetLabelSettings();
 
@@ -45,14 +45,14 @@ function openAux(divName) {
 
 	show(divName);
 
-	if (divName == 'dMenu') { createMenuUi(); }
+	if (divName == 'dMenu') { show('dSettingsButton'); createMenuUi(); }
 	else if (divName == 'dGameSettings') { createGameSettingsUi(); }
 	else if (divName == 'dDev') { createDevSettingsUi(); }
 }
 
 function closeAux(done = false) {
 
-	if (isVisible2('dMenu')) { }
+	if (isVisible2('dMenu')) { hide('dSettingsButton');}
 	else if (isVisible2('dGameSettings')) {
 		var x = document.activeElement;
 		//console.log('focus is on:',x)
@@ -149,6 +149,7 @@ function createGameSettingsUi() {
 
 	//let nGroupOther = mInputGroup(dParent);
 	setzeEineCheckbox(nGroupNumCommonAllGames, 'show time', false, ['program', 'showTime']);
+	setzeEineCheckbox(nGroupNumCommonAllGames, 'spoken feedback', true, ['program', 'spokenFeedback']);
 	setzeEineCheckbox(nGroupNumCommonAllGames, 'switch game after max level', false, ['program', 'switchGame']);
 
 }
@@ -241,7 +242,9 @@ function onClickGame(ev) {
 	// 	mClass(ev.target,'framedPicture');
 	// }
 }
-
+function onClickSettings(){
+	closeAux();openAux('dGameSettings');
+}
 
 
 

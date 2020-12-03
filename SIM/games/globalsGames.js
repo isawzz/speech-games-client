@@ -5,7 +5,8 @@ function startGame() {
 	if (currentGame == 'gSayPic') Speech.stopRecording();
 
 	currentGame = Settings.program.gameSequence[Settings.program.currentGameIndex].game;
-	
+	ensureUserHistory(currentGame);
+
 	GameInfo = Settings.games[currentGame];
 	LevelInfo = GameInfo.levels;
 	//MaxLevel = 0;
@@ -32,6 +33,7 @@ function startGame() {
 }
 function startLevel(level) {
 
+	resumeUI();
 	currentLanguage = Settings.program.currentLanguage;
 
 	Speech.setLanguage(currentLanguage);
@@ -72,6 +74,9 @@ function promptStart() {
 	clearTable();
 
 	let delay = GFUNC[currentGame].prompt();
+	
+	if (delay < 0) return;
+	console.log(delay)
 	setTimeout(activateUi, delay);
 }
 function promptNextTrial() {
@@ -90,26 +95,34 @@ function selectWord(info, bestWordIsShortest, except = []) {
 	}
 	return w;
 }
-function showPictures(onClickPictureHandler, { colors, contrast, repeat=1, sameBackground=true, border } = {}, keys, labels) {
+function showPictures(onClickPictureHandler, { colors, contrast, repeat = 1, sameBackground = true, border } = {}, keys, labels) {
 	Pictures = [];
 
 	if (nundef(keys)) keys = choose(currentKeys, NumPics);
 	//keys[0]='man in manual wheelchair';
 	//keys=['sun with face'];
 	//console.log(keys,repeat)
-	Pictures = maShowPictures(keys,labels,dTable,onClickPictureHandler,
-		{repeat:repeat,sameBackground:sameBackground, border:border, lang:currentLanguage, colors:colors, contrast:contrast });
+	//console.log(labels)
+	Pictures = maShowPictures(keys, labels, dTable, onClickPictureHandler,
+		{ repeat: repeat, sameBackground: sameBackground, border: border, lang: currentLanguage, colors: colors, contrast: contrast });
 
 	// if (nundef(keys)) keys = choose(currentKeys, NumPics);
 	// Pictures = maShowPictures(keys,labels,dTable,onClickPictureHandler,{ colors, contrast });
 
 	let totalPics = Pictures.length;
-	if (Settings.program.labels) {
+	//console.log(totalPics,NumLabels)
+	if (nundef(Settings.program.labels) || Settings.program.labels) {
 		if (NumLabels == totalPics) return;
 		let remlabelPic = choose(Pictures, totalPics - NumLabels);
-		for (const p of remlabelPic) { maHideLabel(p.id, p.info); p.isLabelVisible = false; }
+		for (const p of remlabelPic) {
+			//console.log('hi1');
+			maHideLabel(p.id, p.info); p.isLabelVisible = false;
+		}
 	} else {
-		for (const p of Pictures) { maHideLabel(p.id, p.info); p.isLabelVisible = false; }
+		for (const p of Pictures) {
+			//console.log('hi1');
+			maHideLabel(p.id, p.info); p.isLabelVisible = false;
+		}
 
 	}
 
@@ -120,7 +133,7 @@ function setGoal(index) {
 		if (NumPics >= 2 && rnd == lastPosition && coin(70)) rnd = NumPics - 1;
 		index = rnd;
 	}
-	
+
 	lastPosition = index;
 	Goal = Pictures[index];
 	//Goal = firstCond(Pictures,x=>x.key == 'man in manual wheelchair');
@@ -144,7 +157,7 @@ function showInstruction(text, cmd, title, isSpoken, spoken) {
 	});
 	dFeedback = dInstruction = d;
 
-	dInstruction.addEventListener('click', () => aniInstruction(cmd + " " + text));
+	dInstruction.addEventListener('click', () => aniInstruction(cmd + " " + text, spoken));
 	if (!isSpoken) return;
 
 	Speech.say(isdef(spoken) ? spoken : (cmd + " " + text), .7, 1, .7, 'random');
@@ -166,10 +179,10 @@ function evaluate() {
 
 	//feedback
 	if (IsAnswerCorrect) {
-		DELAY = skipAnimations ? 300 : 1500;
+		DELAY = Settings.program.spokenFeedback ? 1500 : 300;
 		successPictureGoal();
 	} else {
-		DELAY = skipAnimations ? 300 : 3000;
+		DELAY = Settings.program.spokenFeedback ? 3000 : 300;
 		showCorrectWord();
 		failPictureGoal(false);
 	}
@@ -209,7 +222,7 @@ function proceed(nextLevel) {
 //#region fail or success
 function failPictureGoal(withComment = true) {
 
-	if (withComment && !skipAnimations) {
+	if (withComment && Settings.program.spokenFeedback) {
 		const comments = (currentLanguage == 'E' ? ['too bad'] : ["aber geh'"]);
 		Speech.say(chooseRandom(comments), 1, 1, .8, 'zira', () => { console.log('FERTIG FAIL!!!!'); });
 	}
@@ -225,7 +238,7 @@ function failPictureGoal(withComment = true) {
 
 }
 function successPictureGoal(withComment = true) {
-	if (withComment && !skipAnimations) {
+	if (withComment && Settings.program.spokenFeedback) {
 		const comments = (currentLanguage == 'E' ? ['YEAH!', 'Excellent!!!', 'CORRECT!', 'Great!!!'] : ['gut', 'Sehr Gut!!!', 'richtig!!', 'Bravo!!!']);
 		Speech.say(chooseRandom(comments));//'Excellent!!!');
 	}
@@ -295,7 +308,7 @@ function stopAus() {
 	pauseUI();
 }
 function continueResume() {
-	resumeProgramTimer(); 
+	resumeProgramTimer();
 	resumeUI();
 }
 
@@ -308,7 +321,7 @@ function removeBadgeAndRevertLevel() {
 	proceedIfNotStepByStep();
 }
 function showLevelComplete() {
-	if (!skipAnimations) {
+	if (!skipLevelAnimations) {
 		soundLevelComplete();
 		mClass(mBy('dLevelComplete'), 'aniFadeInOut');
 		show('dLevelComplete');
@@ -320,13 +333,20 @@ function showLevelComplete() {
 	}
 
 }
+function ensureUserHistory(game) {
+	if (nundef(UserHistory[game])) {
+		UserHistory[game] = { name: game, nTotal: 0, nCorrect: 0, percentage: 100, startLevel: 0, maxLevelReached: 0 };
+	}
+}
 function downgradeCurrentLevelTo(newLevel, oldLevel) {
 	Settings.program.currentLevel = newLevel;
+	ensureUserHistory(currentGame);
 	let startLevel = UserHistory[currentGame].startLevel;
 	upgradeStartLevelForUser(currentGame, Math.min(newLevel, startLevel));
 	return newLevel;
 }
 function revertToBadgeLevel(ev) {
+	pauseUI();
 	let id = evToClosestId(ev);
 	let i = stringAfter(id, '_');
 	i = Number(i);
@@ -456,8 +476,8 @@ function addNthInputElement(dParent, n) {
 	mAppend(d, dInp);
 	return dInp;
 }
-function aniInstruction(text) {
-	Speech.say(text, .7, 1, .7, 'random'); //, () => { console.log('HA!') });
+function aniInstruction(text, spoken) {
+	Speech.say(isdef(spoken) ? spoken : text, .7, 1, .7, 'random'); //, () => { console.log('HA!') });
 	mClass(dInstruction, 'onPulse');
 	setTimeout(() => mRemoveClass(dInstruction, 'onPulse'), 500);
 
@@ -511,12 +531,12 @@ function shortHintPic() {
 	setTimeout(() => shortHintPicRemove(), 800);
 }
 function showCorrectWord(sayit = true) {
-	let anim = skipAnimations ? 'onPulse1' : 'onPulse';
+	let anim = Settings.program.spokenFeedback ? 'onPulse' : 'onPulse1';
 	let div = mBy(Goal.id);
 	mClass(div, anim);
 
 
-	if (!sayit || skipAnimations) return;
+	if (!sayit || !Settings.program.spokenFeedback) return;
 
 	let correctionPhrase = isdef(Goal.correctionPhrase) ? Goal.correctionPhrase : bestWord;
 	Speech.say(correctionPhrase, .4, 1.2, 1, 'david');
@@ -534,9 +554,9 @@ function writeComments(pre) {
 }
 
 function getGameOrLevelInfo(k, defval) {
-	return isdef(LevelInfo) && isdef(LevelInfo[currentLevel][k]) ? LevelInfo[currentLevel][k] 
-	: isdef(GameInfo[k]) ? GameInfo[k] 
-	: isdef(Settings.program[k])? Settings.program[k] : defval;
+	return isdef(LevelInfo) && isdef(LevelInfo[currentLevel][k]) ? LevelInfo[currentLevel][k]
+		: isdef(GameInfo[k]) ? GameInfo[k]
+			: isdef(Settings.program[k]) ? Settings.program[k] : defval;
 }
 
 //#endregion

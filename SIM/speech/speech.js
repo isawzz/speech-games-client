@@ -71,7 +71,7 @@ class Recorder {
 		rec.onend = ev => {
 			genHandler(ev, 'ended');
 			if (!this.isCancelled && this.callback) {
-				console.log('-------------------------')
+				//console.log('-------------------------')
 				this.callback(this.isFinal, this.result, this.confidence);
 			}
 			this.isCancelled = this.isRunning = false;
@@ -80,13 +80,13 @@ class Recorder {
 
 	}
 	processResult(ev) {
-		console.log('**********', ev)
+		//console.log('**********', ev)
 		let res = ev.results[0];
 		this.isFinal = res.isFinal;
 		this.result = res[0].transcript;
 		this.confidence = res[0].confidence;
 
-		console.log('....result', this.result, 'FINAL?', this.isFinal)
+		if (this.isFinal) console.log('....result', this.result, 'FINAL?', this.isFinal)
 
 		if (this.isFinal) {
 			this.stop();
@@ -98,7 +98,7 @@ class Recorder {
 		setTimeout(() => this.rec.start(), 10);
 	}
 	stop() {
-		console.log('stopping!')
+		//console.log('stopping!')
 		MicrophoneHide();
 		setTimeout(() => this.rec.stop(), 10);
 	}

@@ -8,13 +8,13 @@ const CLEAR_LOCAL_STORAGE = false;
 const RESTART_EACH_TIME = false; //IS_TESTING; // restarts program at startLevel instead of continuing where left off
 
 const SETTINGS_KEY = IS_TESTING ? 'settingsTEST' : 'settings';
-const immediateStart = IS_TESTING;  // false | true
+const immediateStart = true; // IS_TESTING;  // false | true
 const SHOW_FREEZER = false; // !IS_TESTING;
 
 var MASTER_VOLUME = 1;
 var loopGameSequence = true;
 var StepByStepMode = false; // wartet auf click next um wieder zu starten!
-var skipAnimations = IS_TESTING; // false | true
+var skipLevelAnimations = IS_TESTING; // false | true
 var skipAniGameOver = true; // IS_TESTING;
 var skipBadgeAnimation = true;
 //var MAXLEVEL = 10;
@@ -30,7 +30,7 @@ var fleetingMessageTimeout;
 var Speech;
 
 // output showing
-var RecogOutput = true;
+var RecogOutput = false;
 var RecogOutputError = false;
 var RecogHighPriorityOutput = true;
 var SpeakerOutput = false;

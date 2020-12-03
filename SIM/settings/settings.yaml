@@ -8,6 +8,7 @@ program: #TODO: make this a list with ids
   incrementLevelOnPositiveStreak: 5
   decrementLevelOnNegativeStreak: 3
   gameSequence:
+    - game: gMem
     - game: gTouchPic
     - game: gPreMem
     - game: gMissingLetter
@@ -18,6 +19,7 @@ program: #TODO: make this a list with ids
   currentLevel: 5
   currentLanguage: E
   vocab: 25
+  spokenFeedback: true
   # activity animal body drink emotion food fruit game gesture kitchen 
   # object person place plant role sport time transport vegetable 
   # nosymemo nosymbols
@@ -85,7 +87,6 @@ games:
         numPics: 5
         numColors: 4
   gPreMem:
-    trials: 1
     levels:
       0: 
         numPics: 2
@@ -105,6 +106,29 @@ games:
       5: 
         numPics: 18
         numRepeat: 2
+  gMem:
+    levels:
+      0: 
+        numPics: 2
+        numRepeat: 1
+      1: 
+        numPics: 4
+        numRepeat: 1
+      2: 
+        numPics: 9
+        numRepeat: 1
+      3: 
+        numPics: 2
+        numRepeat: 1
+      4: 
+        numPics: 4
+        numRepeat: 1
+      5: 
+        numPics: 4
+        numRepeat: 1
+      6: 
+        numPics: 6
+        numRepeat: 1
   gSayPic:
     vocab: 75
     trials: 3

@@ -114,7 +114,7 @@ function scoring(isCorrect) {
 		} else if (scoringMode == 'n' || scoringMode == 'adapt') {
 			if (numCorrectAnswers > numTotalAnswers / 2) { levelChange = 1; nextLevel += 1; }
 			else if (numCorrectAnswers < numTotalAnswers / 2) {
-				console.log('DOWNGRADING!!!!!!!')
+				//console.log('DOWNGRADING!!!!!!!')
 				levelChange = -1; nextLevel = (nextLevel > 0 ? nextLevel - 1 : 0);
 			}
 		}

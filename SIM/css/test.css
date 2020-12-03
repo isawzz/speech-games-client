@@ -37,6 +37,7 @@ div{
 }
 #md,#rightSide{
 	display:flex;
+	overflow:hidden;
 }
 #sidebar{
 	height: 100%;
@@ -73,6 +74,13 @@ div{
 	right: 20px;
 	cursor:pointer;
 	/* background:blue; */
+}
+#dSettingsButton{
+	position: fixed;
+	display: inline-block;
+	bottom: 20px;
+	right: 90px;
+	cursor:pointer;
 }
 #dMenuButton{
 	position: fixed;
