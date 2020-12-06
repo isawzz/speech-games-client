@@ -56,8 +56,11 @@ function startAnimationMM() {
 function turnCardsAfterSecs(secs) {
 	for (const p of Pictures) { slowlyTurnFaceDown(p, secs - 1); }
 	MemMMTimeout = setTimeout(() => {
-		//console.log('ui is paused:', isUiInterrupted())
-		if (!isUiInterrupted() || currentGame != 'gMem') {
+		console.log('ui is paused:', isUiInterrupted(), 'game',currentGame)
+
+		if (isUiInterrupted() || currentGame != 'gMem'){
+			console.log('GAME CHANGE!!!!!')
+		}else {
 			// if (currentLevel >= 5) { for (const p of Pictures) { turnFaceDown(p); } }
 			showInstruction(Goal.label, 'click', dTitle, true);
 			activateUi();

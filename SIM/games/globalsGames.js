@@ -3,6 +3,12 @@ var pictureSize;
 function startGame() {
 
 	if (currentGame == 'gSayPic') Speech.stopRecording();
+	else if (currentGame == 'gMem') {
+		console.log('last game gMem, timeout is',MemMMTimeout)
+		clearTimeout(MemMMTimeout);
+	}
+
+
 
 	currentGame = Settings.program.gameSequence[Settings.program.currentGameIndex].game;
 	ensureUserHistory(currentGame);
