@@ -17,7 +17,7 @@ easiest way to run this locally if you have vs code installed:
 
 4. press GoLive
 
-5. start in SIM directory 
+5. ===> start in SIMA directory 
 
 S/settings contains a settings file settings.yaml that can be adapted to use the implemented games with different parameters. right now, just file editing in program (computer icon) works! (gear icon NOT IMPLEMENTED!)
 
