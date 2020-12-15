@@ -1,0 +1,280 @@
+---
+options:
+  select:
+    actions:
+      _set:
+      - _tuple:
+        - _set:
+          - ID: 1-398593ec
+            val: King
+            type: obj
+          - ID: 1-54c04ad3
+            val: '5'
+            type: obj
+          - ID: 1-ad642e03
+            val: '8'
+            type: obj
+          - ID: 1-a5560563
+            val: '4'
+            type: obj
+          - ID: 1-6ae87e1a
+            val: '6'
+            type: obj
+          - ID: 1-64b019b9
+            val: Jack
+            type: obj
+          - ID: 1-a222ce72
+            val: '9'
+            type: obj
+    desc:
+      line:
+      - Select card
+  ready:
+    actions:
+      _set:
+      - _tuple:
+        - val: ready
+          type: fixed
+    desc:
+      line:
+      - Ready for the market
+status:
+  line:
+  - Select what cards to bring to the market
+key: 321114
+players:
+  Player1:
+    obj_type: GamePlayer
+    name: Player1
+    hand:
+      _set:
+      - _obj: 1-6ae87e1a
+      - _obj: 1-64b019b9
+      - _obj: 1-a222ce72
+    buildings:
+      palace: []
+      estate: []
+      farm:
+      - _set:
+        - _obj: 1-398593ec
+        - _obj: 1-54c04ad3
+        - _obj: 1-ad642e03
+        - _obj: 1-a5560563
+      - _set:
+        - _obj: 1-111593ec
+        - _obj: 1-11104ad3
+        - _obj: 1-11112e03
+        - _obj: 1-11117e1a
+    vps: 0
+    hand_limit: 7
+    coins: 3
+    order: 0
+  Player2:
+    name: Player2
+    hand:
+      _set:
+      - _obj: 1-c7159b04
+      - _obj: 1-3fbdd39e
+      - _obj: 1-131f12e7
+      - _obj: 1-3459c5de
+      - _obj: 1-758b60b
+      - _obj: 1-9bcda723
+      - _obj: 1-33bf5bf0
+    buildings:
+      palace: []
+      estate: []
+      farm: []
+table:
+  '0':
+    obj_type: discard_pile
+    visible:
+      _set:
+      - _player: Player1
+      - _player: Player2
+    next: []
+    deck_count: 0
+    generic_type: deck
+  '1':
+    obj_type: draw_pile
+    visible:
+      _set:
+      - _player: Player1
+      - _player: Player2
+    deck_count: 104
+    generic_type: deck
+  '2':
+    neutral:
+    - _obj: 1-fe0c8d2d
+    - _obj: 1-98382471
+    obj_type: market
+    visible:
+      _set:
+      - _player: Player1
+      - _player: Player2
+  '3':
+    special:
+    - spfarm:
+      - _obj: 1-220c8d2d
+      - _obj: 1-22382471
+    - spestate:
+      - _obj: 1-330c8d2d
+      - _obj: 1-33382471
+    obj_type: market
+    visible:
+      _set:
+      - _player: Player1
+      - _player: Player2
+  1-111593ec:
+    short_name: K
+    value: 10
+    obj_type: card
+    visible:
+      _set:
+      - _player: Player1
+    name: King
+    generic_type: card
+  1-11104ad3:
+    short_name: '5'
+    value: 5
+    obj_type: card
+    visible:
+      _set:
+      - _player: Player1
+    name: '5'
+    generic_type: card
+  1-11112e03:
+    short_name: '8'
+    value: 8
+    obj_type: card
+    visible:
+      _set:
+      - _player: Player1
+    name: '8'
+    generic_type: card
+  1-11160563:
+    short_name: '4'
+    value: 4
+    obj_type: card
+    visible:
+      _set:
+      - _player: Player1
+    name: '4'
+    generic_type: card
+  1-11117e1a:
+    short_name: '6'
+    value: 6
+    obj_type: card
+    visible:
+      _set:
+      - _player: Player1
+    name: '6'
+    generic_type: card
+  1-398593ec:
+    short_name: K
+    value: 10
+    obj_type: card
+    visible:
+      _set:
+      - _player: Player1
+    name: King
+    generic_type: card
+  1-54c04ad3:
+    short_name: '5'
+    value: 5
+    obj_type: card
+    visible:
+      _set:
+      - _player: Player1
+    name: '5'
+    generic_type: card
+  1-ad642e03:
+    short_name: '8'
+    value: 8
+    obj_type: card
+    visible:
+      _set:
+      - _player: Player1
+    name: '8'
+    generic_type: card
+  1-a5560563:
+    short_name: '4'
+    value: 4
+    obj_type: card
+    visible:
+      _set:
+      - _player: Player1
+    name: '4'
+    generic_type: card
+  1-6ae87e1a:
+    short_name: '6'
+    value: 6
+    obj_type: card
+    visible:
+      _set:
+      - _player: Player1
+    name: '6'
+    generic_type: card
+  1-64b019b9:
+    short_name: J
+    value: 10
+    obj_type: card
+    visible:
+      _set:
+      - _player: Player1
+    name: Jack
+    generic_type: card
+  1-c7159b04:
+    generic_type: card
+  1-3fbdd39e:
+    generic_type: card
+  1-131f12e7:
+    generic_type: card
+  1-3459c5de:
+    generic_type: card
+  1-758b60b:
+    generic_type: card
+  1-9bcda723:
+    generic_type: card
+  1-220c8d2d:
+    generic_type: card
+  1-22382471:
+    generic_type: card
+  1-330c8d2d:
+    generic_type: card
+  1-33382471:
+    generic_type: card
+  1-fe0c8d2d:
+    generic_type: card
+  1-98382471:
+    generic_type: card
+  1-a222ce72:
+    short_name: '9'
+    value: 9
+    obj_type: card
+    visible:
+      _set:
+      - _player: Player1
+    name: '9'
+    generic_type: card
+  1-33bf5bf0:
+    generic_type: card
+phase: king
+log:
+- line:
+  - ''
+  - King
+  - " phase begins"
+  - "\n"
+  level: 0
+- line:
+  - Everybody draws 1 card
+  - "\n"
+  level: 1
+- line:
+  - ''
+  - obj_type: GamePlayer
+    type: player
+    val: Player1
+  - " becomes herald"
+  - "\n"
+  level: 1

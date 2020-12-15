@@ -1,11 +1,35 @@
+var _audioSources={
+	incorrect1: '../assets/sounds/incorrect1.wav',
+	incorrect3: '../assets/sounds/incorrect3.mp3',
+	goodBye: "../assets/sounds/level1.wav",
+	down: "../assets/sounds/down.mp3",
+	levelComplete: "../assets/sounds/sound1.wav",
+	rubberBand: "../assets/sounds/sound2.wav",
+};
+// var _SND = null;
+var _sndPlayer;
+function playSound(key){
+	if (isdef(_sndPlayer)) {
+		_sndPlayer.pause();
+		//_sndPlayer.src = 'hallo';
+		_sndPlayer = null;
+		setTimeout(()=>playSound(key),0);
+	} else {
+		_sndPlayer = new Audio(_audioSources[key]);
+		_sndPlayer.play();
+	}
+}
+
+
 // *** uses assets! =>load after assets! ***
+const EMOFONTLIST =  ['emoOpen', 'openmoBlack', 'segoe ui emoji', 'segoe ui symbol'];
 
 //#region NOW!
 function maShowPictures(keys, labels, dParent, onClickPictureHandler,
-	{ container, lang, border, bgs, colors, contrast, repeat = 1, sameBackground, shufflePositions = true } = {}) {
+	{ container, lang, border, picSize, bgs, colors, contrast, repeat = 1, sameBackground, shufflePositions = true } = {}) {
 	let pics = [];
 
-	//console.log('maShowPictures', 'keys', keys, '\n', 'labels', labels, '\n', 'bgs', bgs)
+	//console.log('maShowPictures_', 'keys', keys, '\n', 'labels', labels, '\n', 'bgs', bgs)
 	//console.log('sameBackground',sameBackground)
 
 	let numPics = keys.length * repeat;
@@ -46,6 +70,8 @@ function maShowPictures(keys, labels, dParent, onClickPictureHandler,
 	let [pictureSize, picsPerLine] = calcDimsAndSize(numPics, lines, container);
 	let stylesForLabelButton = { rounding: 10, margin: pictureSize / 8 };
 	if (isdef(border)) stylesForLabelButton.border = border;
+
+	if (isdef(picSize)) pictureSize = picSize;
 
 	for (let line = 0; line < lines; line++) {
 		let textShadowColor = isdef(colors) ? colors[line] : undefined;
@@ -384,7 +410,7 @@ function addBadge(dParent, level, clickHandler) {
 	let fg = '#00000080';
 	let textColor = 'white';
 	let stylesForLabelButton = { rounding: 10, margin: 4 };
-	const picStyles = ['twitterText', 'twitterImage', 'openMojiText', 'openMojiImage', 'segoe', 'openMojiBlackText', 'segoeBlack'];
+	//const picStyles = ['twitterText', 'twitterImage', 'openMojiText', 'openMojiImage', 'segoe', 'openMojiBlackText', 'segoeBlack'];
 	let isText = true; let isOmoji = false;
 	let i = level - 1;
 	let key = levelKeys[i];

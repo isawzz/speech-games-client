@@ -1,4 +1,8 @@
 //#region globals
+var USE_LOCAL_STORAGE = false; // true | false //localStorage is cleared when false!!!!!
+const SHOW_SERVER_ROUTE = false; // true | false
+const SHOW_SERVER_RETURN = false; // true | false
+
 var vidCache, allGames, playerConfig, c52, testCards; //session data
 var defaultSpec, userSpec, userCode, serverData, prevServerData, tupleGroups, boats; //new game data
 

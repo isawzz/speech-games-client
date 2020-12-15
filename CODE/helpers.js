@@ -55,6 +55,20 @@ function mAppend(d, child) { d.appendChild(child); }
 // 	dParent.style.height='auto';
 // 	mText(text,dParent,styles);
 // }
+function mEditableInput(dParent, label, val) {
+	let labelElem = createElementFromHTML(`<span>${label}</span>	`)
+	let elem = createElementFromHTML(`<span contenteditable="true" spellcheck="false">${val}</span>	`)
+	elem.addEventListener('keydown', (ev) => {
+		if (ev.key === 'Enter') {
+			ev.preventDefault();
+			mBy('dummy').focus();
+		}
+	});
+	mAppend(dParent, labelElem);
+	mAppend(dParent, elem);
+	return elem;
+}
+
 function mParent(elem) { return elem.parentNode; }
 function mButton(caption, handler, dParent, styles, classes) {
 	let x = mCreate('button');
@@ -123,6 +137,8 @@ function mHasClass(el, className) {
 	else return !!el.className.match(new RegExp('(\\s|^)' + className + '(\\s|$)'));
 }
 
+function mClasses(d, lst) { for (let i = 1; i < lst.length; i++) d.classList.add(lst[i]); }
+function mRemoveClasses(d, lst) { for (let i = 1; i < lst.length; i++) d.classList.remove(lst[i]); }
 function mClass(d) { for (let i = 1; i < arguments.length; i++) d.classList.add(arguments[i]); }
 function mRemoveClass(d) { for (let i = 1; i < arguments.length; i++) d.classList.remove(arguments[i]); }
 function mClassRemove(d) { for (let i = 1; i < arguments.length; i++) d.classList.remove(arguments[i]); }
@@ -216,7 +232,7 @@ function mText(text, dParent, styles, classes) {
 }
 function mPara(text, dParent, styles, classes) {
 	let d = mCreate('p');
-	mAppend(dParent,d);
+	mAppend(dParent, d);
 	if (!isEmpty(text)) d.innerHTML = text;
 	//if (isdef(id)) d.id = id;
 	//mAppend(dParent, d);
@@ -427,6 +443,22 @@ function mBox(w, h, color, dParent = null) { let d = mDiv(dParent); return mStyl
 
 function mById(id) { return document.getElementById(id); }
 function computeColor(c) { return (c == 'random') ? randomColor() : c; }
+function computeColorX(c) {
+
+	let res = c;
+	if (isList(c)) return chooseRandom(c);
+	else if (isString(c) && startsWith(c, 'rand')) {
+		res = randomColor();
+		let spec = c.substring(4);
+		console.log('______________________', spec);
+		if (isdef(window['color' + spec])) {
+			console.log('YES!');
+			res = window['color' + spec](res);
+		}
+
+	}
+	return res;
+}
 function getExtendedColors(bg, fg) {
 	//#region doc 
 	/* handles values random, inherit, contrast	*/
@@ -585,6 +617,180 @@ class ScriptLoader {
 }
 //#endregion
 
+//#region Q
+var Q, TOQ, AkQ;
+var QCounter = 0;
+var QCancelAutoreset, TOQRunner, QRunnerRunning = false, QRunning = false;
+function QStop() {
+	//just stop the runner task
+	console.log('...', getFunctionCallerName());
+	QCancelAutoreset = true;
+}
+function QReset() {
+	console.log('...', getFunctionCallerName());
+	clearTimeout(TOQ);
+	clearTimeout(TOQRunner);
+	Q = [];
+	AkQ = [];
+}
+function restartQ() {
+	QReset();
+	console.log('===>RESET', QCounter, Q, AkQ);
+}
+function enQ(f, parr = null, msBefore = null, msAfter = null, callback = null) {
+	if (nundef(Q)) restartQ();
+	Q.push({ f: f, parr: parr, msBefore: msBefore, msAfter: msAfter, callback: callback });
+}
+function startQRunner() {
+	if (QRunnerRunning) return;
+	QRunnerRunning = true;
+	QRunner();
+}
+function QRunner() {
+	if (QCancelAutoreset) { QRunnerRunning = false; QCancelAutoreset = false; restartQ(); }
+	else if (isEmpty(Q)) TOQRunner = setTimeout(QRunner, 1000);
+	else _runQ(QRunner);
+}
+
+function _runQ() {
+	QCounter += 1; console.log('===>run', QCounter, Q);
+	if (isEmpty(Q)) { console.log('Q empty!', AkQ); return; }
+
+	let task = Q.shift();
+	//just simple task without timeout or callback
+	let f = task.f;
+	let parr = _paramsQ(task.parr);
+	//let msBefore = task.msBefore, msAfter = task.msAfter, callback = task.callback; //waitCond = task.waitCond, tWait = task.tWait;
+	console.log('task:', f.name, 'params', parr)
+	let result = f(...parr);
+	if (isdef(result)) AkQ.push(result);
+
+	if (!isEmpty(Q)) runQ();
+
+}
+
+function _paramsQ(parr) {
+	parr = isdef(parr) ? parr : [];
+	for (let i = 0; i < parr.length; i++) {
+		let para = parr[i];
+		if (para == '_last') parr[i] = arrLast(AkQ);
+		else if (para == '_all' || para == '_list') parr[i] = AkQ;
+		else if (para == '_first') parr[i] = AkQ[0];
+
+	}
+	return parr;
+}
+//#endregion
+
+//#region chain,  task chain 
+
+
+
+function chainEx(taskChain, onComplete, ifBlocked = 'wait', singleThreaded = true) {
+	if (BlockChain) {
+		console.log('chain blocked!')
+		switch (ifBlocked) {
+			case 'interrupt': CancelChain = true; setTimeout(() => chainEx(taskChain, onComplete, 'wait'), 300); break;
+			case 'wait': setTimeout(() => chainEx(taskChain, onComplete, 'wait'), 300); break;
+			case 'return': default://just drop it
+		}
+	} else {
+		BlockChain = true;
+		CancelChain = false;
+		let akku = [];
+		if (singleThreaded) {
+			TaskChain = taskChain;
+			_singleThreadedChainExRec(akku, onComplete);
+		} else {
+			_chainExRec(akku, taskChain, onComplete);
+		}
+	}
+}
+function addTask(task) {
+	if (!CancelChain) TaskChain.push(task);
+}
+function chainCancel() {
+	CancelChain = true;
+	clearTimeout(ChainTimeout);
+	TaskChain = [];
+	setTimeout(() => BlockChain = false, 100);
+	//console.log('chain ccanceled properly!');
+}
+function _singleThreadedChainExRec(akku, onComplete) {
+	if (CancelChain) {
+		clearTimeout(ChainTimeout);
+		BlockChain = false;
+		console.log('chain canceled!', akku);
+		//return akku;
+	} else if (isEmpty(TaskChain)) {
+		BlockChain = false;
+		onComplete(akku);
+	} else {
+		let task = TaskChain[0], f = task.f, parr = isdef(task.parr) ? task.parr : [], t = task.msecs, waitCond = task.waitCond, tWait = task.tWait;
+		console.log('task:', f.name, 't', t)
+
+		if (isdef(waitCond) && !waitCond()) {
+			if (nundef(tWait)) tWait = 300;
+			ChainTimeout = setTimeout(() => _singleThreadedChainExRec(akku, onComplete), tWait);
+		} else {
+			for (let i = 0; i < parr.length; i++) {
+				let para = parr[i];
+				if (para == '_last') parr[i] = arrLast(akku);
+				else if (para == '_all' || para == '_list') parr[i] = akku;
+				else if (para == '_first') parr[i] = akku[0];
+
+			}
+
+			let result = f(...parr);
+			if (isdef(result)) akku.push(result);
+
+			TaskChain = TaskChain.slice(1);
+			if (isdef(t)) {
+				ChainTimeout = setTimeout(() => _singleThreadedChainExRec(akku, onComplete), t);
+			} else {
+				_chainExRec(akku, onComplete);
+			}
+		}
+	}
+}
+function _chainExRec(akku, taskChain, onComplete) {
+	if (CancelChain) {
+		clearTimeout(ChainTimeout);
+		BlockChain = false;
+		console.log('chain canceled!');
+		return akku;
+	} else if (isEmpty(taskChain)) {
+		BlockChain = false;
+		if (onComplete) onComplete(akku);
+		else console.log('akku', akku, '\nBlockChain', BlockChain, '\nCancelChain', CancelChain)
+	} else {
+		let task = taskChain[0], f = task.f, parr = isdef(task.parr) ? task.parr : [], t = task.msecs, waitCond = task.waitCond, tWait = task.tWait;
+
+		if (isdef(waitCond) && !waitCond()) {
+			if (nundef(tWait)) tWait = 300;
+			ChainTimeout = setTimeout(() => _chainExRec(akku, taskChain, onComplete), tWait);
+		} else {
+			for (let i = 0; i < parr.length; i++) {
+				let para = parr[i];
+				if (para == '_last') parr[i] = arrLast(akku);
+				else if (para == '_all' || para == '_list') parr[i] = akku;
+				else if (para == '_first') parr[i] = akku[0];
+
+			}
+
+			let result = f(...parr);
+			if (isdef(result)) akku.push(result);
+
+			if (isdef(t)) {
+				ChainTimeout = setTimeout(() => _chainExRec(akku, taskChain.slice(1), onComplete), t);
+			} else {
+				_chainExRec(akku, taskChain.slice(1), onComplete);
+			}
+		}
+	}
+}
+//#endregion
+
 //#region control flow sleep___
 
 const sleep = m => new Promise(r => setTimeout(r, m))
@@ -607,6 +813,60 @@ example:
 
 //#region colors
 var colorDict = null; //for color names, initialized when calling anyColorToStandardStyle first time
+function colorPalShadeX(color,n) {
+	//assumes pSBC compatible color format (hex,rgb strings)
+	let res = [];
+	let step=1.6/(n-1);
+	for (let frac = -0.8; frac <= 0.8; frac += step){ //0.2) {
+		//darkest -0.8 -0.6 -0.4 -0.2 0=color 0.2 0.4 0.6 0.8 lightest
+		let c = pSBC(frac, color, undefined, true); //colorShade(frac,color);
+		res.push(c);
+	}
+	return res;
+}
+function getContrastingHue(contrastColor,minDiff=25,mod=30){
+	let hc = colorHue(contrastColor);
+
+	let rnd1 = randomNumber(0,360);
+	let d=Math.floor(rnd1/mod);
+	let rnd=d*mod;
+	//console.log('==>hue1',rnd1,'mod',mod,'d',d,'hue',rnd)
+
+	let diff=Math.abs(rnd-hc);
+	//console.log('hue of', contrastColor, 'is', hc, 'rnd:'+rnd,'diff:'+diff);
+	if (diff<minDiff) rnd=(rnd+180)%360;
+	return rnd;
+}
+function randomColorLight(contrastTo){return randomColorX(contrastTo);}
+function randomColorDark(contrastTo){return randomColorX(contrastTo,10,30);}
+function getHueWheel(contrastTo,minDiff=25,mod=30,start=0){
+	let hc = colorHue(contrastTo);
+	let wheel = [];
+	while(start<360){
+		let d1=Math.abs((start+360)-hc);
+		let d2=Math.abs((start)-hc);
+		let d3=Math.abs((start-360)-hc);
+		let min=Math.min(d1,d2,d3);
+		if (min>minDiff) wheel.push(start);
+		start+=mod;
+	}
+	return wheel;
+}
+function colorHSLBuild(hue,sat,lum){let result = "hsl(" + hue + ',' + sat + '%,' + lum + '%)';return result;}
+function getContrastingHueX(contrastColor,minDiff=25,mod=30,startWheel=0){
+	let wheel = getHueWheel(contrastColor,minDiff,mod,startWheel);
+	return chooseRandom(wheel);
+}
+function randomColorX(contrastColor, minContrast=25, mod=60, startWheel=0, minLum = 70, maxLum = 90, minSat = 100, maxSat = 100) {
+	let hue = getContrastingHueX(contrastColor,minContrast,mod,startWheel);
+	let sat = minSat + (maxSat - minSat) * Math.random();
+	let lum = minLum + (maxLum - minLum) * Math.random();
+	let result = "hsl(" + hue + ',' + sat + '%,' + lum + '%)';
+	//console.log('result:',result)
+	return result; //"hsl(" + hue + ',' + sat + '%,' + lum + '%)';
+	//return "hsl(" + 360 * Math.random() + ',' + (25 + 70 * Math.random()) + '%,' + (85 + 10 * Math.random()) + '%)';
+}
+
 function anyColorToStandardString(cAny, a, allowHsl = false) {
 	//if allowHsl is false: only return rgb,rgba,or hex7,hex9 string! >pBSC algo!!!
 	//if a is undefined, leaves a as it is in cAny, otherwise modifies to a
@@ -706,6 +966,25 @@ function anyColorToStandardString(cAny, a, allowHsl = false) {
 		}
 	}
 } //ok
+const colorShadeX = (c, amt) => {
+	let col = colorHex(c);
+	col = col.replace(/^#/, '')
+	if (col.length === 3) col = col[0] + col[0] + col[1] + col[1] + col[2] + col[2]
+
+	let [r, g, b] = col.match(/.{2}/g);
+	([r, g, b] = [parseInt(r, 16) + amt, parseInt(g, 16) + amt, parseInt(b, 16) + amt])
+
+	r = Math.max(Math.min(255, r), 0).toString(16)
+	g = Math.max(Math.min(255, g), 0).toString(16)
+	b = Math.max(Math.min(255, b), 0).toString(16)
+
+	const rr = (r.length < 2 ? '0' : '') + r
+	const gg = (g.length < 2 ? '0' : '') + g
+	const bb = (b.length < 2 ? '0' : '') + b
+
+	return `#${rr}${gg}${bb}`
+}
+
 function alphaToHex(zero1) {
 	zero1 = Math.round(zero1 * 100) / 100;
 	var alpha = Math.round(zero1 * 255);
@@ -1178,6 +1457,409 @@ function getTransPalette9(color = '#000000') {
 	for (const alpha of [.1, .2, .3, .4, .5, .6, .7, .8, .9]) res.push(colorTrans(color, alpha));
 	return res;
 }
+//color converters good!
+function hexToHSL(H) {
+	let ex = /^#([\da-f]{3}){1,2}$/i;
+	if (ex.test(H)) {
+		// convert hex to RGB first
+		let r = 0,
+			g = 0,
+			b = 0;
+		if (H.length == 4) {
+			r = '0x' + H[1] + H[1];
+			g = '0x' + H[2] + H[2];
+			b = '0x' + H[3] + H[3];
+		} else if (H.length == 7) {
+			r = '0x' + H[1] + H[2];
+			g = '0x' + H[3] + H[4];
+			b = '0x' + H[5] + H[6];
+		}
+		// then to HSL
+		r /= 255;
+		g /= 255;
+		b /= 255;
+		let cmin = Math.min(r, g, b),
+			cmax = Math.max(r, g, b),
+			delta = cmax - cmin,
+			h = 0,
+			s = 0,
+			l = 0;
+
+		if (delta == 0) h = 0;
+		else if (cmax == r) h = ((g - b) / delta) % 6;
+		else if (cmax == g) h = (b - r) / delta + 2;
+		else h = (r - g) / delta + 4;
+
+		h = Math.round(h * 60);
+
+		if (h < 0) h += 360;
+
+		l = (cmax + cmin) / 2;
+		s = delta == 0 ? 0 : delta / (1 - Math.abs(2 * l - 1));
+		s = +(s * 100).toFixed(1);
+		l = +(l * 100).toFixed(1);
+
+		return 'hsl(' + h + ',' + s + '%,' + l + '%)';
+	} else {
+		return 'Invalid input color';
+	}
+} //ok
+function hexAToHSLA(H) {
+	let ex = /^#([\da-f]{4}){1,2}$/i;
+	if (ex.test(H)) {
+		let r = 0,
+			g = 0,
+			b = 0,
+			a = 1;
+		// 4 digits
+		if (H.length == 5) {
+			r = '0x' + H[1] + H[1];
+			g = '0x' + H[2] + H[2];
+			b = '0x' + H[3] + H[3];
+			a = '0x' + H[4] + H[4];
+			// 8 digits
+		} else if (H.length == 9) {
+			r = '0x' + H[1] + H[2];
+			g = '0x' + H[3] + H[4];
+			b = '0x' + H[5] + H[6];
+			a = '0x' + H[7] + H[8];
+		}
+
+		// normal conversion to HSLA
+		r /= 255;
+		g /= 255;
+		b /= 255;
+		let cmin = Math.min(r, g, b),
+			cmax = Math.max(r, g, b),
+			delta = cmax - cmin,
+			h = 0,
+			s = 0,
+			l = 0;
+
+		if (delta == 0) h = 0;
+		else if (cmax == r) h = ((g - b) / delta) % 6;
+		else if (cmax == g) h = (b - r) / delta + 2;
+		else h = (r - g) / delta + 4;
+
+		h = Math.round(h * 60);
+
+		if (h < 0) h += 360;
+
+		l = (cmax + cmin) / 2;
+		s = delta == 0 ? 0 : delta / (1 - Math.abs(2 * l - 1));
+		s = +(s * 100).toFixed(1);
+		l = +(l * 100).toFixed(1);
+
+		a = (a / 255).toFixed(3);
+
+		return 'hsla(' + h + ',' + s + '%,' + l + '%,' + a + ')';
+	} else {
+		return 'Invalid input color';
+	}
+} //ok
+function HSLToRGB(hsl, isPct) {
+	//if isPct == true, will output 'rgb(xx%,xx%,xx%)' umgerechnet in % von 255
+	let ex = /^hsl\(((((([12]?[1-9]?\d)|[12]0\d|(3[0-5]\d))(\.\d+)?)|(\.\d+))(deg)?|(0|0?\.\d+)turn|(([0-6](\.\d+)?)|(\.\d+))rad)((,\s?(([1-9]?\d(\.\d+)?)|100|(\.\d+))%){2}|(\s(([1-9]?\d(\.\d+)?)|100|(\.\d+))%){2})\)$/i;
+	if (ex.test(hsl)) {
+		let sep = hsl.indexOf(',') > -1 ? ',' : ' ';
+		hsl = hsl
+			.substr(4)
+			.split(')')[0]
+			.split(sep);
+		isPct = isPct === true;
+
+		let h = hsl[0],
+			s = hsl[1].substr(0, hsl[1].length - 1) / 100,
+			l = hsl[2].substr(0, hsl[2].length - 1) / 100;
+
+		// strip label and convert to degrees (if necessary)
+		if (h.indexOf('deg') > -1) h = h.substr(0, h.length - 3);
+		else if (h.indexOf('rad') > -1) h = Math.round((h.substr(0, h.length - 3) / (2 * Math.PI)) * 360);
+		else if (h.indexOf('turn') > -1) h = Math.round(h.substr(0, h.length - 4) * 360);
+		// keep hue fraction of 360 if ending up over
+		if (h >= 360) h %= 360;
+
+		let c = (1 - Math.abs(2 * l - 1)) * s,
+			x = c * (1 - Math.abs(((h / 60) % 2) - 1)),
+			m = l - c / 2,
+			r = 0,
+			g = 0,
+			b = 0;
+
+		if (0 <= h && h < 60) {
+			r = c;
+			g = x;
+			b = 0;
+		} else if (60 <= h && h < 120) {
+			r = x;
+			g = c;
+			b = 0;
+		} else if (120 <= h && h < 180) {
+			r = 0;
+			g = c;
+			b = x;
+		} else if (180 <= h && h < 240) {
+			r = 0;
+			g = x;
+			b = c;
+		} else if (240 <= h && h < 300) {
+			r = x;
+			g = 0;
+			b = c;
+		} else if (300 <= h && h < 360) {
+			r = c;
+			g = 0;
+			b = x;
+		}
+
+		r = Math.round((r + m) * 255);
+		g = Math.round((g + m) * 255);
+		b = Math.round((b + m) * 255);
+
+		if (isPct) {
+			r = +((r / 255) * 100).toFixed(1);
+			g = +((g / 255) * 100).toFixed(1);
+			b = +((b / 255) * 100).toFixed(1);
+		}
+
+		return 'rgb(' + (isPct ? r + '%,' + g + '%,' + b + '%' : +r + ',' + +g + ',' + +b) + ')';
+	} else {
+		return 'Invalid input color';
+	}
+} //ok
+function HSLAToRGBA(hsla, isPct) {
+	//if isPct == true, will output 'rgb(xx%,xx%,xx%)' umgerechnet in % von 255
+	let ex = /^hsla\(((((([12]?[1-9]?\d)|[12]0\d|(3[0-5]\d))(\.\d+)?)|(\.\d+))(deg)?|(0|0?\.\d+)turn|(([0-6](\.\d+)?)|(\.\d+))rad)(((,\s?(([1-9]?\d(\.\d+)?)|100|(\.\d+))%){2},\s?)|((\s(([1-9]?\d(\.\d+)?)|100|(\.\d+))%){2}\s\/\s))((0?\.\d+)|[01]|(([1-9]?\d(\.\d+)?)|100|(\.\d+))%)\)$/i;
+	if (ex.test(hsla)) {
+		let sep = hsla.indexOf(',') > -1 ? ',' : ' ';
+		hsla = hsla
+			.substr(5)
+			.split(')')[0]
+			.split(sep);
+
+		// strip the slash if using space-separated syntax
+		if (hsla.indexOf('/') > -1) hsla.splice(3, 1);
+
+		isPct = isPct === true;
+
+		// must be fractions of 1
+		let h = hsla[0],
+			s = hsla[1].substr(0, hsla[1].length - 1) / 100,
+			l = hsla[2].substr(0, hsla[2].length - 1) / 100,
+			a = hsla[3];
+
+		// strip label and convert to degrees (if necessary)
+		if (h.indexOf('deg') > -1) h = h.substr(0, h.length - 3);
+		else if (h.indexOf('rad') > -1) h = Math.round((h.substr(0, h.length - 3) / (2 * Math.PI)) * 360);
+		else if (h.indexOf('turn') > -1) h = Math.round(h.substr(0, h.length - 4) * 360);
+		if (h >= 360) h %= 360;
+
+		let c = (1 - Math.abs(2 * l - 1)) * s,
+			x = c * (1 - Math.abs(((h / 60) % 2) - 1)),
+			m = l - c / 2,
+			r = 0,
+			g = 0,
+			b = 0;
+
+		if (0 <= h && h < 60) {
+			r = c;
+			g = x;
+			b = 0;
+		} else if (60 <= h && h < 120) {
+			r = x;
+			g = c;
+			b = 0;
+		} else if (120 <= h && h < 180) {
+			r = 0;
+			g = c;
+			b = x;
+		} else if (180 <= h && h < 240) {
+			r = 0;
+			g = x;
+			b = c;
+		} else if (240 <= h && h < 300) {
+			r = x;
+			g = 0;
+			b = c;
+		} else if (300 <= h && h < 360) {
+			r = c;
+			g = 0;
+			b = x;
+		}
+
+		r = Math.round((r + m) * 255);
+		g = Math.round((g + m) * 255);
+		b = Math.round((b + m) * 255);
+
+		let pctFound = a.indexOf('%') > -1;
+
+		if (isPct) {
+			r = +((r / 255) * 100).toFixed(1);
+			g = +((g / 255) * 100).toFixed(1);
+			b = +((b / 255) * 100).toFixed(1);
+			if (!pctFound) {
+				a *= 100;
+			} else {
+				a = a.substr(0, a.length - 1);
+			}
+		} else if (pctFound) {
+			a = a.substr(0, a.length - 1) / 100;
+		}
+
+		return 'rgba(' + (isPct ? r + '%,' + g + '%,' + b + '%,' + a + '%' : +r + ',' + +g + ',' + +b + ',' + +a) + ')';
+	} else {
+		return 'Invalid input color';
+	}
+} //ok
+function RGBToHex7(c) {
+	let n = allNumbers(c);
+	if (c.includes('%')) {
+		n[0] = Math.round((n[0] * 255) / 100);
+		n[1] = Math.round((n[1] * 255) / 100);
+		n[2] = Math.round((n[2] * 255) / 100);
+	}
+	return '#' + ((1 << 24) + (n[0] << 16) + (n[1] << 8) + n[2]).toString(16).slice(1);
+} //ok
+function RGBAToHex9(rgba) {
+	let n = allNumbers(rgba); //allNumbers does not catch .5 as float!
+	//console.log('all numbers:', n);
+	if (n.length < 3) {
+		//console.log('RGBAToHex ERROR!', rgba);
+		return randomHexColor();
+	}
+	let a = n.length > 3 ? n[3] : 1;
+	let sa = alphaToHex(a);
+	//console.log('sa:', sa);
+	if (rgba.includes('%')) {
+		n[0] = Math.round((n[0] * 255) / 100);
+		n[1] = Math.round((n[1] * 255) / 100);
+		n[2] = Math.round((n[2] * 255) / 100);
+	}
+	return '#' + ((1 << 24) + (n[0] << 16) + (n[1] << 8) + n[2]).toString(16).slice(1) + sa;
+} //ok
+function RGBToHSL(rgb) {
+	let ex = /^rgb\((((((((1?[1-9]?\d)|10\d|(2[0-4]\d)|25[0-5]),\s?)){2}|((((1?[1-9]?\d)|10\d|(2[0-4]\d)|25[0-5])\s)){2})((1?[1-9]?\d)|10\d|(2[0-4]\d)|25[0-5]))|((((([1-9]?\d(\.\d+)?)|100|(\.\d+))%,\s?){2}|((([1-9]?\d(\.\d+)?)|100|(\.\d+))%\s){2})(([1-9]?\d(\.\d+)?)|100|(\.\d+))%))\)$/i;
+	if (ex.test(rgb)) {
+		let sep = rgb.indexOf(',') > -1 ? ',' : ' ';
+		rgb = rgb
+			.substr(4)
+			.split(')')[0]
+			.split(sep);
+
+		// convert %s to 0–255
+		for (let R in rgb) {
+			let r = rgb[R];
+			if (r.indexOf('%') > -1) rgb[R] = Math.round((r.substr(0, r.length - 1) / 100) * 255);
+		}
+
+		// make r, g, and b fractions of 1
+		let r = rgb[0] / 255,
+			g = rgb[1] / 255,
+			b = rgb[2] / 255,
+			// find greatest and smallest channel values
+			cmin = Math.min(r, g, b),
+			cmax = Math.max(r, g, b),
+			delta = cmax - cmin,
+			h = 0,
+			s = 0,
+			l = 0;
+
+		// calculate hue
+		// no difference
+		if (delta == 0) h = 0;
+		// red is max
+		else if (cmax == r) h = ((g - b) / delta) % 6;
+		// green is max
+		else if (cmax == g) h = (b - r) / delta + 2;
+		// blue is max
+		else h = (r - g) / delta + 4;
+
+		h = Math.round(h * 60);
+
+		// make negative hues positive behind 360°
+		if (h < 0) h += 360;
+
+		// calculate lightness
+		l = (cmax + cmin) / 2;
+
+		// calculate saturation
+		s = delta == 0 ? 0 : delta / (1 - Math.abs(2 * l - 1));
+
+		// multiply l and s by 100
+		s = +(s * 100).toFixed(1);
+		l = +(l * 100).toFixed(1);
+
+		return 'hsl(' + h + ',' + s + '%,' + l + '%)';
+	} else {
+		return 'Invalid input color';
+	}
+} //ok
+function RGBAToHSLA(rgba) {
+	let ex = /^rgba\((((((((1?[1-9]?\d)|10\d|(2[0-4]\d)|25[0-5]),\s?)){3})|(((([1-9]?\d(\.\d+)?)|100|(\.\d+))%,\s?){3}))|(((((1?[1-9]?\d)|10\d|(2[0-4]\d)|25[0-5])\s){3})|(((([1-9]?\d(\.\d+)?)|100|(\.\d+))%\s){3}))\/\s)((0?\.\d+)|[01]|(([1-9]?\d(\.\d+)?)|100|(\.\d+))%)\)$/i;
+	if (ex.test(rgba)) {
+		let sep = rgba.indexOf(',') > -1 ? ',' : ' ';
+		rgba = rgba
+			.substr(5)
+			.split(')')[0]
+			.split(sep);
+
+		// strip the slash if using space-separated syntax
+		if (rgba.indexOf('/') > -1) rgba.splice(3, 1);
+
+		for (let R in rgba) {
+			let r = rgba[R];
+			if (r.indexOf('%') > -1) {
+				let p = r.substr(0, r.length - 1) / 100;
+
+				if (R < 3) {
+					rgba[R] = Math.round(p * 255);
+				}
+			}
+		}
+
+		// make r, g, and b fractions of 1
+		let r = rgba[0] / 255,
+			g = rgba[1] / 255,
+			b = rgba[2] / 255,
+			a = rgba[3],
+			// find greatest and smallest channel values
+			cmin = Math.min(r, g, b),
+			cmax = Math.max(r, g, b),
+			delta = cmax - cmin,
+			h = 0,
+			s = 0,
+			l = 0;
+
+		// calculate hue
+		// no difference
+		if (delta == 0) h = 0;
+		// red is max
+		else if (cmax == r) h = ((g - b) / delta) % 6;
+		// green is max
+		else if (cmax == g) h = (b - r) / delta + 2;
+		// blue is max
+		else h = (r - g) / delta + 4;
+
+		h = Math.round(h * 60);
+
+		// make negative hues positive behind 360°
+		if (h < 0) h += 360;
+
+		// calculate lightness
+		l = (cmax + cmin) / 2;
+
+		// calculate saturation
+		s = delta == 0 ? 0 : delta / (1 - Math.abs(2 * l - 1));
+
+		// multiply l and s by 100
+		s = +(s * 100).toFixed(1);
+		l = +(l * 100).toFixed(1);
+
+		return 'hsla(' + h + ',' + s + '%,' + l + '%,' + a + ')';
+	} else {
+		return 'Invalid input color';
+	}
+} //ok
 function HSLAToRGBA(hsla, isPct) {
 	//if isPct == true, will output 'rgb(xx%,xx%,xx%)' umgerechnet in % von 255
 	let ex = /^hsla\(((((([12]?[1-9]?\d)|[12]0\d|(3[0-5]\d))(\.\d+)?)|(\.\d+))(deg)?|(0|0?\.\d+)turn|(([0-6](\.\d+)?)|(\.\d+))rad)(((,\s?(([1-9]?\d(\.\d+)?)|100|(\.\d+))%){2},\s?)|((\s(([1-9]?\d(\.\d+)?)|100|(\.\d+))%){2}\s\/\s))((0?\.\d+)|[01]|(([1-9]?\d(\.\d+)?)|100|(\.\d+))%)\)$/i;
@@ -1315,6 +1997,43 @@ function pSBC(p, c0, c1, l) {
 	if (h) return 'rgb' + (f ? 'a(' : '(') + r + ',' + g + ',' + b + (f ? ',' + m(a * 1000) / 1000 : '') + ')';
 	else return '#' + (4294967296 + r * 16777216 + g * 65536 + b * 256 + (f ? m(a * 255) : 0)).toString(16).slice(1, f ? undefined : -2);
 } //ok SUPER COOL!!!!
+function bestContrastingColor(color, colorlist) {
+	//console.log('dddddddddddddddd')
+	let contrast = 0;
+	let result = null;
+	let rgb = colorRGB(color, true);
+	rgb = [rgb.r, rgb.g, rgb.b];
+	for (c1 of colorlist) {
+		let x = colorRGB(c1, true)
+		x = [x.r, x.g, x.b];
+		let c = getContrast(rgb, x);
+		//console.log(rgb,x,c);
+		if (c > contrast) { contrast = c; result = c1; }
+	}
+	//console.log(contrast,result)
+	return result;
+}
+function luminance(r, g, b) {
+	var a = [r, g, b].map(function (v) {
+		v /= 255;
+		return v <= 0.03928
+			? v / 12.92
+			: Math.pow((v + 0.055) / 1.055, 2.4);
+	});
+	return a[0] * 0.2126 + a[1] * 0.7152 + a[2] * 0.0722;
+}
+function getContrast(rgb1, rgb2) {
+	// usage:
+	// contrast([255, 255, 255], [255, 255, 0]); // 1.074 for yellow
+	// contrast([255, 255, 255], [0, 0, 255]); // 8.592 for blue
+	// minimal recommended contrast ratio is 4.5, or 3 for larger font-sizes
+	var lum1 = luminance(rgb1[0], rgb1[1], rgb1[2]);
+	var lum2 = luminance(rgb2[0], rgb2[1], rgb2[2]);
+	var brightest = Math.max(lum1, lum2);
+	var darkest = Math.min(lum1, lum2);
+	return (brightest + 0.05)
+		/ (darkest + 0.05);
+}
 //#endregion
 
 //#region CSS helpers
@@ -2054,12 +2773,12 @@ function isVisible2(elem) { // Where el is the DOM element you'd like to test fo
 
 	return (elem.style.display != 'none' || elem.offsetParent !== null);
 }
-function show(elem,isInline=false) {
+function show(elem, isInline = false) {
 	if (isString(elem)) elem = document.getElementById(elem);
 	if (isSvg(elem)) {
 		elem.setAttribute('style', 'visibility:visible');
 	} else {
-		elem.style.display = isInline?'inline-block':null;
+		elem.style.display = isInline ? 'inline-block' : null;
 	}
 }
 
@@ -3174,7 +3893,7 @@ function lookup(dict, keys) {
 	for (const k of keys) {
 		if (k === undefined) break;
 		let e = d[k];
-		if (e === undefined) return null;
+		if (e === undefined || e === null) return null;
 		d = d[k];
 		if (i == ilast) return d;
 		i += 1;
@@ -3188,6 +3907,7 @@ function lookupSet(dict, keys, val) {
 	for (const k of keys) {
 		if (nundef(k)) continue; //skip undef or null values
 		if (d[k] === undefined) d[k] = (i == ilast ? val : {});
+		if (nundef(d[k])) d[k] = (i == ilast ? val : {});
 		d = d[k];
 		if (i == ilast) return d;
 		i += 1;
@@ -3200,6 +3920,7 @@ function lookupSetOverride(dict, keys, val) {
 	let i = 0;
 	for (const k of keys) {
 
+		//console.log(k,d)
 		if (i == ilast) {
 			if (nundef(k)) {
 				//letzter key den ich eigentlich setzen will ist undef!
@@ -3213,7 +3934,7 @@ function lookupSetOverride(dict, keys, val) {
 
 		if (nundef(k)) continue; //skip undef or null values
 
-		if (d[k] === undefined) d[k] = {};
+		if (nundef(d[k])) d[k] = {};
 
 		d = d[k];
 		i += 1;
@@ -3781,6 +4502,20 @@ function chooseRandomDictKey(dict, condFunc = null) {
 	}
 	let idx = Math.floor(Math.random() * len);
 	return arr[idx];
+}
+function getRandomNumberSequence(n, minStart, maxStart, fBuild) { //{op,step,fBuild}) {
+	let nStart = randomNumber(minStart, maxStart - n + 1);
+	if (isNumber(fBuild)) return range(nStart, nStart + (n - 1) * fBuild, fBuild);
+	else {
+		let res = [], x = nStart;
+		for (let i = 0; i < n; i++) {
+			res.push(x);
+			x = fBuild(x);
+		}
+		return res;
+	}
+
+
 }
 function nRandomNumbers(n, from, to, step) {
 	let arr = range(from, to, step);

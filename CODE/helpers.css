@@ -1,3 +1,13 @@
+.editableText{
+	background-color: transparent;
+	outline: none;
+	border: none;
+	text-align: center;
+	padding: 2px 8px;
+}
+
+
+
 .frameOnHover:hover{
 	opacity: .8;
 	/* border: solid 1px yellow; */

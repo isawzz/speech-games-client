@@ -1,0 +1,30 @@
+placement: #list damit order
+  #- Board: MAIN #[def]
+  - Player.Items: Player.area
+  - Tick: MAIN
+visualize:
+  # Board: 
+  #   rsgType: quadGrid
+  Tick:
+    rsgType: dom
+    tag: div
+    optin: [row, col]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

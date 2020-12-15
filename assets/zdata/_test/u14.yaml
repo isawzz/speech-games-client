@@ -1,0 +1,26 @@
+placement: #list: has to be processed in order!
+  - GamePlayer.items: self.name
+  - Tick: MAIN #Tick elements that have NOT been processed yet!
+visualize:
+  Tick:
+    rsgType: dom
+    tag: div
+    optin: [row, col, symbol]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

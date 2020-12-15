@@ -1,0 +1,164 @@
+minutesPerUnit: 15
+samplesPerLevel: 1
+trials: 3
+# toggle: first half of level: labels, second half of level: no labels
+showLabels: toggle #always never toggle
+incrementLevelOnPositiveStreak: 5
+decrementLevelOnNegativeStreak: 3
+language: E
+vocab: best25
+spokenFeedback: true
+
+# the following not yet in UI
+# activity animal body drink emotion food fruit game gesture kitchen 
+# object person place plant role sport time transport vegetable 
+# nosymemo nosymbols
+categories: [nosymemo]
+pressControlToUnfreeze: false
+reducedAnimations: true
+levelBadges: false
+showHint: true
+games: 
+  gTouchPic:
+    levels:
+      0: 
+        numPics: 2
+      1: 
+        numPics: 4
+      2: 
+        numPics: 9
+      3: 
+        numPics: 16
+      4: 
+        numPics: 25
+      5: 
+        numPics: 36
+  gMissingLetter:
+    levels:
+      0:
+        numMissing: 1
+        posMissing: start
+      1:
+        numMissing: 2
+        posMissing: start
+      2:
+        numMissing: 1
+        posMissing: random
+      3:
+        numMissing: 2
+        posMissing: random
+      4:
+        numMissing: 3
+        posMissing: random
+      5:
+        numMissing: 5
+        posMissing: random
+  gMissingNumber:
+    levels:
+      0:
+        numMissing: 1
+        posMissing: end
+        min: 0
+        max: 20
+        steps: 1
+        ops: [add,subtract]
+      1:
+        numMissing: 1
+        posMissing: start
+        min: 0
+        max: 99
+        steps: [1,2]
+        ops: [add,subtract]
+      2:
+        numMissing: 1
+        posMissing: random
+        min: 0
+        max: 99
+        steps: [1,2,3]
+        ops: [add,subtract]
+      3:
+        numMissing: 1
+        posMissing: random
+        min: 0
+        max: 99
+        steps: [1,2,3,4,5,6,7]
+        ops: [add,subtract]
+  gTouchColors:
+    contrast: 0.32
+    colors:
+      - red
+      - blue
+      - yellow
+      - green
+    levels:
+      0: 
+        numPics: 2
+        numColors: 2
+      1: 
+        numPics: 3
+        numColors: 3
+      2: 
+        numPics: 4
+        numColors: 3
+      3: 
+        numPics: 4
+        numColors: 4
+      4: 
+        numPics: 5
+        numColors: 4
+  gPremem:
+    levels:
+      0: 
+        numPics: 2
+        numRepeat: 2
+      1: 
+        numPics: 3
+        numRepeat: 3
+      2: 
+        numPics: 6
+        numRepeat: 2
+      3: 
+        numPics: 8
+        numRepeat: 2
+      4: 
+        numPics: 12
+        numRepeat: 2
+      5: 
+        numPics: 18
+        numRepeat: 2
+  gMem:
+    levels:
+      0: 
+        numPics: 2
+        numRepeat: 1
+      1: 
+        numPics: 4
+        numRepeat: 1
+      2: 
+        numPics: 9
+        numRepeat: 1
+      3: 
+        numPics: 2
+        numRepeat: 1
+      4: 
+        numPics: 4
+        numRepeat: 1
+      5: 
+        numPics: 4
+        numRepeat: 1
+      6: 
+        numPics: 6
+        numRepeat: 1
+  gSayPic:
+  gWritePic:
+    levels:
+      0: 
+        maxWordLength: 4
+      1: 
+        maxWordLength: 6
+      2: 
+        maxWordLength: 8
+      3: 
+        maxWordLength: 100
+
+      

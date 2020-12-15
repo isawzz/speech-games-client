@@ -1,0 +1,109 @@
+guest0:
+  id: guest
+  seq: [gTouchPic, gTouchColors, gPremem, gMem, gMissingNumber, gMissingLetter, gWritePic, gSayPic]
+  lastGame: gMissingNumber
+  lastLevel: 0
+  settings:
+    minutesPerUnit: 10
+    samplesPerLevel: 10
+    trials: 2
+    # toggle: first half of level: labels, second half of level: no labels
+    showLabels: toggle #always never toggle
+    incrementLevelOnPositiveStreak: 10
+    decrementLevelOnNegativeStreak: 3
+    language: E
+    vocab: best25
+    spokenFeedback: true
+
+    # the following not yet in UI
+    # activity animal body drink emotion food fruit game gesture kitchen 
+    # object person place plant role sport time transport vegetable 
+    # nosymemo nosymbols
+    categories: [nosymemo]
+    pressControlToUnfreeze: false
+    reducedAnimations: true
+    levelBadges: false
+    showHint: true
+    showTime: true
+    switchGame: true
+  games:
+    gTouchPic:
+      startLevel: 0
+test0:
+  id: test
+  seq: [gTouchPic, gTouchColors, gPremem, gMem, gMissingNumber, gMissingLetter, gWritePic, gSayPic ] 
+  lastGame: gTouchPic
+  lastLevel: 0
+  settings:
+    minutesPerUnit: 10
+    samplesPerLevel: 2
+    trials: 1
+    # toggle: first half of level: labels, second half of level: no labels
+    showLabels: toggle #always never toggle
+    incrementLevelOnPositiveStreak: 10
+    decrementLevelOnNegativeStreak: 3
+    language: E
+    vocab: best50
+    spokenFeedback: false
+
+    # the following not yet in UI
+    # activity animal body drink emotion food fruit game gesture kitchen 
+    # object person place plant role sport time transport vegetable 
+    # nosymemo nosymbols
+    categories: [nosymemo]
+    pressControlToUnfreeze: false
+    reducedAnimations: true
+    levelBadges: false
+    showHint: false
+    showTime: true
+    switchGame: true
+  games:
+    gTouchPic:
+      startLevel: 0
+
+gul:
+  id: gul
+  seq: [gTouchPic, gTouchColors, gPremem, gMem, gMissingNumber, gMissingLetter, gWritePic, gSayPic]
+  lastGame: gMissingNumber
+  lastLevel: 0
+  settings:
+    minutesPerUnit: 10
+    samplesPerLevel: 10
+    trials: 2
+    # toggle: first half of level: labels, second half of level: no labels
+    showLabels: toggle #always never toggle
+    incrementLevelOnPositiveStreak: 10
+    decrementLevelOnNegativeStreak: 3
+    language: E
+    vocab: best25
+    spokenFeedback: true
+
+    # the following not yet in UI
+    # activity animal body drink emotion food fruit game gesture kitchen 
+    # object person place plant role sport time transport vegetable 
+    # nosymemo nosymbols
+    categories: [nosymemo]
+    pressControlToUnfreeze: false
+    reducedAnimations: true
+    levelBadges: false
+    showHint: true
+    showTime: true
+    switchGame: true
+  games: 
+    gTouchPic:
+      startLevel: 3
+    gMissingLetter:
+      startLevel: 3
+    gMissingNumber:
+      startLevel: 0
+    gTouchColors:
+      startLevel: 1
+    gPremem:
+      startLevel: 3
+    gMem:
+      startLevel: 1
+    gSayPic:
+      startLevel: 0
+    gWritePic:
+      startLevel: 3
+

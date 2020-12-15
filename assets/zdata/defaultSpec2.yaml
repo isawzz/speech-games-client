@@ -1,0 +1,84 @@
+tableSize: [200,200]
+
+layout: [
+  'z z z o',
+  'z z z o',
+  'z z z o',
+  'p p p a',
+  ]
+
+layout_alias: 
+  z: zone
+  a: extra
+  p: player
+  o: others
+
+#global: # global settings for user_interface
+#default_loc: "none" # hide any game objects not explicitly placed => same as table.createDefault and player.createDefault
+#visualize: "default" #dont know exactly what that means
+useLocPropertyForPlacement: true # if a game object has a "loc" property, and if that loc is an element of a grid, then autmatically place the object 
+
+#legacy settings von vid0
+boardDetection: true
+deckDetection: true
+useColorHintForProperties: true
+useColorHintForObjects: true
+onlySimpleValues: true #false is NOT IMPLEMENTED!!!
+ignoreStructureTypesInPresentation : true
+collapseEmptySmallLetterAreas: true
+shadeAreaBackgrounds: true
+showAreaNames: false
+showCardHandNames: false
+showCardHandBackground: false
+extendedOptout:
+  color: 1
+  altName: 1
+  index: 1
+  username: 1
+  playerType: 1
+  player: 1
+  agentType: 1
+  obj_type: 1
+  id: 1
+  visible: 1
+  neighbors: 1
+  fields: 1
+  edges: 1
+  corners: 1
+  row: 1
+  col: 1
+  rows: 1
+  cols: 1
+
+useExtendedOptout: true
+addSymbolToEdges: false
+color: 
+  theme: '#6B7A8F'
+gap: 4
+outerGap: false
+
+table: 
+  createDefault: true #miss | true | false #NOT IMPLEMENTED!!!
+  optin: null
+  optout: [obj_type, id]
+  defaultArea: a_d_objects
+  ignoreTypes: []
+
+players:
+  createDefault: true #miss | true | false #NOT IMPLEMENTED!!!
+  optin: null
+  optout: [id, color, altName, index]
+  defaultArea: a_d_players
+
+pieceSizeRelativeToLoc:
+  default: 
+  corner: ['w',100]
+  field: ['w', 30]
+  edge: ['length',100]
+
+
+
+
+
+
+

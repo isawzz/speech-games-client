@@ -1,46 +1,24 @@
-async function loadAssetsTest(assetsPath) {
-	let url = assetsPath + 'c52_blackBorder.yaml';
-	c52 = await route_path_yaml_dict(url);
+var BlockServerSend = false;
+var SERVER_DATA = null;
 
-	url = assetsPath + 'symbolDict.yaml';
-	symbolDict = await route_path_yaml_dict(url);
-	symbolKeys = Object.keys(symbolDict);
-	symbolList = dict2list(symbolDict);
+async function broadcastSIMA(usersPath = './settings/users.yaml', settingsPath = './settings/settings.yaml') {
+	let users = await loadYamlDict(usersPath);
+	let settings = await loadYamlDict(settingsPath);
 
-	ensureSymBySet(); makeHigherOrderGroups();
+	DB = {
+		id: 'speechGames',
+		users: users,
+		settings: settings
+	};
 
-	BestKeySets = await route_path_yaml_dict(assetsPath + 'speech/keySets.yaml');
-	BestKeysD = await route_path_yaml_dict(assetsPath + 'speech/bestKeysD.yaml');
-	BestKeysE = await route_path_yaml_dict(assetsPath + 'speech/bestKeysE.yaml');
-	for (const e of BestKeysD) {
-		let info = symbolDict[e.k];
-		info.bestD = e.r;
-		info.bestDConf = e.c;
-	}
-	for (const e of BestKeysE) {
-		let info = symbolDict[e.k];
-		info.bestE = e.r;
-		info.bestEConf = e.c;
-	}
-	// console.log(BestKeySets.best100);
-	for (const setname in BestKeySets) {
-		for (const k of BestKeySets[setname]) {
-			let info = symbolDict[k];
-			if (nundef(info.bestE)) info.bestE = lastOfLanguage(k, 'E');
-			if (nundef(info.bestD)) info.bestD = lastOfLanguage(k, 'D');
-			//console.log(info)
-			info[setname] = { E: info.bestE, D: info.bestD };
-		}
-	}
+	saveSIMA();
 
-	url = assetsPath + 'svgDict.yaml';
-	svgDict = await route_path_yaml_dict(url); //TODO: depending on ext, treat other assts as well!
-	svgKeys = Object.keys(svgDict);
-	svgList = dict2list(svgDict);
+	if (CLEAR_LOCAL_STORAGE) localStorage.clear();
+	await loadAssetsSIMA('../assets/');
 
 }
 
-async function loadServerDataAndAssets() {
+async function loadSIMA(callback) {
 	//console.log('...loading...');
 	let url = SERVERURL;
 	fetch(url, {
@@ -50,39 +28,50 @@ async function loadServerDataAndAssets() {
 			'Content-Type': 'application/json'
 		},
 	}).then(async data => {
-		SERVER_DATA = await data.json();
-		let sData = SERVER_DATA[0]; //firstCond(SERVER_DATA,x=>x.id=='speechGames');
-		// console.log(sData,typeof(sData));
-		// console.log('userData',sData.users);
-		// console.log("Gunter",sData.users.Gunter)
-		//console.log('SERVER_DATA', SERVER_DATA);
-		UserHistory = sData.users[USERNAME]; //SERVER_DATA.users[USERNAME];
-		DefaultSettings = sData[SETTINGS_KEY].defaults;
-		Settings = sData[SETTINGS_KEY].current;
-		// console.log(UserHistory);
-		// console.log(DefaultSettings);
-		// console.log(Settings);
-		// console.log('==>USER HISTORY touch pic level', UserHistory.id, UserHistory.gTouchPic.startLevel);
-
+		let sData = await data.json();
+		DB = sData[0];
+		//console.log(DB)
 		//hier kann ich assets laden!!!
 		if (CLEAR_LOCAL_STORAGE) localStorage.clear();
-		await loadAssetsTest('../assets/');
+		await loadAssetsSIMA('../assets/');
 
-		_start();
-		//SessionStart();
+		if (isdef(callback)) callback();
 	});
 }
-
-async function saveServerData() {
-	//console.log('posting...');
-	let sData = SERVER_DATA[0]; //firstCond(SERVER_DATA,x=>x.id=='speechGames');
-	sData.users[USERNAME] = UserHistory; //SERVER_DATA.users[USERNAME];
-	sData[SETTINGS_KEY].defaults = DefaultSettings;
-	sData[SETTINGS_KEY].current = Settings;
+async function localOrRoute(key, url) {
+	if (USE_LOCAL_STORAGE) {
+		let x = localStorage.getItem(key);
+		if (isdef(x)) return JSON.parse(x);
+		else {
+			let data = await route_path_yaml_dict(url);
+			if (key != 'svgDict') localStorage.setItem(key, JSON.stringify(data));
+			return data;
+		}
+	} else return await route_path_yaml_dict(url);
+}
+async function loadAssetsSIMA(assetsPath) {
+	c52 = await localOrRoute('c52', assetsPath + 'c52_blackBorder.yaml');
 	//return;
+	symbolDict = await localOrRoute('symbolDict', assetsPath + 'symbolDict.yaml');
+	symbolKeys = Object.keys(symbolDict);
+	symbolList = dict2list(symbolDict);
+	ensureSymBySet(); makeHigherOrderGroups();
+
+	svgDict = await localOrRoute('svgDict', assetsPath + 'svgDict.yaml'); //TODO: depending on ext, treat other assts as well!
+	svgKeys = Object.keys(svgDict);
+	svgList = dict2list(svgDict);
+}
+
+async function saveSIMA() {
+	//console.log('posting DB', DB);
+	if (USERNAME == 'test') {
+		//console.log('trying to save USERNAME test!!!!!!!',_getFunctionsNameThatCalledThisFunction());
+		return; //localStorage.setItem('user',USERNAME);
+	}
+	// localStorage.setItem('user', USERNAME);
 	if (BlockServerSend) {
 		//console.log('...wait for unblocked...');
-		setTimeout(saveServerData, 1000);
+		setTimeout(saveSIMA, 1000);
 	} else {
 		let url = SERVERURL + 'speechGames';
 		BlockServerSend = true;
@@ -93,30 +82,11 @@ async function saveServerData() {
 				'Accept': 'application/json',
 				'Content-Type': 'application/json'
 			},
-			body: JSON.stringify(SERVER_DATA[0])
+			body: JSON.stringify(DB)
 		}).then(() => { BlockServerSend = false; }); //console.log('unblocked...'); });
 	}
 
 }
-
-
-
-//#region dev mode
-async function transferServerDataToServer() {
-	//load settings.yaml file 
-	let url = './settings/' + SETTINGS_KEY + '.yaml';
-	settingsData = await route_path_yaml_dict(url);
-	DefaultSettings = settingsData;
-	saveServerData();
-
-}
-
-async function transferServerDataToClient() {
-//dann download ich DefaultSettings as yaml
-	downloadAsYaml(DefaultSettings,SETTINGS_KEY);
-}
-
-
 
 
 

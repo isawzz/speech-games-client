@@ -1,17 +1,24 @@
 var USERNAME;
 
-var Settings, DefaultSettings, UserHistory;
+var STOPAUS;
 
-const TIMIT_SHOW = false; // true | false
+var DB, G, Settings, U, GS; //GS...Session, G...Game, U...User
 
-var USE_LOCAL_STORAGE = false; // true | false //localStorage is cleared when false!!!!!
+var Speech;
 
-const DEFAULTPICTYPE = 'all'; // all | any | emo | eduplo | icon | iduplo
-const EMOFONTLIST =  ['emoOpen', 'openmoBlack', 'segoe ui emoji', 'segoe ui symbol'];
+var TaskChain, CancelChain, ChainTimeout, BlockChain; //chains are NOT reentrant!
 
-const SHOW_SERVER_ROUTE = false; // true | false
-const SHOW_SERVER_RETURN = false; // true | false
+var Pictures, Goal, Selected, Score;
 
+
+//#region unused as of SIMA
+//feature sets:
+var DefaultSettings, UserHistory, SettingsChanged; //dep SIMA
+
+//#region unused as of HA
+const TIMIT_SHOW = true; // true | false
+
+//#region unused as of GS
 var SIGI;
 var UIS = {};
 

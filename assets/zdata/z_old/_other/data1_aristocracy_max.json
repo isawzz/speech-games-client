@@ -1,0 +1,560 @@
+{
+	"options": {
+		"select": {
+			"actions": {
+				"_set": [
+					{
+						"_tuple": [
+							{
+								"_set": [
+									{
+										"ID": "1-398593ec",
+										"val": "King",
+										"type": "obj"
+									},
+									{
+										"ID": "1-54c04ad3",
+										"val": "5",
+										"type": "obj"
+									},
+									{
+										"ID": "1-ad642e03",
+										"val": "8",
+										"type": "obj"
+									},
+									{
+										"ID": "1-a5560563",
+										"val": "4",
+										"type": "obj"
+									},
+									{
+										"ID": "1-6ae87e1a",
+										"val": "6",
+										"type": "obj"
+									},
+									{
+										"ID": "1-64b019b9",
+										"val": "Jack",
+										"type": "obj"
+									},
+									{
+										"ID": "1-731f9025",
+										"val": "1",
+										"type": "obj"
+									}
+								]
+							}
+						]
+					}
+				]
+			},
+			"desc": {
+				"line": [
+					"Select card"
+				]
+			}
+		},
+		"ready": {
+			"actions": {
+				"_set": [
+					{
+						"_tuple": [
+							{
+								"val": "ready",
+								"type": "fixed"
+							}
+						]
+					}
+				]
+			},
+			"desc": {
+				"line": [
+					"Ready for the market"
+				]
+			}
+		}
+	},
+	"status": {
+		"line": [
+			"Select what cards to bring to the market"
+		]
+	},
+	"key": "91b7584a2265b1f5",
+	"players": {
+		"Player1": {
+			"obj_type": "GamePlayer",
+			"name": "Player1",
+			"hand": {
+				"_set": [
+					{
+						"_obj": "1-398593ec"
+					},
+					{
+						"_obj": "1-54c04ad3"
+					},
+					{
+						"_obj": "1-ad642e03"
+					},
+					{
+						"_obj": "1-a5560563"
+					},
+					{
+						"_obj": "1-6ae87e1a"
+					},
+					{
+						"_obj": "1-64b019b9"
+					},
+					{
+						"_obj": "1-731f9025"
+					}
+				]
+			},
+			"buildings": {
+				"palace": [],
+				"estate": [],
+				"farm": []
+			},
+			"vps": 0,
+			"hand_limit": 7,
+			"coins": 3,
+			"order": 2
+		},
+		"Player2": {
+			"name": "Player2",
+			"hand": {
+				"_set": [
+					{
+						"_obj": "1-c7159b04"
+					},
+					{
+						"_obj": "1-3fbdd39e"
+					},
+					{
+						"_obj": "1-131f12e7"
+					},
+					{
+						"_obj": "1-3459c5de"
+					},
+					{
+						"_obj": "1-758b60b"
+					},
+					{
+						"_obj": "1-9bcda723"
+					},
+					{
+						"_obj": "1-d5753cc8"
+					}
+				]
+			},
+			"buildings": {
+				"palace": [],
+				"estate": [],
+				"farm": []
+			},
+			"obj_type": "opponent"
+		},
+		"Player3": {
+			"name": "Player3",
+			"hand": {
+				"_set": [
+					{
+						"_obj": "1-fe0c8d2d"
+					},
+					{
+						"_obj": "1-98382471"
+					},
+					{
+						"_obj": "1-a222ce72"
+					},
+					{
+						"_obj": "1-33bf5bf0"
+					},
+					{
+						"_obj": "1-306df326"
+					},
+					{
+						"_obj": "1-c1b4700"
+					},
+					{
+						"_obj": "1-402528cf"
+					}
+				]
+			},
+			"buildings": {
+				"palace": [],
+				"estate": [],
+				"farm": []
+			},
+			"obj_type": "opponent"
+		},
+		"Player4": {
+			"name": "Player4",
+			"hand": {
+				"_set": [
+					{
+						"_obj": "1-bc63de51"
+					},
+					{
+						"_obj": "1-1391cf74"
+					},
+					{
+						"_obj": "1-adf52e1"
+					},
+					{
+						"_obj": "1-ef780614"
+					},
+					{
+						"_obj": "1-1f960559"
+					},
+					{
+						"_obj": "1-fe70334b"
+					},
+					{
+						"_obj": "1-1db627cb"
+					}
+				]
+			},
+			"buildings": {
+				"palace": [],
+				"estate": [],
+				"farm": []
+			},
+			"obj_type": "opponent"
+		},
+		"Player5": {
+			"name": "Player5",
+			"hand": {
+				"_set": [
+					{
+						"_obj": "1-58383e7d"
+					},
+					{
+						"_obj": "1-dfea41e6"
+					},
+					{
+						"_obj": "1-f678770"
+					},
+					{
+						"_obj": "1-e1b51efb"
+					},
+					{
+						"_obj": "1-46478b1e"
+					},
+					{
+						"_obj": "1-61c84bce"
+					},
+					{
+						"_obj": "1-df3198d3"
+					}
+				]
+			},
+			"buildings": {
+				"palace": [],
+				"estate": [],
+				"farm": []
+			},
+			"obj_type": "opponent"
+		}
+	},
+	"table": {
+		"0": {
+			"obj_type": "discard_pile",
+			"visible": {
+				"_set": [
+					{
+						"_player": "Player1"
+					},
+					{
+						"_player": "Player2"
+					},
+					{
+						"_player": "Player3"
+					},
+					{
+						"_player": "Player4"
+					},
+					{
+						"_player": "Player5"
+					}
+				]
+			},
+			"next": [],
+			"deck_count": 0,
+			"generic_type": "deck"
+		},
+		"1": {
+			"obj_type": "draw_pile",
+			"visible": {
+				"_set": [
+					{
+						"_player": "Player1"
+					},
+					{
+						"_player": "Player2"
+					},
+					{
+						"_player": "Player3"
+					},
+					{
+						"_player": "Player4"
+					},
+					{
+						"_player": "Player5"
+					}
+				]
+			},
+			"deck_count": 104,
+			"generic_type": "deck"
+		},
+		"2": {
+			"neutral": [
+				{
+					"_obj": "1-db0b05be"
+				},
+				{
+					"_obj": "1-8fc960aa"
+				}
+			],
+			"obj_type": "market",
+			"visible": {
+				"_set": [
+					{
+						"_player": "Player1"
+					},
+					{
+						"_player": "Player2"
+					},
+					{
+						"_player": "Player3"
+					},
+					{
+						"_player": "Player4"
+					},
+					{
+						"_player": "Player5"
+					}
+				]
+			}
+		},
+		"1-398593ec": {
+			"short_name": "K",
+			"value": 10,
+			"obj_type": "card",
+			"visible": {
+				"_set": [
+					{
+						"_player": "Player1"
+					}
+				]
+			},
+			"name": "King",
+			"generic_type": "card"
+		},
+		"1-54c04ad3": {
+			"short_name": "5",
+			"value": 5,
+			"obj_type": "card",
+			"visible": {
+				"_set": [
+					{
+						"_player": "Player1"
+					}
+				]
+			},
+			"name": "5",
+			"generic_type": "card"
+		},
+		"1-ad642e03": {
+			"short_name": "8",
+			"value": 8,
+			"obj_type": "card",
+			"visible": {
+				"_set": [
+					{
+						"_player": "Player1"
+					}
+				]
+			},
+			"name": "8",
+			"generic_type": "card"
+		},
+		"1-a5560563": {
+			"short_name": "4",
+			"value": 4,
+			"obj_type": "card",
+			"visible": {
+				"_set": [
+					{
+						"_player": "Player1"
+					}
+				]
+			},
+			"name": "4",
+			"generic_type": "card"
+		},
+		"1-6ae87e1a": {
+			"short_name": "6",
+			"value": 6,
+			"obj_type": "card",
+			"visible": {
+				"_set": [
+					{
+						"_player": "Player1"
+					}
+				]
+			},
+			"name": "6",
+			"generic_type": "card"
+		},
+		"1-64b019b9": {
+			"short_name": "J",
+			"value": 10,
+			"obj_type": "card",
+			"visible": {
+				"_set": [
+					{
+						"_player": "Player1"
+					}
+				]
+			},
+			"name": "Jack",
+			"generic_type": "card"
+		},
+		"1-c7159b04": {
+			"generic_type": "card"
+		},
+		"1-3fbdd39e": {
+			"generic_type": "card"
+		},
+		"1-131f12e7": {
+			"generic_type": "card"
+		},
+		"1-3459c5de": {
+			"generic_type": "card"
+		},
+		"1-758b60b": {
+			"generic_type": "card"
+		},
+		"1-9bcda723": {
+			"generic_type": "card"
+		},
+		"1-fe0c8d2d": {
+			"generic_type": "card"
+		},
+		"1-98382471": {
+			"generic_type": "card"
+		},
+		"1-a222ce72": {
+			"generic_type": "card"
+		},
+		"1-33bf5bf0": {
+			"generic_type": "card"
+		},
+		"1-306df326": {
+			"generic_type": "card"
+		},
+		"1-c1b4700": {
+			"generic_type": "card"
+		},
+		"1-bc63de51": {
+			"generic_type": "card"
+		},
+		"1-1391cf74": {
+			"generic_type": "card"
+		},
+		"1-adf52e1": {
+			"generic_type": "card"
+		},
+		"1-ef780614": {
+			"generic_type": "card"
+		},
+		"1-1f960559": {
+			"generic_type": "card"
+		},
+		"1-fe70334b": {
+			"generic_type": "card"
+		},
+		"1-58383e7d": {
+			"generic_type": "card"
+		},
+		"1-dfea41e6": {
+			"generic_type": "card"
+		},
+		"1-f678770": {
+			"generic_type": "card"
+		},
+		"1-e1b51efb": {
+			"generic_type": "card"
+		},
+		"1-46478b1e": {
+			"generic_type": "card"
+		},
+		"1-61c84bce": {
+			"generic_type": "card"
+		},
+		"1-db0b05be": {
+			"generic_type": "card"
+		},
+		"1-8fc960aa": {
+			"generic_type": "card"
+		},
+		"1-731f9025": {
+			"short_name": "1",
+			"value": 1,
+			"obj_type": "card",
+			"visible": {
+				"_set": [
+					{
+						"_player": "Player1"
+					}
+				]
+			},
+			"name": "1",
+			"generic_type": "card"
+		},
+		"1-d5753cc8": {
+			"generic_type": "card"
+		},
+		"1-402528cf": {
+			"generic_type": "card"
+		},
+		"1-1db627cb": {
+			"generic_type": "card"
+		},
+		"1-df3198d3": {
+			"generic_type": "card"
+		}
+	},
+	"phase": "king",
+	"log": [
+		{
+			"line": [
+				"",
+				"King",
+				" phase begins",
+				"\n"
+			],
+			"level": 0
+		},
+		{
+			"line": [
+				"Everybody draws 1 card",
+				"\n"
+			],
+			"level": 1
+		},
+		{
+			"line": [
+				"",
+				{
+					"obj_type": "GamePlayer",
+					"type": "player",
+					"val": "Player4"
+				},
+				" becomes herald",
+				"\n"
+			],
+			"level": 1
+		}
+	]
+}
