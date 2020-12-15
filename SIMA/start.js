@@ -38,8 +38,8 @@ function startUnit() {
 	//hier soll U.session laden 
 	UnitScoreSummary = {};
 
-	startGame();
-	//onClickTemple();
+	//startGame();
+	onClickTemple();
 
 }
 
