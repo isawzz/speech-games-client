@@ -63,12 +63,13 @@ function maShowPictures(keys, labels, dParent, onClickPictureHandler,
 	//console.log(items);
 	numPics = items.length;
 
-	console.log('numPics',numPics,'items',jsCopy(items))
+	//console.log('numPics',numPics,'items',jsCopy(items))
 
 	//dann erst shuffle!
-	if (shufflePositions) {console.log('shuffling!!!'); shuffle(items);}
+	if (shufflePositions) {shuffle(items);}
+	// if (shufflePositions) {console.log('shuffling!!!'); shuffle(items);}
 
-	console.log('after shuffling items',jsCopy(items))
+	//console.log('after shuffling items',jsCopy(items))
 
 
 	let lines = isdef(colors) ? colors.length : 1;
@@ -78,7 +79,7 @@ function maShowPictures(keys, labels, dParent, onClickPictureHandler,
 
 	if (isdef(picSize)) pictureSize = picSize;
 
-	console.log('lines',lines,'picsPerLine',picsPerLine, 'items', items, 'numPics', numPics)
+	//console.log('lines',lines,'picsPerLine',picsPerLine, 'items', items, 'numPics', numPics)
 
 	for (let line = 0; line < lines; line++) {
 		let textShadowColor = isdef(colors) ? colors[line] : undefined;
