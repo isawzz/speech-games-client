@@ -1,11 +1,24 @@
 # speech-games-client
 
-This project provides simple games for speech therapy. 
+This project provides simple games for speech therapy:
+- Pictures: click one of multiple pictures given word
+- Colors: identify 2 attributes: content + color 
+- Premem: find similar pictures
+- Memory: memorize one or multiple pictures, after some time, recall it and click
+- Sequence: fill out missing number in a number sequence built using + or - some constant
+- Letters: enter missing letters in a word
+- Type it: type a word given picture
+- Speak Up: speak a word given picture
 
-It is entirely implemented in client-side javascript and only accesses a minimal json-server (see https://github.com/isawzz/speech-games-server) to store user data.
+There is also a calibration test CALIBRATE for the user to set all the games to the right level 
 
 run it online:
-goto: 
+goto: https://isawzz.github.io/speech-games-client/SIMA/
+
+
+# implementation
+
+It is entirely implemented in client-side javascript and only accesses a minimal json-server (see https://github.com/isawzz/speech-games-server) to store user data.
 
 run it locally (dev):
 easiest way to run this locally if you have vs code installed:
