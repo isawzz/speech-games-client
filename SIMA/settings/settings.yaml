@@ -83,6 +83,43 @@ games:
         max: 99
         steps: [1,2,3,4,5,6,7]
         ops: [add,subtract]
+  gSteps:
+    contrast: 0.32
+    colors:
+      - name: orange
+        color: orangered
+      - name: blue
+        color: blue
+      - name: pink
+        color: hotpink
+      - name: green
+        color: limegreen
+    levels:
+      0: 
+        numPics: 2
+        numColors: 2
+        numRepeat: 2
+        numSteps: 2
+      1: 
+        numPics: 3
+        numColors: 3
+        numRepeat: 2
+        numSteps: 2
+      2: 
+        numPics: 4
+        numColors: 3
+        numRepeat: 2
+        numSteps: 2
+      3: 
+        numPics: 4
+        numColors: 4
+        numRepeat: 2
+        numSteps: 2
+      4: 
+        numPics: 5
+        numColors: 4
+        numRepeat: 2
+        numSteps: 2
   gTouchColors:
     contrast: 0.32
     colors:

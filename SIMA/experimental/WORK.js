@@ -1,6 +1,3 @@
-var uiActivated, auxOpen;
-var canAct = () => uiActivated && !auxOpen && document.activeElement.id != 'spUser';
-
 function prelim() {
 	let dParent = dTable;
 	clearElement(dParent);
@@ -60,7 +57,6 @@ function setPicsAndGoal(pics) {
 	//console.log(pics);
 	return pics[0];
 }
-
 
 function activateUi2({ onclickPic }={}) {
 	//firstTimeActivate: add handlers!

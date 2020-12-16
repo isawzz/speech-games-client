@@ -7,13 +7,13 @@ async function _loader() {
 		console.log('...broadcasting ...')
 		await broadcastSIMA();
 		_start();
-	}else{loadSIMA(_start);}
-	
+	} else { loadSIMA(_start); }
+
 }
 async function _start() {
 	//timit.show('DONE');
 	console.assert(isdef(DB));
-	
+
 	initTable();
 	initSidebar();
 	initAux();
@@ -38,8 +38,7 @@ function startUnit() {
 	//hier soll U.session laden 
 	UnitScoreSummary = {};
 
-	//startGame();
-	onClickTemple();
+	if (PROD_START) {PROD_START=false; onClickTemple();} else startGame();
 
 }
 

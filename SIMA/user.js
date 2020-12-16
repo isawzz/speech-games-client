@@ -1,6 +1,6 @@
 var UsernameBeforeTesting;
 function saveUser() {
-	console.log('saveUser:', USERNAME,G.key,G.level); //_getFunctionsNameThatCalledThisFunction()); 
+	//console.log('saveUser:', USERNAME,G.key,G.level); //_getFunctionsNameThatCalledThisFunction()); 
 	U.lastGame = G.key;
 	U.lastLevel = G.level;
 	if (USERNAME != 'test') localStorage.setItem('user',USERNAME);
@@ -29,7 +29,7 @@ function loadUser(newUser) {
 	GS = Settings.games;
 	delete Settings.games;
 
-	console.log('load user',USERNAME,U.lastGame,U.lastLevel);
+	//console.log('load user',USERNAME,U.lastGame,U.lastLevel);
 
 
 	//how do I det menuItems? available games must go there!!!! U.seq

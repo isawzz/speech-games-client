@@ -1,27 +1,23 @@
 class Game {
-	constructor() {
-	}
-	clear() { clearTimeout(this.TO); clearFleetingMessage(); }//console.log(getFunctionCallerName()); }
-	startGame() { }//console.log(getFunctionCallerName()); }
-	startLevel() { }//console.log(getFunctionCallerName()); }
-	startRound() { }//console.log(getFunctionCallerName()); }
+	constructor(name) { this.name = name; }
+	clear() { clearTimeout(this.TO); clearFleetingMessage(); }
+	startGame() { }
+	startLevel() { }
+	startRound() { }
 	prompt() {
-		//console.log(getFunctionCallerName());
 		showPictures(evaluate);
 		setGoal();
 		showInstruction(Goal.label, 'click', dTitle, true);
 		activateUi();
 	}
 	trialPrompt() {
-		//console.log(getFunctionCallerName());
 		Speech.say(Settings.language == 'D' ? 'nochmal!' : 'try again!');
 		if (Settings.showHint) shortHintPic();
 		return 10;
 	}
-	activate() { }//console.log(getFunctionCallerName()); }
-	interact() { }//console.log(getFunctionCallerName()); }
+	activate() { }
+	interact() { }
 	eval(ev) {
-		//console.log(getFunctionCallerName());
 		let id = evToClosestId(ev);
 		ev.cancelBubble = true;
 
@@ -34,30 +30,46 @@ class Game {
 
 		if (item.label == Goal.label) { return true; } else { return false; }
 	}
-	recycle() { }//console.log(getFunctionCallerName()); }
+	recycle() { }
 }
 
-function colorBright(c, percent) {
-	let hex = colorHex(c);
-	// strip the leading # if it's there
-	hex = hex.replace(/^\s*#|\s*$/g, '');
-
-	// convert 3 char codes --> 6, e.g. `E0F` --> `EE00FF`
-	if (hex.length == 3) {
-		hex = hex.replace(/(.)/g, '$1$1');
+class GSteps extends Game {
+	constructor(name) { super(name); }
+	startLevel() {
+		const clist = [{ name: 'orange', color: 'orangered' }, { name: 'green', color: 'green' }, { name: 'pink', color: 'hotpink' }, { name: 'blue', color: 'blue' }];
+		this.numColors = getGameOrLevelInfo('numColors', 2);
+		//G.numRepeat = 2; //this.numColors * G.numPics;
+		G.numLabels = this.numColors * G.numPics * G.numRepeat;
+		this.colorList = lookupSet(GS, [this.name, 'colors'], clist);
+		console.log(this.colorList)
+		this.contrast = lookupSet(GS, [this.name, 'contrast'], .35);
+		G.keys = G.keys.filter(x => containsColorWord(x));
 	}
+	prompt() {
+		this.colors = choose(this.colorList, this.numColors);
+		showPictures(evaluate, { colors: this.colors.map(x => x.color), repeat: G.numRepeat, contrast: this.contrast });
 
-	var r = parseInt(hex.substr(0, 2), 16),
-		g = parseInt(hex.substr(2, 2), 16),
-		b = parseInt(hex.substr(4, 2), 16);
+		setGoal(randomNumber(0, G.numPics * this.colors.length - 1));
+		Goal.correctionPhrase = Goal.textShadowColor + ' ' + Goal.label;
+		let oColor = firstCond(this.colorList, x => x.color == Goal.textShadowColor);
+		Goal.colorName = oColor.name;
 
-	return '#' +
-		((0 | (1 << 8) + r + (256 - r) * percent / 100).toString(16)).substr(1) +
-		((0 | (1 << 8) + g + (256 - g) * percent / 100).toString(16)).substr(1) +
-		((0 | (1 << 8) + b + (256 - b) * percent / 100).toString(16)).substr(1);
+		let spoken = `click the ${Goal.colorName} ${Goal.label}`;
+		showInstruction(Goal.label, `click the <span style='color:${Goal.textShadowColor}'>${Goal.colorName.toUpperCase()}</span>`,
+			dTitle, true, spoken);
+		activateUi();
+	}
+	eval(ev) {
+		let id = evToClosestId(ev);
+		ev.cancelBubble = true;
+
+		let i = firstNumber(id);
+		let item = Pictures[i];
+		Selected = { pic: item, feedbackUI: item.div };
+		Selected.reqAnswer = Goal.label;
+		Selected.answer = item.label;
+
+		if (item == Goal) { return true; } else { return false; }
+	}
 }
-function colorBright1(c, percent = 50) {
-	let hsl = colorHSL(c, true);
-	let hNew = { h: hsl.h, s: hsl.s, l: hsl.l + hsl.l * (percent / 100) }
-	return hNew;
-}
+

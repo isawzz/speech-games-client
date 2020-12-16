@@ -78,7 +78,6 @@ function initLineBottom() {
 }
 //#endregion
 
-
 //#region Markers
 const MarkerText = ['✔️', '❌'];
 const MarkerId = { SUCCESS: 0, FAIL: 1 };
@@ -104,5 +103,6 @@ function removeMarkers() {
 	}
 	Markers = [];
 }
+//#endregion
 
 

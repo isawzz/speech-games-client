@@ -1,4 +1,7 @@
 var pictureSize, TOMain;
+var uiActivated, auxOpen;
+var canAct = () => uiActivated && !auxOpen && document.activeElement.id != 'spUser';
+
 
 function startGame() {
 	//console.log('___________startGame_', G);

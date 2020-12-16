@@ -32,7 +32,6 @@ function closeAux() {
 	auxOpen = false;
 }
 
-
 //#region aux buttons: computer, gear, temple
 function onClickComputer() { }
 function onClickCalibrate() {

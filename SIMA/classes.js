@@ -1,20 +1,15 @@
 
 class GTouchPic extends Game {
-	constructor() {
-		super();
-	}
+	constructor(name) { super(name); }
 }
 class GTouchColors extends Game {
 	static SIMPLE_COLORS = ['red', 'green', 'yellow', 'blue'];
-	constructor() {
-		//console.log('creating instance of GTouchColors!!!!!!!!!!!!!')
-		super();
-	}
+	constructor(name) { super(name); }
 	startLevel() {
 		this.numColors = getGameOrLevelInfo('numColors', 2);
 		G.numLabels = this.numColors * G.numPics;
-		this.colorlist = lookupSet(Settings, ['games', 'gTouchColors', 'colors'], GTouchColors.SIMPLE_COLORS);
-		this.contrast = lookupSet(Settings, ['games', 'gTouchColors', 'contrast'], .35);
+		this.colorlist = lookupSet(GS, [this.name, 'colors'], GTouchColors.SIMPLE_COLORS);
+		this.contrast = lookupSet(GS, [this.name, 'contrast'], .35);
 		G.keys = G.keys.filter(x => containsColorWord(x));
 		//console.log('GTouchColors keys', G.keys);
 	}
@@ -44,9 +39,7 @@ class GTouchColors extends Game {
 	}
 }
 class GMem extends Game {
-	constructor() {
-		super();
-	}
+	constructor(name) { super(name); }
 	clear() { clearTimeout(this.TO); showMouse(); }
 	prompt() {
 		showPictures(this.interact.bind(this), { repeat: G.numRepeat, sameBackground: true, border: '3px solid #ffffff80' });
@@ -78,9 +71,7 @@ class GMem extends Game {
 	}
 }
 class GWritePic extends Game {
-	constructor() {
-		super();
-	}
+	constructor(name) { super(name); }
 	startGame() {
 		onkeydown = ev => {
 			if (!canAct()) return;
@@ -128,9 +119,7 @@ class GWritePic extends Game {
 
 }
 class GMissingLetter extends Game {
-	constructor() {
-		super();
-	}
+	constructor(name) { super(name); }
 	startLevel() {
 		G.numMissingLetters = getGameOrLevelInfo('numMissing', 1);
 		let pos = getGameOrLevelInfo('posMissing', 'random');
@@ -220,7 +209,7 @@ class GMissingLetter extends Game {
 				if (nundef(Selected.lastIndexEntered)) {
 					//the user entered a non existing letter!!!
 					showFleetingMessage('you entered ' + Selected.lastLetterEntered)
-					Speech.say(Settings.language == 'E'?'try a different letter!':'anderer Buchstabe!')
+					Speech.say(Settings.language == 'E' ? 'try a different letter!' : 'anderer Buchstabe!')
 				}
 				showFleetingMessage(this.composeFleetingMessage(), 3000);
 				//if get to this place that input did not match!
@@ -256,9 +245,7 @@ class GMissingLetter extends Game {
 
 }
 class GSayPic extends Game {
-	constructor() {
-		super();
-	}
+	constructor(name) { super(name); }
 	prompt() {
 
 		showPictures(() => mBy(defaultFocusElement).focus());
@@ -304,10 +291,7 @@ class GSayPic extends Game {
 	}
 }
 class GPremem extends Game {
-	constructor() {
-		super();
-		this.picList = [];
-	}
+	constructor() { super(); this.picList = []; }
 	clear() { clearTimeout(this.TO); showMouse(); }
 	prompt() {
 		this.picList = [];
@@ -357,34 +341,24 @@ class GPremem extends Game {
 	}
 }
 class GMissingNumber extends Game {
-	constructor() {
-		super();
-	}
+	constructor(name) { super(name); }
 	startGame() {
 		G.successFunc = successThumbsUp;
 		G.failFunc = failThumbsDown;
 		G.correctionFunc = this.showCorrectSequence.bind(this);
 	}
-	showCorrectSequence() {
-		numberSequenceCorrectionAnimation(getWrongWords(), DELAY * 2)
-		// if (Selected.isVeryLast) {
-		// 	numberSequenceCorrectionAnimation(getWrongWords(),DELAY*2)
-		// } else {
-		// 	console.assert(Selected.isLastOfGroup==true);
-		// 	numberSequenceCorrectionAnimation([Selected.target.group],DELAY*2);
-		// 	setTimeout(()=>unfillCharInput(target),DELAY*2);
-		// }
-
-	}
+	showCorrectSequence() { numberSequenceCorrectionAnimation(getWrongWords(), DELAY * 2) }
 	startLevel() {
-		this.numMissing = G.numMissingLetters = getGameOrLevelInfo('numMissing', 1);
-		this.max = G.maxNumber = getGameOrLevelInfo('max', 20);
-		this.pos = G.posMissing = getGameOrLevelInfo('posMissing', 'consec');
-		this.steps = G.steps = getGameOrLevelInfo('steps', 1);
-		if (!isList(G.steps)) G.steps = this.steps = [G.steps];
-		this.ops = G.ops = getGameOrLevelInfo('ops', ['add']);
-		this.seqlen = G.lengthOfSequence = getGameOrLevelInfo('length', 5);
-		G.numPics = 2; G.numLabels = 0;
+		G.numMissingLetters = getGameOrLevelInfo('numMissing', 1);
+		G.minNumber = getGameOrLevelInfo('min', 0);
+		G.maxNumber = getGameOrLevelInfo('max', 20);
+		G.posMissing = getGameOrLevelInfo('posMissing', 'consec');
+		G.steps = getGameOrLevelInfo('steps', 1);
+		if (!isList(G.steps)) G.steps = [G.steps];
+		G.ops = getGameOrLevelInfo('ops', ['add']);
+		G.lengthOfSequence = getGameOrLevelInfo('length', 5);
+		G.numPics = 2;
+		G.numLabels = 0;
 	}
 	prompt() {
 		showInstruction('', Settings.language == 'E' ? 'complete the sequence' : "ergänze die reihe", dTitle, true);
@@ -393,17 +367,17 @@ class GMissingNumber extends Game {
 		showHiddenThumbsUpDown({ sz: 140 });
 		mLinebreak(dTable);
 
-		this.step = G.step = chooseRandom(this.steps);
-		this.op = G.op = chooseRandom(this.ops);
-		this.seq = setGoalWordInputs(this.seqlen, 0, this.max, this.step, this.op);
+		G.step = chooseRandom(G.steps);
+		G.op = chooseRandom(G.ops);
+		G.seq = setGoalWordInputs(G.lengthOfSequence, G.minNumber, G.maxNumber, G.step, G.op);
 
 		mLinebreak(dTable);
-		if (Settings.isTutoring) { showFleetingMessage(getNumSeqHint(), 300);}
+		if (Settings.isTutoring) { showFleetingMessage(getNumSeqHint(), 300); }
 		activateUi();
 	}
 	trialPrompt() {
 		Speech.say(Settings.language == 'D' ? 'nochmal!' : 'try again!');
-		setTimeout(() => getWrongChars().map(x=>unfillChar(x)), 500);
+		setTimeout(() => getWrongChars().map(x => unfillChar(x)), 500);
 		if (Settings.showHint) showFleetingMessage(getNumSeqHint(), 2200);
 		return 10;
 	}
@@ -417,12 +391,12 @@ class GMissingNumber extends Game {
 		if (nundef(sel)) return;
 		//console.log('===>', sel);
 
-
 		//target,isMatch,isLastOfGroup,isVeryLast,ch
 		let lastInputCharFilled = sel.target;
 		console.assert(sel.isMatch == (lastInputCharFilled.letter == sel.ch), lastInputCharFilled, sel.ch);
 
 		//all cases aufschreiben und ueberlegen was passieren soll!
+		//TODO: multiple groups does NOT work!!!
 		if (sel.isMatch && sel.isVeryLast) {
 			deactivateFocusGroup();
 			evaluate(true);
@@ -434,7 +408,7 @@ class GMissingNumber extends Game {
 			removeInPlace(Goal.blankWords, sel.target.group);
 			removeInPlace(Goal.blankChars, sel.target);
 			deactivateFocusGroup();
-			console.log('haaaaaaaaaaaalo',Goal.isFocus)
+			console.log('haaaaaaaaaaaalo', Goal.isFocus)
 			//console.log('=>', Goal)
 		} else if (sel.isMatch) {
 			//a partial match
@@ -460,33 +434,22 @@ class GMissingNumber extends Game {
 			//user entered last missing letter but it is wrong!
 			//can there be multiple errors in string?
 		} else {
-			playSound('incorrect1'); 
+			playSound('incorrect1');
 			deactivateFocusGroup();
 			//unfillCharInput(Selected.target);
-			showFleetingMessage('does NOT fit: '+Selected.ch,0,{fz:24});
+			showFleetingMessage('does NOT fit: ' + Selected.ch, 0, { fz: 24 });
 			setTimeout(() => unfillCharInput(Selected.target), 500);
 		}
 		//
 	}
 
-	eval(isCorrect) {
-		return isCorrect;
-	}
-	composeFleetingMessage() {
-		//console.log('this', this)
-		let lst = Goal.blankWords.map(x => x.word);
-		//console.log(this.inputs)
-		let msg = lst.join(',');
-		let edecl = lst.length > 1 ? 's are ' : ' is ';
-		let ddecl = lst.length > 1 ? 'en ' : 't ';
-		let s = (Settings.language == 'E' ? 'the missing number' + edecl : 'es fehl' + ddecl);
-		return s + msg;
-	}
+	eval(isCorrect) { return isCorrect; }
 
 }
 
 
-function getInstance(G) { return new (GAME[G.key].cl)(); }
+
+function getInstance(G) { return new (GAME[G.key].cl)(G.key); }
 
 
 
@@ -501,7 +464,7 @@ const GAME = {
 	gMissingNumber: { friendly: 'Sequence!', logo: 'fleur-de-lis', color: 'deeppink', cl: GMissingNumber, },
 	gWritePic: { friendly: 'Type it!', logo: 'keyboard', color: 'orange', cl: GWritePic, }, //LIGHTGREEN, //'#bfef45',
 	gSayPic: { friendly: 'Speak up!', logo: 'microphone', color: BLUE, cl: GSayPic, }, //'#4363d8',
-	//gSteps: { friendly: 'Steps!', logo: 'stairs', color: PURPLE, cl: GTouchPic, }, //'#911eb4',
+	gSteps: { friendly: 'Steps!', logo: 'stairs', color: PURPLE, cl: GSteps, }, //'#911eb4',
 };
 
 

@@ -61,7 +61,6 @@ function createMenuUi(dParent) {
 }
 
 
-
 //#region create elements for settings 
 function mInputGroup(dParent, styles) {
 	let baseStyles = { display: 'inline-block', align: 'right', bg: '#00000080', rounding: 10, padding: 20, margin: 12 };

@@ -63,8 +63,13 @@ function maShowPictures(keys, labels, dParent, onClickPictureHandler,
 	//console.log(items);
 	numPics = items.length;
 
+	console.log('numPics',numPics,'items',jsCopy(items))
+
 	//dann erst shuffle!
-	if (shufflePositions) shuffle(items);
+	if (shufflePositions) {console.log('shuffling!!!'); shuffle(items);}
+
+	console.log('after shuffling items',jsCopy(items))
+
 
 	let lines = isdef(colors) ? colors.length : 1;
 	let [pictureSize, picsPerLine] = calcDimsAndSize(numPics, lines, container);
@@ -73,6 +78,8 @@ function maShowPictures(keys, labels, dParent, onClickPictureHandler,
 
 	if (isdef(picSize)) pictureSize = picSize;
 
+	console.log('lines',lines,'picsPerLine',picsPerLine, 'items', items, 'numPics', numPics)
+
 	for (let line = 0; line < lines; line++) {
 		let textShadowColor = isdef(colors) ? colors[line] : undefined;
 		for (let i = 0; i < numPics; i++) {
@@ -80,8 +87,8 @@ function maShowPictures(keys, labels, dParent, onClickPictureHandler,
 			let info = item.info; //infos[i];
 			let label = item.label; //labels[i];
 			let bg = item.bg; //bgs[i];
-			let ipic = (line * keys.length + i);
-			if (ipic % picsPerLine == 0 && ipic > 0) mLinebreak(dParent);
+			let ipic = (line * picsPerLine + i);
+			if (ipic % picsPerLine == 0 && ipic > 0) {console.log('linebreak!',ipic,line,keys.length); mLinebreak(dParent);}
 			let id = 'pic' + ipic; // (line * keys.length + i);
 			let d1 = maPicLabelButtonFitText(info, label,
 				{ w: pictureSize, h: pictureSize, bgPic: bg, textShadowColor: textShadowColor, contrast: contrast },
@@ -89,7 +96,7 @@ function maShowPictures(keys, labels, dParent, onClickPictureHandler,
 			d1.id = id;
 			pics.push({
 				textShadowColor: textShadowColor, key: info.key, info: info, bg: bg, div: d1, id: id,
-				index: i, label: label, isLabelVisible: true, isSelected: false
+				index: ipic, label: label, isLabelVisible: true, isSelected: false
 			});
 		}
 	}

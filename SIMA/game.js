@@ -1,23 +1,4 @@
 var TOList;
-function getNumSeqHint() { let l = G.op == 'add' ? 'to' : 'from'; let msg = `${G.op} ${G.step} ${l} the previous number`; return msg; }
-function numberSequenceCorrectionAnimation(wrong, ms) {
-	//da brauch ich eine chain!!!!!!
-	DELAY = ms;
-	if (nundef(TOList)) TOList = {};
-	let msg = getNumSeqHint();
-	showFleetingMessage(msg, 0, { fz: 32 }); //return;
-	//Speech.say(msg)
-	Selected.feedbackUI = wrong.map(x => x.div);
-	failPictureGoal();
-
-	let t1 = setTimeout(removeMarkers, 1000);
-	let t2 = setTimeout(() => wrong.map(x => { correctWordInput(x); animate(x.div, 'komisch', 1300); }), 1000);
-	//let t3 = setTimeout(() => wrong.map(x =>animate(x.div,'komisch', 1300)), DELAY / 2);
-	//playSound('incorrect3');
-	t4 = setTimeout(() => {if (Settings.spokenFeedback) Speech.say(msg, .7, 1, .7, 'random');}, 500);
-	TOList.numseq = [t1, t2, t4];//, t3, t4];//, t4];
-
-}
 
 function addNthInputElement(dParent, n) {
 	mLinebreak(dParent, 10);
@@ -30,6 +11,8 @@ function addNthInputElement(dParent, n) {
 	mAppend(d, dInp);
 	return dInp;
 }
+
+//#region animations
 function animateColor(elem, from, to, classes, ms) {
 	elem.style.backgroundColor = from;
 	setTimeout(() => animate(elem, classes, ms), 10);
@@ -56,6 +39,9 @@ function aniFadeInOut(elem, secs) {
 	setTimeout(() => { mRemoveClass(elem, 'transopaOn'); mClass(elem, 'transopaOff'); }, secs * 1000);
 }
 function aniPulse(elem, ms) { animate(elem, 'onPulse', ms); }
+//#endregion
+
+//#region createLetterInputs
 function buildWordFromLetters(dParent) {
 	let letters = Array.from(dParent.children);
 	let s = letters.map(x => x.innerHTML);
@@ -93,7 +79,9 @@ function createLetterInputs(s, dParent, style, idForContainerDiv, colorWhiteSpac
 	}
 	return d;
 }
+//#endregion createLetterInputs
 
+//#region createWordInputs
 function createWordInputs(words, dParent, idForContainerDiv, sep = null, styleContainer = {}, styleWord = {}, styleLetter = {}, styleSep = {}, colorWhiteSpaceChars = true, preserveColorsBetweenWhiteSpace = true) {
 
 	if (isEmpty(styleWord)) {
@@ -310,6 +298,42 @@ function getIndicesOfCorrectlyAnsweredWords() { return getCorrectlyAnsweredWords
 function getCorrectWords() { return Goal.seq; }
 function getCorrectWordString(sep = ' ') { return getCorrectWords().join(sep); }
 function getInputWordString(sep = ' ') { return getInputWords().join(sep); }
+
+//#endregion createWordInputs
+
+//#region number sequence (is a wordInput!)
+function getNumSeqHint() { let l = G.op == 'add' ? 'to' : 'from'; let msg = `${G.op} ${G.step} ${l} the previous number`; return msg; }
+function numberSequenceCorrectionAnimation(wrong, ms) {
+	//da brauch ich eine chain!!!!!!
+	DELAY = ms;
+	if (nundef(TOList)) TOList = {};
+	let msg = getNumSeqHint();
+	showFleetingMessage(msg, 0, { fz: 32 }); //return;
+	//Speech.say(msg)
+	Selected.feedbackUI = wrong.map(x => x.div);
+	failPictureGoal();
+
+	let t1 = setTimeout(removeMarkers, 1000);
+	let t2 = setTimeout(() => wrong.map(x => { correctWordInput(x); animate(x.div, 'komisch', 1300); }), 1000);
+	//let t3 = setTimeout(() => wrong.map(x =>animate(x.div,'komisch', 1300)), DELAY / 2);
+	//playSound('incorrect3');
+	t4 = setTimeout(() => {if (Settings.spokenFeedback) Speech.say(msg, .7, 1, .7, 'random');}, 500);
+	TOList.numseq = [t1, t2, t4];//, t3, t4];//, t4];
+
+}
+function missingNumbersMessage() {
+	//console.log('this', this)
+	let lst = Goal.blankWords.map(x => x.word);
+	//console.log(this.inputs)
+	let msg = lst.join(',');
+	let edecl = lst.length > 1 ? 's are ' : ' is ';
+	let ddecl = lst.length > 1 ? 'en ' : 't ';
+	let s = (Settings.language == 'E' ? 'the missing number' + edecl : 'es fehl' + ddecl);
+	return s + msg;
+}
+
+//#endregion number sequence (is a wordInput!)
+
 //#region cards turn face up or down
 function hideMouse() {
 	//document.body.style.cursor = 'none';
