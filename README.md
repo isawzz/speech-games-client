@@ -13,7 +13,7 @@ This project provides simple games for speech therapy:
 There is also a calibration test CALIBRATE for the user to set all the games to the right level 
 
 run it online:
-goto: 
+goto: https://isawzz.github.io/speech-games-client/SIMA/
 
 
 # implementation
