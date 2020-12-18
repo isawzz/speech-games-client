@@ -24,11 +24,15 @@ function playSound(key) {
 // *** uses assets! =>load after assets! ***
 const EMOFONTLIST = ['emoOpen', 'openmoBlack', 'segoe ui emoji', 'segoe ui symbol'];
 
-//#region NOW!
+//#region NOW
+
+//#region november 2020
 function maShowPictures(keys, labels, dParent, onClickPictureHandler,
-	{ showRepeat, container, lang, border, picSize, bgs, colors, contrast, repeat = 1, sameBackground, shufflePositions = true } = {}) {
+	{ showRepeat, container, lang, border, picSize, bgs, colors, contrast, repeat = 1,
+		sameBackground, shufflePositions = true } = {}, {sCont,sPic,sText}={}) {
 	let pics = [];
 
+	//#region prelim
 	//console.log('maShowPictures_', 'keys', keys, '\n', 'labels', labels, '\n', 'bgs', bgs)
 	//console.log('sameBackground',sameBackground)
 
@@ -79,6 +83,9 @@ function maShowPictures(keys, labels, dParent, onClickPictureHandler,
 	let lines = isdef(colors) ? colors.length : 1;
 	let [pictureSize, picsPerLine] = calcDimsAndSize(numPics, lines, container);
 	let stylesForLabelButton = { rounding: 10, margin: pictureSize / 8 };
+
+	//if (isdef(myStyles)) stylesForLabelButton = deepmergeOverride(stylesForLabelButton, myStyles);
+
 	if (isdef(border)) stylesForLabelButton.border = border;
 
 	if (isdef(picSize)) pictureSize = picSize;
@@ -103,28 +110,136 @@ function maShowPictures(keys, labels, dParent, onClickPictureHandler,
 			// if (ipic % picsPerLine == 0 && ipic > 0) {console.log('linebreak!',ipic,line,keys.length); mLinebreak(dParent);}
 			if (ipic % picsPerLine == 0 && ipic > 0) { mLinebreak(dParent); }
 			let id = 'pic' + ipic; // (line * keys.length + i);
+			//#endregion prelim
+
 			let d1 = maPicLabelButtonFitText(info, label,
-				{ w: pictureSize, h: pictureSize, bgPic: bg, textShadowColor: textShadowColor, contrast: contrast, },
+				{ w: pictureSize, h: pictureSize, bgPic: bg, textShadowColor: textShadowColor, contrast: contrast, sPic:sPic },
 				onClickPictureHandler, dParent, stylesForLabelButton, 'frameOnHover', isText, isOmoji);
 			d1.id = id;
-
 			//addRowColInfo(d1,line,i,pictureSize);
-			if (showRepeat) addRepeatInfo(d1,iRepeat,pictureSize);
-
-			// let dRowCol = mCreate('div');
-			// mText(''+line+","+i,dRowCol,{fz:10,color:'black',position:'relative'});
-			// mpOver(dRowCol,d1,12,'black');
+			if (showRepeat) addRepeatInfo(d1, iRepeat, pictureSize);
 			pics.push({
 				textShadowColor: textShadowColor, key: info.key, info: info, bg: bg, div: d1, id: id,
 				index: ipic, row: line, col: i, iRepeat: iRepeat, label: label, isLabelVisible: true, isSelected: false
 			});
 		}
 	}
-
 	return pics;
-
-
 }
+function maPicLabelButtonFitText(info, label, { w, h, bgPic, textShadowColor, contrast, sPic={} }, handler, dParent, styles, classes = 'picButton', isText, isOmoji, focusElement) {
+	console.log('sPic',sPic)
+	let picLabelStyles = getHarmoniousStylesPlusPlus(styles, sPic, {}, w, h, 65, 0, 'arial', bgPic, 'transparent', null, null, true);
+
+	let x = maPicLabelFitX(info, label.toUpperCase(), { wmax: w, textShadowColor: textShadowColor, contrast: contrast }, dParent, picLabelStyles[0], picLabelStyles[1], picLabelStyles[2], isText, isOmoji);
+	x.id = 'd' + info.key;
+	if (isdef(handler)) x.onclick = handler;
+	x.style.cursor = 'pointer';
+	x.lastChild.style.cursor = 'pointer';
+	x.style.userSelect = 'none';
+	mClass(x, classes);
+	return x;
+}
+function getHarmoniousStylesPlusPlus(sContainer, sPic, sText, w, h, picPercent, padding, family, bg = 'blue', bgPic = 'random', fgPic = 'white', fgText = 'white', hasText = true) {
+	//15,55,0,20,10=80
+
+	//console.log(fgPic,fgText)
+
+	let fact = 55 / picPercent;
+	let [ptop, pbot] = [(80 - picPercent) * 3 / 5, (80 - picPercent) * 2 / 5];
+	//let numbers = hasText ? [ptop, picPercent, 0, 20, pbot] : [15, 70, 0, 0, 15];
+	let numbers = hasText ? [fact * 15, picPercent, 0, fact * 20, fact * 10] : [15, 70, 0, 0, 15];
+	numbers = numbers.map(x => h * x / 100);
+	[patop, szPic, zwischen, szText, pabot] = numbers;
+	patop = Math.max(patop, padding);
+	pabot = Math.max(pabot, padding);
+
+	// console.log(patop, szPic, zwischen, szText, pabot);
+	let styles = { h: h, bg: bg, fg: isdef(fgText) ? fgText : 'contrast', patop: patop, pabottom: pabot, align: 'center', 'box-sizing': 'border-box' };
+	let textStyles = { family: family, fz: Math.floor(szText * 3 / 4) };
+	let picStyles = { h: szPic, bg: bgPic, fg: isdef(fgPic) ? fgPic : 'contrast' };
+	if (w > 0) styles.w = w; else styles.paleft = styles.paright = Math.max(padding, 4);
+	for (const k in sContainer) { if (k != 'w' && nundef(styles[k])) styles[k] = sContainer[k]; }
+	for (const k in sPic) { if (k != 'w' && nundef(picStyles[k])) picStyles[k] = sPic[k]; }
+	for (const k in sText) { if (k != 'w' && nundef(textStyles[k])) textStyles[k] = sText[k]; }
+	return [styles, picStyles, textStyles];
+}
+function maPicLabelFitX(info, label, { wmax, hmax, textShadowColor, contrast = .35 }, dParent, containerStyles, picStyles, textStyles, isText = true, isOmoji = false) {
+	let d = mDiv(dParent);
+	//console.log('picStyles',picStyles);
+
+	if (isdef(textShadowColor)) {
+
+		//console.log('contrast',contrast,'textShadowColor',textShadowColor)
+		//console.log('===>textShadowColor',textShadowColor,'contrast',contrast);
+		//console.log(picStyles);
+		let sShade = '0 0 0 ' + textShadowColor; //green';
+		picStyles['text-shadow'] = sShade;// +', '+sShade+', '+sShade;
+		picStyles.fg = anyColorToStandardString('black', contrast); //'#00000080' '#00000030' 
+	}
+
+	let dPic = maPic(info, d, picStyles, isText, isOmoji);
+	// mText(info.annotation, d, textStyles, ['truncate']);
+	let maxchars = 15; let maxlines = 1;
+	//console.log(containerStyles, picStyles, textStyles);
+
+	//if (isdef(hmax))
+	//console.log('maPicLabelFitX_', 'wmax', wmax, 'hmax', hmax)
+	let wAvail, hAvail;
+	hAvail = containerStyles.h - (containerStyles.patop + picStyles.h);// + containerStyles.pabottom);
+	wAvail = containerStyles.w;
+	//console.log('=>', 'wAvail', wAvail, 'hAvail', hAvail);
+	if (isdef(hmax)) {
+		hAvail = containerStyles.h - (containerStyles.patop + picStyles.h);// + containerStyles.pabottom);
+		if (hmax != 'auto') {
+			hAvail = Math.min(hAvail, hmax);
+		}
+	}
+	if (isdef(wmax)) {
+		wAvail = containerStyles.w;
+		if (wmax != 'auto') {
+			wAvail = Math.min(wAvail, wmax);
+		}
+	}
+	let fz = textStyles.fz;
+	//measure text height and width with this font!
+	//console.log('_ avail:', wAvail, hAvail)
+	let styles1 = textStyles;
+	let size = getSizeWithStylesX(label, styles1, isdef(wmax) ? wAvail : undefined, isdef(hmax) ? hAvail : undefined);
+	//console.log('__', 'size', size);
+	let size1 = getSizeWithStylesX(label, styles1);//, isdef(wmax) ? wAvail : undefined, isdef(hmax) ? hAvail : undefined);
+	//console.log('__', 'size1', size1);
+
+	let f1 = wAvail / size1.w;
+	let isTextOverflow = f1 < 1;
+	if (f1 < 1) {
+		textStyles.fz *= f1;
+		textStyles.fz = Math.floor(textStyles.fz);
+		//console.log('text overflow! textStyles', textStyles);
+	}
+
+	let [wBound, hBound] = [isdef(wmax) ? size.w : undefined, isdef(hmax) ? size.h : undefined];
+
+	let isOverflow = isdef(wBound) && size.w > wAvail || isdef(hBound) && size.h > hAvail;
+	//console.log('___ isOverflow',isOverflow);
+
+
+	let dText = mTextFit(label, { wmax: wBound, hmax: hBound }, d, textStyles, isTextOverflow ? ['truncate'] : null);
+	// d.style.textAlign = 'center';
+	// dText.style.textAlign = 'center';
+	// containerStyles.align = 'center';
+
+	mStyleX(d, containerStyles);
+
+	dText.style.margin = 'auto';
+	// console.log('____', d.id, d.style.textAlign, d, containerStyles)
+
+	////console.log(dParent,'\nd',d,'\ndPic',dPic,'\ndText',dText);
+
+	return d;
+}
+
+//#endregion 
+
 function addRowColInfo(dPic, row, col, szPic) {
 	let szi = Math.max(Math.floor(szPic / 12), 8);
 	console.log(szi);
@@ -136,7 +251,7 @@ function addRepeatInfo(dPic, iRepeat, szPic) {
 	let szi = Math.max(Math.floor(szPic / 8), 8);
 	console.log(szi);
 	dPic.style.position = 'relative';
-	let d2 = mText(''+iRepeat, dPic, { fz: szi, weight:'bold', color: 'black', position: 'absolute', left: szi/2, top: szi / 2 - 2 })
+	let d2 = mText('' + iRepeat, dPic, { fz: szi, weight: 'bold', color: 'black', position: 'absolute', left: szi / 2, top: szi / 2 - 2 })
 	// let d3 = mText('col:' + col, dPic, { fz: szi, color: 'black', position: 'absolute', left: szi, top: (szi / 2 + szi + 2) })
 }
 function calcDimsAndSize(numPics, lines, container) {
@@ -289,117 +404,6 @@ function maPicLabelShowHideHandler(ev) {
 	if (isLabelVisible(id)) maHideLabel(id, info); else maShowLabel(id, info);
 	if (isdef(mBy('dummy'))) mBy('dummy').focus();
 
-}
-function maPicLabelButtonFitText(info, label, { w, h, bgPic, textShadowColor, contrast }, handler, dParent, styles, classes = 'picButton', isText, isOmoji, focusElement) {
-	let picLabelStyles = getHarmoniousStylesPlusPlus(styles, {}, {}, w, h, 65, 0, 'arial', bgPic, 'transparent', null, null, true);
-
-	let x = maPicLabelFitX(info, label.toUpperCase(), { wmax: w, textShadowColor: textShadowColor, contrast: contrast }, dParent, picLabelStyles[0], picLabelStyles[1], picLabelStyles[2], isText, isOmoji);
-
-	x.id = 'd' + info.key;
-	if (isdef(handler)) x.onclick = handler;
-	x.style.cursor = 'pointer';
-	x.lastChild.style.cursor = 'pointer';
-	x.style.userSelect = 'none';
-	mClass(x, classes);
-	return x;
-}
-function maPicLabelFitX(info, label, { wmax, hmax, textShadowColor, contrast = .35 }, dParent, containerStyles, picStyles, textStyles, isText = true, isOmoji = false) {
-	let d = mDiv(dParent);
-	//console.log('picStyles',picStyles);
-
-	if (isdef(textShadowColor)) {
-
-		//console.log('contrast',contrast,'textShadowColor',textShadowColor)
-		//console.log('===>textShadowColor',textShadowColor,'contrast',contrast);
-		//console.log(picStyles);
-		let sShade = '0 0 0 ' + textShadowColor; //green';
-		picStyles['text-shadow'] = sShade;// +', '+sShade+', '+sShade;
-		picStyles.fg = anyColorToStandardString('black', contrast); //'#00000080' '#00000030' 
-	}
-
-	let dPic = maPic(info, d, picStyles, isText, isOmoji);
-	// mText(info.annotation, d, textStyles, ['truncate']);
-	let maxchars = 15; let maxlines = 1;
-	//console.log(containerStyles, picStyles, textStyles);
-
-	//if (isdef(hmax))
-	//console.log('maPicLabelFitX_', 'wmax', wmax, 'hmax', hmax)
-	let wAvail, hAvail;
-	hAvail = containerStyles.h - (containerStyles.patop + picStyles.h);// + containerStyles.pabottom);
-	wAvail = containerStyles.w;
-	//console.log('=>', 'wAvail', wAvail, 'hAvail', hAvail);
-	if (isdef(hmax)) {
-		hAvail = containerStyles.h - (containerStyles.patop + picStyles.h);// + containerStyles.pabottom);
-		if (hmax != 'auto') {
-			hAvail = Math.min(hAvail, hmax);
-		}
-	}
-	if (isdef(wmax)) {
-		wAvail = containerStyles.w;
-		if (wmax != 'auto') {
-			wAvail = Math.min(wAvail, wmax);
-		}
-	}
-	let fz = textStyles.fz;
-	//measure text height and width with this font!
-	//console.log('_ avail:', wAvail, hAvail)
-	let styles1 = textStyles;
-	let size = getSizeWithStylesX(label, styles1, isdef(wmax) ? wAvail : undefined, isdef(hmax) ? hAvail : undefined);
-	//console.log('__', 'size', size);
-	let size1 = getSizeWithStylesX(label, styles1);//, isdef(wmax) ? wAvail : undefined, isdef(hmax) ? hAvail : undefined);
-	//console.log('__', 'size1', size1);
-
-	let f1 = wAvail / size1.w;
-	let isTextOverflow = f1 < 1;
-	if (f1 < 1) {
-		textStyles.fz *= f1;
-		textStyles.fz = Math.floor(textStyles.fz);
-		//console.log('text overflow! textStyles', textStyles);
-	}
-
-	let [wBound, hBound] = [isdef(wmax) ? size.w : undefined, isdef(hmax) ? size.h : undefined];
-
-	let isOverflow = isdef(wBound) && size.w > wAvail || isdef(hBound) && size.h > hAvail;
-	//console.log('___ isOverflow',isOverflow);
-
-
-	let dText = mTextFit(label, { wmax: wBound, hmax: hBound }, d, textStyles, isTextOverflow ? ['truncate'] : null);
-	// d.style.textAlign = 'center';
-	// dText.style.textAlign = 'center';
-	// containerStyles.align = 'center';
-
-	mStyleX(d, containerStyles);
-
-	dText.style.margin = 'auto';
-	// console.log('____', d.id, d.style.textAlign, d, containerStyles)
-
-	////console.log(dParent,'\nd',d,'\ndPic',dPic,'\ndText',dText);
-
-	return d;
-}
-function getHarmoniousStylesPlusPlus(sContainer, sPic, sText, w, h, picPercent, padding, family, bg = 'blue', bgPic = 'random', fgPic = 'white', fgText = 'white', hasText = true) {
-	//15,55,0,20,10=80
-
-	//console.log(fgPic,fgText)
-
-	let fact = 55 / picPercent;
-	let [ptop, pbot] = [(80 - picPercent) * 3 / 5, (80 - picPercent) * 2 / 5];
-	//let numbers = hasText ? [ptop, picPercent, 0, 20, pbot] : [15, 70, 0, 0, 15];
-	let numbers = hasText ? [fact * 15, picPercent, 0, fact * 20, fact * 10] : [15, 70, 0, 0, 15];
-	numbers = numbers.map(x => h * x / 100);
-	[patop, szPic, zwischen, szText, pabot] = numbers;
-	patop = Math.max(patop, padding);
-	pabot = Math.max(pabot, padding);
-
-	// console.log(patop, szPic, zwischen, szText, pabot);
-	let styles = { h: h, bg: bg, fg: isdef(fgText) ? fgText : 'contrast', patop: patop, pabottom: pabot, align: 'center', 'box-sizing': 'border-box' };
-	let textStyles = { family: family, fz: Math.floor(szText * 3 / 4) };
-	let picStyles = { h: szPic, bg: bgPic, fg: isdef(fgPic) ? fgPic : 'contrast' };
-	if (w > 0) styles.w = w; else styles.paleft = styles.paright = Math.max(padding, 4);
-	for (const k in sContainer) { if (k != 'w' && nundef(styles[k])) styles[k] = sContainer[k]; }
-	for (const k in sPic) { if (k != 'w' && nundef(picStyles[k])) picStyles[k] = sPic[k]; }
-	for (const k in sText) { if (k != 'w' && nundef(textStyles[k])) textStyles[k] = sText[k]; }
-	return [styles, picStyles, textStyles];
 }
 function getSizeWithStylesX(text, styles, wmax, hmax) {
 	var d = document.createElement("div");

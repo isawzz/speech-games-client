@@ -37,6 +37,7 @@ function onClickComputer() { }
 function onClickCalibrate() {
 	//console.log('hallo')
 	if (auxOpen) closeAux();
+	console.log('cali change user')
 	changeUserTo('test');
 }
 function onClickGear() {
@@ -49,7 +50,7 @@ function onClickTemple() {
 	//console.log('opening menu: ui will be interrupted!!!')
 	openAux();
 	hide('dTemple');
-	show('dCalibrate');
+	//show('dCalibrate');
 	createMenuUi(dAux);
 }
 

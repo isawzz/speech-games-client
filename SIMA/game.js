@@ -523,7 +523,7 @@ function showCorrectWord(sayit = true) {
 
 	let correctionPhrase = isdef(Goal.correctionPhrase) ? Goal.correctionPhrase : Goal.label;
 	Speech.say(correctionPhrase, .4, 1.2, 1, 'david');
-	return Settings.spokenFeedback? 3000:300;
+	return Settings.spokenFeedback ? 3000 : 300;
 }
 function showCorrectWords(sayit = true) {
 	if (nundef(TOList)) TOList = {};
@@ -531,12 +531,12 @@ function showCorrectWords(sayit = true) {
 	let anim = 'onPulse2';
 	let to = 0;
 	let speaking = sayit && Settings.spokenFeedback;
-	let ms =speaking?2000:1000; 
+	let ms = speaking ? 2000 : 1000;
 	for (const goal of Goal.pics) {
 		TOList.correctWords.push(setTimeout(() => {
 			let div = mBy(goal.id);
 			mClass(div, anim);
-			if (speaking) Speech.say('the ' +goal.correctionPhrase, .4, 1.2, 1, 'david');
+			if (speaking) Speech.say('the ' + goal.correctionPhrase, .4, 1.2, 1, 'david');
 		}, to));
 		to += ms;
 	}
@@ -546,7 +546,7 @@ function showCorrectWords(sayit = true) {
 	// let correctionPhrase = isdef(Goal.correctionPhrase) ? Goal.correctionPhrase : Goal.map(x => x.label).join(', ');
 	// Speech.say(correctionPhrase, .4, 1.2, 1, 'david');
 
-	return to+ms;
+	return to + ms;
 }
 function shortHintPicRemove() {
 	mRemoveClass(mBy(Goal.id), 'onPulse1');
@@ -669,7 +669,7 @@ function setBadgeLevel(ev) {
 	//i is now correct level
 	//let userStartLevel = getUserStartLevel(G.key);
 	//if (userStartLevel > i) updateStartLevelForUser(G.key, i);
-	updateStartLevelForUser(G.key, i);	
+	updateStartLevelForUser(G.key, i);
 	G.level = i;
 
 	//setBadgeOpacity
@@ -691,7 +691,7 @@ function setGoal(index) {
 	Goal = Pictures[index];
 }
 function setMultiGoal(n, indices) {
-	Goal = {pics:[]};
+	Goal = { pics: [] };
 	if (nundef(indices)) {
 		Goal.pics = choose(Pictures, n);
 	} else {
@@ -724,7 +724,8 @@ function showInstruction(text, cmd, title, isSpoken, spoken, fz) {
 	Speech.say(isdef(spoken) ? spoken : (cmd + " " + text), .7, 1, .7, 'random');
 
 }
-function showPictures(onClickPictureHandler, { showRepeat = false, sz, bgs, colors, contrast, repeat = 1, sameBackground = true, border } = {}, keys, labels) {
+function showPictures(onClickPictureHandler, { showRepeat = false, sz, bgs, colors, contrast, repeat = 1,
+	sameBackground = true, border } = {}, keys, labels) {
 	Pictures = [];
 
 	if (nundef(keys)) keys = choose(G.keys, G.numPics);
@@ -733,21 +734,22 @@ function showPictures(onClickPictureHandler, { showRepeat = false, sz, bgs, colo
 
 	Pictures = maShowPictures(keys, labels, dTable, onClickPictureHandler,
 		{
-			showRepeat: showRepeat, picSize: sz, bgs: bgs, repeat: repeat, sameBackground: sameBackground, border: border, lang: Settings.language, colors: colors,
+			showRepeat: showRepeat, picSize: sz, bgs: bgs, repeat: repeat, sameBackground: sameBackground, border: border,
+			lang: Settings.language, colors: colors,
 			contrast: contrast
 		});
 
 
 	//TESTING FOR NO DUPLICATES - remove in production!
-	if (G.key == 'gTouchPic') {
-		let numDuplicates = 0;
-		let checklist = [];
-		let labels = Pictures.map(x => x.label);
-		for (const l of labels) {
-			if (checklist.includes(l)) numDuplicates += 1; else checklist.push(l);
-		}
-		console.assert(numDuplicates == 0)
-	}
+	// if (G.key == 'gTouchPic') {
+	// 	let numDuplicates = 0;
+	// 	let checklist = [];
+	// 	let labels = Pictures.map(x => x.label);
+	// 	for (const l of labels) {
+	// 		if (checklist.includes(l)) numDuplicates += 1; else checklist.push(l);
+	// 	}
+	// 	console.assert(numDuplicates == 0)
+	// }
 
 	// label hiding
 	let totalPics = Pictures.length;

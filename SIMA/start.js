@@ -43,6 +43,7 @@ function startUnit() {
 	if (PROD_START) {PROD_START=false; onClickTemple();} else startGame();
 	//show('freezer2')
 	//onClickCalibrate();
+	onClickTemple();
 
 }
 
