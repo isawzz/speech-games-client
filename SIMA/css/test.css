@@ -301,7 +301,7 @@ div{
 	left:0px;
 	width:100%;
 	height:100%;
-	font-size:100pt;
+	font-size:80pt;
 
 }
 #freezer2 >div{
@@ -399,6 +399,7 @@ div{
 	/* animation: stretch 3s ease-in-out 0s 1 reverse; */
 	/* animation: stretch 3s ease-in-out 0s 1 reverse, pulse 3s ease-out; */
 }
+.onPulse2 { animation: pulse_small .5s ease-in-out .2s 2 alternate;}
 
 .pulseBg{ color:white; animation: pulseBackground2TA .8s ease-in-out 1.5s 3;}
 @keyframes pulseColor{ 0%{ color:  black; } 100%{ color: transparent; }} 

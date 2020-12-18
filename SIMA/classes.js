@@ -6,15 +6,15 @@ class GTouchColors extends Game {
 	static SIMPLE_COLORS = ['red', 'green', 'yellow', 'blue'];
 	constructor(name) { super(name); }
 	startLevel() {
-		this.numColors = getGameOrLevelInfo('numColors', 2);
-		G.numLabels = this.numColors * G.numPics;
+		G.numColors = getGameOrLevelInfo('numColors', 2);
+		G.numLabels = G.numColors * G.numPics;
 		this.colorlist = lookupSet(GS, [this.name, 'colors'], GTouchColors.SIMPLE_COLORS);
 		this.contrast = lookupSet(GS, [this.name, 'contrast'], .35);
 		G.keys = G.keys.filter(x => containsColorWord(x));
 		//console.log('GTouchColors keys', G.keys);
 	}
 	prompt() {
-		this.colors = choose(this.colorlist, this.numColors);
+		this.colors = choose(this.colorlist, G.numColors);
 		showPictures(evaluate, { colors: this.colors, contrast: this.contrast });
 
 		setGoal(randomNumber(0, G.numPics * this.colors.length - 1));
@@ -292,7 +292,6 @@ class GSayPic extends Game {
 }
 class GPremem extends Game {
 	constructor() { super(); this.picList = []; }
-	clear() { clearTimeout(this.TO); showMouse(); }
 	prompt() {
 		this.picList = [];
 		//console.log(this.picList)
@@ -347,7 +346,7 @@ class GMissingNumber extends Game {
 		G.failFunc = failThumbsDown;
 		G.correctionFunc = this.showCorrectSequence.bind(this);
 	}
-	showCorrectSequence() { numberSequenceCorrectionAnimation(getWrongWords(), DELAY * 2) }
+	showCorrectSequence() { return numberSequenceCorrectionAnimation(); }
 	startLevel() {
 		G.numMissingLetters = getGameOrLevelInfo('numMissing', 1);
 		G.minNumber = getGameOrLevelInfo('min', 0);
@@ -361,7 +360,6 @@ class GMissingNumber extends Game {
 		G.numLabels = 0;
 	}
 	prompt() {
-		showInstruction('', Settings.language == 'E' ? 'complete the sequence' : "ergänze die reihe", dTitle, true);
 		mLinebreak(dTable, 12);
 
 		showHiddenThumbsUpDown({ sz: 140 });
@@ -369,16 +367,30 @@ class GMissingNumber extends Game {
 
 		G.step = chooseRandom(G.steps);
 		G.op = chooseRandom(G.ops);
-		G.seq = setGoalWordInputs(G.lengthOfSequence, G.minNumber, G.maxNumber, G.step, G.op);
+		[G.words, G.letters, G.seq] = createNumberSequence(G.lengthOfSequence, G.minNumber, G.maxNumber, G.step, G.op);
+		setNumberSequenceGoal();
+		//console.log(G)
+		//G.seq = setGoalWordInputs(G.lengthOfSequence, G.minNumber, G.maxNumber, G.step, G.op);
 
 		mLinebreak(dTable);
-		if (Settings.isTutoring) { showFleetingMessage(getNumSeqHint(), 300); }
+
+		let instr1 = (Settings.language == 'E' ? 'complete the sequence' : "ergänze die reihe");
+		showInstruction('', instr1, dTitle, true);
+
+		if (calibrating()) {activateUi(); return;}
+
+		if (Settings.isTutoring){longNumSeqHint();}
+		else if (G.level <= 1) { longNumSeqHint(); }
+		else if (G.level <= 3){mediumNumSeqHint();}
+		else if (G.level <= 5){shortNumSeqHint();}
+		else if (G.level <= 7){shortNumSeqHint(true,false);}
+
 		activateUi();
 	}
 	trialPrompt() {
 		Speech.say(Settings.language == 'D' ? 'nochmal!' : 'try again!');
 		setTimeout(() => getWrongChars().map(x => unfillChar(x)), 500);
-		if (Settings.showHint) showFleetingMessage(getNumSeqHint(), 2200);
+		if (Settings.showHint) showFleetingMessage(getNumSeqHint(), 2200, {fz:22});
 		return 10;
 	}
 	activate() { onkeypress = this.interact; }

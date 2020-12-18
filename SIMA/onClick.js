@@ -36,7 +36,7 @@ function closeAux() {
 function onClickComputer() { }
 function onClickCalibrate() {
 	//console.log('hallo')
-	closeAux();
+	if (auxOpen) closeAux();
 	changeUserTo('test');
 }
 function onClickGear() {
@@ -79,8 +79,9 @@ function onClickGo(ev) {
 
 }
 
-function onClickBadge(ev) {
-	revertToBadgeLevel(ev);
+function onClickBadgeX(ev) {
+	setBadgeLevel(ev);
+	// revertToBadgeLevel(ev);
 	saveUser();
 	console.log('reverted to', G.level);
 	TOMain = setTimeout(startGame, 100);

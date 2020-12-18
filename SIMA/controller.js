@@ -11,7 +11,7 @@ function startGame() {
 	G.successFunc = successPictureGoal;
 	G.failFunc = failPictureGoal;
 	G.correctionFunc = showCorrectWord;
-	
+
 	G.instance = getInstance(G);
 	G.instance.startGame();
 
@@ -21,8 +21,6 @@ function startGame() {
 function startLevel() {
 
 	Speech.setLanguage(Settings.language);
-	resetScore();
-	showStats();
 
 	let defvals = { numPics: 1, numRepeat: 1 };
 	for (const k in defvals) { G[k] = getGameOrLevelInfo(k, defvals[k]); }
@@ -45,8 +43,7 @@ function startRound() {
 	TOMain = setTimeout(() => prompt(), 300);
 }
 function prompt() {
-	showScore();
-	Score.levelChange = false; //needs to be down here because showScore needs that info!
+	showStats();
 	G.trialNumber = 0;
 
 	G.instance.prompt();
@@ -62,6 +59,7 @@ function activateUi() {
 	G.instance.activate();
 }
 function evaluate() {
+	console.log('evaluate!!!',arguments)
 	if (!canAct()) return;
 	uiActivated = false;
 	IsAnswerCorrect = G.instance.eval(...arguments);
@@ -76,8 +74,8 @@ function evaluate() {
 		DELAY = Settings.spokenFeedback ? 1500 : 300;
 		G.successFunc();
 	} else {
-		DELAY = Settings.spokenFeedback ? 3000 : 300;
-		G.correctionFunc(); //showCorrectWord();
+		DELAY = G.correctionFunc(); //Settings.spokenFeedback ? 3000 : 300;
+		//G.correctionFunc(); //showCorrectWord();
 		G.failFunc(); //failPictureGoal(false);
 	}
 	setTimeout(removeMarkers, 1500);
@@ -85,6 +83,7 @@ function evaluate() {
 	let nextLevel;
 	[Score.levelChange, nextLevel] = scoring(IsAnswerCorrect); //get here only if this is correct or last trial!
 
+	console.log('levelChange',Score.levelChange,calibrating)
 
 	//console.log('===>now', G.level, 'next', nextLevel)
 	// let gcCompleted = gameCycleCompleted(nextLevel);
@@ -103,18 +102,29 @@ function evaluate() {
 	} else {
 		//ja weil wenn game change ist ist ja automatisch auch levelchange!!!
 		addScoreToUserSession(G.key, G.level);
-		if (nextLevel < G.level) {
-			//remove badges
-			revertToBadgeLevel(nextLevel);
-		} else if (nextLevel == G.level) {
-			//same level restarts again
-		} else if (nextLevel > G.maxLevel) {
-			//new game!
-			setNextGame();
-		} else {
-			G.level = nextLevel;
-			addBadge(dLeiste, G.level, onClickBadge);
-		}
+		
+		if (nextLevel > G.maxLevel) { 
+			setBadgeLevel(nextLevel); //show the last level accomplished in opacity=1!!!
+			Score.gameChange = true;
+			setNextGame(); 
+		}else G.level = nextLevel;
+		// if (nextLevel < G.level) {
+		// 	//remove badges
+		// 	//revertToBadgeLevel(nextLevel);
+		// 	//setBadgeLevel(nextLevel);
+		// } else if (nextLevel == G.level) {
+		// 	//same level restarts again
+		// } else if (nextLevel > G.maxLevel) {
+		// 	//new game!
+		// 	//setBadgeLevel(nextLevel);
+		// 	//Score.gameChange = true;
+		// 	setNextGame();
+		// } else {
+		// 	//setBadgeLevel(nextLevel);
+		// 	// G.level = nextLevel;
+		// 	// badges[G.level-1].div.style.opacity=1;
+		// 	//addBadge(dLeiste, G.level, onClickBadge);
+		// }
 
 
 		if (unitTimeUp()) {

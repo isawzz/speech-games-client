@@ -1,4 +1,4 @@
-var _audioSources={
+var _audioSources = {
 	incorrect1: '../assets/sounds/incorrect1.wav',
 	incorrect3: '../assets/sounds/incorrect3.mp3',
 	goodBye: "../assets/sounds/level1.wav",
@@ -8,12 +8,12 @@ var _audioSources={
 };
 // var _SND = null;
 var _sndPlayer;
-function playSound(key){
+function playSound(key) {
 	if (isdef(_sndPlayer)) {
 		_sndPlayer.pause();
 		//_sndPlayer.src = 'hallo';
 		_sndPlayer = null;
-		setTimeout(()=>playSound(key),0);
+		setTimeout(() => playSound(key), 0);
 	} else {
 		_sndPlayer = new Audio(_audioSources[key]);
 		_sndPlayer.play();
@@ -22,11 +22,11 @@ function playSound(key){
 
 
 // *** uses assets! =>load after assets! ***
-const EMOFONTLIST =  ['emoOpen', 'openmoBlack', 'segoe ui emoji', 'segoe ui symbol'];
+const EMOFONTLIST = ['emoOpen', 'openmoBlack', 'segoe ui emoji', 'segoe ui symbol'];
 
 //#region NOW!
 function maShowPictures(keys, labels, dParent, onClickPictureHandler,
-	{ container, lang, border, picSize, bgs, colors, contrast, repeat = 1, sameBackground, shufflePositions = true } = {}) {
+	{ showRepeat, container, lang, border, picSize, bgs, colors, contrast, repeat = 1, sameBackground, shufflePositions = true } = {}) {
 	let pics = [];
 
 	//console.log('maShowPictures_', 'keys', keys, '\n', 'labels', labels, '\n', 'bgs', bgs)
@@ -41,13 +41,17 @@ function maShowPictures(keys, labels, dParent, onClickPictureHandler,
 		let info = isdef(lang) ? getRandomSetItem(lang, k) : symbolDict[k];
 		let bg = isList(bgs) ? bgs[i] : isdef(colors) ? 'white' : sameBackground ? computeColor('random') : 'random';
 		let label = isList(labels) ? labels[i] : isdef(lang) ? info.best : k;
-		items.push({ key: k, info: info, label: label, bg: bg });
+		items.push({ key: k, info: info, label: label, bg: bg, iRepeat: 1 });
 	}
 
 
 	//console.log('________________',items,repeat)
 	let items1 = jsCopy(items);
-	for (let i = 0; i < repeat - 1; i++) { items = items.concat(items1); }
+	for (let i = 0; i < repeat - 1; i++) {
+		// let newItems=jsCopy(items);
+		// for(const it of newItems) it.iRepeat=i+1;
+		items = items.concat(items1);
+	}
 	//console.log('________________',items,repeat)
 
 	//console.log(items)
@@ -66,7 +70,7 @@ function maShowPictures(keys, labels, dParent, onClickPictureHandler,
 	//console.log('numPics',numPics,'items',jsCopy(items))
 
 	//dann erst shuffle!
-	if (shufflePositions) {shuffle(items);}
+	if (shufflePositions) { shuffle(items); }
 	// if (shufflePositions) {console.log('shuffling!!!'); shuffle(items);}
 
 	//console.log('after shuffling items',jsCopy(items))
@@ -81,23 +85,38 @@ function maShowPictures(keys, labels, dParent, onClickPictureHandler,
 
 	//console.log('lines',lines,'picsPerLine',picsPerLine, 'items', items, 'numPics', numPics)
 
+	let labelRepeat = {};
+
 	for (let line = 0; line < lines; line++) {
-		let textShadowColor = isdef(colors) ? colors[line] : undefined;
+		let textShadowColor;
+		if (isdef(colors)) { textShadowColor = colors[line]; labelRepeat = {}; }
+
 		for (let i = 0; i < numPics; i++) {
 			let item = items[i];
 			let info = item.info; //infos[i];
 			let label = item.label; //labels[i];
+			let iRepeat = labelRepeat[label];
+			if (nundef(iRepeat)) iRepeat = 1; else iRepeat += 1;
+			labelRepeat[label] = iRepeat;
 			let bg = item.bg; //bgs[i];
 			let ipic = (line * picsPerLine + i);
-			if (ipic % picsPerLine == 0 && ipic > 0) {console.log('linebreak!',ipic,line,keys.length); mLinebreak(dParent);}
+			// if (ipic % picsPerLine == 0 && ipic > 0) {console.log('linebreak!',ipic,line,keys.length); mLinebreak(dParent);}
+			if (ipic % picsPerLine == 0 && ipic > 0) { mLinebreak(dParent); }
 			let id = 'pic' + ipic; // (line * keys.length + i);
 			let d1 = maPicLabelButtonFitText(info, label,
-				{ w: pictureSize, h: pictureSize, bgPic: bg, textShadowColor: textShadowColor, contrast: contrast },
+				{ w: pictureSize, h: pictureSize, bgPic: bg, textShadowColor: textShadowColor, contrast: contrast, },
 				onClickPictureHandler, dParent, stylesForLabelButton, 'frameOnHover', isText, isOmoji);
 			d1.id = id;
+
+			//addRowColInfo(d1,line,i,pictureSize);
+			if (showRepeat) addRepeatInfo(d1,iRepeat,pictureSize);
+
+			// let dRowCol = mCreate('div');
+			// mText(''+line+","+i,dRowCol,{fz:10,color:'black',position:'relative'});
+			// mpOver(dRowCol,d1,12,'black');
 			pics.push({
 				textShadowColor: textShadowColor, key: info.key, info: info, bg: bg, div: d1, id: id,
-				index: ipic, label: label, isLabelVisible: true, isSelected: false
+				index: ipic, row: line, col: i, iRepeat: iRepeat, label: label, isLabelVisible: true, isSelected: false
 			});
 		}
 	}
@@ -105,6 +124,20 @@ function maShowPictures(keys, labels, dParent, onClickPictureHandler,
 	return pics;
 
 
+}
+function addRowColInfo(dPic, row, col, szPic) {
+	let szi = Math.max(Math.floor(szPic / 12), 8);
+	console.log(szi);
+	dPic.style.position = 'relative';
+	let d2 = mText('row:' + row, dPic, { fz: szi, color: 'black', position: 'absolute', left: szi, top: szi / 2 })
+	let d3 = mText('col:' + col, dPic, { fz: szi, color: 'black', position: 'absolute', left: szi, top: (szi / 2 + szi + 2) })
+}
+function addRepeatInfo(dPic, iRepeat, szPic) {
+	let szi = Math.max(Math.floor(szPic / 8), 8);
+	console.log(szi);
+	dPic.style.position = 'relative';
+	let d2 = mText(''+iRepeat, dPic, { fz: szi, weight:'bold', color: 'black', position: 'absolute', left: szi/2, top: szi / 2 - 2 })
+	// let d3 = mText('col:' + col, dPic, { fz: szi, color: 'black', position: 'absolute', left: szi, top: (szi / 2 + szi + 2) })
 }
 function calcDimsAndSize(numPics, lines, container) {
 
@@ -250,7 +283,7 @@ function maPic(infokey, dParent, styles, isText = true, isOmoji = false) {
 	return dOuter;
 
 }
-function maPicLabelShowHideHandler(ev){
+function maPicLabelShowHideHandler(ev) {
 	let id = evToClosestId(ev);
 	let info = symbolDict[id.substring(1)];
 	if (isLabelVisible(id)) maHideLabel(id, info); else maShowLabel(id, info);
@@ -281,7 +314,7 @@ function maPicLabelFitX(info, label, { wmax, hmax, textShadowColor, contrast = .
 		//console.log(picStyles);
 		let sShade = '0 0 0 ' + textShadowColor; //green';
 		picStyles['text-shadow'] = sShade;// +', '+sShade+', '+sShade;
-		picStyles.fg =  anyColorToStandardString('black',contrast); //'#00000080' '#00000030' 
+		picStyles.fg = anyColorToStandardString('black', contrast); //'#00000080' '#00000030' 
 	}
 
 	let dPic = maPic(info, d, picStyles, isText, isOmoji);
@@ -407,14 +440,14 @@ function mpGridLabeled(dParent, list, picLabelStyles) {
 }
 
 //#region badges
-var badges=[];
+var badges = [];
 function removeBadges(dParent, level) {
 	while (badges.length > level) {
 		let badge = badges.pop()
 		removeElem(badge.div);
 	}
 }
-function addBadge(dParent, level, clickHandler) {
+function addBadge(dParent, level, clickHandler, animateRubberband = false) {
 	let fg = '#00000080';
 	let textColor = 'white';
 	let stylesForLabelButton = { rounding: 10, margin: 4 };
@@ -424,18 +457,34 @@ function addBadge(dParent, level, clickHandler) {
 	let key = levelKeys[i];
 	let k = replaceAll(key, ' ', '-');
 	let info = symbolDict[k];
-	let label = "level " + i; 
+	let label = "level " + i;
 	let h = window.innerHeight; let hBadge = h / 14;
 	let d1 = mpBadge(info, label, { w: hBadge, h: hBadge, bg: levelColors[i], fgPic: fg, fgText: textColor }, null, dParent, stylesForLabelButton, 'frameOnHover', isText, isOmoji);
-	d1.id = 'dBadge_'+i;
-	mClass(d1, 'aniRubberBand');
+	d1.id = 'dBadge_' + i;
+	if (animateRubberband) mClass(d1, 'aniRubberBand');
 	if (isdef(clickHandler)) d1.onclick = clickHandler;
 	badges.push({ key: info.key, info: info, div: d1, id: d1.id, index: i });
+	return arrLast(badges);
 }
 function showBadges(dParent, level, clickHandler) {
-	clearElement(dParent);badges =[];
+	clearElement(dParent); badges = [];
 	for (let i = 1; i <= level; i++) {
 		addBadge(dParent, i, clickHandler);
+	}
+	//console.log(badges)
+}
+function showBadgesX(dParent, level, clickHandler, maxLevel) {
+	clearElement(dParent);
+	badges = [];
+	for (let i = 1; i <= maxLevel + 1; i++) {
+		if (i > level) {
+			let b = addBadge(dParent, i, clickHandler, false);
+			b.div.style.opacity = .25;
+			b.achieved = false;
+		} else {
+			let b = addBadge(dParent, i, clickHandler, true);
+			b.achieved = true;
+		}
 	}
 	//console.log(badges)
 }
@@ -648,26 +697,26 @@ function setCategories(groupNameList) {
 	}
 	return keys;
 }
-function groupSizes(){
+function groupSizes() {
 	ensureSymBySet();
-	for(const gname in symKeysBySet){
-		console.log('group',gname+': '+symKeysBySet[gname].length);
+	for (const gname in symKeysBySet) {
+		console.log('group', gname + ': ' + symKeysBySet[gname].length);
 	}
 }
 
-function getKeySetX(categories, language, minlength, maxlength, bestOnly = false, sortAccessor=null, correctOnly=false, reqOnly=false) {
+function getKeySetX(categories, language, minlength, maxlength, bestOnly = false, sortAccessor = null, correctOnly = false, reqOnly = false) {
 	let keys = setCategories(categories);
 	//console.log(keys);//ok
 	//console.log(CorrectWordsCorrect)
 	if (isdef(minlength && isdef(maxlength))) {
 		keys = keys.filter(k => {
 
-			let ws = bestOnly ? [lastOfLanguage(k,language)] : wordsOfLanguage(k, language);
+			let ws = bestOnly ? [lastOfLanguage(k, language)] : wordsOfLanguage(k, language);
 			//console.log(ws)
 			for (const w of ws) {
-				if (w.length >= minlength && w.length <= maxlength 
+				if (w.length >= minlength && w.length <= maxlength
 					&& (!correctOnly || isdef(CorrectWordsExact[k]))
-					&& (!reqOnly || w.toLowerCase() == CorrectWordsExact[k].req)) 
+					&& (!reqOnly || w.toLowerCase() == CorrectWordsExact[k].req))
 					return true;
 			}
 			return false;
@@ -675,7 +724,7 @@ function getKeySetX(categories, language, minlength, maxlength, bestOnly = false
 	}
 	//console.log('________________',keys);//ok
 
-	if (isdef(sortAccessor)) sortByFunc(keys,sortAccessor); //keys.sort((a,b)=>fGetter(a)<fGetter(b));
+	if (isdef(sortAccessor)) sortByFunc(keys, sortAccessor); //keys.sort((a,b)=>fGetter(a)<fGetter(b));
 	return keys;
 }
 function getKeySet(groupName, language, maxlength) {

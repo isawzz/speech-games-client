@@ -66,6 +66,8 @@ function setGame(game, level) {
 
 	//set new game: friendly,logo,color,key,maxLevel,level 
 	//console.log('set game to', game)
+	if (isdef(G) && G.key != game) Score.gameChange = true;
+
 	G = jsCopy(GAME[game]);
 	//console.log('_________setGame: color',G.color);
 

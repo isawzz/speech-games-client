@@ -1,21 +1,4 @@
-function showScore() {
-
-	let scoreString = 'question: ' + (Score.nTotal + 1) + '/' + Settings.samplesPerLevel;
-
-	if (Score.levelChange) dScore.innerHTML = scoreString;
-	else setTimeout(() => { dScore.innerHTML = scoreString; }, 300);
-
-	// let scoreString = scoringMode == 'n' ? 'question: ' + (Score.nTotal + 1) + '/' + Settings.samplesPerLevel :
-	// 	scoringMode == 'percent' ? 'score: ' + Score.nCorrect + '/' + Score.nTotal + ' (' + percentageCorrect + '%)'
-	// 		: scoringMode == 'inc' ? 'score: ' + levelPoints + ' (' + percentageCorrect + '%)'
-	// 			: 'question: ' + Score.nTotal + '/' + Settings.samplesPerLevel;
-
-	// if (Score.levelChange)
-	// 	dScore.innerHTML = scoreString;
-	// else
-	// 	setTimeout(() => { dScore.innerHTML = scoreString; }, 300);
-}
-function resetScore() { Score = { nTotal: 0, nCorrect: 0, nCorrect1: 0, nPos: 0, nNeg: 0 }; }
+function initScore() { Score = { gameChange: true, levelChange: true, nTotal: 0, nCorrect: 0, nCorrect1: 0, nPos: 0, nNeg: 0 }; }
 function scoreSummary() {
 
 
@@ -102,6 +85,9 @@ function scoring(isCorrect) {
 		}
 	}
 
+	let toggle = Settings.showLabels == 'toggle';
+	let hasLabels = Settings.labels && G.numLabels != 0;
+
 	//check streaks
 	if (levelChange == 0) {
 
@@ -109,19 +95,17 @@ function scoring(isCorrect) {
 		let posSeq = pos > 0 && Score.nPos >= pos;
 		let neg = Settings.decrementLevelOnNegativeStreak;
 		let negSeq = neg > 0 && Score.nNeg >= neg;
-		let hasLabels = Settings.labels;
 
-		if (posSeq && hasLabels && Settings.showLabels == 'toggle') { Score.nPos = 0; Settings.labels = false; }
+		console.log('_________pos',pos,'posSeq',posSeq);
+
+		if (posSeq && hasLabels && toggle) { Score.nPos = 0; Settings.labels = false; }
 		else if (posSeq) { levelChange = 1; nextLevel += 1; Score.nPos = 0; }
-		if (negSeq && !hasLabels && Settings.showLabels == 'toggle') { Score.nNeg = 0; Settings.labels = true; }
+		if (negSeq && !hasLabels && toggle) { Score.nNeg = 0; Settings.labels = true; }
 		else if (negSeq) { levelChange = -1; if (nextLevel > 0) nextLevel -= 1; Score.nNeg = 0; }
 
 	}
 
-	//console.log('levelChange', levelChange, 'nextLevel', nextLevel)
-
-	let toggle = Settings.showLabels == 'toggle';
-	let hasLabels = Settings.labels;
+	console.log('levelChange', levelChange, 'nextLevel', nextLevel)
 
 	if (levelChange) {
 		if (toggle) Settings.labels = true;

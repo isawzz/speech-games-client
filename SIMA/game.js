@@ -112,7 +112,7 @@ function createWordInputs(words, dParent, idForContainerDiv, sep = null, styleCo
 	wheel = shuffle(wheel);
 
 	//shaded color wheel
-	let wheel1 = colorPalShadeX(anyColorToStandardString(wheel[0]),numWords);
+	let wheel1 = colorPalShadeX(anyColorToStandardString(wheel[0]), numWords);
 	wheel = jsCopy(wheel1);
 	//reverse the wheel if subtract
 	if (G.op == 'add') wheel.reverse();
@@ -127,7 +127,7 @@ function createWordInputs(words, dParent, idForContainerDiv, sep = null, styleCo
 
 		let bg = wheel[iWord]; // dGroup.style.backgroundColor=randomColorX(G.color,40,60,0,50,50);//'yellow';//randomColorX(G.color,70,80);
 		//console.log('bg', bg);
-		dGroup.style.backgroundColor=bg;
+		dGroup.style.backgroundColor = bg;
 		dGroup.style.color = colorIdealText(bg);// randomColorX(bg,20,30);
 
 		dGroup.id = idForContainerDiv + '_' + iWord;
@@ -164,6 +164,28 @@ function createWordInputs(words, dParent, idForContainerDiv, sep = null, styleCo
 
 	return { words: inputGroups, letters: charInputs };
 }
+function createNumberSequence(n, min, max, step, op = 'add') {
+
+	let fBuild = x => { return op == 'add' ? (x + step) : op == 'subtract' ? (x - step) : x; };
+	if (op == 'subtract') min += step * (n - 1);
+	if (min >= (max - 10)) max = min + 10;
+	let seq = getRandomNumberSequence(n, min, max, fBuild);
+	let wi = createWordInputs(seq, dTable, 'dNums');
+	return [wi.words, wi.letters, seq];
+}
+function setNumberSequenceGoal() {
+	let blank = blankWordInputs(G.words, G.numMissingLetters, G.posMissing);
+
+	Goal = { seq: G.seq, words: G.words, chars: G.letters, blankWords: blank.words, blankChars: blank.letters, iFocus: blank.iFocus };
+	Goal.qCharIndices = Goal.blankChars.map(x => x.index);
+
+	Goal.qWordIndices = Goal.blankWords.map(x => x.iWord);
+
+	let yes = true;
+	for (let i = 0; i < Goal.chars.length; i++) if (Goal.chars[i].index != i) yes = false;
+	console.assert(yes == true);
+
+}
 function setGoalWordInputs(n, min, max, step, op = 'add') {
 
 	let fBuild = x => { return op == 'add' ? (x + step) : op == 'subtract' ? (x - step) : x; };
@@ -188,7 +210,12 @@ function blankWordInputs(wi, n, pos = 'random') {
 	// console.log(getFunctionCallerName(), 'n', n)
 	//ignore pos for now and use random only
 	let indivInputs = [];
-	let remels = pos == 'random' ? choose(wi, n) : pos == 'start' ? arrTake(wi, n) : takeFromTo(wi, wi.length - n, wi.length);
+	console.log('pos', pos)
+	let remels =
+		pos == 'random' ? choose(wi, n)
+			: pos == 'notStart' ? arrTake(wi.slice(1, wi.length - 1), n)
+				: pos == 'start' ? arrTake(wi, n)
+					: takeFromTo(wi, wi.length - n, wi.length);
 	for (const el of remels) {
 		for (const inp of el.charInputs) { unfillCharInput(inp); }
 		indivInputs = indivInputs.concat(el.charInputs);
@@ -303,9 +330,24 @@ function getInputWordString(sep = ' ') { return getInputWords().join(sep); }
 
 //#region number sequence (is a wordInput!)
 function getNumSeqHint() { let l = G.op == 'add' ? 'to' : 'from'; let msg = `${G.op} ${G.step} ${l} the previous number`; return msg; }
-function numberSequenceCorrectionAnimation(wrong, ms) {
+function getShortNumSeqHint() { let msg = `${G.op} ${G.step}`; return msg; }
+function shortNumSeqHint(written = true, spoken = true, ms = 2400) {
+	let msg = getShortNumSeqHint();
+	if (spoken) setTimeout(() => Speech.say(msg), ms);
+	if (written) showFleetingMessage(msg, 300, { fz: 40 });
+}
+function mediumNumSeqHint(written = true, spoken = true, ms = 2400) {
+	if (spoken) setTimeout(() => Speech.say(getShortNumSeqHint()), ms);
+	if (written) showFleetingMessage(getNumSeqHint(), 300, { fz: 32 });
+}
+function longNumSeqHint(written = true, spoken = true, ms = 2400) {
+	let msg = getNumSeqHint();
+	if (spoken) setTimeout(() => Speech.say(msg), ms);
+	if (written) showFleetingMessage(msg, 300, { fz: 32 });
+}
+function numberSequenceCorrectionAnimation() {
 	//da brauch ich eine chain!!!!!!
-	DELAY = ms;
+	let wrong = getWrongWords();
 	if (nundef(TOList)) TOList = {};
 	let msg = getNumSeqHint();
 	showFleetingMessage(msg, 0, { fz: 32 }); //return;
@@ -317,9 +359,10 @@ function numberSequenceCorrectionAnimation(wrong, ms) {
 	let t2 = setTimeout(() => wrong.map(x => { correctWordInput(x); animate(x.div, 'komisch', 1300); }), 1000);
 	//let t3 = setTimeout(() => wrong.map(x =>animate(x.div,'komisch', 1300)), DELAY / 2);
 	//playSound('incorrect3');
-	t4 = setTimeout(() => {if (Settings.spokenFeedback) Speech.say(msg, .7, 1, .7, 'random');}, 500);
+	t4 = setTimeout(() => { if (Settings.spokenFeedback) Speech.say(msg, .7, 1, .7, 'random'); }, 500);
 	TOList.numseq = [t1, t2, t4];//, t3, t4];//, t4];
 
+	return 2800;
 }
 function missingNumbersMessage() {
 	//console.log('this', this)
@@ -480,6 +523,30 @@ function showCorrectWord(sayit = true) {
 
 	let correctionPhrase = isdef(Goal.correctionPhrase) ? Goal.correctionPhrase : Goal.label;
 	Speech.say(correctionPhrase, .4, 1.2, 1, 'david');
+	return Settings.spokenFeedback? 3000:300;
+}
+function showCorrectWords(sayit = true) {
+	if (nundef(TOList)) TOList = {};
+	TOList.correctWords = [];
+	let anim = 'onPulse2';
+	let to = 0;
+	let speaking = sayit && Settings.spokenFeedback;
+	let ms =speaking?2000:1000; 
+	for (const goal of Goal.pics) {
+		TOList.correctWords.push(setTimeout(() => {
+			let div = mBy(goal.id);
+			mClass(div, anim);
+			if (speaking) Speech.say('the ' +goal.correctionPhrase, .4, 1.2, 1, 'david');
+		}, to));
+		to += ms;
+	}
+
+	if (!sayit || !Settings.spokenFeedback) return to;
+
+	// let correctionPhrase = isdef(Goal.correctionPhrase) ? Goal.correctionPhrase : Goal.map(x => x.label).join(', ');
+	// Speech.say(correctionPhrase, .4, 1.2, 1, 'david');
+
+	return to+ms;
 }
 function shortHintPicRemove() {
 	mRemoveClass(mBy(Goal.id), 'onPulse1');
@@ -580,10 +647,12 @@ function resetState() {
 	DELAY = 1000;
 
 	//console.log(badges);
-	if (badges.length != G.level) {
-		badges = [];
-		showBadges(dLeiste, G.level, onClickBadge);
-	}
+	// if (badges.length != G.level) {
+	//badges = [];
+	//showBadges(dLeiste, G.level, onClickBadge);
+
+	//_showBadgesX(dLeiste,G.level,onClickBadgeX,G.maxLevel);
+	// }
 
 	updateLabelSettings();
 	setBackgroundColor();
@@ -604,6 +673,27 @@ function revertToBadgeLevel(ev) {
 
 	removeBadges(dLeiste, G.level);
 }
+function setBadgeLevel(ev) {
+	let i = 0;
+	if (isNumber(ev)) { i = ev; }
+	else {
+		let id = evToClosestId(ev);
+		i = stringAfter(id, '_');
+		i = Number(i);
+	}
+	//i is now correct level
+	let userStartLevel = getUserStartLevel(G.key);
+	if (userStartLevel > i) updateStartLevelForUser(G.key, i);
+	G.level = i;
+
+	//setBadgeOpacity
+	for (let iBadge = 0; iBadge < G.level; iBadge++) {
+		badges[iBadge].div.style.opacity = 1;
+	}
+	for (let iBadge = G.level; iBadge < badges.length; iBadge++) {
+		badges[iBadge].div.style.opacity = .25;
+	}
+}
 function setBackgroundColor() { document.body.style.backgroundColor = G.color; }
 function setGoal(index) {
 	if (nundef(index)) {
@@ -614,7 +704,15 @@ function setGoal(index) {
 	lastPosition = index;
 	Goal = Pictures[index];
 }
-function showInstruction(text, cmd, title, isSpoken, spoken) {
+function setMultiGoal(n, indices) {
+	Goal = {pics:[]};
+	if (nundef(indices)) {
+		Goal.pics = choose(Pictures, n);
+	} else {
+		for (const i of indices) Goal.pics.push(Pictures[i]);
+	}
+}
+function showInstruction(text, cmd, title, isSpoken, spoken, fz) {
 	//console.assert(title.children.length == 0,'TITLE NON_EMPTY IN SHOWINSTRUCTION!!!!!!!!!!!!!!!!!')
 	//console.log('G.key is', G.key)
 	clearElement(title);
@@ -623,10 +721,11 @@ function showInstruction(text, cmd, title, isSpoken, spoken) {
 	mClass(d, 'flexWrap');
 
 	let msg = cmd + " " + `<b>${text.toUpperCase()}</b>`;
-	let d1 = mText(msg, d, { fz: 36, display: 'inline-block' });
+	if (nundef(fz)) fz = 36;
+	let d1 = mText(msg, d, { fz: fz, display: 'inline-block' });
 	let sym = symbolDict.speaker;
 	let d2 = mText(sym.text, d, {
-		fz: 38, weight: 900, display: 'inline-block',
+		fz: fz + 2, weight: 900, display: 'inline-block',
 		family: sym.family, 'padding-left': 14
 	});
 	dFeedback = dInstruction = d;
@@ -639,7 +738,7 @@ function showInstruction(text, cmd, title, isSpoken, spoken) {
 	Speech.say(isdef(spoken) ? spoken : (cmd + " " + text), .7, 1, .7, 'random');
 
 }
-function showPictures(onClickPictureHandler, { sz, bgs, colors, contrast, repeat = 1, sameBackground = true, border } = {}, keys, labels) {
+function showPictures(onClickPictureHandler, { showRepeat = false, sz, bgs, colors, contrast, repeat = 1, sameBackground = true, border } = {}, keys, labels) {
 	Pictures = [];
 
 	if (nundef(keys)) keys = choose(G.keys, G.numPics);
@@ -648,7 +747,7 @@ function showPictures(onClickPictureHandler, { sz, bgs, colors, contrast, repeat
 
 	Pictures = maShowPictures(keys, labels, dTable, onClickPictureHandler,
 		{
-			picSize: sz, bgs: bgs, repeat: repeat, sameBackground: sameBackground, border: border, lang: Settings.language, colors: colors,
+			showRepeat: showRepeat, picSize: sz, bgs: bgs, repeat: repeat, sameBackground: sameBackground, border: border, lang: Settings.language, colors: colors,
 			contrast: contrast
 		});
 
@@ -688,9 +787,64 @@ function showHiddenThumbsUpDown(styles) {
 	for (const p of Pictures) { p.div.style.padding = p.div.style.margin = '10px 0px 0px 0px'; p.div.style.opacity = 0; }
 
 }
-function showLevel() { dLevel.innerHTML = 'level: ' + G.level + '/' + G.maxLevel; }
+function showLevel() {
+	dLevel.innerHTML = 'level: ' + G.level + '/' + G.maxLevel;
+}
 function showGameTitle() { dGameTitle.innerHTML = GAME[G.key].friendly; }
-function showStats() { showLevel(); showScore(); showGameTitle(); }
+function showScore() {
+
+	console.log('===>showScore!!!', Score);
+	if (Score.gameChange) showBadgesX(dLeiste, G.level, onClickBadgeX, G.maxLevel);
+
+	let scoreString = 'question: ' + (Score.nTotal + 1) + '/' + Settings.samplesPerLevel;
+
+	if (Score.levelChange) {
+		dScore.innerHTML = scoreString;
+		setBadgeLevel(G.level);
+	}
+	else {
+		setTimeout(() => {
+			dScore.innerHTML = scoreString;
+			setBadgeLevel(G.level);
+		}, 300);
+	}
+	// let scoreString = scoringMode == 'n' ? 'question: ' + (Score.nTotal + 1) + '/' + Settings.samplesPerLevel :
+	// 	scoringMode == 'percent' ? 'score: ' + Score.nCorrect + '/' + Score.nTotal + ' (' + percentageCorrect + '%)'
+	// 		: scoringMode == 'inc' ? 'score: ' + levelPoints + ' (' + percentageCorrect + '%)'
+	// 			: 'question: ' + Score.nTotal + '/' + Settings.samplesPerLevel;
+
+	// if (Score.levelChange)
+	// 	dScore.innerHTML = scoreString;
+	// else
+	// 	setTimeout(() => { dScore.innerHTML = scoreString; }, 300);
+}
+//function resetScore() { if (nundef(Score)) Score = { gameChange: true, levelChange: true, nTotal: 0, nCorrect: 0, nCorrect1: 0, nPos: 0, nNeg: 0 }; }
+function showStats() {
+
+	if (Score.levelChange) {
+		Score.nTotal = 0;
+		Score.nCorrect = 0;
+		Score.nCorrect1 = 0;
+		Score.nTotal = 0;
+		Score.nPos = 0;
+		Score.nNeg = 0;
+	}
+	showGameTitle();
+	showLevel();
+	showScore();
+
+	Score.levelChange = false;
+	Score.gameChange = false;
+	// resetScore();
+	// showStats();
+	// if (nundef(Score) || isdef(Score.gameChange) && Score.gameChange == true){
+	// 	showBadgesX(dLeiste, G.level, onClickBadgeX, G.maxLevel);
+	// 	Score.gameChange = false;
+	// }	
+	// Score.levelChange = false; //needs to be down here because showScore needs that info!
+
+
+}
 
 
 

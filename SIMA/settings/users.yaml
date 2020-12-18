@@ -2,14 +2,14 @@ nil:
   id: nil
   seq: [gSteps, gTouchPic, gTouchColors, gPremem, gMem, gMissingNumber, gMissingLetter, gWritePic, gSayPic]
   lastGame: gSteps
-  lastLevel: 0
+  lastLevel: 5
   settings:
-    minutesPerUnit: 10
-    samplesPerLevel: 10
-    trials: 2
+    minutesPerUnit: .2
+    samplesPerLevel: 3
+    trials: 1
     # toggle: first half of level: labels, second half of level: no labels
     showLabels: toggle #always never toggle
-    incrementLevelOnPositiveStreak: 10
+    incrementLevelOnPositiveStreak: 2
     decrementLevelOnNegativeStreak: 3
     language: E
     vocab: best25
@@ -27,11 +27,11 @@ nil:
     showTime: true
     switchGame: true
   games:
-    gTouchPic:
-      startLevel: 0
+    gSteps:
+      startLevel: 3
 guest0:
   id: guest
-  seq: [gTouchPic, gTouchColors, gPremem, gMem, gMissingNumber, gMissingLetter, gWritePic, gSayPic]
+  seq: [gTouchPic, gPremem, gTouchColors, gMissingLetter, gSteps, gSayPic, gMem, gMissingNumber, gWritePic]
   lastGame: gTouchPic
   lastLevel: 0
   settings:
@@ -66,7 +66,7 @@ test0:
   lastGame: gTouchPic
   lastLevel: 0
   settings:
-    minutesPerUnit: 10
+    minutesPerUnit: .2
     samplesPerLevel: 2
     trials: 1
     # toggle: first half of level: labels, second half of level: no labels
@@ -93,8 +93,8 @@ test0:
       startLevel: 0
 gul:
   id: gul
-  seq: [gTouchPic, gTouchColors, gPremem, gMem, gMissingNumber, gMissingLetter, gWritePic, gSayPic]
-  lastGame: gMissingNumber
+  seq: [gTouchPic, gPremem, gTouchColors, gMissingLetter, gSteps, gSayPic, gMissingNumber, gMem, gWritePic]
+  lastGame: gSteps
   lastLevel: 0
   settings:
     minutesPerUnit: 10
@@ -103,10 +103,13 @@ gul:
     # toggle: first half of level: labels, second half of level: no labels
     showLabels: toggle #always never toggle
     incrementLevelOnPositiveStreak: 10
-    decrementLevelOnNegativeStreak: 3
+    decrementLevelOnNegativeStreak: 5
     language: E
-    vocab: best25
+    vocab: best50
     spokenFeedback: true
+    showHint: true
+    showTime: true
+    switchGame: true
 
     # the following not yet in UI
     # activity animal body drink emotion food fruit game gesture kitchen 
@@ -116,9 +119,6 @@ gul:
     pressControlToUnfreeze: false
     reducedAnimations: true
     levelBadges: false
-    showHint: true
-    showTime: true
-    switchGame: true
   games: 
     gTouchPic:
       startLevel: 3

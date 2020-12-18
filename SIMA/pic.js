@@ -83,7 +83,7 @@ function toggleSelectionOfPicture(pic,selectedPics) {
 	pic.isSelected = !pic.isSelected;
 	if (pic.isSelected) mClass(ui, 'framedPicture'); else mRemoveClass(ui, 'framedPicture');
 
-	//if piclist is given, add or remove pic according to selection state
+	//if picList is given, add or remove pic according to selection state
 	if (isdef(selectedPics)){
 		if (pic.isSelected) {
 			console.assert(!selectedPics.includes(pic),'UNSELECTED PIC IN PICLIST!!!!!!!!!!!!')
