@@ -1,6 +1,6 @@
 nil:
   id: nil
-  seq: [gSteps, gTouchPic, gTouchColors, gPremem, gMem, gMissingNumber, gMissingLetter, gWritePic, gSayPic]
+  seq: [gTouchPic, gPremem, gTouchColors, gMissingLetter, gSteps, gSayPic, gMem, gMissingNumber, gWritePic]
   lastGame: gSteps
   lastLevel: 5
   settings:

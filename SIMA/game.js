@@ -658,21 +658,6 @@ function resetState() {
 	setBackgroundColor();
 
 }
-function revertToBadgeLevel(ev) {
-	let i = 0;
-	if (isNumber(ev)) { i = ev; }
-	else {
-		let id = evToClosestId(ev);
-		i = stringAfter(id, '_');
-		i = Number(i);
-	}
-
-	let userStartLevel = getUserStartLevel(G.key);
-	if (userStartLevel > i) updateStartLevelForUser(G.key, i);
-	G.level = i;
-
-	removeBadges(dLeiste, G.level);
-}
 function setBadgeLevel(ev) {
 	let i = 0;
 	if (isNumber(ev)) { i = ev; }
@@ -682,8 +667,9 @@ function setBadgeLevel(ev) {
 		i = Number(i);
 	}
 	//i is now correct level
-	let userStartLevel = getUserStartLevel(G.key);
-	if (userStartLevel > i) updateStartLevelForUser(G.key, i);
+	//let userStartLevel = getUserStartLevel(G.key);
+	//if (userStartLevel > i) updateStartLevelForUser(G.key, i);
+	updateStartLevelForUser(G.key, i);	
 	G.level = i;
 
 	//setBadgeOpacity

@@ -252,4 +252,5 @@ function addSessionToUserGames() {
 
 function updateStartLevelForUser(game, level) {
 	lookupSetOverride(U.games, [game, 'startLevel'], level);
+	saveRealUser();
 }
