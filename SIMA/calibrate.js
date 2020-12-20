@@ -36,7 +36,7 @@ function enterCalibrationMode(all1) {
 
 }
 
-function getCalBoundary(){return calGames.length == 1? 4: 2;}
+function getCalBoundary(){return 4;} // calGames.length == 1? 4: 2;}
 function isLastCalGame(){return !calGames.includes(G.key) || G.key == calGames[0]; }
 
 function calibrating(){return isCal==true;}// USERNAME == 'test';}
