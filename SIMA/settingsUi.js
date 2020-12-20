@@ -11,12 +11,13 @@ function createSettingsUi(dParent) {
 	setzeEineZahl(nGroupNumCommonAllGames, 'fail streak', 2, ['decrementLevelOnNegativeStreak']);
 	setzeEineZahl(nGroupNumCommonAllGames, 'trials', 3, ['trials']);
 	setzeEinOptions(nGroupNumCommonAllGames, 'show labels', ['toggle', 'always', 'never'], 'toggle', ['showLabels']);
-	setzeEinOptions(nGroupNumCommonAllGames, 'language', ['E', 'D'], 'E', ['Settings.language']);
+	setzeEinOptions(nGroupNumCommonAllGames, 'language', ['E', 'D'], 'E', ['language']);
 	setzeEinOptions(nGroupNumCommonAllGames, 'vocabulary', Object.keys(KeySets), 'best25', ['vocab']);
 
 	//let nGroupOther = mInputGroup(dParent);
 	setzeEineCheckbox(nGroupNumCommonAllGames, 'show time', false, ['showTime']);
 	setzeEineCheckbox(nGroupNumCommonAllGames, 'spoken feedback', true, ['spokenFeedback']);
+	setzeEineCheckbox(nGroupNumCommonAllGames, 'silent', false, ['silentMode']);
 	setzeEineCheckbox(nGroupNumCommonAllGames, 'switch game after max level', false, ['switchGame']);
 	setzeEineCheckbox(nGroupNumCommonAllGames, 'show hint', true, ['showHint']);
 
@@ -41,9 +42,10 @@ function createMenuUi(dParent) {
 	//console.log('-----------------bgs', bgs);
 
 	MenuItems = {};
-	let pics = maShowPictures(keys, labels, d, onClickGo,
-		{ bgs: bgs, shufflePositions: false },
-		{ fg: 'blue' });
+	// let pics = maShowPictures(keys, labels, d, onClickGo,
+	// 	{ bgs: bgs, shufflePositions: false }, { fg: 'blue' });
+	let pics = maShowPicturesX(keys, labels, d, onClickGo, { bgs: bgs, shufflePositions: false }, 
+		{ sPic: { fg: 'white' }}); //, sText:{family:'AlgerianRegular'} });
 	for (let i = 0; i < pics.length; i++) {
 		let p = pics[i];
 		//console.log(p)
@@ -159,8 +161,13 @@ function updateComplexSettings() {
 	updateKeySettings();
 
 	//console.log('halo!')
+	updateSpeakmodeSettings();
 
 
+}
+function updateSpeakmodeSettings(){
+	if (Settings.silentMode && Settings.spokenFeedback) Settings.spokenFeedback=false;
+	
 }
 function updateKeySettings(nMin) {
 	//console.log(G,KeySets);

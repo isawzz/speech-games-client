@@ -21,7 +21,7 @@ function openAux() {
 function closeAux() {
 	hide(dAux);
 	hide('dGo');
-	hide('dCalibrate');
+	show('dCalibrate');
 	show('dGear');
 	show('dTemple');
 	if (SettingsChanged) {
@@ -35,11 +35,16 @@ function closeAux() {
 //#region aux buttons: computer, gear, temple
 function onClickComputer() { }
 function onClickCalibrate() {
-	//console.log('hallo')
-	if (auxOpen) closeAux();
-	console.log('cali change user')
-	changeUserTo('test');
+	if (isCal) {
+		if (auxOpen) { closeAux(); }
+		exitCalibrationMode();
+	} else {
+		if (auxOpen) { closeAux(); enterCalibrationMode('all'); }
+		else { enterCalibrationMode(1); }
+	}
 }
+
+
 function onClickGear() {
 	//console.log('opening settings: ui will be interrupted!!!')
 	openAux();
@@ -50,7 +55,7 @@ function onClickTemple() {
 	//console.log('opening menu: ui will be interrupted!!!')
 	openAux();
 	hide('dTemple');
-	//show('dCalibrate');
+	show('dCalibrate');
 	createMenuUi(dAux);
 }
 
@@ -99,9 +104,10 @@ function onClickStopButton(b) { b.innerHTML = 'Run'; mStyleX(bRunStop, { bg: 'gr
 function onClickFreezer() { hide('freezer'); startUnit(); }
 function onClickFreezer2(ev) {
 	//if (Settings.flags.pressControlToUnfreeze && !ev.ctrlKey) { console.log('*** press control!!!!'); return; }
-	clearTable(); mRemoveClass(mBy('freezer2'), 'aniSlowlyAppear'); hide('freezer2'); 
-	if (USERNAME == 'test') changeUserTo();
-	else startUnit();
+	clearTable(); mRemoveClass(mBy('freezer2'), 'aniSlowlyAppear'); hide('freezer2'); auxOpen = false;
+	//if (USERNAME == 'test') _changeUserTo();
+	//else _startUnit();
+	startUnit();
 }
 
 

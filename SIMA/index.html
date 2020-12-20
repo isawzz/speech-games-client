@@ -30,6 +30,7 @@
 	<script src="./scoring.js"></script>
 
 	<!-- das sollen spaeter mal features werden! -->
+	<script src="./calibrate.js"></script>
 	<script src="./key.js"></script>
 	<script src="./pic.js"></script>
 	<script src="./time.js"></script>
@@ -65,9 +66,10 @@
 	<div id='dAux' style='display:none;text-align:center'></div>
 
 	<div id='dButtons'>
-		<div id='dCalibrate' onclick='onClickCalibrate()' style='display:none;'>CALIBRATE</div>
+		<!-- <div id='dCalibrate' onclick='onClickCalibrate()' style='display:none;'>CALIBRATE</div> -->
 		<div id='dGo' onclick='onClickGo()' style='display:none;'>PLAY!</div>
 		<div id='dComputer' onclick='onClickComputer()' style='display:none;'>🖥️</div>
+		<div id='dCalibrate' onclick='onClickCalibrate()'>⚖️</div>
 		<div id='dGear' onclick='onClickGear()'>⚙️</div>
 		<div id='dTemple' onclick='onClickTemple()'>🏛️</div>
 		<button id='dummy' style='width:0px;padding:0;margin:0;border:none;outline:none;background-color:transparent;color:transparent'>dummy
@@ -78,8 +80,8 @@
 		<div class='centerCentered'>Click to Start!</div>
 	</div>
 	<div id='freezer2' onclick="onClickFreezer2(event)" style='display:none'>
-		<div class='centerCentered' style='margin-top:-10%;'>
-			<p>Great Job!</p>
+		<div class='centerCentered' style='margin-top:-5%;'>
+			<p id='dCommentFreezer2'>Great Job!</p>
 			<p id='dMessageFreezer2' style='font-size:56px'>Time for a Break...</p>
 			<div id='dContentFreezer2'></div>
 		</div>

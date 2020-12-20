@@ -6,8 +6,8 @@ class GTouchColors extends Game {
 	static SIMPLE_COLORS = ['red', 'green', 'yellow', 'blue'];
 	constructor(name) { super(name); }
 	startLevel() {
-		G.numColors = getGameOrLevelInfo('numColors', 2);
-		G.numLabels = G.numColors * G.numPics;
+		// G.numColors = getGameOrLevelInfo('numColors', 2);
+		// G.numLabels = G.numColors * G.numPics;
 		this.colorlist = lookupSet(GS, [this.name, 'colors'], GTouchColors.SIMPLE_COLORS);
 		this.contrast = lookupSet(GS, [this.name, 'contrast'], .35);
 		G.keys = G.keys.filter(x => containsColorWord(x));
@@ -92,7 +92,7 @@ class GWritePic extends Game {
 		//return 10;
 	}
 	trialPrompt() {
-		Speech.say(Settings.language == 'E' ? 'try again!' : 'nochmal', 1, 1, .8, 'zira');
+		sayTryAgain();
 		mLinebreak(dTable);
 		this.inputBox = addNthInputElement(dTable, G.trialNumber);
 		this.defaultFocusElement = this.inputBox.id;
@@ -101,7 +101,7 @@ class GWritePic extends Game {
 	}
 	activate() {
 		this.inputBox.onkeyup = ev => {
-			if (ev.ctrlKey || uiPaused) return;
+			if (!canAct()) return;
 			if (ev.key === "Enter") {
 				ev.cancelBubble = true;
 				evaluate(ev);
@@ -124,7 +124,6 @@ class GMissingLetter extends Game {
 		G.numMissingLetters = getGameOrLevelInfo('numMissing', 1);
 		let pos = getGameOrLevelInfo('posMissing', 'random');
 		G.maxPosMissing = pos == 'start' ? G.numMissingLetters - 1 : 100;
-
 	}
 	prompt() {
 		showPictures(() => fleetingMessage('just enter the missing letter!'));
@@ -162,7 +161,7 @@ class GMissingLetter extends Game {
 	}
 	trialPromptML() {
 		let selinp = Selected.inp;
-		Speech.say(Settings.language == 'D' ? 'nochmal!' : 'try again!');
+		sayTryAgain();
 		setTimeout(() => {
 			let d = selinp.div;
 			d.innerHTML = '_';
@@ -208,8 +207,8 @@ class GMissingLetter extends Game {
 				}
 				if (nundef(Selected.lastIndexEntered)) {
 					//the user entered a non existing letter!!!
-					showFleetingMessage('you entered ' + Selected.lastLetterEntered)
-					Speech.say(Settings.language == 'E' ? 'try a different letter!' : 'anderer Buchstabe!')
+					showFleetingMessage('you entered ' + Selected.lastLetterEntered);
+					sayRandomVoice('try a different letter!', 'anderer Buchstabe!')
 				}
 				showFleetingMessage(this.composeFleetingMessage(), 3000);
 				//if get to this place that input did not match!
@@ -263,9 +262,7 @@ class GSayPic extends Game {
 
 	}
 	trialPrompt(nTrial) {
-		let phrase = nTrial < 2 ? (Settings.language == 'E' ? 'speak UP!!!' : 'LAUTER!!!')
-			: (Settings.language == 'E' ? 'Louder!!!' : 'LAUTER!!!');
-		Speech.say(phrase, 1, 1, 1, 'zira');
+		sayRandomVoice(nTrial < 2 ? 'speak UP!!!' : 'Louder!!!', 'LAUTER!!!');
 		animate(dInstruction, 'pulse800' + bestContrastingColor(G.color, ['yellow', 'red']), 500);
 		return 10;
 	}
@@ -315,7 +312,7 @@ class GPremem extends Game {
 		let div = pic.div;
 		if (!isEmpty(this.picList) && this.picList.length < G.numRepeat - 1 && this.picList[0].label != pic.label) return;
 		toggleSelectionOfPicture(pic, this.picList);
-		console.log('clicked', pic.key, this.picList);//,picList, GPremem.PicList);
+		//console.log('clicked', pic.key, this.picList);//,picList, GPremem.PicList);
 		if (isEmpty(this.picList)) {
 			showInstruction('', 'click any picture', dTitle, true);
 		} else if (this.picList.length < G.numRepeat - 1) {
@@ -377,20 +374,20 @@ class GMissingNumber extends Game {
 		let instr1 = (Settings.language == 'E' ? 'complete the sequence' : "ergänze die reihe");
 		showInstruction('', instr1, dTitle, true);
 
-		if (calibrating()) {activateUi(); return;}
+		if (calibrating()) { activateUi(); return; }
 
-		if (Settings.isTutoring){longNumSeqHint();}
+		if (Settings.isTutoring) { longNumSeqHint(); }
 		else if (G.level <= 1) { longNumSeqHint(); }
-		else if (G.level <= 3){mediumNumSeqHint();}
-		else if (G.level <= 5){shortNumSeqHint();}
-		else if (G.level <= 7){shortNumSeqHint(true,false);}
+		else if (G.level <= 3) { mediumNumSeqHint(); }
+		else if (G.level <= 5) { shortNumSeqHint(); }
+		else if (G.level <= 7) { shortNumSeqHint(true, false); }
 
 		activateUi();
 	}
 	trialPrompt() {
-		Speech.say(Settings.language == 'D' ? 'nochmal!' : 'try again!');
+		sayTryAgain();
 		setTimeout(() => getWrongChars().map(x => unfillChar(x)), 500);
-		if (Settings.showHint) showFleetingMessage(getNumSeqHint(), 2200, {fz:22});
+		if (!calibrating() && Settings.showHint) showFleetingMessage(getNumSeqHint(), 2200, { fz: 22 });
 		return 10;
 	}
 	activate() { onkeypress = this.interact; }
@@ -446,7 +443,7 @@ class GMissingNumber extends Game {
 			//user entered last missing letter but it is wrong!
 			//can there be multiple errors in string?
 		} else {
-			playSound('incorrect1');
+			if (!Settings.silentMode) playSound('incorrect1');
 			deactivateFocusGroup();
 			//unfillCharInput(Selected.target);
 			showFleetingMessage('does NOT fit: ' + Selected.ch, 0, { fz: 24 });

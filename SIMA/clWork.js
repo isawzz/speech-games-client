@@ -11,8 +11,8 @@ class Game {
 		activateUi();
 	}
 	trialPrompt() {
-		Speech.say(Settings.language == 'D' ? 'nochmal!' : 'try again!');
-		if (Settings.showHint) shortHintPic();
+		sayTryAgain();
+		if (!calibrating() && Settings.showHint) shortHintPic();
 		return 10;
 	}
 	activate() { }
@@ -38,12 +38,12 @@ class GSteps extends Game {
 	startGame() { G.correctionFunc = showCorrectWords; }
 	startLevel() {
 		const clist = [{ name: 'orange', color: 'orangered' }, { name: 'green', color: 'green' }, { name: 'pink', color: 'hotpink' }, { name: 'blue', color: 'blue' }];
-		G.numColors = getGameOrLevelInfo('numColors', 2);
-		G.numSteps = getGameOrLevelInfo('numSteps', 2);
-		//G.numRepeat = 2; //G.numColors * G.numPics;
-		G.numLabels = G.numColors * G.numPics * G.numRepeat;
+		// G.numColors = getGameOrLevelInfo('numColors', 2);
+		// G.numSteps = getGameOrLevelInfo('numSteps', 2);
+		// //G.numRepeat = 2; //G.numColors * G.numPics;
+		// G.numLabels = G.numColors * G.numPics * G.numRepeat;
 		this.colorList = lookupSet(GS, [this.name, 'colors'], clist);
-		console.log(this.colorList)
+		// console.log(this.colorList)
 		this.contrast = lookupSet(GS, [this.name, 'contrast'], .35);
 		G.keys = G.keys.filter(x => containsColorWord(x));
 	}
@@ -96,7 +96,7 @@ class GSteps extends Game {
 	trialPrompt() {
 		for (const p of this.picList) { toggleSelectionOfPicture(p); }
 		this.picList = [];
-		showInstruction('', 'try again', dTitle, true);
+		sayTryAgain();
 		return 10;
 	}
 	interact(ev) {
@@ -110,6 +110,7 @@ class GSteps extends Game {
 		//if (!isEmpty(this.picList) && this.picList.length < G.numSteps - 1 && this.picList[0].label != pic.label) return;
 		toggleSelectionOfPicture(pic, this.picList);
 		console.log('clicked pic', pic.index, this.picList);//,picList, GPremem.PicList);
+		if (isEmpty(this.picList)) return;
 		//return;
 		let iGoal = this.picList.length - 1;
 		console.log('iGoal', iGoal, Goal.pics[iGoal], 'i', i, pic)
@@ -117,7 +118,8 @@ class GSteps extends Game {
 		else if (this.picList.length == Goal.pics.length) { Selected = { picList: this.picList }; evaluate(true); }
 	}
 	eval(isCorrect) {
-		console.log('eval', isCorrect)
+		console.log('eval', isCorrect);
+		console.log('picList',this.picList)
 		Selected = { picList: this.picList, feedbackUI: this.picList.map(x => x.div), sz: getBounds(this.picList[0].div).height };
 		return isCorrect;
 	}

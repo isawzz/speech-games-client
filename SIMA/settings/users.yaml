@@ -1,19 +1,20 @@
 nil:
   id: nil
   seq: [gTouchPic, gPremem, gTouchColors, gMissingLetter, gSteps, gSayPic, gMem, gMissingNumber, gWritePic]
-  lastGame: gSteps
-  lastLevel: 5
+  lastGame: gTouchPic
+  lastLevel: 2
   settings:
-    minutesPerUnit: .2
-    samplesPerLevel: 3
+    minutesPerUnit: 1
+    samplesPerLevel: 2
     trials: 1
     # toggle: first half of level: labels, second half of level: no labels
     showLabels: toggle #always never toggle
     incrementLevelOnPositiveStreak: 2
     decrementLevelOnNegativeStreak: 3
     language: E
-    vocab: best25
-    spokenFeedback: true
+    vocab: best100
+    spokenFeedback: false
+    silentMode: true
 
     # the following not yet in UI
     # activity animal body drink emotion food fruit game gesture kitchen 

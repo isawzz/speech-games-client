@@ -40,6 +40,7 @@ function mStyleX(elem, styles, unit = 'px') {
 	//console.log(styles.bg,styles.fg);
 
 	for (const k in styles) {
+		//if (k=='textShadowColor' || k=='contrast') continue; //meaningless styles => TBD
 		let val = styles[k];
 		let key = k;
 		if (isdef(paramDict[k])) key = paramDict[k];
@@ -60,6 +61,7 @@ function mStyleX(elem, styles, unit = 'px') {
 			continue;
 		} else if (k == 'border') {
 			//console.log('________________________YES!')
+			
 			if (val.indexOf(' ') < 0) val = 'solid 1px ' + val;
 		}
 

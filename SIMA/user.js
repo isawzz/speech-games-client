@@ -1,4 +1,3 @@
-var UsernameBeforeTesting;
 function saveUser() {
 	//console.log('saveUser:', USERNAME,G.key,G.level); //_getFunctionsNameThatCalledThisFunction()); 
 	U.lastGame = G.key;
@@ -75,6 +74,9 @@ function setGame(game, level) {
 	G.maxLevel = isdef(levels) ? Object.keys(levels).length - 1 : 0;
 
 	G.key = game;
+
+	if (isCal) updateStartLevelForUser(game,0);
+
 	if (isdef(level)) G.level = level;
 	else { G.level = getUserStartLevel(game); }
 
@@ -94,13 +96,14 @@ function getUserStartLevel(game) {
 	return level;
 }
 function changeUserTo(name) {
-	if (name == 'test' && USERNAME != 'test') 	{ 
-		UsernameBeforeTesting = USERNAME; 
-		saveUser(); 
-	} else if (name != USERNAME) {
+	// if (name == 'test' && USERNAME != 'test') 	{ 
+	// 	_UsernameBeforeTesting = USERNAME; 
+	// 	saveUser(); 
+	// } else 
+	if (name != USERNAME) {
 		//restartQ();
-		if (USERNAME != 'test') saveUser(); 
-		else if (nundef(name)) name = UsernameBeforeTesting;
+		saveUser(); 
+		//else if (nundef(name)) name = _UsernameBeforeTesting;
 	}
 	mBy('spUser').innerHTML = name;
 	loadUser(name);
@@ -125,39 +128,6 @@ function gameCycleCompleted(nextLevel){
 	// console.log('cycle: level over',over?'YES':'no','last game',G.key,'next i',i,'U.seq.length',U.seq.length)
 	// console.log('cycle complete game',G.key,'nextLevel',nextLevel,'i',i,'over',over)
 	return i == U.seq.length && over;
-}
-function calibrating(){return USERNAME == 'test';}
-function calibrateUser(){
-	//U.session hat results
-	//console.log('calibration results... test session',jsCopy(U.session))
-	let uname = UsernameBeforeTesting;
-	let udata = DB.users[uname];
-	//console.log('userdata before calibration',jsCopy(udata))
-
-	let sBefore=getStartLevels(uname);
-
-	for (const gname in GAME) {
-		if (nundef(U.session[gname])){
-			let baseLevel = lookupSet(udata,['games',gname,'startLevel'],0);
-			if (udata.lastGame == gname) udata.lastLevel = baseLevel;
-			//console.log('baseLevel for',gname,'is',baseLevel)
-			continue;
-		}
-		//find highest level with 100%: this will be correct level
-		let level = 0;
-		for(const l in U.session[gname].byLevel){
-			let sc = U.session[gname].byLevel[l];
-			if (sc.nTotal > sc.nCorrect1) break;
-			level+=1;
-		}
-		let newval = lookupSetOverride(udata,['games',gname,'startLevel'],level);
-		//console.log('*** level set',gname,'level',newval)
-		if (udata.lastGame == gname) udata.lastLevel = level;
-		//console.log('game',gname,'calibrated to level',level);
-	}
-	let sAfter = getStartLevels(uname);
-	//console.log('userdata After calibration',jsCopy(udata));
-	return [sBefore,sAfter];
 }
 function editableUsernameUi(dParent) {
 	//console.log('creating input elem for user', USERNAME)

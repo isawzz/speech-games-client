@@ -74,15 +74,12 @@ function scoring(isCorrect) {
 
 	//check percentageCorrect
 	if (Score.nTotal >= Settings.samplesPerLevel) {
-		if (USERNAME == 'test') {
-			levelChange = 1; nextLevel = Score.nTotal == Score.nCorrect ? nextLevel + 1 : G.maxLevel + 1;
-		} else if (percentageCorrect > 75) {
-			levelChange = 1; nextLevel += 1;
-		} else if (percentageCorrect < 25) {
-			levelChange = -1; nextLevel = (nextLevel > 0 ? nextLevel - 1 : 0);
-		} else {
-			levelChange = 1;
-		}
+		// if (USERNAME == 'test') {
+		// 	levelChange = 1; nextLevel = Score.nTotal == Score.nCorrect ? nextLevel + 1 : G.maxLevel + 1;
+		// } else 
+		if (percentageCorrect > 75) { levelChange = 1; nextLevel += 1; }
+		else if (percentageCorrect < 25) { levelChange = -1; nextLevel = (nextLevel > 0 ? nextLevel - 1 : 0); }
+		else { levelChange = 1; }
 	}
 
 	let toggle = Settings.showLabels == 'toggle';
@@ -96,7 +93,7 @@ function scoring(isCorrect) {
 		let neg = Settings.decrementLevelOnNegativeStreak;
 		let negSeq = neg > 0 && Score.nNeg >= neg;
 
-		console.log('_________pos',pos,'posSeq',posSeq);
+		//console.log('_________pos',pos,'posSeq',posSeq);
 
 		if (posSeq && hasLabels && toggle) { Score.nPos = 0; Settings.labels = false; }
 		else if (posSeq) { levelChange = 1; nextLevel += 1; Score.nPos = 0; }
@@ -105,7 +102,12 @@ function scoring(isCorrect) {
 
 	}
 
-	console.log('levelChange', levelChange, 'nextLevel', nextLevel)
+	//console.log('levelChange', levelChange, 'nextLevel', nextLevel)
+	if (calibrating() && !levelChange && (Score.nTotal >= getCalBoundary() || !isCorrect)) {
+		levelChange = 1;
+		if (percentageCorrect >= 99) {updateStartLevelForUser(G.key, nextLevel); nextLevel += 1;}
+	}
+
 
 	if (levelChange) {
 		if (toggle) Settings.labels = true;
@@ -120,6 +122,8 @@ function scoring(isCorrect) {
 		else if (levelChange < 0) updateStartLevelForUser(G.key, nextLevel);
 
 	}
+
+
 	return [levelChange, nextLevel];
 }
 

@@ -8,6 +8,7 @@ decrementLevelOnNegativeStreak: 3
 language: E
 vocab: best25
 spokenFeedback: true
+silentMode: false
 
 # the following not yet in UI
 # activity animal body drink emotion food fruit game gesture kitchen 
@@ -66,64 +67,78 @@ games:
         numMissing: 1
         posMissing: end
         min: 0
-        max: 25
-        steps: [1]
-        ops: [add,subtract]
+        max: 10
+        steps: 1
+        ops: [subtract]
       2:
         numMissing: 1
         posMissing: end
         min: 0
-        max: 25
-        steps: [1,2]
-        ops: [add,subtract]
+        max: 30
+        steps: 1
+        ops: [add]
       3:
+        numMissing: 1
+        posMissing: end
+        min: 0
+        max: 20
+        steps: 1
+        ops: [subtract]
+      4:
+        numMissing: 1
+        posMissing: end
+        min: 0
+        max: 15
+        steps: 1
+        ops: [add,subtract]
+      5:
         numMissing: 1
         posMissing: end
         min: 0
         max: 50
         steps: [1,2]
-        ops: [add,subtract]
-      4:
+        ops: [add]
+      6:
+        numMissing: 1
+        posMissing: end
+        min: 0
+        max: 50
+        steps: [1,2,3]
+        ops: [add]
+      7:
+        numMissing: 1
+        posMissing: end
+        min: 0
+        max: 50
+        steps: [1,2,3]
+        ops: [add]
+      8:
         numMissing: 1
         posMissing: notStart
         min: 0
         max: 50
         steps: [1,2]
         ops: [add,subtract]
-      5:
-        numMissing: 1
-        posMissing: notStart
-        min: 0
-        max: 99
-        steps: [1,2]
-        ops: [add,subtract]
-      6:
+      9:
         numMissing: 1
         posMissing: notStart
         min: 0
         max: 99
         steps: [1,2,3]
         ops: [add,subtract]
-      7:
+      10:
         numMissing: 1
         posMissing: notStart
         min: 0
         max: 99
-        steps: [2,3,4,5]
+        steps: [1,2,3,4,5]
         ops: [add,subtract]
-      8:
+      11:
         numMissing: 1
         posMissing: notStart
         min: 0
         max: 99
         steps: [3,4,5,6,7,8,9,10]
-        ops: [add,subtract]
-      9:
-        numMissing: 2
-        posMissing: notStart
-        min: 0
-        max: 99
-        steps: [1,2,3,4,5,6,7,8,9,10]
         ops: [add,subtract]
   gSteps:
     contrast: 0.32
