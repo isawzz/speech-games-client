@@ -201,20 +201,6 @@ function addSessionToUserGames() {
 				if (nundef(recOld.byLevel[l])) recOld.byLevel[l] = jsCopy(recNew.byLevel[l]);
 				else addByKey(recNew.byLevel[l], recOld.byLevel[l]);
 			}
-
-
-			//console.log('added session:', g, recNew)
-
-			// recOld.nTotal = isdef(recOld.nTotal) ? recOld.nTotal + recNew.nTotal : recNew.nTotal;
-			// recOld.nCorrect = isdef(recOld.nCorrect) ? recOld.nCorrect + recNew.nCorrect : recNew.nCorrect;
-			// recOld.nCorrect1 = isdef(recOld.nCorrect1) ? recOld.nCorrect1 + recNew.nCorrect1 : recNew.nCorrect1;
-			// recOld.percentage = Math.round(100 * recOld.nCorrect / recOld.nTotal);
-			// for (const l in recNew) {
-			// 	let d = U.session[g][l];
-			// 	let old = lookup(recOld, ['scoreByLevel', l]);
-			// 	if (old) { old.nTotal += d.nTotal; old.nCorrect += d.nCorrect; old.nCorrect1 += d.nCorrect1; }
-			// 	else lookupSet(recOld, ['scoreByLevel', l], d);
-			// }
 		}
 	}
 	U.session = {};

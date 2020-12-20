@@ -74,9 +74,6 @@ function scoring(isCorrect) {
 
 	//check percentageCorrect
 	if (Score.nTotal >= Settings.samplesPerLevel) {
-		// if (USERNAME == 'test') {
-		// 	levelChange = 1; nextLevel = Score.nTotal == Score.nCorrect ? nextLevel + 1 : G.maxLevel + 1;
-		// } else 
 		if (percentageCorrect > 75) { levelChange = 1; nextLevel += 1; }
 		else if (percentageCorrect < 25) { levelChange = -1; nextLevel = (nextLevel > 0 ? nextLevel - 1 : 0); }
 		else { levelChange = 1; }

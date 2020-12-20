@@ -80,11 +80,9 @@ function evaluate() {
 	[Score.levelChange, nextLevel] = scoring(IsAnswerCorrect); //get here only if this is correct or last trial!
 
 	if (calibrating()) {
-		//console.log('cali:', Score.levelChange, nextLevel, G.level, isLastCalGame())
 		addScoreToUserSession(G.key, G.level);
 		if (!IsAnswerCorrect) {
 			setBadgeLevel(nextLevel); Score.gameChange = true; setNextGame();
-			//console.log('cali:', Score.levelChange, nextLevel, G.key, G.level, isLastCalGame());
 			if (isLastCalGame()) { exitCalibrationMode(); } else { TOMain = setTimeout(startGame, DELAY); }
 		} else if (IsAnswerCorrect && nextLevel > G.maxLevel) {
 			setBadgeLevel(nextLevel); Score.gameChange = true; setNextGame();
