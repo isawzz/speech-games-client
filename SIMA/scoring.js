@@ -72,15 +72,34 @@ function scoring(isCorrect) {
 	let levelChange = 0;
 	let nextLevel = G.level;
 
+	let toggle = Settings.showLabels == 'toggle';
+	let hasLabels = Settings.labels && G.numLabels != 0;
+
+	let boundary = calibrating() ? getCalBoundary() : Settings.samplesPerLevel;
+
+	if (calibrating()) {
+		if (!isCorrect) {
+			//goto next game
+			updateStartLevelForUser(G.key, nextLevel);
+			levelChange = 1; nextLevel = G.maxLevel + 1; //make sure there will be game change!
+		} else if (Score.nTotal >= boundary) {
+			//goto next level and upgrade user starrtLevel
+			updateStartLevelForUser(G.key, nextLevel);
+			levelChange = 1; nextLevel += 1;
+		} else if (Score.nTotal >= boundary / 2 && toggle && hasLabels) {
+			Settings.labels = false;
+		}
+		return [levelChange, nextLevel];
+	}
+
+	//der rest ist nur noch fuer NOT IN CALIBRATING MODE!!!
+
 	//check percentageCorrect
-	if (Score.nTotal >= Settings.samplesPerLevel) {
+	if (Score.nTotal >= boundary) {
 		if (percentageCorrect > 75) { levelChange = 1; nextLevel += 1; }
 		else if (percentageCorrect < 25) { levelChange = -1; nextLevel = (nextLevel > 0 ? nextLevel - 1 : 0); }
 		else { levelChange = 1; }
 	}
-
-	let toggle = Settings.showLabels == 'toggle';
-	let hasLabels = Settings.labels && G.numLabels != 0;
 
 	//check streaks
 	if (levelChange == 0) {
@@ -100,11 +119,10 @@ function scoring(isCorrect) {
 	}
 
 	//console.log('levelChange', levelChange, 'nextLevel', nextLevel)
-	if (calibrating() && !levelChange && (Score.nTotal >= getCalBoundary() || !isCorrect)) {
-		levelChange = 1;
-		if (percentageCorrect >= 99) {updateStartLevelForUser(G.key, nextLevel); nextLevel += 1;}
-	}
-
+	// if (calibrating() && !levelChange && (Score.nTotal >= getCalBoundary() || !isCorrect)) {
+	// 	levelChange = 1;
+	// 	if (percentageCorrect >= 99) {updateStartLevelForUser(G.key, nextLevel); nextLevel += 1;}
+	// }
 
 	if (levelChange) {
 		if (toggle) Settings.labels = true;
