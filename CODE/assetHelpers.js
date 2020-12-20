@@ -53,8 +53,8 @@ function maShowPicturesX(keys, labels, dParent, onClickPictureHandler,
 	let labelRepeat = {};
 
 	//console.log('_______', jsCopy(sCont));
-	[sCont, sPic, sText] = getHarmoniousStylesPlusPlusX(sCont, sPic, sText, 65);
-	//console.log('sCont',sCont);
+	// [sCont, sPic, sText] = getHarmoniousStylesPlusPlusX(sCont, sPic, sText, 65);
+	// [sCont, sPic, sText] = getHarmoniousStylesPlusPlus(sCont, sPic, {}, sCont.w, sCont.h, 65, 0, 'arial', sPic.bg, 'transparent', null, null, true);	//console.log('sCont',sCont);
 
 	for (let line = 0; line < lines; line++) {
 		let textShadowColor;
@@ -102,11 +102,13 @@ function maPicLabelButtonFitTextX(info, label, dParent, handler,
 	{ sCont, sPic, sText } = {}, classes = 'picButton', isText, isOmoji, focusElement) {
 
 	//[sCont, sPic, sText] = getHarmoniousStylesPlusPlusX(sCont, sPic, sText, 65);
+	[sCont, sPic, sText] = getHarmoniousStylesPlusPlus(sCont, sPic, {}, sCont.w, sCont.h, 65, 0, 'arial', sCont.bg, 'transparent', null, null, true);	//console.log('sCont',sCont);
 
 	//console.log(sCont)
 	//console.log(sPic)
 
 	let x = maPicLabelFitXX(info, label.toUpperCase(), sCont.w, dParent, sCont, sPic, sText, isText, isOmoji);
+	// let x = maPicLabelFitX(info, label.toUpperCase(), { wmax: sCont.w }, dParent, sCont, sPic, sText, isText, isOmoji);
 
 	x.id = 'd' + info.key;
 	if (isdef(handler)) x.onclick = handler;
@@ -117,40 +119,6 @@ function maPicLabelButtonFitTextX(info, label, dParent, handler,
 	return x;
 }
 function setDefaultKeys(o, defs) { for (const k in defs) { if (nundef(o[k])) o[k] = defs[k]; } }
-function getHarmoniousStylesPlusPlusX(sCont, sPic = {}, sText = {}, picPercent, hasText = true) {
-
-	//console.log('haaaaaaaaaaaaaaaaaalo',hasText)
-
-	//15,55,0,20,10=80
-	const sDefault = {
-		cont: { bg: 'random', padding: 0, align: 'center', 'box-sizing': 'border-box' },
-		pic: { bg: 'transparent', fg: 'white' },
-		text: { fg: 'contrast', family: 'arial' }
-	}
-	setDefaultKeys(sCont, sDefault.cont);
-	setDefaultKeys(sPic, sDefault.pic);
-	setDefaultKeys(sText, sDefault.text);
-
-	//return [sCont, sPic, sText];
-
-	// calc padding 
-	let padding = sCont.padding; delete sCont.padding; // replace padding by patop,pabot,paright,paleft
-	let fact = 55 / picPercent;
-	let numbers = hasText ? [fact * 15, picPercent, 0, fact * 20, fact * 10] : [15, 70, 0, 0, 15];
-	numbers = numbers.map(x => sCont.h * x / 100);
-	let [patop, szPic, zwischen, szText, pabot] = numbers;
-	sCont.patop = Math.max(patop, padding);
-	sCont.pabot = Math.max(pabot, padding);
-	// if (nundef(sCont.w)) { sCont.paleft = sCont.paright = Math.max(padding, 4); } 
-	sCont.paleft = sCont.paright = Math.max(padding, 0);
-
-	sPic.h = szPic;
-	sText.fz = Math.floor(szText * 3 / 4);
-
-	//console.log('end of getHarmonious:', sCont.patop, sCont.paright, sCont.pabot, sCont.paleft);
-	return [sCont, sPic, sText];
-	return [sCont, jsCopy(sPic), sText];
-}
 function convertTextShadowColorAndContrast(picStyles) {
 	if (isdef(picStyles.textShadowColor)) {
 		let sShade = '0 0 0 ' + picStyles.textShadowColor;

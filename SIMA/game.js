@@ -479,7 +479,7 @@ function successThumbsUp(withComment = true) {
 function failThumbsDown(withComment = false) {
 	if (withComment && Settings.spokenFeedback) {
 		const comments = (Settings.language == 'E' ? ['too bad'] : ["aber geh'"]);
-		sayRandomVoice(chooseRandom(comments)); 
+		sayRandomVoice(chooseRandom(comments));
 	}
 	let p1 = firstCond(Pictures, x => x.key == 'thumbs down');
 	p1.div.style.opacity = 1;
@@ -602,7 +602,7 @@ function aniGameOver(msg, silent = false) {
 
 	} else {
 		dComment.innerHTML = 'Great Job!';
-		dMessage.innerHTML = isdef(msg)?msg:'Time for a Break...';
+		dMessage.innerHTML = isdef(msg) ? msg : 'Time for a Break...';
 		d.style.textAlign = 'center';
 		mText('Unit Score:', d, { fz: 22 });
 
@@ -633,7 +633,7 @@ function resetRound() {
 	clearTable();
 }
 function resetState() {
-	clearTimeout(TOMain); 
+	clearTimeout(TOMain);
 	onkeydown = null; onkeypress = null; onkeyup = null;
 	lastPosition = 0;
 	DELAY = 1000;
@@ -719,23 +719,21 @@ function showInstruction(text, cmd, title, isSpoken, spoken, fz) {
 function showPictures(onClickPictureHandler, { showRepeat = false, sz, bgs, colors, contrast, repeat = 1,
 	sameBackground = true, border } = {}, keys, labels) {
 	Pictures = [];
-	if (nundef(keys)) keys = choose(G.keys, G.numPics);	
-	//keys[0]='butterfly'; //keys[0]='man in manual wheelchair';	//keys=['sun with face'];
+	if (nundef(keys)) keys = choose(G.keys, G.numPics);
+	keys[0] = 'butterfly'; //keys[0]='man in manual wheelchair';	//keys=['sun with face'];
 
 	let sCont = {}; if (isdef(sz)) sCont.w = sCont.h = sz; if (isdef(border)) sCont.border = border; //sCont.padding=8;
 	let sPic = {}; if (isdef(contrast)) sPic.contrast = contrast;
-	// Pictures = maShowPicturesX(keys, labels, dTable, onClickPictureHandler,
-	// 	{
-	// 		showRepeat: showRepeat, bgs: bgs, repeat: repeat, sameBackground: sameBackground, lang: Settings.language, colors: colors,
-
-	// 	}, { sCont: sCont, sPic: sPic });
+	Pictures = maShowPicturesX(keys, labels, dTable, onClickPictureHandler,
+		{ showRepeat: showRepeat, bgs: bgs, repeat: repeat, sameBackground: sameBackground, lang: Settings.language, colors: colors },
+		{ sCont: sCont, sPic: sPic });
 
 	// //use this in case of broken!!!!	
-	Pictures = maShowPictures(keys, labels, dTable, onClickPictureHandler,
-		{
-			showRepeat: showRepeat, picSize: sz, bgs: bgs, repeat: repeat, sameBackground: sameBackground, border: border, lang: Settings.language, colors: colors,
-			contrast: contrast
-		});
+	// Pictures = maShowPictures(keys, labels, dTable, onClickPictureHandler,
+	// 	{
+	// 		showRepeat: showRepeat, picSize: sz, bgs: bgs, repeat: repeat, sameBackground: sameBackground, border: border,
+	// 		lang: Settings.language, colors: colors, contrast: contrast
+	// 	});
 
 	// label hiding
 	let totalPics = Pictures.length;
@@ -783,7 +781,10 @@ function showScore() {
 		}, 300);
 	}
 }
-//function resetScore() { if (nundef(Score)) Score = { gameChange: true, levelChange: true, nTotal: 0, nCorrect: 0, nCorrect1: 0, nPos: 0, nNeg: 0 }; }
+function resetScore() { 
+	if (nundef(Score)) Score={};
+	Score = { gameChange: true, levelChange: true, nTotal: 0, nCorrect: 0, nCorrect1: 0, nPos: 0, nNeg: 0 }; 
+}
 function showStats() {
 
 	if (Score.levelChange) {

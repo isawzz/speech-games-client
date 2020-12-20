@@ -1,3 +1,66 @@
+function getHarmoniousStylesPlusPlusX(sCont, sPic = {}, sText = {}, picPercent, hasText = true) {
+	const sDefault = {
+		cont: { bg: 'random', padding: 0, align: 'center', 'box-sizing': 'border-box' },
+		pic: { bg: 'transparent', fg: 'white' },
+		text: { fg: 'contrast', family: 'arial'} //&& k != 'padding' , padding: 8 }
+	}
+	setDefaultKeys(sCont, sDefault.cont);
+	setDefaultKeys(sPic, sDefault.pic);
+	setDefaultKeys(sText, sDefault.text);
+
+
+	let fact = 55 / picPercent;
+	let [ptop, pbot] = [(80 - picPercent) * 3 / 5, (80 - picPercent) * 2 / 5];
+	//let numbers = hasText ? [ptop, picPercent, 0, 20, pbot] : [15, 70, 0, 0, 15];
+	let numbers = hasText ? [fact * 15, picPercent, 0, fact * 20, fact * 10] : [15, 70, 0, 0, 15];
+	numbers = numbers.map(x => sCont.h * x / 100);
+	let [patop, szPic, zwischen, szText, pabot] = numbers;
+
+	let fz = (Math.floor(szText * 3 / 4)) ;// - sText.padding / 2;
+
+	// patop = Math.max(patop, sCont.padding);
+	// pabot = Math.max(pabot, sCont.padding);
+
+	// // calc padding 
+	// let padding = sCont.padding; delete sCont.padding; // replace padding by patop,pabot,paright,paleft
+	// let fact = 55 / picPercent;
+	// let numbers = hasText ? [fact * 15, picPercent, 0, fact * 20, fact * 10] : [15, 70, 0, 0, 15];
+	// numbers = numbers.map(x => sCont.h * x / 100);
+	// let [patop, szPic, zwischen, szText, pabot] = numbers;
+	// sCont.patop = Math.max(patop, padding);
+	// sCont.pabot = Math.max(pabot, padding);
+	// // if (nundef(sCont.w)) { sCont.paleft = sCont.paright = Math.max(padding, 4); } 
+	// sCont.paleft = sCont.paright = Math.max(padding, 0);
+
+
+	let styles = { h: sCont.h, bg: sCont.bg, fg: isdef(sCont.fg) ? sCont.fg : 'contrast', patop: patop, pabottom: pabot, align: 'center', 'box-sizing': 'border-box' };
+	let textStyles = { family: sText.family, fz: fz };
+	let picStyles = { h: szPic, bg: sPic.bg, fg: isdef(sPic.fg) ? sPic.fg : 'contrast' };
+	if (sCont.w > 0) styles.w = sCont.w; else styles.paleft = styles.paright = Math.max(sCont.padding, 4);
+	for (const k in sCont) { if (k != 'w' && nundef(styles[k])) styles[k] = sCont[k]; }
+	for (const k in sPic) { if (k != 'w' && nundef(picStyles[k])) picStyles[k] = sPic[k]; }
+	for (const k in sText) { if (k != 'w' && nundef(textStyles[k])) textStyles[k] = sText[k]; }
+
+	console.log('patop',styles.patop,'pabot',styles.pabot,'paleft',styles.paleft,'paright',styles.paright)
+
+	return [styles, picStyles, textStyles];
+
+	sPic.h = szPic;
+	sText.fz = Math.floor(szText * 3 / 4);
+
+	//console.log('end of getHarmonious:', sCont.patop, sCont.paright, sCont.pabot, sCont.paleft);
+	return [sCont, sPic, sText];
+	return [sCont, jsCopy(sPic), sText];
+}
+
+
+
+
+
+
+
+
+
 function prelim() {
 	let dParent = dTable;
 	clearElement(dParent);
@@ -58,7 +121,7 @@ function setPicsAndGoal(pics) {
 	return pics[0];
 }
 
-function activateUi2({ onclickPic }={}) {
+function activateUi2({ onclickPic } = {}) {
 	//firstTimeActivate: add handlers!
 	//interpose interact check!
 	if (isdef(onclickPic) && nundef(Pictures[0].div.onclick))

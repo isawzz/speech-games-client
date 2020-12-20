@@ -80,7 +80,7 @@ function evaluate() {
 	[Score.levelChange, nextLevel] = scoring(IsAnswerCorrect); //get here only if this is correct or last trial!
 
 	if (calibrating()) {
-		addScoreToUserSession(G.key, G.level);
+		if (Score.levelChange) addScoreToUserSession(G.key, G.level);
 		if (!IsAnswerCorrect) {
 			setBadgeLevel(nextLevel); Score.gameChange = true; setNextGame();
 			if (isLastCalGame()) { exitCalibrationMode(); } else { TOMain = setTimeout(startGame, DELAY); }

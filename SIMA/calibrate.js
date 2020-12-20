@@ -6,6 +6,11 @@ function exitCalibrationMode() {
 	b.style.backgroundColor = 'transparent';
 
 	[sBefore,sAfter] = calibrateUser();
+
+
+	console.log('Score',Score)
+	resetScore();
+
 	stopGame();
 	gameOver('Your Test Result:',true);
 	addSessionToUserGames();
@@ -13,6 +18,7 @@ function exitCalibrationMode() {
 	setGame(calGame);
 }
 function enterCalibrationMode(all1) {
+	addScoreToUserSession();
 	addSessionToUserGames();
 
 	isCal = true;
