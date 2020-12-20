@@ -11,7 +11,7 @@ nil:
     showLabels: toggle #always never toggle
     incrementLevelOnPositiveStreak: 2
     decrementLevelOnNegativeStreak: 3
-    language: E
+    language: D
     vocab: best100
     spokenFeedback: false
     silentMode: true
