@@ -645,8 +645,8 @@ function resetState() {
 function sayTryAgain() { sayRandomVoice('try again!', 'nochmal'); }
 function sayRandomVoice(e, g) {
 
-	let [p,r,v]=[.9,.9,1];
-	if (!Settings.silentMode) Speech.say(Settings.language == 'E' || nundef(g) ? e : g, p,r,v, 'random');
+	let [r,p,v]=[.8,.9,1];
+	if (!Settings.silentMode) Speech.say(Settings.language == 'E' || nundef(g) ? e : g, r,p,v, 'random',Settings.language);
 }
 function setBadgeLevel(ev) {
 	let i = 0;
