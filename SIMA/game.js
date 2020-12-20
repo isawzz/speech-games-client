@@ -720,7 +720,7 @@ function showPictures(onClickPictureHandler, { showRepeat = false, sz, bgs, colo
 	sameBackground = true, border } = {}, keys, labels) {
 	Pictures = [];
 	if (nundef(keys)) keys = choose(G.keys, G.numPics);
-	keys[0] = 'butterfly'; //keys[0]='man in manual wheelchair';	//keys=['sun with face'];
+	//keys[0] = 'butterfly'; //keys[0]='man in manual wheelchair';	//keys=['sun with face'];
 
 	let sCont = {}; if (isdef(sz)) sCont.w = sCont.h = sz; if (isdef(border)) sCont.border = border; //sCont.padding=8;
 	let sPic = {}; if (isdef(contrast)) sPic.contrast = contrast;
