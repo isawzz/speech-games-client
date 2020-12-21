@@ -79,10 +79,10 @@ function evaluate() {
 	let nextLevel;
 	[Score.levelChange, nextLevel] = scoring(IsAnswerCorrect); //get here only if this is correct or last trial!
 
-	addScoreToUserSession(G.key, G.level);
 	if (calibrating()) {
 		console.log('nextLevel',nextLevel)
 		if (Score.levelChange) {
+			addScoreToUserSession(G.key, G.level);
 			if (nextLevel <= G.maxLevel) setBadgeLevel(nextLevel);
 			if (nextLevel > G.maxLevel) {
 				Score.gameChange = true; setNextGame();
@@ -93,32 +93,13 @@ function evaluate() {
 		} else {
 			TOMain = setTimeout(startRound, DELAY);
 		}
-		// //if (Score.levelChange) addScoreToUserSession(G.key, G.level);
-		// if (!IsAnswerCorrect) {
-		// 	setBadgeLevel(nextLevel); Score.gameChange = true; setNextGame();
-		// 	if (isLastCalGame()) { exitCalibrationMode(); } else { TOMain = setTimeout(startGame, DELAY); }
-		// } else if (IsAnswerCorrect && nextLevel > G.maxLevel) {
-		// 	setBadgeLevel(nextLevel); Score.gameChange = true; setNextGame();
-		// 	if (isLastCalGame()) { exitCalibrationMode(); } else { TOMain = setTimeout(startGame, DELAY); }
-		// } else if (IsAnswerCorrect && !Score.levelChange) {
-		// 	TOMain = setTimeout(startRound, DELAY);
-		// } else if (IsAnswerCorrect && nextLevel <= G.maxLevel && nextLevel != G.level) {
-		// 	setBadgeLevel(nextLevel); G.level = nextLevel; TOMain = setTimeout(startGame, DELAY);
-		// } else {
-		// 	console.log('!!!!!!!!!!!!!!!! UNKNOWN!!!!!!!!!!!!!!!!!!!')
-		// }
 	} else if (!Score.levelChange) {
 		TOMain = setTimeout(startRound, DELAY);
 	} else {
-		//ja weil wenn game change ist ist ja automatisch auch levelchange!!!
-		//addScoreToUserSession(G.key, G.level);
-
-		// if (nextLevel > G.maxLevel) { 
+		addScoreToUserSession(G.key, G.level);
 		setBadgeLevel(nextLevel); //show the last level accomplished in opacity=1!!!
 		Score.gameChange = true;
 		setNextGame();
-		// }else G.level = nextLevel;
-
 
 		if (unitTimeUp()) {
 			//end of unit!

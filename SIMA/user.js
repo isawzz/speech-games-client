@@ -180,6 +180,7 @@ function addScoreToUserSession() {
 	//console.log('updated session:', U.session)
 
 	saveUser();
+	
 	//console.log('+ _addScoreToUserSession +++++++++++++++++++saved user:', U.lastGame, U.lastLevel)
 	//console.log(jsCopy(Score), jsCopy(U.session))
 }
