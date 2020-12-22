@@ -1,189 +1,3 @@
-//#region audio
-var _audioSources = {
-	incorrect1: '../assets/sounds/incorrect1.wav',
-	incorrect3: '../assets/sounds/incorrect3.mp3',
-	goodBye: "../assets/sounds/level1.wav",
-	down: "../assets/sounds/down.mp3",
-	levelComplete: "../assets/sounds/sound1.wav",
-	rubberBand: "../assets/sounds/sound2.wav",
-};
-// var _SND = null;
-var _sndPlayer;
-function playSound(key) {
-	if (isdef(_sndPlayer)) {
-		_sndPlayer.pause();
-		//_sndPlayer.src = 'hallo';
-		_sndPlayer = null;
-		setTimeout(() => playSound(key), 0);
-	} else {
-		_sndPlayer = new Audio(_audioSources[key]);
-		_sndPlayer.play();
-	}
-}
-//#endregion audio
-
-// *** uses assets! =>load after assets! ***
-const EMOFONTLIST = ['emoOpen', 'openmoBlack', 'segoe ui emoji', 'segoe ui symbol'];
-
-//#region NOW
-function maShowPicturesX(keys, labels, dParent, onClickPictureHandler,
-	{ showRepeat, container, lang, bgs, colors, repeat = 1, sameBackground, shufflePositions = true } = {},
-	{ sCont, sPic, sText } = {}) {
-	let pics = [];
-	let items = makeItemForEachKey(keys, labels, { lang, bgs, colors, sameBackground, repeat, shufflePositions });	//make a label for each key
-	let [isText, isOmoji] = calcTextStyle(lang);
-	let numPics = items.length;
-
-	//layout
-	let lines = isdef(colors) ? colors.length : 1;
-	let [pictureSize, picsPerLine] = calcDimsAndSize(numPics, lines, container);
-
-	if (isdef(sCont)) sCont = deepmergeOverride({ rounding: 10, margin: pictureSize / 8 }, sCont);
-	else sCont = { rounding: 10, margin: pictureSize / 8 };
-
-	//if (isdef(picSize)) pictureSize = picSize;
-	if (nundef(sCont.w)) sCont.w = pictureSize;
-	if (nundef(sCont.h)) sCont.h = pictureSize;
-
-	if (nundef(sPic)) sPic = {};
-	//if (isdef(contrast)) sPic.contrast = contrast;
-
-	//console.log('lines',lines,'picsPerLine',picsPerLine, 'items', items, 'numPics', numPics)
-
-	let labelRepeat = {};
-
-	//console.log('_______', jsCopy(sCont));
-	// [sCont, sPic, sText] = getHarmoniousStylesPlusPlusX(sCont, sPic, sText, 65);
-	// [sCont, sPic, sText] = getHarmoniousStylesPlusPlus(sCont, sPic, {}, sCont.w, sCont.h, 65, 0, 'arial', sPic.bg, 'transparent', null, null, true);	//console.log('sCont',sCont);
-
-	for (let line = 0; line < lines; line++) {
-		let textShadowColor;
-		if (isdef(colors)) { sPic.textShadowColor = textShadowColor = colors[line]; labelRepeat = {}; }
-
-		for (let i = 0; i < numPics; i++) {
-
-			let item = items[i];
-
-			//let bg = item.bg; 
-			sCont.bg = item.bg;
-
-			let ipic = (line * picsPerLine + i);
-			if (ipic % picsPerLine == 0 && ipic > 0) { mLinebreak(dParent); }
-			let id = 'pic' + ipic;
-
-			//onClickPictureHandler = ev=>maPicLabelShowHideHandlerX(item.info,ev);
-			let d1 = maPicLabelButtonFitTextX(item.info, item.label, dParent, onClickPictureHandler,
-				// { w: pictureSize, h: pictureSize, bgPic: bg, textShadowColor: textShadowColor, contrast: contrast },
-				//{}, //{ textShadowColor: textShadowColor, contrast: contrast },
-				{ sCont: sCont, sPic: jsCopy(sPic), sText: sText }, 'frameOnHover', isText, isOmoji);
-			d1.id = id;
-
-			//addRowColInfo(d1,line,i,pictureSize);
-			let iRepeat = labelRepeat[item.label];
-			if (nundef(iRepeat)) iRepeat = 1; else iRepeat += 1;
-			labelRepeat[item.label] = iRepeat;
-			if (showRepeat) addRepeatInfo(d1, iRepeat, pictureSize);
-			pics.push({
-				textShadowColor: textShadowColor, key: item.info.key, info: item.info, bg: item.bg, div: d1, id: id,
-				index: ipic, row: line, col: i, iRepeat: iRepeat, label: item.label, isLabelVisible: true, isSelected: false
-			});
-		}
-	}
-	return pics;
-}
-function maPicLabelShowHideHandlerX(info,ev) {
-	let id = evToClosestId(ev);
-	//let info = symbolDict[id.substring(1)];
-	if (isLabelVisible(id)) maHideLabel(id, info); else maShowLabel(id, info);
-	if (isdef(mBy('dummy'))) mBy('dummy').focus();
-
-}
-function maPicLabelButtonFitTextX(info, label, dParent, handler,
-	{ sCont, sPic, sText } = {}, classes = 'picButton', isText, isOmoji, focusElement) {
-
-	//[sCont, sPic, sText] = getHarmoniousStylesPlusPlusX(sCont, sPic, sText, 65);
-	[sCont, sPic, sText] = getHarmoniousStylesPlusPlus(sCont, sPic, {}, sCont.w, sCont.h, 65, 0, 'arial', sCont.bg, 'transparent', null, null, true);	//console.log('sCont',sCont);
-
-	//console.log(sCont)
-	//console.log(sPic)
-
-	let x = maPicLabelFitXX(info, label.toUpperCase(), sCont.w, dParent, sCont, sPic, sText, isText, isOmoji);
-	// let x = maPicLabelFitX(info, label.toUpperCase(), { wmax: sCont.w }, dParent, sCont, sPic, sText, isText, isOmoji);
-
-	x.id = 'd' + info.key;
-	if (isdef(handler)) x.onclick = handler;
-	x.style.cursor = 'pointer';
-	x.lastChild.style.cursor = 'pointer';
-	x.style.userSelect = 'none';
-	mClass(x, classes);
-	return x;
-}
-function setDefaultKeys(o, defs) { for (const k in defs) { if (nundef(o[k])) o[k] = defs[k]; } }
-function convertTextShadowColorAndContrast(picStyles) {
-	if (isdef(picStyles.textShadowColor)) {
-		let sShade = '0 0 0 ' + picStyles.textShadowColor;
-		picStyles['text-shadow'] = sShade;
-		picStyles.fg = anyColorToStandardString('black', picStyles.contrast);
-		delete picStyles.textShadowColor;
-		delete picStyles.contrast;
-	}
-}
-function maPicLabelFitXX(info, label, wmax, dParent, sCont, sPic, sText, isText = true, isOmoji = false) {
-	let d = mDiv(dParent);
-	convertTextShadowColorAndContrast(sPic);
-
-	//console.log(sPic)
-	//console.log('start of maPicLabelFitXX:', sCont.patop, sCont.paright, sCont.pabot, sCont.paleft, sCont.h, sPic.h);
-
-	let dPic = maPic(info, d, sPic, isText, isOmoji);
-	//measurements
-	let wAvail, hAvail;
-	hAvail = sCont.h - (sCont.patop + sPic.h);
-	wAvail = sCont.w;
-	if (isdef(wmax) && wmax != 'auto') { wAvail = Math.min(wAvail, wmax); }
-	let styles1 = sText;
-	let size = getSizeWithStylesX(label, styles1, wAvail);
-	let size1 = getSizeWithStylesX(label, styles1);
-	let f1 = wAvail / size1.w;
-	let isTextOverflow = f1 < 1;
-	if (f1 < 1) { sText.fz *= f1; sText.fz = Math.floor(sText.fz); }
-	let [wBound, hBound] = [size.w, undefined];
-	let dText = mTextFit(label, { wmax: wBound, hmax: hBound }, d, sText, isTextOverflow ? ['truncate'] : null);
-	mStyleX(d, sCont);
-	dText.style.margin = 'auto';
-	return d;
-}
-function makeItemForEachKey(keys, labels, { lang, bgs, colors, sameBackground, repeat, shufflePositions }) {
-	let items = [];
-	for (let i = 0; i < keys.length; i++) {
-		let k = keys[i];
-		let info = isdef(lang) ? getRandomSetItem(lang, k) : symbolDict[k];
-		let bg = isList(bgs) ? bgs[i] : isdef(colors) ? 'white' : sameBackground ? computeColor('random') : 'random';
-		let label = isList(labels) ? labels[i] : isdef(lang) ? info.best : k;
-		items.push({ key: k, info: info, label: label, bg: bg, iRepeat: 1 });
-	}
-	//console.log('________________',items,repeat)
-	let items1 = jsCopy(items);
-	for (let i = 0; i < repeat - 1; i++) {
-		// let newItems=jsCopy(items);
-		// for(const it of newItems) it.iRepeat=i+1;
-		items = items.concat(items1);
-	}
-	//console.log('________________',items,repeat)
-	if (shufflePositions) { shuffle(items); }
-	return items;
-}
-function calcTextStyle(lang) {
-	let isText = true;
-	let isOmoji = false;
-	if (isdef(lang)) {
-		let textStyle = getParamsForMaPicStyle('twitterText');
-		isText = textStyle.isText;
-		isOmoji = textStyle.isOmoji;
-	}
-	return [isText, isOmoji];
-}
-
 //#region november 2020
 function maShowPictures(keys, labels, dParent, onClickPictureHandler,
 	{ showRepeat, container, lang, border, picSize, bgs, colors, contrast, repeat = 1,
@@ -285,7 +99,7 @@ function maShowPictures(keys, labels, dParent, onClickPictureHandler,
 	return pics;
 }
 function maPicLabelButtonFitText(info, label, { w, h, bgPic, textShadowColor, contrast, sPic = {} }, handler, dParent, styles, classes = 'picButton', isText, isOmoji, focusElement) {
-	console.log('sPic', sPic)
+	//console.log('sPic', sPic)
 	let picLabelStyles = getHarmoniousStylesPlusPlus(styles, sPic, {}, w, h, 65, 0, 'arial', bgPic, 'transparent', null, null, true);
 
 	let x = maPicLabelFitX(info, label.toUpperCase(), { wmax: w, textShadowColor: textShadowColor, contrast: contrast }, dParent, picLabelStyles[0], picLabelStyles[1], picLabelStyles[2], isText, isOmoji);
@@ -406,21 +220,28 @@ function addRowColInfo(dPic, row, col, szPic) {
 	let d3 = mText('col:' + col, dPic, { fz: szi, color: 'black', position: 'absolute', left: szi, top: (szi / 2 + szi + 2) })
 }
 function addRepeatInfo(dPic, iRepeat, szPic) {
+	//console.log(dPic,iRepeat,szPic)
 	let szi = Math.max(Math.floor(szPic / 8), 8);
-	console.log(szi);
+	//console.log(szi);
 	dPic.style.position = 'relative';
-	let d2 = mText('' + iRepeat, dPic, { fz: szi, weight: 'bold', color: 'black', position: 'absolute', left: szi / 2, top: szi / 2 - 2 })
+	let d2 = mText('' + iRepeat, dPic, { fz: szi, weight: 'bold', fg: 'black', position: 'absolute', left: szi / 2, top: szi / 2 - 2 });
 	// let d3 = mText('col:' + col, dPic, { fz: szi, color: 'black', position: 'absolute', left: szi, top: (szi / 2 + szi + 2) })
+	return d2;
 }
-function calcDimsAndSize(numPics, lines, container) {
+function calcDimsAndSize(numPics, lines, dParent, wmax, hmax) {
 
 	let ww, wh, hpercent, wpercent;
-	if (isdef(container)) {
-		let b = getBounds(container);
+	if (isdef(dParent)) {
+		let b = getBounds(dParent);
 		ww = b.width;
 		wh = b.height;
 		hpercent = .9;
 		wpercent = .9;
+	} else if (isdef(wmax) && isdef(hmax)) {
+		ww = wmax;
+		wh = hmax;
+		hpercent = .6;
+		wpercent = .6;
 	} else {
 		ww = window.innerWidth;
 		wh = window.innerHeight;
@@ -974,7 +795,7 @@ function maHideLabel(id, info) {
 	let [ptop, pbottom] = [firstNumber(d.style.paddingTop), firstNumber(d.style.paddingBottom)];
 	//console.log('___________', ptop, pbottom)
 	let p = (isdef(ptop) && isdef(pbottom)) ? Math.min(ptop, pbottom) :
-		isdef(ptop) ? ptop : isdef(pbottom) ? pbottom/2 : 0;
+		isdef(ptop) ? ptop : isdef(pbottom) ? pbottom / 2 : 0;
 	let [padw, padh] = [p, p];
 	let [wtotal, htotal] = [styles.w, styles.h];
 	let [wpic, hpic] = [wtotal - 2 * padw, htotal - 2 * padh];
@@ -999,7 +820,7 @@ function maHideLabel(id, info) {
 	info.wOrig = dPic.style.width;
 	info.hOrig = dPic.style.height;
 	innerStyles.w = wreal;
-	innerStyles.h = hreal+2*padh;
+	innerStyles.h = hreal + 2 * padh;
 	mStyleX(dPic, innerStyles);
 
 	let outerStyles = {};
@@ -1008,7 +829,7 @@ function maHideLabel(id, info) {
 	info.paddingTopOrig = d.style.paddingTop;
 	info.paddingBottomOrig = d.style.paddingBottom;
 	// outerStyles.padding = '' + padh + 'px ' + padw + 'px';
-	outerStyles.padding = '' + 2*padh + 'px ' + padw + 'px' + '0' + 'px ' + padw + 'px';
+	outerStyles.padding = '' + 2 * padh + 'px ' + padw + 'px' + '0' + 'px ' + padw + 'px';
 	mStyleX(d, outerStyles);
 
 }

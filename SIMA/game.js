@@ -1,17 +1,5 @@
 var TOList;
 
-function addNthInputElement(dParent, n) {
-	mLinebreak(dParent, 10);
-	let d = mDiv(dParent);
-	let dInp = mCreate('input');
-	dInp.type = "text"; dInp.autocomplete = "off";
-	dInp.style.margin = '10px;'
-	dInp.id = 'inputBox' + n;
-	dInp.style.fontSize = '20pt';
-	mAppend(d, dInp);
-	return dInp;
-}
-
 //#region animations
 function animateColor(elem, from, to, classes, ms) {
 	elem.style.backgroundColor = from;
@@ -21,11 +9,6 @@ function animate(elem, aniclass, timeoutms) {
 	mClass(elem, aniclass);
 	setTimeout(() => mRemoveClass(elem, aniclass), timeoutms);
 }
-// function animate(elem, aniclass, timeoutms) {
-// 	if (!(isList(aniclass))) aniclass=[aniclass];
-// 	mClasses(elem, aniclass);
-// 	setTimeout(() => mRemoveClasses(elem, aniclass), timeoutms);
-// }
 function aniInstruction(spoken) {
 	if (isdef(spoken)) sayRandomVoice(spoken);
 	mClass(dInstruction, 'onPulse');
@@ -426,43 +409,7 @@ function slowlyTurnFaceDown(pic, secs = 5, removeBg = false) {
 	pic.isFaceUp = false;
 
 }
-function turnFaceDown(pic) {
-	let ui = pic.div;
-	for (const p1 of ui.children) p1.style.opacity = 0; //hide(p1);
-	ui.style.backgroundColor = 'dimgray';
-	pic.isFaceUp = false;
-
-}
-function turnFaceUp(pic) {
-	let div = pic.div;
-	for (const ch of div.children) {
-		ch.style.transition = `opacity ${1}s ease-in-out`;
-		ch.style.opacity = 1; //show(ch,true);
-		if (!pic.isLabelVisible) break;
-	}
-	div.style.transition = null;
-	div.style.backgroundColor = pic.bg;
-	pic.isFaceUp = true;
-}
-function toggleFace(pic) { if (pic.isFaceUp) turnFaceDown(pic); else turnFaceUp(pic); }
 //#endregion cards: turn face up or down
-
-function calcMemorizingTime(numItems, randomGoal = true) {
-	//let ldep = Math.max(6, G.level > 2 ? G.numPics * 2 : G.numPics);
-	let ldep = Math.max(6, randomGoal ? numItems * 2 : numItems);
-	return ldep;
-}
-
-function clearTable() {
-	clearElement(dLineTableMiddle); clearElement(dLineTitleMiddle); removeMarkers();
-}
-function containsColorWord(s) {
-	let colors = ['old', 'blond', 'red', 'blue', 'green', 'purple', 'black', 'brown', 'white', 'grey', 'gray', 'yellow', 'orange'];
-	for (const c of colors) {
-		if (s.toLowerCase().includes(c)) return false;
-	}
-	return true;
-}
 
 //#region fail, hint, success
 function successThumbsUp(withComment = true) {
@@ -621,6 +568,32 @@ function aniGameOver(msg, silent = false) {
 }
 //#endregion game over
 
+function addNthInputElement(dParent, n) {
+	mLinebreak(dParent, 10);
+	let d = mDiv(dParent);
+	let dInp = mCreate('input');
+	dInp.type = "text"; dInp.autocomplete = "off";
+	dInp.style.margin = '10px;'
+	dInp.id = 'inputBox' + n;
+	dInp.style.fontSize = '20pt';
+	mAppend(d, dInp);
+	return dInp;
+}
+function calcMemorizingTime(numItems, randomGoal = true) {
+	//let ldep = Math.max(6, G.level > 2 ? G.numPics * 2 : G.numPics);
+	let ldep = Math.max(6, randomGoal ? numItems * 2 : numItems);
+	return ldep;
+}
+function clearTable() {
+	clearElement(dLineTableMiddle); clearElement(dLineTitleMiddle); removeMarkers();
+}
+function containsColorWord(s) {
+	let colors = ['old', 'blond', 'red', 'blue', 'green', 'purple', 'black', 'brown', 'white', 'grey', 'gray', 'yellow', 'orange'];
+	for (const c of colors) {
+		if (s.toLowerCase().includes(c)) return false;
+	}
+	return true;
+}
 function getGameOrLevelInfo(k, defval) {
 	let val = lookup(GS, [G.key, 'levels', G.level, k]);
 	if (!val) val = lookupSet(GS, [G.key, k], defval);
@@ -645,8 +618,8 @@ function resetState() {
 function sayTryAgain() { sayRandomVoice('try again!', 'nochmal'); }
 function sayRandomVoice(e, g) {
 
-	let [r,p,v]=[.8,.9,1];
-	if (!Settings.silentMode) Speech.say(Settings.language == 'E' || nundef(g) ? e : g, r,p,v, 'random');
+	let [r, p, v] = [.8, .9, 1];
+	if (!Settings.silentMode) Speech.say(Settings.language == 'E' || nundef(g) ? e : g, r, p, v, 'random');
 }
 function setBadgeLevel(ev) {
 	let i = 0;
@@ -718,24 +691,29 @@ function showInstruction(text, cmd, title, isSpoken, spoken, fz) {
 
 }
 function showPictures(onClickPictureHandler, { showRepeat = false, sz, bgs, colors, contrast, repeat = 1,
-	sameBackground = true, border } = {}, keys, labels) {
+	sameBackground = true, border, textColor, fz = 20 } = {}, keys, labels) {
 	Pictures = [];
 	if (nundef(keys)) keys = choose(G.keys, G.numPics);
-	//keys[0] = 'butterfly'; //keys[0]='man in manual wheelchair';	//keys=['sun with face'];
+	//keys=['toolbox','tiger']; //keys[0] = 'butterfly'; //keys[0]='man in manual wheelchair';	//keys=['sun with face'];
 
-	let sCont = {}; if (isdef(sz)) sCont.w = sCont.h = sz; if (isdef(border)) sCont.border = border; //sCont.padding=8;
-	let sPic = {}; if (isdef(contrast)) sPic.contrast = contrast;
-	Pictures = maShowPicturesX(keys, labels, dTable, onClickPictureHandler,
-		{ showRepeat: showRepeat, bgs: bgs, repeat: repeat, sameBackground: sameBackground, lang: Settings.language, colors: colors },
-		{ sCont: sCont, sPic: sPic });
-
+	//#region experimental code not activated yet!!!
+	// let sCont = {}; if (isdef(sz)) sCont.w = sCont.h = sz; if (isdef(border)) sCont.border = border; //sCont.padding=8;
+	// let sPic = {}; if (isdef(contrast)) sPic.contrast = contrast;
+	// let sText = { fz: fz };
+	// Pictures = maShowPicturesX3(keys, labels, dTable, onClickPictureHandler,
+	// 	{ showRepeat: showRepeat, bgs: bgs, repeat: repeat, sameBackground: sameBackground, lang: Settings.language, colors: colors, textColor: textColor },
+	// 	//	{ sCont: sCont, sPic: sPic, sText: sText });
+	// 	{ sCont: { w: 200, h: 200, padding: 10, align: 'center' }, sPic: { contrast: .3 }, sText: { fz: 20 } });
 	// //use this in case of broken!!!!	
-	// Pictures = maShowPictures(keys, labels, dTable, onClickPictureHandler,
-	// 	{
-	// 		showRepeat: showRepeat, picSize: sz, bgs: bgs, repeat: repeat, sameBackground: sameBackground, border: border,
-	// 		lang: Settings.language, colors: colors, contrast: contrast
-	// 	});
+	//#endregion
 
+	Pictures = maShowPictures(keys, labels, dTable, onClickPictureHandler,
+		{
+			showRepeat: showRepeat, picSize: sz, bgs: bgs, repeat: repeat, sameBackground: sameBackground, border: border,
+			lang: Settings.language, colors: colors, contrast: contrast
+		});
+
+	
 	// label hiding
 	let totalPics = Pictures.length;
 	if (nundef(Settings.labels) || Settings.labels) {
@@ -782,9 +760,9 @@ function showScore() {
 		}, 300);
 	}
 }
-function resetScore() { 
-	if (nundef(Score)) Score={};
-	Score = { gameChange: true, levelChange: true, nTotal: 0, nCorrect: 0, nCorrect1: 0, nPos: 0, nNeg: 0 }; 
+function resetScore() {
+	if (nundef(Score)) Score = {};
+	Score = { gameChange: true, levelChange: true, nTotal: 0, nCorrect: 0, nCorrect1: 0, nPos: 0, nNeg: 0 };
 }
 function showStats() {
 

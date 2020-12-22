@@ -29,6 +29,7 @@ class SpeechAPI {
 	}
 
 	say(text, r = .5, p = .8, v = .5, voicekey, callback, lang) {
+		
 		//what happens if change lang in the middle of speaking???
 		if (isdef(lang)) this.speaker.setLanguage(lang);
 		this.speaker.enq(arguments);

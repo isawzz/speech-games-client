@@ -1,37 +1,4 @@
 function initScore() { Score = { gameChange: true, levelChange: true, nTotal: 0, nCorrect: 0, nCorrect1: 0, nPos: 0, nNeg: 0 }; }
-function scoreSummary() {
-
-
-
-	let scoreByGame = {};
-	for (const gdata of CurrentSessionData.games) {
-		let gname = gdata.name;
-		let nTotal = 0;
-		let nCorrect = 0;
-		for (const ldata of gdata.levels) {
-			if (nundef(ldata.Score.nTotal)) continue;
-			nTotal += ldata.Score.nTotal;
-			nCorrect += ldata.Score.nCorrect;
-		}
-		if (nTotal == 0) continue;
-		if (isdef(scoreByGame[gname])) {
-			scoreByGame[gname].nTotal += nTotal;
-			scoreByGame[gname].nCorrect += nCorrect;
-		} else {
-			scoreByGame[gname] = { name: gname, nTotal: nTotal, nCorrect: nCorrect };
-		}
-	}
-	//console.log('game',game);
-	for (const gname in scoreByGame) {
-		let tot = scoreByGame[gname].nTotal;
-		if (nundef(tot) || tot == 0) continue;
-		let corr = scoreByGame[gname].nCorrect;
-		scoreByGame[gname].percentage = Math.round((corr / tot) * 100);
-	}
-
-	return scoreByGame;
-
-}
 function lastStreakFalse(items) {
 	let n = Settings.decrementLevelOnNegativeStreak;
 	let iFrom = items.length - 1;

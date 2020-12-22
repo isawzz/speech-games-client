@@ -1,5 +1,5 @@
 window.onload = _loader;
-window.onunload = saveRealUser;
+window.onunload = saveUser;
 
 async function _loader() {
 	//timit = new TimeIt('start');
@@ -18,7 +18,6 @@ async function _start() {
 	initSidebar();
 	initAux();
 	initScore();
-	
 
 	Speech = new SpeechAPI('E');
 	KeySets = getKeySets();
@@ -27,20 +26,17 @@ async function _start() {
 	loadUser(); //sets G,U,GS,Settings
 	console.assert(isdef(G))
 
+	//test03_maShowPictures(); return;
 	if (SHOW_FREEZER) show('freezer'); else startUnit();
 
 }
-
 function startUnit() {
 
 	restartTime();
 	if (nundef(U.session)) U.session = {};
 	//console.log('---_startUnit: session', U.session);
 
-	//hier soll U.session laden 
-	UnitScoreSummary = {};
-
-	if (PROD_START) {PROD_START=false; onClickTemple();} else startGame();
+	if (PROD_START) { PROD_START = false; onClickTemple(); } else startGame();
 	//show('freezer2')
 	//onClickCalibrate();
 	//onClickTemple();
