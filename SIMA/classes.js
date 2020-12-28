@@ -347,11 +347,12 @@ class GSteps extends Game {
 		// console.log(Goal)
 
 		let cmd = 'click';
-		let spoken = [], written = [];
+		let spoken = [], written = [], corr = []; 
 		for (let i = 0; i < G.numSteps; i++) {
 			let goal = Goal.pics[i];
 			let sOrdinal = getOrdinal(goal.iRepeat);
-			[written[i], spoken[i]] = getOrdinalColorLabelInstruction(cmd, sOrdinal, goal.color, goal.label);
+			[written[i], spoken[i], corr[i]] = getOrdinalColorLabelInstruction(cmd, sOrdinal, goal.color, goal.label);
+			goal.correctionPhrase = corr[i];
 			cmd = 'then';
 		}
 		// console.log('written', written, '\nspoken', spoken);

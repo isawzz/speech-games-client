@@ -537,7 +537,7 @@ function showCorrectWords(sayit = true) {
 		TOList.correctWords.push(setTimeout(() => {
 			let div = mBy(goal.id);
 			mClass(div, anim);
-			if (speaking) sayRandomVoice('the ' + goal.correctionPhrase);
+			if (speaking) sayRandomVoice((Settings.language == 'E'?'the ':' ') + goal.correctionPhrase);
 		}, to));
 		to += ms;
 	}
@@ -586,10 +586,10 @@ function fleetingMessage(msg, styles, fade = false) {
 //#endregion fleetingMessage
 
 //#region game over
-function writeSound(){return; console.log('calling playSound');}
+function writeSound() { return; console.log('calling playSound'); }
 function gameOver(msg, silent = false) { TOMain = setTimeout(aniGameOver(msg, silent), DELAY); }
 function aniGameOver(msg, silent = false) {
-	if (!silent && !Settings.silentMode) {writeSound();playSound('goodBye');} 
+	if (!silent && !Settings.silentMode) { writeSound(); playSound('goodBye'); }
 	enterInterruptState();
 	show('freezer2');
 
@@ -657,7 +657,7 @@ function getGameValues(user, game, level) {
 	let di = { numColors: 1, numRepeat: 1, numPics: 1, numSteps: 1, trials: Settings.trials, colors: ColorList }; // general defaults
 	let oGame = lookup(GS, [game]);
 	if (isDict(oGame)) {
-		di = deepmergeOverride(di,oGame); //das ist die entry in settings.yaml
+		di = deepmergeOverride(di, oGame); //das ist die entry in settings.yaml
 		let levelInfo = lookup(di, ['levels', level]); //das sind specific values for this level
 		if (isdef(levelInfo)) { di = deepmergeOverride(di, levelInfo); }
 	}
@@ -721,13 +721,17 @@ function getOrdinalColorLabelInstruction(cmd, ordinal, color, label) {
 	let eInstr = `${eCommand} ${ordinal} ${colorWord} ${label}`;
 	let dInstr = ordinal == '' ? `${dCommand} ${label} ${colorWord == '' ? '' : 'in ' + colorWord}`
 		: `${dCommand} ${ordinal} ${colorWord} ${label}`;
+	let ecorr = `${ordinal} ${colorWord} ${label}`
+	let dcorr = ordinal == '' ? `${label} ${colorWord == '' ? '' : 'in ' + colorWord}`
+		: `${ordinal} ${colorWord} ${label}`;
+	let corr = Settings.language == 'E' ? ecorr : dcorr;
 	let spoken = Settings.language == 'E' ? eInstr : dInstr;
 	let written = spoken.replace(colorWord, colorSpan).replace(label, labelSpan);
 	//console.log('spoken', spoken, 'written', written);
-	return [written, spoken];
+	return [written, spoken, corr];
 }
-function removePicture(pic){
-	removeInPlace(Pictures,pic);
+function removePicture(pic) {
+	removeInPlace(Pictures, pic);
 	pic.div.remove();
 }
 function resetRound() {
@@ -750,7 +754,7 @@ function resetState() {
 
 }
 function sayTryAgain() { sayRandomVoice('try again!', 'nochmal'); }
-function sayRandomVoice(e, g, voice='random') {
+function sayRandomVoice(e, g, voice = 'random') {
 
 	let [r, p, v] = [.8, .9, 1];
 	//let voice = Settings.language == 'E' && (e.includes('<') || (e.includes('>')) ?'zira':'random';
@@ -825,7 +829,7 @@ function showInstruction(text, cmd, title, isSpoken, spoken, fz) {
 	sayRandomVoice(isdef(spoken) ? spoken : (cmd + " " + text));
 
 }
-function showInstructionX(written, dParent, spoken, {fz,voice}={}) {
+function showInstructionX(written, dParent, spoken, { fz, voice } = {}) {
 	//console.assert(title.children.length == 0,'TITLE NON_EMPTY IN SHOWINSTRUCTION!!!!!!!!!!!!!!!!!')
 	//console.log('G.key is', G.key)
 	clearElement(dParent);
@@ -844,7 +848,7 @@ function showInstructionX(written, dParent, spoken, {fz,voice}={}) {
 	dFeedback = dInstruction = d;
 
 	dInstruction.addEventListener('click', () => aniInstruction(spoken));
-	if (isdef(spoken)) sayRandomVoice(spoken,spoken,voice);
+	if (isdef(spoken)) sayRandomVoice(spoken, spoken, voice);
 
 }
 function showHiddenThumbsUpDown(styles) {

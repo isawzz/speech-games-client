@@ -1,7 +1,7 @@
 nil:
   id: nil
   seq: [gTouchPic, gPremem, gTouchColors, gMissingLetter, gSteps, gSayPic, gMem, gMissingNumber, gWritePic, gElim]
-  lastGame: gTouchPic
+  lastGame: gSteps
   lastLevel: 4
   settings:
     # settings common to all games
@@ -10,7 +10,7 @@ nil:
     incrementLevelOnPositiveStreak: 12
     decrementLevelOnNegativeStreak: 3
     showLabels: toggle #always never toggle (=remove labels after half level)
-    language: E
+    language: D
     vocab: best100
     showTime: true
     spokenFeedback: true
@@ -28,7 +28,7 @@ nil:
     gSteps:
       startLevel: 3
       settings:
-        trials: 5
+        trials: 2
 guest0:
   id: guest
   seq: [gTouchPic, gPremem, gTouchColors, gMissingLetter, gSteps, gSayPic, gMem, gMissingNumber, gWritePic]
