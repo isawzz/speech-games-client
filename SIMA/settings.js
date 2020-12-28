@@ -1,25 +1,47 @@
 var SelectedMenuKey, MenuItems;
+var SettingTypesCommon = {
+	samplesPerLevel: true,
+	minutesPerUnit: true,
+	incrementLevelOnPositiveStreak: true,
+	decrementLevelOnNegativeStreak: true,
+	showLabels: true,
+	language: true,
+	vocab: true,
+	showTime: true,
+	spokenFeedback: true,
+	silentMode: true,
+	switchGame: true,
+	trials: false,
+	showHint: false,
+}
 
 function createSettingsUi(dParent) {
 	clearElement(dParent);
-	mAppend(dParent, createElementFromHTML(`<h1>Settings for ${USERNAME}:</h1>`));
+	let ttag = 'h2';
+	mAppend(dParent, createElementFromHTML(`<${ttag}>Common Settings for ${USERNAME}:</${ttag}>`));
 
 	let nGroupNumCommonAllGames = mInputGroup(dParent);
 	setzeEineZahl(nGroupNumCommonAllGames, 'samples', 25, ['samplesPerLevel']);
 	setzeEineZahl(nGroupNumCommonAllGames, 'minutes', 1, ['minutesPerUnit']);
 	setzeEineZahl(nGroupNumCommonAllGames, 'correct streak', 5, ['incrementLevelOnPositiveStreak']);
 	setzeEineZahl(nGroupNumCommonAllGames, 'fail streak', 2, ['decrementLevelOnNegativeStreak']);
-	setzeEineZahl(nGroupNumCommonAllGames, 'trials', 3, ['trials']);
-	setzeEinOptions(nGroupNumCommonAllGames, 'show labels', ['toggle', 'always', 'never'], 'toggle', ['showLabels']);
-	setzeEinOptions(nGroupNumCommonAllGames, 'language', ['E', 'D'], 'E', ['language']);
-	setzeEinOptions(nGroupNumCommonAllGames, 'vocabulary', Object.keys(KeySets), 'best25', ['vocab']);
-
-	//let nGroupOther = mInputGroup(dParent);
+	setzeEinOptions(nGroupNumCommonAllGames, 'show labels', ['toggle', 'always', 'never'], ['toggle', 'always', 'never'], 'toggle', ['showLabels']);
+	setzeEinOptions(nGroupNumCommonAllGames, 'language', ['E', 'D'], ['English', 'German'], 'E', ['language']);
+	setzeEinOptions(nGroupNumCommonAllGames, 'vocabulary', Object.keys(KeySets), Object.keys(KeySets), 'best25', ['vocab']);
 	setzeEineCheckbox(nGroupNumCommonAllGames, 'show time', false, ['showTime']);
 	setzeEineCheckbox(nGroupNumCommonAllGames, 'spoken feedback', true, ['spokenFeedback']);
 	setzeEineCheckbox(nGroupNumCommonAllGames, 'silent', false, ['silentMode']);
-	setzeEineCheckbox(nGroupNumCommonAllGames, 'switch game after max level', false, ['switchGame']);
-	setzeEineCheckbox(nGroupNumCommonAllGames, 'show hint', true, ['showHint']);
+	setzeEineCheckbox(nGroupNumCommonAllGames, 'switch game after level', false, ['switchGame']);
+
+
+	mLinebreak(dParent);
+	let g = GAME[G.key];
+	if (nundef(g)) return;
+	mAppend(dParent, createElementFromHTML(`<${ttag}>Settings for <span style='color:${g.color}'>${g.friendly}</span></${ttag}>`));
+
+	let nGroupSpecific = mInputGroup(dParent);
+	setzeEineZahl(nGroupSpecific, 'trials', 3, ['trials']);
+	setzeEineCheckbox(nGroupSpecific, 'show hint', true, ['showHint']);
 
 }
 function createMenuUi(dParent) {
@@ -39,12 +61,13 @@ function createMenuUi(dParent) {
 	let bgs = games.map(g => GAME[g].color);
 
 	MenuItems = {};
-	let pics = maShowPictures(keys, labels, d, onClickGo,	{ bgs: bgs, shufflePositions: false }, { fg: 'blue' });
+	let pics = maShowPictures(keys, labels, d, onClickGo, { bgs: bgs, shufflePositions: false }, { fg: 'blue' });
 	//let pics = maShowPicturesX(keys, labels, d, onClickGo, { bgs: bgs, shufflePositions: false }, { sPic: { fg: 'white' }}); //, sText:{family:'AlgerianRegular'} });
 	for (let i = 0; i < pics.length; i++) {
 		let p = pics[i];
 		//console.log(p)
 		p.div.id = 'menu_' + p.label.substring(0, 3);
+		p.div.children[0].style.color = 'white';//TODO!!!!!!
 		let key = p.div.key = games[i];
 		MenuItems[key] = p;
 	}
@@ -57,21 +80,84 @@ function createMenuUi(dParent) {
 	//console.log(SelectedMenuKey)
 }
 
+function initSettings(game) {
+	Settings = deepmergeOverride(DB.settings, U.settings);
+	GS = Settings.games;
+	delete Settings.games;
+	let gsSettings = lookup(U, ['games', game, 'settings']);
+	if (isdef(gsSettings)) Settings = deepmergeOverride(Settings, gsSettings);
+	//lookupSetOverride(U,['games',game,'settings'],Settings);
+	updateSettings();
 
-//#region create elements for settings 
-function mInputGroup(dParent, styles) {
-	let baseStyles = { display: 'inline-block', align: 'right', bg: '#00000080', rounding: 10, padding: 20, margin: 12 };
-	if (isdef(styles)) styles = deepmergeOverride(baseStyles, styles); else styles = baseStyles;
-	return mDiv(dParent, styles);
 }
+
+//#region update Settings after ui change
+function updateSettings() {
+
+	updateLabelSettings();
+	updateTimeSettings();
+	updateKeySettings();
+	updateSpeakmodeSettings();
+
+	//welche settings kommen wohin?
+	for (const k in SettingTypesCommon) {
+		if (SettingTypesCommon[k]) {
+			//console.log('should be set for all games:',k,Settings[k]);
+
+			lookupSetOverride(U,['settings',k],Settings[k]);
+
+		} else {
+			if (isdef(G.key)) lookupSetOverride(U,['games',G.key,'settings',k],Settings[k]);
+
+		}
+	}
+
+}
+function updateSpeakmodeSettings() {
+	if (Settings.silentMode && Settings.spokenFeedback) Settings.spokenFeedback = false;
+
+}
+function updateKeySettings(nMin) {
+	//console.log(G,KeySets);
+	if (nundef(G)) return;
+	G.keys = setKeys({ nMin, lang: Settings.language, keysets: KeySets, key: Settings.vocab });
+	//console.log('keyset:', G.keys);
+}
+function updateTimeSettings() {
+	let timeElem = mBy('time');
+	//console.log('updateTimeSettings',_getFunctionsNameThatCalledThisFunction())
+	if (Settings.showTime) { show(timeElem); startTime(timeElem); }
+	else hide(timeElem);
+}
+function updateLabelSettings() {
+	if (Settings.showLabels == 'toggle') Settings.labels = true;
+	else Settings.labels = (Settings.showLabels == 'always');
+}
+
+//#region store settings val after edit
 function setSettingsKeys(elem) {
-	// console.log('lllllllllllllllll', a, a.value, a.keyList);
 	let val = elem.type == 'number' ? Number(elem.value) : elem.type == 'checkbox' ? elem.checked : elem.value;
 	lookupSetOverride(Settings, elem.keyList, val);
 	SettingsChanged = true;
-	//console.log(elem.keyList, val)
+	console.log(elem.keyList, val)
 	//console.log(Settings);
 }
+function setSettingsKeysSelect(elem) {
+
+	let val;
+	for (const opt of elem.children) {
+		if (opt.selected) val = opt.value;
+	}
+
+	// console.log('lllllllllllllllll', a, a.value, a.keyList);
+	//let val = elem.type == 'number' ? Number(elem.value) : elem.value;
+	SettingsChanged = true;
+	lookupSetOverride(Settings, elem.keyList, val);
+	console.log('result', lookup(Settings, elem.keyList));
+}
+
+
+//#region create elements for settings 
 function setzeEineZahl(dParent, label, init, skeys) {
 	// <input id='inputPicsPerLevel' class='input' type="number" value=1 />
 	let d = mDiv(dParent);
@@ -108,28 +194,18 @@ function setzeEineCheckbox(dParent, label, init, skeys) {
 
 	inp.keyList = skeys;
 }
-function setSettingsKeysSelect(elem) {
+function setzeEinOptions(dParent, label, optionList, friendlyList, init, skeys) {
 
-	let val;
-	for (const opt of elem.children) {
-		if (opt.selected) val = opt.value;
-	}
-
-	// console.log('lllllllllllllllll', a, a.value, a.keyList);
-	//let val = elem.type == 'number' ? Number(elem.value) : elem.value;
-	SettingsChanged = true;
-	lookupSetOverride(Settings, elem.keyList, val);
-	console.log('result', lookup(Settings, elem.keyList));
-}
-function setzeEinOptions(dParent, label, optionList, init, skeys) {
 	// <input id='inputPicsPerLevel' class='input' type="number" value=1 />
 	let d = mDiv(dParent);
 	let val = lookup(Settings, skeys);
 	if (nundef(val)) val = init;
 
-	let inp = createElementFromHTML(`<select onfocusout="setSettingsKeysSelect(this)"></select>`);
-	for (const opt of optionList) {
-		let optElem = createElementFromHTML(`<option value="${opt}">${opt}</option>`);
+	let inp = createElementFromHTML(`<select class="options" onfocusout="setSettingsKeysSelect(this)"></select>`);
+	for (let i = 0; i < optionList.length; i++) {
+		let opt = optionList[i];
+		let friendly = friendlyList[i];
+		let optElem = createElementFromHTML(`<option value="${opt}">${friendly}</option>`);
 		mAppend(inp, optElem);
 		if (opt == val) optElem.selected = true;
 	}
@@ -145,39 +221,10 @@ function setzeEinOptions(dParent, label, optionList, init, skeys) {
 }
 
 
-//#region update Settings after ui change
-function updateComplexSettings() {
-
-	updateLabelSettings();
-	updateTimeSettings();
-	updateKeySettings();
-
-	//console.log('halo!')
-	updateSpeakmodeSettings();
-
-
+//#region helpers
+function mInputGroup(dParent, styles) {
+	let baseStyles = { display: 'inline-block', align: 'right', bg: '#00000080', rounding: 10, padding: 20, margin: 12 };
+	if (isdef(styles)) styles = deepmergeOverride(baseStyles, styles); else styles = baseStyles;
+	return mDiv(dParent, styles);
 }
-function updateSpeakmodeSettings(){
-	if (Settings.silentMode && Settings.spokenFeedback) Settings.spokenFeedback=false;
-	
-}
-function updateKeySettings(nMin) {
-	//console.log(G,KeySets);
-	if (nundef(G)) return;
-	G.keys = setKeys({ nMin, lang: Settings.language, keysets: KeySets, key: Settings.vocab });
-	//console.log('keyset:', G.keys);
-}
-function updateTimeSettings() {
-	let timeElem = mBy('time');
-	//console.log('updateTimeSettings',_getFunctionsNameThatCalledThisFunction())
-	if (Settings.showTime) { show(timeElem); startTime(timeElem); }
-	else hide(timeElem);
-}
-function updateLabelSettings() {
-	if (Settings.showLabels == 'toggle') Settings.labels = true;
-	else Settings.labels = (Settings.showLabels == 'always');
-}
-
-
-
 

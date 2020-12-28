@@ -1,12 +1,5 @@
 // code that should be or is already deprecated: backward compatibility only & to be replaced!
-function mFlex(d, or = 'h') {
-	d.style.display = 'flex';
-	d.style.flexFlow = (or == 'v' ? 'column' : 'row') + ' ' + (or == 'w' ? 'wrap' : 'nowrap');
-	// d.style.alignItems = 'stretch';
-	// d.style.alignContent = 'stretch';
-	// d.style.justiifyItems = 'stretch';
-	// d.style.justifyContent = 'stretch';
-}
+
 function mFlexCenterContent(d) { mStyle(d, { 'justify-content': 'center', 'align-items': 'center' }); }
 function mFlexChild(d, grow = 1, shrink = 0, base = 'auto') {
 	// d.style.flexGrow=1;

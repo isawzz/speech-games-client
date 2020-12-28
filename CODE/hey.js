@@ -64,10 +64,10 @@ async function loadAssetsSIMA(assetsPath) {
 
 async function saveSIMA() {
 	//console.log('posting DB', DB);
-	if (USERNAME == 'test') {
-		//console.log('trying to save USERNAME test!!!!!!!',_getFunctionsNameThatCalledThisFunction());
-		return; //localStorage.setItem('user',USERNAME);
-	}
+	// if (USERNAME == 'test') {
+	// 	//console.log('trying to save USERNAME test!!!!!!!',_getFunctionsNameThatCalledThisFunction());
+	// 	return; //localStorage.setItem('user',USERNAME);
+	// }
 	// localStorage.setItem('user', USERNAME);
 	if (BlockServerSend) {
 		//console.log('...wait for unblocked...');

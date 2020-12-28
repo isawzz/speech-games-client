@@ -1,9 +1,15 @@
+function clearTimeouts(){
+	clearTimeout(TOMain);
+	clearTimeout(TOFleetingMessage);
+	clearTimeout(TOTrial);
+	if (isdef(TOList)) { for (const k in TOList) { TOList[k].map(x => clearTimeout(x)); } }
+}
 function enterInterruptState() {
 	//haengt von implementation ab was das bedeutet!
 	// CancelChain = true; //when using TaskChain
 	//chainCancel();
 	//restartQ();
-	clearTimeout(TOMain);
+	clearTimeouts();
 	if (isdef(G.instance)) G.instance.clear();
 	auxOpen = true;
 	STOPAUS = true;
@@ -25,7 +31,7 @@ function closeAux() {
 	show('dGear');
 	show('dTemple');
 	if (SettingsChanged) {
-		updateComplexSettings();
+		updateSettings();
 		saveSIMA();
 	}
 	SettingsChanged = false;
@@ -49,6 +55,7 @@ function onClickGear() {
 	//console.log('opening settings: ui will be interrupted!!!')
 	openAux();
 	hide('dGear');
+	hide('dCalibrate');
 	createSettingsUi(dAux);
 }
 function onClickTemple() {
@@ -86,10 +93,12 @@ function onClickGo(ev) {
 }
 
 function onClickBadgeX(ev) {
+	enterInterruptState();
 	setBadgeLevel(ev);
 	// revertToBadgeLevel(ev);
 	saveUser();
 	//console.log('reverted to', G.level);
+	auxOpen = false;
 	TOMain = setTimeout(startGame, 100);
 }
 

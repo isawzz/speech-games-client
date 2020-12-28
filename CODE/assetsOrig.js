@@ -83,38 +83,27 @@ var _audioSources = {
 	hit: "../assets/sounds/hit.wav",
 };
 // var _SND = null;
-var TOSound, _sndPlayer, _loaded = false, _qSound, _idleSound = true, _sndCounter = 0;
-function playSound(key, wait = true) {
-	//console.log(getFunctionsNameThatCalledThisFunction(),'=> playSound');
-	//console.log('_______playSound', 'key', key, '_sndPlayer', _sndPlayer, '\nIdle', _idleSound, 'loaded', _loaded, 'count:' + _sndCounter);
-	if (!wait) _qSound = [];
-	_enqSound(key);
-	if (_idleSound) { _idleSound = false; _deqSound(); }
-}
-function pauseSound() {
-	_qSound = [];
-	if (_loaded && isdef(_sndPlayer)) {
-		clearTimeout(TOSound);
-		_sndPlayer.onended = null;
-		_sndPlayer.onpause = whenSoundPaused;
-		_sndPlayer.pause();
-	}
-}
+var TOSound, _sndPlayer, _sndPlayerIdle = true, _loaded = false;
 function whenSoundPaused() {
 	_sndPlayer = null;
 	_sndPlayerIdle = true;
 	_loaded = false;
-	//console.log('ENDED!!! Idle=true loaded=false');
-	if (!isEmpty(_qSound)) { _deqSound(); } else { _idleSound = true; }
+	console.log('done Idle=true loaded=false');
 }
-function _enqSound(key) { if (nundef(_qSound)) _qSound = []; _qSound.push(key); }
-function _deqSound() {
-	let key = _qSound.shift();
-	let url = _audioSources[key];
-	_sndPlayer = new Audio(url);
-	_sndPlayer.onended = whenSoundPaused;
-	_sndPlayer.onloadeddata = () => { _loaded = true; _sndPlayer.play(); };
-	_sndPlayer.load();
+function playSound(key, wait = false) {
+	console.log('playSound', '_sndPlayer', _sndPlayer, '\nIdle', _sndPlayerIdle, 'loaded', _loaded);
+	if (_sndPlayerIdle) {
+		_sndPlayerIdle = false;
+		let url = _audioSources[key];
+		_sndPlayer = new Audio(url);
+		_sndPlayer.onended = whenSoundPaused;
+		_sndPlayer.onloadeddata = () => { _loaded = true; _sndPlayer.play(); };
+		_sndPlayer.load();
+	} else if (_loaded) {
+		_loaded = false;
+		clearTimeout(TOSound);
+		TOSound = setTimeout(() => playSound(key, wait), 2000);
+	}
 }
 //#endregion audio
 
@@ -1036,7 +1025,6 @@ function _pickStringForAction(x) {
 
 
 //#endregion
-
 
 
 

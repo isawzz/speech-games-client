@@ -44,7 +44,7 @@ function applyCssStyles(ui, params) {
 
 	} else {
 		//console.log('apply NOW',ui,params)
-		mStyle(ui, params);
+		mStyle(ui, params); //NEEDS TO STAY THAT WAY!!!!!!!!!!!!! TODO: replace by _mStyleX, but needs work
 	}
 }
 function asElem(x) { return isString(x) ? mBy(x) : x; }
@@ -68,7 +68,22 @@ function mEditableInput(dParent, label, val) {
 	mAppend(dParent, elem);
 	return elem;
 }
-
+function mInput(label,value,dParent,styles){
+	let inp = createElementFromHTML(`<input type="text" class="input" value="${value}" />`);
+	let labelui = createElementFromHTML(`<label>${label}</label>`);
+	mAppend(dParent, labelui);
+	mAppend(labelui, inp);
+	if (isdef(styles)) mStyleX(labelui,styles)
+	return inp;
+}
+function mFlex(d, or = 'h') {
+	d.style.display = 'flex';
+	d.style.flexFlow = (or == 'v' ? 'column' : 'row') + ' ' + (or == 'w' ? 'wrap' : 'nowrap');
+	// d.style.alignItems = 'stretch';
+	// d.style.alignContent = 'stretch';
+	// d.style.justiifyItems = 'stretch';
+	// d.style.justifyContent = 'stretch';
+}
 function mParent(elem) { return elem.parentNode; }
 function mButton(caption, handler, dParent, styles, classes) {
 	let x = mCreate('button');
@@ -476,7 +491,7 @@ function mColorX(d, bg, fg) {
 	[bg, fg] = getExtendedColors(bg, fg);
 	return mColor(d, bg, fg);
 }
-function mColor(d, bg, fg) { return mStyle(d, { 'background-color': bg, 'color': fg }); }
+function mColor(d, bg, fg) { return mStyleX(d, { 'background-color': bg, 'color': fg }); }
 function mRemove(elem) { mDestroy(elem); }
 //function onMouseEnter(d, handler = null) { d3.on('mouse') }
 function mFont(d, fz) { d.style.setProperty('font-size', makeUnitString(fz, 'px')); }
@@ -3006,7 +3021,11 @@ function getFunctionCallerName() {
 	return new Error().stack.match(/at (\S+)/g)[1].slice(3);
 }
 function getFunctionsNameThatCalledThisFunction() {
-	return getFunctionsNameThatCalledThisFunction.caller.caller.name;
+	let c1 = getFunctionsNameThatCalledThisFunction.caller;
+	if (nundef(c1)) return 'no caller!';
+	let c2 = c1.caller;
+	if (nundef(c2)) return 'no caller!';
+	return c2.name;
 }
 //#endregion
 
@@ -3561,6 +3580,7 @@ function allWordsContainedInKeysAsWord(dict, keywords) {
 //#endregion
 
 //#region ARRAY objects, dictionaries, lists, arrays
+function copyKeys(ofrom,oto){	for(const k in ofrom) oto[k]=ofrom[k];}
 function addByKey(oNew, oOld, except) {
 	for (const k in oNew) {
 		let val = oNew[k];
@@ -3626,6 +3646,7 @@ function arrLast(arr) { return arr.length > 0 ? arr[arr.length - 1] : null; }
 function arrTail(arr) { return arr.slice(1); }
 function arrFromIndex(arr, i) { return arr.slice(i); }
 function arrMinus(a, b) { let res = a.filter(x => !b.includes(x)); return res; }
+function arrWithout(a, b) { return arrMinus(a,b); }
 function arrRange(from = 1, to = 10, step = 1) { let res = []; for (let i = from; i <= to; i += step)res.push(i); return res; }
 function arrReplace(arr, oldval, newval) { let i = arr.indexOf(oldval); if (i >= 0) arr[i] = newval; return oldval; }
 
@@ -4551,8 +4572,12 @@ function chooseRandomDictKey(dict, condFunc = null) {
 	let idx = Math.floor(Math.random() * len);
 	return arr[idx];
 }
-function getRandomNumberSequence(n, minStart, maxStart, fBuild) { //{op,step,fBuild}) {
+function getRandomNumberSequence(n, minStart, maxStart, fBuild, exceptStart) { //{op,step,fBuild}) {
 	let nStart = randomNumber(minStart, maxStart - n + 1);
+	if (exceptStart) {
+		let att=10;
+		while(att>=0 && nStart == exceptStart) {att-=1;nStart = randomNumber(minStart, maxStart - n + 1);}
+	}
 	if (isNumber(fBuild)) return range(nStart, nStart + (n - 1) * fBuild, fBuild);
 	else {
 		let res = [], x = nStart;
@@ -4569,13 +4594,15 @@ function nRandomNumbers(n, from, to, step) {
 	let arr = range(from, to, step);
 	return choose(arr, n);
 }
-function choose(arr, n) {
-
-
+function choose(arr, n, exceptIndices) {
 	//console.log(arr, n);
 	var result = [];//new Array(n);
 	var len = arr.length;
 	var taken = new Array(len);
+	if (isdef(exceptIndices) && exceptIndices.length < len-n){
+		for(const i of exceptIndices) if (i>=0 && i<=len) taken[i]=true;
+	}
+	//console.log('taken',jsCopy(taken));
 	//console.log('len', len);
 	if (n > len) n = len - 1; // throw new RangeError('getRandom: more elements taken than available');
 	while (result.length < n) {

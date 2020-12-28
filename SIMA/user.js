@@ -96,11 +96,9 @@ function loadUser(newUser) {
 	if (!uData) { uData = DB.users[USERNAME] = jsCopy(DB.users.guest0); uData.id = USERNAME; }
 
 	U = DB.users[USERNAME];
-	Settings = U.settings = deepmergeOverride(DB.settings, U.settings);
-	GS = Settings.games;
-	delete Settings.games;
-
-	//console.log('load user',USERNAME,U.lastGame,U.lastLevel);
+	// Settings = U.settings = deepmergeOverride(DB.settings, U.settings);
+	// GS = Settings.games;
+	// delete Settings.games;
 
 	let uiName = 'spUser';
 	let dUser = mBy(uiName);
@@ -137,6 +135,8 @@ function setGame(game, level) {
 	G = jsCopy(GAME[game]);
 	//console.log('_________setGame: color',G.color);
 
+	initSettings(game);
+
 	let levels = lookup(GS, [game, 'levels']);
 	G.maxLevel = isdef(levels) ? Object.keys(levels).length - 1 : 0;
 
@@ -147,7 +147,7 @@ function setGame(game, level) {
 	if (isdef(level)) G.level = level;
 	else { G.level = getUserStartLevel(game); }
 
-	updateComplexSettings(); //TODO: phase out!? or rename initSettings
+	if (G.level > G.maxLevel) G.level = G.maxLevel;
 
 	if (nundef(U.games[game])) {
 		U.games[game] = { nTotal: 0, nCorrect: 0, nCorrect1: 0, startLevel: 0, byLevel: {} };

@@ -3,26 +3,20 @@ class GTouchPic extends Game {
 	constructor(name) { super(name); }
 }
 class GTouchColors extends Game {
-	static SIMPLE_COLORS = ['red', 'green', 'yellow', 'blue'];
 	constructor(name) { super(name); }
 	startLevel() {
-		// G.numColors = getGameOrLevelInfo('numColors', 2);
-		// G.numLabels = G.numColors * G.numPics;
-		this.colorlist = lookupSet(GS, [this.name, 'colors'], GTouchColors.SIMPLE_COLORS);
-		this.contrast = lookupSet(GS, [this.name, 'contrast'], .35);
 		G.keys = G.keys.filter(x => containsColorWord(x));
-		//console.log('GTouchColors keys', G.keys);
 	}
 	prompt() {
-		this.colors = choose(this.colorlist, G.numColors);
-		showPictures(evaluate, { colors: this.colors, contrast: this.contrast });
+		let colorKeys = choose(G.colors, G.numColors);
+		showPictures(evaluate, { colorKeys: colorKeys, contrast: G.contrast });
+		//Pictures.map(x => x.color = ColorDict[x.textShadowColor]);
 
-		setGoal(randomNumber(0, G.numPics * this.colors.length - 1));
-		Goal.correctionPhrase = Goal.textShadowColor + ' ' + Goal.label;
+		setGoal(randomNumber(0, Pictures.length - 1));
 
-		let spoken = `click the ${Goal.textShadowColor} ${Goal.label}`;
-		showInstruction(Goal.label, `click the <span style='color:${Goal.textShadowColor}'>${Goal.textShadowColor.toUpperCase()}</span>`,
-			dTitle, true, spoken);
+		let [written, spoken] = getOrdinalColorLabelInstruction('click'); //getColorLabelInstruction('click');
+		showInstructionX(written, dTitle, spoken);
+
 		activateUi();
 	}
 	eval(ev) {
@@ -45,8 +39,8 @@ class GMem extends Game {
 		showPictures(this.interact.bind(this), { repeat: G.numRepeat, sameBackground: true, border: '3px solid #ffffff80' });
 		setGoal();
 
-		if (G.level > 2) { showInstruction('', 'remember all', dTitle, true); }
-		else { showInstruction(Goal.label, 'remember', dTitle, true); }
+		if (G.level > 2) { showInstruction('', Settings.language == 'E' ? 'remember all' : 'merke dir alle', dTitle, true); }
+		else { showInstruction(Goal.label, Settings.language == 'E' ? 'remember' : 'merke dir', dTitle, true); }
 
 		let secs = calcMemorizingTime(G.numPics, G.level > 2);
 
@@ -64,7 +58,7 @@ class GMem extends Game {
 		let pic = Pictures[i];
 		toggleFace(pic);
 
-		if (G.trialNumber == Settings.trials - 1) {
+		if (G.trialNumber == G.trials - 1) {
 			turnFaceUp(Goal);
 			TOMain = setTimeout(() => evaluate(ev), 100);
 		} else evaluate(ev);
@@ -121,9 +115,9 @@ class GWritePic extends Game {
 class GMissingLetter extends Game {
 	constructor(name) { super(name); }
 	startLevel() {
-		G.numMissingLetters = getGameOrLevelInfo('numMissing', 1);
+		G.numMissing = getGameOrLevelInfo('numMissing', 1);
 		let pos = getGameOrLevelInfo('posMissing', 'random');
-		G.maxPosMissing = pos == 'start' ? G.numMissingLetters - 1 : 100;
+		G.maxPosMissing = pos == 'start' ? G.numMissing - 1 : 100;
 	}
 	prompt() {
 		showPictures(() => fleetingMessage('just enter the missing letter!'));
@@ -137,9 +131,9 @@ class GMissingLetter extends Game {
 		let style = { margin: 6, fg: 'white', display: 'inline', bg: 'transparent', align: 'center', border: 'transparent', outline: 'none', family: 'Consolas', fz: 80 };
 		let d = createLetterInputs(Goal.label.toUpperCase(), dTable, style); // acces children: d.children
 
-		// randomly choose 1-G.numMissingLetters alphanumeric letters from Goal.label
+		// randomly choose 1-G.numMissing alphanumeric letters from Goal.label
 		let indices = getIndicesCondi(Goal.label, (x, i) => isAlphaNum(x) && i <= G.maxPosMissing);
-		this.nMissing = Math.min(indices.length, G.numMissingLetters);
+		this.nMissing = Math.min(indices.length, G.numMissing);
 		//console.log('nMissing is', this.nMissing, G.numPosMissing, G.maxPosMissing, indices, indices.length)
 		let ilist = choose(indices, this.nMissing); sortNumbers(ilist);
 
@@ -288,17 +282,16 @@ class GSayPic extends Game {
 	}
 }
 class GPremem extends Game {
-	constructor() { super(); this.picList = []; }
+	constructor() { super(); this.piclist = []; }
 	prompt() {
-		this.picList = [];
-		//console.log(this.picList)
+		this.piclist = [];
 		showPictures(this.interact.bind(this), { repeat: G.numRepeat, sameBackground: true, border: '3px solid #ffffff80' });
 		showInstruction('', 'click any picture', dTitle, true);
 		activateUi();
 	}
 	trialPrompt() {
-		for (const p of this.picList) { toggleSelectionOfPicture(p); }
-		this.picList = [];
+		for (const p of this.piclist) { toggleSelectionOfPicture(p); }
+		this.piclist = [];
 		showInstruction('', 'try again: click any picture', dTitle, true);
 		return 10;
 	}
@@ -310,23 +303,23 @@ class GPremem extends Game {
 		let i = firstNumber(id);
 		let pic = Pictures[i];
 		let div = pic.div;
-		if (!isEmpty(this.picList) && this.picList.length < G.numRepeat - 1 && this.picList[0].label != pic.label) return;
-		toggleSelectionOfPicture(pic, this.picList);
-		//console.log('clicked', pic.key, this.picList);//,picList, GPremem.PicList);
-		if (isEmpty(this.picList)) {
+		if (!isEmpty(this.piclist) && this.piclist.length < G.numRepeat - 1 && this.piclist[0].label != pic.label) return;
+		toggleSelectionOfPicture(pic, this.piclist);
+		//console.log('clicked', pic.key, this.piclist);//,piclist, GPremem.PicList);
+		if (isEmpty(this.piclist)) {
 			showInstruction('', 'click any picture', dTitle, true);
-		} else if (this.picList.length < G.numRepeat - 1) {
+		} else if (this.piclist.length < G.numRepeat - 1) {
 			//set incomplete: more steps are needed!
 			//frame the picture
 			showInstruction(pic.label, 'click another', dTitle, true);
-		} else if (this.picList.length == G.numRepeat - 1) {
+		} else if (this.piclist.length == G.numRepeat - 1) {
 			// look for last picture with x that is not in the set
 			let picGoal = firstCond(Pictures, x => x.label == pic.label && !x.isSelected);
 			setGoal(picGoal.index);
 			showInstruction(picGoal.label, 'click the ' + (G.numRepeat == 2 ? 'other' : 'last'), dTitle, true);
 		} else {
 			//set is complete: eval
-			evaluate(this.picList);
+			evaluate(this.piclist);
 		}
 	}
 	eval(piclist) {
@@ -334,6 +327,67 @@ class GPremem extends Game {
 		let req = Selected.reqAnswer = piclist[0].label;
 		Selected.answer = piclist[piclist.length - 1].label;
 		if (Selected.answer == req) { return true; } else { return false; }
+	}
+}
+class GSteps extends Game {
+	constructor(name) { super(name); }
+	startGame() { G.correctionFunc = showCorrectWords; }
+	startLevel() {
+		G.keys = G.keys.filter(x => containsColorWord(x));
+	}
+
+	prompt() {
+		this.piclist = [];
+		let colorKeys = G.numColors > 1 ? choose(G.colors, G.numColors) : null;
+		let showRepeat = G.numRepeat > 1;
+
+		showPictures(this.interact.bind(this), { showRepeat: showRepeat, colorKeys: colorKeys, contrast: G.contrast, repeat: G.numRepeat });
+
+		setMultiGoal(G.numSteps);
+		// console.log(Goal)
+
+		let cmd = 'click';
+		let spoken = [], written = [];
+		for (let i = 0; i < G.numSteps; i++) {
+			let goal = Goal.pics[i];
+			let sOrdinal = getOrdinal(goal.iRepeat);
+			[written[i], spoken[i]] = getOrdinalColorLabelInstruction(cmd, sOrdinal, goal.color, goal.label);
+			cmd = 'then';
+		}
+		// console.log('written', written, '\nspoken', spoken);
+		showInstructionX(written.join('; '), dTitle, spoken.join('. '), {fz:20});
+
+		activateUi();
+	}
+	trialPrompt() {
+		for (const p of this.piclist) { toggleSelectionOfPicture(p); }
+		this.piclist = [];
+		sayTryAgain();
+		return 10;
+	}
+	interact(ev) {
+		ev.cancelBubble = true;
+		if (!canAct()) return;
+
+		let id = evToClosestId(ev);
+		let i = firstNumber(id);
+		let pic = Pictures[i];
+		let div = pic.div;
+		//if (!isEmpty(this.piclist) && this.piclist.length < G.numSteps - 1 && this.piclist[0].label != pic.label) return;
+		toggleSelectionOfPicture(pic, this.piclist);
+		console.log('clicked pic', pic.index, this.piclist);//,piclist, GPremem.PicList);
+		if (isEmpty(this.piclist)) return;
+		//return;
+		let iGoal = this.piclist.length - 1;
+		console.log('iGoal', iGoal, Goal.pics[iGoal], 'i', i, pic)
+		if (pic != Goal.pics[iGoal]) { Selected = { pics: this.piclist, wrong: pic, correct: Goal[iGoal] }; evaluate(false); }
+		else if (this.piclist.length == Goal.pics.length) { Selected = { piclist: this.piclist }; evaluate(true); }
+	}
+	eval(isCorrect) {
+		console.log('eval', isCorrect);
+		console.log('piclist', this.piclist)
+		Selected = { piclist: this.piclist, feedbackUI: this.piclist.map(x => x.div), sz: getBounds(this.piclist[0].div).height };
+		return isCorrect;
 	}
 }
 class GMissingNumber extends Game {
@@ -345,16 +399,10 @@ class GMissingNumber extends Game {
 	}
 	showCorrectSequence() { return numberSequenceCorrectionAnimation(); }
 	startLevel() {
-		G.numMissingLetters = getGameOrLevelInfo('numMissing', 1);
-		G.minNumber = getGameOrLevelInfo('min', 0);
-		G.maxNumber = getGameOrLevelInfo('max', 20);
-		G.posMissing = getGameOrLevelInfo('posMissing', 'consec');
-		G.steps = getGameOrLevelInfo('steps', 1);
 		if (!isList(G.steps)) G.steps = [G.steps];
-		G.ops = getGameOrLevelInfo('ops', ['add']);
-		G.lengthOfSequence = getGameOrLevelInfo('length', 5);
 		G.numPics = 2;
 		G.numLabels = 0;
+		// console.log(G)
 	}
 	prompt() {
 		mLinebreak(dTable, 12);
@@ -364,30 +412,25 @@ class GMissingNumber extends Game {
 
 		G.step = chooseRandom(G.steps);
 		G.op = chooseRandom(G.ops);
-		[G.words, G.letters, G.seq] = createNumberSequence(G.lengthOfSequence, G.minNumber, G.maxNumber, G.step, G.op);
+		[G.words, G.letters, G.seq] = createNumberSequence(G.seqLen, G.minNum, G.maxNum, G.step, G.op);
 		setNumberSequenceGoal();
 		//console.log(G)
-		//G.seq = setGoalWordInputs(G.lengthOfSequence, G.minNumber, G.maxNumber, G.step, G.op);
 
 		mLinebreak(dTable);
 
 		let instr1 = (Settings.language == 'E' ? 'complete the sequence' : "ergänze die reihe");
 		showInstruction('', instr1, dTitle, true);
 
-		if (calibrating()) { activateUi(); return; }
-
-		if (Settings.isTutoring) { longNumSeqHint(); }
-		else if (G.level <= 1) { longNumSeqHint(); }
-		else if (G.level <= 3) { mediumNumSeqHint(); }
-		else if (G.level <= 5) { shortNumSeqHint(); }
-		else if (G.level <= 7) { shortNumSeqHint(true, false); }
+		let initialDelay = 5000 + G.level * 1000;
+		if (Settings.showHint && !calibrating()) recShowHints([0, 1, 2, 3, 4], QuestionCounter, initialDelay, d => initialDelay + 2000); //showNumSeqHint(G.trialNumber);
 
 		activateUi();
 	}
 	trialPrompt() {
-		sayTryAgain();
+		let hintlist = G.trialNumber >= 4 ? [G.trialNumber] : range(G.trialNumber, 4);
+		let initialDelay = 3000 + G.level * 1000;
+		if (Settings.showHint && !calibrating()) recShowHints(hintlist, QuestionCounter, initialDelay, d => initialDelay + 2000); //showNumSeqHint(G.trialNumber);
 		setTimeout(() => getWrongChars().map(x => unfillChar(x)), 500);
-		if (!calibrating() && Settings.showHint) showFleetingMessage(getNumSeqHint(), 2200, { fz: 22 });
 		return 10;
 	}
 	activate() { onkeypress = this.interact; }
@@ -443,7 +486,7 @@ class GMissingNumber extends Game {
 			//user entered last missing letter but it is wrong!
 			//can there be multiple errors in string?
 		} else {
-			if (!Settings.silentMode) playSound('incorrect1');
+			if (!Settings.silentMode) {writeSound();playSound('incorrect1');}
 			deactivateFocusGroup();
 			//unfillCharInput(Selected.target);
 			showFleetingMessage('does NOT fit: ' + Selected.ch, 0, { fz: 24 });
@@ -454,97 +497,6 @@ class GMissingNumber extends Game {
 
 	eval(isCorrect) { return isCorrect; }
 
-}
-class GSteps extends Game {
-	constructor(name) { super(name); }
-	startGame() { G.correctionFunc = showCorrectWords; }
-	startLevel() {
-		const clist = [{ name: 'orange', color: 'orangered' }, { name: 'green', color: 'green' }, { name: 'pink', color: 'hotpink' }, { name: 'blue', color: 'blue' }];
-		// G.numColors = getGameOrLevelInfo('numColors', 2);
-		// G.numSteps = getGameOrLevelInfo('numSteps', 2);
-		// //G.numRepeat = 2; //G.numColors * G.numPics;
-		// G.numLabels = G.numColors * G.numPics * G.numRepeat;
-		this.colorList = lookupSet(GS, [this.name, 'colors'], clist);
-		// console.log(this.colorList)
-		this.contrast = lookupSet(GS, [this.name, 'contrast'], .35);
-		G.keys = G.keys.filter(x => containsColorWord(x));
-	}
-	prompt() {
-		this.picList = [];
-		this.colors = undefined;
-		this.showRepeat = false;
-		if (G.numColors > 1) this.colors = choose(this.colorList, G.numColors).map(x => x.color);
-		else if (G.numRepeat > 1) this.showRepeat = true;
-		showPictures(this.interact.bind(this), { showRepeat: this.showRepeat, colors: this.colors, repeat: G.numRepeat, contrast: this.contrast });
-
-		setMultiGoal(G.numSteps);
-
-		console.log(Goal)
-
-		for (let i = 0; i < G.numSteps; i++) {
-			let goal = Goal.pics[i];
-			goal.ordinal = '';
-			console.log(goal);
-			if (G.numRepeat > 1) { goal.ordinal = ordinal_suffix_of(goal.iRepeat); }
-
-			goal.colorName = '';
-			if (G.numColors > 1) {
-				let oColor = firstCond(this.colorList, x => x.color == goal.textShadowColor);
-				goal.colorName = oColor.name;
-			}
-
-			goal.correctionPhrase = (isdef(goal.ordinal) ? goal.ordinal : '') + ' '
-				+ (isdef(goal.colorName) ? goal.colorName : '') + ' ' + goal.label;
-
-			goal.spokenInstruction = goal.writtenInstruction = goal.correctionPhrase;
-
-			// if (G.numColors <= 1) goal.writtenInstructionSuffix = goal.correctionPhrase;
-			// else goal.writtenInstructionSuffix = `${goal.ordinal} <span style='color:${goal.textShadowColor}'>${goal.colorName.toUpperCase()}</span>`
-
-			// console.log(goal.writtenInstructionSuffix)
-		}
-
-		let wInstruction = 'click: ' + Goal.pics[0].writtenInstruction;
-		let sInstruction = 'click first the ' + Goal.pics[0].writtenInstruction;
-		for (const g of Goal.pics.slice(1)) {
-			wInstruction += ', ' + g.writtenInstruction;
-			sInstruction += ', then the ' + g.spokenInstruction;
-		}
-		Goal.correctionPhrase = 'the ' + Goal.pics.map(x => x.correctionPhrase).join(', the ');
-		console.log(sInstruction)
-		showInstruction('', wInstruction, dTitle, true, sInstruction, 20);
-		activateUi();
-	}
-	trialPrompt() {
-		for (const p of this.picList) { toggleSelectionOfPicture(p); }
-		this.picList = [];
-		sayTryAgain();
-		return 10;
-	}
-	interact(ev) {
-		ev.cancelBubble = true;
-		if (!canAct()) return;
-
-		let id = evToClosestId(ev);
-		let i = firstNumber(id);
-		let pic = Pictures[i];
-		let div = pic.div;
-		//if (!isEmpty(this.picList) && this.picList.length < G.numSteps - 1 && this.picList[0].label != pic.label) return;
-		toggleSelectionOfPicture(pic, this.picList);
-		console.log('clicked pic', pic.index, this.picList);//,picList, GPremem.PicList);
-		if (isEmpty(this.picList)) return;
-		//return;
-		let iGoal = this.picList.length - 1;
-		console.log('iGoal', iGoal, Goal.pics[iGoal], 'i', i, pic)
-		if (pic != Goal.pics[iGoal]) { Selected = { pics: this.picList, wrong: pic, correct: Goal[iGoal] }; evaluate(false); }
-		else if (this.picList.length == Goal.pics.length) { Selected = { picList: this.picList }; evaluate(true); }
-	}
-	eval(isCorrect) {
-		console.log('eval', isCorrect);
-		console.log('picList',this.picList)
-		Selected = { picList: this.picList, feedbackUI: this.picList.map(x => x.div), sz: getBounds(this.picList[0].div).height };
-		return isCorrect;
-	}
 }
 
 
@@ -557,14 +509,17 @@ function getInstance(G) { return new (GAME[G.key].cl)(G.key); }
 
 const GAME = {
 	gTouchPic: { friendly: 'Pictures!', logo: 'computer mouse', color: 'deepskyblue', cl: GTouchPic, },
-	gTouchColors: { friendly: 'Colors!', logo: 'artist palette', color: RED, cl: GTouchColors, }, //'orange', //LIGHTBLUE, //'#bfef45',
-	gPremem: { friendly: 'Premem!', logo: 'hammer and wrench', color: LIGHTGREEN, cl: GPremem, }, //'deeppink',
+	gTouchColors: { friendly: 'Colors!', logo: 'artist palette', color: LIGHTGREEN, cl: GTouchColors, }, //'orange', //LIGHTBLUE, //'#bfef45',
+	gPremem: { friendly: 'Premem!', logo: 'hammer and wrench', color: RED, cl: GPremem, }, //'deeppink',
 	gMem: { friendly: 'Memory!', logo: 'memory', color: GREEN, cl: GMem, }, //'#3cb44b'
 	gMissingLetter: { friendly: 'Letters!', logo: 'black nib', color: 'gold', cl: GMissingLetter, },
 	gMissingNumber: { friendly: 'Sequence!', logo: 'fleur-de-lis', color: 'deeppink', cl: GMissingNumber, },
 	gWritePic: { friendly: 'Type it!', logo: 'keyboard', color: 'orange', cl: GWritePic, }, //LIGHTGREEN, //'#bfef45',
 	gSayPic: { friendly: 'Speak up!', logo: 'microphone', color: BLUE, cl: GSayPic, }, //'#4363d8',
 	gSteps: { friendly: 'Steps!', logo: 'stairs', color: PURPLE, cl: GSteps, }, //'#911eb4',
+	gSet: { friendly: 'Set!', logo: 'abacus', color: TEAL, cl: GSet, }, //'#911eb4',
+	gSudo: { friendly: 'Sudo!', logo: 'abacus', color: TEAL, cl: GSudo, }, //'#911eb4',
+	gElim: { friendly: 'Elim!', logo: 'collision', color: TEAL, cl: GElim, }, //'#911eb4',
 };
 
 

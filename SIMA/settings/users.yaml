@@ -1,140 +1,108 @@
 nil:
   id: nil
-  seq: [gTouchPic, gPremem, gTouchColors, gMissingLetter, gSteps, gSayPic, gMem, gMissingNumber, gWritePic]
+  seq: [gTouchPic, gPremem, gTouchColors, gMissingLetter, gSteps, gSayPic, gMem, gMissingNumber, gWritePic, gElim]
   lastGame: gTouchPic
-  lastLevel: 0
+  lastLevel: 4
   settings:
-    minutesPerUnit: 1
+    # settings common to all games
     samplesPerLevel: 2
-    trials: 1
-    # toggle: first half of level: labels, second half of level: no labels
-    showLabels: toggle #always never toggle
-    incrementLevelOnPositiveStreak: 2
+    minutesPerUnit: .1
+    incrementLevelOnPositiveStreak: 12
     decrementLevelOnNegativeStreak: 3
-    language: D
+    showLabels: toggle #always never toggle (=remove labels after half level)
+    language: E
     vocab: best100
-    spokenFeedback: false
-    silentMode: true
-
-    # the following not yet in UI
-    # activity animal body drink emotion food fruit game gesture kitchen 
-    # object person place plant role sport time transport vegetable 
-    # nosymemo nosymbols
+    showTime: true
+    spokenFeedback: true
+    silentMode: false
+    switchGame: true
+    #indiv game settings default
+    trials:  2
+    showHint: true
+    # activity animal body drink emotion food fruit game gesture kitchen object person place plant role sport time transport vegetable nosymemo nosymbols
     categories: [nosymemo]
     pressControlToUnfreeze: false
     reducedAnimations: true
     levelBadges: false
-    showHint: true
-    showTime: true
-    switchGame: true
   games:
     gSteps:
       startLevel: 3
+      settings:
+        trials: 5
 guest0:
   id: guest
   seq: [gTouchPic, gPremem, gTouchColors, gMissingLetter, gSteps, gSayPic, gMem, gMissingNumber, gWritePic]
   lastGame: gTouchPic
   lastLevel: 0
   settings:
-    minutesPerUnit: 10
+    # settings common to all games
     samplesPerLevel: 10
-    trials: 2
-    # toggle: first half of level: labels, second half of level: no labels
-    showLabels: toggle #always never toggle
+    minutesPerUnit: 10
     incrementLevelOnPositiveStreak: 10
-    decrementLevelOnNegativeStreak: 3
+    decrementLevelOnNegativeStreak: 5
+    showLabels: toggle #always never toggle (=remove labels after half level)
     language: E
     vocab: best25
+    showTime: false
     spokenFeedback: true
-
-    # the following not yet in UI
-    # activity animal body drink emotion food fruit game gesture kitchen 
-    # object person place plant role sport time transport vegetable 
-    # nosymemo nosymbols
-    categories: [nosymemo]
-    pressControlToUnfreeze: false
-    reducedAnimations: true
-    levelBadges: false
-    showHint: true
-    showTime: true
+    silentMode: false
     switchGame: true
+    #indiv game settings default
+    trials:  2
+    showHint: true
   games:
     gTouchPic:
       startLevel: 0
 test0:
-  id: test
+  id: test0
   seq: [gTouchPic, gPremem, gTouchColors, gMissingLetter, gSteps, gSayPic, gMem, gMissingNumber, gWritePic]
   lastGame: gTouchPic
   lastLevel: 0
   settings:
-    minutesPerUnit: .2
-    samplesPerLevel: 2
-    trials: 1
-    # toggle: first half of level: labels, second half of level: no labels
-    showLabels: toggle #always never toggle
+    # settings common to all games
+    samplesPerLevel: 10
+    minutesPerUnit: 10
     incrementLevelOnPositiveStreak: 10
-    decrementLevelOnNegativeStreak: 3
+    decrementLevelOnNegativeStreak: 5
+    showLabels: toggle #always never toggle (=remove labels after half level)
     language: E
-    vocab: best50
-    spokenFeedback: false
-
-    # the following not yet in UI
-    # activity animal body drink emotion food fruit game gesture kitchen 
-    # object person place plant role sport time transport vegetable 
-    # nosymemo nosymbols
-    categories: [nosymemo]
-    pressControlToUnfreeze: false
-    reducedAnimations: true
-    levelBadges: false
-    showHint: false
-    showTime: true
+    vocab: best25
+    showTime: false
+    spokenFeedback: true
+    silentMode: false
     switchGame: true
+    #indiv game settings default
+    trials:  2
+    showHint: true
   games:
     gTouchPic:
       startLevel: 0
 gul:
   id: gul
-  seq: [gTouchPic, gPremem, gTouchColors, gMissingLetter, gSteps, gSayPic, gMissingNumber, gMem, gWritePic]
-  lastGame: gSteps
-  lastLevel: 0
+  seq: [gTouchPic, gPremem, gTouchColors, gMissingLetter, gSteps, gSayPic, gMem, gMissingNumber, gWritePic]
+  lastGame: gTouchPic
+  lastLevel: 4
   settings:
-    minutesPerUnit: 10
+    # settings common to all games
     samplesPerLevel: 10
-    trials: 2
-    # toggle: first half of level: labels, second half of level: no labels
-    showLabels: toggle #always never toggle
+    minutesPerUnit: 10
     incrementLevelOnPositiveStreak: 10
     decrementLevelOnNegativeStreak: 5
+    showLabels: toggle #always never toggle (=remove labels after half level)
     language: E
-    vocab: best50
+    vocab: best25
+    showTime: false
     spokenFeedback: true
-    showHint: true
-    showTime: true
+    silentMode: false
     switchGame: true
-
-    # the following not yet in UI
-    # activity animal body drink emotion food fruit game gesture kitchen 
-    # object person place plant role sport time transport vegetable 
-    # nosymemo nosymbols
-    categories: [nosymemo]
-    pressControlToUnfreeze: false
-    reducedAnimations: true
-    levelBadges: false
-  games: 
+    #indiv game settings default
+    trials:  2
+    showHint: true
+  games:
     gTouchPic:
-      startLevel: 3
-    gMissingLetter:
-      startLevel: 3
-    gMissingNumber:
-      startLevel: 0
-    gTouchColors:
-      startLevel: 1
+      startLevel: 2
     gPremem:
-      startLevel: 3
+      startLevel: 1
     gMem:
       startLevel: 1
-    gSayPic:
-      startLevel: 0
-    gWritePic:
-      startLevel: 3
 

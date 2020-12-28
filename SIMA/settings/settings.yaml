@@ -1,6 +1,6 @@
 minutesPerUnit: 15
 samplesPerLevel: 1
-trials: 3
+trials:  3
 # toggle: first half of level: labels, second half of level: no labels
 showLabels: toggle #always never toggle
 incrementLevelOnPositiveStreak: 5
@@ -55,110 +55,52 @@ games:
         numMissing: 5
         posMissing: random
   gMissingNumber:
+    numMissing: 1
+    minNum: 0
+    maxNum: 99
+    steps: 1
+    posMissing: end
+    ops: [add]
+    seqLen: 5
+    trials: 8
     levels:
       0:
-        numMissing: 1
-        posMissing: end
-        min: 0
-        max: 10
-        steps: 1
-        ops: [add]
+        maxNum: 10
       1:
-        numMissing: 1
-        posMissing: end
-        min: 0
-        max: 10
-        steps: 1
+        maxNum: 10
         ops: [subtract]
       2:
-        numMissing: 1
-        posMissing: end
-        min: 0
-        max: 30
-        steps: 1
-        ops: [add]
+        maxNum: 10
+        ops: [add,subtract]
       3:
-        numMissing: 1
-        posMissing: end
-        min: 0
-        max: 20
-        steps: 1
-        ops: [subtract]
+        maxNum: 25
+        ops: [add,subtract]
       4:
-        numMissing: 1
-        posMissing: end
-        min: 0
-        max: 15
-        steps: 1
-        ops: [add,subtract]
+        maxNum: 50
+        steps: [1,2,3]
+        ops: [add]
       5:
-        numMissing: 1
-        posMissing: end
-        min: 0
-        max: 50
+        maxNum: 50
         steps: [1,2]
-        ops: [add]
+        ops: [add,subtract]
       6:
-        numMissing: 1
-        posMissing: end
-        min: 0
-        max: 50
-        steps: [1,2,3]
-        ops: [add]
-      7:
-        numMissing: 1
-        posMissing: end
-        min: 0
-        max: 50
-        steps: [1,2,3]
-        ops: [add]
-      8:
-        numMissing: 1
         posMissing: notStart
-        min: 0
-        max: 50
+        maxNum: 99
         steps: [1,2]
         ops: [add,subtract]
-      9:
-        numMissing: 1
+      7:
         posMissing: notStart
-        min: 0
-        max: 99
-        steps: [1,2,3]
-        ops: [add,subtract]
-      10:
-        numMissing: 1
-        posMissing: notStart
-        min: 0
-        max: 99
+        maxNum: 99
         steps: [1,2,3,4,5]
         ops: [add,subtract]
-      11:
-        numMissing: 1
+      8:
         posMissing: notStart
-        min: 0
-        max: 99
+        maxNum: 99
         steps: [3,4,5,6,7,8,9,10]
         ops: [add,subtract]
   gSteps:
-    contrast: 0.32
-    colors:
-      # - name: white
-      #   color: white
-      # - name: black
-      #   color: black
-      - name: blue
-        color: blue
-      - name: pink
-        color: hotpink
-      - name: green
-        color: green
-      - name: yellow
-        color: gold
-      - name: violet
-        color: indigo
-      - name: red
-        color: red
+    contrast: 0.22
+    colors: [blue1, violet, lightgreen, pink, red, yellow]
     levels:
       0: 
         numPics: 9
@@ -200,6 +142,49 @@ games:
         numColors: 4
         numRepeat: 3
         numSteps: 2
+  gSet:
+    contrast: 0.22
+    colors: [blue, violet, lightgreen, pink, red, yellow]
+    levels:
+      0: 
+        numPics: 3
+        numColors: 4
+        numRepeat: 2
+        numSteps: 2
+      1: 
+        numPics: 4
+        numColors: 1
+        numRepeat: 4
+        numSteps: 2
+      2: 
+        numPics: 2
+        numColors: 4
+        numRepeat: 3
+        numSteps: 2
+  gElim:
+    contrast: 0.22
+    colors: [blue, violet, lightgreen, pink, red, yellow]
+    levels:
+      0: 
+        numPics: 3
+        numColors: 3
+        numRepeat: 1
+      1: 
+        numPics: 3
+        numColors: 1
+        numRepeat: 3
+      2: 
+        numPics: 2
+        numColors: 3
+        numRepeat: 2
+      3: 
+        numPics: 3
+        numColors: 4
+        numRepeat: 2
+      4: 
+        numPics: 3
+        numColors: 4
+        numRepeat: 3
   gTouchColors:
     contrast: 0.32
     colors:
@@ -224,6 +209,7 @@ games:
         numPics: 5
         numColors: 4
   gPremem:
+    trials: 1
     levels:
       0: 
         numPics: 2

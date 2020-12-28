@@ -1,18 +1,37 @@
 var SelectedMenuKey, MenuItems;
+var hiddenSettingSpecificationString, iHiddenSSS;
 
 function createSettingsUi(dParent) {
 	clearElement(dParent);
-	mAppend(dParent, createElementFromHTML(`<h1>Settings for ${USERNAME}:</h1>`));
+	mFlex(dParent);
+
+	commonSettings(dParent);
+	gameSpecificSettings(dParent);
+}
+function commonSettings(dParent) {
+	let d = mDiv(dParent);
+	hiddenSettingSpecificationString = '111111111111111111111111111111';
+	iHiddenSSS = 0;
+	addSettingsUi(d, `Common Settings for ${USERNAME}:`);
+}
+function gameSpecificSettings(dParent) {
+	let d = mDiv(dParent);
+	hiddenSettingSpecificationString = '10001111000011111';
+	iHiddenSSS = 0;
+	addSettingsUi(d, `Game specific:`, G.key);
+}
+function addSettingsUi(dParent, title, game) {
+	mAppend(dParent, createElementFromHTML(`<h2>${title}</h2>`));
 
 	let nGroupNumCommonAllGames = mInputGroup(dParent);
-	setzeEineZahl(nGroupNumCommonAllGames, 'samples', 25, ['samplesPerLevel']);
+	setzeEineZahl(nGroupNumCommonAllGames, 'samples', 25, ['samplesPerLevel'], game);
 	setzeEineZahl(nGroupNumCommonAllGames, 'minutes', 1, ['minutesPerUnit']);
 	setzeEineZahl(nGroupNumCommonAllGames, 'correct streak', 5, ['incrementLevelOnPositiveStreak']);
 	setzeEineZahl(nGroupNumCommonAllGames, 'fail streak', 2, ['decrementLevelOnNegativeStreak']);
 	setzeEineZahl(nGroupNumCommonAllGames, 'trials', 3, ['trials']);
-	setzeEinOptions(nGroupNumCommonAllGames, 'show labels', ['toggle', 'always', 'never'], 'toggle', ['showLabels']);
-	setzeEinOptions(nGroupNumCommonAllGames, 'language', ['E', 'D'], 'E', ['language']);
-	setzeEinOptions(nGroupNumCommonAllGames, 'vocabulary', Object.keys(KeySets), 'best25', ['vocab']);
+	setzeEinOptions(nGroupNumCommonAllGames, 'show labels', ['toggle', 'always', 'never'], ['toggle', 'always', 'never'], 'toggle', ['showLabels']);
+	setzeEinOptions(nGroupNumCommonAllGames, 'language', ['E', 'D'], ['English', 'German'], 'E', ['language']);
+	setzeEinOptions(nGroupNumCommonAllGames, 'vocabulary', Object.keys(KeySets), Object.keys(KeySets), 'best25', ['vocab']);
 
 	//let nGroupOther = mInputGroup(dParent);
 	setzeEineCheckbox(nGroupNumCommonAllGames, 'show time', false, ['showTime']);
@@ -38,14 +57,9 @@ function createMenuUi(dParent) {
 	let keys = games.map(g => GAME[g].logo);
 	let bgs = games.map(g => GAME[g].color);
 
-	// console.log(games)
-	//console.log('-----------------bgs', bgs);
-
 	MenuItems = {};
-	// let pics = maShowPictures(keys, labels, d, onClickGo,
-	// 	{ bgs: bgs, shufflePositions: false }, { fg: 'blue' });
-	let pics = maShowPicturesX(keys, labels, d, onClickGo, { bgs: bgs, shufflePositions: false }, 
-		{ sPic: { fg: 'white' }}); //, sText:{family:'AlgerianRegular'} });
+	let pics = maShowPictures(keys, labels, d, onClickGo, { bgs: bgs, shufflePositions: false }, { fg: 'blue' });
+	//let pics = maShowPicturesX(keys, labels, d, onClickGo, { bgs: bgs, shufflePositions: false }, { sPic: { fg: 'white' }}); //, sText:{family:'AlgerianRegular'} });
 	for (let i = 0; i < pics.length; i++) {
 		let p = pics[i];
 		//console.log(p)
@@ -53,9 +67,7 @@ function createMenuUi(dParent) {
 		let key = p.div.key = games[i];
 		MenuItems[key] = p;
 	}
-	//pics.map(x => x.div.id = 'menu_' + x.label.substring(0, 3));
 
-	//console.log('hhhhhhhhhhhhhhhhhhhhhh')
 	if (nundef(G)) return;
 
 	//select the current game
@@ -75,12 +87,44 @@ function setSettingsKeys(elem) {
 	// console.log('lllllllllllllllll', a, a.value, a.keyList);
 	let val = elem.type == 'number' ? Number(elem.value) : elem.type == 'checkbox' ? elem.checked : elem.value;
 	lookupSetOverride(Settings, elem.keyList, val);
+
+	let lst = ['games',G.key,'settings'].concat(elem.keyList);
+	lookupSetOverride(U, lst, val);
+	saveUser();
+	console.log('lst',U);
+
 	SettingsChanged = true;
 	//console.log(elem.keyList, val)
 	//console.log(Settings);
 }
-function setzeEineZahl(dParent, label, init, skeys) {
+function setSettingsKeysSelect(elem) {
+
+	let val;
+	for (const opt of elem.children) {
+		if (opt.selected) val = opt.value;
+	}
+
+	// console.log('lllllllllllllllll', a, a.value, a.keyList);
+	//let val = elem.type == 'number' ? Number(elem.value) : elem.value;
+	SettingsChanged = true;
+	lookupSetOverride(Settings, elem.keyList, val);
+	console.log('result', lookup(Settings, elem.keyList));
+}
+
+function checkIfEmptyLine(dParent) {
+	let vis = hiddenSettingSpecificationString[iHiddenSSS] == '1'; iHiddenSSS += 1;
+	if (!vis) {
+		let d = mDiv(dParent, { h:27, bg: 'transparent' });
+		//let d1 = mInput('hidden', 'hidden', d, { display: 'block', margin: 3 });
+		return true;
+	}
+	return false; //style="display:block;margin:4px;"
+}
+
+function setzeEineZahl(dParent, label, init, skeys, game) {
 	// <input id='inputPicsPerLevel' class='input' type="number" value=1 />
+	if (checkIfEmptyLine(dParent)) return;
+
 	let d = mDiv(dParent);
 	let val = lookup(Settings, skeys);
 	if (nundef(val)) val = init;
@@ -97,6 +141,8 @@ function setzeEineZahl(dParent, label, init, skeys) {
 	inp.keyList = skeys;
 }
 function setzeEineCheckbox(dParent, label, init, skeys) {
+	if (checkIfEmptyLine(dParent)) return;
+
 	// <input id='inputPicsPerLevel' class='input' type="number" value=1 />
 	let d = mDiv(dParent);
 	let val = lookup(Settings, skeys);
@@ -115,29 +161,19 @@ function setzeEineCheckbox(dParent, label, init, skeys) {
 
 	inp.keyList = skeys;
 }
+function setzeEinOptions(dParent, label, optionList, friendlyList, init, skeys) {
+	if (checkIfEmptyLine(dParent)) return;
 
-function setSettingsKeysSelect(elem) {
-
-	let val;
-	for (const opt of elem.children) {
-		if (opt.selected) val = opt.value;
-	}
-
-	// console.log('lllllllllllllllll', a, a.value, a.keyList);
-	//let val = elem.type == 'number' ? Number(elem.value) : elem.value;
-	SettingsChanged = true;
-	lookupSetOverride(Settings, elem.keyList, val);
-	console.log('result', lookup(Settings, elem.keyList));
-}
-function setzeEinOptions(dParent, label, optionList, init, skeys) {
 	// <input id='inputPicsPerLevel' class='input' type="number" value=1 />
 	let d = mDiv(dParent);
 	let val = lookup(Settings, skeys);
 	if (nundef(val)) val = init;
 
 	let inp = createElementFromHTML(`<select onfocusout="setSettingsKeysSelect(this)"></select>`);
-	for (const opt of optionList) {
-		let optElem = createElementFromHTML(`<option value="${opt}">${opt}</option>`);
+	for (let i = 0; i < optionList.length; i++) {
+		let opt = optionList[i];
+		let friendly = friendlyList[i];
+		let optElem = createElementFromHTML(`<option value="${opt}">${friendly}</option>`);
 		mAppend(inp, optElem);
 		if (opt == val) optElem.selected = true;
 	}
@@ -154,7 +190,7 @@ function setzeEinOptions(dParent, label, optionList, init, skeys) {
 
 
 //#region update Settings after ui change
-function updateComplexSettings() {
+function updateSettings() {
 
 	updateLabelSettings();
 	updateTimeSettings();
@@ -165,9 +201,9 @@ function updateComplexSettings() {
 
 
 }
-function updateSpeakmodeSettings(){
-	if (Settings.silentMode && Settings.spokenFeedback) Settings.spokenFeedback=false;
-	
+function updateSpeakmodeSettings() {
+	if (Settings.silentMode && Settings.spokenFeedback) Settings.spokenFeedback = false;
+
 }
 function updateKeySettings(nMin) {
 	//console.log(G,KeySets);
