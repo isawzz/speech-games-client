@@ -40,15 +40,28 @@ function maResizePic(p, dParent, pictureSize) {
 	let hPicOld = bpic.height;
 	let hPicNew = bpic.height * x;
 
-	// console.log('pic will be resized from',wPicOld,hPicOld,'to',wPicNew,hPicNew)
+	console.log('pic will be resized from',wPicOld,hPicOld,'to',wPicNew,hPicNew)
+	console.log('info.hOrig',p.info.hOrig)
+	console.log('info',p.info)
 
 	mSize(d, pictureSize, pictureSize);
-	mStyleX(dpic, { w: wPicNew, h: hPicNew });
 
 	let dsym = dpic.children[0];
-	let bsym = getBounds(dsym);
+	//let bsym = getBounds(dsym);
 	let fzPicOld = firstNumber(dsym.style.fontSize);
 	let fzPicNew = fzPicOld * x;
+
+	let hNew = fzPicNew*p.info.h[0]/100;
+
+	console.log('new h should be',hNew,'but is',hPicNew)
+
+	//old font = fzPicOld ... hOrig
+	// new font = fzPicNew
+	// new h should be info.h[0]
+
+
+	mStyleX(dpic, { w: wPicNew, h: hNew });
+
 
 	// console.log('resizing font of symbol from',fzPicOld,'to',fzPicNew);
 
@@ -66,7 +79,7 @@ function maResizePic(p, dParent, pictureSize) {
 
 	p.sz = pictureSize;
 
-	let htext = getBounds(dtext).height;
+	let htext = p.isLabelVisible?getBounds(dtext).height:0;
 	let hpic = getBounds(dpic).height;
 	//console.log(htext,hpic,getBounds(dsym).height)
 	d.style.paddingTop = '' + ((pictureSize - (htext + hpic)) / 2) + 'px';

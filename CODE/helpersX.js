@@ -31,10 +31,10 @@ function mStyleX(elem, styles, unit = 'px') {
 	}
 	
 	if (isdef(styles.vmargin) && isdef(styles.hmargin)) {
-		styles.margin = vmargin + unit + ' ' + hmargin + unit;
+		styles.margin = styles.vmargin + unit + ' ' + styles.hmargin + unit;
 	}
 	if (isdef(styles.vpadding) && isdef(styles.hpadding)) {
-		styles.padding = vpadding + unit + ' ' + hpadding + unit;
+		styles.padding = styles.vpadding + unit + ' ' + styles.hpadding + unit;
 	}
 
 	//console.log(styles.bg,styles.fg);

@@ -191,7 +191,7 @@ function mLinebreak(dParent, gap) {
 	if (dParent.style.display == 'flex' || mHasClass(dParent, 'flexWrap')) mClass(d, 'linebreak');
 	else d.innerHTML = '<br>';
 
-	if (isdef(gap)) d.style.minHeight = gap + 'px';
+	if (isdef(gap)) {d.style.minHeight = gap + 'px';d.innerHTML=' &nbsp; ';d.style.opacity=.2;}//return mLinebreak(dParent);}
 
 	return d;
 }
@@ -465,7 +465,7 @@ function computeColorX(c) {
 	else if (isString(c) && startsWith(c, 'rand')) {
 		res = randomColor();
 		let spec = c.substring(4);
-		console.log('______________________', spec);
+		//console.log('______________________', spec);
 		if (isdef(window['color' + spec])) {
 			console.log('YES!');
 			res = window['color' + spec](res);
@@ -2343,6 +2343,12 @@ function getRelCoords(ev, elem) {
 	//console.log('coords rel to',elm,':',x,y);
 	return { x: x, y: y };
 }
+function getRelCoordsX(ev, elem) {
+	let x = ev.pageX - elem.getBoundingClientRect().left; //.offset().left;
+	let y = ev.pageY - elem.getBoundingClientRect().top;
+	//console.log('coords rel to',elm,':',x,y);
+	return { x: x, y: y };
+}
 function getSizeWithStyles(text, styles) {
 	var d = document.createElement("div");
 	document.body.appendChild(d);
@@ -2579,7 +2585,30 @@ function makeDroppable(target) {
 	target.ondragover = allowDrop;
 	target.ondrop = drop;
 }
-
+// X 
+//function allowDrop(ev) { ev.preventDefault(); }
+function dragX(ev) {
+	let elem = ev.target;
+	dragStartOffset = getRelCoordsX(ev, elem);
+	draggedElement = elem;
+}
+function dropX(ev) {
+	ev.preventDefault();
+	let targetElem = findDragTarget(ev); //drop on target, not a child of it!!!
+	//console.log(draggedElement.dropPosition);
+	if (nundef(draggedElement.dropPosition) || typeof(draggedElement.dropPosition) != 'function') targetElem.appendChild(draggedElement);
+	setDropPosition(ev, draggedElement, targetElem, isdef(draggedElement.dropPosition) ? draggedElement.dropPosition : dropPosition);
+}
+function makeDraggableX(elem, dropPos) {
+	//dropPos can be func(ev, dragElem, dropElem)
+	elem.draggable = true;
+	elem.ondragstart = dragX;
+	if (isdef(dropPos)) elem.dropPosition = dropPos;
+}
+function makeDroppableX(target) {
+	target.ondragover = allowDrop;
+	target.ondrop = dropX;
+}
 //#endregion
 
 //#region DOM: hierarchy, parent, children...
