@@ -536,7 +536,7 @@ class GElim extends Game {
 		writeSound(); playSound('hit');
 
 		if (Goal.pics.includes(pic)) {
-			removePicture(pic, true);
+			removePicture(pic);
 			//console.log('YES!!!!'); 
 			Goal.sammler.push(pic);
 		}

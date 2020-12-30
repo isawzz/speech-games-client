@@ -1,7 +1,7 @@
 nil:
   id: nil
   seq: [gTouchPic, gPremem, gTouchColors, gMissingLetter, gSteps, gSayPic, gMem, gMissingNumber, gWritePic, gElim, gAnagram]
-  lastGame: gAnagram
+  lastGame: gElim
   lastLevel: 1
   settings:
     # settings common to all games

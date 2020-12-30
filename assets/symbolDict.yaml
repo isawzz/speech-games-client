@@ -363,7 +363,7 @@ BACK arrow:
   group: symbols
   subgroups: arrow
   E: back arrow|back|arrow|left
-  D: zuruueeck|pfeil|links
+  D: zurück|pfeil|links
   hex: 1F519
   family: emoNoto
   text: '&#128281;'
@@ -739,7 +739,7 @@ Japanese symbol for beginner:
   group: symbols
   subgroups: other-symbol
   E: beginner
-  D: anfaaeenger
+  D: anfänger
   hex: 1F530
   family: emoNoto
   text: '&#128304;'
@@ -774,7 +774,7 @@ Leo:
   group: symbols
   subgroups: zodiac
   E: leo
-  D: looeewe
+  D: löwe
   hex: 264C
   family: emoNoto
   text: '&#9804;'
@@ -1211,7 +1211,7 @@ Sagittarius:
   group: symbols
   subgroups: zodiac
   E: sagittarius
-  D: schuueetze
+  D: schütze
   hex: '2650'
   family: emoNoto
   text: '&#9808;'
@@ -4190,7 +4190,7 @@ aerial tramway:
   group: travel-places
   subgroups: transport-air
   E: tram|cable car
-  D: strassenbahn
+  D: gondel|seilbahn
   hex: 1F6A1
   family: emoNoto
   text: '&#128673;'
@@ -9303,7 +9303,7 @@ baggage claim:
   group: symbols
   subgroups: transport-sign
   E: baggage
-  D: gepaaeeck
+  D: gepäck
   hex: 1F6C4
   family: emoNoto
   text: '&#128708;'
@@ -35873,7 +35873,7 @@ dragon:
   group: animals-nature
   subgroups: animal-reptile
   E: dragon
-  D: drachen|drache
+  D: drachen
   hex: 1F409
   family: emoNoto
   text: '&#128009;'
@@ -35897,16 +35897,16 @@ dragon:
     - 133
     - 133
     - 133
-  bestD: drache
+  bestD: drachen
   bestDConf: 83
   bestE: dragon
   bestEConf: 87
   best100:
     E: dragon
-    D: drache
+    D: drachen
   best50:
     E: dragon
-    D: drache
+    D: drachen
 dragon face:
   key: dragon face
   type: emo
@@ -35917,7 +35917,7 @@ dragon face:
   group: animals-nature
   subgroups: animal-reptile
   E: dragon
-  D: drachen|drache
+  D: drachen
   hex: 1F432
   family: emoNoto
   text: '&#128050;'
@@ -35943,7 +35943,7 @@ dragon face:
     - 133
     - 133
     - 133
-  bestD: drache
+  bestD: drachen
   bestDConf: 83
   bestE: dragon
   bestEConf: 84
@@ -40437,6 +40437,7 @@ eye:
   subgroups: body-parts
   E: eye
   D: auge
+  E_valid_sound: I
   hex: 1F441
   family: emoNoto
   text: '&#128065;'
@@ -42930,8 +42931,8 @@ file cabinet:
   hexcode: 1F5C4
   group: objects
   subgroups: office
-  E: cabinet
-  D: file
+  E: filer|file|file cabinet|cabinet
+  D: kastel|box
   E_valid_sound: filing
   D_valid_sound: box
   hex: 1F5C4
@@ -42970,6 +42971,7 @@ file folder:
   subgroups: office
   E: file folder|folder
   D: datei|mappe
+  E_valid_sound: boulder
   hex: 1F4C1
   family: emoNoto
   text: '&#128193;'
@@ -72817,7 +72819,7 @@ mahjong red dragon:
   group: activities
   subgroups: game
   E: red dragon|mahjong
-  D: roter drache|mahjong
+  D: roter drachen|drachen|mahjong
   hex: 1F004
   family: emoNoto
   text: '&#126980;'
@@ -110890,7 +110892,7 @@ stethoscope:
   group: objects
   subgroups: medical
   E: stethoscope
-  D: stethoscop
+  D: stethoskop
   hex: 1FA7A
   family: emoNoto
   text: '&#129658;'
@@ -112133,7 +112135,7 @@ studio microphone:
   group: objects
   subgroups: music
   E: microphone
-  D: microphon
+  D: mikrophon
   hex: 1F399
   family: emoNoto
   text: '&#127897;'
@@ -116812,6 +116814,7 @@ thread:
   subgroups: arts-crafts
   E: thread
   D: faden|zwirnrolle|zwirn
+  E_valid_sound: shred
   hex: 1F9F5
   family: emoNoto
   text: '&#129525;'
