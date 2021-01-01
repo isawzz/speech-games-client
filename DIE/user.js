@@ -1,3 +1,21 @@
+function updateUserScore() {
+	let sc = { nTotal: Score.nTotal, nCorrect: Score.nCorrect, nCorrect1: Score.nCorrect1 };
+	let g = G.key;
+
+	let recOld = lookupSet(U, ['games', g],{startLevel:0,nTotal:0,nCorrect:0,nCorrect1:0});
+	let recSession = lookupSet(U, ['session', g],{startLevel:0,nTotal:0,nCorrect:0,nCorrect1:0});
+	//let recNew = U.session[g];
+
+	addByKey(sc, recSession);
+	recSession.percentage = Math.round(100 * recSession.nCorrect / recSession.nTotal);
+
+	addByKey(sc, recOld);
+	recOld.percentage = Math.round(100 * recOld.nCorrect / recOld.nTotal);
+
+	console.log('updated user score for', g, sc, recOld);
+	console.log('updated user score session', recSession);
+	Score.nTotal = Score.nCorrect = Score.nCorrect1 = 0;
+}
 function addScoreToUserSession() {
 	//at end of level
 	//adds Score to session
@@ -87,7 +105,7 @@ function loadUser(newUser) {
 	//console.log('newUser',newUser)
 	USERNAME = isdef(newUser) ? newUser : localStorage.getItem('user');
 
-	if (nundef(USERNAME)) USERNAME = 'guest';
+	if (nundef(USERNAME)) USERNAME = DEFAULTUSERNAME;
 
 	//console.log('U anfang von loadUser', U, '\nDB', DB.users[USERNAME]);
 

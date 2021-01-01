@@ -1,6 +1,6 @@
 var SelectedMenuKey, MenuItems;
 var SettingTypesCommon = {
-	samplesPerLevel: true,
+	samplesPerGame: true,
 	minutesPerUnit: true,
 	incrementLevelOnPositiveStreak: true,
 	decrementLevelOnNegativeStreak: true,
@@ -21,7 +21,7 @@ function createSettingsUi(dParent) {
 	mAppend(dParent, createElementFromHTML(`<${ttag}>Common Settings for ${USERNAME}:</${ttag}>`));
 
 	let nGroupNumCommonAllGames = mInputGroup(dParent);
-	setzeEineZahl(nGroupNumCommonAllGames, 'samples', 25, ['samplesPerLevel']);
+	setzeEineZahl(nGroupNumCommonAllGames, 'samples', 25, ['samplesPerGame']);
 	setzeEineZahl(nGroupNumCommonAllGames, 'minutes', 1, ['minutesPerUnit']);
 	setzeEineZahl(nGroupNumCommonAllGames, 'correct streak', 5, ['incrementLevelOnPositiveStreak']);
 	setzeEineZahl(nGroupNumCommonAllGames, 'fail streak', 2, ['decrementLevelOnNegativeStreak']);

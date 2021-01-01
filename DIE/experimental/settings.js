@@ -24,7 +24,7 @@ function addSettingsUi(dParent, title, game) {
 	mAppend(dParent, createElementFromHTML(`<h2>${title}</h2>`));
 
 	let nGroupNumCommonAllGames = mInputGroup(dParent);
-	setzeEineZahl(nGroupNumCommonAllGames, 'samples', 25, ['samplesPerLevel'], game);
+	setzeEineZahl(nGroupNumCommonAllGames, 'samples', 25, ['samplesPerGame'], game);
 	setzeEineZahl(nGroupNumCommonAllGames, 'minutes', 1, ['minutesPerUnit']);
 	setzeEineZahl(nGroupNumCommonAllGames, 'correct streak', 5, ['incrementLevelOnPositiveStreak']);
 	setzeEineZahl(nGroupNumCommonAllGames, 'fail streak', 2, ['decrementLevelOnNegativeStreak']);

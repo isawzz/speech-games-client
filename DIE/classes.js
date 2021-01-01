@@ -242,6 +242,7 @@ class GMissingLetter extends Game {
 }
 class GSayPic extends Game {
 	constructor(name) { super(name); }
+	clear(){ Speech.stopRecording(); }
 	prompt() {
 
 		showPictures(() => mBy(defaultFocusElement).focus());

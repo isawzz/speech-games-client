@@ -23,10 +23,11 @@ async function _start() {
 	KeySets = getKeySets();
 	//console.log(KeySets)
 
-	if (IS_TESTING)	loadUser('nil'); else loadUser();
+	if (IS_TESTING)	loadUser(USERNAME); else loadUser();
 	console.assert(isdef(G))
 
 	//test03_maShowPictures(); return;
+	if (ALLOW_CALIBRATION) show('dCalibrate');
 	if (SHOW_FREEZER) show('freezer'); else startUnit();
 
 }

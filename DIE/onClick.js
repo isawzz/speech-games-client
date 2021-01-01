@@ -27,7 +27,7 @@ function openAux() {
 function closeAux() {
 	hide(dAux);
 	hide('dGo');
-	show('dCalibrate');
+	if (ALLOW_CALIBRATION) show('dCalibrate');
 	show('dGear');
 	show('dTemple');
 	if (SettingsChanged) {
@@ -62,7 +62,7 @@ function onClickTemple() {
 	//console.log('opening menu: ui will be interrupted!!!')
 	openAux();
 	hide('dTemple');
-	show('dCalibrate');
+	if (ALLOW_CALIBRATION) show('dCalibrate');
 	createMenuUi(dAux);
 }
 

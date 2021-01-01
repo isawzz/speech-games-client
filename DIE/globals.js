@@ -1,5 +1,7 @@
 const SHOW_FREEZER = false; // !IS_TESTING;
-const CLEAR_LOCAL_STORAGE = false;
+const CLEAR_LOCAL_STORAGE = true;
+const ALLOW_CALIBRATION = false;
+
 var QuestionCounter = 0;
 var lastPosition;
 

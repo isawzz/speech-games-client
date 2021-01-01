@@ -1,16 +1,16 @@
 nil:
   id: nil
-  seq: [gTouchPic, gPremem, gTouchColors, gMissingLetter, gSteps, gSayPic, gMem, gMissingNumber, gWritePic, gElim, gAnagram]
-  lastGame: gElim
-  lastLevel: 1
+  seq: [gTouchPic, gPremem, gTouchColors, gMissingLetter, gSteps, gSayPic, gMem, gMissingNumber, gWritePic, gAnagram, gElim]
+  lastGame: gAnagram
+  lastLevel: 0
   settings:
     # settings common to all games
-    samplesPerLevel: 20
+    samplesPerGame: 3
     minutesPerUnit: .1
-    incrementLevelOnPositiveStreak: 12
-    decrementLevelOnNegativeStreak: 3
+    incrementLevelOnPositiveStreak: 1
+    decrementLevelOnNegativeStreak: 1
     showLabels: toggle #always never toggle (=remove labels after half level)
-    language: D
+    language: E
     vocab: best100
     showTime: true
     spokenFeedback: true
@@ -26,17 +26,15 @@ nil:
     levelBadges: false
   games:
     gSteps:
-      startLevel: 3
-      settings:
-        trials: 2
+      startLevel: 0
 guest0:
   id: guest
-  seq: [gTouchPic, gPremem, gTouchColors, gMissingLetter, gSteps, gSayPic, gMem, gMissingNumber, gWritePic]
+  seq: [gTouchPic, gPremem, gTouchColors, gMissingLetter, gSteps, gSayPic, gMem, gMissingNumber, gWritePic, gAnagram, gElim]
   lastGame: gTouchPic
   lastLevel: 0
   settings:
     # settings common to all games
-    samplesPerLevel: 10
+    samplesPerGame: 10
     minutesPerUnit: 10
     incrementLevelOnPositiveStreak: 10
     decrementLevelOnNegativeStreak: 5
@@ -55,12 +53,12 @@ guest0:
       startLevel: 0
 test0:
   id: test0
-  seq: [gTouchPic, gPremem, gTouchColors, gMissingLetter, gSteps, gSayPic, gMem, gMissingNumber, gWritePic]
+  seq: [gTouchPic, gPremem, gTouchColors, gMissingLetter, gSteps, gSayPic, gMem, gMissingNumber, gWritePic, gAnagram, gElim]
   lastGame: gTouchPic
   lastLevel: 0
   settings:
     # settings common to all games
-    samplesPerLevel: 10
+    samplesPerGame: 10
     minutesPerUnit: 10
     incrementLevelOnPositiveStreak: 10
     decrementLevelOnNegativeStreak: 5
@@ -79,18 +77,18 @@ test0:
       startLevel: 0
 gul:
   id: gul
-  seq: [gTouchPic, gPremem, gTouchColors, gMissingLetter, gSteps, gSayPic, gMem, gMissingNumber, gWritePic]
-  lastGame: gTouchPic
-  lastLevel: 4
+  seq: [gTouchPic, gPremem, gTouchColors, gMissingLetter, gSteps, gSayPic, gMem, gMissingNumber, gWritePic, gAnagram, gElim]
+  lastGame: gMissingNumber
+  lastLevel: 0
   settings:
     # settings common to all games
-    samplesPerLevel: 10
-    minutesPerUnit: 10
+    samplesPerGame: 25
+    minutesPerUnit: 20
     incrementLevelOnPositiveStreak: 10
     decrementLevelOnNegativeStreak: 5
     showLabels: toggle #always never toggle (=remove labels after half level)
     language: E
-    vocab: best25
+    vocab: best100
     showTime: false
     spokenFeedback: true
     silentMode: false
@@ -100,9 +98,9 @@ gul:
     showHint: true
   games:
     gTouchPic:
-      startLevel: 2
+      startLevel: 3
     gPremem:
-      startLevel: 1
+      startLevel: 3
     gMem:
       startLevel: 1
 

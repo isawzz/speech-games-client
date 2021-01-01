@@ -24,6 +24,140 @@ function aniFadeInOut(elem, secs) {
 function aniPulse(elem, ms) { animate(elem, 'onPulse', ms); }
 //#endregion
 
+var DragElem = null; var DropZones = []; var DragSource = null;
+function onMovingCloneAround(ev) {
+
+	if (DragElem === null) return;
+
+	let mx = ev.clientX;
+	let my = ev.clientY;
+	let dx = mx - DragElem.drag.offsetX;
+	let dy = my - DragElem.drag.offsetY;
+	mStyleX(DragElem, { left: dx, top: dy });
+}
+function onRelease(ev) {
+	let els = allElementsFromPoint(ev.clientX, ev.clientY);
+	//console.log('_________',els);
+	let inputs = DropZones; //Array.from(mBy('dInputs').children);
+	for (const inp of inputs) {
+		if (els.includes(inp)) {
+			//console.log('yes, we are over',inp.id);
+			inp.innerHTML = DragElem.innerHTML;
+
+			//achtung: if clone is a input clone, clear original element!!!!
+			if (startsWith(DragElem.id,'input')) DragSource.innerHTML = '_';
+			// t.innerHTML = s.innerHTML;
+
+			//check if word complete!
+			let w = buildWordFromLetters(inp.parentNode);
+			if (!w.includes('_')) evaluate(w, Goal.label.toUpperCase());
+
+		}
+	}
+	//destroy clone
+	DragElem.remove();
+	DragElem = DragSource = null;
+	document.body.onmousemove = document.body.onmouseup = null;
+}
+function scrambleInputs(d) {
+	let children = Array.from(d.children);
+	// for(const ch of children){
+	// 	mRemove(ch);
+	// 	break;
+	// }
+	shuffle(children);
+	//console.log(children)
+	for (const ch of children) {
+		mAppend(d, ch);
+	}
+
+}
+function allElementsFromPoint(x, y) {
+	var element, elements = [];
+	var old_visibility = [];
+	while (true) {
+		element = document.elementFromPoint(x, y);
+		if (!element || element === document.documentElement) {
+			break;
+		}
+		elements.push(element);
+		old_visibility.push(element.style.visibility);
+		element.style.visibility = 'hidden'; // Temporarily hide the element (without changing the layout)
+	}
+	for (var k = 0; k < elements.length; k++) {
+		elements[k].style.visibility = old_visibility[k];
+	}
+	elements.reverse();
+	return elements;
+}
+function isLetterElement(elem) { return isCapitalLetter(elem.innerHTML); }
+function onMouseDownOnLetter(ev) {
+	if (!canAct()) return;
+
+	ev.preventDefault();
+	let id = evToClosestId(ev);
+	//console.log('mouse down on', id);
+	let source = mBy(id);
+
+	if (isLetterElement(source)) {
+		console.log('is capital letter', source.id)
+		//d wird gecloned
+
+		var clone = DragElem = source.cloneNode(true);
+		clone.id=DragElem.id+'_'+clone;
+		DragSource = source;
+
+		//clone muss an body attached werden
+		mAppend(document.body, clone);
+		mClass(clone, 'letter')
+
+		//der clone muss class 'dragelem' sein
+		mClass(clone, 'dragelem');
+
+		//der clone wird richtig plaziert
+		mStyleX(clone, { left: ev.clientX - ev.offsetX, top: ev.clientY - ev.offsetY });
+
+		clone.drag = { offsetX: ev.offsetX, offsetY: ev.offsetY };
+
+		// von jetzt an un solange DragElem != null ist muss der clone sich mit der maus mitbewegen
+		document.body.onmousemove = onMovingCloneAround;
+		document.body.onmouseup = onRelease;// ev=>console.log('mouse up')
+	}
+}
+function createDropInputs() {
+	let fz = 120; let word = Goal.label.toUpperCase(); let wlen = word.length;
+	let dpEmpty = createLetterInputsX(word, dTable, { pabottom: 5, bg: 'grey', display: 'inline-block', fz: fz, w: fz, h: fz * 1.1, margin: 4 }); //,w:40,h:80,margin:10});
+	let inputs = blankInputs(dpEmpty, range(0, wlen - 1), false);
+
+	// this.inputs.map(x => mClass(x.div,'dropzone'));
+
+	// this.inputs.map(x => x.div.onclick = () => x.div.innerHTML = '_');
+	//console.log(this.inputs);
+	DropZones = [];
+	for (let i = 0; i < inputs.length; i++) {
+		let l = inputs[i].div;
+		l.onmousedown = onMouseDownOnLetter;
+		l.onclick = l.innerHTML = '_';
+		mClass(l, 'dropzone');
+		l.id = 'input' + i;
+		DropZones.push(l);
+	}
+	return inputs;
+}
+function createDragLetters() {
+	fz = 60; let word = Goal.label.toUpperCase(); let wlen = word.length;
+	let dp = createLetterInputsX(word, dTable, { bg: 'silver', display: 'inline-block', fz: fz, w: fz, h: fz * 1.1, margin: 4 }); //,w:40,h:80,margin:10});
+	scrambleInputs(dp);
+	let letters = Array.from(dp.children);
+	for (let i = 0; i < letters.length; i++) {
+		let l = letters[i]
+		l.onmousedown = onMouseDownOnLetter;
+		mClass(l, 'draggable');
+		l.id = 'letter' + i;
+	}
+	return letters;
+}
+
 //#region createLetterInputs
 function buildWordFromLetters(dParent) {
 	let letters = Array.from(dParent.children);
@@ -73,7 +207,7 @@ function createLetterInputsX(s, dParent, style, idForContainerDiv) {
 	}
 	return d;
 }
-function blankInputs(d,ilist,blink=true){
+function blankInputs(d, ilist, blink = true) {
 	let inputs = [];
 	for (const idx of ilist) {
 		let inp = d.children[idx];
@@ -893,13 +1027,12 @@ function showScore() {
 	//console.log('===>_showScore!!!', Score);
 	if (Score.gameChange) showBadgesX(dLeiste, G.level, onClickBadgeX, G.maxLevel);
 
-	let scoreString = 'question: ' + (Score.nTotal + 1) + '/' + Settings.samplesPerLevel;
+	let scoreString = 'question: ' + (Score.nTotal + 1) + '/' + Settings.samplesPerGame;
 
 	if (Score.levelChange) {
 		dScore.innerHTML = scoreString;
 		setBadgeLevel(G.level);
-	}
-	else {
+	} else {
 		setTimeout(() => {
 			dScore.innerHTML = scoreString;
 			setBadgeLevel(G.level);
@@ -908,13 +1041,13 @@ function showScore() {
 }
 function showStats() {
 
-	if (Score.levelChange) {
-		Score.nTotal = 0;
-		Score.nCorrect = 0;
-		Score.nCorrect1 = 0;
-		Score.nPos = 0;
-		Score.nNeg = 0;
-	}
+	// if (Score.levelChange) {
+	// 	Score.nTotal = 0;
+	// 	Score.nCorrect = 0;
+	// 	Score.nCorrect1 = 0;
+	// 	Score.nPos = 0;
+	// 	Score.nNeg = 0;
+	// }
 	showGameTitle();
 	showLevel();
 	if (calibrating()) { dScore.innerHTML = 'calibrating...'; } else showScore();

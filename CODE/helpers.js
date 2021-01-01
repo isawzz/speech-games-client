@@ -68,14 +68,15 @@ function mEditableInput(dParent, label, val) {
 	mAppend(dParent, elem);
 	return elem;
 }
-function mInput(label,value,dParent,styles){
+function mInput(label, value, dParent, styles) {
 	let inp = createElementFromHTML(`<input type="text" class="input" value="${value}" />`);
 	let labelui = createElementFromHTML(`<label>${label}</label>`);
 	mAppend(dParent, labelui);
 	mAppend(labelui, inp);
-	if (isdef(styles)) mStyleX(labelui,styles)
+	if (isdef(styles)) mStyleX(labelui, styles)
 	return inp;
 }
+function mFlexWrap(d){mFlex(d,'w');}
 function mFlex(d, or = 'h') {
 	d.style.display = 'flex';
 	d.style.flexFlow = (or == 'v' ? 'column' : 'row') + ' ' + (or == 'w' ? 'wrap' : 'nowrap');
@@ -191,7 +192,7 @@ function mLinebreak(dParent, gap) {
 	if (dParent.style.display == 'flex' || mHasClass(dParent, 'flexWrap')) mClass(d, 'linebreak');
 	else d.innerHTML = '<br>';
 
-	if (isdef(gap)) {d.style.minHeight = gap + 'px';d.innerHTML=' &nbsp; ';d.style.opacity=.2;}//return mLinebreak(dParent);}
+	if (isdef(gap)) { d.style.minHeight = gap + 'px'; d.innerHTML = ' &nbsp; '; d.style.opacity = .2; }//return mLinebreak(dParent);}
 
 	return d;
 }
@@ -2596,7 +2597,7 @@ function dropX(ev) {
 	ev.preventDefault();
 	let targetElem = findDragTarget(ev); //drop on target, not a child of it!!!
 	//console.log(draggedElement.dropPosition);
-	if (nundef(draggedElement.dropPosition) || typeof(draggedElement.dropPosition) != 'function') targetElem.appendChild(draggedElement);
+	if (nundef(draggedElement.dropPosition) || typeof (draggedElement.dropPosition) != 'function') targetElem.appendChild(draggedElement);
 	setDropPosition(ev, draggedElement, targetElem, isdef(draggedElement.dropPosition) ? draggedElement.dropPosition : dropPosition);
 }
 function makeDraggableX(elem, dropPos) {
@@ -2608,6 +2609,122 @@ function makeDraggableX(elem, dropPos) {
 function makeDroppableX(target) {
 	target.ondragover = allowDrop;
 	target.ondrop = dropX;
+}
+//#endregion
+
+//#region X2
+// var onDragStart = function (event) {
+//   event.preventDefault();
+//   var clone = event.target.cloneNode(true);
+//   clone.classList.add("dragging");
+//   event.target.parentNode.appendChild(clone);
+//   var style = getComputedStyle(clone);
+//   clone.drag = {
+//     x: (event.pageX||(event.clientX+document.body.scrollLeft)) - clone.offsetLeft + parseInt(style.marginLeft),
+//     y: (event.pageY||(event.clientY+document.body.scrollTop)) - clone.offsetTop + parseInt(style.marginTop),
+//     source: event.target
+//   };
+// };
+
+// var onDragMove = function (event) {
+//   if (!event.target.drag) {return;}
+//   event.target.style.left = ((event.pageX||(event.clientX+document.body.scrollLeft)) - event.target.drag.x) + "px";
+//   event.target.style.top = ((event.pageY||(event.clientY+document.body.scrollTop)) - event.target.drag.y) + "px";
+// };
+
+// var onDragEnd = function (event) {
+//   if (!event.target.drag) {return;}
+//   // Define persist true to let the source persist and drop the target, otherwise persist the target.
+//   var persist = true;
+//   if (persist || event.out) {
+//     event.target.parentNode.removeChild(event.target);
+//   } else {
+//     event.target.parentNode.removeChild(event.target.drag.source);
+//   }
+//   event.target.classList.remove("dragging");
+//   event.target.drag = null;
+// };
+
+// var onDragOver = function (event) {
+//   event.preventDefault();
+// };
+
+function dragX2(ev) {
+	//ev.preventDefault();
+	let elem = ev.target;
+	dragStartOffset = getRelCoordsX(ev, elem);
+	draggedElement = elem;
+}
+function dropX2(ev) {
+	ev.preventDefault();
+	let targetElem = findDragTarget(ev); //drop on target, not a child of it!!!
+	//console.log(draggedElement.dropPosition);
+	if (nundef(draggedElement.dropPosition) || typeof (draggedElement.dropPosition) != 'function') targetElem.appendChild(draggedElement);
+	setDropPosition(ev, draggedElement, targetElem, isdef(draggedElement.dropPosition) ? draggedElement.dropPosition : dropPosition);
+}
+function makeDraggableX2(elem, dropPos) {
+	//dropPos can be func(ev, dragElem, dropElem)
+	elem.draggable = true;
+	elem.ondragstart = dragX2;
+	if (isdef(dropPos)) elem.dropPosition = dropPos;
+
+	// let el = elem;
+	// el.onpointerdown = ev => {
+	// 	el.onpointermove = pointerMove
+	// 	el.style.cursor='grabbing';
+	// 	el.setPointerCapture(ev.pointerId)
+	// }
+
+	// pointerMove = ev => {
+	// 	console.log('Dragged!')
+	// }
+
+	// el.onpointerup = ev => {
+	// 	el.onpointermove = null
+	// 	el.releasePointerCapture(ev.pointerId)
+	// }
+}
+function makeDroppableX2(target) {
+	target.ondragover = allowDrop;
+	target.ondrop = dropX2;
+}
+
+//#endregion x2
+
+
+
+
+
+
+//#region rest DD
+function makeDragDrop(objElems, dropzoneElems) {
+
+	// console.log(objElems[0], dropzoneElems[0]);
+	// objElems.map(x => mClass(x, 'draggable'));
+	// dropzoneElems.map(x => mClass(x, 'dropzone'));
+	let dropzones = document.querySelectorAll('.dropzone');
+	let droppable = new Draggable.Droppable(
+		dropzones, //dropzoneElems,
+		{
+			draggable: '.draggable',
+			dropzone: '.dropzone',
+			mirror: { constrainDimensions: true }
+		}
+	);
+	return;
+	let droppableOrigin;
+
+	// --- Draggable events --- //
+	droppable.on('drag:start', (ev) => {
+		//droppableOrigin = ev.originalSource.parentNode.dataset.dropzone;
+		console.log('drag', droppableOrigin, ev)
+	});
+
+	droppable.on('droppable:dropped', (ev) => {
+		console.log('drop!', droppableOrigin, ev);
+		// if (droppableOrigin !== ev.dropzone.dataset.dropzone) { ev.cancel(); }
+	});
+	return droppable;
 }
 //#endregion
 
@@ -3609,7 +3726,7 @@ function allWordsContainedInKeysAsWord(dict, keywords) {
 //#endregion
 
 //#region ARRAY objects, dictionaries, lists, arrays
-function copyKeys(ofrom,oto){	for(const k in ofrom) oto[k]=ofrom[k];}
+function copyKeys(ofrom, oto) { for (const k in ofrom) oto[k] = ofrom[k]; }
 function addByKey(oNew, oOld, except) {
 	for (const k in oNew) {
 		let val = oNew[k];
@@ -3618,6 +3735,11 @@ function addByKey(oNew, oOld, except) {
 	}
 }
 function range(f, t, st = 1) {
+	if (nundef(t)){
+		//if only 1 arg, will return numbers 0..f-1 
+		t=f-1;
+		f=0;
+	}
 	let arr = [];
 	//console.log(f,t)
 	for (let i = f; i <= t; i += st) {
@@ -3675,7 +3797,7 @@ function arrLast(arr) { return arr.length > 0 ? arr[arr.length - 1] : null; }
 function arrTail(arr) { return arr.slice(1); }
 function arrFromIndex(arr, i) { return arr.slice(i); }
 function arrMinus(a, b) { let res = a.filter(x => !b.includes(x)); return res; }
-function arrWithout(a, b) { return arrMinus(a,b); }
+function arrWithout(a, b) { return arrMinus(a, b); }
 function arrRange(from = 1, to = 10, step = 1) { let res = []; for (let i = from; i <= to; i += step)res.push(i); return res; }
 function arrReplace(arr, oldval, newval) { let i = arr.indexOf(oldval); if (i >= 0) arr[i] = newval; return oldval; }
 
@@ -3903,9 +4025,9 @@ function indexOfFuncMax(arr, prop, f) {
 	let max = null;
 	let imax = null;
 	for (const [i, v] of arr.entries()) {
-		let val = isdef(prop) && isdef(v[prop])?v[prop]:v;
+		let val = isdef(prop) && isdef(v[prop]) ? v[prop] : v;
 		if (isdef(f)) val = f(val);
-		if (max == null || val > max) {max = val;imax=i}
+		if (max == null || val > max) { max = val; imax = i }
 	}
 	return { i: imax, val: max };
 }
@@ -3913,9 +4035,9 @@ function indexOfFuncMin(arr, prop, f) {
 	let min = null;
 	let imax = null;
 	for (const [i, v] of arr.entries()) {
-		let val = isdef(prop) && isdef(v[prop])?v[prop]:v;
+		let val = isdef(prop) && isdef(v[prop]) ? v[prop] : v;
 		if (isdef(f)) val = f(val);
-		if (min == null || val < min) {min = val;imax=i}
+		if (min == null || val < min) { min = val; imax = i }
 	}
 	return { i: imax, val: min };
 }
@@ -4604,8 +4726,8 @@ function chooseRandomDictKey(dict, condFunc = null) {
 function getRandomNumberSequence(n, minStart, maxStart, fBuild, exceptStart) { //{op,step,fBuild}) {
 	let nStart = randomNumber(minStart, maxStart - n + 1);
 	if (exceptStart) {
-		let att=10;
-		while(att>=0 && nStart == exceptStart) {att-=1;nStart = randomNumber(minStart, maxStart - n + 1);}
+		let att = 10;
+		while (att >= 0 && nStart == exceptStart) { att -= 1; nStart = randomNumber(minStart, maxStart - n + 1); }
 	}
 	if (isNumber(fBuild)) return range(nStart, nStart + (n - 1) * fBuild, fBuild);
 	else {
@@ -4628,8 +4750,8 @@ function choose(arr, n, exceptIndices) {
 	var result = [];//new Array(n);
 	var len = arr.length;
 	var taken = new Array(len);
-	if (isdef(exceptIndices) && exceptIndices.length < len-n){
-		for(const i of exceptIndices) if (i>=0 && i<=len) taken[i]=true;
+	if (isdef(exceptIndices) && exceptIndices.length < len - n) {
+		for (const i of exceptIndices) if (i >= 0 && i <= len) taken[i] = true;
 	}
 	//console.log('taken',jsCopy(taken));
 	//console.log('len', len);
@@ -4864,6 +4986,9 @@ function firstWord(s) {
 	return res;
 }
 function hasWhiteSpace(s) { return /\s/g.test(s); }
+function isLetter(s){return /^[a-zA-Z]$/i.test(s);}
+function isCapitalLetter(s){return /^[A-Z]$/i.test(s);}
+function isSingleDigit(s){return /^[0-9]$/i.test(s);}
 function isAlphaNum(s) {
 	//regex version: Here 
 	// ^ means beginning of string and 

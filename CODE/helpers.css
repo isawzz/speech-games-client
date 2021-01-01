@@ -1,3 +1,17 @@
+.draggable{
+	cursor: pointer;
+}
+.dropzone{
+	cursor: grab;
+}
+
+
+
+
+
+
+
+
 .editableText{
 	background-color: transparent;
 	outline: none;

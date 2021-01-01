@@ -32,20 +32,6 @@ class Game {
 	}
 }
 
-function scrambleInputs(d) {
-	let children = Array.from(d.children);
-	// for(const ch of children){
-	// 	mRemove(ch);
-	// 	break;
-	// }
-	shuffle(children);
-	//console.log(children)
-	for (const ch of children) {
-		mAppend(d, ch);
-	}
-
-}
-
 class GAnagram extends Game {
 	constructor(name) { super(name); }
 	startLevel() {
@@ -57,34 +43,12 @@ class GAnagram extends Game {
 	prompt() {
 		showPictures(() => fleetingMessage('just enter the missing letter!'));
 		setGoal();
-
 		showInstruction(Goal.label, Settings.language == 'E' ? 'drag letters to form' : "forme", dTitle, true);
-
 		mLinebreak(dTable);
 
-		let fz = 120;
-		let word = this.word = Goal.label.toUpperCase();
-		let dpEmpty = createLetterInputsX(word, dTable, { pabottom: 5, bg: 'grey', display: 'inline-block', fz: fz, w: fz, h: fz * 1.1, margin: 4 }); //,w:40,h:80,margin:10});
-		let wlen = word.length;
-		this.inputs = blankInputs(dpEmpty, range(0, wlen - 1), false);
-		this.inputs.map(x => makeDroppableX(x.div));
-		this.inputs.map(x => x.div.onclick = () => x.div.innerHTML = '_');
-		//console.log(this.inputs)
-
-		fz = 60;
+		this.inputs = createDropInputs();
 		let x = mLinebreak(dTable, 50);//x.style.background='red'
-		let dp = createLetterInputsX(word, dTable, { bg: 'silver', display: 'inline-block', fz: fz, w: fz, h: fz * 1.1, margin: 4 }); //,w:40,h:80,margin:10});
-
-		scrambleInputs(dp);
-		this.letters = Array.from(dp.children);
-		this.letters.map(x => makeDraggableX(x, (e, s, t) => {
-			if (!canAct()) return;
-			t.innerHTML = s.innerHTML;
-
-			//check if word complete!
-			let w = buildWordFromLetters(dpEmpty);
-			if (!w.includes('_')) evaluate(w, word);
-		}));
+		this.letters = createDragLetters();
 
 		activateUi();
 
@@ -99,7 +63,7 @@ class GAnagram extends Game {
 		return 10;
 	}
 	eval(w, word) {
-		Selected = { answer: w, reqAnswer: word, feedbackUI: this.inputs.map(x => x.div) };
+		Selected = { answer: w, reqAnswer: word, feedbackUI: Goal.div }; //this.inputs.map(x => x.div) };
 		//console.log(Selected);
 		return w == word;
 	}

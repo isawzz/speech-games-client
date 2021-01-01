@@ -24,7 +24,7 @@ function playGame(key) {
 
 	if (G != g) {
 		//eintrage + save U.games
-		//resetScore
+		//resetScore_
 		G = g;
 	}
 
