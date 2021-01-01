@@ -380,17 +380,17 @@ class GSteps extends Game {
 		let div = pic.div;
 		//if (!isEmpty(this.piclist) && this.piclist.length < G.numSteps - 1 && this.piclist[0].label != pic.label) return;
 		toggleSelectionOfPicture(pic, this.piclist);
-		console.log('clicked pic', pic.index, this.piclist);//,piclist, GPremem.PicList);
+		//console.log('clicked pic', pic.index, this.piclist);//,piclist, GPremem.PicList);
 		if (isEmpty(this.piclist)) return;
 		//return;
 		let iGoal = this.piclist.length - 1;
-		console.log('iGoal', iGoal, Goal.pics[iGoal], 'i', i, pic)
+		//console.log('iGoal', iGoal, Goal.pics[iGoal], 'i', i, pic)
 		if (pic != Goal.pics[iGoal]) { Selected = { pics: this.piclist, wrong: pic, correct: Goal[iGoal] }; evaluate(false); }
 		else if (this.piclist.length == Goal.pics.length) { Selected = { piclist: this.piclist }; evaluate(true); }
 	}
 	eval(isCorrect) {
-		console.log('eval', isCorrect);
-		console.log('piclist', this.piclist)
+		//console.log('eval', isCorrect);
+		//console.log('piclist', this.piclist)
 		Selected = { piclist: this.piclist, feedbackUI: this.piclist.map(x => x.div), sz: getBounds(this.piclist[0].div).height };
 		return isCorrect;
 	}
@@ -505,7 +505,10 @@ class GMissingNumber extends Game {
 }
 class GElim extends Game {
 	constructor(name) { super(name); }
-	startGame() { G.correctionFunc = () => { writeSound(); playSound('incorrect1'); return Settings.spokenFeedback ? 1800 : 300; } }
+	startGame() { 
+		G.correctionFunc = () => { writeSound(); playSound('incorrect1'); return Settings.spokenFeedback ? 1800 : 300; };
+		G.successFunc = () => { Goal.pics.map(x=>x.div.style.opacity = .3); successPictureGoal();}
+	}
 	startLevel() {
 		G.keys = G.keys.filter(x => containsColorWord(x));
 	}
@@ -552,7 +555,7 @@ class GElim extends Game {
 	eval(isCorrect) {
 		//	console.log('eval', isCorrect);
 		// console.log('piclist', this.piclist)
-		Selected = { piclist: this.piclist, feedbackUI: isCorrect ? dTable : this.lastPic.div };
+		Selected = { piclist: this.piclist, feedbackUI: isCorrect ? Goal.pics.map(x=>x.div) : this.lastPic.div };
 		return isCorrect;
 	}
 }

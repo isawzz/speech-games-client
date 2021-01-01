@@ -12,8 +12,8 @@ function updateUserScore() {
 	addByKey(sc, recOld);
 	recOld.percentage = Math.round(100 * recOld.nCorrect / recOld.nTotal);
 
-	console.log('updated user score for', g, sc, recOld);
-	console.log('updated user score session', recSession);
+	//console.log('updated user score for', g, sc, recOld);
+	//console.log('updated user score session', recSession);
 	Score.nTotal = Score.nCorrect = Score.nCorrect1 = 0;
 }
 function addScoreToUserSession() {
@@ -133,7 +133,7 @@ function loadUser(newUser) {
 
 	setGame(game, level);
 }
-function saveUnit() { addSessionToUserGames(); saveUser(); }
+function saveUnit() { saveUser(); } // _addSessionToUserGames(); saveUser(); }
 function saveUser() {
 	//console.log('saveUser:', USERNAME,G.key,G.level); //_getFunctionsNameThatCalledThisFunction()); 
 	U.lastGame = G.key;

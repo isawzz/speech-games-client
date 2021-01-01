@@ -34,7 +34,8 @@ async function _start() {
 function startUnit() {
 
 	restartTime();
-	if (nundef(U.session)) U.session = {};
+	//if (nundef(U.session)) U.session = {};
+	U.session = {};
 	//console.log('---_startUnit: session', U.session);
 	
 	// console.log('ha'); return;
