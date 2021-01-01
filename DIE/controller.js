@@ -89,7 +89,7 @@ function evaluate() {
 		} else {
 			TOMain = setTimeout(startGame, DELAY);
 		}
-	} else if (Score.levelChange) {
+	} else if (Score.levelChange && nextLevel <= G.maxLevel) {
 		G.level = nextLevel;
 		setBadgeLevel(G.level); //show the last level accomplished in opacity=1!!!
 		TOMain = setTimeout(startLevel, DELAY); //soll ich da startGame machen???
