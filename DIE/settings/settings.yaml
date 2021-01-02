@@ -62,7 +62,6 @@ games:
     posMissing: end
     ops: [add]
     seqLen: 5
-    trials: 8
     levels:
       0:
         maxNum: 10

@@ -5,7 +5,7 @@ function logicMulti(n) {
 	let [s1, w1, pics1, prop1] = logicFilter(allPics, []);
 	let [s, w, pics, prop] = [s1, w1, pics1, prop1];
 	let maxloop = 3; cntloop = 0; let propsUsed = [prop1];
-	console.log('______', cntloop, ': prop', prop, '\n', s, '\n', w, '\n', jsCopy(pics));
+	//console.log('______', cntloop, ': prop', prop, '\n', s, '\n', w, '\n', jsCopy(pics));
 	while (pics.length > maxPics && cntloop < maxloop) {
 		cntloop += 1;
 		let opp = arrMinus(allPics, pics);
@@ -39,7 +39,7 @@ function logicMulti(n) {
 				s = s + conn + s1; w = w + conn + w1;
 			}
 			propsUsed.push(prop1);
-			console.log('______', cntloop, ': prop', prop, '\n', s, '\n', w, '\n', jsCopy(pics));
+			//console.log('______', cntloop, ': prop', prop, '\n', s, '\n', w, '\n', jsCopy(pics));
 		}
 		// console.log('______1: prop', prop, '\n', s, '\n', w, '\n', jsCopy(pics));
 	}

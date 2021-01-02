@@ -559,6 +559,43 @@ class GElim extends Game {
 		return isCorrect;
 	}
 }
+class GAnagram extends Game {
+	constructor(name) { super(name); }
+	startLevel() {
+		G.keys = setKeys({
+			lang: Settings.language, keysets: KeySets, key: 'all',
+			filterFunc: (k, w) => w.length <= G.maxWordLength
+		});
+	}
+	prompt() {
+		showPictures(() => fleetingMessage('just enter the missing letter!'));
+		setGoal();
+		showInstruction(Goal.label, Settings.language == 'E' ? 'drag letters to form' : "forme", dTitle, true);
+		mLinebreak(dTable);
+
+		this.inputs = createDropInputs();
+		let x = mLinebreak(dTable, 50);//x.style.background='red'
+		this.letters = createDragLetters();
+
+		activateUi();
+
+	}
+	trialPrompt() {
+		sayTryAgain();
+		setTimeout(() => {
+			this.inputs.map(x => x.div.innerHTML = '_')
+			// mClass(d, 'blink');
+		}, 1500);
+
+		return 10;
+	}
+	eval(w, word) {
+		Selected = { answer: w, reqAnswer: word, feedbackUI: Goal.div }; //this.inputs.map(x => x.div) };
+		//console.log(Selected);
+		return w == word;
+	}
+
+}
 
 
 
@@ -580,8 +617,8 @@ const GAME = {
 	gSteps: { friendly: 'Steps!', logo: 'stairs', color: PURPLE, cl: GSteps, }, //'#911eb4',
 	// gSet: { friendly: 'Set!', logo: 'abacus', color: TEAL, cl: GSet, }, //'#911eb4',
 	// gSudo: { friendly: 'Sudo!', logo: 'abacus', color: TEAL, cl: GSudo, }, //'#911eb4',
-	gElim: { friendly: 'Elim!', logo: 'collision', color: TEAL, cl: GElim, }, //'#911eb4',
-	gAnagram: { friendly: 'Anagram!', logo: 'ram', color: 'dimgray', cl: GAnagram, }, //'#911eb4',
+	gElim: { friendly: 'Elim!', logo: 'collision', color: 'orangered', cl: GElim, }, //'#911eb4',
+	gAnagram: { friendly: 'Anagram!', logo: 'ram', color: 'rgb(0,152,105)', cl: GAnagram, }, //'#911eb4',
 };
 
 

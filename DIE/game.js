@@ -24,7 +24,41 @@ function aniFadeInOut(elem, secs) {
 function aniPulse(elem, ms) { animate(elem, 'onPulse', ms); }
 //#endregion
 
+//#region drag drop example mit letters und inputs: TODO: generalize!
 var DragElem = null; var DropZones = []; var DragSource = null;
+function onMouseDownOnLetter(ev) {
+	if (!canAct()) return;
+
+	ev.preventDefault();
+	let id = evToClosestId(ev);
+	//console.log('mouse down on', id);
+	let source = mBy(id);
+
+	if (isLetterElement(source)) {
+		//console.log('is capital letter', source.id)
+		//d wird gecloned
+
+		var clone = DragElem = source.cloneNode(true);
+		clone.id=DragElem.id+'_'+clone;
+		DragSource = source;
+
+		//clone muss an body attached werden
+		mAppend(document.body, clone);
+		mClass(clone, 'letter')
+
+		//der clone muss class 'dragelem' sein
+		mClass(clone, 'dragelem');
+
+		//der clone wird richtig plaziert
+		mStyleX(clone, { left: ev.clientX - ev.offsetX, top: ev.clientY - ev.offsetY });
+
+		clone.drag = { offsetX: ev.offsetX, offsetY: ev.offsetY };
+
+		// von jetzt an un solange DragElem != null ist muss der clone sich mit der maus mitbewegen
+		document.body.onmousemove = onMovingCloneAround;
+		document.body.onmouseup = onRelease;// ev=>console.log('mouse up')
+	}
+}
 function onMovingCloneAround(ev) {
 
 	if (DragElem === null) return;
@@ -59,70 +93,24 @@ function onRelease(ev) {
 	DragElem = DragSource = null;
 	document.body.onmousemove = document.body.onmouseup = null;
 }
-function scrambleInputs(d) {
-	let children = Array.from(d.children);
-	// for(const ch of children){
-	// 	mRemove(ch);
-	// 	break;
-	// }
-	shuffle(children);
-	//console.log(children)
-	for (const ch of children) {
-		mAppend(d, ch);
-	}
+//#endregion
 
+//#region createLetterInputs
+function blankInputs(d, ilist, blink = true) {
+	let inputs = [];
+	for (const idx of ilist) {
+		let inp = d.children[idx];
+		inp.innerHTML = '_';
+		if (blink) mClass(inp, 'blink');
+		inputs.push({ letter: Goal.label[idx].toUpperCase(), div: inp, index: idx });
+	}
+	return inputs;
 }
-function allElementsFromPoint(x, y) {
-	var element, elements = [];
-	var old_visibility = [];
-	while (true) {
-		element = document.elementFromPoint(x, y);
-		if (!element || element === document.documentElement) {
-			break;
-		}
-		elements.push(element);
-		old_visibility.push(element.style.visibility);
-		element.style.visibility = 'hidden'; // Temporarily hide the element (without changing the layout)
-	}
-	for (var k = 0; k < elements.length; k++) {
-		elements[k].style.visibility = old_visibility[k];
-	}
-	elements.reverse();
-	return elements;
-}
-function isLetterElement(elem) { return isCapitalLetter(elem.innerHTML); }
-function onMouseDownOnLetter(ev) {
-	if (!canAct()) return;
-
-	ev.preventDefault();
-	let id = evToClosestId(ev);
-	//console.log('mouse down on', id);
-	let source = mBy(id);
-
-	if (isLetterElement(source)) {
-		console.log('is capital letter', source.id)
-		//d wird gecloned
-
-		var clone = DragElem = source.cloneNode(true);
-		clone.id=DragElem.id+'_'+clone;
-		DragSource = source;
-
-		//clone muss an body attached werden
-		mAppend(document.body, clone);
-		mClass(clone, 'letter')
-
-		//der clone muss class 'dragelem' sein
-		mClass(clone, 'dragelem');
-
-		//der clone wird richtig plaziert
-		mStyleX(clone, { left: ev.clientX - ev.offsetX, top: ev.clientY - ev.offsetY });
-
-		clone.drag = { offsetX: ev.offsetX, offsetY: ev.offsetY };
-
-		// von jetzt an un solange DragElem != null ist muss der clone sich mit der maus mitbewegen
-		document.body.onmousemove = onMovingCloneAround;
-		document.body.onmouseup = onRelease;// ev=>console.log('mouse up')
-	}
+function buildWordFromLetters(dParent) {
+	let letters = Array.from(dParent.children);
+	let s = letters.map(x => x.innerHTML);
+	s = s.join('');
+	return s;
 }
 function createDropInputs() {
 	let fz = 120; let word = Goal.label.toUpperCase(); let wlen = word.length;
@@ -157,15 +145,6 @@ function createDragLetters() {
 	}
 	return letters;
 }
-
-//#region createLetterInputs
-function buildWordFromLetters(dParent) {
-	let letters = Array.from(dParent.children);
-	let s = letters.map(x => x.innerHTML);
-	s = s.join('');
-	return s;
-}
-function isVariableColor(c) { return c == 'random' || c == 'randPastel' || c == 'randDark' || c == 'randLight' || isList(c); }
 function createLetterInputs(s, dParent, style, idForContainerDiv, colorWhiteSpaceChars = true, preserveColorsBetweenWhiteSpace = true) {
 	let d = mDiv(dParent);
 	if (isdef(idForContainerDiv)) d.id = idForContainerDiv;
@@ -207,15 +186,20 @@ function createLetterInputsX(s, dParent, style, idForContainerDiv) {
 	}
 	return d;
 }
-function blankInputs(d, ilist, blink = true) {
-	let inputs = [];
-	for (const idx of ilist) {
-		let inp = d.children[idx];
-		inp.innerHTML = '_';
-		if (blink) mClass(inp, 'blink');
-		inputs.push({ letter: Goal.label[idx].toUpperCase(), div: inp, index: idx });
+function isLetterElement(elem) { return isCapitalLetter(elem.innerHTML); }
+function isVariableColor(c) { return c == 'random' || c == 'randPastel' || c == 'randDark' || c == 'randLight' || isList(c); }
+function scrambleInputs(d) {
+	let children = Array.from(d.children);
+	// for(const ch of children){
+	// 	mRemove(ch);
+	// 	break;
+	// }
+	shuffle(children);
+	//console.log(children)
+	for (const ch of children) {
+		mAppend(d, ch);
 	}
-	return inputs;
+
 }
 //#endregion createLetterInputs
 
@@ -349,7 +333,7 @@ function blankWordInputs(wi, n, pos = 'random') {
 	// console.log(getFunctionCallerName(), 'n', n)
 	//ignore pos for now and use random only
 	let indivInputs = [];
-	console.log('pos', pos)
+	//console.log('pos', pos)
 	let remels =
 		pos == 'random' ? choose(wi, n)
 			: pos == 'notStart' ? arrTake(wi.slice(1, wi.length - 1), n)

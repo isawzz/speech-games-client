@@ -85,7 +85,7 @@ function scoring(isCorrect) {
 		let negSeq = neg > 0 && Score.nNeg >= neg;
 
 		// console.log('_________pos',pos,'posSeq',posSeq,'neg',neg,'negSeq',negSeq);
-		console.log('_________posSeq', posSeq, 'negSeq', negSeq);
+		//console.log('_________posSeq', posSeq, 'negSeq', negSeq);
 
 		if (posSeq && hasLabels && toggle) { Score.nPos = 0; Settings.labels = false; }
 		else if (posSeq) { levelChange = 1; nextLevel += 1; Score.nPos = 0; }
@@ -94,7 +94,7 @@ function scoring(isCorrect) {
 
 	}
 
-	console.log('gameChange', gameChange, 'levelChange', levelChange, 'nextLevel', nextLevel)
+	//console.log('gameChange', gameChange, 'levelChange', levelChange, 'nextLevel', nextLevel)
 	// if (calibrating() && !levelChange && (Score.nTotal >= getCalBoundary() || !isCorrect)) {
 	// 	levelChange = 1;
 	// 	if (percentageCorrect >= 99) {updateStartLevelForUser(G.key, nextLevel); nextLevel += 1;}

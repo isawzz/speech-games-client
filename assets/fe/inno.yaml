@@ -1,0 +1,926 @@
+
+
+# Age 1
+
+Tools:
+  age: 1
+  color: blue
+  type: bulb
+  resources: [None, bulb, bulb, tower]
+  dogmas:
+    - You may recycle three cards from your Hand. If you do, draw and put into play a [3]
+    - You may recycle a [3] from your Hand. If you do, draw three [1].
+
+Mysticism:
+  age: 1
+  color: purple
+  type: tower
+  resources: [None, tower, tower, tower]
+  dogmas:
+    - Draw and reveal a [1]. If this is the same color as any card in your Zone, put it into play and draw a [1]. Otherwise, add it to your Hand.
+
+Writing:
+  age: 1
+  color: blue
+  type: bulb
+  resources: [None, bulb, bulb, crown]
+  dogmas:
+    - Draw a [2].
+
+Metalworking:
+  age: 1
+  color: red
+  type: tower
+  resources: [tower, tower, None, tower]
+  dogmas:
+    - Draw and reveal a [1]. If it provides [tower], score it and repeat this Dogma. Otherwise, add it to your Hand.
+
+Archery:
+  age: 1
+  color: red
+  type: tower
+  resources: [tower, bulb, None, tower]
+  dogmas:
+    - I demand you draw a [1]! Then, transfer the highest card from your Hand to my Hand!
+
+Clothing:
+  age: 1
+  color: green
+  type: tree
+  resources: [None, crown, tree, tree]
+  dogmas:
+    - Put into play a card of a different color than any card in your Zone.
+    - Draw and score a [1] for each color in your Zone and in no other player's.
+
+Oars:
+  age: 1
+  color: red
+  type: tower
+  resources: [tower, crown, None, tower]
+  dogmas:
+    - I demand you transfer a card that provides [crown] from your Hand to my Influence! If you do, draw a [1]!
+    - If no card was transferred due to this Supremacy Dogma, draw a [1].
+
+Wheel:
+  age: 1
+  color: green
+  type: tower
+  resources: [None, tower, tower, tower]
+  dogmas:
+    - Draw two [1].
+
+Sailing:
+  age: 1
+  color: green
+  type: crown
+  resources: [crown, crown, None, tree]
+  dogmas:
+    - Draw and put into play a [1].
+
+Masonry:
+  age: 1
+  color: yellow
+  type: tower
+  resources: [tower, None, tower, tower]
+  dogmas:
+    - You may put into play any number of cards that provide [tower] from your Hand. If you put into play four or more cards, dominate the [technology] Domain.
+
+Code of Laws:
+  age: 1
+  color: purple
+  type: crown
+  resources: [None, crown, crown, tree]
+  dogmas:
+    - You may archive a card from your Hand of the same color as any card in your Zone. If you do, you may splay this color left.
+
+Agriculture:
+  age: 1
+  color: yellow
+  type: tree
+  resources: [None, tree, tree, tree]
+  dogmas:
+    - You may recycle a card from your Hand. If you do, draw and score a card of value one higher than the card recycled.
+
+Domestication:
+  age: 1
+  color: yellow
+  type: tower
+  resources: [tree, crown, None, tower]
+  dogmas:
+    - Put into play the lowest card from your Hand. Draw a [1].
+
+City-States:
+  age: 1
+  color: purple
+  type: crown
+  resources: [None, crown, crown, tower]
+  dogmas:
+    - I demand that if you have four [tower] or more, you transfer an Active card that provides [tower] to my Zone! If you do, draw a [1]!
+
+Pottery:
+  age: 1
+  color: blue
+  type: tree
+  resources: [None, tree, tree, tree]
+  dogmas:
+    - You may recycle up to three cards from your Hand. If you do, draw and score a card of value equal to the number of cards you recycled.
+    - Draw a [1].
+
+
+# Age 2
+
+Calendar:
+  age: 2
+  color: blue
+  type: tree
+  resources: [None, tree, tree, bulb]
+  dogmas:
+    - If you have more cards in your Influence than in your Hand, draw two [3].
+
+Mapmaking:
+  age: 2
+  color: green
+  type: crown
+  resources: [None, crown, crown, tower]
+  dogmas:
+    - I demand you transfer a [1] from your Influence to my Influence!
+    - If any card was transferred due to this Dogma, draw and score a [1].
+
+Mathematics:
+  age: 2
+  color: blue
+  type: bulb
+  resources: [None, bulb, crown, bulb]
+  dogmas:
+    - You may recycle a card from your Hand. If you do, draw and put into play a card of value one higher than the card you recycled.
+
+Philosophy:
+  age: 2
+  color: purple
+  type: bulb
+  resources: [None, bulb, bulb, bulb]
+  dogmas:
+    - You may splay one of your colors left.
+    - You may score a card from your Hand.
+
+Construction:
+  age: 2
+  color: red
+  type: tower
+  resources: [tower, None, tower, tower]
+  dogmas:
+    - I demand you transfer two cards from your Hand to my Hand! Draw a [2]!
+    - If you are the only player with five colors in your Zone, dominate the [military] Domain.
+
+Road Building:
+  age: 2
+  color: red
+  type: tower
+  resources: [tower, tower, None, tower]
+  dogmas:
+    - Put into play one or two cards from your Hand. If you have put into play two cards, you may transfer your Active red card to another player's Zone. If you do, transfer his Active green card to your Zone.
+
+Currency:
+  age: 2
+  color: green
+  type: crown
+  resources: [tree, crown, None, crown]
+  dogmas:
+    - You may recycle any number of cards from your Hand. If you do, draw and score a [2] for every different value of card you recycled.
+
+Canal Building:
+  age: 2
+  color: yellow
+  type: crown
+  resources: [None, crown, tree, crown]
+  dogmas:
+    - You may exchange all the highest cards in your Hand with all the highest cards in your Influence.
+
+Monotheism:
+  age: 2
+  color: purple
+  type: tower
+  resources: [None, tower, tower, tower]
+  dogmas:
+    - I demand you transfer an Active card that has a different color than any card in my Zone to my Influence! If you do, draw and archive a [1]!
+    - Draw and archive a [1].
+
+Fermenting:
+  age: 2
+  color: yellow
+  type: tree
+  resources: [tree, tree, None, tower]
+  dogmas:
+    - Draw a [2] for every two [tree] you have.
+
+
+# Age 3
+
+Compass:
+  age: 3
+  color: green
+  type: crown
+  resources: [None, crown, crown, tree]
+  dogmas:
+    - I demand you transfer one of your Active non-green cards that provides [tree] to my Zone! Then transfer one of my Active cards that doesn't provide [tree] to my Zone!
+
+Education:
+  age: 3
+  color: purple
+  type: bulb
+  resources: [bulb, bulb, bulb, None]
+  dogmas:
+    - You may recycle the highest card from your Influence. If you do, draw a card of value two higher than the highest card remaining in your Influence.
+
+Translation:
+  age: 3
+  color: blue
+  type: crown
+  resources: [None, crown, crown, crown]
+  dogmas:
+    - You may put into play all the cards from your Influence.
+    - If all your Active cards provide [crown], dominate the [diplomacy] Domain.
+
+Alchemy:
+  age: 3
+  color: blue
+  type: tower
+  resources: [None, tree, tower, tower]
+  dogmas:
+    - Draw and reveal a [4] for every three [tower] you have. If any of the cards are red, recycle the cards drawn and all the cards in your Hand. Otherwise, add them to your Hand.
+    - Put a card into play from your Hand, then score a card from your Hand.
+
+Feudalism:
+  age: 3
+  color: purple
+  type: tower
+  resources: [None, tower, tree, tower]
+  dogmas:
+    - I demand you transfer a card that provides [tower] from your Hand to my Hand!
+    - You may splay your yellow or purple cards left.
+
+Paper:
+  age: 3
+  color: green
+  type: bulb
+  resources: [None, bulb, bulb, crown]
+  dogmas:
+    - You may splay your blue or green cards left.
+    - Draw a [4] for each of your colors splayed left.
+
+Engineering:
+  age: 3
+  color: red
+  type: tower
+  resources: [tower, None, bulb, tower]
+  dogmas:
+    - I demand you transfer all your Active cards that provide [tower] to my Influence!
+    - You may splay your red cards left.
+
+Machinery:
+  age: 3
+  color: yellow
+  type: tree
+  resources: [tree, tree, None, tower]
+  dogmas:
+    - I demand you exchange all cards in your Hand with all the highest cards in my Hand!
+    - Score a card that provides [tower] from your Hand. You may splay your red cards left.
+
+Optics:
+  age: 3
+  color: red
+  type: crown
+  resources: [crown, crown, crown, None]
+  dogmas:
+    - Draw and put into play a [3]. If it provides [crown], draw and score a [4]. Otherwise, transfer a card from your Influence to the Influence of one of your opponents with fewer Influence points than you.
+
+Medicine:
+  age: 3
+  color: yellow
+  type: tree
+  resources: [crown, tree, tree, None]
+  dogmas:
+    - I demand you exchange the highest card in your Influence with the lowest card in my Influence!
+
+
+# Age 4
+
+Experimentation:
+  age: 4
+  color: blue
+  type: bulb
+  resources: [None, bulb, bulb, bulb]
+  dogmas:
+    - Draw and put into play a [5].
+
+Reformation:
+  age: 4
+  color: purple
+  type: tree
+  resources: [tree, tree, None, tree]
+  dogmas:
+    - You may choose to archive a card from your Hand for every two [tree] you have.
+    - You may splay your yellow or purple cards right.
+
+Printing Press:
+  age: 4
+  color: blue
+  type: bulb
+  resources: [None, bulb, bulb, crown]
+  dogmas:
+    - You may recycle a card from your Influence. If you do, draw a card of value two higher than your Active purple card.
+    - You may splay your blue cards right.
+
+Gunpowder:
+  age: 4
+  color: red
+  type: factory
+  resources: [None, factory, crown, factory]
+  dogmas:
+    - I demand you transfer an Active card that provides [tower] to my Influence!
+    - If at least one card has been transferred due to this Supremacy Dogma, draw and score a [2].
+
+Colonialism:
+  age: 4
+  color: red
+  type: factory
+  resources: [None, factory, bulb, factory]
+  dogmas:
+    - Draw and archive a [3]. If it provides [crown], repeat this Dogma.
+
+Enterprise:
+  age: 4
+  color: purple
+  type: crown
+  resources: [None, crown, crown, crown]
+  dogmas:
+    - I demand you transfer an Active non-purple card that provides [crown] to my Zone! If you do, draw and put into play a [4]!
+    - You may splay your green cards right.
+
+Perspective:
+  age: 4
+  color: yellow
+  type: bulb
+  resources: [None, bulb, bulb, tree]
+  dogmas:
+    - You may recycle a card from your Hand. If you do, score a card from your Hand for every two [bulb] you have.
+
+Anatomy:
+  age: 4
+  color: yellow
+  type: tree
+  resources: [tree, tree, tree, None]
+  dogmas:
+    - I demand you recycle a card in your Influence! If you do, recycle one of your Active cards of equal value if you have any!
+
+Navigation:
+  age: 4
+  color: green
+  type: crown
+  resources: [None, crown, crown, crown]
+  dogmas:
+    - I demand you transfer a [2] or a [3] from your Influence to my Influence!
+
+Invention:
+  age: 4
+  color: green
+  type: bulb
+  resources: [None, bulb, bulb, factory]
+  dogmas:
+    - You may splay right any one of your colors currently splayed left. If you do, draw and score a [4].
+    - If you have all five colors splayed, dominate the [culture] Domain.
+
+
+# Age 5
+
+Steam Engine:
+  age: 5
+  color: yellow
+  type: factory
+  resources: [None, factory, crown, factory]
+  dogmas:
+    - Draw and archive two [4], then score your Bottom yellow card.
+
+Physics:
+  age: 5
+  color: blue
+  type: bulb
+  resources: [factory, bulb, bulb, None]
+  dogmas:
+    - Draw and reveal three [6]. If two or more of the drawn cards are the same color, recycle the drawn cards and all cards in your Hand. Otherwise, add them to your Hand.
+
+Societies:
+  age: 5
+  color: purple
+  type: crown
+  resources: [crown, None, bulb, crown]
+  dogmas:
+    - I demand you transfer an Active non-purple card that provides [bulb] to my Zone! If you do, draw a [5]!
+
+Coal:
+  age: 5
+  color: red
+  type: factory
+  resources: [factory, factory, factory, None]
+  dogmas:
+    - Draw and archive a [5].
+    - You may splay your red cards right.
+    - You may score one of your Active cards. If you do, also score the card beneath it.
+
+Pirate Code:
+  age: 5
+  color: red
+  type: crown
+  resources: [crown, factory, crown, None]
+  dogmas:
+    - I demand you transfer two cards of value [4] or less from your Influence to my Influence!
+    - If at least one card has been transferred due to this Supremacy Dogma, score your lowest Active card that provides [crown].
+
+Chemistry:
+  age: 5
+  color: blue
+  type: factory
+  resources: [factory, bulb, factory, None]
+  dogmas:
+    - You may splay your blue cards right.
+    - Draw and score a card of value one higher than your highest Active card, then recycle a card from your Influence.
+
+Banking:
+  age: 5
+  color: green
+  type: crown
+  resources: [factory, crown, None, crown]
+  dogmas:
+    - I demand you transfer one of your Active non-green cards that provides [factory] to my Zone! If you do, draw and score a [5]!
+    - You may splay your green cards right.
+
+Measurement:
+  age: 5
+  color: green
+  type: bulb
+  resources: [bulb, tree, bulb, None]
+  dogmas:
+    - You may recycle a card from your Hand. If you do, splay one of your colors right and draw a card of value equal to the number of cards of that color in your Zone.
+
+Statistics:
+  age: 5
+  color: yellow
+  type: tree
+  resources: [tree, bulb, tree, None]
+  dogmas:
+    - I demand you transfer the highest card from your Influence to your Hand! If you do, and you have only one card in your Hand, repeat this dogma!
+    - You may splay your yellow cards right.
+
+Astronomy:
+  age: 5
+  color: purple
+  type: bulb
+  resources: [crown, bulb, bulb, None]
+  dogmas:
+    - Draw and reveal a [6]. If it is green or blue, put it into play and repeat this Dogma. Otherwise, add it to your Hand.
+    - If all your Active non-purple cards are value [6] or more, dominate the [science] Domain.
+
+
+# Age 6
+
+Emancipation:
+  age: 6
+  color: purple
+  type: factory
+  resources: [factory, bulb, factory, None]
+  dogmas:
+    - I demand you transfer a card from your Hand to my Influence! If you do, draw a [6]!
+    - You may splay your red or purple cards right.
+
+Encyclopedia:
+  age: 6
+  color: blue
+  type: crown
+  resources: [None, crown, crown, crown]
+  dogmas:
+    - You may put into play all the highest cards from your Influence.
+
+Atomic Theory:
+  age: 6
+  color: blue
+  type: bulb
+  resources: [bulb, bulb, bulb, None]
+  dogmas:
+    - You may splay your blue cards right.
+    - Draw and put into play a [7].
+
+Democracy:
+  age: 6
+  color: purple
+  type: bulb
+  resources: [crown, bulb, bulb, None]
+  dogmas:
+    - You may recycle any number of cards from your Hand. If you have recycled more cards than any other player due to Democracy this phase. draw and score an [8].
+
+Metric System:
+  age: 6
+  color: green
+  type: crown
+  resources: [None, factory, crown, crown]
+  dogmas:
+    - If your green cards are splayed right, you may splay any one of your colors right.
+    - You may splay your green cards right.
+
+Industrialization:
+  age: 6
+  color: red
+  type: factory
+  resources: [crown, factory, factory, None]
+  dogmas:
+    - Draw and archive a [6] for every two [factory] you have.
+    - You may splay your red or purple cards right.
+
+Classification:
+  age: 6
+  color: green
+  type: bulb
+  resources: [bulb, bulb, bulb, None]
+  dogmas:
+    - Reveal a card from your Hand. All the other players must transfer to your Hand all their Hand cards of the same color as that card. Then, put into play all your cards of that color.
+
+Vaccination:
+  age: 6
+  color: yellow
+  type: tree
+  resources: [tree, factory, tree, None]
+  dogmas:
+    - I demand you recycle all your lowest cards from your Influence! If you do, draw and put into play a [6]!
+    - If any card has been recycled due to this Supremacy Dogma, draw and put into play [7]!
+
+Canning:
+  age: 6
+  color: yellow
+  type: factory
+  resources: [None, factory, tree, factory]
+  dogmas:
+    - You may draw and archive a [6]. If you do, score all your Active cards that don't provide [factory].
+    - You may splay your yellow cards right.
+
+Machine Tools:
+  age: 6
+  color: red
+  type: factory
+  resources: [factory, factory, None, factory]
+  dogmas:
+    - Draw and score a card of value equal to the highest card in your Influence.
+
+
+# Age 7
+
+Explosives:
+  age: 7
+  color: red
+  type:  factory
+  resources: [None, factory, factory, factory]
+  dogmas:
+    - I demand you transfer the three highest cards from your Hand to my Hand! If you have transferred at least one and then have no cards in Hand, draw a [7]!
+
+Evolution:
+  age: 7
+  color: blue
+  type: bulb
+  resources: [bulb, bulb, bulb, None]
+  dogmas:
+    - You may choose either to draw and score an [8] and then recycle a card from you Influence, or to draw a card of value one higher than the highest card in your influence.
+
+Publications:
+  age: 7
+  color: blue
+  type: bulb
+  resources: [None, bulb, clock, bulb]
+  dogmas:
+    - You may rearrange the order of one of your colors.
+    - You may splay your yellow or blue cards up.
+
+Combustion:
+  age: 7
+  color: red
+  type: crown
+  resources: [crown, crown, factory, None]
+  dogmas:
+    - I demand you transfer two cards from your Influence to my Influence!
+
+Electricity:
+  age: 7
+  color: green
+  type: factory
+  resources: [bulb, factory, None, factory]
+  dogmas:
+    - Recycle all your Active cards that don't provide [factory], then draw an [8] for each card you have recycled.
+
+Bicycle:
+  age: 7
+  color: green
+  type: crown
+  resources: [crown, crown, clock, None]
+  dogmas:
+    - You may exchange all the cards in your Hand with all the cards in your Influence.
+
+Lighting:
+  age: 7
+  color: purple
+  type: tree
+  resources: [None, tree, clock, tree]
+  dogmas:
+    - You may archive up to three cards from your Hand. If you do, draw and score a [7] for each different value of card you archived.
+
+Railroad:
+  age: 7
+  color: purple
+  type: clock
+  resources: [clock, factory, clock, None]
+  dogmas:
+    - Recycle all the cards from your Hand then draw three [6].
+    - You may splay up any one of your colors currently splayed right.
+
+Sanitation:
+  age: 7
+  color: yellow
+  type: tree
+  resources: [tree, tree, None, tree]
+  dogmas:
+    - I demand you exchange the two highest cards in your Hand with the lowest card in my Hand!
+
+Refrigeration:
+  age: 7
+  color: yellow
+  type: tree
+  resources: [None, tree, tree, crown]
+  dogmas:
+    - I demand you recycle half your cards from your Hand (rounded down)!
+    - You may score a card from your Hand.
+
+
+# Age 8
+
+Corporations:
+  age: 8
+  color: green
+  type: factory
+  resources: [None, factory, factory, crown]
+  dogmas:
+    - I demand you transfer one of your Active non-green cards that provides [factory] to my Influence! If you do, draw and put into play an [8]!
+    - Draw and put into play an [8].
+
+Rocketry:
+  age: 8
+  color: blue
+  type: clock
+  resources: [clock, clock, clock, None]
+  dogmas:
+    - Recycle a card from an opponent's Influence for every two [clock] you have. You may choose a different opponent for each card.
+
+Antibiotics:
+  age: 8
+  color: yellow
+  type: tree
+  resources: [tree, tree, tree, None]
+  dogmas:
+    - You may recycle up to three cards from your Hand. For each different value of card that your recycled, draw two [8].
+
+Quantum Theory:
+  age: 8
+  color: blue
+  type: clock
+  resources: [clock, clock, clock, None]
+  dogmas:
+    - You may recycle up to two cards from your Hand. If you recycle two, draw a [10], then draw and score a [10].
+
+Flight:
+  age: 8
+  color: red
+  type: crown
+  resources: [crown, None, clock, crown]
+  dogmas:
+    - If your red cards are splayed up, you may splay any one of your colors up.
+    - You may splay your red cards up.
+
+Mass Media:
+  age: 8
+  color: green
+  type: bulb
+  resources: [bulb, None, clock, bulb]
+  dogmas:
+    - You may recycle a card from your Hand. If you do, choose a value and all players (including you) must recycle all their Influence cards of that value.
+    - You may splay your purple cards up.
+
+Mobility:
+  age: 8
+  color: red
+  type: factory
+  resources: [None, factory, clock, factory]
+  dogmas:
+    - I demand you transfer your two highest Active non-red cards that don't provide [factory] to my Influence! If you transferred at least one card, draw an [8]!
+
+Empiricism:
+  age: 8
+  color: purple
+  type: bulb
+  resources: [bulb, bulb, bulb, None]
+  dogmas:
+    - Choose two colors, then draw and reveal a [9]. If it is either of the colors you chose, put it into play and you may splay this color up. Otherwise, add it to your Hand.
+    - If you have twenty [bulb] or more, you win.
+
+Skyscrapers:
+  age: 8
+  color: yellow
+  type: crown
+  resources: [None, factory, crown, crown]
+  dogmas:
+    - I demand you transfer one of your Active non-yellow cards that provides [clock] to my Zone! If you do, score the card beneath it, and recycle all other cards from its pile!
+
+Communism:
+  age: 8
+  color: purple
+  type: tree
+  resources: [tree, None, tree, tree]
+  dogmas:
+    - You may archive all cards from your Hand. If you archive at least one purple card, all your opponents must transfer all their lowest cards from their Hand to your Hand.
+
+
+# Age 9
+
+Fission:
+  age: 9
+  color: red
+  type: clock
+  resources: [None, clock, clock, clock]
+  dogmas:
+    - I demand you draw a [10]! If it is red, discard all cards from the Hands, Zones, and Influences of every player (including you)!
+    - Recycle an Active card other than Fission from any player's Zone.
+
+Cooperation:
+  age: 9
+  color: green
+  type: crown
+  resources: [None, crown, clock, crown]
+  dogmas:
+    - I demand you draw and reveal two [9]! Transfer the card of my choice to my Zone, and put into play the other one in your Zone!
+    - If you have at least ten green cards in your Zone, you win.
+
+Composites:
+  age: 9
+  color: red
+  type: factory
+  resources: [factory, factory, None, factory]
+  dogmas:
+    - I demand you transfer all but one card from your Hand to my Hand! Also, transfer the highest card from your Influence to my Influence!
+
+Genetics:
+  age: 9
+  color: blue
+  type: bulb
+  resources: [bulb, bulb, bulb, None]
+  dogmas:
+    - Draw and put into play a [10]. Score all cards beneath it.
+
+Computers:
+  age: 9
+  color: blue
+  type: clock
+  resources: [clock, None, clock, factory]
+  dogmas:
+    - You may splay your red or green cards up.
+    - Draw and put into play a [10], then activate its Cooperative Dogmas for yourself only.
+
+Satellites:
+  age: 9
+  color: green
+  type: clock
+  resources: [None, clock, clock, clock]
+  dogmas:
+    - Recycle all the cards from your Hand, then draw three [8].
+    - You may splay your purple cards up.
+    - Put into play a card from your Hand, then activate all it Cooperative Dogmas for yourself only.
+
+Specialization:
+  age: 9
+  color: purple
+  type: factory
+  resources: [None, factory, tree, factory]
+  dogmas:
+    - Reveal a card from your Hand. Transfer each opponent's Active card of that color to your Hand.
+    - You may splay your yellow or blue cards up.
+
+Suburbia:
+  age: 9
+  color: yellow
+  type: tree
+  resources: [None, crown, tree, tree]
+  dogmas:
+    - You may archive any number of cards from your Hand. Draw and score a [1] for each card you archived.
+
+Services:
+  age: 9
+  color: purple
+  type: tree
+  resources: [None, tree, tree, tree]
+  dogmas:
+    - I demand you transfer all the highest cards from your Influence to my Hand! If you do, transfer one of my Active cards that doesn't provide [tree] to your Hand!
+
+Ecology:
+  age: 9
+  color: yellow
+  type: bulb
+  resources: [tree, bulb, bulb, None]
+  dogmas:
+    - You may recycle a card from your Hand. If you do, score a card from your Hand and draw two [10].
+
+
+# Age 10
+
+Stem Cells:
+  age: 10
+  color: yellow
+  type: tree
+  resources: [None, tree, tree, tree]
+  dogmas:
+    - You may score all cards from your Hand.
+
+Robotics:
+  age: 10
+  color: red
+  type: factory
+  resources: [None, factory, clock factory]
+  dogmas:
+    - Score your Active green card. Draw and put into play a [10], then activate its Cooperative Dogmas for yourself only.
+
+Internet:
+  age: 10
+  color: purple
+  type: clock
+  resources: [None, clock, clock, bulb]
+  dogmas:
+    - You may splay your green cards up.
+    - Draw and score a [10].
+    - Draw and put into play a [10] for every two [clock] you have.
+
+Artificial Intelligence:
+  age: 10
+  color: purple
+  type: bulb
+  resources: [bulb, bulb, clock, None]
+  dogmas:
+    - Draw and score a [10].
+    - If both Robotics and Software are Active cards in any Zone(s), the single player with the lowest Influence wins.
+
+Databases:
+  age: 10
+  color: green
+  type: clock
+  resources: [None, clock, clock, clock]
+  dogmas:
+    - I demand you recycle half your Influence cards (rounded up)!
+
+Domotics:
+  age: 10
+  color: green
+  type: crown
+  resources: [None, crown, crown, crown]
+  dogmas:
+    - Activate the Cooperative Dogmas of another of your Active cards for yourself only.
+    - If you have more Dominations than any other player, you win.
+
+Miniaturization:
+  age: 10
+  color: red
+  type: bulb
+  resources: [None, bulb, clock, bulb]
+  dogmas:
+    - You may recycle a card from your Hand. If you have recycled a [10], draw a [10] for each different value in your Influence.
+
+Software:
+  age: 10
+  color: blue
+  type: clock
+  resources: [clock, clock, clock, None]
+  dogmas:
+    - Draw and score a [10].
+    - Draw two [10] and put them into play in order, then activate the Cooperative Dogmas of the second card for yourself only.
+
+Bioengineering:
+  age: 10
+  color: blue
+  type: clock
+  resources: [bulb, clock, clock, None]
+  dogmas:
+    - Transfer an Active card that provides [tree] from any other player's Zone to your Influence.
+    - If a player has fewer than three [tree], the single player with the most [tree] wins.
+
+Globalization:
+  age: 10
+  color: yellow
+  type: factory
+  resources: [None, factory, factory, factory]
+  dogmas:
+    - I demand you recycle one of your Active cards that provides [tree]!
+    - Draw and score a [6]. If there is no player with more [tree] than [factory], the single player with the most Influence points wins.
+
+
+
+
