@@ -80,9 +80,9 @@ function evaluate() {
 	setTimeout(removeMarkers, 1500);
 
 	let nextLevel = scoring(IsAnswerCorrect);
-	//console.log('scoring result:', Score)
+	//console.log('cscoring result:', Score)
 	if (Score.gameChange) {
-		updateUserScore();//this clears the score.nTotal,nCorrect,nCorrect1!!!!!
+		updateUserScore();//this saves user data + clears the score.nTotal,nCorrect,nCorrect1!!!!!
 		setNextGame();
 		if (unitTimeUp()) {
 			setTimeout(() => gameOver('Great job! Time for a break!'), DELAY);
@@ -96,38 +96,6 @@ function evaluate() {
 	} else {
 		TOMain = setTimeout(startRound, DELAY);
 	}
-
-	// let nextLevel;
-	// [Score.levelChange, nextLevel] = scoring(IsAnswerCorrect); //get here only if this is correct or last trial!
-	// if (calibrating()) {
-	// 	console.log('nextLevel', nextLevel)
-	// 	if (Score.levelChange) {
-	// 		addScoreToUserSession(G.key, G.level);
-	// 		if (nextLevel <= G.maxLevel) setBadgeLevel(nextLevel);
-	// 		if (nextLevel > G.maxLevel) {
-	// 			Score.gameChange = true; setNextGame();
-	// 			if (isLastCalGame()) { exitCalibrationMode(); } else { TOMain = setTimeout(startGame, DELAY); }
-	// 		} else {
-	// 			G.level = nextLevel; TOMain = setTimeout(startGame, DELAY);
-	// 		}
-	// 	} else {
-	// 		TOMain = setTimeout(startRound, DELAY);
-	// 	}
-	// } else if (!Score.levelChange) {
-	// 	TOMain = setTimeout(startRound, DELAY);
-	// } else {
-	// 	addScoreToUserSession(G.key, G.level);
-	// 	setBadgeLevel(nextLevel); //show the last level accomplished in opacity=1!!!
-	// 	Score.gameChange = true;
-	// 	setNextGame();
-	// 	if (unitTimeUp()) {
-	// 		//end of unit!
-	// 		setTimeout(() => gameOver('Great job! Time for a break!'), DELAY);
-	// 	} else {
-	// 		TOMain = setTimeout(startGame, DELAY);
-	// 	}
-
-	// }
 
 }
 

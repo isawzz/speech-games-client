@@ -760,7 +760,7 @@ function aniGameOver(msg, silent = false) {
 
 
 	mClass(mBy('freezer2'), 'aniSlowlyAppear');
-	saveUnit();
+	//saveUnit();
 
 }
 //#endregion game over
@@ -905,18 +905,10 @@ function sayRandomVoice(e, g, voice = 'random') {
 	//let voice = Settings.language == 'E' && (e.includes('<') || (e.includes('>')) ?'zira':'random';
 	if (!Settings.silentMode) Speech.say(Settings.language == 'E' || nundef(g) ? e : g, r, p, v, voice);
 }
-function setBadgeLevel(ev) {
-	let i = 0;
-	if (isNumber(ev)) { i = ev; }
-	else {
-		let id = evToClosestId(ev);
-		i = stringAfter(id, '_');
-		i = Number(i);
-	}
+function setBadgeLevel(i) {
 	//i is now correct level
 	//let userStartLevel = getUserStartLevel(G.key);
-	//if (userStartLevel > i) updateStartLevelForUser(G.key, i);
-	updateStartLevelForUser(G.key, i);
+	//if (userStartLevel > i) _updateStartLevelForUser(G.key, i);
 	G.level = i;
 	Score.levelChange = true;
 

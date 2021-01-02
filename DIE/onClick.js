@@ -1,4 +1,4 @@
-function clearTimeouts(){
+function clearTimeouts() {
 	clearTimeout(TOMain);
 	clearTimeout(TOFleetingMessage);
 	clearTimeout(TOTrial);
@@ -84,6 +84,7 @@ function onClickGo(ev) {
 			toggleSelectionOfPicture(MenuItems[gKey]);
 		} else {
 			closeAux();
+			updateUserScore();//this saves user data + clears the score.nTotal,nCorrect,nCorrect1!!!!!
 			setGame(gKey);
 			startGame();
 
@@ -95,7 +96,11 @@ function onClickGo(ev) {
 
 function onClickBadgeX(ev) {
 	enterInterruptState();
-	setBadgeLevel(ev);
+	let i = 0;
+	if (isNumber(ev)) { i = ev; }
+	else { let id = evToClosestId(ev); i = stringAfter(id, '_'); i = Number(i); }
+	setBadgeLevel(i);
+	updateStartLevelForUser(G.key, i, 'onClickBadgeX');
 	// revertToBadgeLevel(ev);
 	saveUser();
 	//console.log('reverted to', G.level);

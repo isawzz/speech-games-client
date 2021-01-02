@@ -2,8 +2,8 @@ function updateUserScore() {
 	let sc = { nTotal: Score.nTotal, nCorrect: Score.nCorrect, nCorrect1: Score.nCorrect1 };
 	let g = G.key;
 
-	let recOld = lookupSet(U, ['games', g],{startLevel:0,nTotal:0,nCorrect:0,nCorrect1:0});
-	let recSession = lookupSet(U, ['session', g],{startLevel:0,nTotal:0,nCorrect:0,nCorrect1:0});
+	let recOld = lookupSet(U, ['games', g], { startLevel: 0, nTotal: 0, nCorrect: 0, nCorrect1: 0 });
+	let recSession = lookupSet(U, ['session', g], { startLevel: 0, nTotal: 0, nCorrect: 0, nCorrect1: 0 });
 	//let recNew = U.session[g];
 
 	addByKey(sc, recSession);
@@ -104,6 +104,8 @@ function getUserStartLevel(game) {
 function loadUser(newUser) {
 
 	//console.log('newUser',newUser)
+	if (isdef(Score) && Score.nTotal > 0) updateUserScore();//this saves user data + clears the score.nTotal,nCorrect,nCorrect1!!!!!
+
 	USERNAME = isdef(newUser) ? newUser : localStorage.getItem('user');
 
 	if (nundef(USERNAME)) USERNAME = DEFAULTUSERNAME;
@@ -141,12 +143,14 @@ function saveUser() {
 	U.lastLevel = G.level;
 	if (USERNAME != 'test') localStorage.setItem('user', USERNAME);
 	DB.users[USERNAME] = U;
-	console.log('...saving from saveUser called by',getFunctionsNameThatCalledThisFunction())
+	console.log('...saving from saveUser called by', getFunctionsNameThatCalledThisFunction())
 	saveSIMA();
 }
 function setGame(game, level) {
 	//clear previous game (timeouts...)
-	if (isdef(G) && isdef(G.instance)) { G.instance.clear(); }
+	if (isdef(G) && isdef(G.instance)) {
+		G.instance.clear();
+	}
 
 	//set new game: friendly,logo,color,key,maxLevel,level 
 	//console.log('set game to', game)
@@ -162,12 +166,12 @@ function setGame(game, level) {
 
 	G.key = game;
 
-	//if (isCal) updateStartLevelForUser(game, 0);
+	//if (isCal) supdateStartLevelForUser(game, 0);
 
 	if (isdef(level)) G.level = level;
 	else { G.level = getUserStartLevel(game); }
 
-	console.log('setGame:',game,USERNAME,getUserStartLevel(game));
+	console.log('setGame:', game, USERNAME, getUserStartLevel(game));
 
 	if (G.level > G.maxLevel) G.level = G.maxLevel;
 
@@ -185,7 +189,8 @@ function setNextGame() {
 	let iNew = (i + 1) % U.seq.length;
 	setGame(U.seq[iNew]);
 }
-function updateStartLevelForUser(game, level) {
+function updateStartLevelForUser(game, level, msg) {
+	console.log('updating startLevel for', USERNAME, game, level, '(' + msg + ')')
 	lookupSetOverride(U.games, [game, 'startLevel'], level);
 	saveUser();
 }
