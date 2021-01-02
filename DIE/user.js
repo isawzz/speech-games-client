@@ -15,6 +15,7 @@ function updateUserScore() {
 	//console.log('updated user score for', g, sc, recOld);
 	//console.log('updated user score session', recSession);
 	Score.nTotal = Score.nCorrect = Score.nCorrect1 = 0;
+	saveUser();
 }
 function addScoreToUserSession() {
 	//at end of level
@@ -140,6 +141,7 @@ function saveUser() {
 	U.lastLevel = G.level;
 	if (USERNAME != 'test') localStorage.setItem('user', USERNAME);
 	DB.users[USERNAME] = U;
+	console.log('...saving from saveUser called by',getFunctionsNameThatCalledThisFunction())
 	saveSIMA();
 }
 function setGame(game, level) {
@@ -160,10 +162,12 @@ function setGame(game, level) {
 
 	G.key = game;
 
-	if (isCal) updateStartLevelForUser(game, 0);
+	//if (isCal) updateStartLevelForUser(game, 0);
 
 	if (isdef(level)) G.level = level;
 	else { G.level = getUserStartLevel(game); }
+
+	console.log('setGame:',game,USERNAME,getUserStartLevel(game));
 
 	if (G.level > G.maxLevel) G.level = G.maxLevel;
 

@@ -11,6 +11,7 @@ async function broadcastSIMA(usersPath = './settings/users.yaml', settingsPath =
 		settings: settings
 	};
 
+	console.log('...saving from BROADCASTING')
 	saveSIMA();
 
 	if (CLEAR_LOCAL_STORAGE) localStorage.clear();
@@ -63,7 +64,6 @@ async function loadAssetsSIMA(assetsPath) {
 }
 
 async function saveSIMA() {
-	//console.log('posting DB', DB);
 	// if (USERNAME == 'test') {
 	// 	//console.log('trying to save USERNAME test!!!!!!!',_getFunctionsNameThatCalledThisFunction());
 	// 	return; //localStorage.setItem('user',USERNAME);
@@ -73,6 +73,9 @@ async function saveSIMA() {
 		//console.log('...wait for unblocked...');
 		setTimeout(saveSIMA, 1000);
 	} else {
+		console.log('posting DB: startLevel Pictures!', DB.users[USERNAME].games.gTouchPic.startLevel);
+		//console.log(DB);
+
 		let url = SERVERURL + 'speechGames';
 		BlockServerSend = true;
 		//console.log('blocked...');
