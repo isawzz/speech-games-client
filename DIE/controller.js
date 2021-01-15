@@ -41,6 +41,8 @@ function startRound() {
 }
 function prompt() {
 	QuestionCounter += 1;
+	GroupCounter = 0;
+
 	showStats();
 	G.trialNumber = 0;
 
