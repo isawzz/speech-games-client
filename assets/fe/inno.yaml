@@ -846,7 +846,7 @@ Robotics:
   age: 10
   color: red
   type: factory
-  resources: [None, factory, clock factory]
+  resources: [None, factory, clock, factory]
   dogmas:
     - Score your Active green card. Draw and put into play a [10], then activate its Cooperative Dogmas for yourself only.
 

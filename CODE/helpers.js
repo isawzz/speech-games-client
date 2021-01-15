@@ -504,11 +504,20 @@ function mStyleS(elem, styles, unit = 'px') { elem = mEnsure(elem); for (const k
 
 //#region 1 liners positioning_...
 function posTL(d) { mPos(d, 0, 0) }
-function posTR(d) { mStyle(d, { right: 0, top: 0, position: 'absolute' }); }
-function posBL(d) { mStyle(d, { left: 0, bottom: 0, position: 'absolute' }); }
-function posBLR(d) { mStyle(d, { left: 0, bottom: 0, position: 'absolute' }); mRot(d, 180); }
-function posBR(d) { mStyle(d, { right: 0, bottom: 0, position: 'absolute' }); }
-function posBRR(d) { mStyle(d, { right: 0, bottom: 0, position: 'absolute' }); mRot(d, 180); }
+function posTC(d) { mStyleX(d, { right: '50%', top: 0, position: 'absolute' }); }
+function posBC(d) { 
+	let dParent= d.parentNode;
+	//console.log(dParent);
+	//console.log('height',d.style.height);
+	let dNew=mDiv(dParent,{w:'100%',h:50,position:'absolute',bottom:0,left:0,bg:'null',align:'center'});
+	mAppend(dNew,d);
+	//mStyleX(d, { bottom: 0, position: 'absolute' }); 
+}
+function posTR(d) { mStyleX(d, { right: 0, top: 0, position: 'absolute' }); }
+function posBL(d) { mStyleX(d, { left: 0, bottom: 0, position: 'absolute' }); }
+function posBLR(d) { mStyleX(d, { left: 0, bottom: 0, position: 'absolute' }); mRot(d, 180); }
+function posBR(d) { mStyleX(d, { right: 0, bottom: 0, position: 'absolute' }); }
+function posBRR(d) { mStyleX(d, { right: 0, bottom: 0, position: 'absolute' }); mRot(d, 180); }
 function posCIC(d) { d = mEnsure(d); d.classList.add('centerCentered'); }
 function posCICT(d) { d = mEnsure(d); d.classList.add('centerCenteredTopHalf'); }
 function posCICB(d) { d = mEnsure(d); d.classList.add('centerCenteredBottomHalf'); }
@@ -855,6 +864,13 @@ function getContrastingHue(contrastColor, minDiff = 25, mod = 30) {
 }
 function randomColorLight(contrastTo) { return randomColorX(contrastTo); }
 function randomColorDark(contrastTo) { return randomColorX(contrastTo, 10, 30); }
+function helleFarbe(contrastTo, minDiff = 25, mod = 30, start = 0){
+	let wheel = getHueWheel(contrastTo, minDiff, mod, start);
+	//console.log('wheel',wheel)
+	let hue = chooseRandom(wheel);
+	let hsl = colorHSLBuild(hue,100,50);
+	return hsl;
+}
 function getHueWheel(contrastTo, minDiff = 25, mod = 30, start = 0) {
 	let hc = colorHue(contrastTo);
 	let wheel = [];
@@ -2350,6 +2366,21 @@ function getRelCoordsX(ev, elem) {
 	//console.log('coords rel to',elm,':',x,y);
 	return { x: x, y: y };
 }
+function getElemSize(elem) {
+	var d = document.createElement("div");
+	document.body.appendChild(d);
+	//console.log(styles);
+	let cStyles = {position : 'fixed',opacity: 0,top: '-9999px'};
+	mStyleX(d, cStyles);
+	mAppend(d,elem);
+	//d.innerHTML = text;
+	height = d.clientHeight;
+	width = d.clientWidth;
+	//console.log(d)
+	d.parentNode.removeChild(d);
+	//elem.remove();
+	return { w: width, h: height };
+}
 function getSizeWithStyles(text, styles) {
 	var d = document.createElement("div");
 	document.body.appendChild(d);
@@ -2362,6 +2393,8 @@ function getSizeWithStyles(text, styles) {
 	d.innerHTML = text;
 	height = d.clientHeight;
 	width = d.clientWidth;
+	let b=getBounds(d);
+	//console.log('b',b.width,b.height,'=?',width,height,'\ntextStyles',styles)
 	//console.log(d)
 	d.parentNode.removeChild(d);
 	return { w: width, h: height };
@@ -3441,14 +3474,16 @@ function wlog() {
 //#endregion
 
 //#region layout helpers
-function calcRowsColsX(num) {
+function calcRowsColsX(num,rows,cols) {
 	const table = {
 		2: { rows: 1, cols: 2 },
 		5: { rows: 2, cols: 3 },
 		7: { rows: 2, cols: 4 },
 		11: { rows: 3, cols: 4 },
 	};
-	if (isdef(table[num])) return table[num]; else return calcRowsCols(num);
+	if (isdef(rows) || isdef(cols)) return calcRowsCols(num,rows,cols);
+	else if (isdef(table[num])) return table[num]; 
+	else return calcRowsCols(num,rows,cols);
 }
 function calcRowsCols(num, rows, cols) {
 	//=> code from RSG testFactory arrangeChildrenAsQuad(n, R);
@@ -5005,6 +5040,7 @@ function firstWord(s) {
 	while (i < s.length && !isWhiteSpace(s[i])) { res += s[i]; i += 1; }
 	return res;
 }
+function lastWord(s){	return stringAfterLast(s,' ');}
 function hasWhiteSpace(s) { return /\s/g.test(s); }
 function isLetter(s){return /^[a-zA-Z]$/i.test(s);}
 function isCapitalLetter(s){return /^[A-Z]$/i.test(s);}

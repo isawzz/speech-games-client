@@ -35,6 +35,8 @@ function show100() {
 	let picStyles = getHarmoniousStylesXX(100, 100, 10, 'arial', 'random', 'random', false);
 	ensureSymByType();
 	let keys = takeFromTo(IconSet, lastIndex, lastIndex + 100);//chooseRandom() ['keycap: 0', 'keycap: 1', 'keycap: #', 'keycap: *'];
+
+	//console.log('JAJAJAJAJ')
 	gridLabeled(keys, picLabelStyles);
 }
 function gridLabeledX(keyList,labelList, dParent,{rows,layout}={}, clickHandler) {
@@ -76,7 +78,8 @@ function gridLabeled(list, picLabelStyles) {
 
 	for (const k of list) {
 		let info = symbolDict[k];
-		let label = (isdef(info.bestE) ? info.bestE : lastOfLanguage(k, 'E')) + ' ' + lastIndex;
+		let label = info.type == 'emo'? (isdef(info.bestE) ? info.bestE : lastOfLanguage(k, 'E')) + ' ' + lastIndex
+		: k;
 		let el = maPicLabelButtonFitText(info, label,
 			{ w: pictureSize, h: pictureSize, bgPic: 'random', shade: null, contrast: null },
 			onClickIVPicture, dGrid, stylesForLabelButton, 'frameOnHover', isText, isOmoji);

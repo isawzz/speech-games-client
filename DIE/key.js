@@ -32,6 +32,11 @@ function getKeySets() {
 	for (const o of [res1, res2, res3, res4, res5]) {
 		for (const k in o) res[k] = o[k];
 	}
+
+	res['objectPlus']=union(res.object,res.best100);
+	res['lifePlus']=union(res.life,res.best100);
+	res['actionPlus']=union(res.action,res.best100);
+
 	localStorage.setItem('KeySets', JSON.stringify(res));
 	return res;
 
@@ -39,7 +44,9 @@ function getKeySets() {
 
 function setKeys({ nMin, lang, key, keysets, filterFunc, confidence, sortByFunc } = {}) {
 
+
 	let keys = jsCopy(keysets[key]);
+	//console.log('setKeys (from',getFunctionsNameThatCalledThisFunction()+')',keys)
 
 	if (isdef(nMin)) {
 		let diff = nMin - keys.length;
@@ -66,7 +73,7 @@ function setKeys({ nMin, lang, key, keysets, filterFunc, confidence, sortByFunc 
 		if (isMatch) { primary.push(k); } else { spare.push(k); }
 	}
 
-	console.assert(isEmpty(intersection(spare,primary)))
+	//console.assert(isEmpty(intersection(spare,primary)))
 
 	if (isdef(nMin)) {
 		//if result does not have enough elements, take randomly from other

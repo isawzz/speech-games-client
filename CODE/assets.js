@@ -4,7 +4,7 @@ const SHOW_SERVER_ROUTE = false; // true | false
 const SHOW_SERVER_RETURN = false; // true | false
 const EMOFONTLIST = ['emoOpen', 'openmoBlack', 'segoe ui emoji', 'segoe ui symbol'];
 
-var vidCache, allGames, playerConfig, c52, testCards; //session data
+var vidCache, allGames, playerConfig, c52, cinno, testCards; //session data
 var defaultSpec, userSpec, userCode, serverData, prevServerData, tupleGroups, boats; //new game data
 
 var symbolDict, symbolKeys, symbolList; //gibt es immer

@@ -3,11 +3,13 @@ var RecogOutputError = false;
 var RecogHighPriorityOutput = true;
 var SpeakerOutput = false;
 var MicrophoneUi;
+var SessionId;
 
 class SpeechAPI {
 	constructor(lang) {
 		this.recorder = new Recorder(lang);
 		this.speaker = new Speaker(lang);
+		SessionId = Date.now();
 	}
 	train() {
 
@@ -79,7 +81,7 @@ class Recorder {
 			genHandler(ev, 'ended');
 			if (!this.isCancelled && this.callback) {
 				//console.log('-------------------------')
-				this.callback(this.isFinal, this.result, this.confidence);
+				this.callback(this.isFinal, this.result, this.confidence, SessionId);
 			}
 			this.isCancelled = this.isRunning = false;
 			this.callback = null;

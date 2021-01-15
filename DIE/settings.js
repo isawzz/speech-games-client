@@ -46,38 +46,65 @@ function createSettingsUi(dParent) {
 }
 function createMenuUi(dParent) {
 	clearElement(dParent);
-
 	mAppend(dParent, createElementFromHTML(`<h1>Choose Game:</h1>`));
+	MenuItems = {};
 
-	let d = mDiv(dParent);
-
-	mClass(d, 'flexWrap');
-	d.style.height = '100%';
-
+	//#region prelim: keys,labels,ifs,options
 	let games = U.seq;
 	//console.log(games, games.map(g => GAME[g]));
 	let labels = games.map(g => GAME[g].friendly);
 	let keys = games.map(g => GAME[g].logo);
+	let infos = keys.map(x => symbolDict[x]);
 	let bgs = games.map(g => GAME[g].color);
+	let ifs = { label: labels, bg: bgs, fg: 'white', padding: 10 };
+	let options = { onclick: onClickGo, showLabels:true };
+	//#endregion
 
-	MenuItems = {};
-	let pics = maShowPictures(keys, labels, d, onClickGo, { bgs: bgs, shufflePositions: false }, { fg: 'blue' });
-	//let pics = maShowPicturesX(keys, labels, d, onClickGo, { bgs: bgs, shufflePositions: false }, { sPic: { fg: 'white' }}); //, sText:{family:'AlgerianRegular'} });
-	for (let i = 0; i < pics.length; i++) {
-		let p = pics[i];
-		//console.log(p)
-		p.div.id = 'menu_' + p.label.substring(0, 3);
-		p.div.children[0].style.color = 'white';//TODO!!!!!!
-		let key = p.div.key = games[i];
-		MenuItems[key] = p;
+	//#region phase1: make items: hier jetzt mix and match
+	let items = zItems(infos, ifs, options);
+	items.map(x => x.label = x.label.toUpperCase());
+	//items.map(x=>console.log(x));
+	//#endregion phase1
+
+	//#region phase2: prepare items for container
+	let [sz, rows, cols] = calcRowsColsSize(items.length);
+	if (nundef(options.sz)) options.sz = sz;
+	if (nundef(options.rows)) options.rows = rows;
+	if (nundef(options.cols)) options.cols = cols;
+	items.map(x => x.sz = sz);
+	prep1(items, ifs, options);
+
+	for (let i = 0; i < games.length; i++) { 
+		let item = items[i];
+		item.div.id = 'menu_' + item.label.substring(0, 3);
+		//console.log('game', games[i]); 
+		let key = item.div.key = games[i];
+		MenuItems[key] = item;
 	}
+	//#endregion
+
+	//#region phase3: prep container for items
+	let d = mDiv(dParent);
+	mClass(d, 'flexWrap');
+	d.style.height = '100%';
+	//#endregion
+
+	//#region phase4: add items to container!
+	let dGrid = mDiv(d);
+	items.map(x => mAppend(dGrid, x.div));
+	let gridStyles = { 'place-content': 'center', gap: 4, margin: 4, padding: 4 };
+	let gridSize = layoutGrid(items, dGrid, gridStyles, { rows: rows, isInline: true });
+	//console.log('size of grid', gridSize, 'table', getBounds(dTable))
+	//#endregion
+
+	//console.log('*** THE END ***');
+
+	//console.log('MenuItems', MenuItems)
 
 	if (nundef(G)) return;
-
 	//select the current game
 	SelectedMenuKey = G.key;
 	toggleSelectionOfPicture(MenuItems[G.key]);
-	//console.log(SelectedMenuKey)
 }
 
 function initSettings(game) {
@@ -104,10 +131,10 @@ function updateSettings() {
 		if (SettingTypesCommon[k]) {
 			//console.log('should be set for all games:',k,Settings[k]);
 
-			lookupSetOverride(U,['settings',k],Settings[k]);
+			lookupSetOverride(U, ['settings', k], Settings[k]);
 
 		} else {
-			if (isdef(G.key)) lookupSetOverride(U,['games',G.key,'settings',k],Settings[k]);
+			if (isdef(G.key)) lookupSetOverride(U, ['games', G.key, 'settings', k], Settings[k]);
 
 		}
 	}
@@ -153,7 +180,7 @@ function setSettingsKeysSelect(elem) {
 	//let val = elem.type == 'number' ? Number(elem.value) : elem.value;
 	SettingsChanged = true;
 	lookupSetOverride(Settings, elem.keyList, val);
-	console.log('result', lookup(Settings, elem.keyList));
+	//console.log('result', lookup(Settings, elem.keyList));
 }
 
 

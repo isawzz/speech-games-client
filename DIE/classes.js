@@ -9,7 +9,7 @@ class GTouchColors extends Game {
 	}
 	prompt() {
 		let colorKeys = choose(G.colors, G.numColors);
-		showPictures(evaluate, { colorKeys: colorKeys, contrast: G.contrast });
+		showPicturesSpeechTherapyGames(evaluate, { contrast: G.contrast }, { colorKeys: colorKeys });
 		//Pictures.map(x => x.color = ColorDict[x.textShadowColor]);
 
 		setGoal(randomNumber(0, Pictures.length - 1));
@@ -36,7 +36,9 @@ class GMem extends Game {
 	constructor(name) { super(name); }
 	clear() { clearTimeout(this.TO); showMouse(); }
 	prompt() {
-		showPictures(this.interact.bind(this), { repeat: G.numRepeat, sameBackground: true, border: '3px solid #ffffff80' });
+		showPicturesSpeechTherapyGames(this.interact.bind(this),
+		{ border: '3px solid #ffffff80' },
+		 { repeat: G.numRepeat, sameBackground: true });
 		setGoal();
 
 		if (G.level > 2) { showInstruction('', Settings.language == 'E' ? 'remember all' : 'merke dir alle', dTitle, true); }
@@ -73,7 +75,7 @@ class GWritePic extends Game {
 		}
 	}
 	prompt() {
-		showPictures(() => mBy(this.defaultFocusElement).focus());
+		showPicturesSpeechTherapyGames(() => mBy(this.defaultFocusElement).focus());
 		setGoal();
 
 		showInstruction(Goal.label, Settings.language == 'E' ? 'type' : "schreib'", dTitle, true);
@@ -120,7 +122,7 @@ class GMissingLetter extends Game {
 		G.maxPosMissing = G.posMissing == 'start' ? G.numMissing - 1 : 100;
 	}
 	prompt() {
-		showPictures(() => fleetingMessage('just enter the missing letter!'));
+		showPicturesSpeechTherapyGames(() => fleetingMessage('just enter the missing letter!'));
 		setGoal();
 
 		showInstruction(Goal.label, Settings.language == 'E' ? 'complete' : "ergänze", dTitle, true);
@@ -242,10 +244,10 @@ class GMissingLetter extends Game {
 }
 class GSayPic extends Game {
 	constructor(name) { super(name); }
-	clear(){ Speech.stopRecording(); }
+	clear() { Speech.stopRecording(); }
 	prompt() {
 
-		showPictures(() => mBy(defaultFocusElement).focus());
+		showPicturesSpeechTherapyGames();
 		setGoal();
 
 		showInstruction(Goal.label, Settings.language == 'E' ? 'say:' : "sage: ", dTitle);
@@ -273,15 +275,20 @@ class GSayPic extends Game {
 		}
 
 	}
-	eval(isfinal, speechResult, confidence) {
+	eval(isfinal, speechResult, confidence, sessionId) {
 
+		//console.log(Goal);
+		//console.log('===>',sessionId,SessionId);
+		if (sessionId != SessionId) {
+			alert('NOT THIS BROWSER!!!!!!'); return undefined;
+		}
 		let answer = Goal.answer = normalize(speechResult, Settings.language);
 		let reqAnswer = Goal.reqAnswer = normalize(Goal.label, Settings.language);
 
 		Selected = { reqAnswer: reqAnswer, answer: answer, feedbackUI: Goal.div };
 
 		if (isEmpty(answer)) return false;
-		else return isSimilar(answer, reqAnswer);
+		else return isSimilar(answer, reqAnswer) || isList(Goal.info.valid) && firstCond(Goal.info.valid, x => x.toUpperCase() == answer.toUpperCase());
 
 	}
 }
@@ -289,7 +296,9 @@ class GPremem extends Game {
 	constructor() { super(); this.piclist = []; }
 	prompt() {
 		this.piclist = [];
-		showPictures(this.interact.bind(this), { repeat: G.numRepeat, sameBackground: true, border: '3px solid #ffffff80' });
+		showPicturesSpeechTherapyGames(this.interact.bind(this), 
+		{ border: '3px solid #ffffff80' },
+		{ repeat: G.numRepeat, sameBackground: true });
 		showInstruction('', 'click any picture', dTitle, true);
 		activateUi();
 	}
@@ -345,7 +354,8 @@ class GSteps extends Game {
 		let colorKeys = G.numColors > 1 ? choose(G.colors, G.numColors) : null;
 		let showRepeat = G.numRepeat > 1;
 
-		showPictures(this.interact.bind(this), { showRepeat: showRepeat, colorKeys: colorKeys, contrast: G.contrast, repeat: G.numRepeat });
+		showPicturesSpeechTherapyGames(this.interact.bind(this), {contrast: G.contrast, },
+		{ showRepeat: showRepeat, colorKeys: colorKeys, repeat: G.numRepeat });
 
 		setMultiGoal(G.numSteps);
 		// console.log(Goal)
@@ -406,8 +416,7 @@ class GMissingNumber extends Game {
 	startLevel() {
 		if (!isList(G.steps)) G.steps = [G.steps];
 		G.numPics = 2;
-		G.numLabels = 0;
-		// console.log(G)
+		Settings.labels = false; // do not show labels for the thumbs up/down: TODO: should really do this in game/showThumbsUpDown
 	}
 	prompt() {
 		mLinebreak(dTable, 12);
@@ -417,7 +426,9 @@ class GMissingNumber extends Game {
 
 		G.step = chooseRandom(G.steps);
 		G.op = chooseRandom(G.ops);
-		[G.words, G.letters, G.seq] = createNumberSequence(G.seqLen, G.minNum, G.maxNum, G.step, G.op);
+		G.oop = OPS[G.op];
+		G.seq = createNumberSequence(G.seqLen, G.minNum, G.maxNum, G.step, G.op);
+		[G.words, G.letters] = showNumberSequence(G.seq, dTable);
 		setNumberSequenceGoal();
 		//console.log(G)
 
@@ -426,15 +437,15 @@ class GMissingNumber extends Game {
 		let instr1 = (Settings.language == 'E' ? 'complete the sequence' : "ergänze die reihe");
 		showInstruction('', instr1, dTitle, true);
 
-		let initialDelay = 5000 + G.level * 1000;
-		if (Settings.showHint && !calibrating()) recShowHints([0, 1, 2, 3, 4], QuestionCounter, initialDelay, d => initialDelay + 2000); //showNumSeqHint(G.trialNumber);
+		if (Settings.showHint) hintEngineStart(getNumSeqHintString,[0,1,2,3,4],5000 + G.level * 1000);
 
 		activateUi();
 	}
 	trialPrompt() {
 		let hintlist = G.trialNumber >= 4 ? [G.trialNumber] : range(G.trialNumber, 4);
-		let initialDelay = 3000 + G.level * 1000;
-		if (Settings.showHint && !calibrating()) recShowHints(hintlist, QuestionCounter, initialDelay, d => initialDelay + 2000); //showNumSeqHint(G.trialNumber);
+		if (Settings.showHint) hintEngineStart(getNumSeqHintString,hintlist,3000 + G.level * 1000);
+		// let initialDelay = 3000 + G.level * 1000;
+		// if (Settings.showHint && !calibrating()) recShowHints(hintlist, QuestionCounter, initialDelay, d => initialDelay + 2000); //showNumSeqHint(G.trialNumber);
 		setTimeout(() => getWrongChars().map(x => unfillChar(x)), 500);
 		return 10;
 	}
@@ -505,9 +516,9 @@ class GMissingNumber extends Game {
 }
 class GElim extends Game {
 	constructor(name) { super(name); }
-	startGame() { 
+	startGame() {
 		G.correctionFunc = () => { writeSound(); playSound('incorrect1'); return Settings.spokenFeedback ? 1800 : 300; };
-		G.successFunc = () => { Goal.pics.map(x=>x.div.style.opacity = .3); successPictureGoal();}
+		G.successFunc = () => { Goal.pics.map(x => x.div.style.opacity = .3); successPictureGoal(); }
 	}
 	startLevel() {
 		G.keys = G.keys.filter(x => containsColorWord(x));
@@ -516,7 +527,8 @@ class GElim extends Game {
 		this.piclist = [];
 		let colorKeys = G.numColors > 1 ? choose(G.colors, G.numColors) : null;
 		let showRepeat = G.numRepeat > 1;
-		showPictures(this.interact.bind(this), { showRepeat: showRepeat, colorKeys: colorKeys, contrast: G.contrast, repeat: G.numRepeat });
+		showPicturesSpeechTherapyGames(this.interact.bind(this), {contrast: G.contrast, },
+		{ showRepeat: showRepeat, colorKeys: colorKeys, repeat: G.numRepeat });
 
 		let [sSpoken, sWritten, piclist] = logicMulti(Pictures); //logicSetSelector(Pictures);
 		this.piclist = piclist;
@@ -555,7 +567,7 @@ class GElim extends Game {
 	eval(isCorrect) {
 		//	console.log('eval', isCorrect);
 		// console.log('piclist', this.piclist)
-		Selected = { piclist: this.piclist, feedbackUI: isCorrect ? Goal.pics.map(x=>x.div) : this.lastPic.div };
+		Selected = { piclist: this.piclist, feedbackUI: isCorrect ? Goal.pics.map(x => x.div) : this.lastPic.div };
 		return isCorrect;
 	}
 }
@@ -568,7 +580,7 @@ class GAnagram extends Game {
 		});
 	}
 	prompt() {
-		showPictures(() => fleetingMessage('just enter the missing letter!'));
+		showPicturesSpeechTherapyGames(() => fleetingMessage('just enter the missing letters!'));
 		setGoal();
 		showInstruction(Goal.label, Settings.language == 'E' ? 'drag letters to form' : "forme", dTitle, true);
 		mLinebreak(dTable);
@@ -619,6 +631,8 @@ const GAME = {
 	// gSudo: { friendly: 'Sudo!', logo: 'abacus', color: TEAL, cl: GSudo, }, //'#911eb4',
 	gElim: { friendly: 'Elim!', logo: 'collision', color: 'orangered', cl: GElim, }, //'#911eb4',
 	gAnagram: { friendly: 'Anagram!', logo: 'ram', color: 'rgb(0,152,105)', cl: GAnagram, }, //'#911eb4',
+	gInno: { friendly: 'Innovate!', logo: 'horse', color: 'silver', cl: GInno, }, //'#911eb4',
+	gAbacus: { friendly: 'Abacus', logo: 'abacus', color: 'mediumslateblue', cl: GAbacus, },
 };
 
 

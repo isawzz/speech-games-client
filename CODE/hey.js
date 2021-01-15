@@ -1,7 +1,7 @@
 var BlockServerSend = false;
 var SERVER_DATA = null;
 
-async function broadcastSIMA(usersPath = './settings/users.yaml', settingsPath = './settings/settings.yaml') {
+async function broadcastSIMA(usersPath = './_users.yaml', settingsPath = './_settings.yaml') {
 	let users = await loadYamlDict(usersPath);
 	let settings = await loadYamlDict(settingsPath);
 
@@ -11,7 +11,7 @@ async function broadcastSIMA(usersPath = './settings/users.yaml', settingsPath =
 		settings: settings
 	};
 
-	console.log('...saving from BROADCASTING')
+	//console.log('...saving from BROADCASTING')
 	saveSIMA();
 
 	if (CLEAR_LOCAL_STORAGE) localStorage.clear();
@@ -52,6 +52,9 @@ async function localOrRoute(key, url) {
 }
 async function loadAssetsSIMA(assetsPath) {
 	c52 = await localOrRoute('c52', assetsPath + 'c52_blackBorder.yaml');
+	//testCards = await localOrRoute('testCards', assetsPath + 'testCards.yaml');
+	cinno = await localOrRoute('cinno', assetsPath + 'fe/inno.yaml');
+
 	//return;
 	symbolDict = await localOrRoute('symbolDict', assetsPath + 'symbolDict.yaml');
 	symbolKeys = Object.keys(symbolDict);

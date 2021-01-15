@@ -25649,7 +25649,7 @@ clock:
   w:
     - 100
   h:
-    - 133
+    - 110
 clockwise vertical arrows:
   key: clockwise vertical arrows
   type: emo
@@ -40437,7 +40437,7 @@ eye:
   subgroups: body-parts
   E: eye
   D: auge
-  E_valid_sound: I
+  E_valid_sound: I|i
   hex: 1F441
   family: emoNoto
   text: '&#128065;'
@@ -48108,7 +48108,7 @@ front-facing baby chick:
   isColored: true
   emoji: "\U0001F425"
   hexcode: 1F425
-  group: animals-nature
+  group: special-animals-nature
   subgroups: animal-bird
   E: chick
   D: küken
@@ -126967,7 +126967,7 @@ white-tower:
   w:
     - 100
   h:
-    - 133
+    - 110
 wide-arrow-dunk:
   key: wide-arrow-dunk
   type: icon

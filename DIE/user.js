@@ -47,7 +47,7 @@ function addScoreToUserSession() {
 
 	saveUser();
 
-	//console.log('+ _addScoreToUserSession +++++++++++++++++++saved user:', U.lastGame, U.lastLevel)
+	//console.log('+ _addScoreToUserSession +++++++++++++++++++saved user:', U.lastGame, U.lastLevel_)
 	//console.log(jsCopy(Score), jsCopy(U.session))
 }
 function addSessionToUserGames() {
@@ -126,13 +126,17 @@ function loadUser(newUser) {
 	if (nundef(dUser)) { dUser = editableUsernameUi(dLineTopLeft); dUser.id = uiName; }
 
 	let game = U.lastGame;
-	let level;
-	if (isdef(game)) { level = U.lastLevel; }
-	else {
-		game = U.seq[0];
-		gInfo = U.games[game];
-		level = isdef(gInfo) && isdef(gInfo.startLevel) ? gInfo.startLevel : 0;
-	}
+	if (nundef(game)) game = U.seq[0]; //chooseRandom(U.seq);
+
+	let gInfo = U.games[game];
+	let level= isdef(gInfo) && isdef(gInfo.startLevel) ? gInfo.startLevel : 0;
+
+	//if (isdef(game)) { level = U._lastLevel; }
+	// else {
+	// 	game = U.seq[0];
+	// 	gInfo = U.games[game];
+	// 	level = isdef(gInfo) && isdef(gInfo.startLevel) ? gInfo.startLevel : 0;
+	// }
 
 	setGame(game, level);
 }
@@ -140,7 +144,7 @@ function saveUnit() { saveUser(); } // _addSessionToUserGames(); saveUser(); }
 function saveUser() {
 	//console.log('saveUser:', USERNAME,G.key,G.level); //_getFunctionsNameThatCalledThisFunction()); 
 	U.lastGame = G.key;
-	U.lastLevel = G.level;
+	//U._lastLevel = G.level;
 	if (USERNAME != 'test') localStorage.setItem('user', USERNAME);
 	//console.log(U);
 	DB.users[USERNAME] = U;
@@ -191,7 +195,7 @@ function setNextGame() {
 	setGame(U.seq[iNew]);
 }
 function updateStartLevelForUser(game, level, msg) {
-	console.log('updating startLevel for', USERNAME, game, level, '(' + msg + ')')
+	//console.log('updating startLevel for', USERNAME, game, level, '(' + msg + ')')
 	lookupSetOverride(U.games, [game, 'startLevel'], level);
 	saveUser();
 }

@@ -33,7 +33,7 @@ function scoring(isCorrect) {
 	let gameChange = false;
 	let nextLevel = G.level;
 	let toggle = Settings.showLabels == 'toggle';
-	let hasLabels = Settings.labels && G.numLabels != 0;
+	let hasLabels = Settings.labels == true;
 	let boundary = Settings.samplesPerGame;
 
 	//level change will occur iff streak (- or +). on streak: updateStartLevelForUser!

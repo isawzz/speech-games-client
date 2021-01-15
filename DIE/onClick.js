@@ -32,7 +32,7 @@ function closeAux() {
 	show('dTemple');
 	if (SettingsChanged) {
 		updateSettings();
-		console.log('...saving because closeAux SettingsChanged!!!!')
+		//console.log('...saving because closeAux SettingsChanged!!!!')
 		saveSIMA();
 	}
 	SettingsChanged = false;
@@ -81,6 +81,7 @@ function onClickGo(ev) {
 		if (gKey != SelectedMenuKey) {
 			if (isdef(SelectedMenuKey)) toggleSelectionOfPicture(MenuItems[SelectedMenuKey]);
 			SelectedMenuKey = gKey;
+			//console.log('ONCLICK:',MenuItems,gKey,MenuItems[gKey])
 			toggleSelectionOfPicture(MenuItems[gKey]);
 		} else {
 			closeAux();
@@ -130,6 +131,7 @@ function onClickFreezer2(ev) {
 function divKeyFromEv(ev) {
 	//console.log('ev',ev)
 	let id = evToClosestId(ev);
+	//console.log('id found is',id)
 	let div = mBy(id);
 	return div.key;
 }

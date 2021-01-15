@@ -39,7 +39,7 @@ function onMouseDownOnLetter(ev) {
 		//d wird gecloned
 
 		var clone = DragElem = source.cloneNode(true);
-		clone.id=DragElem.id+'_'+clone;
+		clone.id = DragElem.id + '_' + clone;
 		DragSource = source;
 
 		//clone muss an body attached werden
@@ -79,7 +79,7 @@ function onRelease(ev) {
 			inp.innerHTML = DragElem.innerHTML;
 
 			//achtung: if clone is a input clone, clear original element!!!!
-			if (startsWith(DragElem.id,'input')) DragSource.innerHTML = '_';
+			if (startsWith(DragElem.id, 'input')) DragSource.innerHTML = '_';
 			// t.innerHTML = s.innerHTML;
 
 			//check if word complete!
@@ -203,8 +203,41 @@ function scrambleInputs(d) {
 }
 //#endregion createLetterInputs
 
-//#region createWordInputs
-function createWordInputs(words, dParent, idForContainerDiv, sep = null, styleContainer = {}, styleWord = {}, styleLetter = {}, styleSep = {}, colorWhiteSpaceChars = true, preserveColorsBetweenWhiteSpace = true) {
+//#region createWordInputs_
+function getColorWheel(n, bgContrast, isUp = true) {
+
+}
+function getStyledItems(words, bgFunc, fgFunc = 'contrast', fzFunc) {
+	let items = [];
+	if (isString(bgFunc)) { bgFunc = () => bgFunc; }
+	if (isLiteral(fzFunc)) { fzFunc = () => fzFunc; }
+	if (isString(fgFunc)) { fgFunc = () => fgFunc; }
+	else if (nundef(fgFunc)) fgFunc = (i, w, bg) => colorIdealText(bg);
+	for (let i = 0; i < words.length; i++) {
+		let w = words[i];
+		let bg = bgFunc(i, w);
+		let fg = fgFunc(i, w, bg);
+		let item = { w: w, bg: bg, fg: fg, i: i, fz: fzFunc(i, w) };
+		items.push(item)
+	}
+	return items;
+}
+function getStyledItems1(words, bgFunc, fgFunc = 'contrast', fzFunc) {
+	let items = [];
+	if (isString(bgFunc)) { bgFunc = () => bgFunc; }
+	if (isLiteral(fzFunc)) { fzFunc = () => fzFunc; }
+	if (isString(fgFunc)) { fgFunc = () => fgFunc; }
+	else if (nundef(fgFunc)) fgFunc = (i, w, bg) => colorIdealText(bg);
+	for (let i = 0; i < words.length; i++) {
+		let w = words[i];
+		let bg = bgFunc(i, w);
+		let fg = fgFunc(i, w, bg);
+		let item = { w: w, bg: bg, fg: fg, i: i, fz: fzFunc(i, w) };
+		items.push(item)
+	}
+	return items;
+}
+function createWordInputs(words, dParent, idForContainerDiv = 'seqContainer', sep = null, styleContainer = {}, styleWord = {}, styleLetter = {}, styleSep = {}, colorWhiteSpaceChars = true, preserveColorsBetweenWhiteSpace = true) {
 
 	if (isEmpty(styleWord)) {
 		let sz = 80;
@@ -237,7 +270,7 @@ function createWordInputs(words, dParent, idForContainerDiv, sep = null, styleCo
 	let wheel1 = colorPalShadeX(anyColorToStandardString(wheel[0]), numWords);
 	wheel = jsCopy(wheel1);
 	//reverse the wheel if subtract
-	if (G.op == 'add') wheel.reverse();
+	if (G.op == 'plus') wheel.reverse();
 
 
 	//console.log('wheel',wheel1, wheel)
@@ -286,17 +319,182 @@ function createWordInputs(words, dParent, idForContainerDiv, sep = null, styleCo
 
 	return { words: inputGroups, letters: charInputs };
 }
-function createNumberSequence(n, min, max, step, op = 'add') {
+function createNumberSequence(n, min, max, step, op = 'plus') {
 
-	let fBuild = x => { return op == 'add' ? (x + step) : op == 'subtract' ? (x - step) : x; };
-	if (op == 'subtract') min += step * (n - 1);
+	let fBuild = x => { return op == 'plus' ? (x + step) : op == 'minus' ? (x - step) : x; };
+	if (op == 'minus') min += step * (n - 1);
 	if (min >= (max - 10)) max = min + 10;
 	let seq = getRandomNumberSequence(n, min, max, fBuild, lastPosition);
 	lastPosition = seq[0];
-	let wi = createWordInputs(seq, dTable, 'dNums');
-	return [wi.words, wi.letters, seq];
+
+	return seq;
+}
+function showNumberSequence(words, dParent, idForContainerDiv = 'seqContainer', sep = null, styleContainer = {}, styleWord = {}, styleLetter = {}, styleSep = {}, colorWhiteSpaceChars = true, preserveColorsBetweenWhiteSpace = true) {
+	//words, dParent, idForContainerDiv, sep = null, styleContainer = {}, styleWord = {}, styleLetter = {}, styleSep = {}, colorWhiteSpaceChars = true, preserveColorsBetweenWhiteSpace = true
+	// let wi = createWordInputs_(seq, dParent, 'dNums');
+
+	if (isEmpty(styleWord)) {
+		let sz = 80;
+		styleWord = {
+			margin: 10, padding: 4, rounding: '50%', w: sz, h: sz, display: 'flex', fg: 'lime', bg: 'yellow', 'align-items': 'center',
+			border: 'transparent', outline: 'none', fz: sz - 25, 'justify-content': 'center',
+		};
+
+	}
+
+	let dContainer = mDiv(dParent);
+	if (!isEmpty(styleContainer)) mStyleX(dContainer, styleContainer); else mClass(dContainer, 'flexWrap');
+	dContainer.id = idForContainerDiv;
+
+	let inputGroups = [];
+	let charInputs = [];
+
+	//charInputs sollen info: {iGroup,iPhrase,iWord,char,word,phrase,div,dGroup,dContainer,ofg,obg,ostyle,oclass}
+	//groups sollen haben: [{div,ofg,obg,ostyle,oclass,[charInputs]},...]
+	let iWord = 0;
+	let idx = 0;
+	let numWords = words.length;
+
+	//pure color wheel
+	let wheel = getHueWheel(G.color, 40, numWords <= 4 ? 60 : numWords <= 10 ? 30 : 15, 0);
+	wheel = wheel.map(x => colorHSLBuild(x, 100, 50));
+	wheel = shuffle(wheel);
+
+	//shaded color wheel
+	let wheel1 = colorPalShadeX(anyColorToStandardString(wheel[0]), numWords);
+	wheel = jsCopy(wheel1);
+	//reverse the wheel if subtract
+	if (G.op == 'plus') wheel.reverse();
+
+
+	//console.log('wheel',wheel1, wheel)
+	for (const w of words) {
+		let dGroup = mDiv(dContainer);
+		// let dGroup = mCreate('div');
+		// mAppend(dContainer, dGroup);
+		mStyleX(dGroup, styleWord);
+
+		let bg = wheel[iWord]; // dGroup.style.backgroundColor=randomColorX(G.color,40,60,0,50,50);//'yellow';//randomColorX(G.color,70,80);
+		//console.log('bg', bg);
+		dGroup.style.backgroundColor = bg;
+		dGroup.style.color = colorIdealText(bg);// randomColorX(bg,20,30);
+
+		dGroup.id = idForContainerDiv + '_' + iWord;
+		//mClass(dGroup,'flex')
+		let g = { dParent: dContainer, word: w, iWord: iWord, div: dGroup, oStyle: styleWord, ofg: dGroup.style.color, obg: dGroup.style.backgroundColor };
+		inputGroups.push(g);
+
+		//here have to add inputs into group for word w
+		let inputs = [];
+		let iLetter = 0;
+		let wString = w.toString();
+		for (const l of wString) {
+			let dLetter = mDiv(dGroup);
+			// let dLetter = mCreate('div');
+			// mAppend(dGroup, dLetter);
+			if (!isEmpty(styleLetter)) mStyleX(dLetter, styleLetter);
+			dLetter.innerHTML = l;
+			let inp = { group: g, div: dLetter, letter: l, iLetter: iLetter, index: idx, oStyle: styleLetter, ofg: dLetter.style.color, obg: dLetter.style.backgroundColor };
+			charInputs.push(inp);
+			inputs.push(inp);
+			iLetter += 1; idx += 1;
+		}
+		g.charInputs = inputs;
+
+		//here have to add separator! if this is not the last wor of group!
+		if (iWord < words.length - 1 && isdef(sep)) {
+			let dSep = mDiv(dContainer);
+			dSep.innerHTML = sep;
+			if (isdef(styleSep)) mStyleX(dSep, styleSep);
+		}
+
+		iWord += 1;
+	}
+
+	return [inputGroups, charInputs];
+	return { words: inputGroups, letters: charInputs };
+	return [wi.words, wi.letters];
 }
 function setNumberSequenceGoal() {
+	let blank = blankWordInputs(G.words, G.numMissing, G.posMissing);
+
+	Goal = { seq: G.seq, words: G.words, chars: G.letters, blankWords: blank.words, blankChars: blank.letters, iFocus: blank.iFocus };
+	Goal.qCharIndices = Goal.blankChars.map(x => x.index);
+
+	Goal.qWordIndices = Goal.blankWords.map(x => x.iWord);
+
+	// let yes = true;
+	// for (let i = 0; i < Goal.chars.length; i++) if (Goal.chars[i].index != i) yes = false;
+	// console.assert(yes == true);
+
+}
+function showEquation(words, dParent, idForContainerDiv, sep = null, styleContainer = {}, styleWord = {}, styleLetter = {}, styleSep = {}, colorWhiteSpaceChars = true, preserveColorsBetweenWhiteSpace = true) {
+
+	if (isEmpty(styleWord)) {
+		let sz = 100;
+		let fg = helleFarbe(G.color);
+		styleWord = {
+			margin: 8, padding: 4, rounding: '50%', w: 'auto', h: sz, display: 'flex', fg: fg, bg: 'transparent',
+			'align-items': 'center', border: 'transparent', outline: 'none', fz: sz, 'justify-content': 'center',
+		};
+
+	}
+
+	let dContainer = mDiv(dParent);
+	if (!isEmpty(styleContainer)) mStyleX(dContainer, styleContainer); else mClass(dContainer, 'flexWrap');
+	dContainer.id = idForContainerDiv;
+
+	let inputGroups = [];
+	let charInputs = [];
+
+	//charInputs sollen info: {iGroup,iPhrase,iWord,char,word,phrase,div,dGroup,dContainer,ofg,obg,ostyle,oclass}
+	//groups sollen haben: [{div,ofg,obg,ostyle,oclass,[charInputs]},...]
+	let iWord = 0;
+	let idx = 0;
+	let numWords = words.length;
+
+	//console.log('wheel',wheel1, wheel)
+	for (const w of words) {
+		let dGroup = mDiv(dContainer);
+		// let dGroup = mCreate('div');
+		// mAppend(dContainer, dGroup);
+		mStyleX(dGroup, styleWord);
+
+		//dGroup.style.backgroundColor = bg;
+		//dGroup.style.color = colorIdealText(bg);// randomColorX(bg,20,30);
+		dGroup.id = idForContainerDiv + '_' + iWord;
+		//mClass(dGroup,'flex')
+		let g = { dParent: dContainer, word: w, iWord: iWord, div: dGroup, oStyle: styleWord, ofg: dGroup.style.color, obg: dGroup.style.backgroundColor };
+		inputGroups.push(g);
+
+		//here have to add inputs into group for word w
+		let inputs = [];
+		let iLetter = 0;
+		let wString = w.toString();
+		for (const l of wString) {
+			let dLetter = mDiv(dGroup);
+			if (!isEmpty(styleLetter)) mStyleX(dLetter, styleLetter);
+			dLetter.innerHTML = l;
+			let inp = { group: g, div: dLetter, letter: l, iLetter: iLetter, index: idx, oStyle: styleLetter, ofg: dLetter.style.color, obg: dLetter.style.backgroundColor };
+			charInputs.push(inp);
+			inputs.push(inp);
+			iLetter += 1; idx += 1;
+		}
+		g.charInputs = inputs;
+
+		//here have to add separator! if this is not the last wor of group!
+		if (iWord < words.length - 1 && isdef(sep)) {
+			let dSep = mDiv(dContainer);
+			dSep.innerHTML = sep;
+			if (isdef(styleSep)) mStyleX(dSep, styleSep);
+		}
+
+		iWord += 1;
+	}
+
+	return [inputGroups, charInputs];// { words: inputGroups, letters: charInputs };
+}
+function setEquationGoal() {
 	let blank = blankWordInputs(G.words, G.numMissing, G.posMissing);
 
 	Goal = { seq: G.seq, words: G.words, chars: G.letters, blankWords: blank.words, blankChars: blank.letters, iFocus: blank.iFocus };
@@ -307,26 +505,6 @@ function setNumberSequenceGoal() {
 	let yes = true;
 	for (let i = 0; i < Goal.chars.length; i++) if (Goal.chars[i].index != i) yes = false;
 	console.assert(yes == true);
-
-}
-function setGoalWordInputs(n, min, max, step, op = 'add') {
-
-	let fBuild = x => { return op == 'add' ? (x + step) : op == 'subtract' ? (x - step) : x; };
-	if (op == 'subtract') min += step * (n - 1);
-	if (min >= (max - 10)) max = min + 10;
-	let seq = getRandomNumberSequence(n, min, max, fBuild);
-	let wi = createWordInputs(seq, dTable, 'dNums');
-	let blank = blankWordInputs(wi.words, G.numMissing, G.posMissing);
-
-	Goal = { seq: seq, words: wi.words, chars: wi.letters, blankWords: blank.words, blankChars: blank.letters, iFocus: blank.iFocus };
-	Goal.qCharIndices = Goal.blankChars.map(x => x.index);
-
-	Goal.qWordIndices = Goal.blankWords.map(x => x.iWord);
-
-	let yes = true;
-	for (let i = 0; i < Goal.chars.length; i++) if (Goal.chars[i].index != i) yes = false;
-	console.assert(yes == true);
-	//console.log('Goal', Goal);
 
 }
 function blankWordInputs(wi, n, pos = 'random') {
@@ -453,20 +631,89 @@ function getCorrectWords() { return Goal.seq; }
 function getCorrectWordString(sep = ' ') { return getCorrectWords().join(sep); }
 function getInputWordString(sep = ' ') { return getInputWords().join(sep); }
 
-//#endregion createWordInputs
+//#endregion createWordInputs_
+
+//#region math exp
+function makeExpSequence() {
+	G.operand = randomNumber(G.minNum, G.maxNum);
+	G.op = chooseRandom(G.ops); //G.op ist jetzt ein key in OPS
+
+	let upper = G.op == 'minus' ? G.operand : G.maxFactor;
+
+	console.assert(upper >= G.minFactor || upper == 0);
+
+	G.step = G.minFactor > upper ? 0 : randomNumber(G.minFactor, upper); // chooseRandom(G.steps);
+	G.oop = OPS[G.op];
+	//console.log(G.op, G.oop);
+
+	G.result = G.oop.f(G.operand, G.step);
+
+	G.seq = [G.operand, G.oop.wr, G.step, '=', G.result];//,'=',13]; // createNumberSequence(G.seqLen, G.minNum, G.maxNum, G.step, G.op);
+
+	//G.exp =  [G.operand, G.oop.op, G.step];
+	//let exp = G.seq.join(' ');
+	//console.log(exp);
+	//let result = eval(exp);
+	// G.seq = G.seq.concat(['=', result]);
+
+	// console.log('RESULT', G.result);
+	return G.seq;
+}
+function readExp() {
+
+}
+function writeExp() {
+
+}
+function blankExpResult() {
+
+}
+function evalExp() {
+
+}
+function blankOperand2() {
+
+}
+function blankOperator() {
+
+}
+function generateExpAnswers() {
+
+}
+function setExpGoal() {
+
+}
 
 //#region number sequence hints
+function hintEngineStart(hintFunc, hintlist, initialDelay) {
+	G.hintFunc = hintFunc;
+	recShowHints(hintlist, QuestionCounter, initialDelay, d => initialDelay + 2000); //showNumSeqHint(G.trialNumber);
+
+}
+function getOperationHintString(i) {
+	//return sSpoken,sWritten
+	//console.log('i', i, 'trial#', G.trialNumber);
+	if (i == 0) {
+		let sSpoken = 'visualize like so:';
+		let sWritten = visOperation(G.op,G.operand,G.step, null,'?');
+		return [sSpoken,sWritten];
+	}else{
+		let sSpoken = 'look at this:';
+		let sWritten = visOperation(G.op,G.operand,G.step, null);
+		return [sSpoken,sWritten];
+	}
+}
 function getNumSeqHintString(i) {
 	console.log('i', i, 'trial#', G.trialNumber)
 	let cmd = G.op;
 	let m = G.step;
 	let lstSpoken, lstWritten;
 	if (i == 0) {
-		lstSpoken = [cmd, m];
+		lstSpoken = [G.oop.cmd, m];
 	} else if (i == 1) {
-		let decl = G.op == 'add' ? 'to' : G.op == 'subtract' ? 'from' : 'by';
+		let decl = G.op == 'plus' ? 'to' : G.op == 'minus' ? 'from' : 'by';
 		let phrase = decl + ' the previous number';
-		lstSpoken = [cmd, m, phrase];
+		lstSpoken = [G.oop.cmd, m, G.oop.link, ' the previous number'];
 	} else if (i == 2) {
 		//console.log('YYYYYYYYYYYYYYYY')
 		let iBlank = getNextIndexOfMissingNumber();
@@ -478,10 +725,10 @@ function getNumSeqHintString(i) {
 		let iBlank = getNextIndexOfMissingNumber();
 		let iPrevious = iBlank - 1;
 		let n = G.seq[iPrevious];
-		let op = cmd == 'add' ? 'plus' : cmd == 'subtract' ? 'minus' : cmd == 'multiply' ? 'times' : 'divided by';
+		let oop = OPS[cmd];//let op = cmd;// == 'plus' ? 'plus' : cmd == 'minus' ? 'minus' : cmd == 'mult' ? 'times' : 'divided by';
 		let erg = i >= 4 ? Goal.words[iBlank].word : '?';
-		lstSpoken = ['', n, op, m, 'equals', erg];
-		lstWritten = [n, getOperator(cmd), m, getOperator('equals'), getOperator(erg)]
+		lstSpoken = ['', n, oop.sp, m, 'equals', erg];
+		lstWritten = [n, oop.wr, m, '=', erg]; //erg == '?' ? '?' : erg]
 	} else {
 		//lst = [cmd, m];
 		let iBlank = getNextIndexOfMissingNumber();
@@ -491,18 +738,12 @@ function getNumSeqHintString(i) {
 	if (nundef(lstWritten)) lstWritten = lstSpoken;
 	return [lstSpoken.join(' '), lstWritten.join(' ')];
 }
-function getOperator(op) {
-	switch (op) {
-		case 'add': return '+';
-		case 'subtract': return '-';
-		case 'divide': return ':';
-		case 'multiply': return 'x';
-		case 'equals': return '=';
-		case '?': return '_';
-		default: return op;
-	}
+function getNumSeqHint() {
+	let l = G.op == 'plus' ? 'to' : 'from';
+	let msg = `${G.op} ${G.step} ${l} the previous number`;
+	msg = `${G.oop.cmd} ${G.step} ${G.oop.link} the previous number`;
+	return msg;
 }
-function getNumSeqHint() { let l = G.op == 'add' ? 'to' : 'from'; let msg = `${G.op} ${G.step} ${l} the previous number`; return msg; }
 function getNextIndexOfMissingNumber(iStart = 0) {
 	//console.log('HAAAAAA', G.numMissing, iStart, Goal)
 	for (let i = iStart; i < G.seq.length; i++) {
@@ -518,8 +759,8 @@ function recShowHints(ilist, rc, delay = 3000, fProgression = d => d * 1.5) {
 	TOTrial = setTimeout(() => recShowHintsNext(i, ilist, rc, fProgression(delay), fProgression), delay);
 }
 function recShowHintsNext(i, ilist, rc, delay, fProgression) {
-	console.log('showing hint #', i, 'trial#', G.trialNumber);
-	let [spoken, written] = getNumSeqHintString(i);
+	//console.log('showing hint #', i, 'trial#', G.trialNumber);
+	let [spoken, written] = G.hintFunc(i);
 	if (spoken) sayRandomVoice(spoken); //setTimeout(() => sayRandomVoice(spoken), 300+ms);
 	if (written) showFleetingMessage(written, 0, { fz: 40 });
 	if (QuestionCounter == rc) recShowHints(ilist, rc, delay, fProgression);
@@ -718,8 +959,13 @@ function showFleetingMessage(msg, msDelay, styles, fade = false) {
 	}
 }
 function fleetingMessage(msg, styles, fade = false) {
-	dLineBottomMiddle.innerHTML = msg;
-	mStyleX(dLineBottomMiddle, styles)
+	if (isString(msg)) {
+		dLineBottomMiddle.innerHTML = msg;
+		mStyleX(dLineBottomMiddle, styles)
+	} else {
+		clearElement(dLineBottomMiddle);
+		mAppend(dLineBottomMiddle, msg);
+	}
 	if (fade) TOMain = aniFadeInOut(dLineBottomMiddle, 1);
 }
 //#endregion fleetingMessage
@@ -889,6 +1135,7 @@ function resetScore() {
 	Score = { gameChange: true, levelChange: true, nTotal: 0, nCorrect: 0, nCorrect1: 0, nPos: 0, nNeg: 0 };
 }
 function resetState() {
+	GroupCounter = 0;
 	clearTimeouts();
 	onkeydown = null; onkeypress = null; onkeyup = null;
 	lastPosition = 0;
@@ -989,8 +1236,8 @@ function showInstructionX(written, dParent, spoken, { fz, voice } = {}) {
 
 }
 function showHiddenThumbsUpDown(styles) {
-	styles.bgs = ['transparent', 'transparent'];
-	showPictures(null, styles, ['thumbs up', 'thumbs down'], ['bravo!', 'nope']);
+	styles.bg = ['transparent', 'transparent'];
+	showPicturesSpeechTherapyGames(null, styles, {showLabels:false}, ['thumbs up', 'thumbs down']); //, ['bravo!', 'nope']);
 	for (const p of Pictures) { p.div.style.padding = p.div.style.margin = '10px 0px 0px 0px'; p.div.style.opacity = 0; }
 
 }

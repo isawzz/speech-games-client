@@ -1,4 +1,105 @@
-//#region NEW
+function showPicturesSpeechTherapyGames(onClickPictureHandler, ifs = {}, options = {}, keys, labels) {
+	if (!EXPERIMENTAL) { return showPicturesSpeechTherapyGamesWORKING(...arguments); }
+	Pictures = [];
+	//#region prelim: default ifs and options, keys & infos
+	//console.log('ifs', jsCopy(ifs)); console.log('options', jsCopy(options));
+
+	if (nundef(keys)) keys = choose(G.keys, G.numPics);
+	//keys=['eye'];//['toolbox','tiger']; //keys[0] = 'butterfly'; //keys[0]='man in manual wheelchair';	//keys=['sun with face'];
+	// keys=['house','socks','hammer'];
+
+	// let showLabels = Settings.labels == true;
+	let infos = keys.map(k => (isdef(Settings.language) ? getRandomSetItem(Settings.language, k) : symbolDict[k]));
+	//ifs and options: defaults
+	let bg = isdef(options.colorKeys) ? 'white' : (i) => options.sameBackground ? computeColor('random') : 'random';
+	let fg = (i, info, item) => colorIdealText(item.bg);
+	let defIfs = { bg: bg, fg: fg, label: isdef(labels) ? labels : (i, info) => info.best, contrast: .32, fz: 20, padding:10 };
+	let defOptions = { showLabels:Settings.labels==true, shufflePositions: true, sameBackground: true, showRepeat: false, repeat: 1, onclick: onClickPictureHandler, iStart: 0 };
+	ifs = deepmergeOverride(defIfs, ifs);
+	options = deepmergeOverride(defOptions, options);
+	//console.log('keys', keys); console.log('ifs', ifs); 
+	//console.log('options', options);
+	//#endregion
+
+	//#region phase1: make items: hier jetzt mix and match
+	let items = zItems(infos, ifs, options);
+	if (options.repeat > 1) items = zRepeatEachItem(items, options.repeat, options.shufflePositions);
+	if (isdef(options.colorKeys)) items = zRepeatInColorEachItem(items, options.colorKeys);
+	items.map(x => x.label = x.label.toUpperCase());
+	Pictures = items;
+	//items.map(x=>console.log(x));
+	//#endregion phase1
+
+	//#region phase2: prepare items for container
+	let [sz, rows, cols] = calcRowsColsSize(items.length, isdef(options.colorKeys) ? options.colorKeys.length : undefined);
+	if (nundef(options.sz)) options.sz=sz;
+	if (nundef(options.rows)) options.rows=rows;
+	if (nundef(options.cols)) options.cols=cols;
+	items.map(x => x.sz = sz);
+	prep1(items,ifs,options);
+	//#endregion
+
+	//#region phase3: prep container for items
+	mClass(dTable, 'flexWrap');
+	//#endregion
+
+	//#region phase4: add items to container!
+	let dGrid = mDiv(dTable);
+	items.map(x => mAppend(dGrid, x.div));
+	let gridStyles = { 'place-content': 'center', gap: 4, margin: 4, padding: 4 };
+	let gridSize = layoutGrid(items, dGrid, gridStyles, { rows: rows, isInline: true });
+	// console.log('size of grid',gridSize,'table',getBounds(dTable))
+
+	//#endregion
+
+	//console.log('*** THE END ***', Pictures[0]);
+}
+function showPicturesSpeechTherapyGamesWORKING(onClickPictureHandler, ifs = {}, options = {}, keys, labels) {
+
+	Pictures = [];
+	if (nundef(keys)) keys = choose(G.keys, G.numPics);
+	//keys=['eye'];//['toolbox','tiger']; //keys[0] = 'butterfly'; //keys[0]='man in manual wheelchair';	//keys=['sun with face'];
+	keys = ['house', 'socks', 'hammer'];
+
+
+	let defIfs = { contrast: .32, fz: 20, label: isdef(labels) ? labels : (i, info) => info.best };
+	let defOptions = { showRepeat: false, repeat: 1, sameBackground: true, onclick: onClickPictureHandler };
+	ifs = deepmergeOverride(defIfs, ifs);
+	options = deepmergeOverride(defOptions, options);
+	console.log('.')
+
+	Pictures = zShowPictures1(keys, ifs.label, dTable, onClickPictureHandler,
+		{
+			showRepeat: options.showRepeat, picSize: ifs.sz, bg: ifs.bg, repeat: options.repeat, sameBackground: options.sameBackground, border: ifs.border,
+			lang: Settings.language, colorKeys: options.colorKeys, contrast: ifs.contrast
+		});
+	// Pictures = maShowPictures(keys, labels, dTable, onClickPictureHandler,
+	// 	{
+	// 		showRepeat: showRepeat, picSize: sz, bg: bg, repeat: repeat, sameBackground: sameBackground, border: border,
+	// 		lang: Settings.language, colorKeys: colorKeys, contrast: contrast
+	// 	});
+
+	// label hiding
+	let totalPics = Pictures.length;
+	if (showLabels) {
+		if (G.numLabels == totalPics) return;
+		let remlabelPic = choose(Pictures, totalPics - G.numLabels);
+		for (const p of remlabelPic) {
+			//console.log('hi1');
+			maHideLabel(p.id, p.info); p.isLabelVisible = false;
+		}
+	} else {
+		for (const p of Pictures) {
+			//console.log('hi1');
+			maHideLabel(p.id, p.info); p.isLabelVisible = false;
+		}
+
+	}
+
+}
+
+
+//#region logic selectors (game: Elim!)
 function logicMulti(n) {
 	let allPics = Pictures;
 	let maxPics = 4;
@@ -27,7 +128,7 @@ function logicMulti(n) {
 			if (prop1 == 'label') {
 				s = s1 + ' ' + s;
 				w = w1 + ' ' + w;
-			}else if (arrLast(propsUsed) == 'label'){
+			} else if (arrLast(propsUsed) == 'label') {
 				let conn = Settings.language == 'E' ? ' with ' : ' mit ';
 				s1 = s1.substring(s1.indexOf(' '));
 				w1 = w1.substring(w1.indexOf(' '));
@@ -81,12 +182,13 @@ function logicFilter(allPics, exceptProps) {
 		lstWritten = ['with', props[prop].friendly, colorPrepper(val)];
 		piclist = allPics.filter(x => x[prop] == val);
 	} else if (prop == 'iRepeat') {
-		let op = (G.numRepeat > 2 && val > 1 && val < G.numRepeat) ? chooseRandom(['<=', '>=', '=']) : chooseRandom(['=', '!=']);
+		let op = (G.numRepeat > 2 && val > 1 && val < G.numRepeat) ? chooseRandom(['leq', 'geq', 'eq']) : chooseRandom(['eq', 'neq']);
 		//op = '!=';
-		lstSpoken = lstSpoken.concat(['with', props[prop].friendly, OPS[op].sp, val]);
-		lstWritten = ['with', props[prop].friendly, op, val];
+		let oop = OPS[op];
+		lstSpoken = lstSpoken.concat(['with', props[prop].friendly, oop.sp, val]);
+		lstWritten = ['with', props[prop].friendly, oop.wr, val];
 
-		piclist = allPics.filter(x => OPS[op].f(x[prop], val));
+		piclist = allPics.filter(x => oop.f(x[prop], val));
 
 	}
 	//console.log(lstSpoken)
@@ -136,12 +238,13 @@ function logicSetSelector(allPics) {
 			lstWritten = ['eliminate', 'all', 'with', props[prop].friendly, colorPrepper(val)];
 			piclist = allPics.filter(x => x[prop] == val);
 		} else if (prop == 'iRepeat') {
-			let op = (G.numRepeat > 2 && val > 1 && val < G.numRepeat) ? chooseRandom(['<=', '>=', '=']) : chooseRandom(['=', '!=']);
+			let op = (G.numRepeat > 2 && val > 1 && val < G.numRepeat) ? chooseRandom(['leq', 'geq', 'eq']) : chooseRandom(['eq', 'neq']);
 			//op = '!=';
-			lstSpoken = lstSpoken.concat(['with', props[prop].friendly, OPS[op].sp, val]);
-			lstWritten = ['eliminate', 'all', 'with', props[prop].friendly, op, val];
+			let oop = OPS[op];
+			lstSpoken = lstSpoken.concat(['with', props[prop].friendly, oop.sp, val]);
+			lstWritten = ['eliminate', 'all', 'with', props[prop].friendly, oop.wr, val];
 
-			piclist = allPics.filter(x => OPS[op].f(x[prop], val));
+			piclist = allPics.filter(x => oop.f(x[prop], val));
 
 		}
 		//console.log(lstSpoken)
@@ -170,7 +273,10 @@ function logicSetSelector(allPics) {
 	return [s, w, piclist];
 
 }
-function colorPrepper(val) { return `<span style="color:${val}">${ColorDict[val][Settings.language].toUpperCase()}</span>`; }
+function colorPrepper(val) {
+
+	return `<span style="color:${ColorDict[val].c}">${ColorDict[val][Settings.language].toUpperCase()}</span>`;
+}
 function labelPrepper(val) { return `<b>${val.toUpperCase()}</b>`; }
 function logicCheck(pic) {
 	//should return true if pic is part of set to be clicked and remove that pic
@@ -179,41 +285,7 @@ function logicCheck(pic) {
 function logicReset() {
 	//resets piclist;
 }
-
-
-
-
-
-function showPictures(onClickPictureHandler, { showRepeat = false, sz, bgs, colorKeys, contrast, repeat = 1,
-	sameBackground = true, border, textColor, fz = 20 } = {}, keys, labels) {
-	Pictures = [];
-	if (nundef(keys)) keys = choose(G.keys, G.numPics);
-	//keys=['toolbox','tiger']; //keys[0] = 'butterfly'; //keys[0]='man in manual wheelchair';	//keys=['sun with face'];
-
-	Pictures = maShowPictures(keys, labels, dTable, onClickPictureHandler,
-		{
-			showRepeat: showRepeat, picSize: sz, bgs: bgs, repeat: repeat, sameBackground: sameBackground, border: border,
-			lang: Settings.language, colorKeys: colorKeys, contrast: contrast
-		});
-
-	// label hiding
-	let totalPics = Pictures.length;
-	if (nundef(Settings.labels) || Settings.labels) {
-		if (G.numLabels == totalPics) return;
-		let remlabelPic = choose(Pictures, totalPics - G.numLabels);
-		for (const p of remlabelPic) {
-			//console.log('hi1');
-			maHideLabel(p.id, p.info); p.isLabelVisible = false;
-		}
-	} else {
-		for (const p of Pictures) {
-			//console.log('hi1');
-			maHideLabel(p.id, p.info); p.isLabelVisible = false;
-		}
-
-	}
-
-}
+//#endregion
 
 //#region card face up or down
 function turnFaceDown(pic) {
@@ -228,7 +300,7 @@ function turnFaceUp(pic) {
 	for (const ch of div.children) {
 		ch.style.transition = `opacity ${1}s ease-in-out`;
 		ch.style.opacity = 1; //show(ch,true);
-		if (!pic.isLabelVisible) break;
+		//if (!pic.isLabelVisible) break;
 	}
 	div.style.transition = null;
 	div.style.backgroundColor = pic.bg;
@@ -238,6 +310,9 @@ function toggleFace(pic) { if (pic.isFaceUp) turnFaceDown(pic); else turnFaceUp(
 
 //#region selection of picture
 function toggleSelectionOfPicture(pic, selectedPics) {
+
+//	console.log(pic)
+
 	let ui = pic.div;
 	//if (pic.isSelected){pic.isSelected=false;mRemoveClass(ui,)}
 	pic.isSelected = !pic.isSelected;

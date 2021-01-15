@@ -32,9 +32,12 @@ function mStyleX(elem, styles, unit = 'px') {
 	
 	if (isdef(styles.vmargin) && isdef(styles.hmargin)) {
 		styles.margin = styles.vmargin + unit + ' ' + styles.hmargin + unit;
+		console.log('::::::::::::::',styles.margin)
 	}
 	if (isdef(styles.vpadding) && isdef(styles.hpadding)) {
+
 		styles.padding = styles.vpadding + unit + ' ' + styles.hpadding + unit;
+		console.log('::::::::::::::',styles.vpadding,styles.hpadding)
 	}
 
 	//console.log(styles.bg,styles.fg);
