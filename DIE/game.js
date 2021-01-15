@@ -694,13 +694,13 @@ function getOperationHintString(i) {
 	//return sSpoken,sWritten
 	//console.log('i', i, 'trial#', G.trialNumber);
 	if (i == 0) {
-		let sSpoken = 'visualize like so:';
-		let sWritten = visOperation(G.op,G.operand,G.step, null,'?');
-		return [sSpoken,sWritten];
-	}else{
-		let sSpoken = 'look at this:';
-		let sWritten = visOperation(G.op,G.operand,G.step, null);
-		return [sSpoken,sWritten];
+		let sSpoken = [G.operand, G.oop.sp, G.step].join(' ');
+		let sWritten = visOperation(G.op, G.operand, G.step, null, '?');
+		return [sSpoken, sWritten];
+	} else {
+		let sSpoken = 'count the red dots';
+		let sWritten = visOperation(G.op, G.operand, G.step, null);
+		return [sSpoken, sWritten];
 	}
 }
 function getNumSeqHintString(i) {
@@ -1237,7 +1237,7 @@ function showInstructionX(written, dParent, spoken, { fz, voice } = {}) {
 }
 function showHiddenThumbsUpDown(styles) {
 	styles.bg = ['transparent', 'transparent'];
-	showPicturesSpeechTherapyGames(null, styles, {showLabels:false}, ['thumbs up', 'thumbs down']); //, ['bravo!', 'nope']);
+	showPicturesSpeechTherapyGames(null, styles, { showLabels: false }, ['thumbs up', 'thumbs down']); //, ['bravo!', 'nope']);
 	for (const p of Pictures) { p.div.style.padding = p.div.style.margin = '10px 0px 0px 0px'; p.div.style.opacity = 0; }
 
 }
