@@ -375,14 +375,32 @@ class GSteps extends Game {
 		activateUi();
 	}
 	trialPrompt() {
+		sayTryAgain();
+		showFleetingMessage(this.message,0);
+		return 1000;
+	}
+	activate(){
 		for (const p of this.piclist) { toggleSelectionOfPicture(p); }
 		this.piclist = [];
-		sayTryAgain();
-		return 10;
+
 	}
 	interact(ev) {
 		ev.cancelBubble = true;
-		if (!canAct()) return;
+		if (!canAct()) {console.log('no act');return;}
+
+		let id = evToClosestId(ev);
+		let i = firstNumber(id);
+		let pic = Pictures[i];
+
+		toggleSelectionOfPicture(pic, this.piclist);
+		if (this.piclist.length == Goal.pics.length) { 
+			clearFleetingMessage();
+			Selected = { piclist: this.piclist }; evaluate(); 
+		}
+	}
+	interact_dep(ev) {
+		ev.cancelBubble = true;
+		if (!canAct()) {console.log('no act');return;}
 
 		let id = evToClosestId(ev);
 		let i = firstNumber(id);
@@ -398,7 +416,20 @@ class GSteps extends Game {
 		if (pic != Goal.pics[iGoal]) { Selected = { pics: this.piclist, wrong: pic, correct: Goal[iGoal] }; evaluate(false); }
 		else if (this.piclist.length == Goal.pics.length) { Selected = { piclist: this.piclist }; evaluate(true); }
 	}
-	eval(isCorrect) {
+	eval() {
+		//console.log('eval', isCorrect);
+		//console.log('piclist', this.piclist)
+		Selected = { piclist: this.piclist, feedbackUI: this.piclist.map(x => x.div), sz: getBounds(this.piclist[0].div).height };
+		let isCorrect = true;
+		this.message=Settings.language=='D'?'beachte die REIHENFOLGE!': 'mind the ORDER!';
+		for(let i=0;i<this.piclist.length;i++){
+			let p = this.piclist[i];
+			if (!Goal.pics.includes(p))this.message=Settings.language=='D'?'noch einmal!': 'try again!';
+			if (this.piclist[i]!=Goal.pics[i]) isCorrect = false;
+		}
+		return isCorrect;
+	}
+	eval_dep(isCorrect) {
 		//console.log('eval', isCorrect);
 		//console.log('piclist', this.piclist)
 		Selected = { piclist: this.piclist, feedbackUI: this.piclist.map(x => x.div), sz: getBounds(this.piclist[0].div).height };

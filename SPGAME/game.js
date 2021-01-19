@@ -1282,6 +1282,7 @@ function toggleSelectionOfPicture(pic, selectedPics) {
 
 	let ui = pic.div;
 	//if (pic.isSelected){pic.isSelected=false;mRemoveClass(ui,)}
+	//console.log('pic selected?',pic.isSelected);
 	pic.isSelected = !pic.isSelected;
 	if (pic.isSelected) mClass(ui, 'framedPicture'); else mRemoveClass(ui, 'framedPicture');
 

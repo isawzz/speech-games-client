@@ -358,7 +358,7 @@ function addRepeatInfo(dPic, iRepeat, szPic) {
 	let szi = Math.max(Math.floor(szPic / 8), 8);
 	//console.log(szi);
 	dPic.style.position = 'relative';
-	let d2 = mText('' + iRepeat, dPic, { fz: szi, weight: 'bold', fg: 'black', position: 'absolute', left: szi / 2, top: szi / 2 - 2 });
+	let d2 = mText('' + iRepeat, dPic, { fz: szi, weight: 'bold', fg: 'contrast', position: 'absolute', left: szi / 2, top: szi / 2 - 2 });
 	// let d3 = mText('col:' + col, dPic, { fz: szi, color: 'black', position: 'absolute', left: szi, top: (szi / 2 + szi + 2) })
 	return d2;
 }
