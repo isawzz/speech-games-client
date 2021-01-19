@@ -569,10 +569,12 @@ class GElim extends Game {
 		activateUi();
 	}
 	trialPrompt() {
-		for (const p of this.piclist) { toggleSelectionOfPicture(p); }
-		this.piclist = [];
 		sayTryAgain();
-		return 10;
+		return 1000;
+	}
+	activate(){
+		for (const p of this.piclist) { if (p.isSelected) toggleSelectionOfPicture(p); }
+		this.piclist = [];
 	}
 	interact(ev) {
 		ev.cancelBubble = true;

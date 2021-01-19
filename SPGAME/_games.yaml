@@ -95,12 +95,12 @@ gSteps:
       numRepeat: 1
       numSteps: 2
     3: 
-      numPics: 4
+      numPics: 2
       numColors: 2
       numRepeat: 1
       numSteps: 2
     4: 
-      numPics: 4
+      numPics: 2
       numColors: 1
       numRepeat: 2
       numSteps: 2
@@ -110,9 +110,9 @@ gSteps:
       numRepeat: 1
       numSteps: 2
     6: 
-      numPics: 4
-      numColors: 2
-      numRepeat: 3
+      numPics: 2
+      numColors: 4
+      numRepeat: 2
       numSteps: 2
     7: 
       numPics: 2
