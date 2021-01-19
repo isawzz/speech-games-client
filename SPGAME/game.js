@@ -1000,7 +1000,7 @@ function recShowHintsNext(i, ilist, rc, delay, fProgression) {
 	if (QuestionCounter == rc) recShowHints(ilist, rc, delay, fProgression);
 	//if (i==0){setTimeout(()=>showNumSeqHint(10),6000);}
 }
-function correctBlanks(){
+function correctBlanks() {
 	let wrong = getWrongWords();
 	if (nundef(TOList)) TOList = {};
 	Selected.feedbackUI = wrong.map(x => x.div);
@@ -1449,10 +1449,20 @@ function setBadgeLevel(i) {
 	if (isEmpty(badges)) showBadgesX(dLeiste, G.level, onClickBadgeX, G.maxLevel);
 
 	for (let iBadge = 0; iBadge < G.level; iBadge++) {
-		badges[iBadge].div.style.opacity = 1;
+		badges[iBadge].div.style.opacity = .75;
+		badges[iBadge].div.style.border = 'transparent';
+		badges[iBadge].div.children[1].innerHTML = '* ' + iBadge + ' *'; //style.color = 'white';
+		badges[iBadge].div.children[0].style.color = 'white';
 	}
-	for (let iBadge = G.level; iBadge < badges.length; iBadge++) {
+	badges[G.level].div.style.border = '2px solid #00000080';
+	badges[G.level].div.style.opacity = 1;
+	badges[G.level].div.children[1].innerHTML = 'LEVEL ' + G.level; //style.color = 'white';
+	badges[G.level].div.children[0].style.color = 'white';
+	for (let iBadge = G.level + 1; iBadge < badges.length; iBadge++) {
+		badges[iBadge].div.style.border = 'transparent';
 		badges[iBadge].div.style.opacity = .25;
+		badges[iBadge].div.children[1].innerHTML = 'LEVEL ' + iBadge; //style.color = 'white';
+		badges[iBadge].div.children[0].style.color = 'black';
 	}
 }
 function setBackgroundColor() { document.body.style.backgroundColor = G.color; }
