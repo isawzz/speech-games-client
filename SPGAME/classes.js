@@ -570,6 +570,7 @@ class GElim extends Game {
 	}
 	trialPrompt() {
 		sayTryAgain();
+		showFleetingMessage('try again!',0,{fz:60},true);
 		return 1000;
 	}
 	activate(){
