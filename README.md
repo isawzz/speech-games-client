@@ -16,7 +16,7 @@ This project provides simple games for speech therapy:
 [There is also a calibration test CALIBRATE for the user to set all the games to the right level ] =>disabled for refactoring
 
 run it online:
-goto: https://isawzz.github.io/speech-games-client/DIE/
+goto: https://isawzz.github.io/speech-games-client/SPGAME/
 
 
 # implementation
@@ -33,7 +33,7 @@ easiest way to run this locally if you have vs code installed:
 
 4. press GoLive
 
-5. ===> start in DIE directory 
+5. ===> start in SPGAME directory 
 
 S/settings contains a settings file settings.yaml that can be adapted to use the implemented games with different parameters. right now, just file editing in program (computer icon) works! (gear icon NOT IMPLEMENTED!)
 
