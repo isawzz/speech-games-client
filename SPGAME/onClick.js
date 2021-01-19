@@ -1,5 +1,14 @@
+function clearTimeouts() {
+	clearTimeout(TOMain);
+	clearTimeout(TOFleetingMessage);
+	clearTimeout(TOTrial);
+	if (isdef(TOList)) { for (const k in TOList) { TOList[k].map(x => clearTimeout(x)); } }
+}
 function enterInterruptState() {
-	TO.clear();
+	//haTO true; //when using TaskChain
+	//chainCancel();
+	//restartQ();
+	clearTimeouts();
 	if (isdef(G.instance)) G.instance.clear();
 	auxOpen = true;
 }
@@ -10,10 +19,13 @@ function openAux() {
 
 	show(dAux);
 	show('dGo');
+
+
 }
 function closeAux() {
 	hide(dAux);
 	hide('dGo');
+	if (ALLOW_CALIBRATION) show('dCalibrate');
 	show('dGear');
 	show('dTemple');
 	if (SettingsChanged) {
@@ -27,7 +39,16 @@ function closeAux() {
 
 //#region aux buttons: computer, gear, temple
 function onClickComputer() { }
-function onClickCalibrate() { }
+function onClickCalibrate() {
+	if (isCal) {
+		if (auxOpen) { closeAux(); }
+		exitCalibrationMode();
+	} else {
+		if (auxOpen) { closeAux(); enterCalibrationMode('all'); }
+		else { enterCalibrationMode(1); }
+	}
+}
+
 
 function onClickGear() {
 	//console.log('opening settings: ui will be interrupted!!!')
@@ -37,9 +58,10 @@ function onClickGear() {
 	createSettingsUi(dAux);
 }
 function onClickTemple() {
+	//console.log('opening menu: ui will be interrupted!!!')
 	openAux();
 	hide('dTemple');
-	show('dGear');
+	if (ALLOW_CALIBRATION) show('dCalibrate');
 	createMenuUi(dAux);
 }
 

@@ -1,13 +1,13 @@
 const OFFLINE = false;
-DEFAULTUSERNAME = 'zoe';
-// const SERVERURL =  OFFLINE ? 'http://localhost:3000/users/' : 'https://speech-games.herokuapp.com/users/';
-const SERVERURL =  OFFLINE ? 'http://localhost:3000/app/' : 'https://speech-games.herokuapp.com/app/';
-const EXPERIMENTAL = true;
-const DEV_MODE = false; //OFFLINE is true auf ASUS ROG soll aber false sein auf github!
-const IS_TESTING = false;
+const SERVERURL = OFFLINE ? 'http://localhost:3000/app/' : 'https://speech-games.herokuapp.com/app/';
 
-const BROADCAST_SETTINGS = false; // ACHTUNG!!!!!!!!!!!!! true;
-var PROD_START = !OFFLINE;
+const IS_TESTING = false; // *** only set this one! ***
+
+DEFAULTUSERNAME = 'zoe';// IS_TESTING ? 'nil' : 'gul';
+const BROADCAST_SETTINGS = false; //IS_TESTING; // ACHTUNG!!!!!!!!!!!!! true;
+var USE_LOCAL_STORAGE = !BROADCAST_SETTINGS; // true | false //localStorage is cleared when false!!!!!
+const CLEAR_LOCAL_STORAGE = BROADCAST_SETTINGS;
+var PROD_START = !IS_TESTING;
 
 
 

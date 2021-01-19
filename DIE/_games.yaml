@@ -1,0 +1,17 @@
+1:
+  game: gKrieg
+  players:
+    felix:
+      color: red
+      hand: 
+        obj_type: deck52
+        data: [HQ,HK]
+    amanda:
+      color: green
+      hand: 
+        obj_type: deck52
+        data: [D1,D2,HT]
+  table:
+    deck:
+      obj_type: deck52
+      data: [C1,C2,C3,C4,CK,SJ]

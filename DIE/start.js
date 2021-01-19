@@ -1,28 +1,51 @@
+async function _start() {
+	//onclick = _saveAll;
+	console.assert(isdef(DB)); //user db is loaded
+
+	Speech = new SpeechAPI('E');
+	KeySets = getKeySets();
+	TO = new TimeoutManager();
+	
+	initTable(); //table(=alles), dTable(=dLineTableMiddle), dTitle(=dLineTitleMiddle), dLine[Top,Title,Middle,Bottom][LMR]
+	initSidebar(); //dLeiste
+	listUsers();
+	loadUser(); //changeUserTo('nil');  //test01_modifyU(); 
+	initAux(); // TODO: dAux das ist eigentlich settings+menu
+
+	console.log('last game was:', U.lastGame);
+	//if (PROD_START) { PROD_START = false; onClickTemple(); } else startGame();
+}
+
 window.onload = _loader;
-window.onunload = saveUser;
-
+window.onbeforeunload = () => {
+	if (IS_TESTING) return;
+	_saveAll();
+	return "onbeforeunload"; //for reasons unknown MUSS ich das return statement machen sonst macht er das _saveAll nicht!!!!
+}
+function _saveAll() {
+	saveUser();
+	//saveSettings();
+	//saveGames();
+	dbSave('boardGames');
+}
 async function _loader() {
-
+	//#region deactivate when page left, serviceWorker commented, timit
 	if (!IS_TESTING) {
 		ifPageVisible.on('blur', function () {
-			// example code here..
-			//animations.pause();
-			enterInterruptState();
-			console.log('stopping game', G.key)
+			//enterInterruptState();
+			// console.log('stopping game', G.key)
+			_saveAll();
+			return 'hallo'
 		});
 
 		ifPageVisible.on('focus', function () {
-			// resume all animations
-			// animations.resume();
-			if (isdef(G.instance)) {
-				updateUserScore();//this saves user data + clears the score.nTotal,nCorrect,nCorrect1!!!!!
-				setGame(G.key);
-			}
-			closeAux();
-			startGame();
-			// auxOpen = false;
+			// if (isdef(G.instance)) {
+			// 	updateUserScore();//this saves user data + clears the score.nTotal,nCorrect,nCorrect1!!!!!
+			// 	setGame(G.key);
+			// }
+			// closeAux();
 			// startGame();
-			console.log('restarting game', G.key)
+			// console.log('restarting game', G.key)
 		});
 	}
 	// if ('serviceWorker' in navigator) {
@@ -37,57 +60,11 @@ async function _loader() {
 	// }
 
 	//timit = new TimeIt('start');
+	//#endregion
 	if (BROADCAST_SETTINGS) {
 		console.log('...broadcasting ...')
-		await broadcastSIMA();
+		await dbInit('boardGames');
 		_start();
-	} else { loadSIMA(_start); }
+	} else { dbLoad('boardGames', _start); }
 
 }
-async function _start() {
-	//timit.show('DONE');
-	console.assert(isdef(DB));
-
-	initTable();
-	initSidebar();
-	initAux();
-	initScore();
-
-	Speech = new SpeechAPI('E');
-	KeySets = getKeySets();
-	//console.log(KeySets)
-
-	if (IS_TESTING) loadUser(USERNAME); else loadUser();
-	console.assert(isdef(G))
-
-	// test12_vizOperationOhneParentDiv(); return;
-	//test12_vizNumberOhneParentDiv();return;
-	//test12_vizArithop(); return;
-	//test11_zViewerCircleIcon(); return;
-	//test11_zItemsX(); return;
-	//test03_maShowPictures(); return;
-	//let keys = symKeysByType.icon;	keys=keys.filter(x=>x.includes('tower'));	console.log(keys);	iconViewer(keys);	return;
-
-	//return;
-	if (ALLOW_CALIBRATION) show('dCalibrate');
-	if (SHOW_FREEZER) show('freezer'); else startUnit();
-
-}
-function startUnit() {
-
-	restartTime();
-	//if (nundef(U.session)) U.session = {};
-	U.session = {};
-	//console.log('---_startUnit: session', U.session);
-
-	// console.log('ha'); return;
-	//onClickTemple(); return;
-
-	if (PROD_START) { PROD_START = false; onClickTemple(); } else startGame();
-	//show('freezer2')
-	//onClickCalibrate();
-	//onClickTemple();
-
-}
-
-
