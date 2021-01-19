@@ -8,6 +8,8 @@ function createMenuUi(dParent) {
 
 	//#region prelim: keys,labels,ifs,options
 	let games = U.avGames;
+	console.log('navi',window.navigator.onLine);
+	if (!navigator.onLine){removeInPlace(games,'gSayPic');}
 	//console.log(games, games.map(g => GAME[g]));
 	let labels = games.map(g => GAME[g].friendly);
 	let keys = games.map(g => GAME[g].logo);

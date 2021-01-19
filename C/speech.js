@@ -4,7 +4,7 @@ var RecogHighPriorityOutput = true;
 var SpeakerOutput = false;
 var MicrophoneUi;
 var SessionId;
-var RecognitionAvailable=false;
+//var RecognitionAvailable = true;
 
 class SpeechAPI {
 	constructor(lang) {
@@ -12,9 +12,9 @@ class SpeechAPI {
 		this.speaker = new Speaker(lang);
 		SessionId = Date.now();
 
-		this.startRecording('E',()=>console.log())
+		//this.startRecording('E');
 	}
-	testRecorder(){
+	testRecorder() {
 		this.st
 		this.recorder.start();
 	}
@@ -38,7 +38,7 @@ class SpeechAPI {
 	}
 
 	say(text, r = .5, p = .8, v = .5, voicekey, callback, lang) {
-		
+
 		//what happens if change lang in the middle of speaking???
 		if (isdef(lang)) this.speaker.setLanguage(lang);
 		this.speaker.enq(arguments);
@@ -54,7 +54,7 @@ class SpeechAPI {
 class Recorder {
 	constructor(lang) {
 		let rec = this.rec = new webkitSpeechRecognition();
-		console.log('speech recognition',rec)
+		console.log('speech recognition', rec)
 		rec.continuous = true;
 		rec.interimResults = true;
 		rec.maxAlternatives = 5;
@@ -74,8 +74,15 @@ class Recorder {
 		}
 		rec.onerror = ev => {
 			genHandler(ev, 'error');
+			// console.log('____________', ev.error == 'no-speech', ev.error)
+			if (ev.error == 'network') {
+				alert('no internet connection: Speech Recognition is not available! (error:'+ev.error+')');
+				RecognitionAvailable = false;
+			} //else {
+			// 	alert('Great! Speech Recognition is available! '+ev.error)
+			// 	RecognitionAvailable = true;
+			// }
 			if (RecogOutputError) console.error(ev);
-			RecognitionAvailable = false;
 			this.stop();
 		};
 		rec.onstart = ev => {
@@ -219,13 +226,13 @@ class Speaker {
 
 //#region Microphone UI
 
-function mMicrophone(dParent,color) {
+function mMicrophone(dParent, color) {
 	let d = mDiv(dParent);
 	d.innerHTML = '🎤';
 
-	let c = bestContrastingColor(color,['yellow','orange','red']);
+	let c = bestContrastingColor(color, ['yellow', 'orange', 'red']);
 	//let style = { bg: '#FF413680', rounding: '50%', fz: 50, padding: 5 };
-	let bg = c; 
+	let bg = c;
 	let style = { bg: bg, rounding: '50%', fz: 50, padding: 5, transition: 'opacity .35s ease-in-out' };
 	mStyleX(d, style);
 	mLinebreak(dParent);

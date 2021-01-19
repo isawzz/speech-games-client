@@ -84,7 +84,7 @@ function getUserStartLevel(game) {
 }
 function loadUser(newUser) {
 
-	console.log('newUser',newUser)
+	console.log('newUser', newUser)
 	if (isdef(Score) && Score.nTotal > 0) updateUserScore();//this saves user data + clears the score.nTotal,nCorrect,nCorrect1!!!!!
 
 	Username = isdef(newUser) ? newUser : localStorage.getItem('user');
@@ -98,7 +98,7 @@ function loadUser(newUser) {
 	if (!uData) { uData = DB.users[Username] = jsCopy(DB.users.guest0); uData.id = Username; }
 
 	U = DB.users[Username];
-	console.log('U',Username,U)
+	console.log('U', Username, U)
 	// Settings = U.settings = deepmergeOverride(DB.settings, U.settings);
 	// DB.games = Settings.games;
 	// delete Settings.games;
@@ -107,11 +107,11 @@ function loadUser(newUser) {
 	let dUser = mBy(uiName);
 	if (nundef(dUser)) { dUser = editableUsernameUi(dLineTopLeft); dUser.id = uiName; }
 
-	let game = U.lastGame;
+	let game = !window.navigator.onLine && U.lastGame == 'gSayPic' ? 'gTouchPic' : U.lastGame; //do NOT start in gSayPic if no internet!!!
 	if (nundef(game)) game = U.avGames[0]; //chooseRandom(U.avGames);
 
 	let gInfo = U.games[game];
-	let level= isdef(gInfo) && isdef(gInfo.startLevel) ? gInfo.startLevel : 0;
+	let level = isdef(gInfo) && isdef(gInfo.startLevel) ? gInfo.startLevel : 0;
 
 	setGame(game, level);
 }
