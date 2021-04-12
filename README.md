@@ -1,7 +1,9 @@
 # speech-games-client
 
 This project provides simple games for speech therapy:
+
 version 1: 
+
 added new games:
 - Sentence: order words of a sentence correctly
 - Name It: drag labels to pictures
