@@ -2,9 +2,7 @@
 
 This project provides simple games for speech therapy:
 
-version 1: 
-
-added new games:
+version 1 (added new games):
 - Sentence: order words of a sentence correctly
 - Name It: drag labels to pictures
 - Swap (replacing Sequence): swap letters in 2 words to form correct words
@@ -25,8 +23,8 @@ version 0:
 - Anagram: reorder letters to form a word
 
 run it online:
-goto: https://isawzz.github.io/speech-games-client/version1/ZAA/
-goto: https://isawzz.github.io/speech-games-client/version0/SPGAME/
+- goto: https://isawzz.github.io/speech-games-client/version1/ZAA/
+- goto: https://isawzz.github.io/speech-games-client/version0/SPGAME/
 
 Note: HAS ONLY BEEN TESTED ON *** GOOGLE CHROME ***
 
