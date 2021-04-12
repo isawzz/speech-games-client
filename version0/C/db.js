@@ -1,5 +1,5 @@
 var BlockServerSend = false;
-async function dbInit(appName, usersPath = './_users.yaml', settingsPath = './_settings.yaml', gamesPath = './_games.yaml') {
+async function dbInit(appName, usersPath = './users.yaml', settingsPath = './settings.yaml', gamesPath = './games.yaml') {
 	let users = await loadYamlDict(usersPath);
 	let settings = await loadYamlDict(settingsPath);
 	let games = await loadYamlDict(gamesPath);

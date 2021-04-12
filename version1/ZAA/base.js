@@ -1521,10 +1521,10 @@ function getFunctionsNameThatCalledThisFunction() {
 
 //#region loading DB, yaml, json, text
 async function dbInit(appName, dir = '../DATA/') {
-	let users = await route_path_yaml_dict(dir + '_users.yaml');
-	let settings = await route_path_yaml_dict(dir + '_settings.yaml');
+	let users = await route_path_yaml_dict(dir + 'users.yaml');
+	let settings = await route_path_yaml_dict(dir + 'settings.yaml');
 	let addons = await route_path_yaml_dict(dir + '_addons.yaml');
-	let games = await route_path_yaml_dict(dir + '_games.yaml');
+	let games = await route_path_yaml_dict(dir + 'games.yaml');
 	//let speechGames = await route_path_yaml_dict(dir + '_speechGames.yaml');
 	let tables = await route_path_yaml_dict(dir + '_tables.yaml');
 
