@@ -1,0 +1,194 @@
+nil:
+  id: nil
+  avGames: [gNamit, gMissingLetter, gTouchPic, gPremem, gTouchColors, gSteps, gSayPic, gMem, gMissingNumber, gWritePic, gAnagram, gElim, gAbacus]
+  lastGame: gNamit
+  settings:
+    # settings common to all games
+    samplesPerGame: 20
+    minutesPerUnit: 20
+    incrementLevelOnPositiveStreak: 4
+    decrementLevelOnNegativeStreak: 4
+    pictureLabels: toggle #always never toggle (=remove labels after half level)
+    language: D
+    vocab: lifePlus
+    showTime: true
+    spokenFeedback: true
+    silentMode: false
+    switchGame: true
+    #indiv game settings default
+    trials:  1
+    showHint: true
+    # activity animal body drink emotion food fruit game gesture kitchen object person place plant role sport time transport vegetable nosymemo nosymbols
+    categories: [nosymemo]
+    pressControlToUnfreeze: false
+    reducedAnimations: true
+    levelBadges: false
+  games:
+    gNamit:
+      #vocab: 
+      startLevel: 4
+    gTouchPic:
+      #vocab: 
+      startLevel: 1
+    gPremem:
+      startLevel: 3
+    gTouchColors: 
+      startLevel: 0
+    gMissingLetter: 
+      startLevel: 2
+    gSteps: 
+      startLevel: 0
+    gSayPic: 
+      startLevel: 0
+    gMem:
+      startLevel: 1
+    gMissingNumber: 
+      startLevel: 2
+    gWritePic: 
+      startLevel: 2
+    gAnagram: 
+      startLevel: 0
+    gElim: 
+      startLevel: 2
+    gAbacus:
+      startLevel: 0
+    gPasscode:
+      startLevel: 0
+  avAddons: [aPasscode, aAddress, aPassword]
+  addons:
+    aPasscode:
+      open: true
+      #tNext: 2000 #next time this should be running is in 20 seconds!
+    aAddress:
+      open: true
+    aPassword:
+      open: true
+guest0:
+  id: guest
+  avGames: [gNamit, gMissingLetter, gTouchPic, gPremem, gTouchColors, gSteps, gSayPic, gMem, gMissingNumber, gWritePic, gAnagram, gElim, gAbacus]
+  lastGame: gNamit
+  settings:
+    # settings common to all games
+    samplesPerGame: 10
+    minutesPerUnit: 10
+    incrementLevelOnPositiveStreak: 10
+    decrementLevelOnNegativeStreak: 5
+    pictureLabels: toggle #always never toggle (=remove labels after half level)
+    language: E
+    vocab: best25
+    showTime: false
+    spokenFeedback: true
+    silentMode: false
+    switchGame: true
+    #indiv game settings default
+    trials:  2
+    showHint: true
+  games:
+    gTouchPic:
+      startLevel: 0
+test0:
+  id: test0
+  avGames: [gMissingLetter, gTouchPic, gPremem, gTouchColors, gSteps, gSayPic, gMem, gMissingNumber, gWritePic, gAnagram, gElim, gAbacus]
+  lastGame: gTouchPic
+  settings:
+    # settings common to all games
+    samplesPerGame: 10
+    minutesPerUnit: 10
+    incrementLevelOnPositiveStreak: 10
+    decrementLevelOnNegativeStreak: 5
+    pictureLabels: toggle #always never toggle (=remove labels after half level)
+    language: E
+    vocab: best25
+    showTime: false
+    spokenFeedback: true
+    silentMode: false
+    switchGame: true
+    #indiv game settings default
+    trials:  2
+    showHint: true
+  games:
+    gTouchPic:
+      #vocab: 
+      startLevel: 3
+    gPremem:
+      startLevel: 0
+    gTouchColors: 
+      startLevel: 0
+    gMissingLetter: 
+      startLevel: 2
+    gSteps: 
+      startLevel: 0
+    gSayPic: 
+      startLevel: 0
+    gMem:
+      startLevel: 1
+    gMissingNumber: 
+      startLevel: 2
+    gWritePic: 
+      startLevel: 2
+    gAnagram: 
+      startLevel: 3
+    gElim: 
+      startLevel: 0
+    gAbacus:
+      startLevel: 0
+    gPasscode:
+      startLevel: 0
+gul:
+  id: gul
+  avGames: [gNamit, gMissingLetter, gTouchPic, gPremem, gTouchColors, gSteps, gSayPic, gMem, gMissingNumber, gWritePic, gAnagram, gElim, gAbacus]
+  lastGame: gTouchPic
+  settings:
+    # settings common to all games
+    samplesPerGame: 25
+    minutesPerUnit: 20
+    incrementLevelOnPositiveStreak: 10
+    decrementLevelOnNegativeStreak: 5
+    pictureLabels: toggle #always never toggle (=remove labels after half level)
+    language: D
+    vocab: lifePlus
+    showTime: true
+    spokenFeedback: true
+    silentMode: false
+    switchGame: true
+    #indiv game settings default
+    trials:  2
+    showHint: true
+  games:
+    gTouchPic:
+      startLevel: 3
+    gPremem:
+      startLevel: 3
+    gTouchColors: 
+      startLevel: 2
+    gMissingLetter: 
+      startLevel: 2
+    gSteps: 
+      startLevel: 0
+    gSayPic: 
+      startLevel: 0
+    gMem:
+      startLevel: 1
+    gMissingNumber: 
+      startLevel: 2
+    gWritePic: 
+      startLevel: 2
+    gAnagram: 
+      startLevel: 1
+    gElim: 
+      startLevel: 2
+    gAbacus:
+      startLevel: 2
+    gPasscode:
+      startLevel: 0
+    gNamit:
+      startLevel: 3
+  avAddons: [aPasscode, aAddress, aPassword]
+  addons:
+    aPasscode:
+      open: true
+      #tNext: 2000 #next time this should be running is in 20 seconds!
+    aAddress:
+      open: false
+    aPassword:
+      open: false

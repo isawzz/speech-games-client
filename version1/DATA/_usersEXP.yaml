@@ -1,0 +1,12 @@
+nil:
+  id: nil
+  color: green
+  favs: [gKrieg, gAristo, gTouchPic, gMem]
+  games: [gKrieg, gAristo]
+  solitaires: [gNamit, gMissingLetter, gTouchPic, gPremem, gTouchColors, gSteps, gSayPic, gMem, gMissingNumber, gWritePic, gAnagram, gElim, gAbacus]
+  addons: [aPasscode, aAddress, aPassword]
+  lastGame: gKrieg
+  settings: #these could override global settings!
+  gameSettings: #these oculd override settings for specific games/levels
+  startup: #settings for starting new game (eg. startLevel)
+  tables: #ids of tables this user is a player

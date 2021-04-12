@@ -1,6 +1,15 @@
 # speech-games-client
 
 This project provides simple games for speech therapy:
+version 1: 
+added new games:
+- Sentence: order words of a sentence correctly
+- Name It: drag labels to pictures
+- Swap (replacing Sequence): swap letters in 2 words to form correct words
+- Category: sort pictures into categories
+- Riddle: solve word problems
+
+version 0:
 - Pictures: click one of multiple pictures given word
 - Colors: identify 2 attributes: content + color 
 - Premem: find similar pictures
@@ -13,34 +22,13 @@ This project provides simple games for speech therapy:
 - Elim: eliminate pictures / set comprehension
 - Anagram: reorder letters to form a word
 
-[There is also a calibration test CALIBRATE for the user to set all the games to the right level ] =>disabled for refactoring
-
 run it online:
-goto: https://isawzz.github.io/speech-games-client/SPGAME/
-
-
-# implementation
-
-It is entirely implemented in client-side javascript and only accesses a minimal json-server (see https://github.com/isawzz/speech-games-server) to store user data.
-
-run it locally (dev):
-easiest way to run this locally if you have vs code installed:
-1. clone the repos in a directory
-
-2. open directory in vs code
-
-3. if you do not have Live Server extension, install it in vs code extensions tab
-
-4. press GoLive
-
-5. ===> start in SPGAME directory 
-
-S/settings contains a settings file settings.yaml that can be adapted to use the implemented games with different parameters. right now, just file editing in program (computer icon) works! (gear icon NOT IMPLEMENTED!)
+goto: https://isawzz.github.io/speech-games-client/version1/ZAA/
+goto: https://isawzz.github.io/speech-games-client/version0/SPGAME/
 
 Note: HAS ONLY BEEN TESTED ON *** GOOGLE CHROME ***
 
 trouble-shooting: 
 - use F12 in Chrome to see error messages
-- if you get ERR_CONNECTION_REFUSED, look at the file SIM/globals.js and set OFFLINE=false if you do not run the speech-games-server locally (it will start server on heroku)
 
 => please send bugs or questions to a_leeb@yahoo.com

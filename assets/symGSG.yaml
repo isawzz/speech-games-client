@@ -1,0 +1,1124 @@
+Activities:
+  arts & crafts:
+    - artist palette
+    - framed picture
+    - knot
+    - performing arts
+    - sewing needle
+    - thread
+    - yarn
+  award-medal:
+    - medal
+    - military medal
+    - trophy
+  event:
+    - balloon
+    - confetti ball
+    - firecracker
+    - fireworks
+    - jack-o-lantern
+    - party popper
+    - ribbon
+    - sparkler
+    - sparkles
+    - ticket
+    - wrapped gift
+  game:
+    - chess pawn
+    - club suit
+    - crystal ball
+    - diamond suit
+    - direct hit
+    - game die
+    - heart suit
+    - joker
+    - joystick
+    - kite
+    - magic wand
+    - mahjong red dragon
+    - nesting dolls
+    - piñata
+    - pool 8 ball
+    - puzzle piece
+    - slot machine
+    - spade suit
+    - teddy bear
+    - video game
+    - yo-yo
+  sport:
+    - american football
+    - badminton
+    - baseball
+    - basketball
+    - bowling
+    - boxing glove
+    - cricket game
+    - curling stone
+    - diving mask
+    - field hockey
+    - fishing pole
+    - flag in hole
+    - flying disc
+    - goal net
+    - ice hockey
+    - ice skate
+    - lacrosse
+    - martial arts uniform
+    - ping pong
+    - rugby football
+    - skis
+    - sled
+    - soccer ball
+    - softball
+    - tennis
+    - volleyball
+Animals & Nature:
+  animal-amphibian:
+    - frog
+  animal-bird:
+    - baby chick
+    - bird
+    - chicken
+    - dodo
+    - dove
+    - duck
+    - eagle
+    - feather
+    - flamingo
+    - front-facing baby chick
+    - hatching chick
+    - owl
+    - parrot
+    - peacock
+    - penguin
+    - rooster
+    - swan
+    - turkey
+  animal-bug:
+    - ant
+    - bee
+    - beetle
+    - bug
+    - butterfly
+    - cockroach
+    - cricket
+    - fly
+    - ladybug
+    - microbe
+    - mosquito
+    - scorpion
+    - snail
+    - spider
+    - spider web
+    - worm
+  animal-mammal:
+    - badger
+    - bat
+    - bear
+    - beaver
+    - bison
+    - buffalo
+    - camel
+    - cat
+    - chipmunk
+    - cow
+    - deer
+    - dog
+    - elephant
+    - giraffe
+    - goat
+    - gorilla
+    - hamster
+    - hedgehog
+    - hippopotamus
+    - horse
+    - kangaroo
+    - leopard
+    - llama
+    - mammoth
+    - monkey
+    - mouse
+    - orangutan
+    - otter
+    - ox
+    - panda
+    - paws
+    - pig
+    - poodle
+    - rabbit
+    - ram
+    - rat
+    - rhinoceros
+    - sheep
+    - skunk
+    - sloth
+    - tiger
+  animal-marine:
+    - blowfish
+    - dolphin
+    - fish
+    - octopus
+    - seal
+    - shark
+    - spiral shell
+    - spouting whale
+    - tropical fish
+    - whale
+  animal-reptile:
+    - crocodile
+    - dragon
+    - dragon face
+    - lizard
+    - sauropod
+    - snake
+    - turtle
+  plant-flower:
+    - blossom
+    - bouquet
+    - cherry blossom
+    - hibiscus
+    - rose
+    - rosette
+    - sunflower
+    - tulip
+    - white flower
+    - wilted flower
+  plant-other:
+    - cactus
+    - deciduous tree
+    - evergreen tree
+    - four leaf clover
+    - herb
+    - leaf fluttering in wind
+    - maple leaf
+    - palm tree
+    - potted plant
+    - seedling
+    - shamrock
+    - sheaf of rice
+Food & Drink:
+  dishware:
+    - amphora
+    - chopsticks
+    - fork and knife
+    - fork and knife with plate
+    - kitchen knife
+    - spoon
+  drink:
+    - baby bottle
+    - beer mug
+    - bottle with popping cork
+    - bubble tea
+    - clinking beer mugs
+    - clinking glasses
+    - cocktail glass
+    - cup with straw
+    - glass of milk
+    - hot beverage
+    - ice
+    - teacup without handle
+    - teapot
+    - tropical drink
+    - wine glass
+  food-asian:
+    - cooked rice
+    - curry rice
+    - fortune cookie
+    - rice cracker
+    - roasted sweet potato
+    - spaghetti
+    - steaming bowl
+    - sushi
+  food-fruit:
+    - banana
+    - blueberries
+    - cherries
+    - coconut
+    - grapes
+    - green apple
+    - kiwi fruit
+    - lemon
+    - mango
+    - melon
+    - olive
+    - peach
+    - pear
+    - pineapple
+    - red apple
+    - strawberry
+    - tangerine
+    - tomato
+    - watermelon
+  food-marine:
+    - crab
+    - lobster
+    - oyster
+    - shrimp
+    - squid
+  food-prepared:
+    - bacon
+    - bagel
+    - baguette bread
+    - bowl with spoon
+    - bread
+    - burrito
+    - butter
+    - canned food
+    - cheese wedge
+    - cooking
+    - croissant
+    - cut of meat
+    - egg
+    - falafel
+    - flatbread
+    - fondue
+    - green salad
+    - hamburger
+    - hotdog
+    - meat on bone
+    - pancakes
+    - pizza
+    - popcorn
+    - pot of food
+    - poultry leg
+    - pretzel
+    - salt
+    - sandwich
+    - shallow pan of food
+    - stuffed flatbread
+    - taco
+    - tamale
+    - waffle
+  food-sweet:
+    - birthday cake
+    - candy
+    - chocolate bar
+    - cookie
+    - cupcake
+    - custard
+    - doughnut
+    - honey pot
+    - ice cream
+    - lollipop
+    - pie
+    - shaved ice
+    - shortcake
+    - soft ice cream
+  food-vegetable:
+    - avocado
+    - bell pepper
+    - broccoli
+    - carrot
+    - chestnut
+    - cucumber
+    - ear of corn
+    - eggplant
+    - garlic
+    - hot pepper
+    - mushroom
+    - onion
+    - peanuts
+    - potato
+Objects:
+  book-paper:
+    - blue book
+    - bookmark
+    - bookmark tabs
+    - books
+    - closed book
+    - green book
+    - label
+    - ledger
+    - newspaper
+    - notebook
+    - notebook with decorative cover
+    - open book
+    - orange book
+    - page facing up
+    - page with curl
+    - rolled-up newspaper
+    - scroll
+  clothing:
+    - backpack
+    - ballet shoes
+    - bikini
+    - billed cap
+    - briefs
+    - clutch bag
+    - coat
+    - crown
+    - dress
+    - flat shoe
+    - gem stone
+    - glasses
+    - gloves
+    - goggles
+    - graduation cap
+    - handbag
+    - high-heeled shoe
+    - hiking boot
+    - jeans
+    - kimono
+    - lab coat
+    - lipstick
+    - man’s shoe
+    - military helmet
+    - necktie
+    - one-piece swimsuit
+    - prayer beads
+    - purse
+    - rescue worker’s helmet
+    - ring
+    - running shirt
+    - running shoe
+    - safety vest
+    - sari
+    - scarf
+    - shopping bags
+    - shorts
+    - socks
+    - sunglasses
+    - t-shirt
+    - thong sandal
+    - top hat
+    - woman’s boot
+    - woman’s clothes
+    - woman’s hat
+    - woman’s sandal
+  computer:
+    - abacus
+    - battery
+    - computer mouse
+    - desktop computer
+    - dvd
+    - electric plug
+    - floppy disk
+    - keyboard
+    - laptop
+    - optical disk
+    - printer
+    - trackball
+  household:
+    - basket
+    - bathtub
+    - bed
+    - broom
+    - bucket
+    - chair
+    - couch and lamp
+    - door
+    - elevator
+    - fire extinguisher
+    - lotion bottle
+    - mirror
+    - mouse trap
+    - plunger
+    - razor
+    - roll of paper
+    - safety pin
+    - shopping cart
+    - shower
+    - soap
+    - sponge
+    - toilet
+    - toothbrush
+    - window
+  light & video:
+    - camera
+    - camera with flash
+    - candle
+    - clapper board
+    - diya lamp
+    - film frames
+    - film projector
+    - flashlight
+    - light bulb
+    - magnifying glass tilted left
+    - magnifying glass tilted right
+    - movie camera
+    - red paper lantern
+    - television
+    - video camera
+    - videocassette
+  lock:
+    - key
+    - locked
+    - locked with key
+    - locked with pen
+    - old key
+    - unlocked
+  mail:
+    - ballot box with ballot
+    - envelope
+    - envelope with arrow
+    - inbox tray
+    - incoming envelope
+    - outbox tray
+    - package
+    - postbox
+  medical:
+    - adhesive bandage
+    - drop of blood
+    - pill
+    - stethoscope
+    - syringe
+  money:
+    - chart increasing with yen
+    - coin
+    - credit card
+    - dollar banknote
+    - euro banknote
+    - money bag
+    - pound banknote
+    - receipt
+    - yen banknote
+  music:
+    - headphone
+    - level slider
+    - microphone
+    - musical note
+    - musical notes
+    - musical score
+    - radio
+    - studio microphone
+  musical-instrument:
+    - accordion
+    - banjo
+    - drum
+    - guitar
+    - long drum
+    - musical keyboard
+    - saxophone
+    - trumpet
+    - violin
+  office:
+    - bar chart
+    - briefcase
+    - calendar
+    - card file box
+    - card index
+    - card index dividers
+    - chart decreasing
+    - chart increasing
+    - clipboard
+    - file cabinet
+    - file folder
+    - linked paperclips
+    - open file folder
+    - paperclip
+    - pushpin
+    - round pushpin
+    - scissors
+    - spiral calendar
+    - spiral notepad
+    - straight ruler
+    - tear-off calendar
+    - triangular ruler
+    - wastebasket
+  other-object:
+    - cigarette
+    - coffin
+    - funeral urn
+    - headstone
+    - moai
+    - placard
+  phone:
+    - fax machine
+    - mobile phone
+    - pager
+    - telephone
+    - telephone receiver
+  science:
+    - dna
+    - microscope
+    - petri dish
+    - satellite antenna
+    - telescope
+    - test tube
+  sound:
+    - bell
+    - loudspeaker
+    - megaphone
+    - muted speaker
+    - postal horn
+    - speaker high volume
+    - speaker low volume
+    - speaker medium volume
+  tool:
+    - axe
+    - balance scale
+    - boomerang
+    - bow and arrow
+    - carpentry saw
+    - chains
+    - clamp
+    - crossed swords
+    - dagger
+    - gear
+    - hammer
+    - hammer and pick
+    - hammer and wrench
+    - hook
+    - ladder
+    - link
+    - magnet
+    - nut and bolt
+    - pick
+    - pistol
+    - screwdriver
+    - shield
+    - toolbox
+    - white cane
+    - wrench
+  writing:
+    - black nib
+    - crayon
+    - fountain pen
+    - memo
+    - paintbrush
+    - pen
+    - pencil
+People & Body:
+  body-parts:
+    - bone
+    - brain
+    - ear
+    - ear with hearing aid
+    - eye
+    - flexed biceps
+    - foot
+    - leg
+    - lungs
+    - mechanical arm
+    - mechanical leg
+    - mouth
+    - nose
+    - tongue
+    - tooth
+  family:
+    - couple with heart
+    - family
+    - family of 4
+    - kiss
+    - men holding hands
+    - people holding hands
+    - woman and man holding hands
+  hand-fingers-closed:
+    - left-facing fist
+    - oncoming fist
+    - raised fist
+    - right-facing fist
+    - thumbs down
+    - thumbs up
+  hand-fingers-open:
+    - hand with fingers splayed
+    - raised back of hand
+    - raised hand
+    - vulcan salute
+    - waving hand
+  hand-fingers-partial:
+    - call me hand
+    - crossed fingers
+    - love-you gesture
+    - pinched fingers
+    - pinching hand
+    - sign of the horns
+    - victory hand
+  hand-prop:
+    - nail polish
+    - selfie
+    - writing hand
+  hand-single-finger:
+    - backhand index pointing down
+    - backhand index pointing left
+    - backhand index pointing right
+    - backhand index pointing up
+    - index pointing up
+    - middle finger
+  hands:
+    - clapping hands
+    - folded hands
+    - handshake
+    - namaste
+    - open hands
+    - raising hands
+  job:
+    - construction worker
+    - detective
+    - guard
+    - man astronaut
+    - man farmer
+    - man firefighter
+    - man judge
+    - man mechanic
+    - man office worker
+    - man pilot
+    - man technologist
+    - police officer
+    - woman artist
+    - woman cook
+    - woman factory worker
+    - woman health worker
+    - woman scientist
+    - woman singer
+    - woman student
+    - woman teacher
+  job-other:
+    - man artist
+    - man cook
+    - man factory worker
+    - man health worker
+    - man scientist
+    - man singer
+    - man student
+    - man teacher
+    - woman farmer
+    - woman judge
+    - woman mechanic
+    - woman office worker
+    - woman pilot
+    - woman technologist
+  person:
+    - baby
+    - boy
+    - child
+    - girl
+    - man
+    - 'man: bald'
+    - 'man: beard'
+    - 'man: blond hair'
+    - 'man: curly hair'
+    - 'man: red hair'
+    - 'man: white hair'
+    - person
+    - 'person: blond hair'
+    - woman
+  person-activity:
+    - climbing
+    - haircut
+    - kneeling
+    - levitating
+    - man blind
+    - man dancing
+    - man in manual wheelchair
+    - man in motorized wheelchair
+    - man kneeling
+    - man running
+    - man standing
+    - man walking
+    - massage
+    - running
+    - standing
+    - steamy room
+    - walking
+    - woman blind
+    - woman dancing
+    - woman in manual wheelchair
+    - woman in motorized wheelchair
+    - woman kneeling
+    - woman running
+    - woman standing
+    - woman walking
+  person-fantasy:
+    - baby angel
+    - fairy
+    - genie
+    - man fairy
+    - mermaid
+    - superhero
+    - supervillain
+    - vampire
+    - with
+    - wizard
+    - woman fairy
+  person-gesture:
+    - person bowing
+    - person frowning
+    - person gesturing no
+    - person pouting
+    - person raising hand
+    - person shrugging
+  person-resting:
+    - lotus position
+    - resting
+    - taking bath
+  person-role:
+    - breast-feeding
+    - construction worker
+    - detective
+    - guard
+    - man artist
+    - man astronaut
+    - man cook
+    - man factory worker
+    - man farmer
+    - man firefighter
+    - man health worker
+    - man judge
+    - man mechanic
+    - man office worker
+    - man pilot
+    - man scientist
+    - man singer
+    - man student
+    - man teacher
+    - man technologist
+    - ninja
+    - person in tuxedo
+    - person wearing turban
+    - person with skullcap
+    - person with veil
+    - police officer
+    - pregnant woman
+    - prince
+    - princess
+    - woman artist
+    - woman cook
+    - woman factory worker
+    - woman farmer
+    - woman health worker
+    - woman judge
+    - woman mechanic
+    - woman office worker
+    - woman pilot
+    - woman scientist
+    - woman singer
+    - woman student
+    - woman teacher
+    - woman technologist
+    - woman with headscarf
+  person-sport:
+    - biking
+    - bouncing ball
+    - cartwheeling
+    - fencing
+    - handball
+    - horse racing
+    - juggling
+    - lifting weights
+    - man golfing
+    - man surfing
+    - mountain biking
+    - person golfing
+    - rowing boat
+    - skier
+    - snowboarder
+    - surfing
+    - swimming
+    - water polo
+    - woman golfing
+    - woman surfing
+    - wrestling
+  person-symbol:
+    - footprints
+    - speaking head
+  role:
+    - breast-feeding
+    - ninja
+    - person in tuxedo
+    - person wearing turban
+    - person with skullcap
+    - person with veil
+    - pregnant woman
+    - prince
+    - princess
+    - woman with headscarf
+Smileys & Emotion:
+  cat-face:
+    - smiling cat with heart-eyes
+    - weary cat
+  emotion:
+    - black heart
+    - blue heart
+    - bomb
+    - broken heart
+    - brown heart
+    - collision
+    - dizzy
+    - green heart
+    - heart with arrow
+    - heart with ribbon
+    - hole
+    - kiss mark
+    - left speech bubble
+    - love letter
+    - orange heart
+    - purple heart
+    - red heart
+    - revolving hearts
+    - right anger bubble
+    - sparkling heart
+    - speech balloon
+    - sweat droplets
+    - thought balloon
+    - two hearts
+    - white heart
+    - yellow heart
+    - zzz
+  face-affection:
+    - face blowing a kiss
+    - kissing face with smiling eyes
+    - smiling face with heart-eyes
+    - smiling face with hearts
+    - smiling face with tear
+    - star-struck
+  face-concerned:
+    - anxious face with sweat
+    - astonished face
+    - confounded face
+    - confused face
+    - crying face
+    - disappointed face
+    - downcast face with sweat
+    - face with open mouth
+    - frowning face
+    - hushed face
+    - loudly crying face
+    - persevering face
+    - sad but relieved face
+    - slightly frowning face
+    - tired face
+    - weary face
+    - worried face
+    - yawning face
+  face-costume:
+    - alien
+    - clown face
+    - ghost
+    - ogre
+    - pile of poo
+    - robot
+  face-glasses:
+    - face with monocle
+    - nerd face
+    - smiling face with sunglasses
+  face-hand:
+    - face with hand over mouth
+    - shushing face
+    - thinking face
+  face-hat:
+    - cowboy hat face
+    - disguised face
+    - partying face
+  face-negative:
+    - face with symbols on mouth
+    - pouting face
+    - skull
+    - skull and crossbones
+    - smiling face with horns
+  face-neutral-skeptical:
+    - expressionless face
+    - face with raised eyebrow
+    - face with rolling eyes
+    - grimacing face
+    - lying face
+    - neutral face
+    - unamused face
+    - zipper-mouth face
+  face-sleepy:
+    - drooling face
+    - pensive face
+    - relieved face
+    - sleeping face
+    - sleepy face
+  face-smiling:
+    - beaming face with smiling eyes
+    - face with tears of joy
+    - grinning face
+    - grinning face with smiling eyes
+    - rolling on the floor laughing
+    - slightly smiling face
+    - smiling face with halo
+    - smiling face with smiling eyes
+    - upside-down face
+    - winking face
+  face-tongue:
+    - face with tongue
+    - money-mouth face
+    - squinting face with tongue
+    - winking face with tongue
+    - zany face
+  face-unwell:
+    - cold face
+    - dizzy face
+    - face vomiting
+    - face with head-bandage
+    - face with medical mask
+    - face with thermometer
+    - hot face
+    - nauseated face
+    - sneezing face
+  monkey-face:
+    - see-no-evil monkey
+    - speak-no-evil monkey
+Symbols:
+  gender:
+    - transgender symbol
+Travel & Places:
+  hotel:
+    - bellhop bell
+    - luggage
+  place-building:
+    - brick
+    - castle
+    - classical building
+    - construction site
+    - department store
+    - derelict house
+    - factory
+    - house
+    - house with garden
+    - houses
+    - hut
+    - office building
+    - rock
+    - school
+    - stadium
+    - wood
+  place-geographic:
+    - beach with umbrella
+    - camping
+    - desert
+    - desert island
+    - mountain
+    - snow-capped mountain
+    - volcano
+  place-map:
+    - compass
+    - globe showing americas
+    - globe showing asia-australia
+    - globe showing europe-africa
+    - map of japan
+    - world map
+  place-other:
+    - bridge at night
+    - carousel horse
+    - circus tent
+    - cityscape
+    - cityscape at dusk
+    - ferris wheel
+    - fountain
+    - roller coaster
+    - tent
+  place-religious:
+    - church
+    - hindu temple
+    - mosque
+    - shinto shrine
+    - synagogue
+  sky & weather:
+    - closed umbrella
+    - cloud
+    - cloud with lightning
+    - cloud with lightning and rain
+    - cloud with rain
+    - cloud with snow
+    - comet
+    - crescent moon
+    - droplet
+    - fire
+    - first quarter moon
+    - first quarter moon face
+    - fog
+    - full moon
+    - glowing star
+    - high voltage
+    - last quarter moon face
+    - milky way
+    - rainbow
+    - ringed planet
+    - shooting star
+    - snowflake
+    - snowman
+    - snowman without snow
+    - star
+    - sun
+    - sun behind cloud
+    - sun behind large cloud
+    - sun behind rain cloud
+    - sun behind small cloud
+    - sun with face
+    - thermometer
+    - tornado
+    - umbrella
+    - umbrella on ground
+    - umbrella with rain drops
+    - waning crescent moon
+    - waning gibbous moon
+    - water wave
+    - waxing crescent moon
+    - waxing gibbous moon
+    - wind face
+  time:
+    - alarm clock
+    - hourglass done
+    - hourglass not done
+    - mantelpiece clock
+    - stopwatch
+    - timer clock
+    - watch
+  transport-air:
+    - aerial tramway
+    - airplane
+    - airplane arrival
+    - airplane departure
+    - flying saucer
+    - helicopter
+    - mountain cableway
+    - parachute
+    - rocket
+    - satellite
+    - seat
+    - small airplane
+    - suspension railway
+  transport-ground:
+    - ambulance
+    - articulated lorry
+    - automobile
+    - barrier
+    - bicycle
+    - bus
+    - bus stop
+    - delivery truck
+    - fire engine
+    - fuel pump
+    - high-speed train
+    - kick scooter
+    - light rail
+    - locomotive
+    - manual wheelchair
+    - metro
+    - minibus
+    - monorail
+    - motor scooter
+    - motorcycle
+    - motorized wheelchair
+    - motorway
+    - oil drum
+    - oncoming automobile
+    - pickup truck
+    - police car
+    - racing car
+    - railway car
+    - railway track
+    - rickshaw
+    - roller skate
+    - skateboard
+    - station
+    - stop sign
+    - taxi
+    - tractor
+    - train
+    - tram
+    - tram car
+    - trolleybus
+    - vertical traffic light
+  transport-water:
+    - anchor
+    - canoe
+    - ferry
+    - motor boat
+    - passenger ship
+    - sailboat
+    - ship
+    - speedboat

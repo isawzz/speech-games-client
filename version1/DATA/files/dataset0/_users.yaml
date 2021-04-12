@@ -1,0 +1,56 @@
+amanda:
+  id: felix
+  avGames: [gKrieg, gAristo]
+  lastGame: gKrieg
+  settings:
+    color: blue
+  games:
+  tables:
+felix:
+  id: felix
+  avGames: [gKrieg, gAristo]
+  lastGame: gKrieg
+  settings:
+    color: red
+  games:
+  tables:
+lauren:
+  id: lauren
+  avGames: [gKrieg, gAristo]
+  lastGame: gKrieg
+  settings:
+    color: pink
+  games:
+  tables:
+gul:
+  id: gul
+  avGames: [gKrieg, gAristo]
+  lastGame: gKrieg
+  settings:
+    color: orange
+  games:
+  tables:
+nil:
+  id: nil
+  avGames: [gKrieg, gAristo]
+  avSpeechGames: [gNamit, gMissingLetter, gTouchPic, gPremem, gTouchColors, gSteps, gSayPic, gMem, gMissingNumber, gWritePic, gAnagram, gElim, gAbacus]
+  avAddons: [aPasscode, aAddress, aPassword]
+  lastGame: gKrieg
+  settings:
+    color: green
+  games:
+  tables:
+guest0:
+  id: guest
+  avGames: [gKrieg, gAristo]
+  settings:
+    color: random
+  games:
+  tables:
+test0:
+  id: test
+  avGames: [gKrieg, gAristo]
+  settings:
+    color: random
+  games:
+  tables:

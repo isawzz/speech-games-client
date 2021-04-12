@@ -1,0 +1,390 @@
+gTouchPic:
+  friendly: 'Pictures!'
+  logo: 'computer mouse'
+  color: deepskyblue
+  levels:
+    0: 
+      numPics: 2
+    1: 
+      numPics: 4
+    2: 
+      numPics: 9
+    3: 
+      numPics: 15
+    4: 
+      numPics: 24
+    5: 
+      numPics: 35
+gMissingLetter:
+  friendly: 'Letters!'
+  logo: 'black nib'
+  color: gold
+  levels:
+    0:
+      numMissing: 1
+      posMissing: start
+    1:
+      numMissing: 2
+      posMissing: start
+    2:
+      numMissing: 1
+      posMissing: random
+    3:
+      numMissing: 2
+      posMissing: random
+    4:
+      numMissing: 3
+      posMissing: random
+    5:
+      numMissing: 5
+      posMissing: random
+gMissingNumber:
+  friendly: 'Sequence!'
+  logo: 'fleur-de-lis'
+  color: deeppink
+  numMissing: 1
+  minNum: 0
+  maxNum: 99
+  steps: 1
+  posMissing: end
+  ops: [plus]
+  seqLen: 5
+  levels:
+    0:
+      maxNum: 10
+    1:
+      maxNum: 10
+      ops: [minus]
+    2:
+      maxNum: 10
+      ops: [plus,minus]
+    3:
+      maxNum: 25
+      ops: [plus,minus]
+    4:
+      maxNum: 50
+      steps: [1,2,3]
+      ops: [plus]
+    5:
+      maxNum: 50
+      steps: [1,2]
+      ops: [plus,minus]
+    6:
+      posMissing: notStart
+      maxNum: 99
+      steps: [1,2]
+      ops: [plus,minus]
+    7:
+      posMissing: notStart
+      maxNum: 99
+      steps: [1,2,3,4,5]
+      ops: [plus,minus]
+    8:
+      posMissing: notStart
+      maxNum: 99
+      steps: [3,4,5,6,7,8,9,10]
+      ops: [plus,minus]
+gSteps:
+  friendly: 'Steps!'
+  logo: 'stairs'
+  color: PURPLE
+  contrast: 0.22
+  colors: [blue1, violet, lightgreen, pink, red, yellow]
+  levels:
+    0: 
+      numPics: 2
+      numColors: 1
+      numRepeat: 1
+      numSteps: 2
+    1: 
+      numPics: 3
+      numColors: 1
+      numRepeat: 1
+      numSteps: 3
+    2: 
+      numPics: 4
+      numColors: 1
+      numRepeat: 1
+      numSteps: 2
+    3: 
+      numPics: 2
+      numColors: 2
+      numRepeat: 1
+      numSteps: 2
+    4: 
+      numPics: 2
+      numColors: 1
+      numRepeat: 2
+      numSteps: 2
+    5: 
+      numPics: 9
+      numColors: 1
+      numRepeat: 1
+      numSteps: 2
+    6: 
+      numPics: 2
+      numColors: 4
+      numRepeat: 2
+      numSteps: 2
+    7: 
+      numPics: 2
+      numColors: 4
+      numRepeat: 3
+      numSteps: 3
+gSet:
+  friendly: 'Set!'
+  logo: 'stairs'
+  color: PURPLE
+  contrast: 0.22
+  colors: [blue, violet, lightgreen, pink, red, yellow]
+  levels:
+    0: 
+      numPics: 3
+      numColors: 4
+      numRepeat: 2
+      numSteps: 2
+    1: 
+      numPics: 4
+      numColors: 1
+      numRepeat: 4
+      numSteps: 2
+    2: 
+      numPics: 2
+      numColors: 4
+      numRepeat: 3
+      numSteps: 2
+gElim:
+  friendly: 'Elim!'
+  logo: 'collision'
+  color: CRIMSON
+  contrast: 0.22
+  colors: [blue, violet, lightgreen, pink, red, yellow]
+  levels:
+    0: 
+      numPics: 3
+      numColors: 3
+      numRepeat: 1
+    1: 
+      numPics: 3
+      numColors: 1
+      numRepeat: 3
+    2: 
+      numPics: 2
+      numColors: 2
+      numRepeat: 2
+    3: 
+      numPics: 3
+      numColors: 4
+      numRepeat: 2
+    4: 
+      numPics: 3
+      numColors: 4
+      numRepeat: 3
+gTouchColors:
+  friendly: 'Colors!'
+  logo: 'artist palette'
+  color: LIGHTGREEN
+  contrast: 0.32
+  colors:
+    - red
+    - blue
+    - yellow
+    - green
+  levels:
+    0: 
+      numPics: 2
+      numColors: 2
+    1: 
+      numPics: 3
+      numColors: 3
+    2: 
+      numPics: 4
+      numColors: 3
+    3: 
+      numPics: 4
+      numColors: 4
+    4: 
+      numPics: 5
+      numColors: 4
+gPremem:
+  friendly: 'Premem!'
+  logo: 'hammer and wrench'
+  color: RED
+  trials: 1
+  sameBackground: true
+  levels:
+    0: 
+      numPics: 2
+      numRepeat: 2
+    1: 
+      numPics: 3
+      numRepeat: 3
+    2: 
+      numPics: 6
+      numRepeat: 2
+    3: 
+      numPics: 8
+      numRepeat: 2
+    4: 
+      numPics: 12
+      numRepeat: 2
+    5: 
+      numPics: 15
+      numRepeat: 2
+    6: 
+      numPics: 12
+      numRepeat: 2
+      sameBackground: false
+    7: 
+      numPics: 15
+      numRepeat: 2
+      sameBackground: false
+gMem:
+  friendly: 'Memory!'
+  logo: 'memory'
+  color: GREEN
+  levels:
+    0: 
+      numPics: 2
+      numRepeat: 1
+    1: 
+      numPics: 4
+      numRepeat: 1
+    2: 
+      numPics: 9
+      numRepeat: 1
+    3: 
+      numPics: 2
+      numRepeat: 1
+    4: 
+      numPics: 4
+      numRepeat: 1
+    5: 
+      numPics: 4
+      numRepeat: 1
+    6: 
+      numPics: 6
+      numRepeat: 1
+gSayPic:
+  friendly: 'Speak up!'
+  logo: 'microphone'
+  color: BLUE
+gInno:
+  friendly: 'Innovate!'
+  logo: 'horse'
+  color: silver
+  levels:
+    0:
+      maxWordLength: 3
+    1:
+      maxWordLength: 4
+    2:
+      maxWordLength: 5
+    3:
+      maxWordLength: 6
+    4:
+      maxWordLength: 7
+    5:
+      maxWordLength: 8
+gWritePic:
+  friendly: 'Type it!'
+  logo: 'keyboard'
+  color: orange
+  levels:
+    0: 
+      maxWordLength: 4
+    1: 
+      maxWordLength: 6
+    2: 
+      maxWordLength: 8
+    3: 
+      maxWordLength: 100
+gAnagram:
+  friendly: 'Anagram!'
+  logo: 'ram'
+  color: rgb(0,152,105)
+  levels:
+    0:
+      maxWordLength: 3
+    1:
+      maxWordLength: 4
+    2:
+      maxWordLength: 5
+    3:
+      maxWordLength: 6
+    4:
+      maxWordLength: 7
+    5:
+      maxWordLength: 8
+gAbacus:
+  friendly: 'Abacus'
+  logo: 'abacus'
+  color: mediumslateblue
+  numMissing: 1
+  minNum: 0
+  maxNum: 10
+  minFactor: 2
+  maxFactor: 3
+  posMissing: end
+  ops: [plus,minus,mult]
+  levels:
+    0:
+      ops: [plus,minus,mult]
+    1:
+      maxNum: 10
+      maxFactor: 4
+      ops: [mult]
+    2:
+      maxNum: 9
+      maxFactor: 9
+      ops: [mult]
+    3:
+      maxNum: 99
+      maxFactor: 10
+      ops: [plus,minus]
+    4:
+      minNum: 8
+      maxNum: 25
+      ops: [plus,minus,mult]
+    5:
+      maxNum: 12
+      maxFactor: 12
+      ops: [mult]
+gPasscode:
+  friendly: 'Passcode!'
+  logo: 'lock'
+  color: indigo
+  levels:
+    0: 
+      passcodeLength: 1
+      numPics: 4
+    1: 
+      passcodeLength: 1
+      numPics: 9
+    2: 
+      passcodeLength: 1
+      numPics: 15
+    3: 
+      passcodeLength: 2
+      numPics: 4
+    4: 
+      passcodeLength: 2
+      numPics: 9
+    5: 
+      passcodeLength: 2
+      numPics: 15
+gNamit:
+  friendly: 'Name it!'
+  logo: 'bee'
+  color: rgb(152,0,105)
+  levels:
+    0: 
+      numPics: 2
+    1: 
+      numPics: 3
+    2: 
+      numPics: 4
+    3: 
+      numPics: 5
+    4: 
+      numPics: 6

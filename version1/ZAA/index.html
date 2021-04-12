@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Zar Nikolas</title>
+
+		<link rel="icon" type="image/svg+xml" href="../../assets/svg/favicon.svg" />
+		<script src="../../alibs/numbers.js"></script>
+		<script src="../../alibs/math.js"></script>
+		<script src="../../alibs/jsyaml.js"></script>
+
+		<link rel="stylesheet" href="../../assets/fonts/fonts.css" />
+		<link rel="stylesheet" href="../ZAA/css/helpers.css">
+		<link rel="stylesheet" href="../ZAA/css/test.css">
+		<link rel="stylesheet" href="../ZAA/css/settings.css">
+
+		<script src="../ZAA/_globals.js"></script>
+
+		<script src="../ZAA/base.js"></script>
+
+		<script src="../ZAA/features/audio.js"></script>
+		<script src="../ZAA/features/badges.js"></script>
+		<script src="../ZAA/features/markers.js"></script>
+		<script src="../ZAA/features/menu.js"></script>
+		<script src="../ZAA/features/settings.js"></script>
+		<script src="../ZAA/features/speech.js"></script>
+		<script src="../ZAA/features/time.js"></script>
+
+		<script src="../ZAA/layoutHelpers.js"></script>
+		<script src="../ZAA/page.js"></script>
+
+		<script src="../ZAA/classes.js"></script>
+		<script src="../ZAA/controller.js"></script>
+		<script src="../ZAA/game.js"></script>
+		<script src="../ZAA/item.js"></script>
+		<script src="../ZAA/keys.js"></script>
+		<script src="../ZAA/letter.js"></script>
+		<script src="../ZAA/load.js"></script>
+		<script src="../ZAA/math.js"></script>
+		<script src="../ZAA/onClick.js"></script>
+		<script src="../ZAA/scoring.js"></script>
+		<script src="../ZAA/ui.js"></script>
+		<script src="../ZAA/user.js"></script>
+
+		<script src="../ZAA/_legacy.js"></script>
+		<script src="../ZAA/_work.js"></script>
+
+		<script src="../ZAA/_start.js"></script>
+	</head>
+
+	<body>
+
+		<div id='md'>
+			<div id='sidebar'></div>
+			<div id='rightSide'>
+				<div id='table' class='flexWrap'></div>
+			</div>
+		</div>
+	
+		<div id='divControls' style='display:none'>
+			<div id='bNext' onclick='onClickNextButton()'>Next</div>
+			<div id='bRunStop' onclick='onClickRunStopButton(this)'>Run</div>
+		</div>
+		<div id='dLevelComplete' style='display:none' class='centered'>LEVEL COMPLETE!!!</div>
+	
+		<div id='dAux' style='display:none;text-align:center'></div>
+	
+		<div id='dButtons'>
+			<div id='dGo' onclick='onClickGo()' style='display:none;'>PLAY!</div>
+			<div id='dComputer' onclick='onClickComputer()' style='display:none;'>🖥️</div>
+			<div id='dCalibrate' onclick='onClickCalibrate()' style='display:none;'>⚖️</div>
+			<div id='dGear' onclick='onClickGear()'>⚙️</div>
+			<div id='dTemple' onclick='onClickTemple()'>🏛️</div>
+			<button id='dummy' style='width:0px;padding:0;margin:0;border:none;outline:none;background-color:transparent;color:transparent'>dummy
+		</div>
+	
+		<div id='freezer' onclick="onClickFreezer()" style='display:none'>
+			<div class='centerCentered'>Click to Start!</div>
+		</div>
+		<div id='dAddons' style='display:none'></div>
+		<div id='freezer2' onclick="onClickFreezer2(event)" style='display:none'>
+			<div class='centerCentered' style='margin-top:-5%;'>
+				<p id='dCommentFreezer2'>Great Job!</p>
+				<p id='dMessageFreezer2' style='font-size:56px'>Time for a Break...</p>
+				<div id='dContentFreezer2'></div>
+			</div>
+		</div>
+		<div id='dPopup' style='text-align:center;position:fixed;left:0;top:0;width:100vw;height:100vh;background:white;display:none'></div>
+	
+		<!-- <div id="google_translate_element"></div>
+		<script type="text/javascript">
+			function googleTranslateElementInit() {
+				new google.translate.TranslateElement(
+					{pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.HORIZONTAL, multilanguagePage: true},
+					'google_translate_element'
+				);
+			}
+		</script>
+		<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script> -->
+		</body>
+</html>

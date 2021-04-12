@@ -1,0 +1,31 @@
+aPasscode:
+  friendly: 'Passcode'
+  logo: 'key'
+  color: indigo
+  numPics: 4
+  tNext: 2000
+  tFactor: 2
+  immediateStart: true
+  endsWhen:
+    prop: tNext
+    value: 60000000 #1 day interval (1000 minutes)
+aAddress:
+  friendly: 'Address'
+  logo: 'home'
+  color: orange
+  tNext: 2000 #1 minute
+  tFactor: 3
+  immediateStart: true
+  endsWhen:
+    prop: trialsNeeded
+    value: 0
+aPassword:
+  friendly: 'Password'
+  logo: 'old key'
+  color: gold
+  tNext: 3000 #1 minute
+  tFactor: 2
+  immediateStart: true
+  endsWhen:
+    prop: tNext
+    value: 60000000 #1 day interval (1000 minutes)

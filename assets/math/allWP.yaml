@@ -1,0 +1,806 @@
+- index: 0
+  title: Adding to 10
+  text: >-
+    @PG1 buys @N1 apples at $@N2 each. How mach does she pay?
+  sol: N1+N2
+- index: 0
+  title: Adding to 10
+  text: >-
+    @PB1 borrows @N1 books at the library. After one week, he returns @N2 of those. How many books does he still have?
+  sol: R+N2=N1
+- index: 1
+  title: Adding to 10
+  text: >-
+    @PG1 was playing basketball. @N1 of her shots went in the hoop. @N2 of her
+    shots did not go in the hoop. How many shots were there in total?
+  sol: N1+N2
+- index: 4
+  title: Adding Slightly over 100
+  text: >-
+    The restaurant has @N1 normal chairs and @N2 chairs for babies. How many
+    chairs does the restaurant have in total?
+  sol: N1+N2
+- index: 5
+  title: 'Adding to 1,000'
+  text: >-
+    How many cookies did you sell if you sold @N1 chocolate cookies and @N2
+    vanilla cookies?
+  sol: N1+N2
+- index: 9
+  title: Subtracting to 10
+  text: >-
+    There were @N1 pizzas in total at the pizza shop. A customer bought @N2
+    pizza. How many pizzas are left?
+  sol: R+N2=N1
+- index: 10
+  title: Subtracting to 20
+  text: >-
+    Your friend said she had @N1 stickers. When you helped her clean her desk,
+    she only had a total of @N2 stickers. How many stickers are missing?
+  sol: R+N2=N1
+- index: 2
+  title: Adding to 20
+  text: >-
+    @PG1 has @N1 pieces of gum to share with her friends. There wasn’t enough
+    gum for all her friends, so she went to the store to get @N2 more pieces of
+    gum. How many pieces of gum does @PG1 have now?
+  sol: N1+N2
+- index: 3
+  title: Adding to 100
+  text: >-
+    @PG1 has @N1 pieces of gum to share with her friends. There wasn’t enough
+    gum for all her friends, so she went to the store and got @N2 pieces of
+    strawberry gum and @N3 pieces of bubble gum. How many pieces of gum does
+    @PG1 have now?
+  sol: N1+N2+N3
+- index: 6
+  title: 'Adding to and over 10,000'
+  text: >-
+    The hobby store normally sells @N1 trading cards per month. In June, the
+    hobby store sold @N2 more trading cards than normal. In total, how many
+    trading cards did the hobby store sell in June?
+  sol: N1+N2
+- index: 7
+  title: Adding 3 Numbers
+  text: >-
+    @PB1 had @N1 books at home. He went to the library to take out @N2 more
+    books. He then bought @N3 book. How many books does @PB1 have now?
+  sol: N1+N2+N3
+- index: 8
+  title: Adding 3 Numbers to and over 100
+  text: >-
+    @PP1 bought a big bag of candy. The bag had @N1 blue candies, @N2 red
+    candies and @N3 green candies. How many candies were there in total?
+  sol: N1+N2+N3
+- index: 11
+  title: Subtracting to 100
+  text: >-
+    @PG1 has @N1 pieces of gum to share with her friends. When she went to the
+    park, she shared @N2 pieces of strawberry gum. When she left the park, @PG1
+    shared another @N3 pieces of bubble gum. How many pieces of gum does @PG1
+    have now?
+  sol: R+N2+N3=N1
+- index: 12
+  title: Subtracting Slightly over 100
+  text: >-
+    Your team scored a total of @N1 to 90 points. @N2 points were scored in the
+    first half. How many were scored in the second half?
+  sol: R+N2=N1
+- index: 13
+  title: 'Subtracting to 1,000'
+  text: >-
+    @PB1 has an ant farm. He decided to sell some of his ants. He started
+    with @N1 ants. He sold @N2. How many ants does he have now?
+  sol: R+N2=N1
+- index: 14
+  title: 'Subtracting to and over 10,000'
+  text: >-
+    The hobby store normally sells @N1 trading cards per month. In July,
+    the hobby store sold a total of @N2 trading cards. How many more trading
+    cards did the hobby store sell in July compared with a normal month?
+  sol: R+N1=N2
+- index: 15
+  title: Subtracting 3 Numbers
+  text: >-
+    @PG1 had a pack of @N1 pencil crayons. She gave @N2 to her friend @PP2.
+    She gave @N3 to her friend @PP3. How many pencil crayons does @PG1 have
+    left?
+  sol: R+N2+N3=N1
+- index: 16
+  title: Subtracting 3 Numbers to and over 100
+  text: >-
+    @PG1 bought a big bag of candy to share with her friends. In total, there
+    were @N1 candies. She gave @N2 candies to @PG2. She also gave @N3
+    candies to @PG3. How many candies were left?
+  sol: R+N2+N3=N1
+- index: 17
+  title: Multiplying 1-Digit Integers
+  sol: N1*N2
+  text: >-
+    @PG1 needs to cut a pan of brownies into pieces. She cuts @N1 even columns
+    and @N2 even rows into the pan. How many brownies does she have?
+- index: 18
+  title: Multiplying 2-Digit Integers
+  text: >-
+    A movie theatre has @N1 rows of seats with @N2 seats in each row. How many
+    seats are there in total?
+  sol: N1*N2
+- index: 19
+  title: Multiplying Integers Ending with 0
+  text: >-
+    A clothing company has @N1 different kinds of sweatshirts. Each year, the
+    company makes @N2 of each kind of sweatshirt. How many sweatshirts does the
+    company make each year?
+  sol: N1*N2
+- index: 20
+  title: Multiplying 3 Integers
+  text: >-
+    A bricklayer stacks bricks in @N1 rows, with @N2 bricks in each row. In
+    each place, there is a stack of @N3 bricks. How many bricks are there
+    in total?
+  sol: N1*N2*N3
+- index: 21
+  title: Multiplying 4 Integers
+  text: >-
+    @PG1 earns @N1 an hour by delivering newspapers. She delivers newspapers
+    @N2 days each week, for @N3 hours at a time. After delivering newspapers
+    for @N4 weeks, how much money will @PG1 earn?
+  sol: N1*N2*N3*N4
+- index: 22
+  title: Dividing 1-Digit Integers
+  text: >-
+    If you have @N1 pieces of candy split evenly into @N2 bags, how many
+    pieces of candy are in each bag?
+  sol: R*N2=N1
+- index: 23
+  title: Dividing 2-Digit Integers
+  text: >-
+    If you have @N1 tickets for the fair and each ride costs @N2 tickets, how
+    many rides can you go on?
+  sol: R*N2=N1
+- index: 24
+  level: 2
+  title: Dividing Numbers Ending with 0
+  text: >-
+    The school has $@N1 to buy new computer equipment. If each piece of
+    equipment costs $@N2, how many pieces can the school buy in total?
+  sol: R*N2+n2=N1
+- index: 25
+  title: Dividing 2 Integers
+  text: >-
+    @PP1 buys @N1 packs of tennis balls for $@N2 in total. How much does 1 pack 
+    of tennis balls cost? 
+  sol: R*N1=N2
+- index: 26
+  title: Irrelevant information
+  level: 2
+  text: >-
+    @PP1 buys @N1 packs of tennis balls for $@N2 in total. All together, there
+    are @N3 tennis balls. How much does 1 tennis ball cost?
+  #2 packs for $12, each pack has 3 balls, total is 6 balls => 1 ball costs r=12/6 but 6 has to be multiple of 2!
+  sol: N4*N1=N3 => R*N3=N2
+- index: 27
+  title: Mixing Addition and Subtraction
+  text: >-
+    There are @N1 books in a library. On Monday, @N2 books are taken out. On
+    Tuesday, @N3 books are brought back. How many books are there now?
+  sol: N3+N4=N2 => N2+N5=N1 => N1-N2+N3
+- index: 28
+  title: Mixing Multiplication and Division
+  level: 3
+  text: >-
+    There is a group of @N1 people who are ordering pizza. If each person gets
+    @N2 slices and each pizza has @N3 slices, how many pizzas should they
+    order?
+  sol: Math.ceil(N1*N2/N3)
+- index: 29
+  title: 'Mixing Multiplication, Addition and Subtraction'
+  level: 2
+  text: >-
+    @PG1 has @n3 bags with @n4 marbles in each bag. @PP2 has @N3 bags with
+    @N4 marbles in each bag. How many more marbles does @PP2 have?
+  sol: N3*N4=N5 => n3*n4=N6 => N5-N6
+- index: 30
+  title: 'Mixing Division, Addition and Subtraction'
+  level: 3
+  text: >-
+    @PP1 has @n3 bags with the same amount of marbles in them, totaling @N6
+    marbles. @PP2 has @N3 bags with the same amount of marbles in them,
+    totaling @N5 marbles. How many more marbles does @PP2 have in each bag?
+  sol: N3*N4=N5 => n3*n4=N6 => N4-n4
+- index: 31
+  title: Counting to Preview Multiplication
+  text: >-
+    There are @N1 chalkboards in your classroom. If each chalkboard needs @N2
+    pieces of chalk, how many pieces do you need in total?
+  sol: N1*N2
+- index: 32
+  level: 3
+  title: Counting to Preview Division
+  text: >-
+    There are @n2 chalkboards in your classroom. Each chalkboard has @N2
+    pieces of chalk. This means there are @N3 pieces of chalk in total. If you
+    take @D4 piece of chalk away from each chalkboard, how many will there be
+    in total?
+  sol: D4+D5=N2 => n2*N2=N3 => n2*D5
+- index: 33
+  title: Composing Numbers
+  text: 'What number is @D1 tens and @D2 ones?'
+  sol: D1*10+D2
+- index: 34
+  title: Guessing Numbers
+  text: >-
+    I have a @D1 in the tens place. I have an even number > 0 in the ones place. I
+    am lower than @N2. What number am I?
+  sol: D1*10+2+2=N2 => D1*10+2
+# ************ HERE *******************
+- index: 35
+  title: Finding the Order
+  text: >-
+    In the hockey game, @PP1 scored more points than @PP2 but fewer points
+    than @PP3. Who scored the most points?
+  sol: p@PP3
+- index: 36
+  title: Finding Fractions of a Group
+  text: >-
+    Julia went to @N1 houses on her street for Halloween. @N2 of the houses
+    gave her a chocolate bar. What fraction of houses on Julia’s street gave her
+    a chocolate bar?
+  sol: simplifyFraction(@N2(3,8),@N1(12,24))
+- index: 37
+  title: Finding Unit Fractions
+  text: >-
+    Heather is painting a portrait of her best friend, Lisa. To make it easier,
+    she divides the portrait into @N1 equal parts. What fraction represents
+    each part of the portrait?
+  sol: simplifyFraction(1,@N1(2,8,2))
+- index: 38
+  title: Adding Fractions with Like Denominators
+  text: >-
+    Noah walks {F1/@N1 of a kilometre to school each day. He also walks {F1/@N1 of
+    a kilometre to get home after school. How many kilometres does he walk in
+    total?
+  sol: simplifyFraction(2,@N1(2,3,4,5,6,8))
+- index: 39
+  title: Subtracting Fractions with Like Denominators
+  text: >-
+    Last week, Whitney counted the number of juice boxes she had for school
+    lunches. She had {F@N1/@N2 of a case. This week, it’s down to {F1/@N2 of a case.
+    How much of the case did Whitney drink?
+  sol: simplifyFraction(@N1(3,3)-1,@N2(8,4,5))
+- index: 40
+  title: Fraction Adding Whole Numbers and Fractions with Like Denominators
+  text: >-
+    At lunchtime, an ice cream parlor served @N1 {F@N3/@N2 scoops of chocolate ice
+    cream, @N4 {F{N5/@N2 scoops of vanilla and {N6 {F{N7/@N2 scoops of strawberry.
+    How many scoops of ice cream did the parlor serve in total?
+  sol: simplifyFraction(((@N1*@N2+@N3)+(@N4*@N2+{N5)+({N6*@N2+{N7)),@N2)
+- index: 41
+  title: Subtracting Whole Numbers and Fractions with Like Denominators
+  text: >-
+    For a party, @PP1 had @N1 {F1/@N2 bottles of cola for her friends to drink.
+    She drank {F1/@N2 of a bottle herself. Her friends drank @N2 {F1/@N2. How
+    many bottles of cola does @PP1 have left?
+  sol: simplifyFraction(@N2+@N1(3,3)-1,@N2(8,4,5))
+- index: 42
+  title: Fraction Adding Fractions with Unlike Denominators
+  text: >-
+    Kevin completed {Fa/b of an assignment at school. When he was home that
+    evening, he completed {Fe/h of another assignment. How many assignments did
+    Kevin complete?
+- index: 43
+  title: Subtracting Fractions with Unlike Denominators
+  text: >-
+    Packing school lunches for her kids, Patty used {Fg/h of a package of ham.
+    She also used {Fa/b of a package of turkey. How much more ham than turkey
+    did Patty use?
+- index: 44
+  title: Multiplying Fractions
+  text: >-
+    During gym class on Wednesday, the students ran for {Fa/d of a kilometre.
+    On Thursday, they ran {Fa/b as many kilometres as on Wednesday. How many
+    kilometres did the students run on Thursday? Write your answer as a
+    fraction.
+- index: 45
+  title: Dividing Fractions
+  text: >-
+    A clothing manufacturer uses {Fa/e of a bottle of colour dye to make one
+    pair of pants. The manufacturer used {Fd/e of a bottle yesterday. How many
+    pairs of pants did the manufacturer make?
+- index: 46
+  title: Multiplying Fractions with Whole Numbers
+  text: >-
+    Mark drank {Fe/f of a carton of milk this week. Frank drank @N1 times more
+    milk than Mark. How many cartons of milk did Frank drink? Write your answer
+    as a fraction, or as a whole or mixed number.
+- index: 47
+  title: Adding Decimals
+  text: >-
+    You have @N1 grams of yogurt in your bowl and you add another spoonful of
+    @N2 grams. How much yogurt do you have in total?
+- index: 48
+  title: Subtracting Decimals
+  text: >-
+    Gemma had @N1 grams of frosting to make a cake. She decided to use only
+    @N2 grams of the frosting. How much frosting does Gemma have left?
+- index: 49
+  title: Multiplying Decimals with Whole Numbers
+  text: >-
+    @PP1 walks a total of @N1 kilometres to and from school each day. After
+    @N2 days, how many kilometres will he have walked?
+- index: 50
+  title: Dividing Decimals by Whole Numbers
+  text: >-
+    To make the Leaning Tower of Pisa from spaghetti, Mrs. Robinson bought @N1
+    kilograms of spaghetti. Her students were able to make @N2 leaning towers
+    in total. How many kilograms of spaghetti does it take to make @N3 leaning
+    tower?
+- index: 51
+  title: Mixing Addition and Subtraction of Decimals
+  text: >-
+    Rocco has @N1 litres of orange soda and @N2 litres of grape soda in his
+    fridge. Antonio has @N3 litres of orange soda and @N4 litres of grape
+    soda. How much more soda does Rocco have than Angelo?
+- index: 52
+  title: Mixing Multiplication and Division of Decimals
+  text: >-
+    @N1 days a week, Laura practices martial arts for @N2 hours. Considering a
+    week is @N3 days, what is her average practice time per day each week?
+- index: 53
+  title: Comparing 1-Digit Integers
+  text: 'You have @N1 apples and your friend has @N2 apples. Who has more?'
+- index: 54
+  title: Comparing 2-Digit Integers
+  text: 'You have @N1 candies and your friend has @N2 candies. Who has more?'
+- index: 55
+  title: Comparing Different Variables
+  text: >-
+    There are @N1 basketballs on the playground. There are @N2 footballs on
+    the playground. Are there more basketballs or footballs?
+- index: 56
+  title: Sequencing 1-Digit Integers
+  text: >-
+    @PP1 has @N1 stickers. Every day he gets @N2 more sticker. How many days
+    until he gets @N3 stickers?
+- index: 57
+  title: Skip-Counting by Odd Numbers
+  sol: null
+  text: >-
+    @PP1 began at @N1. She skip-counted by fives. Could she have said the
+    number @N2?
+- index: 58
+  title: Skip-Counting by Even Numbers
+  sol: null
+  text: >-
+    @PP1 began at @N1. She skip-counted by eights. Could she have said the
+    number @N2?
+- index: 59
+  title: Sequencing 2-Digit Numbers
+  sol: null
+  text: >-
+    Each month, Jeremy adds the same number of cards to his baseball card
+    collection. In January, he had @N1. @N2 in February. @N3 in March. How
+    many baseball cards will Jeremy have in April?
+- index: 60
+  title: Adding Money
+  text: >-
+    @PP2 and @PP1 are saving up money to buy a video game together. @PP2 has
+    saved $@N1. @PP1 has saved $@N2. How much money have they saved up
+    together in total?
+- index: 61
+  title: Subtracting Money
+  sol: 13
+  text: >-
+    @PP1 has $@N1 saved up. He uses his money to buy a video game. The video
+    game costs $@N2. How much money does he have left?
+- index: 62
+  title: Multiplying Money
+  sol: 15
+  text: >-
+    @PP1 gets $@N1 for delivering the paper. How much money will he have after
+    delivering the paper @N2 times?
+- index: 63
+  title: Dividing Money
+  sol: 61
+  text: >-
+    @PP1 spent $@N1 to buy @N2 hockey sticks. If each hockey stick was the
+    same price, how much did @N3 cost?
+- index: 64
+  title: Adding Money with Decimals
+  text: >-
+    You went to the store and bought gum for $@N1 and a sucker for $@N20. How
+    much was your total?
+- index: 65
+  title: Subtracting Money with Decimals
+  sol: null
+  text: >-
+    You went to the store with $@N10. You bought gum for $@N2, a chocolate bar
+    for $@N3 and a sucker for $@N40. How much money do you have left?
+- index: 66
+  title: Converting Hours into Minutes
+  sol: null
+  text: >-
+    Jeremy helped his mom for @N1 hour. For how many minutes was he helping
+    her?
+- index: 67
+  title: Applying Proportional Relationships to Money
+  sol: null
+  text: >-
+    Jakob wants to invite @N1 friends to his birthday, which will cost his
+    parents $@N2. If he decides to invite @N3 friends instead, how much money
+    will it cost his parents? Assume the relationship is directly proportional.
+- index: 68
+  title: Applying Percentages to Money
+  sol: null
+  text: >-
+    Retta put $@N1.00 in a bank account that gains @N2% interest annually. How
+    much interest will be accumulated in @N3 year? And if she makes no
+    withdrawals, how much money will be in the account after @N4 year?
+- index: 69
+  title: Time Adding
+  sol: null
+  text: >-
+    If you wake up at @N1:@N20 a.m. and it takes you @N3 hour and @N4
+    minutes to get ready and walk to school, at what time will you get to
+    school?
+- index: 70
+  title: Time Subtracting
+  sol: null
+  text: >-
+    If a train departs at @N1h@N2@N4 p.m. and arrives at @N3h00 p.m., how
+    long were passengers on the train for?
+- index: 71
+  title: Finding Start and End Times
+  sol: null
+  text: >-
+    @PP1 left her dad’s store to go home at twenty to seven in the evening.
+    Forty minutes later, she was home. What time was it when she arrived home?
+- index: 72
+  title: Comparing Measurements
+  sol: null
+  text: >-
+    @PP1’s ruler is @N1 centimetres long. April’s ruler is @N2 centimetres
+    long. How many centimetres longer is April’s ruler?
+- index: 73
+  title: Contextualizing Measurements
+  sol: null
+  text: >-
+    Picture a school bus. Which unit of measurement would best describe the
+    length of the bus? Centimetres, metres or kilometres?
+- index: 74
+  title: Adding Measurements
+  text: >-
+    @PP1’s dad wants to try to save money on gas, so he has been tracking how
+    much he uses. Last year, @PP1’s dad used @N1 litres of gas. This year, her
+    dad used @N2 litres of gas. How much gas did he use in total for the two
+    years?
+- index: 75
+  title: Subtracting Measurements
+  sol: null
+  text: >-
+    @PP1’s dad wants to try to save money on gas, so he has been tracking how
+    much he uses. Over the past two years, @PP1’s dad used @N1 litres of gas.
+    This year, he used @N2 litres of gas. How much gas did he use last year?
+- index: 76
+  title: Multiplying Volume and Mass
+  sol: null
+  text: >-
+    Kiera wants to make sure she has strong bones, so she drinks @N1 litres of
+    milk every week. After @N2 weeks, how many litres of milk will Kiera drink?
+- index: 77
+  title: Dividing Volume and Mass
+  sol: null
+  text: >-
+    @PP1 is doing some gardening, so she bought @N1 kilogram of soil. She wants
+    to spread the soil evenly between her @N2 plants. How much will each plant
+    get?
+- index: 78
+  title: Converting Mass
+  sol: null
+  text: >-
+    Inger goes to the grocery store and buys @N1 squashes that each weigh @N2
+    grams. How many kilograms of squash did Inger buy?
+- index: 79
+  title: Converting Volume
+  sol: null
+  text: >-
+    @PP1 has a lemonade stand and sold @N1 cups of lemonade. Each cup was @N2
+    millilitres. How many litres did @PP1 sell in total?
+- index: 80
+  title: Converting Length
+  sol: null
+  text: >-
+    @PP2 and @PP1 are comparing their heights. @PP2 is @N1 meters tall. @PP1 is
+    @N2 centimetres taller than @PP2. What is @PP1’s height in centimetres?
+- index: 81
+  title: Understanding Distance and Direction
+  sol: null
+  text: >-
+    A bus leaves the school to take students on a field trip. The bus travels
+    @N1 kilometres south, @N2 kilometres west, another @N3 kilometres south
+    and @N4 kilometres north. To return to the school, in which direction does
+    the bus have to travel? How many kilometres must it travel in that
+    direction?
+- index: 82
+  title: Finding a Missing Number
+  sol: null
+  text: >-
+    The ratio of @PP1’s trophies to Meredith’s trophies is @N1:@N2. @PP1 has
+    @N3 trophies. How many does Meredith have?
+- index: 83
+  title: Finding Missing Numbers
+  sol: null
+  text: >-
+    The ratio of @PP1’s trophies to Meredith’s trophies is @N1:@N2. The
+    difference between the numbers is @N3. What are the numbers?
+- index: 84
+  title: Comparing Ratios
+  sol: null
+  text: >-
+    The school’s junior band has @N1 saxophone players and @N2 trumpet
+    players. The school’s senior band has @N3 saxophone players and @N4
+    trumpet players. Which band has the higher ratio of trumpet to saxophone
+    players?
+- index: 85
+  title: Determining Percentages
+  sol: null
+  text: >-
+    Mary surveyed students in her school to find out what their favourite sports
+    were. Out of @N1 students, @N2 said hockey was their favourite sport. What
+    percentage of students said hockey was their favourite sport?
+- index: 86
+  title: Determining Percent of Change
+  sol: null
+  text: >-
+    A decade ago, Oakville’s population was @N1,@N2 people. Now, it is @N3%
+    larger. What is Oakville’s current population?
+- index: 87
+  title: Determining Percents of Numbers
+  sol: null
+  text: >-
+    At the ice skate rental stand, @N1% of @N2 skates are for boys. If the
+    rest of the skates are for girls, how many are there?
+- index: 88
+  title: Calculating Averages
+  sol: null
+  text: >-
+    For @N1 weeks, @PP1 volunteered as a helper for swimming classes. The first
+    week, he volunteered for @N2 hours. He volunteered for @N3 hours in the
+    second week, and another @N4 hours in the third week. The fourth week, he
+    volunteered for {N5 hours. For how many hours did he volunteer per week, on
+    average?
+- index: 89
+  title: Understanding the Premise of Probability
+  sol: null
+  text: >-
+    @PP1 wants to know his class’s favourite TV show, so he surveys all of the
+    boys. Will the sample be representative or biased?
+- index: 90
+  title: Understanding Tangible Probability
+  sol: null
+  text: >-
+    The faces on a fair number die are labelled @N1, @N2, @N3, @N4, {N5 and
+    {N6. You roll the die {N7 times. How many times should you expect to roll
+    a {N8?
+- index: 91
+  title: Exploring Complementary Events
+  sol: null
+  text: >-
+    The numbers @N1 to @N2 are in a hat. If the probability of drawing an even
+    number is @N3/@N4, what is the probability of NOT drawing an even number?
+    Express this probability as a fraction.
+- index: 92
+  title: Exploring Experimental Probability
+  sol: null
+  text: >-
+    A pizza shop has recently sold @N1 pizzas. @N2 of those pizzas were
+    pepperoni. Answering with a fraction, what is the experimental probability
+    that he next pizza will be pepperoni?
+- index: 93
+  title: Introducing Data Relationships
+  sol: null
+  text: >-
+    @PP1 and Felice each take @N1 tests. Here are the results of @PP1’s @N2
+    tests: @N3, @N4, {N5, {N6. Here are the results for {N7 of Felice’s
+    {N8 tests: {N9, {Nundefined, {Nundefined. If @PP1’s mean for the
+    {Nundefined tests is {Nundefined point higher than Felice’s, what’s the
+    score of Felice’s {Nundefinedth test?
+- index: 94
+  title: Introducing Proportional Relationships
+  sol: null
+  text: >-
+    Store A is selling @N1 pounds of bananas for $@N2.00. Store B is selling
+    @N3 pounds of bananas for $@N4.00. Which store has the better deal?
+- index: 95
+  title: Writing Equations for Proportional Relationships
+  sol: null
+  text: >-
+    Lionel loves soccer, but has trouble motivating himself to practice. So, he
+    incentivizes himself through video games. There is a proportional
+    relationship between the amount of drills Lionel completes, in x, and for
+    how many hours he plays video games, in y. When Lionel completes @N1
+    drills, he plays video games for @N2 minutes. Write the equation for the
+    relationship between x and y.
+- index: 96
+  title: Introducing Perimeter
+  sol: null
+  text: >-
+    The theatre has @N1 chairs in a row. There are @N2 rows. Using rows as
+    your unit of measurement, what is the perimeter?
+- index: 97
+  title: Introducing Area
+  sol: null
+  text: >-
+    The theatre has @N1 chairs in a row. There are @N2 rows. How many chairs
+    are there in total?
+- index: 98
+  title: Introducing Volume
+  sol: null
+  text: >-
+    @PP1 wants to know how much candy his container can hold. The container is
+    @N1 centimetres tall, @N2 centimetres long and @N3 centimetres wide. What
+    is the container’s volume?
+- index: 99
+  title: Understanding 2D Shapes
+  sol: null
+  text: 'Kevin draws a shape with @N1 equal sides. What shape did he draw?'
+- index: 100
+  title: Finding the Perimeter of 2D Shapes
+  sol: null
+  text: >-
+    Mitchell wrote his homework questions on a piece of square paper. Each side
+    of the paper is @N1 centimetres. What is the perimeter?
+- index: 101
+  title: Determining the Area of 2D Shapes
+  sol: null
+  text: >-
+    A single trading card is @N1 centimetres long by @N2 centimetres wide.
+    What is its area?
+- index: 102
+  title: Understanding 3D Shapes
+  sol: null
+  text: '@PP1 draws a shape that has @N1 square faces. What shape did she draw?'
+- index: 103
+  title: Determining the Surface Area of 3D Shapes
+  sol: null
+  text: >-
+    What is the surface area of a cube that has a width of @N1cm, height of
+    @N2 cm and length of @N3 cm?
+- index: 104
+  title: Determining the Volume of 3D Shapes
+  sol: null
+  text: >-
+    @PP1’s candy container is @N1 centimetres tall, @N2 centimetres long and
+    @N3 centimetres wide. Bruce’s container is @N4 centimetres tall, {N5
+    centimetres long and {N6 centimetres wide. Find the volume of each
+    container. Based on volume, whose container can hold more candy?
+- index: 105
+  title: Identifying Right-Angled Triangles
+  sol: null
+  text: >-
+    A triangle has the following side lengths: @N1 cm, @N2 cm and @N3 cm. Is
+    this triangle a right-angled triangle?
+- index: 106
+  title: Identifying Equilateral Triangles
+  sol: null
+  text: >-
+    A triangle has the following side lengths: @N1 cm, @N2 cm and @N3 cm.
+    What kind of triangle is it?
+- index: 107
+  title: Identifying Isosceles Triangles
+  sol: null
+  text: >-
+    A triangle has the following side lengths: @N1 cm, @N2 cm and @N3 cm.
+    What kind of triangle is it?
+- index: 108
+  title: Identifying Scalene Triangles
+  sol: null
+  text: >-
+    A triangle has the following side lengths: @N1 cm, @N2 cm and @N3 cm.
+    What kind of triangle is it?
+- index: 109
+  title: Finding the Perimeter of Triangles
+  sol: null
+  text: >-
+    Luigi built a tent in the shape of an equilateral triangle. The perimeter is
+    @N1 metres. What is the length of each of the tent’s sides?
+- index: 110
+  title: Determining the Area of Triangles
+  sol: null
+  text: >-
+    What is the area of a triangle with a base of @N1 units and a height of
+    @N2 units?
+- index: 111
+  title: Applying Pythagorean Theorem
+  sol: null
+  text: >-
+    A right triangle has one non-hypotenuse side length of @N1 inches and the
+    hypotenuse measures @N2 inches. What is the length of the other
+    non-hypotenuse side?
+- index: 112
+  title: Finding a Circle’s Diameter
+  sol: null
+  text: >-
+    Jasmin bought a new round backpack. Its area is @N1 square centimetres.
+    What is the round backpack’s diameter?
+- index: 113
+  title: Finding a Circle's Area
+  sol: null
+  text: >-
+    Captain America’s circular shield has a diameter of @N1 centimetres. What
+    is the area of his shield?
+- index: 114
+  title: Finding a Circle’s Radius
+  sol: null
+  text: >-
+    Skylar lives on a farm, where his dad keeps a circular corn maze. The corn
+    maze has a diameter of @N1 kilometres. What is the maze’s radius?
+- index: 115
+  title: Identifying Independent and Dependent Variables
+  sol: null
+  text: >-
+    Victoria is baking muffins for her class. The number of muffins she makes is
+    based on how many classmates she has. For this equation, m is the number of
+    muffins and c is the number of classmates. Which variable is independent and
+    which variable is dependent?
+- index: 116
+  title: Writing Variable Expressions for Addition
+  sol: null
+  text: >-
+    Last soccer season, Trish scored g goals. Alexa scored @N1 more goals than
+    Trish. Write an expression that shows how many goals Alexa scored.
+- index: 117
+  title: Writing Variable Expressions for Subtraction
+  sol: null
+  text: >-
+    Elizabeth eats a healthy, balanced breakfast b times a week. Madison
+    sometimes skips breakfast. In total, Madison eats @N1 fewer breakfasts a
+    week than Elizabeth. Write an expression that show how many times a week
+    Madison eats breakfast.
+- index: 118
+  title: Writing Variable Expressions for Multiplication
+  sol: null
+  text: >-
+    Last hockey season, Jack scored g goals. Patrik scored twice as many goals
+    than Jack. Write an expressions that shows how many goals Patrik scored.
+- index: 119
+  title: Writing Variable Expressions for Division
+  sol: null
+  text: >-
+    @PP1 has c chocolate bars. She wants to distribute the chocolate bars evenly
+    among @N1 friends. Write an expression that shows how many chocolate bars
+    @N2 of her friends will receive.
+- index: 120
+  title: Solving Two-Variable Equations
+  sol: null
+  text: >-
+    This equation shows how the amount Lucas earns from his after-school job
+    depends on how many hours he works: e = @N1h. The variable h represents how
+    many hours he works. The variable e represents how much money he earns. How
+    much money will Lucas earn after working for @N2 hours?
+- index: 121
+  title: Interpreting Remainders
+  text: >-
+    An Italian restaurant receives a shipment of @N1 pears. If it takes
+    @N2 pears to make a dish, how many pears will the restaurant have left
+    over after making as many dishes as possible?
+- index: 122
+  title: Dividing 3 Integers
+  text: >-
+    @PP1 buys @N1 packs of tennis balls for $@N2 in total. In each pack, there
+    are @N3 tennis balls. How much does 1 tennis ball cost?
+  #2 packs for $12, each pack has 3 balls, total is 6 balls => 1 ball costs r=12/2*3
+  sol: N1*N3*R=N2
+- index: 123
+  title: Irrelevant information
+  text: >-
+    @PP1 buys @N1 packs of tennis balls for $@N2 in total. All together, there
+    are @N3 tennis balls. How many balls are there per pack?
+  #2 packs for $12, each pack has 3 balls, total is 6 balls => 1 ball costs r=12/2*3
+  sol: R*N1=N3
+- index: 124
+  title: Finding the Order
+  text: >-
+    In the hockey game, @PP1 scored more points than @PP2 but fewer points
+    than @PP3. Who scored the least points?
+  sol: p@PP2
