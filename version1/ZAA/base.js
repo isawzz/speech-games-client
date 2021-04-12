@@ -1523,10 +1523,10 @@ function getFunctionsNameThatCalledThisFunction() {
 async function dbInit(appName, dir = '../DATA/') {
 	let users = await route_path_yaml_dict(dir + 'users.yaml');
 	let settings = await route_path_yaml_dict(dir + 'settings.yaml');
-	let addons = await route_path_yaml_dict(dir + '_addons.yaml');
+	let addons = await route_path_yaml_dict(dir + 'addons.yaml');
 	let games = await route_path_yaml_dict(dir + 'games.yaml');
 	//let speechGames = await route_path_yaml_dict(dir + '_speechGames.yaml');
-	let tables = await route_path_yaml_dict(dir + '_tables.yaml');
+	let tables = await route_path_yaml_dict(dir + 'tables.yaml');
 
 	DB = {
 		id: appName,
