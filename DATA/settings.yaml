@@ -1,0 +1,22 @@
+#speechgames
+minutesPerUnit: 15
+samplesPerGame: 10
+trials:  3
+pictureLabels: toggle #always never toggle(=first half of level: labels, second half of level: no labels)
+incrementLevelOnPositiveStreak: 5
+decrementLevelOnNegativeStreak: 3
+language: E
+vocab: best25
+spokenFeedback: true
+silentMode: false
+pressControlToUnfreeze: false
+reducedAnimations: true
+showHint: true
+#multi player games
+mode: solo # hotseat | pp | solo
+perspective: god # me | spectator | god (sees all)
+#2 player games params
+startPlayer: random # random | human | ai
+startPosition: empty # random | empty | sequence
+searchDepth: 5
+  

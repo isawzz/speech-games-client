@@ -15393,7 +15393,7 @@ pushpin:
   type: emo
   isDuplicate: false
   E: pin
-  D: stift
+  D: reissnagel
   F: épingle
   S: alfiler
   C: 銷
@@ -16413,7 +16413,7 @@ round pushpin:
   type: emo
   isDuplicate: false
   E: pin
-  D: stift
+  D: stecknadel
   F: épingle
   S: alfiler
   C: 銷
@@ -40263,9 +40263,9 @@ drop:
   w: 100
   h: 133
   E: drop
-  D: fallen
-  F: laissez tomber
-  S: soltar
+  D: tropfen
+  F: goute
+  S: gota
   C: 下降
   cats:
     - huge
@@ -63779,7 +63779,7 @@ pin:
   w: 100
   h: 133
   E: pin
-  D: stift
+  D: stecknadel
   F: épingle
   S: alfiler
   C: 銷

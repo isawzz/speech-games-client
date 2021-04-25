@@ -1,0 +1,612 @@
+smiling face with tear:
+  hex: 1f972
+  hexcode: 1f972
+  key: smiling face with tear
+  text: '&#129394;'
+  type: emo
+  family: emoNoto
+  w: 125
+  h: 118
+  E: smiling face with tear
+disguised face:
+  hex: 1f978
+  hexcode: 1f978
+  key: disguised face
+  text: '&#129400;'
+  type: emo
+  family: emoNoto
+  w: 125
+  h: 118
+  E: disguised face
+pinched fingers:
+  hex: 1f90c
+  hexcode: 1f90c
+  key: pinched fingers
+  text: '&#129292;'
+  type: emo
+  family: emoNoto
+  w: 125
+  h: 118
+  E: pinched fingers
+anatomical heart:
+  hex: 1fac0
+  hexcode: 1fac0
+  key: anatomical heart
+  text: '&#129728;'
+  type: emo
+  family: emoNoto
+  w: 125
+  h: 118
+lungs:
+  hex: 1fac1
+  hexcode: 1fac1
+  key: lungs
+  text: '&#129729;'
+  type: emo
+  family: emoNoto
+  w: 125
+  h: 118
+ninja:
+  hex: 1f977
+  hexcode: 1f977
+  key: ninja
+  text: '&#129399;'
+  type: emo
+  family: emoNoto
+  w: 125
+  h: 118
+  E: ninja
+people hugging:
+  hex: 1fac2
+  hexcode: 1fac2
+  key: people hugging
+  text: '&#129730;'
+  type: emo
+  family: emoNoto
+  w: 125
+  h: 118
+  E: people hugging
+bison:
+  hex: 1f9ac
+  hexcode: 1f9ac
+  key: bison
+  text: '&#129452;'
+  type: emo
+  family: emoNoto
+  w: 125
+  h: 118
+  E: bison
+  D: bison
+  F: bison
+  S: bisonte
+  C: 野牛
+mammoth:
+  hex: 1f9a3
+  hexcode: 1f9a3
+  key: mammoth
+  text: '&#129443;'
+  type: emo
+  family: emoNoto
+  w: 125
+  h: 118
+  E: mammoth
+  D: mammut-
+  F: mammouth
+  S: mamut
+  C: 長毛象
+beaver:
+  hex: 1f9ab
+  hexcode: 1f9ab
+  key: beaver
+  text: '&#129451;'
+  type: emo
+  family: emoNoto
+  w: 125
+  h: 118
+  E: beaver
+dodo:
+  hex: 1f9a4
+  hexcode: 1f9a4
+  key: dodo
+  text: '&#129444;'
+  type: emo
+  family: emoNoto
+  w: 125
+  h: 118
+  E: dodo
+feather:
+  hex: 1fab6
+  hexcode: 1fab6
+  key: feather
+  text: '&#129718;'
+  type: emo
+  family: emoNoto
+  w: 125
+  h: 118
+  E: feather
+  D: feder
+  F: plume
+  S: pluma
+  C: 羽毛
+seal:
+  hex: 1f9ad
+  hexcode: 1f9ad
+  key: seal
+  text: '&#129453;'
+  type: emo
+  family: emoNoto
+  w: 125
+  h: 118
+  E: seal
+beetle:
+  hex: 1fab2
+  hexcode: 1fab2
+  key: beetle
+  text: '&#129714;'
+  type: emo
+  family: emoNoto
+  w: 125
+  h: 118
+  E: beetle
+cockroach:
+  hex: 1fab3
+  hexcode: 1fab3
+  key: cockroach
+  text: '&#129715;'
+  type: emo
+  family: emoNoto
+  w: 125
+  h: 118
+fly:
+  hex: 1fab0
+  hexcode: 1fab0
+  key: fly
+  text: '&#129712;'
+  type: emo
+  family: emoNoto
+  w: 125
+  h: 118
+  E: fly
+worm:
+  hex: 1fab1
+  hexcode: 1fab1
+  key: worm
+  text: '&#129713;'
+  type: emo
+  family: emoNoto
+  w: 125
+  h: 118
+  E: worm
+potted plant:
+  hex: 1fab4
+  hexcode: 1fab4
+  key: potted plant
+  text: '&#129716;'
+  type: emo
+  family: emoNoto
+  w: 125
+  h: 118
+  E: potted plant
+blueberries:
+  hex: 1fad0
+  hexcode: 1fad0
+  key: blueberries
+  text: '&#129744;'
+  type: emo
+  family: emoNoto
+  w: 125
+  h: 118
+  E: blueberries
+olive:
+  hex: 1fad2
+  hexcode: 1fad2
+  key: olive
+  text: '&#129746;'
+  type: emo
+  family: emoNoto
+  w: 125
+  h: 118
+  E: olive
+  D: olive
+  F: olive
+  S: aceituna
+  C: 橄欖
+bell pepper:
+  hex: 1fad1
+  hexcode: 1fad1
+  key: bell pepper
+  text: '&#129745;'
+  type: emo
+  family: emoNoto
+  w: 125
+  h: 118
+  E: bell pepper
+flatbread:
+  hex: 1fad3
+  hexcode: 1fad3
+  key: flatbread
+  text: '&#129747;'
+  type: emo
+  family: emoNoto
+  w: 125
+  h: 118
+  E: flatbread
+tamale:
+  hex: 1fad4
+  hexcode: 1fad4
+  key: tamale
+  text: '&#129748;'
+  type: emo
+  family: emoNoto
+  w: 125
+  h: 118
+  E: tamale
+fondue:
+  hex: 1fad5
+  hexcode: 1fad5
+  key: fondue
+  text: '&#129749;'
+  type: emo
+  family: emoNoto
+  w: 125
+  h: 118
+  E: fondue
+teapot:
+  hex: 1fad6
+  hexcode: 1fad6
+  key: teapot
+  text: '&#129750;'
+  type: emo
+  family: emoNoto
+  w: 125
+  h: 118
+  E: teapot
+  D: teekanne
+  F: théière
+  S: tetera
+  C: 茶壺
+bubble tea:
+  hex: 1f9cb
+  hexcode: 1f9cb
+  key: bubble tea
+  text: '&#129483;'
+  type: emo
+  family: emoNoto
+  w: 125
+  h: 118
+  E: bubble tea
+rock:
+  hex: 1faa8
+  hexcode: 1faa8
+  key: rock
+  text: '&#129704;'
+  type: emo
+  family: emoNoto
+  w: 125
+  h: 118
+  E: rock
+  D: felsen
+  F: roche
+  S: rock
+  C: 岩石
+wood:
+  hex: 1fab5
+  hexcode: 1fab5
+  key: wood
+  text: '&#129717;'
+  type: emo
+  family: emoNoto
+  w: 125
+  h: 118
+  E: wood
+hut:
+  hex: 1f6d6
+  hexcode: 1f6d6
+  key: hut
+  text: '&#128726;'
+  type: emo
+  family: emoNoto
+  w: 125
+  h: 118
+  E: hut
+  D: !<tag:yaml.org,2002:js/undefined> ''
+  F: !<tag:yaml.org,2002:js/undefined> ''
+  S: !<tag:yaml.org,2002:js/undefined> ''
+  C: !<tag:yaml.org,2002:js/undefined> ''
+pickup truck:
+  hex: 1f6fb
+  hexcode: 1f6fb
+  key: pickup truck
+  text: '&#128763;'
+  type: emo
+  family: emoNoto
+  w: 125
+  h: 118
+  E: pickup truck
+roller skate:
+  hex: 1f6fc
+  hexcode: 1f6fc
+  key: roller skate
+  text: '&#128764;'
+  type: emo
+  family: emoNoto
+  w: 125
+  h: 118
+  E: roller skate
+magic wand:
+  hex: 1fa84
+  hexcode: 1fa84
+  key: magic wand
+  text: '&#129668;'
+  type: emo
+  family: emoNoto
+  w: 125
+  h: 118
+  E: magic wand
+piñata:
+  hex: 1fa85
+  hexcode: 1fa85
+  key: piñata
+  text: '&#129669;'
+  type: emo
+  family: emoNoto
+  w: 125
+  h: 118
+  E: piñata
+nesting dolls:
+  hex: 1fa86
+  hexcode: 1fa86
+  key: nesting dolls
+  text: '&#129670;'
+  type: emo
+  family: emoNoto
+  w: 125
+  h: 118
+  E: nesting dolls
+sewing needle:
+  hex: 1faa1
+  hexcode: 1faa1
+  key: sewing needle
+  text: '&#129697;'
+  type: emo
+  family: emoNoto
+  w: 125
+  h: 118
+  E: sewing needle
+knot:
+  hex: 1faa2
+  hexcode: 1faa2
+  key: knot
+  text: '&#129698;'
+  type: emo
+  family: emoNoto
+  w: 125
+  h: 118
+  E: knot
+  D: !<tag:yaml.org,2002:js/undefined> ''
+  F: !<tag:yaml.org,2002:js/undefined> ''
+  S: !<tag:yaml.org,2002:js/undefined> ''
+  C: !<tag:yaml.org,2002:js/undefined> ''
+thong sandal:
+  hex: 1fa74
+  hexcode: 1fa74
+  key: thong sandal
+  text: '&#129652;'
+  type: emo
+  family: emoNoto
+  w: 125
+  h: 118
+  E: thong sandal
+military helmet:
+  hex: 1fa96
+  hexcode: 1fa96
+  key: military helmet
+  text: '&#129686;'
+  type: emo
+  family: emoNoto
+  w: 125
+  h: 118
+  E: military helmet
+accordion:
+  hex: 1fa97
+  hexcode: 1fa97
+  key: accordion
+  text: '&#129687;'
+  type: emo
+  family: emoNoto
+  w: 125
+  h: 118
+  E: accordion
+long drum:
+  hex: 1fa98
+  hexcode: 1fa98
+  key: long drum
+  text: '&#129688;'
+  type: emo
+  family: emoNoto
+  w: 125
+  h: 118
+  E: long drum
+coin:
+  hex: 1fa99
+  hexcode: 1fa99
+  key: coin
+  text: '&#129689;'
+  type: emo
+  family: emoNoto
+  w: 125
+  h: 118
+  E: coin
+boomerang:
+  hex: 1fa83
+  hexcode: 1fa83
+  key: boomerang
+  text: '&#129667;'
+  type: emo
+  family: emoNoto
+  w: 125
+  h: 118
+  E: boomerang
+  D: boomerang
+  F: boomerang
+  S: bumerang
+  C: 迴旋鏢
+carpentry saw:
+  hex: 1fa9a
+  hexcode: 1fa9a
+  key: carpentry saw
+  text: '&#129690;'
+  type: emo
+  family: emoNoto
+  w: 125
+  h: 118
+  E: carpentry saw
+screwdriver:
+  hex: 1fa9b
+  hexcode: 1fa9b
+  key: screwdriver
+  text: '&#129691;'
+  type: emo
+  family: emoNoto
+  w: 125
+  h: 118
+  E: screwdriver
+  D: schraubenzieher
+  F: tournevis
+  S: destornillador
+  C: 螺絲刀
+hook:
+  hex: 1fa9d
+  hexcode: 1fa9d
+  key: hook
+  text: '&#129693;'
+  type: emo
+  family: emoNoto
+  w: 125
+  h: 118
+  E: hook
+ladder:
+  hex: 1fa9c
+  hexcode: 1fa9c
+  key: ladder
+  text: '&#129692;'
+  type: emo
+  family: emoNoto
+  w: 125
+  h: 118
+  E: ladder
+  D: leiter
+  F: échelle
+  S: escalera
+  C: 階梯
+elevator:
+  hex: 1f6d7
+  hexcode: 1f6d7
+  key: elevator
+  text: '&#128727;'
+  type: emo
+  family: emoNoto
+  w: 125
+  h: 118
+  E: elevator
+  D: aufzug
+  F: ascenseur
+  S: ascensor
+  C: 電梯
+mirror:
+  hex: 1fa9e
+  hexcode: 1fa9e
+  key: mirror
+  text: '&#129694;'
+  type: emo
+  family: emoNoto
+  w: 125
+  h: 118
+  E: mirror
+window:
+  hex: 1fa9f
+  hexcode: 1fa9f
+  key: window
+  text: '&#129695;'
+  type: emo
+  family: emoNoto
+  w: 125
+  h: 118
+  E: window
+  D: fenster
+  F: fenêtre
+  S: ventana
+  C: 窗口
+plunger:
+  hex: 1faa0
+  hexcode: 1faa0
+  key: plunger
+  text: '&#129696;'
+  type: emo
+  family: emoNoto
+  w: 125
+  h: 118
+  E: plunger
+  D: kolben
+  F: piston
+  S: émbolo
+  C: 柱塞
+mouse trap:
+  hex: 1faa4
+  hexcode: 1faa4
+  key: mouse trap
+  text: '&#129700;'
+  type: emo
+  family: emoNoto
+  w: 125
+  h: 118
+  E: mouse trap
+bucket:
+  hex: 1faa3
+  hexcode: 1faa3
+  key: bucket
+  text: '&#129699;'
+  type: emo
+  family: emoNoto
+  w: 125
+  h: 118
+  E: bucket
+toothbrush:
+  hex: 1faa5
+  hexcode: 1faa5
+  key: toothbrush
+  text: '&#129701;'
+  type: emo
+  family: emoNoto
+  w: 125
+  h: 118
+  E: toothbrush
+headstone:
+  hex: 1faa6
+  hexcode: 1faa6
+  key: headstone
+  text: '&#129702;'
+  type: emo
+  family: emoNoto
+  w: 125
+  h: 118
+  E: headstone
+placard:
+  hex: 1faa7
+  hexcode: 1faa7
+  key: placard
+  text: '&#129703;'
+  type: emo
+  family: emoNoto
+  w: 125
+  h: 118
+  E: placard
+transgender symbol:
+  hex: 26a7
+  hexcode: 26a7
+  key: transgender symbol
+  text: '&#9895;'
+  type: emo
+  family: emoNoto
+  w: 125
+  h: 118

@@ -1,0 +1,112 @@
+/* #region 0 */
+.linebreak {
+	flex-basis: 100%;
+	height: 0px;
+}
+.flexWrap {
+	display: flex;
+	flex: 1;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+}
+
+html,
+body {
+	height: 100%;
+	padding: 0;
+	margin: 0;
+	font: 20px Arial;
+	background: #004054;
+	color: white;
+}
+div {
+	user-select: none;
+}
+/* #endregion 0 */
+
+/* #region screen layout: ONE PAGE (just visible screen) */
+#dMain {
+	min-height: calc(100% - 60px);
+	background:yellow;
+
+}
+#dSidebar {
+	background: green;
+	height: 100%;
+	min-width: 100px;
+	max-width: 300px;
+	float: left;
+	word-break: break-all;
+	/* flex: 0 0 auto;
+	box-sizing:border-box;
+	padding: 12px;
+	text-align: center; */
+}
+#dRightSidebar {
+	background: violet;
+	height: 100%;
+	min-width: 100px;
+	max-width: 300px;
+	float: right;
+	word-break: break-all;
+	/* flex: 0 0 auto;
+	box-sizing:border-box;
+	padding: 12px;
+	text-align: center; */
+}
+#dTableBackground {
+	background:orange;
+	/* min-height: calc( 100% - 60px ); */
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	/* display: flex;
+	flex-direction: column;
+	flex-grow: 10; */
+}
+#dTable {
+	/* min-height: calc( 100% - 60px ); */
+	/* min-height: calc(98vh - 150px); */
+	height: 98%;
+	margin: 1vh;
+	background:#ffffff80;
+	/* border-radius: 8px; */
+}
+/* #endregion */
+
+/* #region 3 col line */
+.lineOuter {
+	min-width: 100%;
+	padding: 4px 12px;
+	box-sizing: border-box;
+	height: 30px;
+	/* background-color: blue; */
+}
+.lineOuter > div {
+	position: relative;
+}
+.lineLeft {
+	display: inline-block;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	min-width: 20px;
+	/* background: orange; */
+}
+.lineMiddle {
+	width: 100%;
+	position: absolute;
+	text-align: center;
+	/* background: red; */
+}
+.lineRight {
+	display: inline-block;
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	min-width: 20px;
+	/* background: yellow; */
+}
+/* #endregion */

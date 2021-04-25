@@ -5,6 +5,7 @@ class IPVTimer {
 
   constructor (ifPageVisible,seconds,callback) {
     this.start();
+		console.log('seconds',seconds)
 
     this.ifPageVisible.on('statusChanged', (data) => {
       if (this.stopped === false) {

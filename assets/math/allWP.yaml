@@ -1,51 +1,51 @@
 - index: 0
   title: Adding to 10
   text: >-
-    @PG1 buys @N1 apples at $@N2 each. How mach does she pay?
-  sol: N1+N2
-- index: 0
+    @PG1 buys @N1 apples at $@N2 each. How much does she pay?
+  sol: N1*N2
+- index: 1
   title: Adding to 10
   text: >-
     @PB1 borrows @N1 books at the library. After one week, he returns @N2 of those. How many books does he still have?
   sol: R+N2=N1
-- index: 1
+- index: 2
   title: Adding to 10
   text: >-
     @PG1 was playing basketball. @N1 of her shots went in the hoop. @N2 of her
     shots did not go in the hoop. How many shots were there in total?
   sol: N1+N2
-- index: 4
+- index: 3
   title: Adding Slightly over 100
   text: >-
     The restaurant has @N1 normal chairs and @N2 chairs for babies. How many
     chairs does the restaurant have in total?
   sol: N1+N2
-- index: 5
+- index: 4
   title: 'Adding to 1,000'
   text: >-
     How many cookies did you sell if you sold @N1 chocolate cookies and @N2
     vanilla cookies?
   sol: N1+N2
-- index: 9
+- index: 5
   title: Subtracting to 10
   text: >-
     There were @N1 pizzas in total at the pizza shop. A customer bought @N2
     pizza. How many pizzas are left?
   sol: R+N2=N1
-- index: 10
+- index: 6
   title: Subtracting to 20
   text: >-
     Your friend said she had @N1 stickers. When you helped her clean her desk,
     she only had a total of @N2 stickers. How many stickers are missing?
   sol: R+N2=N1
-- index: 2
+- index: 7
   title: Adding to 20
   text: >-
     @PG1 has @N1 pieces of gum to share with her friends. There wasn’t enough
     gum for all her friends, so she went to the store to get @N2 more pieces of
     gum. How many pieces of gum does @PG1 have now?
   sol: N1+N2
-- index: 3
+- index: 8
   title: Adding to 100
   text: >-
     @PG1 has @N1 pieces of gum to share with her friends. There wasn’t enough
@@ -53,26 +53,26 @@
     strawberry gum and @N3 pieces of bubble gum. How many pieces of gum does
     @PG1 have now?
   sol: N1+N2+N3
-- index: 6
+- index: 9
   title: 'Adding to and over 10,000'
   text: >-
     The hobby store normally sells @N1 trading cards per month. In June, the
     hobby store sold @N2 more trading cards than normal. In total, how many
     trading cards did the hobby store sell in June?
   sol: N1+N2
-- index: 7
+- index: 10
   title: Adding 3 Numbers
   text: >-
     @PB1 had @N1 books at home. He went to the library to take out @N2 more
     books. He then bought @N3 book. How many books does @PB1 have now?
   sol: N1+N2+N3
-- index: 8
+- index: 11
   title: Adding 3 Numbers to and over 100
   text: >-
     @PP1 bought a big bag of candy. The bag had @N1 blue candies, @N2 red
     candies and @N3 green candies. How many candies were there in total?
   sol: N1+N2+N3
-- index: 11
+- index: 12
   title: Subtracting to 100
   text: >-
     @PG1 has @N1 pieces of gum to share with her friends. When she went to the
@@ -80,98 +80,98 @@
     shared another @N3 pieces of bubble gum. How many pieces of gum does @PG1
     have now?
   sol: R+N2+N3=N1
-- index: 12
+- index: 13
   title: Subtracting Slightly over 100
   text: >-
     Your team scored a total of @N1 to 90 points. @N2 points were scored in the
     first half. How many were scored in the second half?
   sol: R+N2=N1
-- index: 13
+- index: 14
   title: 'Subtracting to 1,000'
   text: >-
     @PB1 has an ant farm. He decided to sell some of his ants. He started
     with @N1 ants. He sold @N2. How many ants does he have now?
   sol: R+N2=N1
-- index: 14
+- index: 15
   title: 'Subtracting to and over 10,000'
   text: >-
     The hobby store normally sells @N1 trading cards per month. In July,
     the hobby store sold a total of @N2 trading cards. How many more trading
     cards did the hobby store sell in July compared with a normal month?
   sol: R+N1=N2
-- index: 15
+- index: 16
   title: Subtracting 3 Numbers
   text: >-
     @PG1 had a pack of @N1 pencil crayons. She gave @N2 to her friend @PP2.
     She gave @N3 to her friend @PP3. How many pencil crayons does @PG1 have
     left?
   sol: R+N2+N3=N1
-- index: 16
+- index: 17
   title: Subtracting 3 Numbers to and over 100
   text: >-
     @PG1 bought a big bag of candy to share with her friends. In total, there
     were @N1 candies. She gave @N2 candies to @PG2. She also gave @N3
     candies to @PG3. How many candies were left?
   sol: R+N2+N3=N1
-- index: 17
+- index: 18
   title: Multiplying 1-Digit Integers
   sol: N1*N2
   text: >-
     @PG1 needs to cut a pan of brownies into pieces. She cuts @N1 even columns
     and @N2 even rows into the pan. How many brownies does she have?
-- index: 18
+- index: 19
   title: Multiplying 2-Digit Integers
   text: >-
     A movie theatre has @N1 rows of seats with @N2 seats in each row. How many
     seats are there in total?
   sol: N1*N2
-- index: 19
+- index: 20
   title: Multiplying Integers Ending with 0
   text: >-
     A clothing company has @N1 different kinds of sweatshirts. Each year, the
     company makes @N2 of each kind of sweatshirt. How many sweatshirts does the
     company make each year?
   sol: N1*N2
-- index: 20
+- index: 21
   title: Multiplying 3 Integers
   text: >-
     A bricklayer stacks bricks in @N1 rows, with @N2 bricks in each row. In
     each place, there is a stack of @N3 bricks. How many bricks are there
     in total?
   sol: N1*N2*N3
-- index: 21
+- index: 22
   title: Multiplying 4 Integers
   text: >-
     @PG1 earns @N1 an hour by delivering newspapers. She delivers newspapers
     @N2 days each week, for @N3 hours at a time. After delivering newspapers
     for @N4 weeks, how much money will @PG1 earn?
   sol: N1*N2*N3*N4
-- index: 22
+- index: 23
   title: Dividing 1-Digit Integers
   text: >-
     If you have @N1 pieces of candy split evenly into @N2 bags, how many
     pieces of candy are in each bag?
   sol: R*N2=N1
-- index: 23
+- index: 24
   title: Dividing 2-Digit Integers
   text: >-
     If you have @N1 tickets for the fair and each ride costs @N2 tickets, how
     many rides can you go on?
   sol: R*N2=N1
-- index: 24
+- index: 25
   level: 2
   title: Dividing Numbers Ending with 0
   text: >-
     The school has $@N1 to buy new computer equipment. If each piece of
     equipment costs $@N2, how many pieces can the school buy in total?
   sol: R*N2+n2=N1
-- index: 25
+- index: 26
   title: Dividing 2 Integers
   text: >-
     @PP1 buys @N1 packs of tennis balls for $@N2 in total. How much does 1 pack 
     of tennis balls cost? 
   sol: R*N1=N2
-- index: 26
+- index: 27
   title: Irrelevant information
   level: 2
   text: >-
@@ -179,13 +179,13 @@
     are @N3 tennis balls. How much does 1 tennis ball cost?
   #2 packs for $12, each pack has 3 balls, total is 6 balls => 1 ball costs r=12/6 but 6 has to be multiple of 2!
   sol: N4*N1=N3 => R*N3=N2
-- index: 27
+- index: 28
   title: Mixing Addition and Subtraction
   text: >-
     There are @N1 books in a library. On Monday, @N2 books are taken out. On
     Tuesday, @N3 books are brought back. How many books are there now?
   sol: N3+N4=N2 => N2+N5=N1 => N1-N2+N3
-- index: 28
+- index: 29
   title: Mixing Multiplication and Division
   level: 3
   text: >-
@@ -193,14 +193,14 @@
     @N2 slices and each pizza has @N3 slices, how many pizzas should they
     order?
   sol: Math.ceil(N1*N2/N3)
-- index: 29
+- index: 30
   title: 'Mixing Multiplication, Addition and Subtraction'
   level: 2
   text: >-
     @PG1 has @n3 bags with @n4 marbles in each bag. @PP2 has @N3 bags with
     @N4 marbles in each bag. How many more marbles does @PP2 have?
   sol: N3*N4=N5 => n3*n4=N6 => N5-N6
-- index: 30
+- index: 31
   title: 'Mixing Division, Addition and Subtraction'
   level: 3
   text: >-
@@ -208,13 +208,13 @@
     marbles. @PP2 has @N3 bags with the same amount of marbles in them,
     totaling @N5 marbles. How many more marbles does @PP2 have in each bag?
   sol: N3*N4=N5 => n3*n4=N6 => N4-n4
-- index: 31
+- index: 32
   title: Counting to Preview Multiplication
   text: >-
     There are @N1 chalkboards in your classroom. If each chalkboard needs @N2
     pieces of chalk, how many pieces do you need in total?
   sol: N1*N2
-- index: 32
+- index: 33
   level: 3
   title: Counting to Preview Division
   text: >-
@@ -223,111 +223,123 @@
     take @D4 piece of chalk away from each chalkboard, how many will there be
     in total?
   sol: D4+D5=N2 => n2*N2=N3 => n2*D5
-- index: 33
+- index: 34
   title: Composing Numbers
   text: 'What number is @D1 tens and @D2 ones?'
   sol: D1*10+D2
-- index: 34
+- index: 35
   title: Guessing Numbers
   text: >-
-    I have a @D1 in the tens place. I have an even number > 0 in the ones place. I
+    I have a @D1 in the tens place. I have an even number > @D3 in the ones place. I
     am lower than @N2. What number am I?
-  sol: D1*10+2+2=N2 => D1*10+2
-# ************ HERE *******************
-- index: 35
+  sol: D1*10+D3{0,2,4}+4=N2 => D1*10+D3+2
+- index: 36
   title: Finding the Order
   text: >-
     In the hockey game, @PP1 scored more points than @PP2 but fewer points
     than @PP3. Who scored the most points?
   sol: p@PP3
-- index: 36
+- index: 37
   title: Finding Fractions of a Group
   text: >-
-    Julia went to @N1 houses on her street for Halloween. @N2 of the houses
-    gave her a chocolate bar. What fraction of houses on Julia’s street gave her
+    @PG1 had @N1 final exams. She passed @N2 of the exams. What percent of exams did she pass?
+  sol: N2+N3=N1 => Math.round(N2*100/N1)
+- index: 38
+  title: Finding Fractions of a Group
+  text: >-
+    @PG1 went to @N1 houses on her street for Halloween. @N2 of the houses
+    gave her a chocolate bar. What fraction of houses on @PG1 ’s street gave her
     a chocolate bar?
-  sol: simplifyFraction(@N2(3,8),@N1(12,24))
-- index: 37
+  sol: F1(D2,D1) => D2*D3=N2 => D1*D3=N1
+- index: 39
   title: Finding Unit Fractions
   text: >-
-    Heather is painting a portrait of her best friend, Lisa. To make it easier,
-    she divides the portrait into @N1 equal parts. What fraction represents
+    @PG1 is painting a portrait of her best friend, @PG2. To make it easier,
+    she divides the portrait into @D2 equal parts. What fraction represents
     each part of the portrait?
-  sol: simplifyFraction(1,@N1(2,8,2))
-- index: 38
+  sol: F1(1,D2) => D1=1
+- index: 40
   title: Adding Fractions with Like Denominators
   text: >-
-    Noah walks {F1/@N1 of a kilometre to school each day. He also walks {F1/@N1 of
+    @PB1 walks @F1 of a kilometre to school each day. He also walks @F1 of
     a kilometre to get home after school. How many kilometres does he walk in
     total?
-  sol: simplifyFraction(2,@N1(2,3,4,5,6,8))
-- index: 39
+  sol: F1(1,D2) => math.multiply(2,F1)
+- index: 41
   title: Subtracting Fractions with Like Denominators
   text: >-
-    Last week, Whitney counted the number of juice boxes she had for school
-    lunches. She had {F@N1/@N2 of a case. This week, it’s down to {F1/@N2 of a case.
-    How much of the case did Whitney drink?
-  sol: simplifyFraction(@N1(3,3)-1,@N2(8,4,5))
-- index: 40
+    Last week, @PG1 counted the number of juice boxes she had for school
+    lunches. She had @F1 of a case. This week, it’s down to @F2 of a case.
+    How much of the case did @PG1 drink?
+  sol: D2+D3=N1 => D2+D3+N1=N4 => F1(N1,N4) => F2(D2,N4) => F3(D3,N4)
+- index: 42
   title: Fraction Adding Whole Numbers and Fractions with Like Denominators
   text: >-
-    At lunchtime, an ice cream parlor served @N1 {F@N3/@N2 scoops of chocolate ice
-    cream, @N4 {F{N5/@N2 scoops of vanilla and {N6 {F{N7/@N2 scoops of strawberry.
+    At lunchtime, an ice cream parlor served @D5 @F1 scoops of chocolate ice
+    cream and @D6 @F2 scoops of vanilla ice cream.
     How many scoops of ice cream did the parlor serve in total?
-  sol: simplifyFraction(((@N1*@N2+@N3)+(@N4*@N2+{N5)+({N6*@N2+{N7)),@N2)
-- index: 41
+  sol: F1(D1,D2) => F2(D3,D2) => D5+D6=N4 => D2*N4=N5 => F4(N5,D2) => math.add(F1,F2,F4)
+- index: 43
+  title: Fraction Adding Whole Numbers and Fractions with Like Denominators
+  text: >-
+    At lunchtime, an ice cream parlor served @D5 @F1 scoops of chocolate ice
+    cream, @D6 @F2 scoops of vanilla and @D7 @F3 scoops of strawberry.
+    How many scoops of ice cream did the parlor serve in total?
+  sol: F1(D1,D2) => F2(D3,D2) => F3(D4,D2) => D5+D6+D7=N4 => D2*N4=N5 => F4(N5,D2) => math.add(F1,F2,F3,F4)
+- index: 44
   title: Subtracting Whole Numbers and Fractions with Like Denominators
   text: >-
-    For a party, @PP1 had @N1 {F1/@N2 bottles of cola for her friends to drink.
-    She drank {F1/@N2 of a bottle herself. Her friends drank @N2 {F1/@N2. How
-    many bottles of cola does @PP1 have left?
-  sol: simplifyFraction(@N2+@N1(3,3)-1,@N2(8,4,5))
-- index: 42
+    For a party, @PG1 had @N1 bottles of cola for her friends to drink.
+    They drank @D4 @F1. How many bottles of cola does @PG1 have left?
+  sol: D1+D2=D3 => F1(D1,D3) => F2(D2,D3) => D4+D5+1=N1 => D5*D3+D2=D6 => F4(D6,D3)
+- index: 45
   title: Fraction Adding Fractions with Unlike Denominators
   text: >-
-    Kevin completed {Fa/b of an assignment at school. When he was home that
-    evening, he completed {Fe/h of another assignment. How many assignments did
+    @PB1 completed @F1 of an assignment at school. When he was home that
+    evening, he completed @F2 of another assignment. How many assignments did
     Kevin complete?
-- index: 43
-  title: Subtracting Fractions with Unlike Denominators
-  text: >-
-    Packing school lunches for her kids, Patty used {Fg/h of a package of ham.
-    She also used {Fa/b of a package of turkey. How much more ham than turkey
-    did Patty use?
-- index: 44
-  title: Multiplying Fractions
-  text: >-
-    During gym class on Wednesday, the students ran for {Fa/d of a kilometre.
-    On Thursday, they ran {Fa/b as many kilometres as on Wednesday. How many
-    kilometres did the students run on Thursday? Write your answer as a
-    fraction.
-- index: 45
-  title: Dividing Fractions
-  text: >-
-    A clothing manufacturer uses {Fa/e of a bottle of colour dye to make one
-    pair of pants. The manufacturer used {Fd/e of a bottle yesterday. How many
-    pairs of pants did the manufacturer make?
+  sol: F1(D1,D2) => F2(D3,D4) => math.add(F1,F2)
 - index: 46
   title: Multiplying Fractions with Whole Numbers
   text: >-
-    Mark drank {Fe/f of a carton of milk this week. Frank drank @N1 times more
+    Mark drank @F1 of a carton of milk this week. Frank drank @D1 times more
     milk than Mark. How many cartons of milk did Frank drink? Write your answer
     as a fraction, or as a whole or mixed number.
+  sol: F1(D2,D3) => D1*D3=D4 => F2(D4,D3) => math.multiply(F1,F2)
 - index: 47
+  title: Multiplying Fractions
+  text: >-
+    During gym class on Wednesday, the students ran for @F1 of a kilometre.
+    On Thursday, they ran @F2 as many kilometres as on Wednesday. How many
+    kilometres did the students run on Thursday? Write your answer as a
+    fraction.
+  sol: D2{2,3,4} => D4{2,3,4} => F1(D1,D2) =>F2(D3,D4) => math.multiply(F1,F2) 
+- index: 48
+  title: Dividing Fractions
+  text: >-
+    A clothing manufacturer uses @F1 of a bottle of colour dye to make one
+    pair of pants. The manufacturer used @F2 bottles yesterday. How many
+    pairs of pants did the manufacturer make?
+  sol: D2{2,3,4} => F1(D1,D2) => D1*D3=D4 =>F2(D4,D2) => math.divide(F2,F1) 
+- index: 49
   title: Adding Decimals
   text: >-
-    You have @N1 grams of yogurt in your bowl and you add another spoonful of
-    @N2 grams. How much yogurt do you have in total?
-- index: 48
+    You have @N1.@D2 grams of yogurt in your bowl and you add another spoonful of
+    @N3.@D3 grams. How much yogurt do you have in total?
+  sol: Math.round((N1+N3+D2*(0.1)+D3*(0.1))*100)/100
+- index: 50
   title: Subtracting Decimals
   text: >-
-    Gemma had @N1 grams of frosting to make a cake. She decided to use only
-    @N2 grams of the frosting. How much frosting does Gemma have left?
-- index: 49
+    @PG1 had @N1.@D1 grams of frosting to make a cake. She decided to use only
+    @D4.@D2 grams of the frosting. How much frosting does Gemma have left?
+  sol: D4+D5=N1 => Math.round((N1-D4+D1*(0.1)-D2*(0.1))*100)/100
+- index: 51
   title: Multiplying Decimals with Whole Numbers
   text: >-
-    @PP1 walks a total of @N1 kilometres to and from school each day. After
+    @PB1 walks a total of @D1.@D2 kilometres to and from school each day. After
     @N2 days, how many kilometres will he have walked?
+  sol: Math.round( (N2 * (D1 + D2*(0.1)) ) * 100)/100
+# ************ HERE *******************
 - index: 50
   title: Dividing Decimals by Whole Numbers
   text: >-
@@ -804,3 +816,25 @@
     In the hockey game, @PP1 scored more points than @PP2 but fewer points
     than @PP3. Who scored the least points?
   sol: p@PP2
+- index: 46
+  title: Subtracting Fractions with Unlike Denominators
+  text: >-
+    Packing school lunches for her kids, @PG1 used @F1 of a package of ham.
+    She also used @F2 of a package of turkey. How much more ham than turkey
+    did Patty use?
+  sol: D1+1=D6 => D3+1=D5 => F1(D6,D3) => F2(D1,D5) => math.subtract(F1,F2)
+- index: 46
+  title: Multiplying Fractions
+  text: >-
+    During gym class on Wednesday, the students ran for @F1 of a kilometre.
+    On Thursday, they ran @F2 as many kilometres as on Wednesday. How many
+    kilometres did the students run on Thursday? Write your answer as a
+    fraction.
+  sol: F1(D1,D2) =>F2(D3,D4) => math.multiply(F1,F2) 
+- index: 47
+  title: Dividing Fractions
+  text: >-
+    A clothing manufacturer uses @F1 of a bottle of colour dye to make one
+    pair of pants. The manufacturer used @F2 of a bottle yesterday. How many
+    pairs of pants did the manufacturer make?
+  sol: F1(D1,D2) =>F2(D3,D4) => math.divide(F2,F1) 

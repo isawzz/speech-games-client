@@ -1,0 +1,1673 @@
+1st place medal:
+  key: 1st place medal
+  hexcode: 1F947
+  hex: 1F947
+  family: emoNoto
+  text: '&#129351;'
+  type: emo
+  isDuplicate: false
+  w: 125
+  h: 133
+  E: medal
+  D: medaille
+  F: médaille
+  S: medalla
+  C: 勳章
+  cats:
+    - huge
+    - all
+    - nemo
+    - object
+    - objectPlus
+2nd place medal:
+  key: 2nd place medal
+  hexcode: 1F948
+  hex: 1F948
+  family: emoNoto
+  text: '&#129352;'
+  type: emo
+  isDuplicate: false
+  w: 125
+  h: 133
+  E: medal
+  D: medaille
+  F: médaille
+  S: medalla
+  C: 勳章
+  cats:
+    - huge
+    - all
+    - nemo
+    - object
+    - objectPlus
+3rd place medal:
+  key: 3rd place medal
+  hexcode: 1F949
+  hex: 1F949
+  family: emoNoto
+  text: '&#129353;'
+  type: emo
+  isDuplicate: false
+  w: 125
+  h: 133
+  E: medal
+  D: medaille
+  F: médaille
+  S: medalla
+  C: 勳章
+  cats:
+    - huge
+    - all
+    - nemo
+    - object
+    - objectPlus
+Christmas tree:
+  key: Christmas tree
+  hexcode: 1F384
+  hex: 1F384
+  family: emoNoto
+  text: '&#127876;'
+  type: emo
+  isDuplicate: false
+  w: 125
+  h: 133
+  E: christmas
+  D: weihnachten
+  F: noël
+  S: navidad
+  C: 聖誕
+  cats:
+    - huge
+    - all
+    - nemo
+    - object
+    - objectPlus
+Japanese castle:
+  key: Japanese castle
+  hexcode: 1F3EF
+  hex: 1F3EF
+  family: emoNoto
+  text: '&#127983;'
+  type: emo
+  isDuplicate: false
+  w: 125
+  h: 133
+  E: japanese house
+  D: japanisches haus
+  F: maison japonaise
+  S: casa japonesa
+  C: 日本房子
+  cats:
+    - huge
+    - all
+    - nemo
+OK hand:
+  key: OK hand
+  hexcode: 1F44C
+  hex: 1F44C-1F3FC
+  family: emoNoto
+  text: '&#128076;'
+  type: emo
+  isDuplicate: false
+  w: 125
+  h: 133
+  E: ok
+  D: ok
+  F: d'accord
+  S: okay
+  C: 行
+  cats:
+    - huge
+    - all
+    - nemo
+    - emo
+Santa Claus:
+  key: Santa Claus
+  hexcode: 1F385
+  hex: 1F385
+  family: emoNoto
+  text: '&#127877;'
+  type: emo
+  isDuplicate: false
+  w: 125
+  h: 133
+  E: santa claus
+  D: weihnachtsmann
+  F: le père noël
+  S: papá noel
+  C: 聖誕老人
+  cats:
+    - huge
+    - all
+    - nemo
+Statue of Liberty:
+  key: Statue of Liberty
+  hexcode: 1F5FD
+  hex: 1F5FD
+  family: emoNoto
+  text: '&#128509;'
+  type: emo
+  isDuplicate: false
+  w: 125
+  h: 133
+  E: statue
+  D: statue
+  F: statue
+  S: estatua
+  C: 雕像
+  cats:
+    - huge
+    - all
+    - nemo
+T-Rex:
+  key: T-Rex
+  hexcode: 1F996
+  hex: 1F996
+  family: emoNoto
+  text: '&#129430;'
+  type: emo
+  isDuplicate: false
+  w: 125
+  h: 133
+  E: dinosaur
+  D: dinosaurier
+  F: dinosaure
+  S: dinosaurio
+  C: 恐龍
+  cats:
+    - huge
+    - all
+    - nemo
+    - life
+    - lifePlus
+alembic:
+  key: alembic
+  hexcode: '2697'
+  hex: '2697'
+  family: emoNoto
+  text: '&#9879;'
+  type: emo
+  isDuplicate: false
+  w: 125
+  h: 133
+  E: chemistry
+  D: chemie
+  F: chimie
+  S: química
+  C: 化學
+  cats:
+    - huge
+    - all
+    - nemo
+    - object
+    - objectPlus
+alien monster:
+  key: alien monster
+  hexcode: 1F47E
+  hex: 1F47E
+  family: emoNoto
+  text: '&#128126;'
+  type: emo
+  isDuplicate: false
+  w: 125
+  h: 133
+  E: alien
+  D: außerirdischer
+  F: extraterrestre
+  S: extraterrestre
+  C: 外星人
+  cats:
+    - huge
+    - all
+    - emo
+anatomical heart:
+  key: anatomical heart
+  hexcode: 1FAC0
+  hex: 1FAC0
+  family: emoNoto
+  text: '&#129728;'
+  type: emo
+  isDuplicate: false
+  w: 125
+  h: 133
+  E: heart
+  D: herz
+  F: coeur
+  S: corazón
+  C: 心
+  cats:
+    - huge
+    - all
+    - nemo
+anger symbol:
+  key: anger symbol
+  hexcode: 1F4A2
+  hex: 1F4A2
+  family: emoNoto
+  text: '&#128162;'
+  type: emo
+  isDuplicate: false
+  w: 125
+  h: 133
+  E: mad
+  D: wütend
+  F: furieux
+  S: enojado
+  C: 狂
+  cats:
+    - huge
+    - all
+    - emo
+angry face:
+  key: angry face
+  hexcode: 1F620
+  hex: 1F620
+  family: emoNoto
+  text: '&#128544;'
+  type: emo
+  isDuplicate: false
+  w: 125
+  h: 133
+  E: angry
+  D: wütend
+  F: fâché
+  S: enojado
+  C: 憤怒
+  cats:
+    - huge
+    - all
+    - emo
+angry face with horns:
+  key: angry face with horns
+  hexcode: 1F47F
+  hex: 1F47F
+  family: emoNoto
+  text: '&#128127;'
+  type: emo
+  isDuplicate: false
+  w: 125
+  h: 133
+  E: devil
+  D: teufel
+  F: diable
+  S: diablo
+  C: 魔鬼
+  cats:
+    - huge
+    - all
+    - emo
+anguished face:
+  key: anguished face
+  hexcode: 1F627
+  hex: 1F627
+  family: emoNoto
+  text: '&#128551;'
+  type: emo
+  isDuplicate: false
+  w: 125
+  h: 133
+  E: anguished
+  D: gequält
+  F: angoissé
+  S: angustiado
+  C: 痛苦的
+  cats:
+    - huge
+    - all
+    - emo
+beating heart:
+  key: beating heart
+  hexcode: 1F493
+  hex: 1F493
+  family: emoNoto
+  text: '&#128147;'
+  type: emo
+  isDuplicate: false
+  w: 125
+  h: 133
+  E: pulse
+  D: impuls
+  F: impulsion
+  S: legumbres
+  C: 脈衝
+  cats:
+    - huge
+    - all
+    - emo
+bell with slash:
+  key: bell with slash
+  hexcode: 1F515
+  hex: 1F515
+  family: emoNoto
+  text: '&#128277;'
+  type: emo
+  isDuplicate: false
+  w: 125
+  h: 133
+  E: mute
+  D: stumm
+  F: muet
+  S: mudo
+  C: 靜音
+  cats:
+    - huge
+    - all
+    - nemo
+    - object
+    - objectPlus
+bento box:
+  key: bento box
+  hexcode: 1F371
+  hex: 1F371
+  family: emoNoto
+  text: '&#127857;'
+  type: emo
+  isDuplicate: false
+  w: 125
+  h: 133
+  E: bento box
+  D: bento-box
+  F: boîte à bento
+  S: caja bento
+  C: 便當盒
+  cats:
+    - huge
+    - all
+    - nemo
+bunny ears:
+  key: bunny ears
+  hexcode: 1F46F
+  hex: 1F46F
+  family: emoNoto
+  text: '&#128111;'
+  type: emo
+  isDuplicate: false
+  w: 125
+  h: 133
+  E: bunny ears
+  D: hasenohren
+  F: oreilles de lapin
+  S: orejas de conejo
+  C: 兔子耳朵
+  cats:
+    - huge
+    - all
+    - nemo
+bust in silhouette:
+  key: bust in silhouette
+  hexcode: 1F464
+  hex: 1F464-1F3FC
+  family: emoNoto
+  text: '&#128100;'
+  type: emo
+  isDuplicate: false
+  w: 125
+  h: 133
+  E: bust
+  D: büste
+  F: buste
+  S: busto
+  C: 胸圍
+  cats:
+    - huge
+    - all
+    - nemo
+busts in silhouette:
+  key: busts in silhouette
+  hexcode: 1F465
+  hex: 1F465-1F3FC
+  family: emoNoto
+  text: '&#128101;'
+  type: emo
+  isDuplicate: false
+  w: 125
+  h: 133
+  E: bust
+  D: büste
+  F: buste
+  S: busto
+  C: 胸圍
+  cats:
+    - huge
+    - all
+    - nemo
+cat with tears of joy:
+  key: cat with tears of joy
+  hexcode: 1F639
+  hex: 1F639
+  family: emoNoto
+  text: '&#128569;'
+  type: emo
+  isDuplicate: false
+  w: 125
+  h: 133
+  E: tear
+  D: reißen
+  F: larme
+  S: lágrima
+  C: 眼淚
+  cats:
+    - huge
+    - all
+    - emo
+cat with wry smile:
+  key: cat with wry smile
+  hexcode: 1F63C
+  hex: 1F63C
+  family: emoNoto
+  text: '&#128572;'
+  type: emo
+  isDuplicate: false
+  w: 125
+  h: 133
+  E: smile
+  D: lächeln
+  F: sourire
+  S: sonreír
+  C: 微笑
+  cats:
+    - huge
+    - all
+    - emo
+elf:
+  key: elf
+  hexcode: 1F9DD
+  hex: 1F9DD
+  family: emoNoto
+  text: '&#129501;'
+  type: emo
+  isDuplicate: false
+  w: 125
+  h: 133
+  E: elf
+  D: elf
+  F: elfe
+  S: duende
+  C: 小精靈
+  cats:
+    - huge
+    - all
+    - nemo
+dashing away:
+  key: dashing away
+  hexcode: 1F4A8
+  hex: 1F4A8
+  family: emoNoto
+  text: '&#128168;'
+  type: emo
+  isDuplicate: false
+  w: 125
+  h: 118
+  E: fast
+  D: schnell
+  F: vite
+  S: rápido
+  C: 快速
+  cats:
+    - huge
+    - all
+    - emo
+deaf person:
+  key: deaf person
+  hexcode: 1F9CF
+  hex: 1F9CF-1F3FC
+  family: emoNoto
+  text: '&#129487;'
+  type: emo
+  isDuplicate: false
+  w: 125
+  h: 133
+  E: deaf
+  D: taub
+  F: sourd
+  S: sordos
+  C: 聾
+  cats:
+    - huge
+    - all
+    - nemo
+    - emo
+cyclone:
+  key: cyclone
+  hexcode: 1F300
+  hex: 1F300
+  family: emoNoto
+  text: '&#127744;'
+  type: emo
+  isDuplicate: false
+  w: 125
+  h: 133
+  E: cyclone
+  D: zyklon
+  F: cyclone
+  S: ciclón
+  C: 氣旋
+  cats:
+    - huge
+    - all
+    - nemo
+    - object
+    - objectPlus
+exploding head:
+  key: exploding head
+  hexcode: 1F92F
+  hex: 1F92F
+  family: emoNoto
+  text: '&#129327;'
+  type: emo
+  isDuplicate: false
+  w: 125
+  h: 133
+  E: shocked
+  D: schockiert
+  F: sous le choc
+  S: conmocionado
+  C: 震驚
+  cats:
+    - huge
+    - all
+    - emo
+face without mouth:
+  key: face without mouth
+  hexcode: 1F636
+  hex: 1F636
+  family: emoNoto
+  text: '&#128566;'
+  type: emo
+  isDuplicate: false
+  w: 125
+  h: 133
+  E: no mouth
+  D: kein mund
+  F: pas de bouche
+  S: sin boca
+  C: 沒有嘴
+  cats:
+    - huge
+    - all
+    - emo
+fallen leaf:
+  key: fallen leaf
+  hexcode: 1F342
+  hex: 1F342
+  family: emoNoto
+  text: '&#127810;'
+  type: emo
+  isDuplicate: false
+  w: 125
+  h: 133
+  E: autumn
+  D: herbst
+  F: l'automne
+  S: otoño
+  C: 秋季
+  cats:
+    - huge
+    - all
+    - nemo
+    - life
+    - lifePlus
+fearful face:
+  key: fearful face
+  hexcode: 1F628
+  hex: 1F628
+  family: emoNoto
+  text: '&#128552;'
+  type: emo
+  isDuplicate: false
+  w: 125
+  h: 133
+  E: anguished
+  D: gequält
+  F: angoissé
+  S: angustiado
+  C: 痛苦的
+  cats:
+    - huge
+    - all
+    - emo
+face with steam from nose:
+  key: face with steam from nose
+  hexcode: 1F624
+  hex: 1F624
+  family: emoNoto
+  text: '&#128548;'
+  type: emo
+  isDuplicate: false
+  w: 125
+  h: 133
+  E: steaming
+  D: schnauben
+  F: fumant
+  S: humeante
+  C: 蒸
+  cats:
+    - huge
+    - all
+    - emo
+crying cat:
+  key: crying cat
+  hexcode: 1F63F
+  hex: 1F63F
+  family: emoNoto
+  text: '&#128575;'
+  type: emo
+  isDuplicate: false
+  w: 125
+  h: 133
+  E: crying cat
+  D: weinende katze
+  F: chat qui pleure
+  S: gato llorando
+  C: 哭貓
+  cats:
+    - huge
+    - all
+    - emo
+eye in speech bubble:
+  key: eye in speech bubble
+  hexcode: 1F441-FE0F-200D-1F5E8-FE0F
+  hex: 1F441-FE0F-200D-1F5E8-FE0F
+  family: emoNoto
+  text: '&#128065;&#65039;&#8205;&#128488;&#65039;'
+  type: emo
+  isDuplicate: false
+  w: 125
+  h: 133
+  E: speech balloon
+  D: sprechblase
+  F: bulle de dialogue
+  S: globo de discurso
+  C: 語音氣球
+  cats:
+    - huge
+    - all
+    - emo
+'woman: blond hair':
+  key: 'woman: blond hair'
+  hexcode: 1F471-200D-2640-FE0F
+  hex: 1F471-1F3FC-200D-2640-FE0F
+  family: emoNoto
+  text: '&#128113;&#8205;&#9792;&#65039;'
+  type: emo
+  isDuplicate: false
+  w: 125
+  h: 133
+  E: blond
+  D: blond
+  F: blond
+  S: rubio
+  C: 金發
+  cats:
+    - huge
+    - all
+    - nemo
+'woman: curly hair':
+  key: 'woman: curly hair'
+  hexcode: 1F469-200D-1F9B1
+  hex: 1F469-1F3FC-200D-1F9B1
+  family: emoNoto
+  text: '&#128105;&#8205;&#129457;'
+  type: emo
+  isDuplicate: false
+  w: 125
+  h: 133
+  E: curls
+  D: locken
+  F: boucles
+  S: chinos
+  C: 捲髮
+  cats:
+    - huge
+    - all
+    - nemo
+'woman: red hair':
+  key: 'woman: red hair'
+  hexcode: 1F469-200D-1F9B0
+  hex: 1F469-1F3FC-200D-1F9B0
+  family: emoNoto
+  text: '&#128105;&#8205;&#129456;'
+  type: emo
+  isDuplicate: false
+  w: 125
+  h: 133
+  E: woman
+  D: frau
+  F: femme
+  S: mujer
+  C: 女人
+  cats:
+    - huge
+    - all
+    - nemo
+'woman: white hair':
+  key: 'woman: white hair'
+  hexcode: 1F469-200D-1F9B3
+  hex: 1F469-1F3FC-200D-1F9B3
+  family: emoNoto
+  text: '&#128105;&#8205;&#129459;'
+  type: emo
+  isDuplicate: false
+  w: 125
+  h: 133
+  E: white hair
+  D: weisshaarig
+  F: cheveux blancs
+  S: pelo blanco
+  C: 白色的頭髮
+  cats:
+    - huge
+    - all
+    - nemo
+women holding hands:
+  key: women holding hands
+  hexcode: 1F46D
+  hex: 1F46D
+  family: emoNoto
+  text: '&#128109;'
+  type: emo
+  isDuplicate: false
+  w: 125
+  h: 133
+  E: holding hands
+  D: händchen halten
+  F: main dans la main
+  S: tomados de la mano
+  C: 手牽著手
+  cats:
+    - huge
+    - all
+    - nemo
+woozy face:
+  key: woozy face
+  hexcode: 1F974
+  hex: 1F974
+  family: emoNoto
+  text: '&#129396;'
+  type: emo
+  isDuplicate: false
+  w: 125
+  h: 133
+  E: tipsy
+  D: beschwipst
+  F: pompette
+  S: achispado
+  C: 暴躁的
+  cats:
+    - huge
+    - all
+    - emo
+yummy:
+  key: yummy
+  hexcode: 1F60B
+  hex: 1F60B
+  family: emoNoto
+  text: '&#128523;'
+  type: emo
+  isDuplicate: false
+  w: 125
+  h: 133
+  E: smile
+  D: lächeln
+  F: sourire
+  S: sonreír
+  C: 微笑
+  cats:
+    - huge
+    - all
+    - emo
+zombie:
+  key: zombie
+  hexcode: 1F9DF
+  hex: 1F9DF
+  family: emoNoto
+  text: '&#129503;'
+  type: emo
+  isDuplicate: false
+  w: 125
+  h: 133
+  E: zombie
+  D: zombie
+  F: zombi
+  S: zombi
+  C: 殭屍
+  cats:
+    - huge
+    - all
+    - nemo
+e-mail:
+  key: e-mail
+  hexcode: 1F4E7
+  hex: 1F4E7
+  family: emoNoto
+  text: '&#128231;'
+  type: emo
+  isDuplicate: false
+  w: 125
+  h: 133
+  E: message
+  D: botschaft
+  F: message
+  S: mensaje
+  C: 信息
+  cats:
+    - huge
+    - all
+    - nemo
+    - object
+    - objectPlus
+eyes:
+  key: eyes
+  hexcode: 1F440
+  hex: 1F440
+  family: emoNoto
+  text: '&#128064;'
+  type: emo
+  isDuplicate: false
+  w: 125
+  h: 118
+  E: eyes
+  D: augen
+  F: yeux
+  S: ojos
+  C: 眼睛
+  cats:
+    - huge
+    - all
+    - nemo
+face screaming in fear:
+  key: face screaming in fear
+  hexcode: 1F631
+  hex: 1F631
+  family: emoNoto
+  text: '&#128561;'
+  type: emo
+  isDuplicate: false
+  w: 125
+  h: 133
+  E: anguished
+  D: gequält
+  F: angoissé
+  S: angustiado
+  C: 痛苦的
+  cats:
+    - huge
+    - all
+    - emo
+flower playing cards:
+  key: flower playing cards
+  hexcode: 1F3B4
+  hex: 1F3B4
+  family: emoNoto
+  text: '&#127924;'
+  type: emo
+  isDuplicate: false
+  w: 125
+  h: 133
+  E: cards
+  D: karten
+  F: cartes
+  S: tarjetas
+  C: 牌
+  cats:
+    - huge
+    - all
+    - nemo
+    - object
+    - action
+    - objectPlus
+    - actionPlus
+frowning face with open mouth:
+  key: frowning face with open mouth
+  hexcode: 1F626
+  hex: 1F626
+  family: emoNoto
+  text: '&#128550;'
+  type: emo
+  isDuplicate: false
+  w: 125
+  h: 133
+  E: frowning
+  D: stirnrunzeln
+  F: renfrogné
+  S: ceñudo
+  C: 皺著眉頭
+  cats:
+    - huge
+    - all
+    - emo
+heart exclamation:
+  key: heart exclamation
+  hexcode: '2763'
+  hex: '2763'
+  family: emoNoto
+  text: '&#10083;'
+  type: emo
+  isDuplicate: false
+  w: 125
+  h: 133
+  E: heart
+  D: herz
+  F: coeur
+  S: corazón
+  C: 心
+  cats:
+    - huge
+    - all
+    - emo
+hear-no-evil monkey:
+  key: hear-no-evil monkey
+  hexcode: 1F649
+  hex: 1F649
+  family: emoNoto
+  text: '&#128585;'
+  type: emo
+  isDuplicate: false
+  w: 125
+  h: 133
+  E: hear-no-evil
+  D: höre nichts schlechtes
+  F: entendre aucun mal
+  S: no escuchar el mal
+  C: 聽不到邪惡
+  cats:
+    - huge
+    - all
+    - emo
+goblin:
+  key: goblin
+  hexcode: 1F47A
+  hex: 1F47A
+  family: emoNoto
+  text: '&#128122;'
+  type: emo
+  isDuplicate: false
+  w: 125
+  h: 133
+  E: goblin
+  D: kobold
+  F: lutin
+  S: duende
+  C: 小妖精
+  cats:
+    - huge
+    - all
+    - emo
+french fries:
+  key: french fries
+  hexcode: 1F35F
+  hex: 1F35F
+  family: emoNoto
+  text: '&#127839;'
+  type: emo
+  isDuplicate: false
+  w: 125
+  h: 133
+  E: fries
+  D: fritten
+  F: frites
+  S: papas fritas
+  C: 薯條
+  cats:
+    - huge
+    - all
+    - nemo
+fried shrimp:
+  key: fried shrimp
+  hexcode: 1F364
+  hex: 1F364
+  family: emoNoto
+  text: '&#127844;'
+  type: emo
+  isDuplicate: false
+  w: 125
+  h: 133
+  E: shrimp
+  D: garnele
+  F: crevette
+  S: camarón
+  C: 蝦
+  cats:
+    - huge
+    - all
+    - nemo
+grinning cat:
+  key: grinning cat
+  hexcode: 1F63A
+  hex: 1F63A
+  family: emoNoto
+  text: '&#128570;'
+  type: emo
+  isDuplicate: false
+  w: 125
+  h: 133
+  E: chesshire
+  D: schach
+  F: chesshire
+  S: chesshire
+  C: 切斯郡
+  cats:
+    - huge
+    - all
+    - emo
+grinning cat with smiling eyes:
+  key: grinning cat with smiling eyes
+  hexcode: 1F638
+  hex: 1F638
+  family: emoNoto
+  text: '&#128568;'
+  type: emo
+  isDuplicate: false
+  w: 125
+  h: 133
+  E: chesshire
+  D: schach
+  F: chesshire
+  S: chesshire
+  C: 切斯郡
+  cats:
+    - huge
+    - all
+    - emo
+grinning face with sweat:
+  key: grinning face with sweat
+  hexcode: 1F605
+  hex: 1F605
+  family: emoNoto
+  text: '&#128517;'
+  type: emo
+  isDuplicate: false
+  w: 125
+  h: 133
+  E: grin
+  D: grinsen
+  F: sourire
+  S: mueca
+  C: 咧嘴笑
+  cats:
+    - huge
+    - all
+    - emo
+grinning squinting face:
+  key: grinning squinting face
+  hexcode: 1F606
+  hex: 1F606
+  family: emoNoto
+  text: '&#128518;'
+  type: emo
+  isDuplicate: false
+  w: 125
+  h: 133
+  E: grin
+  D: grinsen
+  F: sourire
+  S: mueca
+  C: 咧嘴笑
+  cats:
+    - huge
+    - all
+    - emo
+grinning face with big eyes:
+  key: grinning face with big eyes
+  hexcode: 1F603
+  hex: 1F603
+  family: emoNoto
+  text: '&#128515;'
+  type: emo
+  isDuplicate: false
+  w: 125
+  h: 133
+  E: grin
+  D: grinsen
+  F: sourire
+  S: mueca
+  C: 咧嘴笑
+  cats:
+    - huge
+    - all
+    - emo
+flushed face:
+  key: flushed face
+  hexcode: 1F633
+  hex: 1F633
+  family: emoNoto
+  text: '&#128563;'
+  type: emo
+  isDuplicate: false
+  w: 125
+  h: 133
+  E: flushed
+  D: gespült
+  F: rincé
+  S: enrojecido
+  C: 酡
+  cats:
+    - huge
+    - all
+    - emo
+growing heart:
+  key: growing heart
+  hexcode: 1F497
+  hex: 1F497
+  family: emoNoto
+  text: '&#128151;'
+  type: emo
+  isDuplicate: false
+  w: 125
+  h: 133
+  E: pulse
+  D: impuls
+  F: impulsion
+  S: legumbres
+  C: 脈衝
+  cats:
+    - huge
+    - all
+    - emo
+heart decoration:
+  key: heart decoration
+  hexcode: 1F49F
+  hex: 1F49F
+  family: emoNoto
+  text: '&#128159;'
+  type: emo
+  isDuplicate: false
+  w: 125
+  h: 133
+  E: card
+  D: karte
+  F: carte
+  S: tarjeta
+  C: 卡
+  cats:
+    - huge
+    - all
+    - emo
+last quarter moon:
+  key: last quarter moon
+  hexcode: 1F317
+  hex: 1F317
+  family: emoNoto
+  text: '&#127767;'
+  type: emo
+  isDuplicate: false
+  w: 125
+  h: 133
+  E: moon
+  D: mond
+  F: lune
+  S: luna
+  C: 月亮
+  cats:
+    - huge
+    - all
+    - nemo
+    - object
+    - objectPlus
+kissing face with closed eyes:
+  key: kissing face with closed eyes
+  hexcode: 1F61A
+  hex: 1F61A
+  family: emoNoto
+  text: '&#128538;'
+  type: emo
+  isDuplicate: false
+  w: 125
+  h: 133
+  E: kiss
+  D: kuss
+  F: baiser
+  S: beso
+  C: 吻
+  cats:
+    - huge
+    - all
+    - emo
+kissing face:
+  key: kissing face
+  hexcode: 1F617
+  hex: 1F617
+  family: emoNoto
+  text: '&#128535;'
+  type: emo
+  isDuplicate: false
+  w: 125
+  h: 133
+  E: kiss
+  D: kuss
+  F: baiser
+  S: beso
+  C: 吻
+  cats:
+    - huge
+    - all
+    - emo
+kissing cat:
+  key: kissing cat
+  hexcode: 1F63D
+  hex: 1F63D
+  family: emoNoto
+  text: '&#128573;'
+  type: emo
+  isDuplicate: false
+  w: 125
+  h: 133
+  E: cat
+  D: katze
+  F: chat
+  S: gato
+  C: 親吻貓
+  cats:
+    - huge
+    - all
+    - emo
+older person:
+  key: older person
+  hexcode: 1F9D3
+  hex: 1F9D3-1F3FC
+  family: emoNoto
+  text: '&#129491;'
+  type: emo
+  isDuplicate: false
+  w: 125
+  h: 133
+  E: white hair
+  D: weisshaarig
+  F: cheveux blancs
+  S: pelo blanco
+  C: 白色的頭髮
+  cats:
+    - huge
+    - all
+    - nemo
+old woman:
+  key: old woman
+  hexcode: 1F475
+  hex: 1F475-1F3FC
+  family: emoNoto
+  text: '&#128117;'
+  type: emo
+  isDuplicate: false
+  w: 125
+  h: 133
+  E: old
+  D: alt
+  F: vieux
+  S: viejo
+  C: 白色的頭髮
+  cats:
+    - huge
+    - all
+    - nemo
+old man:
+  key: old man
+  hexcode: 1F474
+  hex: 1F474-1F3FC
+  family: emoNoto
+  text: '&#128116;'
+  type: emo
+  isDuplicate: false
+  w: 125
+  h: 133
+  E: old
+  D: alt
+  F: vieux
+  S: viejo
+  C: 白色的頭髮
+  cats:
+    - huge
+    - all
+    - nemo
+people hugging:
+  hex: 1fac2
+  hexcode: 1fac2
+  key: people hugging
+  text: '&#129730;'
+  type: emo
+  family: emoNoto
+  w: 125
+  h: 118
+  E: hugging
+  D: umarmen
+  F: étreindre
+  S: abrazar
+  C: 擁抱
+  cats:
+    - huge
+    - all
+    - nemo
+person gesturing OK:
+  key: person gesturing OK
+  hexcode: 1F646
+  hex: 1F646-1F3FC
+  family: emoNoto
+  text: '&#128582;'
+  type: emo
+  isDuplicate: false
+  w: 125
+  h: 133
+  E: ok
+  D: ok
+  F: d'accord
+  S: okay
+  C: 行
+  cats:
+    - huge
+    - all
+    - nemo
+    - emo
+person facepalming:
+  key: person facepalming
+  hexcode: 1F926
+  hex: 1F926-1F3FC
+  family: emoNoto
+  text: '&#129318;'
+  type: emo
+  isDuplicate: false
+  w: 125
+  h: 133
+  E: facepalm
+  D: gesichtspalme
+  F: facepalm
+  S: facepalm
+  C: 面容
+  cats:
+    - huge
+    - all
+    - nemo
+    - emo
+person tipping hand:
+  key: person tipping hand
+  hexcode: 1F481
+  hex: 1F481-1F3FC
+  family: emoNoto
+  text: '&#128129;'
+  type: emo
+  isDuplicate: false
+  w: 125
+  h: 133
+  E: sassy
+  D: frech
+  F: impertinent
+  S: descarado
+  C: 厚顏無恥
+  cats:
+    - huge
+    - all
+    - nemo
+    - emo
+pouting cat:
+  key: pouting cat
+  hexcode: 1F63E
+  hex: 1F63E
+  family: emoNoto
+  text: '&#128574;'
+  type: emo
+  isDuplicate: false
+  w: 125
+  h: 133
+  E: pouting cat
+  D: schmollende katze
+  F: chat qui fait la moue
+  S: gato haciendo pucheros
+  C: uting貓
+  cats:
+    - huge
+    - all
+    - emo
+hugging face:
+  key: hugging face
+  hexcode: 1F917
+  hex: 1F917
+  family: emoNoto
+  text: '&#129303;'
+  type: emo
+  isDuplicate: false
+  w: 125
+  h: 133
+  E: hugging
+  D: umarmen
+  F: étreindre
+  S: abrazar
+  C: 擁抱
+  cats:
+    - huge
+    - all
+    - emo
+hundred points:
+  key: hundred points
+  hexcode: 1F4AF
+  hex: 1F4AF
+  family: emoNoto
+  text: '&#128175;'
+  type: emo
+  isDuplicate: false
+  w: 125
+  h: 133
+  E: hundred
+  D: hundert
+  F: cent
+  S: cien
+  C: 百
+  cats:
+    - huge
+    - all
+    - emo
+oden:
+  key: oden
+  hexcode: 1F362
+  hex: 1F362
+  family: emoNoto
+  text: '&#127842;'
+  type: emo
+  isDuplicate: true
+  w: 125
+  h: 133
+  E: kebab
+  D: kebab
+  F: kebab
+  S: brocheta
+  C: 烤肉串
+  cats:
+    - huge
+    - all
+    - nemo
+pleading face:
+  key: pleading face
+  hexcode: 1F97A
+  hex: 1F97A
+  family: emoNoto
+  text: '&#129402;'
+  type: emo
+  isDuplicate: false
+  w: 125
+  h: 133
+  E: pleading
+  D: bitten
+  F: plaidoirie
+  S: suplicando
+  C: 懇求
+  cats:
+    - huge
+    - all
+    - emo
+smirking face:
+  key: smirking face
+  hexcode: 1F60F
+  hex: 1F60F
+  family: emoNoto
+  text: '&#128527;'
+  type: emo
+  isDuplicate: false
+  w: 125
+  h: 133
+  E: smirking
+  D: grinsend
+  F: sourire narquois
+  S: sonriendo
+  C: 傻笑
+  cats:
+    - huge
+    - all
+    - emo
+wind face:
+  key: wind face
+  hexcode: 1F32C
+  hex: 1F32C
+  family: emoNoto
+  text: '&#127788;'
+  type: emo
+  isDuplicate: false
+  E: blow
+  D: schlag
+  F: coup
+  S: soplar
+  C: 打擊
+  cats:
+    - huge
+    - all
+    - nemo
+    - object
+    - objectPlus
+    - travel-places
+    - sky-weather
+weary cat:
+  key: weary cat
+  hexcode: 1F640
+  hex: 1F640
+  family: emoNoto
+  text: '&#128576;'
+  type: emo
+  isDuplicate: false
+  E: tired
+  D: müde
+  F: fatigué
+  S: cansado
+  C: 累
+  cats:
+    - huge
+    - all
+    - emo
+    - smileys-emotion
+    - cat-face
+weary face:
+  key: weary face
+  hexcode: 1F629
+  hex: 1F629
+  family: emoNoto
+  text: '&#128553;'
+  type: emo
+  isDuplicate: false
+  E: weary
+  D: müde
+  F: se lasser
+  S: cansado
+  C: 厭倦
+  cats:
+    - huge
+    - all
+    - emo
+    - smileys-emotion
+    - face-concerned
+waning gibbous moon:
+  key: waning gibbous moon
+  hexcode: 1F316
+  hex: 1F316
+  family: emoNoto
+  text: '&#127766;'
+  type: emo
+  isDuplicate: false
+  E: moon
+  D: mond
+  F: lune
+  S: luna
+  C: 月亮
+  cats:
+    - huge
+    - all
+    - nemo
+    - object
+    - objectPlus
+    - travel-places
+    - sky-weather
+waxing crescent moon:
+  key: waxing crescent moon
+  hexcode: 1F312
+  hex: 1F312
+  family: emoNoto
+  text: '&#127762;'
+  type: emo
+  isDuplicate: false
+  E: moon
+  D: mond
+  F: lune
+  S: luna
+  C: 月亮
+  cats:
+    - huge
+    - all
+    - nemo
+    - object
+    - objectPlus
+    - travel-places
+    - sky-weather
+waxing gibbous moon:
+  key: waxing gibbous moon
+  hexcode: 1F314
+  hex: 1F314
+  family: emoNoto
+  text: '&#127764;'
+  type: emo
+  isDuplicate: false
+  E: moon
+  D: mond
+  F: lune
+  S: luna
+  C: 月亮
+  cats:
+    - huge
+    - all
+    - nemo
+    - object
+    - objectPlus
+    - travel-places
+    - sky-weather
+vulcan salute:
+  key: vulcan salute
+  hexcode: 1F596
+  hex: 1F596-1F3FC
+  family: emoNoto
+  text: '&#128406;'
+  type: emo
+  isDuplicate: false
+  E: vulcan salute
+  D: vulkanischer gruß
+  F: salut vulcain
+  S: saludo vulcano
+  C: 火神致敬
+  cats:
+    - huge
+    - all
+    - nemo
+    - emo
+    - people-body
+    - hand-fingers-open
+upside-down face:
+  key: upside-down face
+  hexcode: 1F643
+  hex: 1F643
+  family: emoNoto
+  text: '&#128579;'
+  type: emo
+  isDuplicate: false
+  E: grin
+  D: grinsen
+  F: sourire
+  S: mueca
+  C: 咧嘴笑
+  cats:
+    - huge
+    - all
+    - emo
+    - smileys-emotion
+    - face-smiling
