@@ -2,29 +2,29 @@
 
 This project provides simple games for speech therapy:
 
-version 1 (added new games):
-- Sentence: order words of a sentence correctly
-- Name It: drag labels to pictures
-- Swap (replacing Sequence): swap letters in 2 words to form correct words
+- Abacus: arithmetic operations
+- Anagram: reorder letters to form a word
 - Category: sort pictures into categories
-- Riddle: solve word problems
-
-version 0:
-- Pictures: click one of multiple pictures given word
 - Colors: identify 2 attributes: content + color 
-- Premem: find similar pictures
-- Memory: memorize one or multiple pictures, after some time, recall it and click
-- Sequence: fill out missing number in a number sequence built using + or - some constant
+- Connect4: well-known strategy game
+- Elim: eliminate pictures / set comprehension
 - Letters: enter missing letters in a word
-- Type it: type a word given picture
+- Memory: memorize one or multiple pictures, after some time, recall it and click
+- Name It: drag labels to pictures
+- Pictures: click one of multiple pictures given word
+- Premem: find similar pictures
+- Reversi: well-known strategy game
+- Riddle: solve word problems
+- Sentence: order words of a sentence correctly
+- Sequence: fill out missing number in a number sequence built using + or - some constant
 - Speak Up: speak a word given picture
 - Steps: multiple instruction in order
-- Elim: eliminate pictures / set comprehension
-- Anagram: reorder letters to form a word
+- Swap (replacing Sequence): swap letters in 2 words to form correct words
+- TicTacToe: well-known strategy game
+- Type it: type a word given picture
 
 run it online:
-- goto: https://isawzz.github.io/speech-games-client/version1/ZAA/
-- goto: https://isawzz.github.io/speech-games-client/version0/SPGAME/
+- goto: https://isawzz.github.io/speech-games-client/YZY/
 
 Note: HAS ONLY BEEN TESTED ON *** GOOGLE CHROME ***
 

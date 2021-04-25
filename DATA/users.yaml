@@ -132,7 +132,7 @@ guest:
     gTouchColors:
       startLevel: 0
     gTouchPic:
-      startLevel: 0
+      startLevel: 3
     gWritePic:
       startLevel: 0
   avAddons: [aPasscode, aAddress, aPassword]

@@ -37,7 +37,7 @@ function loadUser(newUser) {
 	// make sure there are data in DB.users
 	let uData = lookup(DB, ['users', Username]);
 	if (!uData) {
-		if (startsWith(newUser, 'test')) { uData = DB.users[Username] = jsCopy(DB.users.test0); uData.id = Username; }
+		if (isdef(newUser) && startsWith(newUser, 'test')) { uData = DB.users[Username] = jsCopy(DB.users.test0); uData.id = Username; }
 		else { uData = DB.users[Username] = jsCopy(DB.users.guest); uData.id = Username; }
 	}
 	//DB ist jetzt erweitert falls dieser user nicht existiert hat!
