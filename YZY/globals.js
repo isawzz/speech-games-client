@@ -1,4 +1,4 @@
-const BROADCAST_SETTINGS = false;
+const BROADCAST_SETTINGS = true;
 var START_IN_MENU = false; //!BROADCAST_SETTINGS;
 const DEFAULTUSERNAME = 'zoe'; // nil | gul | felix
 

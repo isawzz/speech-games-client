@@ -68,8 +68,8 @@ nil:
       open: false
     aPassword:
       open: false
-guest:
-  id: guest
+guest0:
+  id: guest0
   avGames: [gC4, gElim, gSentence, gReversi, gMissingLetter, gNamit, gTouchPic, gPremem, gTouchColors, gSayPic, gSwap, gMem, gWritePic, gTTT, gSteps, gAnagram, gCats, gAbacus, gRiddle]
   lastGame: gTouchPic
   settings:
