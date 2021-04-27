@@ -1,5 +1,5 @@
 const BROADCAST_SETTINGS = false;
-var START_IN_MENU = false; //!BROADCAST_SETTINGS;
+var START_IN_MENU = !BROADCAST_SETTINGS;
 const DEFAULTUSERNAME = 'gul'; // nil | gul | felix
 
 //#region config
