@@ -1,6 +1,6 @@
 const BROADCAST_SETTINGS = false;
 var START_IN_MENU = false; //!BROADCAST_SETTINGS;
-const DEFAULTUSERNAME = 'zoe'; // nil | gul | felix
+const DEFAULTUSERNAME = 'gul'; // nil | gul | felix
 
 //#region config
 var USE_ADDONS = false;
