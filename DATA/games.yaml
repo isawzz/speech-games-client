@@ -703,4 +703,16 @@ gReversi:
   copyState: true
   startPosition: seq # random | seq
   startPlayer: human  # ai | human | random
+gChess:
+  friendly: Chess
+  logo: 'chess'
+  color: green
+  controllerType: solo
+  numPlayers: 2
+  rows: 8
+  cols: 8
+  searchDepth: 7
+  copyState: true
+  startPosition: seq # random | seq
+  startPlayer: human  # ai | human | random
 

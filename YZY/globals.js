@@ -1,4 +1,4 @@
-const BROADCAST_SETTINGS = false;
+const BROADCAST_SETTINGS = true;
 var START_IN_MENU = !BROADCAST_SETTINGS;
 const DEFAULTUSERNAME = 'gul'; // nil | gul | felix
 

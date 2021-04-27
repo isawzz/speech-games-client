@@ -1,0 +1,28 @@
+.overlayActive{
+	background-color: #00000020;
+	user-select:auto;
+	cursor: pointer;
+}
+.overlayActive:hover{
+	background-color: #00000060;
+	
+}
+.overlayActive:active{
+	background-color: #FFFFFF60;
+	
+}
+.overlaySelected{
+	outline: solid 2px yellow;
+	outline-offset: -2px;
+	/* border: solid 2px #FFFF00; */
+}
+
+
+
+
+
+
+
+
+
+

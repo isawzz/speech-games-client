@@ -1829,10 +1829,19 @@ function arrRotate(arr, count) {
 	unshift.apply(arr1, splice.call(arr1, count % len, len));
 	return arr1;
 }
-function arrCount(arr,func){	let filt=arr.filter(func);	return filt.length;}
+function arrCount(arr, func) { let filt = arr.filter(func); return filt.length; }
 function arrChildren(elem) { return [...elem.children]; }
 function arrCreate(n, func) { let res = []; for (let i = 0; i < n; i++) { res.push(func(i)); } return res; }
 function arrFirst(arr) { return arr.length > 0 ? arr[0] : null; }
+function arrFlatten(arr) {
+	let res = [];
+	for (let i = 0; i < arr.length; i++) {
+		for (let j = 0; j < arr[i].length; j++) {
+			res.push(arr[i][j]);
+		}
+	}
+	return res;
+}
 function arrLast(arr) { return arr.length > 0 ? arr[arr.length - 1] : null; }
 function arrTail(arr) { return arr.slice(1); }
 function arrFromIndex(arr, i) { return arr.slice(i); }
@@ -2153,7 +2162,7 @@ function sameList(l1, l2) {
 	}
 	return true;
 }
-function shuffle(arr) { if (isEmpty(arr)) return [];else return fisherYates(arr); }
+function shuffle(arr) { if (isEmpty(arr)) return []; else return fisherYates(arr); }
 function shuffleChildren(dParent) {
 	let arr = arrChildren(dParent);
 	//console.log(arr);

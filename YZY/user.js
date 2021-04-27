@@ -32,12 +32,12 @@ function loadUser(newUser) {
 	Username = isdef(newUser) ? newUser : localStorage.getItem('user');
 	if (nundef(Username)) Username = DEFAULTUSERNAME;
 
-	console.log('User',Username)
+	//console.log('User',Username)
 	//console.log('U anfang von loadUser', U, '\nDB', DB.users[Username]);
 	// make sure there are data in DB.users
-	let uData = lookup(DB, ['users', Username]);
+	let uData = lookupSet(DB, ['users', Username]);
 	if (!uData) {
-		if (isdef(newUser) && startsWith(newUser, 'test')) { uData = DB.users[Username] = jsCopy(DB.users.test0); uData.id = Username; }
+		if (startsWith(newUser, 'test')) { uData = DB.users[Username] = jsCopy(DB.users.test0); uData.id = Username; }
 		else { uData = DB.users[Username] = jsCopy(DB.users.guest0); uData.id = Username; }
 	}
 	//DB ist jetzt erweitert falls dieser user nicht existiert hat!

@@ -18,6 +18,7 @@ class G2Player {
 		let idx = this.iPlayer = (this.iPlayer + 1) % this.players.length;
 		this.setPlayers();
 	}
+	heuristic(state) { return 1; }
 	setPlayers() {
 		this.plTurn = this.playerOrder[this.iPlayer];
 		this.plOpp = this.plTurn == this.ai ? this.human : this.ai;
@@ -412,6 +413,24 @@ class GReversi extends GTTT {
 		}
 		return winner ? { reached: true, winner: winner } : full ? { reached: true, winner: null } : { reached: false };
 	}
+	heuristic(state, plMax, plMin) {
+		let vmax = 0, vmin = 0;
+		// let corners = [0, G.cols, G.cols * (G.rows - 1), G.cols * G.rows - 1];
+		// let vmax = 0, vmin = 0;
+		// for (const i of corners) {
+		// 	if (state[i] == pl1.sym) vmax += 4;
+		// 	else if (state[i] == pl2.sym) vmin += 4;
+		// }
+		vmax = vmax + arrCount(state, x => x == plMax.sym);
+		vmin = vmin + arrCount(state, x => x == plMin.sym);
+
+		return vmax - vmin;
+	}
+	heureval(state) {
+		let heurinfo = GReversi.heuristic(state, MAXIMIZER, MINIMIZER);
+		let val = heurinfo.val; //* (info.winner == MAXIMIZER ? 1 : -1)
+		return val;
+	}
 	eval() {
 		this.moveCounter += 1;
 		let info = this.checkFinal();
@@ -446,9 +465,11 @@ class GReversi extends GTTT {
 		//shuffle(moves);
 		return moves;
 	}
-	evalState(node, depth) {
-		let info = GReversi.checkEnd(node, MAXIMIZER, MINIMIZER);
-		let val = info.reached && info.winner ? (10 - depth) * (info.winner == MAXIMIZER ? 1 : -1) : 0;
+	evalState(state, depth) {
+		let info = GReversi.checkEnd(state, MAXIMIZER, MINIMIZER);
+
+		let val = info.reached && info.winner ? (100 - depth) * (info.winner == MAXIMIZER ? 1 : -1) : 0;
+
 		return { reached: info.reached, val: val };
 	}
 	applyMove(state, move, player) {
@@ -463,6 +484,196 @@ class GReversi extends GTTT {
 
 	}
 
+}
+
+class GChess extends G2Player {
+	createBoard() {
+		this.board = new ChessBoard(this.rows, this.cols, this.controller.uiInteract.bind(this.controller));
+
+	}
+	setStartPosition() { this.board.setInitialPosition(3); }
+	startGame() {
+		super.startGame();
+		this.createBoard();
+		this.setStartPosition();
+		this.human.color = 'white';
+		this.ai.color = 'black';
+	}
+	interact(ev) {
+		let tile = evToItemC(ev);
+
+		if (isdef(tile.label)) return; //illegal move!
+		let pl = this.plTurn;
+
+		addLabel(tile, pl.sym, { fz: 60, fg: pl.color });
+		this.controller.evaluate(tile);
+	}
+	prompt() {
+		let msg = this.plTurn == this.ai ? 'Ai thinking...' : 'Player on turn:';
+		showInstruction(this.plTurn.color, msg, dTitle, false);
+
+
+		this.controller.activateUi();
+	}
+	getPiece(state, idx) {
+		let arr = state;
+		let pieceKey = arr[idx];
+
+	}
+	getPlayerPieces(state, pl) {
+		let pieces = [];
+		for (let i = 0; i < state.length; i++) {
+			if (state[i][0] == pl.color[0]) {
+				//let [r,c]=
+				pieces.push({ piece: state[i], idx: i });
+				movesPerPiece[i] = Rook.getMoves(state, i, 8, 8);
+				console.log('rook moves for piece', i, movesPerPiece[i]);
+			}
+		}
+	}
+	onSelect(ev) {
+		let item = evToItemC(ev);
+		if (item == this.selectedItem) return;
+		else if (isdef(this.selectedItem)) unselectPreviousItemAndTargets(this.selectedItem);
+		this.selectedItem = selectItemAndTargets(item);
+	}
+	activate() {
+		let pl = this.plTurn;
+		let opp = this.plOpp;
+		let autoplay = false;
+		let manual = true;
+		if (!manual && (autoplay || pl == this.ai)) {
+			if (this.ai == pl) uiActivated = false;
+			//showCancelButton();
+
+			//AIMinimax(this,this.afterComputerMove)		
+			setTimeout(() => AIMinimax(this, this.afterComputerMove.bind(this)), 200);
+
+			//console.log('halloooooooooooooooooo')
+
+			// this.TO = setTimeout(() => {
+			// 	AIMinimax(this,this.afterComputerMove.bind(this));
+			// 	console.log('...sollte das gleich schreiben!!!')
+			// }, 10); //DELAY
+		} else {
+			let state = this.getState();
+			let [plPieces, avMoves] = this.getAvailableMoves(state, pl, opp);
+			if (isEmpty(avMoves)) { this.controller.evaluate(); }
+			else this.activatePiecesThatCanMove(plPieces);
+		}
+	}
+	getAvailableMoves(state, pl, opp) {
+		let plPieces = getMovesPerPiece(state, this.rows, this.cols, pl);
+		for (const p in plPieces) { plPieces[p].avMoves = []; }
+		let avMoves = [];
+		//clearChessPieces();
+		for (const from in plPieces) {
+			for (const to of plPieces[from].moves) {
+				let move = { from: from, to: to };
+				//console.log('checking move',move);
+				let newState = this.applyMove(state, move, pl);
+				//console.log('state',state,'newState',newState);
+				//return;
+				//check if in the new situation, king is in check or not!
+				let isCheck = isKingInCheck(newState, pl, opp, this.rows, this.cols);
+				if (to == 0) console.log('done!', to, isCheck)
+				if (!isCheck) { avMoves.push(move); plPieces[from].avMoves.push(move.to); }
+				//if yes, this move is discarded!
+			}
+		}
+		console.log('avMoves', avMoves);
+		return [plPieces, avMoves];
+	}
+	activateMoves(plPieces, avMoves) {
+		for (const p in plPieces) { this.board.items[p].targets = []; }
+		for (const m of avMoves) {
+			let k = m.from;
+			// let piece = plPieces[k];
+			// piece.avMoves.push(m.to);
+			let item = this.board.items[k];
+			iEnableSelect(item, this.onSelect.bind(this));
+			item.targets.push(m.to);
+		}
+	}
+	activatePiecesThatCanMove(plPieces) {
+		for (const k in plPieces) {
+			let moves = plPieces[k].avMoves;
+			if (isEmpty(moves)) continue;
+
+			// show field bg in darker
+			let item = this.board.items[k];
+			iEnableSelect(item, this.onSelect.bind(this));
+			item.targets = moves;
+		}
+	}
+	afterComputerMove(iMove) {
+		//console.log('CALLBACK!!!', iMove)
+		//hide(mBy('bCancelAI'));
+		let tile = this.board.items[iMove];
+		this.interact({ target: iDiv(tile) });
+	}
+	eval() {
+		//let sym = this.plTurn.sym;
+		//console.log('eval: state',state,'sym',sym,'label',tile.label);
+		let done = this.checkFinal();
+		this.gameOver = done > 0;
+		if (this.gameOver) { this.winner = done > 1 ? this.plTurn : null; this.tie = done == 1; }
+	}
+
+	checkFinal(state) {
+		return false;
+		if (nundef(state)) state = this.getState();
+		let isTie = false;
+		let isWin = checkWinnerTTT(state);
+		if (!isWin) { isTie = checkBoardFull(state) || !checkPotentialTTT(state); }
+		return isWin ? 2 : isTie ? 1 : 0;
+	}
+	getState() { return this.board.getState(); }
+
+	//static mm functions
+	//state is modified by player doing move
+	applyMove(state, move, player) {
+		state = jsCopy(state);
+		let from = move.from;
+		let to = move.to;
+		state[to] = state[from];
+		state[from] = null;
+		return state;
+	}
+	undoMove(state, move, player) { arrReplaceAtInPlace(state, move, ' '); }
+	heuristic1(node, depth) { }
+	evalState(node, depth) {
+		let x = checkWinnerTTT(node);
+		if (checkBoardFull(node) || x) {
+			//var score = x;
+			return { reached: true, val: (!x ? 0 : (10 - depth) * (x == MAXIMIZER.sym ? 1 : -1)) };
+			// return evalState8(node, depth);
+		}
+		return { reached: false };
+	}
+	evalStateL(node, depth) {
+		let key = node.join('');
+		let val = DMM[key];
+		let x = isdef(val) ? val : checkWinnerTTT(node);
+		DMM[key] = x;
+		if (checkBoardFull(node) || x) {
+			return { reached: true, val: (!x ? 0 : (10 - depth) * (x == MAXIMIZER.sym ? 1 : -1)) };
+		}
+		return { reached: false };
+	}
+	evalStateL2(node, depth) {
+		let full = checkBoardFull(node);
+		if (full) {
+			let key = JSON.stringify(node);
+			let x = DMM[key];
+			if (nundef(x)) DMM[key] = x = checkWinnerTTT(node);
+			return { reached: true, val: (!x ? 0 : (10 - depth) * (x == MAXIMIZER.sym ? 1 : -1)) };
+		} else {
+			let x = checkWinnerTTT(node);
+			if (x) return { reached: true, val: (!x ? 0 : (10 - depth) * (x == MAXIMIZER.sym ? 1 : -1)) };
+			return { reached: false };
+		}
+	}
 }
 
 

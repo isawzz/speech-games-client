@@ -177,6 +177,16 @@ function modifyColorkey(item) {
 	applyColorkey(item);
 }
 function makeItemDivs(items, options) { for (let i = 0; i < items.length; i++) { makeItemDiv(items[i], options) } }
+function makeItemHintable(item){
+	let d=iDiv(item);
+	let dov=mDiv100(d);
+	let rect = getRect(d);
+	mStyleX(dov,{position:'absolute',w:rect.w,h:rect.h})
+	iAdd(item,{overlay:dov});
+	dov.style.userSelect = 'none';
+}
+function iHighlight(item){let d=iDov(item);mClass(d,'overlaySelected');}
+function iDov(item){return isdef(item.live)?item.live.overlay:null;}
 function makeItemDiv(item, options) {
 
 	//console.log('item',item,'options',options)

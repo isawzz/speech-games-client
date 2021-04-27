@@ -20,12 +20,13 @@ function bNei(arr, idx, rows, cols, includeDiagonals = true) {
 
 }
 function iToRowCol(idx, rows, cols) { let c = idx % cols; let r = (idx - c) / rows; return [r, c]; }
-function bNeiDir(arr, idx, dir, rows, cols, includeDiagonals=true) {
+function bCheck(r, c, rows, cols) { return r >= 0 && r < rows && c >= 0 && c < cols ? r * cols + c : null; }
+function bNeiDir(arr, idx, dir, rows, cols, includeDiagonals = true) {
 	let [r, c] = iToRowCol(idx, rows, cols);
 	switch (dir) {
 		case 0: if (r > 0) return (idx - cols); else return (null);
 		case 1: if (r > 0 && c < cols - 1 && includeDiagonals) return (idx - cols + 1); else return (null);
-		case 2: if (c < cols - 1) return (idx+ 1); else return (null);
+		case 2: if (c < cols - 1) return (idx + 1); else return (null);
 		case 3: if (r < rows - 1 && c < cols - 1 && includeDiagonals) return (idx + cols + 1); else return (null);
 		case 4: if (r < rows - 1) return (idx + cols); else return (null);
 		case 5: if (r < rows - 1 && c > 0 && includeDiagonals) return (idx + cols - 1); else return (null);
@@ -34,35 +35,79 @@ function bNeiDir(arr, idx, dir, rows, cols, includeDiagonals=true) {
 	}
 	return null;
 }
+function bRayDir(arr, idx, dir, rows, cols) {
+	let indices = [];
+	let i = idx;
+	while (i < arr.length) {
+		let i = bNeiDir(arr, i, dir, rows, cols);
+		if (!i) break; else indices.push(i);
+	}
+	return indices;
+}
+function bFreeRayDir(arr, idx, dir, rows, cols) {
+	let indices = [];
+	let i = idx;
+	while (i < arr.length) {
+		i = bNeiDir(arr, i, dir, rows, cols);
+		if (!i || !EmptyFunc(arr[i])) break; else indices.push(i);
+	}
+	return indices;
+}
+function bFreeRayDir1(arr, idx, dir, rows, cols) {
+	let indices = [];
+	let i = idx;
+	while (i < arr.length) {
+		i = bNeiDir(arr, i, dir, rows, cols);
+		if (!i) break;
+		else indices.push(i);
+		if (!EmptyFunc(arr[i])) break;
+	}
+	return indices;
+}
+function bFreeRayDirChess1(arr, idx, dir, rows, cols) {
+	let indices = [];
+	let i = idx;
+	while (i < arr.length) {
+		i = bNeiDir(arr, i, dir, rows, cols);
+		if (nundef(i)) break;
+		else if (EmptyFunc(arr[i]) || isOppPieceChess(arr[idx],arr[i])) indices.push(i);
+		if (!EmptyFunc(arr[i])) break;
+	}
+	return indices;
+}
+function isOppPieceChess(iPiece1,iPiece2){	
+	let isCapture =iPiece1<=6 && iPiece2>6 || iPiece1>6 && iPiece2<=6;
+	return isCapture;
+}
 function isOppPiece(sym, plSym) { return sym && sym != plSym; }
 function bCapturedPieces(plSym, arr, idx, rows, cols, includeDiagonals = true) {
 	//console.log('player sym',plSym,'arr',arr,'idx', idx,'rows', rows,'cols', cols);
-	let res=[];
+	let res = [];
 	let nei = bNei(arr, idx, rows, cols, includeDiagonals);
 	//console.log('nei',nei);
 	for (let dir = 0; dir < 8; dir++) {
-		let i=nei[dir];
+		let i = nei[dir];
 		if (nundef(i)) continue;
 
 		let el = arr[i];
 		//console.log('___i',i,'el',el,'checking dir',dir);
 		if (EmptyFunc(el) || el == plSym) continue;
-		let inew=[];
-		let MAX=100,cmax=0;
+		let inew = [];
+		let MAX = 100, cmax = 0;
 
-		while (isOppPiece(el,plSym)) {
+		while (isOppPiece(el, plSym)) {
 			//console.log('index',i,'is opp',el)
-			if (cmax>MAX) break; cmax+=1;
+			if (cmax > MAX) break; cmax += 1;
 			inew.push(i);
-			i=bNeiDir(arr,i,dir,rows,cols);
+			i = bNeiDir(arr, i, dir, rows, cols);
 			//console.log(i,cmax,'dir',dir);
-			if (nundef(i)) break; 
-			el=arr[i];
+			if (nundef(i)) break;
+			el = arr[i];
 			//console.log('i',i,'el',el,'max',cmax);
 		}
-		if (el==plSym) {
+		if (el == plSym) {
 			//add all the captured pieces to res
-			res=res.concat(inew);
+			res = res.concat(inew);
 		}
 	}
 	return res;
@@ -241,7 +286,7 @@ function printState(state) {
 	console.log('%c' + formattedString, 'color: #6d4e42;font-size:10px');
 	console.log();
 }
-function bCreateEmpty(rows,cols){return new Array(rows*cols).fill(null);}
+function bCreateEmpty(rows, cols) { return new Array(rows * cols).fill(null); }
 
 class Board {
 	constructor(rows, cols, handler, cellStyle) {
@@ -256,12 +301,12 @@ class Board {
 		});
 		//console.log(this.items)
 	}
-	get(ir,c){
-		if (isdef(c)){
+	get(ir, c) {
+		if (isdef(c)) {
 			// interpret as row,col
-			let idx=ir*this.cols+c;
+			let idx = ir * this.cols + c;
 			return this.items[idx];
-		}else{
+		} else {
 			//interpret as index
 			return this.items[ir];
 		}
@@ -290,22 +335,7 @@ class Board {
 			if (isdef(dLabel)) { removeLabel(item); item.label = null; }
 		}
 	}
-
 }
-
-function arrFlatten(arr) {
-	let res = [];
-	for (let i = 0; i < arr.length; i++) {
-		for (let j = 0; j < arr[i].length; j++) {
-			res.push(arr[i][j]);
-		}
-	}
-	return res;
-}
-
-
-
-
 
 
 

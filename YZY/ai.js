@@ -23,6 +23,7 @@ function AIMinimax(g, callback) {
 	state = boardToNode(state);
 	//console.log('==>AI search: minimax (maxDepth', g.searchDepth + ')');
 	F_END = g.evalState;
+	F_HEURISTIC = g.heuristic;
 	F_MOVES = g.getAvailableMoves;
 	F_APPLYMOVE = g.applyMove;
 	F_UNDOMOVE = g.undoMove;
@@ -68,7 +69,7 @@ function minimax(node, depth, alpha, beta, maxDepth, maxim) {
 
 function minimaxCopy(node, depth, alpha, beta, maxDepth, maxim) {
 	CCC += 1;
-	if (depth >= maxDepth) return 1;
+	if (depth >= maxDepth) return F_HEURISTIC(node,MAXIMIZER,MINIMIZER);
 	let ec = F_END(node, depth); if (ec.reached) return ec.val;
 	depth += 1;
 	var move, result;
