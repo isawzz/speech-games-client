@@ -71,7 +71,7 @@ nil:
 guest0:
   id: guest0
   avGames: [gSteps, gSentence, gTouchColors, gSayPic, gReversi, gMissingLetter, gNamit, gTouchPic, gWritePic, gChess, gPremem, gMem, gSwap, gTTT, gElim, gAnagram, gCats, gAbacus, gRiddle,gC4]
-  lastGame: gChess
+  lastGame: gSteps
   settings:
     # settings common to all games
     samplesPerGame: 10
@@ -94,7 +94,7 @@ guest0:
 test0:
   id: test0
   avGames: [gSteps, gSentence, gTouchColors, gSayPic, gReversi, gMissingLetter, gNamit, gTouchPic, gWritePic, gChess, gPremem, gMem, gSwap, gTTT, gElim, gAnagram, gCats, gAbacus, gRiddle,gC4]
-  lastGame: gChess
+  lastGame: gSteps
   settings:
     # settings common to all games
     samplesPerGame: 10
@@ -142,7 +142,7 @@ test0:
 gunter:
   id: gunter
   avGames: [gSteps, gSentence, gTouchColors, gSayPic, gReversi, gMissingLetter, gNamit, gTouchPic, gWritePic, gChess, gPremem, gMem, gSwap, gTTT, gElim, gAnagram, gCats, gAbacus, gRiddle,gC4]
-  lastGame: gChess
+  lastGame: gSteps
   settings:
     # settings common to all games
     userColor: blue
