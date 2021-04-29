@@ -486,7 +486,7 @@ class GChess extends G2Player {
 	createBoard() {
 		let d = mDiv(dTable, { h: 500, w: 500 }, 'dChessBoard');
 		let config = {
-			pieceTheme: '/alibs/chessBoard/img/chesspieces/wikipedia/{piece}.png',
+			pieceTheme: '../alibs/chessBoard/img/chesspieces/wikipedia/{piece}.png',
 			draggable: true,
 			onDragStart: this.onDragStart.bind(this),
 			onDrop: this.onDrop.bind(this),
