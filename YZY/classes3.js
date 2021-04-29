@@ -473,7 +473,7 @@ class GReversi extends GTTT {
 }
 
 class GChess extends G2Player {
-	clear(){ super.clear(); this.game.reset(); }
+	clear(){ super.clear(); if (isdef(this.game)) this.game.reset(); }
 	startGame() {
 		super.startGame();
 		this.createBoard();
