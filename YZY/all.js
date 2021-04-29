@@ -20,7 +20,7 @@ function setGame(game, immediate = false) {
 
 	switch (G.controllerType) {
 		case 'solitaire': GC = new ControllerSolitaire(G, U); break;
-		case 'solo': GC = new ControllerTTT(G, U); break;
+		case 'solo': if (isdef(GC) && GC.constructor.name=='ControllerSolitaire') GameCounter = 0; GC = new ControllerTTT(G, U); break;
 	}
 	G.controller = GC;
 	showGameTitle();

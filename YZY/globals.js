@@ -1,10 +1,10 @@
 const BROADCAST_SETTINGS = false;
 var START_IN_MENU = !BROADCAST_SETTINGS;
-const DEFAULTUSERNAME = 'gul'; // nil | gul | felix
+const DEFAULTUSERNAME = BROADCAST_SETTINGS?'nil':'gul'; // nil | gul | felix
 
 //#region config
 var USE_ADDONS = false;
-const OFFLINE = false;
+const OFFLINE = BROADCAST_SETTINGS;
 
 const SERVERURL = OFFLINE ? 'http://localhost:3000/app/' : 'https://speech-games.herokuapp.com/app/';
 var USE_LOCAL_STORAGE = !BROADCAST_SETTINGS; // true | false //localStorage is cleared when false!!!!!
@@ -17,7 +17,15 @@ var Pictures, Goal, Selected, Score, TO, TOMain, TOTrial, TOList, IsAnswerCorrec
 var uiActivated, aiActivated, auxOpen, GameTimer, STOPAUS = false;
 var Settings, SettingsList, SettingsChanged, SelectedMenuKey; //var G, T, P, U, User, ????? , G...Game, T...Table, U...Userdata
 var Daat = {}, DA = {}, Items;
-var Players, PlayerOnTurn, GC;
+var Players, PlayerOnTurn, GC, GameCounter;
+
+//TO BE DELETED!!! ChessBoard configuration
+// var ChessBoardConfig = {
+// 	pieceTheme: '/alibs/chessBoard/img/chesspieces/wikipedia/{piece}.png',
+//   draggable: true,
+//   // dropOffBoard: 'snapback', // this is the default
+//   position: 'start'
+// };
 
 var BestMinusScore = Infinity, BestMinusState, BestPlusScore = -Infinity, BestPlusState;
 var F_END, F_MOVES, F_APPLYMOVE, F_UNDOMOVE, F_EVAL, DMAX, MAXIMIZER, MINIMIZER, SelectedMove, CANCEL_AI;

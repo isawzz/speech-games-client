@@ -21,7 +21,7 @@ var CCC = 0;
 function AIMinimax(g, callback) {
 	let state = g.getState();
 	state = boardToNode(state);
-	//console.log('==>AI search: minimax (maxDepth', g.searchDepth + ')');
+	//console.log('==>AI search: myMinimax (maxDepth', g.searchDepth + ')');
 	F_END = g.evalState;
 	F_HEURISTIC = g.heuristic;
 	F_MOVES = g.getAvailableMoves;
@@ -30,15 +30,15 @@ function AIMinimax(g, callback) {
 	MAXIMIZER = g.plTurn;
 	MINIMIZER = g.plOpp;
 	SelectedMove = null;
-	let algorithm = g.copyState==true ? minimaxCopy : minimax;
+	let algorithm = g.copyState==true ? minimaxCopy : myMinimax;
 	let val = algorithm(state, 0, -Infinity, Infinity, g.searchDepth, true);
-	console.log('chosen move has value', val, 'nodes inspected:', CCC);
+	//console.log('chosen move has value', val, 'nodes inspected:', CCC);
 	//if (!SelectedMove)
 	CCC = 0;
 
 	callback(SelectedMove);
 }
-function minimax(node, depth, alpha, beta, maxDepth, maxim) {
+function myMinimax(node, depth, alpha, beta, maxDepth, maxim) {
 	CCC += 1;
 	if (depth >= maxDepth) return 1;
 	let ec = F_END(node, depth); if (ec.reached) return ec.val;
@@ -49,7 +49,7 @@ function minimax(node, depth, alpha, beta, maxDepth, maxim) {
 	for (var i = 0; i < availableMoves.length; i++) {
 		move = availableMoves[i];
 		F_APPLYMOVE(node, move, player);
-		result = minimax(node, depth, alpha, beta, maxDepth, !maxim);
+		result = myMinimax(node, depth, alpha, beta, maxDepth, !maxim);
 		F_UNDOMOVE(node, move, player);
 		if (maxim) {
 			if (result > alpha) {

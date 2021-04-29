@@ -1,6 +1,6 @@
 
 function getOperand(type) { let x = OPS[type]; return randomNumber(Math.max(2, x.min), x.max); }
-function getRandomWP(min = 0, max = 35) { return jsCopy(WordP[randomNumber(min, max)]); }// chooseRandom(WordP.slice(min,max));}
+function getRandomWP(min = 0, max = 35) { let n=randomNumber(min, max); console.log('wp',n); return jsCopy(WordP[n]); }// chooseRandom(WordP.slice(min,max));}
 function instantiateNames(wp) {
 	let text = wp.text;
 	let parts = text.split('@P');

@@ -1,6 +1,7 @@
 async function _start() {
 	initTable(); initSidebar(); initAux(); initScore(); loadUser(); //timit = new TimeIt('*timer', true);
 
+	//testPos02();
 	startUnit();
 	//setBackgroundColor('green');	let b = new ChessBoard();
 

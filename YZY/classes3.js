@@ -8,14 +8,15 @@ class G2Player {
 		this.moveCounter = 0;
 	}
 	startGame() {
+		//console.log('starting', this.name);
 		this.moveCounter = 0;
 		this.winner = null;
-		//console.log('starting', this);
 		this.setStartPlayer();
 	}
 	clear() { clearTimeout(this.TO); }
 	changePlayer() {
 		let idx = this.iPlayer = (this.iPlayer + 1) % this.players.length;
+		//console.log('changePlayer to', this.players[idx].id);
 		this.setPlayers();
 	}
 	heuristic(state) { return 1; }
@@ -31,10 +32,16 @@ class G2Player {
 		this.iPlayer = 0;
 		this.setPlayers();
 	}
-	startRound() { }
-
+	startRound() { }//console.log('startRound', this.name); }
+	prompt() { }
 }
 class GTTT extends G2Player {
+	startGame() {
+		super.startGame();
+		this.createBoard();
+		this.human.sym = 'O';
+		this.ai.sym = 'X';
+	}
 	createBoard() {
 		this.rows = this.cols = this.boardSize;
 		this.board = new Board(this.rows, this.cols, this.controller.uiInteract.bind(this.controller));
@@ -56,38 +63,13 @@ class GTTT extends G2Player {
 		//state =['X', 'X', null, 'O', null, null, 'O', null, null];
 		//state =[null, 'X', null, 'X', null, 'O', null, 'O', null];
 		//state=[null, null, null, null, 'X', 'O', null, 'O', null];
-		this.board.setState(state, { X: this.ai.color, O: this.human.color }); //AI wins! ok
+		this.board.setState(state, { X: this.ai.color, O: this.human.color });
 		//console.log('state',state)
-	}
-	startGame() {
-		super.startGame();
-		this.createBoard();
-		this.human.sym = 'O';
-		this.ai.sym = 'X';
-	}
-	interact(ev) {
-		let tile = evToItemC(ev);
-		if (isdef(tile.label)) return; //illegal move!
-		let pl = this.plTurn;
-
-		addLabel(tile, pl.sym, { fz: 60, fg: pl.color });
-		this.controller.evaluate(tile);
 	}
 	prompt() {
 		let msg = this.plTurn == this.ai ? 'Ai thinking...' : 'click an empty field!';
 		showInstruction('', msg, dTitle, false);
-		// if (isAI(this.plTurn)) clearElement(dTitle); else showInstruction('', 'click an empty field!', dTitle, false);
 		this.controller.activateUi();
-	}
-	computerMove_old() {
-		let state = this.getState();
-		state = boardToNode(state);
-		let searchDepth = this.searchDepth;
-		var iMove1 = prepMM(state, mmab9, this.evalState, searchDepth);
-		var iMove2 = prepMM(state, mm13, this.evalStateL2, searchDepth);
-		if (iMove1 != iMove2) { console.log('===>DIFFERENT VALUES!!!!! mmab1:' + iMove1, 'new:' + iMove2); }
-		else { console.log('OK! mmab9 returned', iMove1, 'new returned', iMove2); }
-		return iMove2;
 	}
 	activate() {
 		let pl = this.plTurn;
@@ -106,6 +88,14 @@ class GTTT extends G2Player {
 			// 	console.log('...sollte das gleich schreiben!!!')
 			// }, 10); //DELAY
 		}
+	}
+	interact(ev) {
+		let tile = evToItemC(ev);
+		if (isdef(tile.label)) return; //illegal move!
+		let pl = this.plTurn;
+
+		addLabel(tile, pl.sym, { fz: 60, fg: pl.color });
+		this.controller.evaluate(tile);
 	}
 	afterComputerMove(iMove) {
 		//console.log('CALLBACK!!!', iMove)
@@ -178,6 +168,10 @@ class GTTT extends G2Player {
 }
 
 class GC4 extends GTTT {
+	startGame() {
+		super.startGame();
+		this.setStartPosition();
+	}
 	createBoard() {
 		this.board = new Board(this.rows, this.cols, this.controller.uiInteract.bind(this.controller), { margin: 6, w: 60, h: 60, bg: 'white', fg: 'black', rounding: '50%' });
 		// this.board = new Board(this.rows, this.cols, justClick, { margin: 6, w: 60, h: 60, bg: 'white', fg: 'black', rounding:'50%' });
@@ -237,10 +231,6 @@ class GC4 extends GTTT {
 			: this.startPosition == 'random' ? chooseRandom(positions)
 				: positions[this.iPosition];
 		this.board.setState(state, { X: this.ai.color, O: this.human.color });
-	}
-	startGame() {
-		super.startGame();
-		this.setStartPosition();
 	}
 	checkFinal(state) {
 		if (nundef(state)) state = this.getState();
@@ -477,204 +467,154 @@ class GReversi extends GTTT {
 		//printState(state);
 		arrReplaceAtInPlace(state, move, player.sym);
 		let iCapt = bCapturedPieces(player.sym, state, move, G.rows, G.cols);
-		//console.log('capture:',iCapt);
 		for (const i of iCapt) { state[i] = player.sym; }
-		//console.log('=>')
-		//printState(state)
-
 	}
 
 }
 
 class GChess extends G2Player {
-	createBoard() {
-		this.board = new ChessBoard(this.rows, this.cols, this.controller.uiInteract.bind(this.controller));
-
-	}
-	setStartPosition() { this.board.setInitialPosition(3); }
 	startGame() {
 		super.startGame();
 		this.createBoard();
+		this.game = new Chess();
 		this.setStartPosition();
-		this.human.color = 'white';
-		this.ai.color = 'black';
+		let c = this.game.turn();
+		if (c == 'b') { this.plTurn.color = 'black'; this.plOpp.color = 'white'; } else { this.plTurn.color = 'white'; this.plOpp.color = 'black'; }
+		showFleetingMessage(`You play ${this.human.color}`)
 	}
-	interact(ev) {
-		let tile = evToItemC(ev);
+	createBoard() {
+		let d = mDiv(dTable, { h: 500, w: 500 }, 'dChessBoard');
+		let config = {
+			pieceTheme: '/alibs/chessBoard/img/chesspieces/wikipedia/{piece}.png',
+			draggable: true,
+			onDragStart: this.onDragStart.bind(this),
+			onDrop: this.onDrop.bind(this),
+			onSnapEnd: this.onSnapEnd.bind(this),
 
-		if (isdef(tile.label)) return; //illegal move!
-		let pl = this.plTurn;
+		}
+		this.board = ChessBoard('dChessBoard', config);
+		mLinebreak(dTable);
+	}
+	setStartPosition() {
+		//this code works!!!
+		// this.game.load('r1bqkbnr/pppp1ppp/2n5/1B2p3/4P3/5N2/PPPP1PPP/RNBQK2R b KQkq - 0 1');
+		// this.board.position(this.game.fen());
+		// return;
+		let positions = [
+			'rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1', //default start pos
+			'8/8/8/8/8/8/8/8 w KQkq - 0 1', //empty board
+			'8/8/8/8/8/8/8/8 b KQkq - 0 1', //black starts
+			'rnbqkbnr/pppp1ppp/8/4p3/4P3/8/PPPP1PPP/RNBQKBNR w KQkq e3 0 2',
+			{
+				arr: [
+					['em', 'em', 'bk', 'em', 'em', 'em', 'em', 'em'],
+					['em', 'em', 'em', 'em', 'em', 'wq', 'em', 'em'],
+					['em', 'em', 'wk', 'em', 'em', 'em', 'em', 'em'],
+					['em', 'em', 'em', 'em', 'em', 'em', 'em', 'em'],
+					['em', 'em', 'em', 'em', 'em', 'em', 'em', 'em'],
+					['em', 'em', 'em', 'em', 'em', 'em', 'em', 'em'],
+					['em', 'em', 'em', 'em', 'em', 'wp', 'em', 'em'],
+					['em', 'em', 'em', 'em', 'em', 'em', 'em', 'em'],
+				], plStart: 'w'
+			},
+			{
+				arr: [
+					['em', 'em', 'bk', 'em', 'em', 'em', 'em', 'em'],
+					['em', 'em', 'em', 'em', 'em', 'em', 'em', 'em'],
+					['em', 'em', 'em', 'wq', 'em', 'em', 'em', 'em'],
+					['em', 'em', 'wk', 'em', 'em', 'em', 'em', 'em'],
+					['em', 'em', 'em', 'em', 'em', 'em', 'em', 'em'],
+					['em', 'em', 'em', 'em', 'em', 'em', 'em', 'em'],
+					['em', 'em', 'em', 'em', 'em', 'wp', 'em', 'em'],
+					['em', 'em', 'em', 'em', 'em', 'em', 'em', 'em'],
+				], plStart: 'w'
+			},
+			{
+				arr: [
+					['em', 'em', 'bk', 'em', 'em', 'em', 'em', 'em'],
+					['em', 'em', 'em', 'em', 'em', 'em', 'em', 'em'],
+					['em', 'em', 'em', 'wq', 'em', 'em', 'em', 'em'],
+					['em', 'em', 'wk', 'em', 'em', 'em', 'em', 'em'],
+					['em', 'em', 'em', 'em', 'em', 'em', 'em', 'em'],
+					['em', 'em', 'em', 'em', 'em', 'em', 'em', 'em'],
+					['em', 'em', 'em', 'em', 'em', 'em', 'bp', 'em'],
+					['em', 'em', 'em', 'em', 'em', 'em', 'em', 'em'],
+				], plStart: 'b'
+			},
 
-		addLabel(tile, pl.sym, { fz: 60, fg: pl.color });
-		this.controller.evaluate(tile);
+		];
+		if (nundef(this.iPosition)) this.iPosition = 0;
+
+		let state = nundef(this.startPosition) || this.startPosition == 'empty' ? positions[0] : this.startPosition == 'random' ? chooseRandom(positions) : positions[this.iPosition];
+		if (!isString(state)) state = arrToFen(state.arr, state.plStart);
+
+		this.game.load(state); //'r1bqkbnr/pppp1ppp/2n5/1B2p3/4P3/5N2/PPPP1PPP/RNBQK2R b KQkq - 0 1');
+		this.board.position(this.game.fen());
+
+		let idx = this.iPosition + 1; idx = idx % positions.length; this.iPosition = idx;//advance iPosition for next time!
 	}
 	prompt() {
-		let msg = this.plTurn == this.ai ? 'Ai thinking...' : 'Player on turn:';
-		showInstruction(this.plTurn.color, msg, dTitle, false);
+		let msg = this.plTurn == this.ai && !this.manual ? `Ai (${this.ai.color.toUpperCase()}) thinking...`
+			: `player: ${this.plTurn.color.toUpperCase()}`;
 
-
+		showInstruction(this.game.in_check() ? '- CHECK!!!' : '', msg, dTitle, false);
 		this.controller.activateUi();
-	}
-	getPiece(state, idx) {
-		let arr = state;
-		let pieceKey = arr[idx];
-
-	}
-	getPlayerPieces(state, pl) {
-		let pieces = [];
-		for (let i = 0; i < state.length; i++) {
-			if (state[i][0] == pl.color[0]) {
-				//let [r,c]=
-				pieces.push({ piece: state[i], idx: i });
-				movesPerPiece[i] = Rook.getMoves(state, i, 8, 8);
-				console.log('rook moves for piece', i, movesPerPiece[i]);
-			}
-		}
-	}
-	onSelect(ev) {
-		let item = evToItemC(ev);
-		if (item == this.selectedItem) return;
-		else if (isdef(this.selectedItem)) unselectPreviousItemAndTargets(this.selectedItem);
-		this.selectedItem = selectItemAndTargets(item);
 	}
 	activate() {
 		let pl = this.plTurn;
-		let opp = this.plOpp;
 		let autoplay = false;
-		let manual = true;
-		if (!manual && (autoplay || pl == this.ai)) {
+		if (autoplay || pl == this.ai) {
 			if (this.ai == pl) uiActivated = false;
-			//showCancelButton();
-
-			//AIMinimax(this,this.afterComputerMove)		
-			setTimeout(() => AIMinimax(this, this.afterComputerMove.bind(this)), 200);
-
-			//console.log('halloooooooooooooooooo')
-
-			// this.TO = setTimeout(() => {
-			// 	AIMinimax(this,this.afterComputerMove.bind(this));
-			// 	console.log('...sollte das gleich schreiben!!!')
-			// }, 10); //DELAY
-		} else {
-			let state = this.getState();
-			let [plPieces, avMoves] = this.getAvailableMoves(state, pl, opp);
-			if (isEmpty(avMoves)) { this.controller.evaluate(); }
-			else this.activatePiecesThatCanMove(plPieces);
+			setTimeout(() => {
+				// let x = makeBestMove('b'); console.log('x', x);
+				let color = this.game.turn();
+				if (color === 'b') { var move = getBestMove(this.game, color, globalSum)[0]; }
+				else { var move = getBestMove(this.game, color, -globalSum)[0]; }
+				globalSum = evaluateBoard(move, globalSum, 'b');
+				this.game.move(move);
+				this.board.position(this.game.fen());
+				this.controller.evaluate();
+			}, 100);
 		}
 	}
-	getAvailableMoves(state, pl, opp) {
-		let plPieces = getMovesPerPiece(state, this.rows, this.cols, pl);
-		for (const p in plPieces) { plPieces[p].avMoves = []; }
-		let avMoves = [];
-		//clearChessPieces();
-		for (const from in plPieces) {
-			for (const to of plPieces[from].moves) {
-				let move = { from: from, to: to };
-				//console.log('checking move',move);
-				let newState = this.applyMove(state, move, pl);
-				//console.log('state',state,'newState',newState);
-				//return;
-				//check if in the new situation, king is in check or not!
-				let isCheck = isKingInCheck(newState, pl, opp, this.rows, this.cols);
-				if (to == 0) console.log('done!', to, isCheck)
-				if (!isCheck) { avMoves.push(move); plPieces[from].avMoves.push(move.to); }
-				//if yes, this move is discarded!
-			}
-		}
-		console.log('avMoves', avMoves);
-		return [plPieces, avMoves];
-	}
-	activateMoves(plPieces, avMoves) {
-		for (const p in plPieces) { this.board.items[p].targets = []; }
-		for (const m of avMoves) {
-			let k = m.from;
-			// let piece = plPieces[k];
-			// piece.avMoves.push(m.to);
-			let item = this.board.items[k];
-			iEnableSelect(item, this.onSelect.bind(this));
-			item.targets.push(m.to);
-		}
-	}
-	activatePiecesThatCanMove(plPieces) {
-		for (const k in plPieces) {
-			let moves = plPieces[k].avMoves;
-			if (isEmpty(moves)) continue;
+	getTurnColor() { return this.getPlayer(this.game.turn() == 'b' ? 'black' : 'white'); }
+	getOppColor() { return this.getPlayer(this.game.turn() == 'b' ? 'white' : 'black'); }
+	getPlayer(color) { return firstCond(this.players, x => x.color == color); }
+	changePlayer() { this.plTurn = this.game.turn() == 'b' ? this.getPlayer('black') : this.getPlayer('white'); }
+	onDragStart(source, piece, position, orientation) {
+		// do not pick up pieces if the this.game is over
+		if (this.game.game_over() || !uiActivated) return false;
 
-			// show field bg in darker
-			let item = this.board.items[k];
-			iEnableSelect(item, this.onSelect.bind(this));
-			item.targets = moves;
+		// only pick up pieces for the side to move
+		if ((this.game.turn() === 'w' && piece.search(/^b/) !== -1) ||
+			(this.game.turn() === 'b' && piece.search(/^w/) !== -1)) {
+			return false
 		}
 	}
-	afterComputerMove(iMove) {
-		//console.log('CALLBACK!!!', iMove)
-		//hide(mBy('bCancelAI'));
-		let tile = this.board.items[iMove];
-		this.interact({ target: iDiv(tile) });
+	onDrop(source, target) {
+		// see if the move is legal
+		var move = this.game.move({
+			from: source,
+			to: target,
+			promotion: 'q' // NOTE: always promote to a queen for example simplicity
+		});
+		if (move === null) return 'snapback';
+		this.controller.evaluate();
 	}
+	onSnapEnd() { this.board.position(this.game.fen()) }
+
 	eval() {
-		//let sym = this.plTurn.sym;
-		//console.log('eval: state',state,'sym',sym,'label',tile.label);
-		let done = this.checkFinal();
-		this.gameOver = done > 0;
-		if (this.gameOver) { this.winner = done > 1 ? this.plTurn : null; this.tie = done == 1; }
-	}
-
-	checkFinal(state) {
-		return false;
-		if (nundef(state)) state = this.getState();
-		let isTie = false;
-		let isWin = checkWinnerTTT(state);
-		if (!isWin) { isTie = checkBoardFull(state) || !checkPotentialTTT(state); }
-		return isWin ? 2 : isTie ? 1 : 0;
-	}
-	getState() { return this.board.getState(); }
-
-	//static mm functions
-	//state is modified by player doing move
-	applyMove(state, move, player) {
-		state = jsCopy(state);
-		let from = move.from;
-		let to = move.to;
-		state[to] = state[from];
-		state[from] = null;
-		return state;
-	}
-	undoMove(state, move, player) { arrReplaceAtInPlace(state, move, ' '); }
-	heuristic1(node, depth) { }
-	evalState(node, depth) {
-		let x = checkWinnerTTT(node);
-		if (checkBoardFull(node) || x) {
-			//var score = x;
-			return { reached: true, val: (!x ? 0 : (10 - depth) * (x == MAXIMIZER.sym ? 1 : -1)) };
-			// return evalState8(node, depth);
-		}
-		return { reached: false };
-	}
-	evalStateL(node, depth) {
-		let key = node.join('');
-		let val = DMM[key];
-		let x = isdef(val) ? val : checkWinnerTTT(node);
-		DMM[key] = x;
-		if (checkBoardFull(node) || x) {
-			return { reached: true, val: (!x ? 0 : (10 - depth) * (x == MAXIMIZER.sym ? 1 : -1)) };
-		}
-		return { reached: false };
-	}
-	evalStateL2(node, depth) {
-		let full = checkBoardFull(node);
-		if (full) {
-			let key = JSON.stringify(node);
-			let x = DMM[key];
-			if (nundef(x)) DMM[key] = x = checkWinnerTTT(node);
-			return { reached: true, val: (!x ? 0 : (10 - depth) * (x == MAXIMIZER.sym ? 1 : -1)) };
-		} else {
-			let x = checkWinnerTTT(node);
-			if (x) return { reached: true, val: (!x ? 0 : (10 - depth) * (x == MAXIMIZER.sym ? 1 : -1)) };
-			return { reached: false };
+		this.info = null;
+		let over = this.gameOver = this.game.game_over();
+		if (this.game.in_draw()) { this.tie = true; console.log('in_draw'); this.info = '(draw)'; }
+		if (this.game.in_stalemate()) { this.tie = true; console.log('in_stalemate'); this.info = '(stalemate)'; }
+		if (this.game.in_threefold_repetition()) { this.tie = true; console.log('in_threefold_repetition'); this.info = '(threefold repetition)'; }
+		if (this.game.in_checkmate()) {
+			this.tie = false;
+			this.winner = this.getOppColor();
+			console.log('in_checkmate');
+			this.info = `(${this.winner.color.toUpperCase()})`;
 		}
 	}
 }
-
-
 

@@ -291,6 +291,39 @@ gPremem:
       numRepeat: 4
       pictureLabels: never
       sameBackground: false
+gRiddle:
+  friendly: 'Riddle'
+  logo: 'blue book'
+  color: seagreen
+  controllerType: solitaire
+  minIndex: 0
+  maxIndex: 10
+  minPlus: 0
+  maxPlus: 10
+  minMinus: 0
+  maxMinus: 10
+  minMult: 2
+  maxMult: 10
+  minDiv: 2
+  maxDiv: 10
+  exactDivisor: true
+  roundDecimalsTo: .25
+  singleDigitFractions: true
+  levels:
+    0:
+      maxIndex: 8
+    1:
+      minIndex: 8
+      maxIndex: 20
+    2:
+      minIndex: 15
+      maxIndex: 30
+    3:
+      minIndex: 20
+      maxIndex: 40
+    4:
+      minIndex: 25
+      maxIndex: 51
 gTouchColors:
   friendly: 'Colors!'
   logo: 'artist palette'
@@ -475,6 +508,55 @@ gWritePic:
       pictureLabels: never
       instruction: noGoal
       trials: 3
+gTTT:
+  friendly: TicTacToe
+  logo: 'abstract-050'
+  color: '#1e3569'
+  controllerType: solo
+  numPlayers: 2
+  boardSize: 3
+  searchDepth: 9
+  startPosition: empty # random | seq
+  startPlayer: random  # ai | human | random
+gC4:
+  friendly: Connect4
+  logo: 'abstract-051'
+  color: '#351e69'
+  controllerType: solo
+  numPlayers: 2
+  rows: 6
+  cols: 7
+  stride: 4
+  searchDepth: 4
+  startPosition: empty # random | seq
+  startPlayer: random  # ai | human | random
+gReversi:
+  friendly: Reversi
+  logo: 'first quarter moon'
+  color: '#ff93c4'
+  controllerType: solo
+  numPlayers: 2
+  rows: 6
+  cols: 6
+  searchDepth: 7
+  copyState: true
+  startPosition: seq # random | seq
+  startPlayer: human  # ai | human | random
+gChess:
+  friendly: Chess
+  logo: 'chess'
+  color: midnightblue
+  controllerType: solo
+  numPlayers: 2
+  rows: 8
+  cols: 8
+  searchDepth: 4
+  copyState: true
+  iPosition: 0 #0-based index of position defined in G.setStartPosition
+  startPosition: seq # random | seq
+  startPlayer: ai  # ai | human | random
+  manual: true #ai is manual
+
 #unused:
 gMissingNumber:
   friendly: 'Sequence!'
@@ -623,34 +705,6 @@ gPasscode:
     5: 
       passcodeLength: 2
       numPics: 15
-gRiddle:
-  friendly: 'Riddle'
-  logo: 'blue book'
-  color: seagreen
-  controllerType: solitaire
-  maxIndex: 10
-  minPlus: 0
-  maxPlus: 10
-  minMinus: 0
-  maxMinus: 10
-  minMult: 2
-  maxMult: 10
-  minDiv: 2
-  maxDiv: 10
-  exactDivisor: true
-  roundDecimalsTo: .25
-  singleDigitFractions: true
-  levels:
-    0:
-      maxIndex: 8
-    1:
-      maxIndex: 20
-    2:
-      maxIndex: 30
-    3:
-      maxIndex: 40
-    4:
-      maxIndex: 51
 gGuess:
   friendly: 'Guess'
   logo: 'input latin letters'
@@ -669,50 +723,3 @@ gKrieg:
   color: steelblue
   controllerType: solo
   numPlayers: 2
-gTTT:
-  friendly: TicTacToe
-  logo: 'abstract-050'
-  color: '#1e3569'
-  controllerType: solo
-  numPlayers: 2
-  boardSize: 3
-  searchDepth: 9
-  startPosition: empty # random | seq
-  startPlayer: random  # ai | human | random
-gC4:
-  friendly: Connect4
-  logo: 'abstract-051'
-  color: '#351e69'
-  controllerType: solo
-  numPlayers: 2
-  rows: 6
-  cols: 7
-  stride: 4
-  searchDepth: 4
-  startPosition: empty # random | seq
-  startPlayer: random  # ai | human | random
-gReversi:
-  friendly: Reversi
-  logo: 'first quarter moon'
-  color: '#ff93c4'
-  controllerType: solo
-  numPlayers: 2
-  rows: 6
-  cols: 6
-  searchDepth: 7
-  copyState: true
-  startPosition: seq # random | seq
-  startPlayer: human  # ai | human | random
-gChess:
-  friendly: Chess
-  logo: 'chess'
-  color: green
-  controllerType: solo
-  numPlayers: 2
-  rows: 8
-  cols: 8
-  searchDepth: 7
-  copyState: true
-  startPosition: seq # random | seq
-  startPlayer: human  # ai | human | random
-

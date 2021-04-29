@@ -1,7 +1,7 @@
 nil:
   id: nil
-  avGames: [gChess, gC4, gElim, gSentence, gReversi, gMissingLetter, gNamit, gTouchPic, gPremem, gTouchColors, gSayPic, gSwap, gMem, gWritePic, gTTT, gSteps, gAnagram, gCats, gAbacus, gRiddle]
-  lastGame: gChess
+  avGames: [gSteps, gSentence, gTouchColors, gSayPic, gReversi, gMissingLetter, gNamit, gTouchPic, gWritePic, gChess, gPremem, gMem, gSwap, gTTT, gElim, gAnagram, gCats, gAbacus, gRiddle,gC4]
+  lastGame: gMissingLetter
   settings:
     # settings common to all games
     userColor: green
@@ -70,8 +70,8 @@ nil:
       open: false
 guest0:
   id: guest0
-  avGames: [gElim, gSentence, gMissingLetter, gNamit, gTouchPic, gPremem, gTouchColors, gSayPic, gSwap, gMem, gWritePic, gSteps, gAnagram, gCats, gAbacus, gRiddle]
-  lastGame: gNamit
+  avGames: [gSteps, gSentence, gTouchColors, gSayPic, gReversi, gMissingLetter, gNamit, gTouchPic, gWritePic, gChess, gPremem, gMem, gSwap, gTTT, gElim, gAnagram, gCats, gAbacus, gRiddle,gC4]
+  lastGame: gChess
   settings:
     # settings common to all games
     samplesPerGame: 10
@@ -93,8 +93,8 @@ guest0:
       startLevel: 0
 test0:
   id: test0
-  avGames: [gElim, gSentence, gMissingLetter, gNamit, gTouchPic, gPremem, gTouchColors, gSayPic, gSwap, gMem, gWritePic, gSteps, gAnagram, gCats, gAbacus, gRiddle]
-  lastGame: gNamit
+  avGames: [gSteps, gSentence, gTouchColors, gSayPic, gReversi, gMissingLetter, gNamit, gTouchPic, gWritePic, gChess, gPremem, gMem, gSwap, gTTT, gElim, gAnagram, gCats, gAbacus, gRiddle,gC4]
+  lastGame: gChess
   settings:
     # settings common to all games
     samplesPerGame: 10
@@ -141,8 +141,8 @@ test0:
       startLevel: 0
 gunter:
   id: gunter
-  avGames: [gElim, gSentence, gMissingLetter, gNamit, gPremem, gTouchPic, gSwap, gTouchColors, gSayPic, gMem, gWritePic, gSteps, gAnagram, gCats, gAbacus, gRiddle]
-  lastGame: gNamit
+  avGames: [gSteps, gSentence, gTouchColors, gSayPic, gReversi, gMissingLetter, gNamit, gTouchPic, gWritePic, gChess, gPremem, gMem, gSwap, gTTT, gElim, gAnagram, gCats, gAbacus, gRiddle,gC4]
+  lastGame: gChess
   settings:
     # settings common to all games
     userColor: blue
@@ -211,8 +211,8 @@ gunter:
       open: false
 gul:
   id: gul
-  avGames: [gC4, gElim, gSentence, gReversi, gMissingLetter, gNamit, gTouchPic, gPremem, gTouchColors, gSayPic, gSwap, gMem, gWritePic, gTTT, gSteps, gAnagram, gCats, gAbacus, gRiddle]
-  lastGame: gReversi
+  avGames: [gSteps, gSentence, gTouchColors, gSayPic, gReversi, gMissingLetter, gNamit, gTouchPic, gWritePic, gChess, gPremem, gMem, gSwap, gTTT, gElim, gAnagram, gCats, gAbacus, gRiddle,gC4]
+  lastGame: gMissingLetter
   settings:
     userColor: blue
     samplesPerGame: 10
