@@ -141,6 +141,7 @@ function evaluateBoard(move, prevSum, color) {
 	return prevSum;
 }
 function minimax(game, depth, alpha, beta, isMaximizingPlayer, sum, color) {
+	if (G.id != 'gChess' || !aiActivated) return;
 	positionCount++;
 	var children = game.ugly_moves({ verbose: true });
 	//console.log('children',children,'depth',depth); //return;

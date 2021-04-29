@@ -473,6 +473,7 @@ class GReversi extends GTTT {
 }
 
 class GChess extends G2Player {
+	clear(){ super.clear(); this.game.reset(); }
 	startGame() {
 		super.startGame();
 		this.createBoard();
@@ -485,7 +486,7 @@ class GChess extends G2Player {
 	createBoard() {
 		let d = mDiv(dTable, { h: 500, w: 500 }, 'dChessBoard');
 		let config = {
-			pieceTheme: '../alibs/chessBoard/img/chesspieces/wikipedia/{piece}.png',
+			pieceTheme: '/alibs/chessBoard/img/chesspieces/wikipedia/{piece}.png',
 			draggable: true,
 			onDragStart: this.onDragStart.bind(this),
 			onDrop: this.onDrop.bind(this),
@@ -564,7 +565,7 @@ class GChess extends G2Player {
 		let pl = this.plTurn;
 		let autoplay = false;
 		if (autoplay || pl == this.ai) {
-			if (this.ai == pl) uiActivated = false;
+			if (this.ai == pl) {uiActivated = false; aiActivated = true; }
 			setTimeout(() => {
 				// let x = makeBestMove('b'); console.log('x', x);
 				let color = this.game.turn();
@@ -575,7 +576,7 @@ class GChess extends G2Player {
 				this.board.position(this.game.fen());
 				this.controller.evaluate();
 			}, 100);
-		}
+		} else {aiActivated = false; uiActivated = true;}
 	}
 	getTurnColor() { return this.getPlayer(this.game.turn() == 'b' ? 'black' : 'white'); }
 	getOppColor() { return this.getPlayer(this.game.turn() == 'b' ? 'white' : 'black'); }
