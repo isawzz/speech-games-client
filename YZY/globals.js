@@ -1,10 +1,10 @@
-const BROADCAST_SETTINGS = false;
+const BROADCAST_SETTINGS = true;
 var START_IN_MENU = !BROADCAST_SETTINGS;
 const DEFAULTUSERNAME = BROADCAST_SETTINGS?'nil':'gul'; // nil | gul | felix
 
 //#region config
 var USE_ADDONS = false;
-const OFFLINE = false; //BROADCAST_SETTINGS;
+const OFFLINE = true; //BROADCAST_SETTINGS;
 
 const SERVERURL = OFFLINE ? 'http://localhost:3000/app/' : 'https://speech-games.herokuapp.com/app/';
 var USE_LOCAL_STORAGE = !BROADCAST_SETTINGS; // true | false //localStorage is cleared when false!!!!!
